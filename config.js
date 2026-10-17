@@ -1,7 +1,6 @@
-// Public app configuration.
-// Fill in with your Supabase project values (Project Settings → API).
-// The anon key is public by design: data is protected by Row Level Security (see supabase/schema.sql).
+// Public Supabase client configuration (safe to commit: only uses the public URL + publishable/anon key).
+// Row Level Security (RLS) in supabase/schema.sql protects user data.
 window.APP_CONFIG = {
-  supabaseUrl: '',     // e.g. 'https://abcdefghijkl.supabase.co'
-  supabaseAnonKey: '', // e.g. 'eyJhbGciOi...'
+  supabaseUrl: 'https://hllgymckihgmzlwkurid.supabase.co',
+  supabaseAnonKey: 'sb_publishable_QRIZ1T7JnqTKBbVcWegxEQ_9tsX0tiJ',
 };
