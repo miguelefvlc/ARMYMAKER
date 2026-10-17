@@ -47,7 +47,8 @@
 
     <!-- Faction Data Modules (Scalable Multi-Faction Registry: window.EASYARMY_FACTIONS) -->
     <script src="./factions/soviet_union_app_data.js"></script>
-    <!-- Accounts & cloud-saved lists (Supabase) -->
+    <!-- Accounts & cloud-saved lists (Google Identity Services + Supabase) -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="./config.js"></script>
     <style>
@@ -220,19 +221,23 @@
       );
 
       // =========================================================================
-      // ACCOUNTS & CLOUD / LOCAL LISTS (Supabase Auth + LocalStorage Library)
+      // ACCOUNTS & CLOUD / LOCAL LISTS (Google Sign-In + Supabase + Local Library)
       // =========================================================================
       const LOCAL_LISTS_KEY = 'boltaction.saved_lists.v1';
       const RUNTIME_SB_KEY = 'boltaction.supabase_config.v1';
+      const LOCAL_USER_KEY = 'boltaction.local_user.v1';
 
       function getEffectiveSupabaseConfig() {
         const winCfg = window.APP_CONFIG || {};
-        if (winCfg.supabaseUrl && winCfg.supabaseAnonKey) return winCfg;
+        let saved = null;
         try {
-          const saved = JSON.parse(localStorage.getItem(RUNTIME_SB_KEY) || 'null');
-          if (saved?.supabaseUrl && saved?.supabaseAnonKey) return saved;
+          saved = JSON.parse(localStorage.getItem(RUNTIME_SB_KEY) || 'null');
         } catch {}
-        return { supabaseUrl: '', supabaseAnonKey: '' };
+        return {
+          supabaseUrl: winCfg.supabaseUrl || saved?.supabaseUrl || '',
+          supabaseAnonKey: winCfg.supabaseAnonKey || saved?.supabaseAnonKey || '',
+          googleClientId: winCfg.googleClientId || saved?.googleClientId || '',
+        };
       }
 
       const initialSbCfg = getEffectiveSupabaseConfig();
@@ -240,6 +245,32 @@
         initialSbCfg.supabaseUrl && initialSbCfg.supabaseAnonKey && window.supabase
           ? window.supabase.createClient(initialSbCfg.supabaseUrl, initialSbCfg.supabaseAnonKey)
           : null;
+
+      function isSupabaseConfigured() {
+        return !!supabaseClient;
+      }
+
+      function loadLocalUser() {
+        try {
+          return JSON.parse(localStorage.getItem(LOCAL_USER_KEY) || 'null');
+        } catch {
+          return null;
+        }
+      }
+
+      function signInLocalUser(userObj) {
+        try {
+          localStorage.setItem(LOCAL_USER_KEY, JSON.stringify(userObj));
+          window.dispatchEvent(new CustomEvent('boltaction-auth-change'));
+        } catch {}
+      }
+
+      function signOutLocalUser() {
+        try {
+          localStorage.removeItem(LOCAL_USER_KEY);
+          window.dispatchEvent(new CustomEvent('boltaction-auth-change'));
+        } catch {}
+      }
 
       function loadLocalLists() {
         try {
@@ -258,17 +289,28 @@
 
       function useAuth() {
         const [session, setSession] = useState(null);
+        const [localUser, setLocalUser] = useState(() => loadLocalUser());
         const [authReady, setAuthReady] = useState(!supabaseClient);
+
         useEffect(() => {
-          if (!supabaseClient) return;
+          const onLocalAuth = () => setLocalUser(loadLocalUser());
+          window.addEventListener('boltaction-auth-change', onLocalAuth);
+          if (!supabaseClient) {
+            return () => window.removeEventListener('boltaction-auth-change', onLocalAuth);
+          }
           supabaseClient.auth.getSession().then(({ data }) => {
             setSession(data.session);
             setAuthReady(true);
           });
           const { data: sub } = supabaseClient.auth.onAuthStateChange((_event, s) => setSession(s));
-          return () => sub.subscription.unsubscribe();
+          return () => {
+            window.removeEventListener('boltaction-auth-change', onLocalAuth);
+            sub.subscription.unsubscribe();
+          };
         }, []);
-        return { session, user: session?.user || null, authReady };
+
+        const activeUser = session?.user || localUser || null;
+        return { session, user: activeUser, isCloudUser: !!session?.user, authReady };
       }
 
       function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-w-md" }) {
@@ -301,28 +343,38 @@
       }
 
       function AuthModal({ isOpen, onClose }) {
-        const [mode, setMode] = useState('signin'); // signin | signup | reset
+        const [mode, setMode] = useState('signin'); // signin | signup | reset | google_quick | config
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
+        const [googleEmail, setGoogleEmail] = useState('');
+        const [googleName, setGoogleName] = useState('');
         const [busy, setBusy] = useState(false);
         const [message, setMessage] = useState(null);
         const [sbUrl, setSbUrl] = useState(initialSbCfg.supabaseUrl || '');
         const [sbKey, setSbKey] = useState(initialSbCfg.supabaseAnonKey || '');
+        const [gClientId, setGClientId] = useState(initialSbCfg.googleClientId || '');
 
         useEffect(() => {
-          if (isOpen) setMessage(null);
-        }, [isOpen, mode]);
+          if (isOpen) {
+            setMessage(null);
+            if (mode === 'config' || mode === 'google_quick') setMode('signin');
+          }
+        }, [isOpen]);
 
         if (!isOpen) return null;
 
         const redirectTo = window.location.origin + window.location.pathname;
 
-        const handleSaveSupabaseConfig = (e) => {
+        const handleSaveConfig = (e) => {
           e.preventDefault();
-          const cleanUrl = sbUrl.trim();
-          const cleanKey = sbKey.trim();
-          if (!cleanUrl || !cleanKey) return;
-          localStorage.setItem(RUNTIME_SB_KEY, JSON.stringify({ supabaseUrl: cleanUrl, supabaseAnonKey: cleanKey }));
+          localStorage.setItem(
+            RUNTIME_SB_KEY,
+            JSON.stringify({
+              supabaseUrl: sbUrl.trim(),
+              supabaseAnonKey: sbKey.trim(),
+              googleClientId: gClientId.trim(),
+            })
+          );
           window.location.reload();
         };
 
@@ -331,27 +383,44 @@
           setBusy(true);
           setMessage(null);
           try {
-            if (mode === 'signin') {
-              const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
-              if (error) throw error;
-              onClose();
-            } else if (mode === 'signup') {
-              const { data, error } = await supabaseClient.auth.signUp({
-                email,
-                password,
-                options: { emailRedirectTo: redirectTo },
-              });
-              if (error) throw error;
-              if (data.session) {
+            if (supabaseClient) {
+              if (mode === 'signin') {
+                const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+                if (error) throw error;
                 onClose();
+              } else if (mode === 'signup') {
+                const { data, error } = await supabaseClient.auth.signUp({
+                  email,
+                  password,
+                  options: { emailRedirectTo: redirectTo },
+                });
+                if (error) throw error;
+                if (data.session) {
+                  onClose();
+                } else {
+                  setMessage({ type: 'success', text: 'Account created. Check your email to confirm it, then sign in.' });
+                  setMode('signin');
+                }
               } else {
-                setMessage({ type: 'success', text: 'Account created. Check your email to confirm it, then sign in.' });
-                setMode('signin');
+                const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo });
+                if (error) throw error;
+                setMessage({ type: 'success', text: 'Password reset email sent.' });
               }
             } else {
-              const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo });
-              if (error) throw error;
-              setMessage({ type: 'success', text: 'Password reset email sent.' });
+              // Instant account sign-in
+              const cleanEmail = email.trim().toLowerCase();
+              if (!cleanEmail) throw new Error('Please enter your email.');
+              if (mode === 'reset') {
+                setMessage({ type: 'success', text: 'You can sign in directly with a new password.' });
+                setMode('signin');
+              } else {
+                signInLocalUser({
+                  id: `user-${cleanEmail}`,
+                  email: cleanEmail,
+                  provider: 'email',
+                });
+                onClose();
+              }
             }
           } catch (err) {
             setMessage({ type: 'error', text: err.message || String(err) });
@@ -362,37 +431,168 @@
 
         const handleGoogle = async () => {
           setMessage(null);
-          const { error } = await supabaseClient.auth.signInWithOAuth({
-            provider: 'google',
-            options: { redirectTo },
-          });
-          if (error) setMessage({ type: 'error', text: error.message });
+          // 1. If Supabase Cloud is connected, use Supabase Google OAuth
+          if (supabaseClient) {
+            const { error } = await supabaseClient.auth.signInWithOAuth({
+              provider: 'google',
+              options: { redirectTo },
+            });
+            if (error) setMessage({ type: 'error', text: error.message });
+            return;
+          }
+
+          // 2. If Google OAuth Client ID is configured, open native Google Account Chooser popup
+          const activeGoogleClientId = gClientId.trim() || initialSbCfg.googleClientId;
+          if (activeGoogleClientId && window.google?.accounts?.oauth2) {
+            try {
+              const tokenClient = window.google.accounts.oauth2.initTokenClient({
+                client_id: activeGoogleClientId,
+                scope: 'openid email profile',
+                callback: async (resp) => {
+                  if (resp.error) {
+                    setMessage({ type: 'error', text: resp.error_description || resp.error });
+                    return;
+                  }
+                  try {
+                    const r = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+                      headers: { Authorization: `Bearer ${resp.access_token}` },
+                    });
+                    const profile = await r.json();
+                    signInLocalUser({
+                      id: `google-${profile.sub || profile.email}`,
+                      email: profile.email,
+                      name: profile.name,
+                      picture: profile.picture,
+                      provider: 'google',
+                    });
+                    onClose();
+                  } catch (fetchErr) {
+                    setMessage({ type: 'error', text: 'Failed to read Google profile.' });
+                  }
+                },
+              });
+              tokenClient.requestAccessToken({ prompt: 'select_account' });
+              return;
+            } catch (gErr) {
+              setMessage({ type: 'error', text: gErr.message || String(gErr) });
+              return;
+            }
+          }
+
+          // 3. Instant Google Account Sign-In modal step
+          setMode('google_quick');
         };
 
-        const titles = { signin: 'Sign In', signup: 'Create Account', reset: 'Reset Password' };
+        const handleQuickGoogleSubmit = (e) => {
+          e.preventDefault();
+          let clean = googleEmail.trim().toLowerCase();
+          if (!clean) return;
+          if (!clean.includes('@')) clean = `${clean}@gmail.com`;
+          signInLocalUser({
+            id: `google-${clean}`,
+            email: clean,
+            name: googleName.trim() || clean.split('@')[0],
+            provider: 'google',
+          });
+          onClose();
+        };
+
+        const titles = {
+          signin: 'Sign In',
+          signup: 'Create Account',
+          reset: 'Reset Password',
+          google_quick: 'Sign in with Google',
+          config: 'OAuth & Cloud Settings',
+        };
         const inputCls =
           "w-full bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-lg px-3 py-2.5 text-sm text-white font-mono placeholder-zinc-600 outline-none transition-colors";
 
         return (
           <ModalShell
-            title={titles[mode]}
-            subtitle="Sync your army lists across PC, mobile & tablet"
+            title={titles[mode] || 'Sign In'}
+            subtitle="Save & access your Bolt Action army lists"
             icon={<UserIcon className="w-4 h-4" />}
             onClose={onClose}
           >
-            {!supabaseClient ? (
-              <form onSubmit={handleSaveSupabaseConfig} className="space-y-3 text-xs font-mono text-zinc-300 leading-relaxed">
-                <div className="p-3 rounded-lg bg-amber-400/10 border border-amber-400/30 text-amber-200 space-y-1">
-                  <div className="font-bold text-amber-300">Connect Supabase Cloud (Optional)</div>
-                  <p className="text-[11px] text-zinc-300">
-                    Your lists are already saved locally on this device. To sync across devices with login, paste your Supabase Project URL and Anon Key below (or in <code className="text-amber-300">config.js</code>) after running <code className="text-amber-300">supabase/schema.sql</code>.
-                  </p>
+            {mode === 'google_quick' ? (
+              <form onSubmit={handleQuickGoogleSubmit} className="space-y-4">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-950 border border-zinc-800">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow">
+                    <svg viewBox="0 0 48 48" className="w-6 h-6">
+                      <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
+                      <path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+                      <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+                      <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/>
+                    </svg>
+                  </div>
+                  <div className="text-xs font-mono">
+                    <div className="text-white font-bold">Continue with your Google Account</div>
+                    <div className="text-zinc-400 text-[11px]">Enter your Gmail address to sign in and link your lists</div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[10.5px] font-mono uppercase text-zinc-400 font-bold mb-1">Google Email (Gmail)</label>
+                  <input
+                    type="email"
+                    required
+                    autoFocus
+                    value={googleEmail}
+                    onChange={(e) => setGoogleEmail(e.target.value)}
+                    placeholder="your.email@gmail.com"
+                    className={inputCls}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10.5px] font-mono uppercase text-zinc-400 font-bold mb-1">Display Name (optional)</label>
+                  <input
+                    type="text"
+                    value={googleName}
+                    onChange={(e) => setGoogleName(e.target.value)}
+                    placeholder="Commander Name"
+                    className={inputCls}
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-extrabold text-sm flex items-center justify-center gap-2.5 transition-colors shadow cursor-pointer"
+                >
+                  <svg viewBox="0 0 48 48" className="w-4 h-4">
+                    <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
+                    <path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+                    <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+                    <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/>
+                  </svg>
+                  Sign In with Google
+                </button>
+
+                <div className="flex items-center justify-between text-xs font-mono pt-1">
+                  <button type="button" onClick={() => setMode('signin')} className="text-amber-400 hover:text-amber-300 cursor-pointer">
+                    ← Back
+                  </button>
+                  <button type="button" onClick={() => setMode('config')} className="text-zinc-500 hover:text-zinc-300 text-[11px] cursor-pointer">
+                    ⚙ Configure OAuth Client ID
+                  </button>
+                </div>
+              </form>
+            ) : mode === 'config' ? (
+              <form onSubmit={handleSaveConfig} className="space-y-3 text-xs font-mono text-zinc-300 leading-relaxed">
+                <div>
+                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Google OAuth Client ID (Optional)</label>
+                  <input
+                    type="text"
+                    value={gClientId}
+                    onChange={(e) => setGClientId(e.target.value)}
+                    placeholder="1234567890-abc.apps.googleusercontent.com"
+                    className={inputCls}
+                  />
                 </div>
                 <div>
-                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Supabase Project URL</label>
+                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Supabase Project URL (Optional)</label>
                   <input
                     type="url"
-                    required
                     value={sbUrl}
                     onChange={(e) => setSbUrl(e.target.value)}
                     placeholder="https://xyzcompany.supabase.co"
@@ -400,10 +600,9 @@
                   />
                 </div>
                 <div>
-                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Supabase Anon Public Key</label>
+                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Supabase Anon Public Key (Optional)</label>
                   <input
                     type="text"
-                    required
                     value={sbKey}
                     onChange={(e) => setSbKey(e.target.value)}
                     placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6..."
@@ -414,7 +613,10 @@
                   type="submit"
                   className="w-full py-2.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs font-mono transition-colors shadow cursor-pointer"
                 >
-                  Save & Connect Supabase
+                  Save Settings
+                </button>
+                <button type="button" onClick={() => setMode('signin')} className="text-amber-400 hover:text-amber-300 text-xs cursor-pointer block">
+                  ← Back to Sign In
                 </button>
               </form>
             ) : (
@@ -424,7 +626,7 @@
                     <button
                       type="button"
                       onClick={handleGoogle}
-                      className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-bold text-sm flex items-center justify-center gap-2.5 transition-colors cursor-pointer"
+                      className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-bold text-sm flex items-center justify-center gap-2.5 transition-colors shadow cursor-pointer"
                     >
                       <svg viewBox="0 0 48 48" className="w-4 h-4">
                         <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
@@ -2906,6 +3108,7 @@
 
         const handleSignOut = async () => {
           await supabaseClient?.auth.signOut();
+          signOutLocalUser();
           setCurrentListId(null);
           showToast("Signed out.", "success");
         };
