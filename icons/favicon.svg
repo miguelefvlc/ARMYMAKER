@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#09090b"/>
+  <circle cx="32" cy="32" r="27" fill="#18181b" stroke="#d97706" stroke-width="2"/>
+  <!-- Chinstrap -->
+  <path d="M21 38 L26 48 H37 L42 40" stroke="#d97706" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- WWII Military Helmet Shell -->
+  <path d="M12 35 C12 20 20 13 32 13 C44 13 51 20 51 34 C53 35.5 54 37.5 54 39.5 C54 41.5 51.5 42.5 48 42 C38 40.5 24 39 14 38.5 C11 38.3 10 36.5 12 35 Z" fill="#fbbf24"/>
+  <!-- Helmet Flare Groove -->
+  <path d="M13.5 34.5 C24 35 38 36.2 50.5 38" stroke="#18181b" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Dome Highlight -->
+  <path d="M19 25 C21 19.5 26 16.8 31.5 16.5" stroke="#18181b" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tactical Star Emblem -->
+  <polygon points="31,20 32.6,23.6 36.5,24 33.5,26.6 34.4,30.4 31,28.4 27.6,30.4 28.5,26.6 25.5,24 29.4,23.6" fill="#b84242"/>
+  <!-- Side Rivet -->
+  <circle cx="42.5" cy="33" r="1.4" fill="#18181b"/>
+</svg>

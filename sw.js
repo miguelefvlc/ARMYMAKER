@@ -2,13 +2,14 @@
 // - App shell (index.html): network-first, falls back to cache when offline.
 // - Static assets (faction data, unit images, icons, CDN libraries): stale-while-revalidate.
 // - Supabase API / auth requests and non-GET requests are never cached.
-const CACHE = 'bolt-action-v1';
+const CACHE = 'bolt-action-v2';
 const PRECACHE = [
   './',
   './index.html',
   './config.js',
   './manifest.webmanifest',
   './factions/soviet_union_app_data.js',
+  './icons/favicon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/apple-touch-icon.png',
