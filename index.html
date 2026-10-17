@@ -227,6 +227,9 @@
       const RUNTIME_SB_KEY = 'boltaction.supabase_config.v1';
       const LOCAL_USER_KEY = 'boltaction.local_user.v1';
 
+      const DEFAULT_SUPABASE_URL = 'https://hllgymckihgmzlwkurid.supabase.co';
+      const DEFAULT_SUPABASE_KEY = 'sb_publishable_QRIZ1T7JnqTKBbVcWegxEQ_9tsX0tiJ';
+
       function getEffectiveSupabaseConfig() {
         const winCfg = window.APP_CONFIG || {};
         let saved = null;
@@ -234,8 +237,8 @@
           saved = JSON.parse(localStorage.getItem(RUNTIME_SB_KEY) || 'null');
         } catch {}
         return {
-          supabaseUrl: winCfg.supabaseUrl || saved?.supabaseUrl || '',
-          supabaseAnonKey: winCfg.supabaseAnonKey || saved?.supabaseAnonKey || '',
+          supabaseUrl: winCfg.supabaseUrl || saved?.supabaseUrl || DEFAULT_SUPABASE_URL,
+          supabaseAnonKey: winCfg.supabaseAnonKey || saved?.supabaseAnonKey || DEFAULT_SUPABASE_KEY,
           googleClientId: winCfg.googleClientId || saved?.googleClientId || '',
         };
       }
@@ -246,11 +249,18 @@
           ? window.supabase.createClient(initialSbCfg.supabaseUrl, initialSbCfg.supabaseAnonKey)
           : null;
 
+      if (supabaseClient) {
+        try {
+          localStorage.removeItem(LOCAL_USER_KEY);
+        } catch {}
+      }
+
       function isSupabaseConfigured() {
         return !!supabaseClient;
       }
 
       function loadLocalUser() {
+        if (supabaseClient) return null;
         try {
           return JSON.parse(localStorage.getItem(LOCAL_USER_KEY) || 'null');
         } catch {
