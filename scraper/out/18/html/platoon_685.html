@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Bolt Action, Wargames, boltaction, Platoon roster creation tool, company list editor, easy, Armies of Germany, WWII, World War II, Osprey">
+    <meta name="description" content="Easy platoon and company list editor for the Warlord Games' Bolt Action game.  Build your army!">
+    <title>EasyArmy.com Bolt Action Platoon - EasyArmy.com</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JNMTNL41S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5JNMTNL41S');
+    </script>
+    <link href="/Content/css?v=KgXyMMxbK2GnFqlQtY8h_iJKcoE8-22_Bnib5Rf61IE1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script type="text/javascript" src="/Content/BoltAction/BoltAction.js?v=1"></script>
+    <script type="text/javascript" src="/Content/Cookies.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2749506334809354"
+            crossorigin="anonymous"></script>
+    <style type="text/css">
+        .cssBack {
+            margin-top: 8px;
+            float: left;
+            margin-left: 10px;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        @media screen and (min-width:768px) {
+            .cssBack {
+                margin-right: 10px
+            }
+
+            .nav li a {
+                padding: 15px 14px;
+            }
+        }
+
+        @media screen and (max-width:345px) {
+            .cssBack {
+                padding-left: 0px;
+                padding-right: 0px
+            }
+
+            .vw {
+                padding-left: 0px;
+                padding-right: 0px
+            }
+
+            .navbar-brand {
+                padding-left: 10px !important
+            }
+        }
+
+        @media screen and (min-width:346px) {
+            .vw {
+                padding: 6px
+            }
+        }
+
+        body {
+            background-repeat: repeat;
+            background-color: #444;
+            background-attachment: fixed !important;
+        }
+
+        .sld {
+            display: inline-block;
+            border: 1px solid #333;
+        }
+
+        .card.card-body {
+            border-top: 1px solid #333;
+            padding-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <button class="btn btn-default cssBack" aria-label="Left Align" onclick="location.href='/BoltAction/SavedPlatoon'">
+                    <span class="glyphicon glyphicon-chevron-left"></span>&nbsp;
+                </button>
+                <span class="navbar-brand">WG.EasyArmy.com</span>
+                        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle btn btn-default active vw" onclick="location.href='/BoltAction/View/71e5feea-5478-4486-b012-43c4005e6018/1'">View</button>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/BoltAction/NewPlatoon">New_List</a></li>
+                    <li><a href="/BoltAction/SavedPlatoon">Saved</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Options <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" onclick="customName();">Custom Name</a></li>
+                                    <li><a href="/BoltAction/CopyList/71e5feea-5478-4486-b012-43c4005e6018/1">Copy List</a></li>
+                                    <li><a href="/BoltAction/ClearPlatoon/71e5feea-5478-4486-b012-43c4005e6018/1" onclick="return Verify2('Platoon');">Clear Platoon #1</a></li>
+                                    <li><a href="/BoltAction/DeletePlatoon/71e5feea-5478-4486-b012-43c4005e6018/1" onclick="return Verify('Platoon');">Delete Platoon #1</a></li>
+                                    <li><a href="/BoltAction/ClearPlatoon/71e5feea-5478-4486-b012-43c4005e6018?platoonNum=-1" onclick="return Verify(&#39;Platoon&#39;);">Clear All Platoons</a></li>
+                                </ul>
+                            </li>
+
+                </ul>
+                        <button class="btn btn-default" style="margin-top:8px" onclick="location.href='/BoltAction/View/71e5feea-5478-4486-b012-43c4005e6018/1'">View</button>
+
+                <form action="/Account/LogOff" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="WEG3nmla29HtjM7OnjxJRb67xPAG5lTEOpRcVlPZubyJF2PYi8GRxMcfhFM76FLsPt24dVgXPzNqGW0edjzCmj4DHOtns0Jhf9IrOq3UcuFQgvYL4_KA47ATebytXV7vT2vEy7I092K-AO19Bi_zmg2" />    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="/Manage" title="Manage">Account</a>
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+</form>
+            </div>
+        </div>
+    </div>
+<div class="a1">
+<a href="https://kickassmailorder.com/?ctk=7e173ab3-69ee-4d16-a3fd-8290c3cd537d" target="_blank"><img style="margin-left:1px;" src="/Content/BoltAction/BannerAd.jpg"/></a></div>
+<div class="w1170 body-content">
+
+            
+
+<link rel="stylesheet" type="text/css" href="/Content/BoltAction/Platoon.css?v=1"/>    
+<div class="cssError"></div>
+<div class="p_Title">*v3 Armies of the Soviet Union - Armoured (LW)<br><span class="cssYesS" style="font-size:18px;"></span></div>
+<div class="mt">
+    <div class="p_src">Armies of the Soviet Union (v3)</div><div class="cssNoS p_csn2"></div><div class="p_pnt"><font size="5">Points: <b><span id="lblPointsTotal">0</span></b></font></div>
+    <div class="p_lock cssNoS2" style="width:98px;"><input type="checkbox" id="lockopen"><div class="opentext" style="float:left;">Lock Open:</div></div>
+    <div class="p_btns">Platoon: <button id="btn1" style="background-color:yellow" type="button" class="btn btn-default" data-seq="1">#1</button><button id="btn2" style="" type="button" class="btn btn-default" data-seq="2">#2</button><button id="btn3" style="" type="button" class="btn btn-default" data-seq="3">#3</button><button id="btn4" style="" type="button" class="btn btn-default" data-seq="4">#4</button><button id="btn5" style="" type="button" class="btn btn-default" data-seq="5">#5</button><button id="btn6" style="" type="button" class="btn btn-default" data-seq="6">#6</button></div>
+</div>
+<div class="p_out">
+<div class='column'>        <div class="box required"><div class="section">Command Vehicle<div class="sign">[+]</div></div>
+    <div class="p" data-seq="121604"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-37 Light Tank</div></div>
+    <div class="p" data-seq="121605"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-60 Light Tank</div></div>
+    <div class="p" data-seq="121606"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-70 Light Tank</div></div>
+    <div class="p" data-seq="121607"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/76 Medium Tank</div></div>
+    <div class="p" data-seq="121608"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/85 Medium Tank</div></div>
+    <div class="p" data-seq="121609"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tractor Factory T-34</div></div>
+    <div class="p" data-seq="121610"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121611"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-85 and IS-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121612"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-2 Heavy Tank</div></div>
+    <div class="p" data-seq="121613"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-3 Heavy Tank</div></div>
+    <div class="p" data-seq="121614"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-85</div></div>
+    <div class="p" data-seq="121615"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-100</div></div>
+    <div class="p" data-seq="121616"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">ISU-122</div></div>
+    <div class="p" data-seq="121617"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76</div></div>
+    <div class="p" data-seq="121618"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76i</div></div>
+    <div class="p" data-seq="121619"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-122</div></div>
+    <div class="p" data-seq="121620"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-152 and ISU-152</div></div>
+    <div class="p" data-seq="121621"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Katyusha</div></div>
+    <div class="p" data-seq="121622"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tachanka</div></div>
+    <div class="p" data-seq="121623"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Bronekater</div></div>
+    <div class="p" data-seq="121624"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tokarev 4M Quad Maxim on GAZ-AA Truck</div></div>
+    <div class="p" data-seq="121625"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-64</div></div>
+    <div class="p" data-seq="121626"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-20</div></div>
+    <div class="p" data-seq="121627"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-10</div></div>
+    <div class="p" data-seq="121628"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">GAZ Jeep (no transport)</div></div>
+    <div class="p" data-seq="121629"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 White Scout Car (no transport)</div></div>
+    <div class="p" data-seq="121630"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Universal Carrier (no transport)</div></div>
+    <div class="p" data-seq="121861"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 Stuart</div></div>
+    <div class="p" data-seq="121862"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M5A1 Stuart</div></div>
+    <div class="p" data-seq="121863"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M10 Wolverine</div></div>
+    <div class="p" data-seq="121864"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman</div></div>
+    <div class="p" data-seq="121865"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman 76mm</div></div>
+    <div class="p" data-seq="121866"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Churchill III or IV</div></div>
+    <div class="p" data-seq="121867"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-57 (T48 Gun Motor Carriage)</div></div>
+    <div class="p" data-seq="121868"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M16/M17 Multiple Gun Motor Carriage</div></div>
+            <div class="more hideLines">show less..</div>
+</div>        <div class="box required">
+        <div class="section">Cmd Vehicle Options<div class="sign">[+]</div></div>
+    <div class="p" data-seq="121631"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Command Vehicle rule (v3)</div></div>
+        <div class="more hideLines">show less..</div>
+        </div>
+</div>        <div class="column">
+        <div class="box required">
+        <div class="section">Vehicle<div class="sign">[+]</div></div>
+    <div class="p" data-seq="121632"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-37 Light Tank</div></div>
+    <div class="p" data-seq="121633"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-60 Light Tank</div></div>
+    <div class="p" data-seq="121634"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-70 Light Tank</div></div>
+    <div class="p" data-seq="121635"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/76 Medium Tank</div></div>
+    <div class="p" data-seq="121636"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/85 Medium Tank</div></div>
+    <div class="p" data-seq="121637"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tractor Factory T-34</div></div>
+    <div class="p" data-seq="121638"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121639"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-85 and IS-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121640"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-2 Heavy Tank</div></div>
+    <div class="p" data-seq="121641"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-3 Heavy Tank</div></div>
+    <div class="p" data-seq="121642"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-85</div></div>
+    <div class="p" data-seq="121643"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-100</div></div>
+    <div class="p" data-seq="121644"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">ISU-122</div></div>
+    <div class="p" data-seq="121645"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76</div></div>
+    <div class="p" data-seq="121646"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76i</div></div>
+    <div class="p" data-seq="121647"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-122</div></div>
+    <div class="p" data-seq="121648"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-152 and ISU-152</div></div>
+    <div class="p" data-seq="121649"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Katyusha</div></div>
+    <div class="p" data-seq="121650"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tachanka</div></div>
+    <div class="p" data-seq="121651"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Bronekater</div></div>
+    <div class="p" data-seq="121652"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tokarev 4M Quad Maxim on GAZ-AA Truck</div></div>
+    <div class="p" data-seq="121653"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-64</div></div>
+    <div class="p" data-seq="121654"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-20</div></div>
+    <div class="p" data-seq="121655"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-10</div></div>
+    <div class="p" data-seq="121656"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">GAZ Jeep (no transport)</div></div>
+    <div class="p" data-seq="121657"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 White Scout Car (no transport)</div></div>
+    <div class="p" data-seq="121658"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Universal Carrier (no transport)</div></div>
+    <div class="p" data-seq="121869"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 Stuart</div></div>
+    <div class="p" data-seq="121870"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M5A1 Stuart</div></div>
+    <div class="p" data-seq="121871"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M10 Wolverine</div></div>
+    <div class="p" data-seq="121872"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman</div></div>
+    <div class="p" data-seq="121873"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman 76mm</div></div>
+    <div class="p" data-seq="121874"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Churchill III or IV</div></div>
+    <div class="p" data-seq="121875"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-57 (T48 Gun Motor Carriage)</div></div>
+    <div class="p" data-seq="121876"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M16/M17 Multiple Gun Motor Carriage</div></div>
+        <div class="more hideLines">show less..</div>
+        </div>
+</div>        <div class="column">
+        <div class="box ">
+        <div class="section">Vehicle<div class="sign">[+]</div></div>
+    <div class="p" data-seq="121659"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-37 Light Tank</div></div>
+    <div class="p" data-seq="121660"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-60 Light Tank</div></div>
+    <div class="p" data-seq="121661"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-70 Light Tank</div></div>
+    <div class="p" data-seq="121662"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/76 Medium Tank</div></div>
+    <div class="p" data-seq="121663"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/85 Medium Tank</div></div>
+    <div class="p" data-seq="121664"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tractor Factory T-34</div></div>
+    <div class="p" data-seq="121665"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121666"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-85 and IS-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121667"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-2 Heavy Tank</div></div>
+    <div class="p" data-seq="121668"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-3 Heavy Tank</div></div>
+    <div class="p" data-seq="121669"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-85</div></div>
+    <div class="p" data-seq="121670"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-100</div></div>
+    <div class="p" data-seq="121671"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">ISU-122</div></div>
+    <div class="p" data-seq="121672"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76</div></div>
+    <div class="p" data-seq="121673"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76i</div></div>
+    <div class="p" data-seq="121674"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-122</div></div>
+    <div class="p" data-seq="121675"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-152 and ISU-152</div></div>
+    <div class="p" data-seq="121676"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Katyusha</div></div>
+    <div class="p" data-seq="121677"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tachanka</div></div>
+    <div class="p" data-seq="121678"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Bronekater</div></div>
+    <div class="p" data-seq="121679"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tokarev 4M Quad Maxim on GAZ-AA Truck</div></div>
+    <div class="p" data-seq="121680"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-64</div></div>
+    <div class="p" data-seq="121681"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-20</div></div>
+    <div class="p" data-seq="121682"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-10</div></div>
+    <div class="p" data-seq="121683"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">GAZ Jeep (no transport)</div></div>
+    <div class="p" data-seq="121684"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 White Scout Car (no transport)</div></div>
+    <div class="p" data-seq="121685"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Universal Carrier (no transport)</div></div>
+    <div class="p" data-seq="121877"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 Stuart</div></div>
+    <div class="p" data-seq="121878"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M5A1 Stuart</div></div>
+    <div class="p" data-seq="121879"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M10 Wolverine</div></div>
+    <div class="p" data-seq="121880"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman</div></div>
+    <div class="p" data-seq="121881"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman 76mm</div></div>
+    <div class="p" data-seq="121882"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Churchill III or IV</div></div>
+    <div class="p" data-seq="121883"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-57 (T48 Gun Motor Carriage)</div></div>
+    <div class="p" data-seq="121884"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M16/M17 Multiple Gun Motor Carriage</div></div>
+        <div class="more hideLines">show less..</div>
+        </div>
+</div>        <div class="column">
+        <div class="box ">
+        <div class="section">Vehicle<div class="sign">[+]</div></div>
+    <div class="p" data-seq="121686"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-37 Light Tank</div></div>
+    <div class="p" data-seq="121687"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-60 Light Tank</div></div>
+    <div class="p" data-seq="121688"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-70 Light Tank</div></div>
+    <div class="p" data-seq="121689"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/76 Medium Tank</div></div>
+    <div class="p" data-seq="121690"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/85 Medium Tank</div></div>
+    <div class="p" data-seq="121691"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tractor Factory T-34</div></div>
+    <div class="p" data-seq="121692"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121693"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-85 and IS-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121694"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-2 Heavy Tank</div></div>
+    <div class="p" data-seq="121695"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-3 Heavy Tank</div></div>
+    <div class="p" data-seq="121696"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-85</div></div>
+    <div class="p" data-seq="121697"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-100</div></div>
+    <div class="p" data-seq="121698"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">ISU-122</div></div>
+    <div class="p" data-seq="121699"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76</div></div>
+    <div class="p" data-seq="121700"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76i</div></div>
+    <div class="p" data-seq="121701"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-122</div></div>
+    <div class="p" data-seq="121702"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-152 and ISU-152</div></div>
+    <div class="p" data-seq="121703"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Katyusha</div></div>
+    <div class="p" data-seq="121704"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tachanka</div></div>
+    <div class="p" data-seq="121705"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Bronekater</div></div>
+    <div class="p" data-seq="121706"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tokarev 4M Quad Maxim on GAZ-AA Truck</div></div>
+    <div class="p" data-seq="121707"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-64</div></div>
+    <div class="p" data-seq="121708"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-20</div></div>
+    <div class="p" data-seq="121709"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-10</div></div>
+    <div class="p" data-seq="121710"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">GAZ Jeep (no transport)</div></div>
+    <div class="p" data-seq="121711"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 White Scout Car (no transport)</div></div>
+    <div class="p" data-seq="121712"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Universal Carrier (no transport)</div></div>
+    <div class="p" data-seq="121885"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 Stuart</div></div>
+    <div class="p" data-seq="121886"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M5A1 Stuart</div></div>
+    <div class="p" data-seq="121887"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M10 Wolverine</div></div>
+    <div class="p" data-seq="121888"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman</div></div>
+    <div class="p" data-seq="121889"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman 76mm</div></div>
+    <div class="p" data-seq="121890"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Churchill III or IV</div></div>
+    <div class="p" data-seq="121891"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-57 (T48 Gun Motor Carriage)</div></div>
+    <div class="p" data-seq="121892"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M16/M17 Multiple Gun Motor Carriage</div></div>
+        <div class="more hideLines">show less..</div>
+        </div>
+</div>        <div class="column">
+        <div class="box ">
+        <div class="section">Vehicle<div class="sign">[+]</div></div>
+    <div class="p" data-seq="121713"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-37 Light Tank</div></div>
+    <div class="p" data-seq="121714"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-60 Light Tank</div></div>
+    <div class="p" data-seq="121715"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-70 Light Tank</div></div>
+    <div class="p" data-seq="121716"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/76 Medium Tank</div></div>
+    <div class="p" data-seq="121717"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">T-34/85 Medium Tank</div></div>
+    <div class="p" data-seq="121718"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tractor Factory T-34</div></div>
+    <div class="p" data-seq="121719"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121720"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">KV-85 and IS-1 Heavy Tank</div></div>
+    <div class="p" data-seq="121721"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-2 Heavy Tank</div></div>
+    <div class="p" data-seq="121722"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">IS-3 Heavy Tank</div></div>
+    <div class="p" data-seq="121723"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-85</div></div>
+    <div class="p" data-seq="121724"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-100</div></div>
+    <div class="p" data-seq="121725"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">ISU-122</div></div>
+    <div class="p" data-seq="121726"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76</div></div>
+    <div class="p" data-seq="121727"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-76i</div></div>
+    <div class="p" data-seq="121728"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-122</div></div>
+    <div class="p" data-seq="121729"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-152 and ISU-152</div></div>
+    <div class="p" data-seq="121730"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Katyusha</div></div>
+    <div class="p" data-seq="121731"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tachanka</div></div>
+    <div class="p" data-seq="121732"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Bronekater</div></div>
+    <div class="p" data-seq="121733"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Tokarev 4M Quad Maxim on GAZ-AA Truck</div></div>
+    <div class="p" data-seq="121734"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-64</div></div>
+    <div class="p" data-seq="121735"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-20</div></div>
+    <div class="p" data-seq="121736"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">BA-10</div></div>
+    <div class="p" data-seq="121737"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">GAZ Jeep (no transport)</div></div>
+    <div class="p" data-seq="121738"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 White Scout Car (no transport)</div></div>
+    <div class="p" data-seq="121739"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Universal Carrier (no transport)</div></div>
+    <div class="p" data-seq="121893"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M3 Stuart</div></div>
+    <div class="p" data-seq="121894"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M5A1 Stuart</div></div>
+    <div class="p" data-seq="121895"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M10 Wolverine</div></div>
+    <div class="p" data-seq="121896"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman</div></div>
+    <div class="p" data-seq="121897"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M4 Sherman 76mm</div></div>
+    <div class="p" data-seq="121898"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">Churchill III or IV</div></div>
+    <div class="p" data-seq="121899"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">SU-57 (T48 Gun Motor Carriage)</div></div>
+    <div class="p" data-seq="121900"><div class="p_cb"><img src='/Content/BoltAction/BWhite.jpg'></div><div class="u">M16/M17 Multiple Gun Motor Carriage</div></div>
+              <div class="more hideLines">show less..</div></div></div>
+    <div style="clear:both;"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        if (Cookies.get("LockOpen") != "Y") {
+            $(".p").addClass("hideLines");
+            $(".sign").html("[+]");
+            $(".more").html("show all..");
+            Cookies.set("LockOpen", "N", 1000);
+            $("#lockopen").prop('checked', false);
+        }
+        else {
+            $(".p").removeClass("hideLines");
+            $(".sign").html("[-]");
+            $(".more").html("show less..");
+            Cookies.set("LockOpen", "Y", 1000);
+            $("#lockopen").prop('checked', true);
+        }
+
+        $(".section").click(function () {
+            $(this).parent().find(".p").toggleClass("hideLines");
+            $(this).parent().find(".more").toggleClass("hideLines");
+            if ($(this).find(".sign").html() == "[+]") {
+                $(this).find(".sign").html("[-]")
+            } else {
+                $(this).find(".sign").html("[+]")
+            }
+            if ($(this).parent().find(".more").html() == "show all..") {
+                $(this).parent().find(".more").html("show less..")
+            } else {
+                $(this).parent().find(".more").html("show all..")
+            }
+        });
+
+        $(".more").click(function () {
+            $(this).parent().find(".p").toggleClass("hideLines");
+            if ($(this).html() == "show all..") {
+                $(this).html("show less..");
+            } else {
+                $(this).html("show all..");
+            }
+            if ($(this).parent().find(".section").find(".sign").html() == "[+]") {
+                $(this).parent().find(".section").find(".sign").html("[-]")
+            } else {
+                $(this).parent().find(".section").find(".sign").html("[+]")
+            }
+        });
+        $(".p").click(function () {
+            document.location.href = '/BoltAction/Unit/71e5feea-5478-4486-b012-43c4005e6018/1/' + $(this).data('seq');
+        });
+        $(".p_btns button").click(function () {
+            if ($(this).data('seq') == "0")
+                document.location.href = '/BoltAction/View/71e5feea-5478-4486-b012-43c4005e6018/1';
+            else
+                document.location.href = '/BoltAction/Platoon/71e5feea-5478-4486-b012-43c4005e6018/' + $(this).data('seq');
+        });
+        $("#lockopen").click(function () {
+            if ($(this).is(':checked')) {
+                $(".p").removeClass("hideLines");
+                $(".sign").html("[-]");
+                $(".more").html("show less..");
+                Cookies.set("LockOpen", "Y", 1000);
+
+            }
+            else {
+                $(".p").addClass("hideLines");
+                $(".sign").html("[+]");
+                $(".more").html("show all..");
+                Cookies.set("LockOpen", "N", 1000);
+            }
+        });
+    });
+    function customName() {
+        var txt
+        var name = prompt("Enter new secondary name for platoon:");
+        if ((name!=null) && (name!=""))
+        {
+            location.href = "/BoltAction/Platoon/71e5feea-5478-4486-b012-43c4005e6018/1?custom=" + name;
+        }
+    }
+</script>
+
+            <hr style="clear:both;" />
+            <footer>
+                <p>&copy; 2026 - EasyArmy.com</p>
+            </footer>
+        </div>
+
+        <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+        <script src="/bundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
+
+        
+</body>
+</html>

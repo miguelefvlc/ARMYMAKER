@@ -1,0 +1,31 @@
+{
+  "name": "listmaker",
+  "version": "1.0.0",
+  "description": "Modern Bolt Action v3 Army List Builder",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "bolt-action",
+    "army-builder",
+    "wargaming"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.57.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.3"
+  }
+}

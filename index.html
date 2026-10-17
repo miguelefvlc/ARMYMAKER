@@ -1,0 +1,3563 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Bolt Action v3 — Army List Builder</title>
+    <!-- Installable app (PWA) -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Bolt Action" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              tactical: ['Chakra Petch', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              tacticalRed: '#b84242',
+              tacticalRedHover: '#a83636',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- React 18 & Babel Standalone -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- html2pdf.js for direct PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Faction Data Modules (Scalable Multi-Faction Registry: window.EASYARMY_FACTIONS) -->
+    <script src="./factions/soviet_union_app_data.js"></script>
+    <!-- Accounts & cloud-saved lists (Supabase) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./config.js"></script>
+    <style>
+      body {
+        background-color: #09090b;
+        color: #f4f4f5;
+        font-family: 'Inter', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+      /* App mode: respect notches / home indicator */
+      .safe-top { padding-top: max(0.75rem, env(safe-area-inset-top)); }
+      .safe-bottom { padding-bottom: max(0.5rem, env(safe-area-inset-bottom)); }
+      .safe-x {
+        padding-left: max(0.75rem, env(safe-area-inset-left));
+        padding-right: max(0.75rem, env(safe-area-inset-right));
+      }
+      /* iOS zooms into inputs with font-size < 16px */
+      @media (max-width: 640px) {
+        input, select, textarea { font-size: 16px !important; }
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { scrollbar-width: none; }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #18181b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3f3f46;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #52525b;
+      }
+
+      @media print {
+        body {
+          background-color: #ffffff !important;
+          color: #18181b !important;
+          font-family: 'Inter', sans-serif !important;
+          font-size: 10px !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .no-print, header, nav, button, .modal-backdrop, #root > div > .no-print, .fixed {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        @page {
+          size: A4 portrait;
+          margin: 8mm 8mm 10mm 8mm;
+        }
+        .unit-card, .platoon-print-block, .rules-print-block {
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
+        }
+      }
+      @media screen {
+        .print-only {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased selection:bg-amber-400 selection:text-black">
+    <div id="root"></div>
+    <script type="text/babel">
+      const { useState, useEffect, useRef, useMemo } = React;
+
+      // =========================================================================
+      // SVG ICONS
+      // =========================================================================
+      const ChevronDown = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      );
+      const Plus = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M5 12h14"/><path d="M12 5v14"/>
+        </svg>
+      );
+      const Check = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      );
+      const Trash = ({ className = "w-3 h-3" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+        </svg>
+      );
+      const XIcon = ({ className = "w-3.5 h-3.5" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+      );
+      const Search = ({ className = "w-3.5 h-3.5" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+      );
+      const EditIcon = ({ className = "w-3.5 h-3.5" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+      );
+      const Users = ({ className = "w-3.5 h-3.5" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      );
+      const DownloadIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      );
+      const UploadIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+      );
+      const PrinterIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/>
+        </svg>
+      );
+      const FileTextIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/>
+        </svg>
+      );
+      const FileCodeIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><polyline points="10 13 8 15 10 17"/><polyline points="14 13 16 15 14 17"/>
+        </svg>
+      );
+      const EyeIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>
+        </svg>
+      );
+      const CloudIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+        </svg>
+      );
+      const FolderIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+        </svg>
+      );
+      const UserIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      );
+      const LogOutIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/>
+        </svg>
+      );
+
+      // =========================================================================
+      // ACCOUNTS & CLOUD / LOCAL LISTS (Supabase Auth + LocalStorage Library)
+      // =========================================================================
+      const LOCAL_LISTS_KEY = 'boltaction.saved_lists.v1';
+      const RUNTIME_SB_KEY = 'boltaction.supabase_config.v1';
+
+      function getEffectiveSupabaseConfig() {
+        const winCfg = window.APP_CONFIG || {};
+        if (winCfg.supabaseUrl && winCfg.supabaseAnonKey) return winCfg;
+        try {
+          const saved = JSON.parse(localStorage.getItem(RUNTIME_SB_KEY) || 'null');
+          if (saved?.supabaseUrl && saved?.supabaseAnonKey) return saved;
+        } catch {}
+        return { supabaseUrl: '', supabaseAnonKey: '' };
+      }
+
+      const initialSbCfg = getEffectiveSupabaseConfig();
+      let supabaseClient =
+        initialSbCfg.supabaseUrl && initialSbCfg.supabaseAnonKey && window.supabase
+          ? window.supabase.createClient(initialSbCfg.supabaseUrl, initialSbCfg.supabaseAnonKey)
+          : null;
+
+      function loadLocalLists() {
+        try {
+          const arr = JSON.parse(localStorage.getItem(LOCAL_LISTS_KEY) || '[]');
+          return Array.isArray(arr) ? arr : [];
+        } catch {
+          return [];
+        }
+      }
+
+      function saveLocalLists(lists) {
+        try {
+          localStorage.setItem(LOCAL_LISTS_KEY, JSON.stringify(lists));
+        } catch {}
+      }
+
+      function useAuth() {
+        const [session, setSession] = useState(null);
+        const [authReady, setAuthReady] = useState(!supabaseClient);
+        useEffect(() => {
+          if (!supabaseClient) return;
+          supabaseClient.auth.getSession().then(({ data }) => {
+            setSession(data.session);
+            setAuthReady(true);
+          });
+          const { data: sub } = supabaseClient.auth.onAuthStateChange((_event, s) => setSession(s));
+          return () => sub.subscription.unsubscribe();
+        }, []);
+        return { session, user: session?.user || null, authReady };
+      }
+
+      function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-w-md" }) {
+        return (
+          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/85 backdrop-blur-sm no-print">
+            <div className={`bg-zinc-900 border border-zinc-700 rounded-t-2xl sm:rounded-2xl shadow-2xl w-full ${maxWidth} max-h-[92dvh] overflow-hidden flex flex-col`}>
+              <div className="px-5 py-3.5 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between gap-4 shrink-0">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="w-8 h-8 rounded-lg bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400 shrink-0">
+                    {icon}
+                  </div>
+                  <div className="min-w-0">
+                    <h2 className="text-base font-black font-tactical text-white tracking-wide uppercase truncate">{title}</h2>
+                    {subtitle && <p className="text-[11px] font-mono text-zinc-400 truncate">{subtitle}</p>}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
+                  title="Close"
+                >
+                  <XIcon className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-5 safe-bottom">{children}</div>
+            </div>
+          </div>
+        );
+      }
+
+      function AuthModal({ isOpen, onClose }) {
+        const [mode, setMode] = useState('signin'); // signin | signup | reset
+        const [email, setEmail] = useState('');
+        const [password, setPassword] = useState('');
+        const [busy, setBusy] = useState(false);
+        const [message, setMessage] = useState(null);
+        const [sbUrl, setSbUrl] = useState(initialSbCfg.supabaseUrl || '');
+        const [sbKey, setSbKey] = useState(initialSbCfg.supabaseAnonKey || '');
+
+        useEffect(() => {
+          if (isOpen) setMessage(null);
+        }, [isOpen, mode]);
+
+        if (!isOpen) return null;
+
+        const redirectTo = window.location.origin + window.location.pathname;
+
+        const handleSaveSupabaseConfig = (e) => {
+          e.preventDefault();
+          const cleanUrl = sbUrl.trim();
+          const cleanKey = sbKey.trim();
+          if (!cleanUrl || !cleanKey) return;
+          localStorage.setItem(RUNTIME_SB_KEY, JSON.stringify({ supabaseUrl: cleanUrl, supabaseAnonKey: cleanKey }));
+          window.location.reload();
+        };
+
+        const handleSubmit = async (e) => {
+          e.preventDefault();
+          setBusy(true);
+          setMessage(null);
+          try {
+            if (mode === 'signin') {
+              const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+              if (error) throw error;
+              onClose();
+            } else if (mode === 'signup') {
+              const { data, error } = await supabaseClient.auth.signUp({
+                email,
+                password,
+                options: { emailRedirectTo: redirectTo },
+              });
+              if (error) throw error;
+              if (data.session) {
+                onClose();
+              } else {
+                setMessage({ type: 'success', text: 'Account created. Check your email to confirm it, then sign in.' });
+                setMode('signin');
+              }
+            } else {
+              const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo });
+              if (error) throw error;
+              setMessage({ type: 'success', text: 'Password reset email sent.' });
+            }
+          } catch (err) {
+            setMessage({ type: 'error', text: err.message || String(err) });
+          } finally {
+            setBusy(false);
+          }
+        };
+
+        const handleGoogle = async () => {
+          setMessage(null);
+          const { error } = await supabaseClient.auth.signInWithOAuth({
+            provider: 'google',
+            options: { redirectTo },
+          });
+          if (error) setMessage({ type: 'error', text: error.message });
+        };
+
+        const titles = { signin: 'Sign In', signup: 'Create Account', reset: 'Reset Password' };
+        const inputCls =
+          "w-full bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-lg px-3 py-2.5 text-sm text-white font-mono placeholder-zinc-600 outline-none transition-colors";
+
+        return (
+          <ModalShell
+            title={titles[mode]}
+            subtitle="Sync your army lists across PC, mobile & tablet"
+            icon={<UserIcon className="w-4 h-4" />}
+            onClose={onClose}
+          >
+            {!supabaseClient ? (
+              <form onSubmit={handleSaveSupabaseConfig} className="space-y-3 text-xs font-mono text-zinc-300 leading-relaxed">
+                <div className="p-3 rounded-lg bg-amber-400/10 border border-amber-400/30 text-amber-200 space-y-1">
+                  <div className="font-bold text-amber-300">Connect Supabase Cloud (Optional)</div>
+                  <p className="text-[11px] text-zinc-300">
+                    Your lists are already saved locally on this device. To sync across devices with login, paste your Supabase Project URL and Anon Key below (or in <code className="text-amber-300">config.js</code>) after running <code className="text-amber-300">supabase/schema.sql</code>.
+                  </p>
+                </div>
+                <div>
+                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Supabase Project URL</label>
+                  <input
+                    type="url"
+                    required
+                    value={sbUrl}
+                    onChange={(e) => setSbUrl(e.target.value)}
+                    placeholder="https://xyzcompany.supabase.co"
+                    className={inputCls}
+                  />
+                </div>
+                <div>
+                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Supabase Anon Public Key</label>
+                  <input
+                    type="text"
+                    required
+                    value={sbKey}
+                    onChange={(e) => setSbKey(e.target.value)}
+                    placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6..."
+                    className={inputCls}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full py-2.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs font-mono transition-colors shadow cursor-pointer"
+                >
+                  Save & Connect Supabase
+                </button>
+              </form>
+            ) : (
+              <div className="space-y-4">
+                {mode !== 'reset' && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={handleGoogle}
+                      className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-bold text-sm flex items-center justify-center gap-2.5 transition-colors cursor-pointer"
+                    >
+                      <svg viewBox="0 0 48 48" className="w-4 h-4">
+                        <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
+                        <path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+                        <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+                        <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/>
+                      </svg>
+                      Continue with Google
+                    </button>
+                    <div className="flex items-center gap-3 text-[10.5px] font-mono uppercase text-zinc-500">
+                      <div className="h-px flex-1 bg-zinc-800" />
+                      or with email
+                      <div className="h-px flex-1 bg-zinc-800" />
+                    </div>
+                  </>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <input
+                    type="email"
+                    required
+                    autoComplete="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email"
+                    className={inputCls}
+                  />
+                  {mode !== 'reset' && (
+                    <input
+                      type="password"
+                      required
+                      minLength={6}
+                      autoComplete={mode === 'signup' ? 'new-password' : 'current-password'}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Password (min. 6 characters)"
+                      className={inputCls}
+                    />
+                  )}
+
+                  {message && (
+                    <div
+                      className={`px-3 py-2 rounded-lg text-xs font-mono border ${
+                        message.type === 'error'
+                          ? 'bg-red-950/60 border-red-800 text-red-200'
+                          : 'bg-emerald-950/60 border-emerald-800 text-emerald-200'
+                      }`}
+                    >
+                      {message.text}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={busy}
+                    className="w-full py-2.5 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-black font-extrabold text-sm font-mono transition-colors shadow cursor-pointer"
+                  >
+                    {busy ? 'Please wait...' : titles[mode]}
+                  </button>
+                </form>
+
+                <div className="flex items-center justify-between text-xs font-mono">
+                  {mode === 'signin' ? (
+                    <>
+                      <button type="button" onClick={() => setMode('signup')} className="text-amber-400 hover:text-amber-300 cursor-pointer">
+                        Create account
+                      </button>
+                      <button type="button" onClick={() => setMode('reset')} className="text-zinc-400 hover:text-white cursor-pointer">
+                        Forgot password?
+                      </button>
+                    </>
+                  ) : (
+                    <button type="button" onClick={() => setMode('signin')} className="text-amber-400 hover:text-amber-300 cursor-pointer">
+                      ← Back to sign in
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
+          </ModalShell>
+        );
+      }
+
+      function MyListsModal({ isOpen, onClose, user, currentListId, onLoadList, onListDeleted, onSaveCurrentAsNew }) {
+        const [cloudLists, setCloudLists] = useState([]);
+        const [localLists, setLocalLists] = useState([]);
+        const [loading, setLoading] = useState(false);
+        const [error, setError] = useState(null);
+
+        const refreshLists = async () => {
+          setLocalLists(loadLocalLists());
+          if (!supabaseClient || !user) {
+            setCloudLists([]);
+            return;
+          }
+          setLoading(true);
+          setError(null);
+          const { data, error: err } = await supabaseClient
+            .from('army_lists')
+            .select('id, name, faction_id, total_points, order_dice, updated_at')
+            .order('updated_at', { ascending: false });
+          if (err) setError(err.message);
+          else setCloudLists(data || []);
+          setLoading(false);
+        };
+
+        useEffect(() => {
+          if (isOpen) refreshLists();
+        }, [isOpen, user?.id]);
+
+        if (!isOpen) return null;
+
+        const handleOpenCloud = async (id) => {
+          const { data, error: err } = await supabaseClient.from('army_lists').select('*').eq('id', id).single();
+          if (err) {
+            setError(err.message);
+            return;
+          }
+          onLoadList(data);
+          onClose();
+        };
+
+        const handleOpenLocal = (row) => {
+          onLoadList(row);
+          onClose();
+        };
+
+        const handleDeleteCloud = async (row) => {
+          if (!window.confirm(`Delete cloud list "${row.name}"?`)) return;
+          const { error: err } = await supabaseClient.from('army_lists').delete().eq('id', row.id);
+          if (err) {
+            setError(err.message);
+            return;
+          }
+          setCloudLists((prev) => prev.filter((l) => l.id !== row.id));
+          onListDeleted(row.id);
+        };
+
+        const handleDeleteLocal = (row) => {
+          if (!window.confirm(`Delete saved list "${row.name}" from this device?`)) return;
+          const next = localLists.filter((l) => l.id !== row.id);
+          saveLocalLists(next);
+          setLocalLists(next);
+          onListDeleted(row.id);
+        };
+
+        const combinedEmpty = cloudLists.length === 0 && localLists.length === 0;
+
+        return (
+          <ModalShell
+            title="My Saved Lists"
+            subtitle={user?.email ? `Cloud (${user.email}) & Device` : 'Saved on this device (Sign in to sync to cloud)'}
+            icon={<FolderIcon className="w-4 h-4" />}
+            onClose={onClose}
+            maxWidth="max-w-2xl"
+          >
+            <div className="mb-3 flex items-center justify-between gap-2">
+              <span className="text-[11px] font-mono text-zinc-400">
+                {user ? 'Cloud + Local storage active' : 'Local browser storage active'}
+              </span>
+              <button
+                type="button"
+                onClick={async () => {
+                  await onSaveCurrentAsNew();
+                  refreshLists();
+                }}
+                className="px-3 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-mono font-extrabold text-xs flex items-center gap-1.5 cursor-pointer"
+              >
+                <Plus className="w-3.5 h-3.5" />
+                Save Current as New List
+              </button>
+            </div>
+
+            {error && (
+              <div className="mb-3 px-3 py-2 rounded-lg text-xs font-mono border bg-red-950/60 border-red-800 text-red-200">
+                {error}
+              </div>
+            )}
+            {loading ? (
+              <div className="py-10 text-center text-xs font-mono text-zinc-500">Loading lists...</div>
+            ) : combinedEmpty ? (
+              <div className="py-10 text-center text-xs font-mono text-zinc-500">
+                No saved lists yet. Tap <strong className="text-amber-400">Save</strong> to store your current roster.
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {cloudLists.length > 0 && (
+                  <div className="space-y-2">
+                    <div className="text-[10.5px] font-mono uppercase tracking-wider text-amber-400 font-bold">
+                      Cloud Lists ({cloudLists.length})
+                    </div>
+                    {cloudLists.map((l) => {
+                      const isCurrent = l.id === currentListId;
+                      return (
+                        <div
+                          key={l.id}
+                          className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
+                            isCurrent ? 'bg-amber-400/10 border-amber-500/40' : 'bg-zinc-950/70 border-zinc-800 hover:border-zinc-700'
+                          }`}
+                        >
+                          <button type="button" onClick={() => handleOpenCloud(l.id)} className="flex-1 min-w-0 text-left cursor-pointer">
+                            <div className="font-bold text-sm text-white truncate">{l.name}</div>
+                            <div className="text-[11px] font-mono text-zinc-400 flex flex-wrap items-center gap-x-2">
+                              <span>{FACTIONS_REGISTRY[l.faction_id]?.faction || l.faction_id}</span>
+                              <span className="text-zinc-600">•</span>
+                              <span className="text-amber-400 font-bold">{l.total_points} pts</span>
+                              <span className="text-zinc-600">•</span>
+                              <span>{l.order_dice} dice</span>
+                              <span className="text-zinc-600">•</span>
+                              <span>{new Date(l.updated_at).toLocaleDateString()}</span>
+                            </div>
+                          </button>
+                          {isCurrent && (
+                            <span className="hidden sm:inline text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-amber-400 text-black font-bold">
+                              Active
+                            </span>
+                          )}
+                          <button
+                            type="button"
+                            onClick={() => handleDeleteCloud(l)}
+                            className="p-2 rounded-lg text-zinc-500 hover:text-red-400 hover:bg-zinc-900 transition-colors cursor-pointer"
+                            title="Delete cloud list"
+                          >
+                            <Trash className="w-4 h-4" />
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {localLists.length > 0 && (
+                  <div className="space-y-2">
+                    <div className="text-[10.5px] font-mono uppercase tracking-wider text-zinc-400 font-bold">
+                      Saved on This Device ({localLists.length})
+                    </div>
+                    {localLists.map((l) => {
+                      const isCurrent = l.id === currentListId;
+                      return (
+                        <div
+                          key={l.id}
+                          className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
+                            isCurrent ? 'bg-amber-400/10 border-amber-500/40' : 'bg-zinc-950/70 border-zinc-800 hover:border-zinc-700'
+                          }`}
+                        >
+                          <button type="button" onClick={() => handleOpenLocal(l)} className="flex-1 min-w-0 text-left cursor-pointer">
+                            <div className="font-bold text-sm text-white truncate">{l.name}</div>
+                            <div className="text-[11px] font-mono text-zinc-400 flex flex-wrap items-center gap-x-2">
+                              <span>{FACTIONS_REGISTRY[l.faction_id]?.faction || l.faction_id}</span>
+                              <span className="text-zinc-600">•</span>
+                              <span className="text-amber-400 font-bold">{l.total_points} pts</span>
+                              <span className="text-zinc-600">•</span>
+                              <span>{l.order_dice} dice</span>
+                              <span className="text-zinc-600">•</span>
+                              <span>{new Date(l.updated_at).toLocaleDateString()}</span>
+                            </div>
+                          </button>
+                          {isCurrent && (
+                            <span className="hidden sm:inline text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-amber-400 text-black font-bold">
+                              Active
+                            </span>
+                          )}
+                          <button
+                            type="button"
+                            onClick={() => handleDeleteLocal(l)}
+                            className="p-2 rounded-lg text-zinc-500 hover:text-red-400 hover:bg-zinc-900 transition-colors cursor-pointer"
+                            title="Delete local list"
+                          >
+                            <Trash className="w-4 h-4" />
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
+          </ModalShell>
+        );
+      }
+      // =========================================================================
+      // FACTION REGISTRY & ENGINE HELPERS (100% Faction-Agnostic)
+      // =========================================================================
+      const FACTIONS_REGISTRY = window.EASYARMY_FACTIONS || {
+        soviet_union: window.EASYARMY_SOVIET_DATA,
+      };
+
+      const PERIOD_OPTIONS = [
+        { id: 'All', label: 'ALL', title: 'All Periods' },
+        { id: 'EW', label: 'EW', title: 'Early War' },
+        { id: 'MW', label: 'MW', title: 'Mid War' },
+        { id: 'LW', label: 'LW', title: 'Late War' },
+      ];
+      const EXP_LABELS = {
+        inexperienced: 'Inexperienced',
+        regular: 'Regular',
+        veteran: 'Veteran',
+      };
+      // Backward-compatibility alias map for any legacy saved JSON lists
+      const LEGACY_UNIT_ALIASES = {
+        "Tanque ligero T-26A": "T-26A Light Tank",
+        "Tanque ligero T-26B": "T-26B Light Tank",
+        "Tanque lanzallamas ligero OT-26/OT-133": "OT-26/OT-133 Light Flamethrower Tank",
+        "Tanque ligero BT-5 y BT-7": "BT-5 and BT-7 Light Tank",
+        "Tanque ligero T-37": "T-37 Light Tank",
+        "Tanque ligero T-40": "T-40 Light Tank",
+        "Tanque ligero T-50": "T-50 Light Tank",
+        "Tanque ligero T-60": "T-60 Light Tank",
+        "Tanque ligero T-70": "T-70 Light Tank",
+        "Tanque mediano T-28": "T-28 Medium Tank",
+        "Tanque mediano T-34/76": "T-34/76 Medium Tank",
+        "Tanque mediano T-34/85": "T-34/85 Medium Tank",
+        "Fábrica de tractores T-34": "Tractor Factory T-34",
+        "Tanque pesado T-35": "T-35 Heavy Tank",
+        "Tanque pesado KV-1": "KV-1 Heavy Tank",
+        "Tanque pesado KV-85 e IS-1": "KV-85 and IS-1 Heavy Tank",
+        "Tanque pesado IS-2": "IS-2 Heavy Tank",
+        "Tanque pesado IS-3": "IS-3 Heavy Tank",
+        "ZIS-30": "ZiS-30",
+        "SU-152 e ISU-152": "SU-152 and ISU-152",
+        "Tokarev 4M Quad Maxim en camión GAZ-AA": "Tokarev 4M Quad Maxim on GAZ-AA Truck",
+        "Vehículo blindado pesado BA-3/6": "BA-3/6 Heavy Armoured Car",
+        "Coche blindado ligero D-8": "D-8 Light Armoured Car",
+        "Coche blindado ligero FAI": "FAI Light Armoured Car",
+        "Jeep GAZ (sin transporte)": "GAZ Jeep (no transport)",
+        "Vehículo M3 White Scout (sin transporte)": "M3 White Scout Car (no transport)",
+        "Transportista universal (sin transporte)": "Universal Carrier (no transport)",
+        "Tanque de Infantería Mk III Valentine I-VIIA": "Infantry Tank Mk III Valentine I-VIIA",
+        "Tanque ligero Mk VII Tetrarch": "Light Tank Mk VII Tetrarch",
+        "M4 Sherman 76 mm": "M4 Sherman 76mm",
+        "Churchill III o IV": "Churchill III or IV",
+        "SU-57 (T48 Vehículo de artillería autopropulsada)": "SU-57 (T48 Gun Motor Carriage)",
+        "Vehículo motorizado con cañón múltiple M16/M17": "M16/M17 Multiple Gun Motor Carriage",
+        "Regla del vehículo de mando (v3)": "Command Vehicle rule (v3)"
+      };
+      function getUnitDefinition(factionData, unitName) {
+        const canonical = LEGACY_UNIT_ALIASES[unitName] || unitName;
+        const units = factionData?.units || {};
+        const entry = units[canonical] || units[unitName];
+        if (entry) return entry;
+        return {
+          name: unitName,
+          cardTitle: unitName,
+          page: factionData?.book || "Bolt Action v3",
+          period: "E/M/L",
+          image: null,
+          profile: {},
+          composition: "1 Unit",
+          weapons: "Standard",
+          damageValue: null,
+          specialRulesText: "-",
+          costs: { regular: { points: 50 } },
+          defaultExp: "regular",
+          maxExtraMen: 0,
+          optionsList: [],
+          weaponsTable: [],
+          weaponNotes: [],
+          unitRules: [],
+        };
+      }
+
+      function getUnitBaseMen(def) {
+        if (!def) return 0;
+        if (def.damageValue) return 0;
+        const comp = (def.composition || "").toLowerCase();
+        if (!comp || comp.includes("vehicle")) return 0;
+
+        const ncoMatch = comp.match(/(\d+)\s*nco.*?(\d+)\s*men/i);
+        if (ncoMatch) {
+          return parseInt(ncoMatch[1], 10) + parseInt(ncoMatch[2], 10);
+        }
+        const menMatch = comp.match(/(\d+)\s*(men|handlers)/i);
+        if (menMatch) {
+          return parseInt(menMatch[1], 10);
+        }
+
+        if (comp.includes("officer") || comp.includes("commander") || comp.includes("commissar") || comp.includes("medic") || comp.includes("observer")) {
+          let count = 1;
+          const extraMatch = comp.match(/and\s*(\d+)\s*men/i);
+          if (extraMatch) count += parseInt(extraMatch[1], 10);
+          return count;
+        }
+        return 1;
+      }
+
+      function calculateUnitPoints(def, config) {
+        if (!def || !config) return 0;
+        const expData = def.costs[config.experience] || Object.values(def.costs)[0] || { points: 0 };
+        let points = expData.points || 0;
+        const extraMen = Number(config.extraMen || 0);
+        if (extraMen > 0 && def.maxExtraMen > 0) {
+          const costPerMan = expData.extraCost ?? 10;
+          points += extraMen * costPerMan;
+        }
+        let extraPersonnel = 0;
+        if (config.options?.extra_crew) extraPersonnel += 1;
+        if (config.options?.spotter) extraPersonnel += 1;
+        const totalMenCount = getUnitBaseMen(def) + extraMen + extraPersonnel;
+
+        if (config.options && def.optionsList) {
+          def.optionsList.forEach(opt => {
+            if (opt.id === 'extra_men') return;
+            const val = config.options[opt.id];
+            if (!val) return;
+
+            if (opt.type === "checkbox") {
+              points += opt.cost || 0;
+            } else if (opt.type === "counter") {
+              points += Number(val) * (opt.cost || 0);
+            } else if (opt.type === "per_man") {
+              points += totalMenCount * (opt.costPerMan || 0);
+            }
+          });
+        }
+
+        return points;
+      }
+      function getUnitSummary(def, config) {
+        if (!def) return null;
+        const options = config?.options || {};
+        const extraMen = Number(config?.extraMen || 0);
+        const isVehicle = !!def.damageValue;
+        const baseMen = getUnitBaseMen(def);
+
+        let extraPersonnel = 0;
+        if (options.extra_crew) extraPersonnel += 1;
+        if (options.spotter) extraPersonnel += 1;
+        const totalModels = isVehicle ? 1 : baseMen + extraMen + extraPersonnel;
+        // Collect active option descriptions with their point costs
+        const selectedOptions = [];
+        const expKey = config?.experience || def.defaultExp || 'regular';
+        const expData = def.costs[expKey] || Object.values(def.costs)[0] || { points: 0 };
+
+        if (extraMen > 0 && def.maxExtraMen > 0) {
+          const costPerMan = expData.extraCost ?? 10;
+          selectedOptions.push({
+            id: 'extra_men',
+            text: `+${extraMen} additional ${extraMen === 1 ? 'man' : 'men'} (@ +${costPerMan}pts each)`,
+            points: extraMen * costPerMan,
+          });
+        }
+        for (const opt of def.optionsList || []) {
+          if (opt.id === 'extra_men') continue;
+          const val = options[opt.id];
+          if (!val) continue;
+
+          if (opt.type === 'counter') {
+            const count = Number(val);
+            const pts = count * (opt.cost || 0);
+            selectedOptions.push({
+              id: opt.id,
+              text: `${count}× ${opt.rawText || opt.label}`,
+              points: pts,
+            });
+          } else if (opt.type === 'per_man') {
+            const pts = totalModels * (opt.costPerMan || 0);
+            selectedOptions.push({
+              id: opt.id,
+              text: `${opt.rawText || opt.label} (${totalModels} models)`,
+              points: pts,
+            });
+          } else {
+            selectedOptions.push({
+              id: opt.id,
+              text: opt.rawText || opt.label,
+              points: opt.cost || 0,
+            });
+          }
+        }
+
+        const headCountText = isVehicle
+          ? `DV: ${def.damageValue}`
+          : totalModels > 0
+          ? `${totalModels} ${totalModels === 1 ? 'model' : 'models'}`
+          : def.composition;
+
+        const compositionSummary = isVehicle
+          ? def.composition || '1 Vehicle'
+          : extraMen > 0
+          ? `${def.composition} + ${extraMen} additional ${extraMen === 1 ? 'man' : 'men'} (${totalModels} total)`
+          : def.composition;
+
+        return {
+          isVehicle,
+          baseMen,
+          totalModels,
+          headCountText,
+          compositionSummary,
+          selectedOptions,
+        };
+      }
+
+      function formatPtsDelta(pts) {
+        if (pts > 0) return `+${pts} pts`;
+        if (pts < 0) return `${pts} pts`;
+        return `0 pts`;
+      }
+
+      // =========================================================================
+      // FULL-WINDOW UNIT CONFIGURATION MODAL (EasyArmy Two-Column Layout)
+      // Left: Experience, Profile, Verbatim Options, Weapon Table, Special Rules
+      // Right: Large Unit Illustration + Live Cost Breakdown
+      // =========================================================================
+      function UnitEditModal({ isOpen, onClose, factionData, unitItem, slotLabel, onSave, onClearUnit }) {
+        if (!isOpen || !unitItem) return null;
+
+        const def = useMemo(() => getUnitDefinition(factionData, unitItem.name), [factionData, unitItem.name]);
+
+        const [experience, setExperience] = useState(unitItem.config?.experience || def.defaultExp || "regular");
+        const [extraMen, setExtraMen] = useState(unitItem.config?.extraMen || 0);
+        const [options, setOptions] = useState(unitItem.config?.options || {});
+
+        useEffect(() => {
+          setExperience(unitItem.config?.experience || def.defaultExp || "regular");
+          setExtraMen(unitItem.config?.extraMen || 0);
+          setOptions(unitItem.config?.options || {});
+        }, [unitItem, def]);
+
+        const currentConfig = { experience, extraMen, options };
+        const calculatedPoints = useMemo(
+          () => calculateUnitPoints(def, currentConfig),
+          [def, experience, extraMen, options]
+        );
+        const summary = useMemo(
+          () => getUnitSummary(def, currentConfig),
+          [def, experience, extraMen, options]
+        );
+
+        const handleOptionToggle = (optId, checked) => {
+          setOptions(prev => ({ ...prev, [optId]: checked }));
+        };
+
+        const handleOptionCount = (optId, count) => {
+          setOptions(prev => ({ ...prev, [optId]: count }));
+        };
+
+        const handleSave = () => {
+          onSave({
+            name: def.name,
+            points: calculatedPoints,
+            config: {
+              experience,
+              extraMen,
+              options
+            }
+          });
+          onClose();
+        };
+        const totalModels = summary?.totalModels || getUnitBaseMen(def) + extraMen;
+        const costPerMan = def.costs[experience]?.extraCost ?? 10;
+
+        // Group options by EasyArmy's original group headings
+        const groupedOptions = useMemo(() => {
+          const groups = [];
+          const map = new Map();
+          for (const opt of def.optionsList || []) {
+            if (opt.id === 'extra_men') continue;
+            const grpKey = opt.group || 'Options';
+            if (!map.has(grpKey)) {
+              const g = { title: grpKey, items: [] };
+              map.set(grpKey, g);
+              groups.push(g);
+            }
+            map.get(grpKey).items.push(opt);
+          }
+          return groups;
+        }, [def]);
+        const profileEntries = useMemo(() => {
+          return Object.entries(def.profile || {});
+        }, [def]);
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/85 backdrop-blur-sm animate-in fade-in duration-100 no-print">
+            <div className="bg-zinc-900 border-0 sm:border border-zinc-700 rounded-none sm:rounded-2xl shadow-2xl w-full sm:w-[96vw] max-w-[1440px] h-[100dvh] sm:h-[92dvh] overflow-hidden flex flex-col">
+              {/* TOP HEADER BAR */}
+              <div className="px-3.5 sm:px-5 py-2.5 sm:py-3.5 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between gap-2 shrink-0 safe-top">
+                <div className="min-w-0 flex items-center gap-2 flex-wrap">
+                  <h2 className="text-base sm:text-xl font-black font-tactical text-white tracking-wide uppercase truncate">
+                    {def.cardTitle || def.name}
+                  </h2>
+                  {slotLabel && (
+                    <span className="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 font-mono text-[11px] font-semibold">
+                      {slotLabel}
+                    </span>
+                  )}
+                  {def.period && (
+                    <span className="hidden sm:inline px-2 py-0.5 rounded bg-amber-400/10 border border-amber-400/30 text-amber-300 font-mono text-xs font-bold">
+                      Period: {def.period}
+                    </span>
+                  )}
+                  {def.page && (
+                    <span className="text-xs font-mono text-zinc-400 hidden md:inline">
+                      {def.page}
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  {summary?.headCountText && (
+                    <div className="hidden sm:flex bg-zinc-900 border border-zinc-700 px-3 py-1 rounded-lg text-zinc-200 font-mono text-xs font-semibold items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5 text-amber-400" />
+                      <span>{summary.headCountText}</span>
+                    </div>
+                  )}
+
+                  <div className="bg-amber-400 text-black px-2.5 sm:px-3.5 py-1 rounded-lg font-black font-mono text-xs sm:text-sm shadow">
+                    {calculatedPoints} pts
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={handleSave}
+                    className="hidden sm:inline-flex px-4 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs font-mono transition-colors shadow cursor-pointer"
+                  >
+                    Save Unit
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="p-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
+                    title="Close"
+                  >
+                    <XIcon className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+              {/* MAIN TWO-COLUMN BODY (EasyArmy Official Layout) */}
+              <div className="flex-1 overflow-y-auto p-3 sm:p-6">
+                {/* COMPACT MOBILE / PORTRAIT-TABLET ILLUSTRATION BANNER */}
+                {def.image && (
+                  <div className="lg:hidden mb-4 bg-white rounded-xl p-3 border-2 border-zinc-700 flex items-center justify-center max-h-48 overflow-hidden shadow">
+                    <img src={`./${def.image}`} alt={def.name} className="max-h-40 w-auto object-contain" />
+                  </div>
+                )}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-start">
+                  {/* LEFT COLUMN (7/12): COST, UNIT PROFILE, OPTIONS, WEAPONS TABLE, SPECIAL RULES */}
+                  <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+
+                    {/* 1. COST / EXPERIENCE SELECTOR */}
+                    <div className="bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-2.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-tactical font-bold uppercase tracking-wider text-amber-400">
+                          Cost / Experience Level
+                        </span>
+                        <span className="text-[11px] font-mono text-zinc-400">
+                          Select unit rating
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        {Object.entries(def.costs).map(([expKey, data]) => {
+                          const isSelected = experience === expKey;
+                          const expLabel = EXP_LABELS[expKey] || expKey;
+                          return (
+                            <button
+                              key={expKey}
+                              type="button"
+                              onClick={() => setExperience(expKey)}
+                              className={`py-2.5 px-3 rounded-lg text-xs font-mono font-bold transition-all flex items-center justify-between border cursor-pointer ${
+                                isSelected
+                                  ? 'bg-amber-400 text-black border-amber-300 font-black shadow-md'
+                                  : 'bg-zinc-900 text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white'
+                              }`}
+                            >
+                              <span>{expLabel}</span>
+                              <span className={`px-2 py-0.5 rounded text-xs ${isSelected ? 'bg-black/15 text-black font-black' : 'bg-zinc-800 text-amber-400'}`}>
+                                {data.points} pts
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    {/* 2. UNIT PROFILE (Exact EasyArmy Fields) */}
+                    {profileEntries.length > 0 && (
+                      <div className="bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-2">
+                        <div className="text-xs font-tactical font-bold uppercase tracking-wider text-amber-400 border-b border-zinc-800/80 pb-1.5">
+                          Unit Profile
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-mono pt-1">
+                          {profileEntries.map(([k, v]) => (
+                            <div key={k} className={k === 'Special Rules' || k === 'Transport' || k === 'Tow' ? 'sm:col-span-2' : ''}>
+                              <span className="text-zinc-400 font-semibold">{k}: </span>
+                              <span className="text-zinc-100 whitespace-pre-line">{v}</span>
+                            </div>
+                          ))}
+                          {def.notes && (
+                            <div className="sm:col-span-2 pt-1.5 border-t border-zinc-800/60 text-zinc-400 italic text-[11px]">
+                              {def.notes}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                    {/* 3. OPTIONS (Verbatim EasyArmy Groups & Option Texts) */}
+                    <div className="bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-4">
+                      <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
+                        <span className="text-xs font-tactical font-bold uppercase tracking-wider text-amber-400">
+                          Options
+                        </span>
+                        <span className="text-[11px] font-mono text-zinc-400">
+                          Official EasyArmy unit configuration
+                        </span>
+                      </div>
+
+                      {/* Additional Men Control (when unit supports adding models) */}
+                      {def.maxExtraMen > 0 && (
+                        <div className="p-3 rounded-lg bg-zinc-900/90 border border-zinc-800 space-y-2">
+                          <div className="text-[11px] font-mono font-bold text-amber-300/90">
+                            {def.extraMenGroupText || `Add up to ${def.maxExtraMen} men:`}
+                          </div>
+                          <div className="flex items-center justify-between gap-3">
+                            <label className="flex items-center gap-2.5 cursor-pointer select-none min-w-0">
+                              <input
+                                type="checkbox"
+                                checked={extraMen > 0}
+                                onChange={(e) => setExtraMen(e.target.checked ? 1 : 0)}
+                                className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-500 focus:ring-0 cursor-pointer shrink-0"
+                              />
+                              <span className={`text-xs font-mono ${extraMen > 0 ? 'text-amber-300 font-bold' : 'text-zinc-200'}`}>
+                                +{costPerMan}pts each ({EXP_LABELS[experience] || experience}) — up to {def.maxExtraMen} men
+                              </span>
+                            </label>
+                            <div className="flex items-center gap-2.5 shrink-0">
+                              <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-700 rounded-lg px-1.5 py-0.5">
+                                <button
+                                  type="button"
+                                  onClick={() => setExtraMen(Math.max(0, extraMen - 1))}
+                                  className="px-2 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
+                                >
+                                  −
+                                </button>
+                                <select
+                                  value={extraMen}
+                                  onChange={(e) => setExtraMen(Number(e.target.value))}
+                                  className="bg-transparent text-amber-300 font-mono font-bold text-xs focus:outline-none text-center cursor-pointer"
+                                >
+                                  <option value={0} className="bg-zinc-900 text-zinc-400">0</option>
+                                  {Array.from({ length: def.maxExtraMen }, (_, i) => i + 1).map(num => (
+                                    <option key={num} value={num} className="bg-zinc-900 text-amber-300">+{num}</option>
+                                  ))}
+                                </select>
+                                <button
+                                  type="button"
+                                  onClick={() => setExtraMen(Math.min(def.maxExtraMen, extraMen + 1))}
+                                  className="px-2 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
+                                >
+                                  +
+                                </button>
+                              </div>
+                              <span className="text-amber-400 font-mono text-xs font-bold w-20 text-right">
+                                {formatPtsDelta(extraMen > 0 ? extraMen * costPerMan : costPerMan)}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      {/* Grouped Options */}
+                      {groupedOptions.map((grp, gIdx) => (
+                        <div key={gIdx} className="space-y-1.5">
+                          {grp.title && grp.title !== 'Options' && grp.title !== 'Options:' && (
+                            <div className="text-[11px] font-mono font-bold text-amber-300/90 pt-1">
+                              {grp.title}
+                            </div>
+                          )}
+
+                          <div className="divide-y divide-zinc-800/60 border border-zinc-800/80 rounded-lg bg-zinc-900/50 overflow-hidden">
+                            {grp.items.map((opt) => {
+                              const displayLabel = opt.rawText || opt.label;
+
+                              if (opt.type === "counter") {
+                                const val = Number(options[opt.id] || 0);
+                                const isChecked = val > 0;
+                                const maxAllowed = opt.max || 1;
+                                return (
+                                  <div key={opt.id} className="flex items-center justify-between py-2.5 px-3 hover:bg-zinc-800/40 transition-colors gap-3">
+                                    <label className="flex items-center gap-2.5 cursor-pointer min-w-0 select-none">
+                                      <input
+                                        type="checkbox"
+                                        checked={isChecked}
+                                        onChange={(e) => handleOptionCount(opt.id, e.target.checked ? 1 : 0)}
+                                        className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-500 focus:ring-0 cursor-pointer shrink-0"
+                                      />
+                                      <span className={`text-xs font-mono leading-snug ${isChecked ? 'text-amber-300 font-semibold' : 'text-zinc-200'}`}>
+                                        {displayLabel}
+                                      </span>
+                                    </label>
+
+                                    <div className="flex items-center gap-2.5 shrink-0">
+                                      <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-700 rounded-lg px-1.5 py-0.5">
+                                        <button
+                                          type="button"
+                                          onClick={() => handleOptionCount(opt.id, Math.max(0, val - 1))}
+                                          className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
+                                        >
+                                          −
+                                        </button>
+                                        <select
+                                          value={val}
+                                          onChange={(e) => handleOptionCount(opt.id, Number(e.target.value))}
+                                          className="bg-transparent text-amber-300 font-mono font-bold text-xs focus:outline-none text-center cursor-pointer"
+                                        >
+                                          <option value={0} className="bg-zinc-900 text-zinc-400">0</option>
+                                          {Array.from({ length: maxAllowed }, (_, i) => i + 1).map(num => (
+                                            <option key={num} value={num} className="bg-zinc-900 text-amber-300">{num}</option>
+                                          ))}
+                                        </select>
+                                        <button
+                                          type="button"
+                                          onClick={() => handleOptionCount(opt.id, Math.min(maxAllowed, val + 1))}
+                                          className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
+                                        >
+                                          +
+                                        </button>
+                                      </div>
+
+                                      <span className="text-amber-400 font-mono text-xs font-bold w-20 text-right">
+                                        {formatPtsDelta(val > 0 ? val * opt.cost : opt.cost)}
+                                      </span>
+                                    </div>
+                                  </div>
+                                );
+                              }
+
+                              if (opt.type === "per_man") {
+                                const isChecked = !!options[opt.id];
+                                const cost = totalModels * (opt.costPerMan || 0);
+                                return (
+                                  <div key={opt.id} className="flex items-center justify-between py-2.5 px-3 hover:bg-zinc-800/40 transition-colors gap-3">
+                                    <label className="flex items-center gap-2.5 cursor-pointer min-w-0 select-none">
+                                      <input
+                                        type="checkbox"
+                                        checked={isChecked}
+                                        onChange={(e) => handleOptionToggle(opt.id, e.target.checked)}
+                                        className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-500 focus:ring-0 cursor-pointer shrink-0"
+                                      />
+                                      <span className={`text-xs font-mono leading-snug ${isChecked ? 'text-amber-300 font-semibold' : 'text-zinc-200'}`}>
+                                        {displayLabel}
+                                      </span>
+                                    </label>
+                                    <span className="text-amber-400 font-mono text-xs font-bold w-20 text-right shrink-0">
+                                      {formatPtsDelta(cost)}
+                                    </span>
+                                  </div>
+                                );
+                              }
+
+                              const isChecked = !!options[opt.id];
+                              return (
+                                <div key={opt.id} className="flex items-center justify-between py-2.5 px-3 hover:bg-zinc-800/40 transition-colors gap-3">
+                                  <label className="flex items-center gap-2.5 cursor-pointer min-w-0 select-none">
+                                    <input
+                                      type="checkbox"
+                                      checked={isChecked}
+                                      onChange={(e) => handleOptionToggle(opt.id, e.target.checked)}
+                                      className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-500 focus:ring-0 cursor-pointer shrink-0"
+                                    />
+                                    <span className={`text-xs font-mono leading-snug ${isChecked ? 'text-amber-300 font-semibold' : 'text-zinc-200'}`}>
+                                      {displayLabel}
+                                    </span>
+                                  </label>
+                                  <span className="text-amber-400 font-mono text-xs font-bold w-20 text-right shrink-0">
+                                    {formatPtsDelta(opt.cost || 0)}
+                                  </span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
+                      {groupedOptions.length === 0 && def.maxExtraMen === 0 && (
+                        <div className="text-zinc-500 text-xs font-mono italic py-3 text-center">
+                          No additional options for this unit.
+                        </div>
+                      )}
+                    </div>
+
+                    {/* 4. WEAPONS TABLE (Official EasyArmy Weapon Chart) */}
+                    {((def.weaponsTable && def.weaponsTable.length > 0) || (def.weaponNotes && def.weaponNotes.length > 0)) && (() => {
+                      const hasVehicleStats = (def.weaponsTable || []).some(w => w.rowType === 'vehicle_stat');
+                      const weaponRowsCount = (def.weaponsTable || []).filter(w => w.rowType !== 'vehicle_stat').length || (def.weaponsTable?.length || 0);
+                      return (
+                        <div className="bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-2.5">
+                          <div className="flex items-center justify-between border-b border-zinc-800/80 pb-1.5">
+                            <span className="text-xs font-tactical font-bold uppercase tracking-wider text-amber-400">
+                              {hasVehicleStats ? `Vehicle & Weapons (${weaponRowsCount})` : `Weapons (${weaponRowsCount})`}
+                            </span>
+                            {def.damageValue && (
+                              <span className="text-xs font-mono text-zinc-400">
+                                Damage Value: <strong className="text-zinc-100">{def.damageValue}</strong>
+                              </span>
+                            )}
+                          </div>
+
+                          {def.weaponsTable && def.weaponsTable.length > 0 && (
+                            <div className="overflow-x-auto">
+                              <table className="w-full text-xs text-left border-collapse font-mono">
+                                <thead>
+                                  <tr className="text-zinc-400 border-b border-zinc-800 text-[10.5px] uppercase">
+                                    <th className="py-1.5 pr-2 font-semibold">{hasVehicleStats ? 'Vehicle / Weapons' : 'Weapons'}</th>
+                                    <th className="py-1.5 px-2 font-semibold text-center">{hasVehicleStats ? 'Type / Range' : 'Range'}</th>
+                                    <th className="py-1.5 px-2 font-semibold text-center">{hasVehicleStats ? 'Trans / Shots' : 'Shots'}</th>
+                                    <th className="py-1.5 px-2 font-semibold text-center">{hasVehicleStats ? 'DV / Pen' : 'Pen'}</th>
+                                    <th className="py-1.5 pl-2 font-semibold">Special</th>
+                                  </tr>
+                                </thead>
+                                <tbody className="divide-y divide-zinc-800/50 text-[11px]">
+                                  {def.weaponsTable.map((w, idx) => {
+                                    if (w.rowType === 'vehicle_stat') {
+                                      return (
+                                        <tr key={idx} className="bg-zinc-900/90 border-t border-zinc-700/80 text-amber-300">
+                                          <td className="py-1.5 px-2 font-bold text-amber-300">
+                                            <span>{w.name}</span>
+                                            <span className="ml-1.5 px-1.5 py-0.2 rounded bg-amber-400/15 border border-amber-400/30 text-[9.5px] uppercase tracking-wider text-amber-200">
+                                              Chassis
+                                            </span>
+                                          </td>
+                                          <td className="py-1.5 px-2 text-center font-semibold text-zinc-200">{w.range}</td>
+                                          <td className="py-1.5 px-2 text-center text-zinc-300">{w.shots}</td>
+                                          <td className="py-1.5 px-2 text-center font-black text-amber-300">{w.pen}</td>
+                                          <td className="py-1.5 pl-2 text-zinc-300 italic">{w.special}</td>
+                                        </tr>
+                                      );
+                                    }
+                                    return (
+                                      <tr key={idx} className="text-zinc-200 hover:bg-zinc-900/50">
+                                        <td className={`py-1.5 pr-2 font-semibold text-white ${hasVehicleStats ? 'pl-2.5' : ''}`}>
+                                          {hasVehicleStats ? `↳ ${w.name}` : w.name}
+                                        </td>
+                                        <td className="py-1.5 px-2 text-center text-zinc-300">{w.range}</td>
+                                        <td className="py-1.5 px-2 text-center font-bold text-amber-300">{w.shots}</td>
+                                        <td className="py-1.5 px-2 text-center font-bold text-amber-400">{w.pen}</td>
+                                        <td className="py-1.5 pl-2 text-zinc-300">{w.special}</td>
+                                      </tr>
+                                    );
+                                  })}
+                                </tbody>
+                              </table>
+                            </div>
+                          )}
+                          {def.weaponNotes && def.weaponNotes.length > 0 && (
+                            <div className="pt-2 border-t border-zinc-800/60 space-y-1 text-[11px] font-mono text-zinc-400">
+                              {def.weaponNotes.map((wn, idx) => (
+                                <div key={idx}>• {wn}</div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
+                    {/* 5. UNIT SPECIAL RULES (Official EasyArmy Rule Descriptions) */}
+                    {def.unitRules && def.unitRules.length > 0 && (
+                      <div className="bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-2.5">
+                        <div className="text-xs font-tactical font-bold uppercase tracking-wider text-amber-400 border-b border-zinc-800/80 pb-1.5">
+                          Unit Special Rules ({def.unitRules.length})
+                        </div>
+                        <div className="space-y-2 text-xs font-mono">
+                          {def.unitRules.map((r, idx) => (
+                            <div key={idx} className="p-2.5 rounded-lg bg-zinc-900/70 border border-zinc-800/80">
+                              <div className="font-bold text-amber-300 flex items-center justify-between">
+                                <span>{r.name}</span>
+                                {r.ref && <span className="text-[10px] text-zinc-500 font-normal">({r.ref})</span>}
+                              </div>
+                              {r.text && (
+                                <p className="text-zinc-300 text-[11px] leading-relaxed mt-1 font-sans">
+                                  {r.text}
+                                </p>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  {/* RIGHT COLUMN (5/12): LARGE UNIT ILLUSTRATION + LIVE SUMMARY CARD */}
+                  <div className="lg:col-span-5 lg:sticky lg:top-0 space-y-5">
+
+                    {/* LARGE ILLUSTRATION SHOWCASE (Right side on lg+, like original EasyArmy) */}
+                    <div className="hidden lg:block bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-3">
+                      <div className="flex items-center justify-between text-xs font-tactical font-bold uppercase tracking-wider text-zinc-400">
+                        <span>Unit Illustration</span>
+                        <span className="font-mono text-[11px] text-zinc-500">{def.name}</span>
+                      </div>
+                      {def.image ? (
+                        <div className="w-full min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] rounded-xl bg-white p-4 flex items-center justify-center overflow-hidden border-2 border-zinc-700 shadow-xl">
+                          <img
+                            src={`./${def.image}`}
+                            alt={def.name}
+                            className="max-w-full max-h-[400px] w-auto h-auto object-contain transition-transform duration-200 hover:scale-105"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-full min-h-[220px] rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col items-center justify-center p-6 text-center">
+                          <div className="text-zinc-500 font-tactical uppercase tracking-widest text-sm font-bold">
+                            No Illustration Available
+                          </div>
+                          <div className="text-zinc-600 font-mono text-xs mt-1">
+                            {def.name}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    {/* LIVE CONFIGURATION & COST BREAKDOWN */}
+                    <div className="bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-3 font-mono text-xs">
+                      <div className="flex items-center justify-between border-b border-zinc-800 pb-2">
+                        <span className="font-tactical font-bold uppercase tracking-wider text-amber-400">
+                          Configuration Summary
+                        </span>
+                        <span className="text-zinc-400 text-[11px]">
+                          {EXP_LABELS[experience] || experience}
+                        </span>
+                      </div>
+
+                      <div className="space-y-1.5 text-[11.5px]">
+                        <div className="flex items-center justify-between text-zinc-300">
+                          <span>Base Unit ({EXP_LABELS[experience] || experience})</span>
+                          <span className="font-bold text-white">{def.costs[experience]?.points ?? 0} pts</span>
+                        </div>
+
+                        <div className="flex items-center justify-between text-zinc-400 text-[11px]">
+                          <span>Strength / Composition</span>
+                          <span className="text-zinc-200">{summary?.compositionSummary}</span>
+                        </div>
+                        {summary?.selectedOptions && summary.selectedOptions.length > 0 && (
+                          <div className="pt-2 mt-2 border-t border-zinc-800/80 space-y-1.5">
+                            <div className="text-[10.5px] uppercase tracking-wider text-zinc-500 font-bold">
+                              Selected Options ({summary.selectedOptions.length})
+                            </div>
+                            {summary.selectedOptions.map((item, idx) => (
+                              <div key={idx} className="flex items-start justify-between gap-3 text-[11px]">
+                                <span className="text-zinc-300 leading-snug">{item.text}</span>
+                                <span className="text-amber-400 font-bold shrink-0">{formatPtsDelta(item.points)}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="pt-3 border-t border-zinc-800 flex items-center justify-between">
+                        <span className="font-tactical font-bold uppercase text-sm text-white">Total Unit Cost</span>
+                        <span className="text-base font-black text-amber-400">{calculatedPoints} pts</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              {/* BOTTOM FOOTER BAR */}
+              <div className="px-3.5 sm:px-5 py-3 bg-zinc-950 border-t border-zinc-800 flex items-center justify-between gap-2 shrink-0 safe-bottom">
+                <button
+                  type="button"
+                  onClick={() => {
+                    onClearUnit();
+                    onClose();
+                  }}
+                  className="px-3 py-2 sm:py-1.5 rounded-lg bg-red-950/50 hover:bg-red-900/70 border border-red-800/60 text-red-300 text-xs font-mono font-semibold transition-colors cursor-pointer"
+                >
+                  Remove
+                </button>
+
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="px-3.5 py-2 sm:py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-mono font-semibold transition-colors border border-zinc-700 cursor-pointer"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleSave}
+                    className="px-5 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-black text-xs font-mono transition-colors shadow cursor-pointer"
+                  >
+                    Save Unit ({calculatedPoints} pts)
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        );
+      }
+      // =========================================================================
+      // SLOT COMPONENT (Original EasyArmy Slot Names & Period-Filtered Units)
+      // =========================================================================
+      function Slot({ slot, factionData, platoonTypeId, periodKey, value, onSelect, onEdit, onClear }) {
+        const [isOpen, setIsOpen] = useState(false);
+        const [searchTerm, setSearchTerm] = useState("");
+        const dropdownRef = useRef(null);
+        const def = useMemo(() => {
+          if (!value) return null;
+          return getUnitDefinition(factionData, value.name);
+        }, [factionData, value]);
+
+        const summary = useMemo(() => {
+          if (!value || !def) return null;
+          return getUnitSummary(def, value.config);
+        }, [def, value]);
+        const availableUnits = useMemo(() => {
+          const sKey = slot.slotKey || slot.label;
+          const periodSlots = factionData?.platoonPeriods?.[platoonTypeId]?.[periodKey || 'All']?.slots;
+          if (periodSlots && periodSlots[sKey]) {
+            return periodSlots[sKey];
+          }
+          return factionData?.slotCatalog?.[sKey] || factionData?.slotCatalog?.[slot.label] || [];
+        }, [factionData, platoonTypeId, periodKey, slot]);
+
+        const filteredUnits = useMemo(() => {
+          if (!searchTerm) return availableUnits;
+          const q = searchTerm.toLowerCase();
+          return availableUnits.filter(u => u.toLowerCase().includes(q));
+        }, [availableUnits, searchTerm]);
+
+        useEffect(() => {
+          function handleClickOutside(event) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+              setIsOpen(false);
+              setSearchTerm("");
+            }
+          }
+          if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+          }
+          return () => document.removeEventListener('mousedown', handleClickOutside);
+        }, [isOpen]);
+        const isMandatory = slot.mandatory;
+        const isFilled = !!value;
+
+        return (
+          <div className="relative w-full" ref={dropdownRef}>
+            <div
+              className={`w-full rounded-md border transition-all duration-150 overflow-hidden shadow-sm select-none ${
+                isMandatory
+                  ? isFilled
+                    ? 'border-[#c44545]/60 bg-zinc-900'
+                    : 'border-[#c44545]/80 bg-zinc-900/90 hover:border-[#d9534f]'
+                  : isFilled
+                    ? 'border-zinc-700 bg-zinc-900'
+                    : 'border-zinc-800/90 bg-zinc-900/70 hover:border-zinc-700'
+              }`}
+            >
+              {/* Slot Header (Exact EasyArmy Section Name) */}
+              <div
+                onClick={() => {
+                  if (isFilled) {
+                    onEdit(slot.id, value, slot.label);
+                  } else {
+                    setIsOpen(!isOpen);
+                  }
+                }}
+                className={`px-2.5 py-1.5 flex items-center justify-between cursor-pointer text-xs font-medium tracking-wide transition-colors ${
+                  isMandatory
+                    ? 'bg-[#b84242] hover:bg-[#a83636] text-rose-50 shadow-sm'
+                    : 'bg-zinc-800/90 hover:bg-zinc-750 text-zinc-200'
+                }`}
+              >
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <span className="font-mono font-bold text-[11px] bg-black/20 hover:bg-black/35 px-1 py-0.5 rounded shrink-0 transition-colors">
+                    {isFilled ? '[*]' : isOpen ? '[-]' : '[+]'}
+                  </span>
+                  <span className="truncate font-semibold text-[11px] uppercase tracking-wider">{slot.label}</span>
+                </div>
+                {isMandatory && !isFilled && (
+                  <span className="text-[9px] font-mono uppercase bg-black/25 px-1.5 py-0.5 rounded text-rose-100 shrink-0">
+                    Req
+                  </span>
+                )}
+              </div>
+              {/* Slot Body */}
+              <div
+                onClick={() => {
+                  if (isFilled) {
+                    onEdit(slot.id, value, slot.label);
+                  } else {
+                    setIsOpen(!isOpen);
+                  }
+                }}
+                className="px-2.5 py-1.5 min-h-[36px] flex items-center justify-between cursor-pointer bg-zinc-950/60 hover:bg-zinc-900/80 transition-colors text-xs"
+              >
+                {isFilled ? (
+                  <div className="flex items-center justify-between w-full gap-2">
+                    {def?.image && (
+                      <div className="w-9 h-7 rounded bg-white p-0.5 flex items-center justify-center shrink-0 border border-zinc-700 overflow-hidden">
+                        <img src={`./${def.image}`} alt={value.name} className="max-w-full max-h-full object-contain" />
+                      </div>
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <div className="font-semibold text-amber-300 truncate font-mono text-[11px]">
+                        {value.name}
+                      </div>
+                      <div className="text-[10px] text-zinc-400 font-mono flex items-center gap-1.5">
+                        <span className="text-zinc-300">{EXP_LABELS[value.config?.experience] || value.config?.experience || "Regular"}</span>
+                        <span className="text-zinc-600">•</span>
+                        {summary && !summary.isVehicle && summary.totalModels > 0 && (
+                          <>
+                            <span className="text-zinc-300">{summary.totalModels} men</span>
+                            <span className="text-zinc-600">•</span>
+                          </>
+                        )}
+                        <span className="text-amber-300 font-bold">{value.points || 0} pts</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-1 shrink-0">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onEdit(slot.id, value, slot.label);
+                        }}
+                        className="text-zinc-400 hover:text-amber-400 p-0.5 rounded transition-colors"
+                        title="Configure unit"
+                      >
+                        <EditIcon className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onClear(slot.id);
+                        }}
+                        className="text-zinc-500 hover:text-red-400 p-0.5 rounded transition-colors"
+                        title="Remove unit"
+                      >
+                        <XIcon className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="w-full h-3" />
+                )}
+              </div>
+            </div>
+            {/* DROPDOWN UNIT SELECTOR */}
+            {isOpen && (
+              <div className="absolute left-0 right-0 top-full mt-1 z-50 min-w-[280px] sm:min-w-[330px] bg-zinc-900 border border-zinc-700 rounded-lg shadow-2xl overflow-hidden backdrop-blur-md animate-in fade-in duration-100">
+                <div className="px-3 py-2 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between text-[11px] font-mono text-zinc-400">
+                  <span className="uppercase tracking-wider font-bold text-zinc-200">{slot.label} ({availableUnits.length})</span>
+                  <button
+                    onClick={() => { setIsOpen(false); setSearchTerm(""); }}
+                    className="text-zinc-500 hover:text-white"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                {availableUnits.length > 5 && (
+                  <div className="p-2 border-b border-zinc-800/80 bg-zinc-950/50">
+                    <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-xs">
+                      <Search className="w-3 h-3 text-zinc-500 shrink-0" />
+                      <input
+                        type="text"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        placeholder="Search unit..."
+                        className="w-full bg-transparent text-zinc-200 placeholder-zinc-500 text-xs focus:outline-none font-mono"
+                        autoFocus
+                      />
+                      {searchTerm && (
+                        <button onClick={() => setSearchTerm("")} className="text-zinc-500 hover:text-white">✕</button>
+                      )}
+                    </div>
+                  </div>
+                )}
+                <div className="max-h-72 overflow-y-auto p-1 space-y-0.5">
+                  {filteredUnits.length > 0 ? (
+                    filteredUnits.map((unitName, index) => {
+                      const isSelected = value?.name === unitName;
+                      const uDef = getUnitDefinition(factionData, unitName);
+                      const basePts = uDef.costs[uDef.defaultExp]?.points ?? Object.values(uDef.costs)[0]?.points ?? 0;
+                      return (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            onSelect(unitName, slot.label);
+                            setIsOpen(false);
+                            setSearchTerm("");
+                          }}
+                          className={`w-full text-left px-2.5 py-1.5 rounded text-xs font-mono transition-colors flex items-center justify-between gap-2 ${
+                            isSelected
+                              ? 'bg-amber-400/20 text-amber-300 font-bold border border-amber-500/30'
+                              : 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
+                          }`}
+                        >
+                          <span className="truncate text-[11.5px]">{unitName}</span>
+                          <div className="flex items-center gap-1.5 shrink-0">
+                            {uDef.period && (
+                              <span className="text-[9.5px] px-1 py-0.2 rounded bg-zinc-800 text-zinc-400">
+                                {uDef.period}
+                              </span>
+                            )}
+                            <span className="text-[10.5px] text-amber-400/90 font-semibold">
+                              {basePts} pts
+                            </span>
+                            {isSelected && <Check className="w-3.5 h-3.5 text-amber-400 shrink-0" />}
+                          </div>
+                        </button>
+                      );
+                    })
+                  ) : (
+                    <div className="p-3 text-center text-xs text-zinc-500 font-mono">
+                      No units matching filter
+                    </div>
+                  )}
+                </div>
+                {isFilled && (
+                  <div className="p-1.5 bg-zinc-950/80 border-t border-zinc-800">
+                    <button
+                      onClick={() => {
+                        onClear(slot.id);
+                        setIsOpen(false);
+                        setSearchTerm("");
+                      }}
+                      className="w-full py-1 rounded bg-zinc-800 hover:bg-red-950/80 text-zinc-400 hover:text-red-300 text-[10.5px] font-mono transition-colors border border-zinc-700/60"
+                    >
+                      Remove selected unit
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        );
+      }
+      // =========================================================================
+      // PRINTABLE / PDF ARMY ROSTER VIEW (EasyArmy Breakdown Table + Clean UI)
+      // =========================================================================
+      function cleanSpecialText(s) {
+        if (!s || s === '-') return '';
+        return s;
+      }
+
+      function findUnitWeaponRow(def, regex, fallback) {
+        const found = (def?.weaponsTable || []).find(
+          (w) => w.rowType !== 'vehicle_stat' && regex.test(w.name || '')
+        );
+        if (found) {
+          return {
+            range: found.range && found.range !== '-' ? found.range : fallback.range,
+            shots: found.shots && found.shots !== '-' ? found.shots : fallback.shots,
+            pen: found.pen && found.pen !== '-' ? found.pen : fallback.pen,
+            special: cleanSpecialText(found.special) || fallback.special,
+          };
+        }
+        return fallback;
+      }
+
+      function buildUnitRosterTable(def, config) {
+        if (!def) return { isVehicle: false, rows: [] };
+        const options = config?.options || {};
+        const extraMen = Number(config?.extraMen || 0);
+        const hasVehicleRows = (def.weaponsTable || []).some((w) => w.rowType === 'vehicle_stat');
+        const isVehicle = !!def.damageValue || hasVehicleRows;
+
+        // Collect selected option objects
+        const activeOpts = [];
+        for (const opt of def.optionsList || []) {
+          if (opt.id === 'extra_men') continue;
+          const val = options[opt.id];
+          if (!val) continue;
+          activeOpts.push({ opt, val, count: opt.type === 'counter' ? Number(val) : 1 });
+        }
+
+        // ---------------------------------------------------------------------
+        // CASE 1: VEHICLES & TRANSPORTS
+        // ---------------------------------------------------------------------
+        if (isVehicle) {
+          const variants = [];
+          let current = null;
+          for (const w of def.weaponsTable || []) {
+            if (w.rowType === 'vehicle_stat') {
+              current = { chassis: w, weapons: [] };
+              variants.push(current);
+            } else {
+              if (!current) {
+                current = {
+                  chassis: {
+                    name: def.cardTitle || def.name,
+                    range: 'Tracked',
+                    shots: def.transport ? String(def.transport) : '-',
+                    pen: def.damageValue || '-',
+                    special: def.specialRulesText || '',
+                  },
+                  weapons: [],
+                };
+                variants.push(current);
+              }
+              current.weapons.push(w);
+            }
+          }
+
+          const allOptText = activeOpts.map((x) => `${x.opt.group || ''} ${x.opt.rawText || x.opt.label}`).join(' ').toLowerCase();
+          const wantsFlamethrower = /flamethrower|\bot-/i.test(allOptText);
+
+          let chosen = variants[0] || null;
+          if (variants.length > 1) {
+            if (wantsFlamethrower) {
+              chosen = variants.find((v) => /flamethrower|\bot-/i.test(v.chassis.name)) || chosen;
+            } else {
+              // Match specific named option variant (e.g. Tractor Factory T-34 defects) or non-flamethrower default
+              const byOpt = variants.find((v) => {
+                const m = v.chassis.name.match(/\(([^)]+)\)/);
+                return m && allOptText.includes(m[1].toLowerCase());
+              });
+              if (byOpt) {
+                chosen = byOpt;
+              } else {
+                chosen =
+                  variants.find((v) => !/flamethrower|\bot-/i.test(v.chassis.name)) || chosen;
+              }
+            }
+          }
+
+          const rows = [];
+          if (chosen?.chassis) {
+            rows.push({
+              qty: '1',
+              weapons: chosen.chassis.name,
+              range: chosen.chassis.range || '-',
+              shots: chosen.chassis.shots || '-',
+              pen: chosen.chassis.pen || def.damageValue || '-',
+              special: cleanSpecialText(chosen.chassis.special),
+              isChassis: true,
+            });
+          }
+
+          const baseWText = (def.weapons || '').toLowerCase();
+          const hasPintleOpt = /pintle/i.test(allOptText);
+          const removesHullMmg = /remove.*hull.*mmg/i.test(allOptText);
+
+          for (const w of chosen?.weapons || []) {
+            const wn = (w.name || '').toLowerCase();
+            if (wn.includes('pintle') && !baseWText.includes('pintle') && !hasPintleOpt) continue;
+            if (removesHullMmg && wn.includes('hull') && wn.includes('mmg')) continue;
+            if (w.range === '-' && w.shots === '-' && w.pen === '-') continue;
+            rows.push({
+              qty: '1',
+              weapons: w.name,
+              range: w.range || '-',
+              shots: w.shots || '-',
+              pen: w.pen || 'n/a',
+              special: cleanSpecialText(w.special),
+            });
+          }
+
+          for (const { opt } of activeOpts) {
+            const txt = opt.rawText || opt.label || '';
+            if (/pintle|flamethrower|remove.*hull|no optics|hastily repaired|factory worker/i.test(txt)) continue;
+            rows.push({
+              qty: '',
+              weapons: txt.replace(/\s+for\s+[+-]?\d+\s*pts.*$/i, ''),
+              range: '',
+              shots: '',
+              pen: '',
+              special: /recce/i.test(txt)
+                ? 'Recce'
+                : /reinforced front armour/i.test(txt)
+                ? 'Reinforced Front Armour'
+                : /improved ballistics/i.test(txt)
+                ? 'Improved Ballistics'
+                : '',
+            });
+          }
+
+          return { isVehicle: true, rows };
+        }
+
+        // ---------------------------------------------------------------------
+        // CASE 2: ARTILLERY & WEAPONS TEAMS (Mortar, MMG, Sniper, AT Rifle, etc.)
+        // ---------------------------------------------------------------------
+        const compRaw = def.composition || '';
+        const compLower = compRaw.toLowerCase();
+        const isTeamOrArtillery =
+          !!def.profile?.Team ||
+          /artillery|gun|howitzer|mortar|machine gun|sniper|flamethrower|anti-tank rifle|ampulomet|dog/i.test(
+            `${def.name} ${compRaw}`
+          ) && !/squad|section|platoon|commander|commissar|medic|observer/i.test(def.name);
+
+        if (isTeamOrArtillery) {
+          const rows = [];
+          const primaryWeapons = (def.weaponsTable || []).filter((w) => {
+            if (w.rowType === 'vehicle_stat') return false;
+            const wn = (w.name || '').toLowerCase();
+            if (wn === 'rifles' || wn === 'rifle' || wn === 'submachine gun' || wn === 'pistol' || wn.includes('anti-tank grenades')) {
+              return (def.weapons || '').toLowerCase().includes(wn);
+            }
+            return true;
+          });
+
+          if (primaryWeapons.length > 0) {
+            primaryWeapons.forEach((w, idx) => {
+              const isAltMode = /\(alt\.\s*mode\)/i.test(w.name);
+              rows.push({
+                qty: isAltMode ? '' : '1',
+                weapons: idx === 0 && compRaw ? `${w.name} (${compRaw}${extraMen > 0 ? ` + ${extraMen} men` : ''})` : w.name,
+                range: w.range || '-',
+                shots: w.shots || '-',
+                pen: w.pen || 'n/a',
+                special: cleanSpecialText(w.special),
+              });
+            });
+          } else {
+            rows.push({
+              qty: '1',
+              weapons: `${def.name} (${compRaw || 'Team'})`,
+              range: '-',
+              shots: '-',
+              pen: 'n/a',
+              special: cleanSpecialText(def.specialRulesText),
+            });
+          }
+
+          for (const { opt, count } of activeOpts) {
+            const txt = opt.rawText || opt.label || '';
+            const cleanTxt = txt.replace(/\s+(for|at)\s+[+-]?\d+\s*pts.*$/i, '');
+            if (/submachine gun|\bsmg\b/i.test(txt)) {
+              const smgStats = findUnitWeaponRow(def, /submachine gun|\bsmg\b/i, {
+                range: '12"',
+                shots: '2',
+                pen: 'n/a',
+                special: 'Assault',
+              });
+              rows.push({
+                qty: String(count),
+                weapons: cleanTxt,
+                ...smgStats,
+              });
+            } else if (/spotter/i.test(txt)) {
+              rows.push({ qty: '1', weapons: 'Spotter', range: '', shots: '', pen: '', special: 'Infiltrator' });
+            } else if (/gun shield/i.test(txt)) {
+              rows.push({ qty: '', weapons: 'Gun shield', range: '', shots: '', pen: '', special: 'Gun Shield' });
+            } else {
+              rows.push({
+                qty: count > 1 ? String(count) : '',
+                weapons: cleanTxt,
+                range: '',
+                shots: '',
+                pen: '',
+                special: /stubborn/i.test(txt)
+                  ? 'Stubborn'
+                  : /fanatics/i.test(txt)
+                  ? 'Fanatics'
+                  : /tough fighters/i.test(txt)
+                  ? 'Tough fighters'
+                  : '',
+              });
+            }
+          }
+
+          return { isVehicle: false, rows };
+        }
+
+        // ---------------------------------------------------------------------
+        // CASE 3: INFANTRY SQUADS & HQ UNITS (Exact EasyArmy Roster Breakdown)
+        // ---------------------------------------------------------------------
+        let leaderLabel = 'NCO';
+        let hasLeader = true;
+        let baseMen = 0;
+
+        const ncoMatch = compRaw.match(/(\d+)\s*nco.*?(\d+)\s*men/i);
+        if (ncoMatch) {
+          leaderLabel = 'NCO';
+          baseMen = parseInt(ncoMatch[2], 10);
+        } else if (/officer|commander/i.test(compRaw)) {
+          leaderLabel = 'Officer';
+          const m = compRaw.match(/and\s*(\d+)\s*men/i);
+          baseMen = m ? parseInt(m[1], 10) : 0;
+        } else if (/commissar/i.test(compRaw)) {
+          leaderLabel = 'Commissar';
+          const m = compRaw.match(/and\s*(\d+)\s*men/i);
+          baseMen = m ? parseInt(m[1], 10) : 0;
+        } else if (/medic/i.test(compRaw)) {
+          leaderLabel = 'Medic';
+          const m = compRaw.match(/and\s*(\d+)\s*(unarmed\s*)?men/i);
+          baseMen = m ? parseInt(m[1], 10) : 0;
+        } else if (/observer/i.test(compRaw)) {
+          leaderLabel = 'Forward Observer';
+          const m = compRaw.match(/and\s*(\d+)\s*men/i);
+          baseMen = m ? parseInt(m[1], 10) : 0;
+        } else {
+          const m = compRaw.match(/(\d+)\s*men/i);
+          if (m) {
+            hasLeader = false;
+            baseMen = parseInt(m[1], 10);
+          } else {
+            leaderLabel = def.name;
+            baseMen = 0;
+          }
+        }
+
+        const totalMen = baseMen + extraMen;
+        const baseWeaponsLower = (def.weapons || '').toLowerCase();
+
+        let defaultWeapon = 'Rifle';
+        if (baseWeaponsLower.includes('submachine gun') && !baseWeaponsLower.includes('rifle')) {
+          defaultWeapon = 'Submachine gun';
+        } else if (baseWeaponsLower.includes('pistol') && !baseWeaponsLower.includes('rifle') && !baseWeaponsLower.includes('submachine')) {
+          defaultWeapon = 'Pistol';
+        } else if (baseWeaponsLower.includes('none') || baseWeaponsLower.includes('unarmed')) {
+          defaultWeapon = 'Unarmed';
+        }
+
+        let leaderWeapon = defaultWeapon;
+        let smgMen = 0;
+        let pistolMen = 0;
+        let lmgMen = /(\b1\b|one)\s+light machine gun|\b1\s+lmg\b/i.test(def.weapons || '') ? 1 : 0;
+        let flamethrowerMen = 0;
+        let lightMortarMen = 0;
+        let atRifleMen = 0;
+        const extraRows = [];
+
+        for (const { opt, count } of activeOpts) {
+          const fullText = `${opt.group || ''} ${opt.rawText || opt.label || ''}`;
+          const lower = fullText.toLowerCase();
+          const rawLabel = (opt.rawText || opt.label || '').replace(/\s+(for|at)\s+[+-]?\d+\s*pts.*$/i, '');
+
+          // 1. Panzerfaust (in addition to other weapons)
+          if (lower.includes('panzerfaust')) {
+            const pfStats = findUnitWeaponRow(def, /panzerfaust/i, {
+              range: '12"',
+              shots: '1',
+              pen: '+6',
+              special: 'One-shot, Shaped Charge',
+            });
+            extraRows.push({
+              qty: String(count),
+              weapons: 'men have Panzerfaust in addition to other weapons',
+              ...pfStats,
+            });
+            continue;
+          }
+
+          // 2. Anti-tank grenades
+          if (lower.includes('anti-tank grenades') || lower.includes('molotov')) {
+            extraRows.push({
+              qty: '',
+              weapons: 'Entire squad equipped with anti-tank grenades',
+              range: '',
+              shots: '',
+              pen: '',
+              special: 'Tank hunters',
+            });
+            continue;
+          }
+
+          // 3. Entire squad SMG replacement
+          if ((lower.includes('entire squad') || lower.includes('all men')) && (lower.includes('submachine') || lower.includes('smg'))) {
+            leaderWeapon = 'Submachine gun';
+            defaultWeapon = 'Submachine gun';
+            if (lower.includes('tough fighters')) {
+              extraRows.push({
+                qty: '',
+                weapons: 'Submachine gun squad',
+                range: '',
+                shots: '',
+                pen: '',
+                special: 'Tough fighters',
+              });
+            }
+            continue;
+          }
+
+          // 4. Leader-specific weapon replacement (NCO / Officer / Commissar)
+          const mentionsLeader = /\b(nco|officer|commissar)\b/i.test(lower);
+          const mentionsOtherMen = /\b(\d+|up to|additional)\s*men\b/i.test(lower);
+          if (mentionsLeader && !mentionsOtherMen) {
+            if (lower.includes('submachine') || lower.includes('smg')) {
+              leaderWeapon = 'Submachine gun';
+              continue;
+            }
+            if (lower.includes('pistol')) {
+              leaderWeapon = 'Pistol';
+              continue;
+            }
+            if (lower.includes('rifle')) {
+              leaderWeapon = 'Rifle';
+              continue;
+            }
+          }
+
+          // 5. Men weapon replacements (SMG, LMG, Flamethrower, Light Mortar, AT Rifle, Pistol)
+          if ((lower.includes('submachine') || lower.includes('smg')) && !lower.includes('guard dog')) {
+            if (mentionsLeader && mentionsOtherMen) {
+              // Combined option like "The NCO and up to X men may have SMGs"
+              leaderWeapon = 'Submachine gun';
+              smgMen += Math.min(totalMen, Math.max(0, count - 1));
+            } else {
+              smgMen += count;
+            }
+            continue;
+          }
+
+          if (lower.includes('light machine gun') || /\blmg\b/.test(lower)) {
+            lmgMen += count;
+            continue;
+          }
+
+          if (lower.includes('flamethrower')) {
+            flamethrowerMen += count;
+            continue;
+          }
+
+          if (lower.includes('light mortar')) {
+            lightMortarMen += count;
+            continue;
+          }
+
+          if (lower.includes('anti-tank rifle')) {
+            atRifleMen += count;
+            continue;
+          }
+
+          if (lower.includes('pistol') && !lower.includes('in addition')) {
+            pistolMen += count;
+            continue;
+          }
+
+          // 6. Other squad upgrades / special rules (Airborne, NKVD, Naval Brigade, Body Armour, Skis, Cavalry, Dogs, etc.)
+          let specialRule = '';
+          if (lower.includes('stubborn') || lower.includes('airborne')) specialRule = 'Stubborn';
+          else if (lower.includes('fanatics') || lower.includes('nkvd')) specialRule = 'Fanatics';
+          else if (lower.includes('tough fighters') || lower.includes('naval brigade')) specialRule = 'Tough fighters';
+          else if (lower.includes('body armour') || lower.includes('sn-42')) specialRule = 'Body Armour';
+          else if (lower.includes('skis')) specialRule = 'Winter-equipped';
+          else if (lower.includes('cavalry') || lower.includes('horses')) specialRule = 'Cavalry';
+          else if (lower.includes('infiltrator')) specialRule = 'Infiltrators';
+          else if (lower.includes('guard dog')) specialRule = 'Guard Dog';
+
+          extraRows.push({
+            qty: opt.type === 'counter' ? String(count) : '',
+            weapons: rawLabel,
+            range: '',
+            shots: '',
+            pen: '',
+            special: specialRule,
+          });
+        }
+
+        const getWeaponProfile = (wName) => {
+          const wl = wName.toLowerCase();
+          if (wl.includes('submachine')) {
+            return findUnitWeaponRow(def, /submachine gun|\bsmg\b/i, {
+              range: '12"',
+              shots: '2',
+              pen: 'n/a',
+              special: 'Assault',
+            });
+          }
+          if (wl.includes('pistol')) {
+            return findUnitWeaponRow(def, /pistol/i, {
+              range: '6"',
+              shots: '1',
+              pen: 'n/a',
+              special: 'Assault',
+            });
+          }
+          if (wl.includes('unarmed')) {
+            return { range: '-', shots: '-', pen: 'n/a', special: '' };
+          }
+          return findUnitWeaponRow(def, /rifle/i, {
+            range: '24"',
+            shots: '1',
+            pen: 'n/a',
+            special: '',
+          });
+        };
+
+        const rows = [];
+
+        // Leader row
+        if (hasLeader) {
+          const lStats = getWeaponProfile(leaderWeapon);
+          rows.push({
+            qty: '1',
+            weapons: leaderWeapon === 'Unarmed' ? `${leaderLabel} (Unarmed)` : `${leaderLabel} with ${leaderWeapon}`,
+            ...lStats,
+          });
+        }
+
+        // Calculate remaining default-weapon men
+        const replacedMen = smgMen + pistolMen + lmgMen + flamethrowerMen + lightMortarMen + atRifleMen;
+        const remainingDefaultMen = Math.max(0, totalMen - replacedMen);
+
+        if (remainingDefaultMen > 0) {
+          const dStats = getWeaponProfile(defaultWeapon);
+          rows.push({
+            qty: String(remainingDefaultMen),
+            weapons: defaultWeapon === 'Unarmed' ? 'Unarmed men' : `Infantry with ${defaultWeapon}`,
+            ...dStats,
+          });
+        }
+
+        if (smgMen > 0) {
+          const smgStats = getWeaponProfile('Submachine gun');
+          rows.push({
+            qty: String(Math.min(totalMen, smgMen)),
+            weapons: 'Infantry with Submachine gun',
+            ...smgStats,
+          });
+        }
+
+        if (pistolMen > 0) {
+          const pStats = getWeaponProfile('Pistol');
+          rows.push({
+            qty: String(Math.min(totalMen, pistolMen)),
+            weapons: 'Infantry with Pistol',
+            ...pStats,
+          });
+        }
+
+        if (lmgMen > 0) {
+          const lmgStats = findUnitWeaponRow(def, /light machine gun|\blmg\b/i, {
+            range: '36"',
+            shots: '4',
+            pen: 'n/a',
+            special: '',
+          });
+          rows.push({
+            qty: String(lmgMen),
+            weapons: 'Infantry with Light Machine gun (requires loader)',
+            ...lmgStats,
+          });
+        }
+
+        if (flamethrowerMen > 0) {
+          const ftStats = findUnitWeaponRow(def, /flamethrower/i, {
+            range: '6"',
+            shots: 'D6',
+            pen: '+3',
+            special: 'Team, Flamethrower',
+          });
+          rows.push({
+            qty: String(flamethrowerMen),
+            weapons: 'Infantry with Flamethrower (requires assistant)',
+            ...ftStats,
+          });
+        }
+
+        if (lightMortarMen > 0) {
+          const lmStats = findUnitWeaponRow(def, /light mortar/i, {
+            range: '12"-24"',
+            shots: '1',
+            pen: 'HE',
+            special: 'Team, Indirect fire, HE (1")',
+          });
+          rows.push({
+            qty: String(lightMortarMen),
+            weapons: 'Infantry with Light mortar',
+            ...lmStats,
+          });
+        }
+
+        if (atRifleMen > 0) {
+          const atrStats = findUnitWeaponRow(def, /anti-tank rifle/i, {
+            range: '36"',
+            shots: '1',
+            pen: '+2',
+            special: 'Team',
+          });
+          rows.push({
+            qty: String(atRifleMen),
+            weapons: 'Infantry with Anti-tank rifle',
+            ...atrStats,
+          });
+        }
+
+        rows.push(...extraRows);
+        return { isVehicle: false, rows };
+      }
+
+      function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints, totalOrderDice, platoons, isPreview = false }) {
+        const platoonTypes = factionData?.platoons || [];
+        const totalUnits = platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0);
+
+        // Collect only the Special Rules that apply to the units & active options in the roster
+        const armyActiveRules = [];
+        const seenRuleNames = new Set();
+
+        platoons.forEach((p) => {
+          Object.values(p.slots).forEach((u) => {
+            if (!u || !u.name) return;
+            const def = getUnitDefinition(factionData, u.name);
+            const rosterTable = buildUnitRosterTable(def, u.config);
+
+            const activeKeywords = new Set();
+            if (def.specialRulesText && def.specialRulesText !== '-') {
+              activeKeywords.add(def.specialRulesText.toLowerCase());
+            }
+            rosterTable.rows.forEach((r) => {
+              if (r.special) activeKeywords.add(r.special.toLowerCase());
+              if (r.weapons) activeKeywords.add(r.weapons.toLowerCase());
+            });
+            const joinedActive = [...activeKeywords].join(' | ');
+
+            (def.unitRules || []).forEach((r) => {
+              if (!r || !r.name || seenRuleNames.has(r.name)) return;
+              const rn = r.name.toLowerCase();
+              if (
+                joinedActive.includes(rn) ||
+                (rn.includes('shaped charge') && joinedActive.includes('shaped charge')) ||
+                (rn.includes('one-shot') && joinedActive.includes('one-shot')) ||
+                (rn.includes('tank hunters') && joinedActive.includes('tank hunters')) ||
+                (rn.includes('team') && (joinedActive.includes('loader') || joinedActive.includes('assistant') || joinedActive.includes('team')))
+              ) {
+                armyActiveRules.push(r);
+                seenRuleNames.add(r.name);
+              }
+            });
+          });
+        });
+
+        const currentDateStr = new Date().toLocaleDateString('en-GB', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        });
+
+        if (totalUnits === 0) {
+          return (
+            <div className="p-8 text-center text-zinc-500 font-mono text-xs">
+              <p className="text-sm font-bold text-zinc-700 mb-1">Your army roster is currently empty.</p>
+              <p>Select units in your platoon slots to preview or print the official roster.</p>
+            </div>
+          );
+        }
+
+        return (
+          <div className={`w-full max-w-4xl mx-auto ${isPreview ? '' : 'bg-white text-zinc-900 font-sans'}`}>
+            {/* ROSTER HEADER */}
+            <div className="border-b-2 border-zinc-900 pb-3 mb-4 flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="w-3.5 h-3.5 rounded-full bg-red-700 inline-block shadow-xs"></span>
+                  <h1 className="text-xl sm:text-2xl font-black font-tactical tracking-wider text-zinc-950 uppercase">
+                    {armyListName || `${factionData?.faction || 'Bolt Action'} Force`}
+                  </h1>
+                </div>
+                <div className="text-xs font-mono font-semibold text-zinc-600 mt-0.5">
+                  {factionData?.book || 'Bolt Action v3'} • Official Force Roster
+                </div>
+              </div>
+              <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-bold">
+                <div className="bg-zinc-950 text-white px-3 py-1.5 rounded shadow-sm">
+                  TOTAL: <span className="text-amber-400 font-black">{totalPoints} PTS</span>
+                </div>
+                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2.5 py-1.5 rounded">
+                  Order Dice: <span className="text-zinc-950 font-black">{totalOrderDice}</span>
+                </div>
+                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2.5 py-1.5 rounded">
+                  Platoons: <span className="text-zinc-950 font-black">{platoons.length}</span>
+                </div>
+              </div>
+            </div>
+
+            {armyNotes && armyNotes.trim() && (
+              <div className="mb-4 p-2.5 bg-zinc-50 border border-zinc-200 rounded text-xs font-mono text-zinc-700">
+                <span className="font-bold text-zinc-900 uppercase text-[10px] block mb-0.5">Force Notes:</span>
+                <p className="whitespace-pre-line leading-relaxed">{armyNotes}</p>
+              </div>
+            )}
+
+            {/* PLATOONS */}
+            <div className="space-y-5">
+              {platoons.map((p) => {
+                const pType = platoonTypes.find(t => t.id === p.typeId) || platoonTypes[0];
+                const activeUnits = Object.entries(p.slots).filter(([_, u]) => u && u.name);
+                if (activeUnits.length === 0) return null;
+
+                const platoonPts = activeUnits.reduce((sum, [_, u]) => sum + (u.points || 0), 0);
+                const platoonDice = activeUnits.length;
+                return (
+                  <div key={p.id} className="platoon-print-block">
+                    <div className="bg-zinc-900 text-white px-3 py-1.5 rounded-t flex items-center justify-between text-xs font-mono font-bold tracking-wider uppercase mb-2">
+                      <div className="flex items-center gap-2">
+                        <span className="text-amber-400">PLATOON #{p.id}</span>
+                        <span className="text-zinc-200 font-tactical font-black text-sm tracking-wider">{pType?.title}</span>
+                        {p.period && p.period !== 'All' && (
+                          <span className="text-[10px] px-1.5 py-0.2 bg-zinc-800 rounded text-amber-300">
+                            {p.period}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-3 text-[11px] font-normal text-zinc-300">
+                        <span>Points: <strong className="text-white font-bold">{platoonPts} pts</strong></span>
+                        <span>•</span>
+                        <span>Order Dice: <strong className="text-amber-400 font-bold">{platoonDice}</strong></span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2.5">
+                      {activeUnits.map(([slotId, unitItem]) => {
+                        const def = getUnitDefinition(factionData, unitItem.name);
+                        const rosterTable = buildUnitRosterTable(def, unitItem.config);
+                        let slotName = slotId;
+                        for (const col of pType?.columns || []) {
+                          const foundSlot = col.slots.find(s => s.id === slotId);
+                          if (foundSlot) {
+                            slotName = foundSlot.label;
+                            break;
+                          }
+                        }
+
+                        const exp = unitItem.config?.experience || def.defaultExp || "regular";
+                        const expLabel = EXP_LABELS[exp] || exp;
+                        const sourceRef = (def.page || '').replace(/\s*-\s*page/i, ' page');
+
+                        return (
+                          <div
+                            key={slotId}
+                            className="unit-card border border-zinc-300 rounded-lg overflow-hidden bg-white shadow-xs break-inside-avoid text-xs text-zinc-800"
+                          >
+                            {/* UNIT HEADER ROW (EasyArmy Structure + Clean Modern Aesthetic) */}
+                            <div className="px-3 py-2 bg-zinc-50/90 border-b border-zinc-200 flex items-center justify-between gap-3">
+                              <div className="min-w-0 flex items-baseline gap-2 flex-wrap">
+                                <h3 className="font-bold font-sans text-sm text-zinc-950 tracking-tight">
+                                  {def.cardTitle || unitItem.name}
+                                </h3>
+                                {sourceRef && (
+                                  <span className="text-[11px] text-zinc-500 font-sans">
+                                    ({sourceRef})
+                                  </span>
+                                )}
+                                <span className="text-[9.5px] font-mono uppercase px-1.5 py-0.2 rounded bg-zinc-200/70 text-zinc-700 font-semibold">
+                                  {slotName}
+                                </span>
+                              </div>
+
+                              <div className="flex items-center gap-3 shrink-0">
+                                <span className="px-3 py-0.5 border border-zinc-800 rounded text-[11px] font-mono font-bold text-zinc-900 bg-white min-w-[82px] text-center shadow-2xs">
+                                  {expLabel}
+                                </span>
+                                <span className="font-black text-sm font-mono text-zinc-950 min-w-[42px] text-right">
+                                  {unitItem.points}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* UNIT INTEGRATED BREAKDOWN TABLE (Qty | Weapons | Range | Shots | Pen | Special) */}
+                            <div className="px-3 py-1.5">
+                              <table className="w-full text-[11px] text-left border-collapse">
+                                <thead>
+                                  <tr className="border-b border-zinc-200 text-zinc-600 font-bold text-[10.5px]">
+                                    <th className="py-1 pr-2 w-10">Qty</th>
+                                    <th className="py-1 pr-3">{rosterTable.isVehicle ? 'Vehicle / Weapons' : 'Weapons'}</th>
+                                    <th className="py-1 px-2 text-center w-20">{rosterTable.isVehicle ? 'Type / Range' : 'Range'}</th>
+                                    <th className="py-1 px-2 text-center w-16">{rosterTable.isVehicle ? 'Trans / Shots' : 'Shots'}</th>
+                                    <th className="py-1 px-2 text-center w-14">{rosterTable.isVehicle ? 'DV / Pen' : 'Pen'}</th>
+                                    <th className="py-1 pl-2 w-44">Special</th>
+                                  </tr>
+                                </thead>
+                                <tbody className="divide-y divide-zinc-200/70 font-mono text-[10.5px]">
+                                  {rosterTable.rows.map((r, rIdx) => (
+                                    <tr key={rIdx} className={r.isChassis ? 'bg-zinc-100/80 font-bold text-zinc-950' : 'text-zinc-800'}>
+                                      <td className="py-1 pr-2 font-semibold text-zinc-900">{r.qty}</td>
+                                      <td className={`py-1 pr-3 font-sans ${r.isChassis ? 'font-bold text-zinc-950' : 'text-zinc-900'}`}>
+                                        {r.weapons}
+                                      </td>
+                                      <td className="py-1 px-2 text-center text-zinc-800">{r.range}</td>
+                                      <td className="py-1 px-2 text-center text-zinc-900 font-semibold">{r.shots}</td>
+                                      <td className="py-1 px-2 text-center text-zinc-900 font-semibold">{r.pen}</td>
+                                      <td className="py-1 pl-2 font-sans text-zinc-700">{r.special}</td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* UNIT SPECIAL RULES */}
+            {armyActiveRules.length > 0 && (
+              <div className="rules-print-block mt-5 pt-3 border-t-2 border-zinc-800 break-inside-avoid">
+                <h2 className="text-xs font-black font-tactical uppercase tracking-wider text-zinc-900 mb-2">
+                  Unit Special Rules
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[10px] font-sans">
+                  {armyActiveRules.map((r, idx) => (
+                    <div key={idx} className="p-2 bg-zinc-50 border border-zinc-200 rounded">
+                      <div className="font-bold text-zinc-900 mb-0.5">
+                        {r.name} {r.ref ? <span className="text-zinc-500 font-normal">({r.ref})</span> : null}
+                      </div>
+                      <div className="text-zinc-700 leading-snug">{r.text}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* FACTION ARMY SPECIAL RULES */}
+            {factionData?.armyRules && factionData.armyRules.length > 0 && (
+              <div className="rules-print-block mt-5 pt-3 border-t-2 border-zinc-800 break-inside-avoid">
+                <h2 className="text-xs font-black font-tactical uppercase tracking-wider text-zinc-900 mb-2">
+                  {factionData.faction} Army Special Rules
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[10px] font-sans">
+                  {factionData.armyRules.map((rule, idx) => (
+                    <div key={idx} className="p-2 bg-zinc-50 border border-zinc-200 rounded">
+                      <div className="font-bold text-zinc-900 mb-0.5">{rule.name}</div>
+                      <div className="text-zinc-700 leading-snug">{rule.text}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div className="mt-5 pt-2 border-t border-zinc-300 flex items-center justify-between text-[9px] font-mono text-zinc-500">
+              <span>Bolt Action v3 Army Builder • {factionData?.book}</span>
+              <span>Generated on {currentDateStr}</span>
+            </div>
+          </div>
+        );
+      }
+      // =========================================================================
+      // EXPORT & ROSTER MANAGEMENT MODAL (PDF & JSON)
+      // =========================================================================
+      function ExportModal({
+        isOpen,
+        onClose,
+        factionData,
+        armyListName,
+        setArmyListName,
+        armyNotes,
+        setArmyNotes,
+        totalPoints,
+        totalOrderDice,
+        platoons,
+        onExportJSON,
+        onTriggerImportJSON,
+        onNativePrint,
+        onDirectPDFDownload,
+        isGeneratingPdf
+      }) {
+        if (!isOpen) return null;
+        const totalUnits = platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0);
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/85 backdrop-blur-sm animate-in fade-in duration-150 no-print">
+            <div className="bg-zinc-900 border border-zinc-750 rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col max-h-[92vh]">
+              <div className="px-5 py-3.5 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                    <DownloadIcon className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h2 className="text-base font-black font-tactical text-white tracking-wide uppercase">
+                      Export & Manage Force Roster
+                    </h2>
+                    <p className="text-[11px] font-mono text-zinc-400">
+                      Print or download official PDF roster, or save/load JSON army list
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="p-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
+                >
+                  <XIcon className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4">
+                <div className="bg-zinc-950/70 border border-zinc-800 rounded-xl p-3.5 space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex-1 min-w-[240px]">
+                      <label className="text-[10.5px] font-mono font-bold uppercase tracking-wider text-zinc-400 block mb-1">
+                        Force Roster Name
+                      </label>
+                      <input
+                        type="text"
+                        value={armyListName}
+                        onChange={(e) => setArmyListName(e.target.value)}
+                        placeholder="e.g. Soviet Union - 1000 pts"
+                        className="w-full bg-zinc-900 border border-zinc-750 focus:border-amber-400 rounded-lg px-3 py-1.5 text-xs text-white font-mono placeholder-zinc-600 outline-none transition-colors"
+                      />
+                    </div>
+                    <div className="flex items-center gap-2 text-xs font-mono shrink-0 pt-3 sm:pt-0">
+                      <div className="bg-zinc-900 border border-zinc-750 px-3 py-1.5 rounded-lg text-zinc-200">
+                        Points: <strong className="text-amber-400">{totalPoints}</strong>
+                      </div>
+                      <div className="bg-zinc-900 border border-zinc-750 px-3 py-1.5 rounded-lg text-zinc-200">
+                        Order Dice: <strong className="text-white">{totalOrderDice}</strong>
+                      </div>
+                      <div className="bg-zinc-900 border border-zinc-750 px-3 py-1.5 rounded-lg text-zinc-200">
+                        Platoons: <strong className="text-white">{platoons.length}</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-[10.5px] font-mono font-bold uppercase tracking-wider text-zinc-400 block mb-1">
+                      Force Notes (Optional)
+                    </label>
+                    <textarea
+                      value={armyNotes}
+                      onChange={(e) => setArmyNotes(e.target.value)}
+                      rows={2}
+                      placeholder="Add deployment notes or tactical reminders..."
+                      className="w-full bg-zinc-900 border border-zinc-750 focus:border-amber-400 rounded-lg px-3 py-1.5 text-xs text-white font-mono placeholder-zinc-600 outline-none transition-colors resize-none"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="bg-gradient-to-b from-zinc-850 to-zinc-900 border border-zinc-750 rounded-xl p-3.5 flex flex-col justify-between shadow-sm">
+                    <div>
+                      <div className="flex items-center gap-2 text-amber-400 mb-1.5 font-tactical font-black text-xs uppercase tracking-wider">
+                        <FileTextIcon className="w-4 h-4" />
+                        <span>PDF ROSTER</span>
+                      </div>
+                      <p className="text-[11px] font-mono text-zinc-400 leading-snug mb-3">
+                        Generate printable A4 force roster with weapons and special rules.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <button
+                        type="button"
+                        onClick={onNativePrint}
+                        disabled={totalUnits === 0}
+                        className="w-full py-2 px-3 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-black font-extrabold text-xs font-mono flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
+                      >
+                        <PrinterIcon className="w-4 h-4" />
+                        <span>Print / Save PDF</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={onDirectPDFDownload}
+                        disabled={totalUnits === 0 || isGeneratingPdf}
+                        className="w-full py-1.5 px-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-50 text-zinc-200 hover:text-white font-bold text-[11px] font-mono flex items-center justify-center gap-1.5 transition-colors border border-zinc-700 cursor-pointer"
+                      >
+                        <DownloadIcon className="w-3.5 h-3.5" />
+                        <span>{isGeneratingPdf ? "Generating..." : "Direct PDF Download"}</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-b from-zinc-850 to-zinc-900 border border-zinc-750 rounded-xl p-3.5 flex flex-col justify-between shadow-sm">
+                    <div>
+                      <div className="flex items-center gap-2 text-blue-400 mb-1.5 font-tactical font-black text-xs uppercase tracking-wider">
+                        <FileCodeIcon className="w-4 h-4" />
+                        <span>EXPORT JSON</span>
+                      </div>
+                      <p className="text-[11px] font-mono text-zinc-400 leading-snug mb-3">
+                        Save your roster to a .json file to back up or share.
+                      </p>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={onExportJSON}
+                      disabled={totalUnits === 0}
+                      className="w-full py-2 px-3 rounded-lg bg-blue-500 hover:bg-blue-400 disabled:opacity-50 text-white font-extrabold text-xs font-mono flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
+                    >
+                      <DownloadIcon className="w-4 h-4" />
+                      <span>Download JSON (.json)</span>
+                    </button>
+                  </div>
+                  <div className="bg-gradient-to-b from-zinc-850 to-zinc-900 border border-zinc-750 rounded-xl p-3.5 flex flex-col justify-between shadow-sm">
+                    <div>
+                      <div className="flex items-center gap-2 text-emerald-400 mb-1.5 font-tactical font-black text-xs uppercase tracking-wider">
+                        <UploadIcon className="w-4 h-4" />
+                        <span>IMPORT JSON</span>
+                      </div>
+                      <p className="text-[11px] font-mono text-zinc-400 leading-snug mb-3">
+                        Load a previously saved .json army roster file.
+                      </p>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={onTriggerImportJSON}
+                      className="w-full py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs font-mono flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
+                    >
+                      <UploadIcon className="w-4 h-4" />
+                      <span>Load JSON File</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
+                    <span className="font-bold uppercase tracking-wider flex items-center gap-1.5">
+                      <EyeIcon className="w-3.5 h-3.5 text-amber-400" />
+                      <span>Live Roster Preview</span>
+                    </span>
+                  </div>
+                  <div className="bg-white text-zinc-900 rounded-xl p-4 sm:p-6 border border-zinc-300 shadow-inner max-h-[46vh] overflow-y-auto">
+                    <div id="printable-army-roster-preview">
+                      <ArmyRosterPrintView
+                        factionData={factionData}
+                        armyListName={armyListName}
+                        armyNotes={armyNotes}
+                        totalPoints={totalPoints}
+                        totalOrderDice={totalOrderDice}
+                        platoons={platoons}
+                        isPreview={true}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="px-5 py-3 bg-zinc-950 border-t border-zinc-800 flex items-center justify-between text-xs font-mono">
+                <span className="text-zinc-500 text-[11px]">
+                  Bolt Action v3 • Multi-Faction Engine
+                </span>
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="px-4 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 hover:text-white font-bold transition-colors border border-zinc-700 cursor-pointer"
+                >
+                  Close
+                </button>
+              </div>
+
+            </div>
+          </div>
+        );
+      }
+      // =========================================================================
+      // MAIN APPLICATION
+      // =========================================================================
+      const DRAFT_KEY = 'boltaction.draft.v1';
+      function loadDraft() {
+        try {
+          const d = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
+          if (d && Array.isArray(d.platoons) && d.platoons.length > 0) return d;
+        } catch {}
+        return null;
+      }
+
+      function App() {
+        const draft = useMemo(() => loadDraft(), []);
+        const availableFactions = Object.keys(FACTIONS_REGISTRY);
+        const [activeFactionId, setActiveFactionId] = useState(
+          draft?.factionId && FACTIONS_REGISTRY[draft.factionId] ? draft.factionId : availableFactions[0] || 'soviet_union'
+        );
+        const factionData = FACTIONS_REGISTRY[activeFactionId] || window.EASYARMY_SOVIET_DATA;
+        const platoonTypes = factionData?.platoons || [];
+
+        const [platoons, setPlatoons] = useState(
+          draft?.platoons || [{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]
+        );
+
+        const [activePlatoonId, setActivePlatoonId] = useState(draft?.platoons?.[0]?.id || 1);
+        const [isPlatoonDropdownOpen, setIsPlatoonDropdownOpen] = useState(false);
+        const platoonDropdownRef = useRef(null);
+
+        const [editingUnitModal, setEditingUnitModal] = useState({
+          isOpen: false,
+          slotId: null,
+          slotLabel: null,
+          unitItem: null
+        });
+        const [isExportModalOpen, setIsExportModalOpen] = useState(false);
+        const [armyListName, setArmyListName] = useState(draft?.listName || `${factionData?.faction || 'Soviet Union'} - 1000 pts`);
+        const [armyNotes, setArmyNotes] = useState(draft?.notes || "");
+        const [toast, setToast] = useState(null);
+        const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
+        const jsonFileInputRef = useRef(null);
+
+        // Accounts & cloud lists
+        const { user } = useAuth();
+        const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+        const [isMyListsOpen, setIsMyListsOpen] = useState(false);
+        const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+        const [currentListId, setCurrentListId] = useState(draft?.currentListId || null);
+        const [isSaving, setIsSaving] = useState(false);
+
+        const showToast = (message, type = "info") => {
+          setToast({ message, type });
+          setTimeout(() => setToast(null), 4000);
+        };
+
+        // Autosave the working list locally (survives reloads / closing the app)
+        useEffect(() => {
+          try {
+            localStorage.setItem(
+              DRAFT_KEY,
+              JSON.stringify({ factionId: activeFactionId, platoons, listName: armyListName, notes: armyNotes, currentListId })
+            );
+          } catch {}
+        }, [activeFactionId, platoons, armyListName, armyNotes, currentListId]);
+
+        // Close the user menu on outside tap
+        useEffect(() => {
+          if (!isUserMenuOpen) return;
+          const close = () => setIsUserMenuOpen(false);
+          const t = setTimeout(() => document.addEventListener('click', close), 0);
+          return () => {
+            clearTimeout(t);
+            document.removeEventListener('click', close);
+          };
+        }, [isUserMenuOpen]);
+
+        const handleCloudSave = async (asNew = false) => {
+          let targetName = (armyListName || 'Untitled Force').trim();
+          if (asNew || !currentListId) {
+            const prompted = window.prompt('List name:', targetName);
+            if (prompted === null) return;
+            targetName = (prompted || 'Untitled Force').trim();
+            setArmyListName(targetName);
+          }
+
+          const row = {
+            name: targetName,
+            faction_id: activeFactionId,
+            total_points: totalPoints,
+            order_dice: totalOrderDice,
+            data: { version: '2.0', factionId: activeFactionId, listName: targetName, notes: armyNotes, platoons },
+          };
+
+          // If signed in to Supabase Cloud, save to cloud + mirror locally
+          if (user && supabaseClient) {
+            setIsSaving(true);
+            try {
+              const isCloudUUID = currentListId && !String(currentListId).startsWith('local-');
+              if (isCloudUUID && !asNew) {
+                const { error } = await supabaseClient.from('army_lists').update(row).eq('id', currentListId);
+                if (error) throw error;
+              } else {
+                const { data, error } = await supabaseClient.from('army_lists').insert(row).select('id').single();
+                if (error) throw error;
+                setCurrentListId(data.id);
+              }
+              showToast(`Saved "${row.name}" to Cloud.`, "success");
+            } catch (err) {
+              showToast("Cloud save failed: " + (err.message || err), "error");
+            } finally {
+              setIsSaving(false);
+            }
+            return;
+          }
+
+          // Fallback: save to local device library (works offline / without login)
+          const localLists = loadLocalLists();
+          const nowIso = new Date().toISOString();
+          const isExistingLocal = currentListId && String(currentListId).startsWith('local-') && !asNew;
+          const nextId = isExistingLocal ? currentListId : `local-${Date.now()}`;
+          const localEntry = {
+            id: nextId,
+            ...row,
+            updated_at: nowIso,
+          };
+          const filtered = localLists.filter((x) => x.id !== nextId);
+          saveLocalLists([localEntry, ...filtered]);
+          setCurrentListId(nextId);
+          showToast(
+            isSupabaseConfigured()
+              ? `Saved "${row.name}" on this device (Sign in to sync to Cloud).`
+              : `Saved "${row.name}" on this device.`,
+            "success"
+          );
+        };
+
+        const handleLoadCloudList = (row) => {
+          const d = row.data || {};
+          if (!Array.isArray(d.platoons) || d.platoons.length === 0) {
+            showToast("This saved list is empty or invalid.", "error");
+            return;
+          }
+          if (row.faction_id && FACTIONS_REGISTRY[row.faction_id]) setActiveFactionId(row.faction_id);
+          setPlatoons(d.platoons);
+          setActivePlatoonId(d.platoons[0].id);
+          setArmyListName(row.name || d.listName || '');
+          setArmyNotes(d.notes || '');
+          setCurrentListId(row.id);
+          showToast(`Loaded "${row.name}" (${row.total_points} pts)`, "success");
+        };
+
+        const handleNewList = () => {
+          if (!window.confirm('Start a new empty list? Unsaved changes to the current list will be lost.')) return;
+          setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
+          setActivePlatoonId(1);
+          setArmyListName(`${factionData?.faction || 'Soviet Union'} - 1000 pts`);
+          setArmyNotes('');
+          setCurrentListId(null);
+        };
+
+        const handleSignOut = async () => {
+          await supabaseClient?.auth.signOut();
+          setCurrentListId(null);
+          showToast("Signed out.", "success");
+        };
+        const currentPlatoon = platoons.find(p => p.id === activePlatoonId) || platoons[0];
+        const currentType = platoonTypes.find(t => t.id === currentPlatoon.typeId) || platoonTypes[0];
+
+        const totalOrderDice = platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0);
+        const totalPoints = platoons.reduce((acc, p) => {
+          return acc + Object.values(p.slots).reduce((sum, u) => sum + (u?.points || 0), 0);
+        }, 0);
+        const currentPlatoonPoints = Object.values(currentPlatoon.slots).reduce((sum, u) => sum + (u?.points || 0), 0);
+
+        useEffect(() => {
+          function handleClickOutside(event) {
+            if (platoonDropdownRef.current && !platoonDropdownRef.current.contains(event.target)) {
+              setIsPlatoonDropdownOpen(false);
+            }
+          }
+          if (isPlatoonDropdownOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+          }
+          return () => document.removeEventListener('mousedown', handleClickOutside);
+        }, [isPlatoonDropdownOpen]);
+
+        const handleSelectPlatoonType = (newTypeId) => {
+          setPlatoons(platoons.map(p => {
+            if (p.id === activePlatoonId) {
+              return { ...p, typeId: newTypeId, slots: {} };
+            }
+            return p;
+          }));
+          setIsPlatoonDropdownOpen(false);
+        };
+
+        const handleSelectPlatoonPeriod = (newPeriod) => {
+          setPlatoons(platoons.map(p => {
+            if (p.id === activePlatoonId) {
+              return { ...p, period: newPeriod };
+            }
+            return p;
+          }));
+        };
+        const handleSelectSlot = (slotId, unitName, slotLabel) => {
+          const def = getUnitDefinition(factionData, unitName);
+          const initialExp = def.defaultExp || "regular";
+          const initialCost = def.costs[initialExp]?.points ?? 0;
+
+          const newUnitItem = {
+            name: unitName,
+            points: initialCost,
+            config: {
+              experience: initialExp,
+              extraMen: 0,
+              options: {}
+            }
+          };
+
+          setPlatoons(platoons.map(p => {
+            if (p.id === activePlatoonId) {
+              return {
+                ...p,
+                slots: { ...p.slots, [slotId]: newUnitItem }
+              };
+            }
+            return p;
+          }));
+
+          setEditingUnitModal({
+            isOpen: true,
+            slotId,
+            slotLabel,
+            unitItem: newUnitItem
+          });
+        };
+
+        const handleOpenEditModal = (slotId, unitItem, slotLabel) => {
+          setEditingUnitModal({
+            isOpen: true,
+            slotId,
+            slotLabel,
+            unitItem
+          });
+        };
+        const handleSaveUnitFromModal = (updatedUnit) => {
+          if (!editingUnitModal.slotId) return;
+          setPlatoons(platoons.map(p => {
+            if (p.id === activePlatoonId) {
+              return {
+                ...p,
+                slots: { ...p.slots, [editingUnitModal.slotId]: updatedUnit }
+              };
+            }
+            return p;
+          }));
+        };
+
+        const handleClearSlot = (slotId) => {
+          setPlatoons(platoons.map(p => {
+            if (p.id === activePlatoonId) {
+              const nextSlots = { ...p.slots };
+              delete nextSlots[slotId];
+              return { ...p, slots: nextSlots };
+            }
+            return p;
+          }));
+        };
+        const handleAddPlatoon = () => {
+          const nextId = platoons.length > 0 ? Math.max(...platoons.map(p => p.id)) + 1 : 1;
+          const newPlatoon = { id: nextId, typeId: 'infantry', period: 'All', slots: {} };
+          setPlatoons([...platoons, newPlatoon]);
+          setActivePlatoonId(nextId);
+          setIsPlatoonDropdownOpen(true);
+        };
+        const handleDeletePlatoon = (e, platoonId) => {
+          e.stopPropagation();
+          if (platoons.length <= 1) return;
+          const nextPlatoons = platoons.filter(p => p.id !== platoonId);
+          setPlatoons(nextPlatoons);
+          if (activePlatoonId === platoonId) {
+            setActivePlatoonId(nextPlatoons[0].id);
+          }
+        };
+        const handlePlatoonButtonClick = (platoonId) => {
+          if (activePlatoonId === platoonId) {
+            setIsPlatoonDropdownOpen(!isPlatoonDropdownOpen);
+          } else {
+            setActivePlatoonId(platoonId);
+            setIsPlatoonDropdownOpen(true);
+          }
+        };
+
+        const handleExportJSON = () => {
+          const exportData = {
+            app: "BoltActionArmyBuilder",
+            version: "2.0",
+            gameSystem: "Bolt Action v3",
+            exportDate: new Date().toISOString(),
+            factionId: activeFactionId,
+            faction: factionData?.faction || "Soviet Union",
+            listName: armyListName,
+            notes: armyNotes,
+            totalPoints,
+            totalOrderDice,
+            platoons
+          };
+          const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          const cleanName = (armyListName || "BoltAction_Roster").replace(/[^a-zA-Z0-9_-]/g, "_");
+          a.href = url;
+          a.download = `${cleanName}_${totalPoints}pts.json`;
+          a.click();
+          URL.revokeObjectURL(url);
+          showToast("Roster exported to JSON successfully.", "success");
+        };
+
+        const handleTriggerImportJSON = () => {
+          if (jsonFileInputRef.current) {
+            jsonFileInputRef.current.click();
+          }
+        };
+
+        const handleImportJSONFile = (e) => {
+          const file = e.target.files?.[0];
+          if (!file) return;
+
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            try {
+              const data = JSON.parse(event.target.result);
+              if (!data || !Array.isArray(data.platoons) || data.platoons.length === 0) {
+                showToast("Invalid Bolt Action roster JSON file.", "error");
+                return;
+              }
+              if (data.factionId && FACTIONS_REGISTRY[data.factionId]) {
+                setActiveFactionId(data.factionId);
+              }
+              setPlatoons(data.platoons);
+              if (data.listName) setArmyListName(data.listName);
+              if (data.notes !== undefined) setArmyNotes(data.notes);
+              setActivePlatoonId(data.platoons[0]?.id || 1);
+              showToast(`Loaded "${data.listName || 'Roster'}" (${data.totalPoints || 0} pts)`, "success");
+              setIsExportModalOpen(false);
+            } catch (err) {
+              showToast("Failed to parse JSON file: " + err.message, "error");
+            } finally {
+              e.target.value = "";
+            }
+          };
+          reader.readAsText(file);
+        };
+
+        const handleNativePrint = () => {
+          window.print();
+        };
+
+        const handleDirectPDFDownload = () => {
+          const element = document.getElementById("printable-army-roster-preview");
+          if (!element || !window.html2pdf) {
+            window.print();
+            return;
+          }
+          setIsGeneratingPdf(true);
+          const cleanName = (armyListName || "BoltAction_Roster").replace(/[^a-zA-Z0-9_-]/g, "_");
+          const opt = {
+            margin: [8, 8, 8, 8],
+            filename: `${cleanName}_${totalPoints}pts.pdf`,
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true, logging: false },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+          };
+          window.html2pdf().set(opt).from(element).save().then(() => {
+            setIsGeneratingPdf(false);
+            showToast("PDF downloaded successfully.", "success");
+          }).catch(() => {
+            setIsGeneratingPdf(false);
+            window.print();
+          });
+        };
+
+        return (
+          <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans safe-top safe-x sm:px-6 antialiased pb-28 sm:pb-24">
+            {toast && (
+              <div className="fixed top-[max(1rem,env(safe-area-inset-top))] left-3 right-3 sm:left-auto sm:right-5 z-[60] animate-in fade-in slide-in-from-top-2 duration-150 no-print">
+                <div className={`px-4 py-2.5 rounded-xl shadow-2xl border font-mono text-xs font-bold flex items-center gap-2.5 ${
+                  toast.type === 'error'
+                    ? 'bg-red-950/95 border-red-500 text-red-200'
+                    : 'bg-emerald-950/95 border-emerald-500 text-emerald-200'
+                }`}>
+                  <span className={`w-2 h-2 rounded-full shrink-0 ${toast.type === 'error' ? 'bg-red-400' : 'bg-emerald-400'}`} />
+                  <span>{toast.message}</span>
+                </div>
+              </div>
+            )}
+
+            <input
+              type="file"
+              ref={jsonFileInputRef}
+              onChange={handleImportJSONFile}
+              accept=".json,application/json"
+              className="hidden"
+            />
+
+            <div className="max-w-[1400px] mx-auto space-y-3.5 no-print">
+
+              {/* 0. APP BAR: BRAND, LIST NAME, CLOUD/LOCAL SAVE, MY LISTS & ACCOUNT */}
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0 flex-1">
+                  <img src="./icons/icon-192.png" alt="" className="w-8 h-8 rounded-lg shrink-0" />
+                  <div className="min-w-0 leading-tight flex-1 max-w-xs">
+                    <div className="font-tactical font-black text-sm sm:text-base tracking-wider uppercase text-white truncate">
+                      Bolt Action <span className="text-amber-400">v3</span>
+                    </div>
+                    <input
+                      type="text"
+                      value={armyListName}
+                      onChange={(e) => setArmyListName(e.target.value)}
+                      placeholder="Untitled Army List..."
+                      className="w-full bg-transparent text-[11px] font-mono text-zinc-400 focus:text-amber-300 focus:outline-none truncate border-b border-transparent focus:border-amber-400/50"
+                      title="Click to rename list"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <button
+                    type="button"
+                    onClick={handleNewList}
+                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                    title="New list"
+                  >
+                    <Plus className="w-4 h-4" />
+                    <span className="hidden md:inline">New</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIsMyListsOpen(true)}
+                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                    title="My Saved Lists (Cloud & Device)"
+                  >
+                    <FolderIcon className="w-4 h-4 text-amber-400" />
+                    <span className="hidden md:inline">My Lists</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleCloudSave(false)}
+                    disabled={isSaving}
+                    className="h-9 px-3 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-black text-xs font-mono font-extrabold flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                    title={user ? (currentListId ? 'Save changes to Cloud' : 'Save list to Cloud') : 'Save list'}
+                  >
+                    <CloudIcon className="w-4 h-4" />
+                    <span className="hidden sm:inline">{isSaving ? 'Saving...' : 'Save'}</span>
+                  </button>
+
+                  {user ? (
+                    <div className="relative">
+                      <button
+                        type="button"
+                        onClick={() => setIsUserMenuOpen((v) => !v)}
+                        className="h-9 w-9 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-amber-300 font-black font-mono text-sm flex items-center justify-center uppercase transition-colors cursor-pointer"
+                        title={user.email}
+                      >
+                        {(user.email || '?')[0]}
+                      </button>
+                      {isUserMenuOpen && (
+                        <div className="absolute right-0 top-full mt-2 z-50 w-60 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl overflow-hidden">
+                          <div className="px-3.5 py-2.5 bg-zinc-950 border-b border-zinc-800">
+                            <div className="text-[10px] font-mono uppercase text-zinc-500">Signed in as</div>
+                            <div className="text-xs font-mono text-zinc-200 truncate">{user.email}</div>
+                          </div>
+                          <div className="p-1.5 space-y-0.5 text-xs font-mono">
+                            <button
+                              type="button"
+                              onClick={() => setIsMyListsOpen(true)}
+                              className="w-full text-left px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-zinc-800 flex items-center gap-2 cursor-pointer"
+                            >
+                              <FolderIcon className="w-4 h-4 text-amber-400" /> My Lists
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => handleCloudSave(true)}
+                              className="w-full text-left px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-zinc-800 flex items-center gap-2 cursor-pointer"
+                            >
+                              <CloudIcon className="w-4 h-4 text-amber-400" /> Save as new list
+                            </button>
+                            <button
+                              type="button"
+                              onClick={handleSignOut}
+                              className="w-full text-left px-3 py-2.5 rounded-lg text-red-300 hover:bg-red-950/60 flex items-center gap-2 cursor-pointer"
+                            >
+                              <LogOutIcon className="w-4 h-4" /> Sign out
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setIsAuthModalOpen(true)}
+                      className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                      title="Sign in to sync lists across devices"
+                    >
+                      <UserIcon className="w-4 h-4" />
+                      <span className="hidden sm:inline">Sign In</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* 1. TOP PLATOON SELECTOR BANNER */}
+              <div
+                onClick={() => setIsPlatoonDropdownOpen(!isPlatoonDropdownOpen)}
+                className="bg-white text-zinc-900 border-2 border-zinc-200 hover:border-amber-400 rounded-xl shadow-sm py-2.5 px-4 flex items-center justify-between cursor-pointer transition-colors group"
+              >
+                <div className="w-full text-center">
+                  <div className="text-lg sm:text-2xl font-black tracking-widest text-zinc-900 font-tactical select-none uppercase">
+                    {currentType?.title || "RIFLE PLATOON"}
+                  </div>
+                  <div className="text-[11px] font-mono text-zinc-500">
+                    {factionData?.periods?.[currentType?.id]?.[currentPlatoon.period || 'All']?.title || currentType?.officialTitle || factionData?.book}
+                  </div>
+                </div>
+                <ChevronDown className={`w-5 h-5 text-zinc-500 group-hover:text-zinc-800 transition-transform shrink-0 ${isPlatoonDropdownOpen ? 'rotate-180' : ''}`} />
+              </div>
+
+              {/* 2. CONTROL BAR: FACTION, PLATOON TABS, PERIOD SELECTOR & LIVE TOTALS */}
+              <div className="bg-zinc-900/90 border border-zinc-800/80 rounded-xl px-3 sm:px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 sm:gap-4 text-xs font-mono shadow-sm">
+                <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+                  {/* Faction Selector (Scalable to additional factions) */}
+                  <div className="flex items-center gap-1.5 bg-zinc-950 border border-zinc-800 rounded-lg px-2.5 py-1">
+                    <span className="text-zinc-500 text-[10.5px] uppercase font-bold">Faction:</span>
+                    <select
+                      value={activeFactionId}
+                      onChange={(e) => {
+                        setActiveFactionId(e.target.value);
+                        setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
+                        setActivePlatoonId(1);
+                      }}
+                      className="bg-transparent text-amber-400 font-bold text-xs focus:outline-none cursor-pointer"
+                    >
+                      {availableFactions.map(fId => (
+                        <option key={fId} value={fId} className="bg-zinc-900 text-white">
+                          {FACTIONS_REGISTRY[fId]?.faction || fId}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Platoon Tabs */}
+                  <div className="relative flex flex-wrap items-center gap-2" ref={platoonDropdownRef}>
+                    <span className="text-zinc-400 font-bold">Platoon:</span>
+
+                    {platoons.map((p) => {
+                      const isActive = p.id === activePlatoonId;
+                      const pType = platoonTypes.find(t => t.id === p.typeId) || platoonTypes[0];
+
+                      return (
+                        <div
+                          key={p.id}
+                          onClick={() => handlePlatoonButtonClick(p.id)}
+                          className={`h-7 pl-2.5 ${platoons.length > 1 ? 'pr-1.5' : 'pr-2.5'} rounded text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer select-none ${
+                            isActive
+                              ? 'bg-amber-400 text-black shadow-md font-extrabold ring-1 ring-amber-300'
+                              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-white border border-zinc-700/60'
+                          }`}
+                        >
+                          <span>#{p.id}</span>
+                          <span className="uppercase tracking-wider font-semibold text-[10.5px] opacity-90">
+                            {pType?.name || p.typeId}
+                          </span>
+
+                          {platoons.length > 1 && (
+                            <button
+                              type="button"
+                              onClick={(e) => handleDeletePlatoon(e, p.id)}
+                              className={`ml-0.5 w-4 h-4 rounded flex items-center justify-center text-xs leading-none font-mono font-black transition-colors cursor-pointer ${
+                                isActive
+                                  ? 'text-black/65 hover:text-red-700 hover:bg-black/15'
+                                  : 'text-zinc-400 hover:text-red-400 hover:bg-zinc-900/80'
+                              }`}
+                              title={`Remove Platoon #${p.id}`}
+                            >
+                              ×
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                    <button
+                      onClick={handleAddPlatoon}
+                      className="h-7 px-2 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white border border-dashed border-zinc-600 flex items-center justify-center gap-1 transition-colors font-bold text-xs cursor-pointer"
+                      title="Add Platoon"
+                    >
+                      <Plus className="w-3.5 h-3.5 text-amber-400" />
+                    </button>
+                    {/* Platoon Type Dropdown */}
+                    {isPlatoonDropdownOpen && (
+                      <div className="absolute left-0 top-full mt-2 z-50 w-72 sm:w-80 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl overflow-hidden backdrop-blur-md animate-in fade-in slide-in-from-top-1 duration-150">
+                        <div className="px-3.5 py-2 bg-zinc-950 border-b border-zinc-800 text-[11px] font-mono text-zinc-400 flex items-center justify-between">
+                          <span>Select Selector for <strong>Platoon #{activePlatoonId}</strong></span>
+                          <button
+                            onClick={() => setIsPlatoonDropdownOpen(false)}
+                            className="text-zinc-500 hover:text-white text-xs"
+                          >
+                            ✕
+                          </button>
+                        </div>
+
+                        <div className="p-1.5 space-y-1">
+                          {platoonTypes.map((t) => {
+                            const isSelected = currentPlatoon.typeId === t.id;
+                            return (
+                              <button
+                                key={t.id}
+                                onClick={() => handleSelectPlatoonType(t.id)}
+                                className={`w-full text-left px-3 py-2.5 rounded-lg text-xs font-mono font-bold tracking-wider uppercase transition-colors flex items-center justify-between cursor-pointer ${
+                                  isSelected
+                                    ? 'bg-amber-400/15 text-amber-300 border border-amber-500/30'
+                                    : 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
+                                }`}
+                              >
+                                <div>
+                                  <div>{t.title}</div>
+                                  <div className="text-[9.5px] font-normal text-zinc-500 normal-case">{t.officialTitle}</div>
+                                </div>
+                                {isSelected && <Check className="w-4 h-4 text-amber-400 shrink-0 ml-2" />}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Period Selector (All / EW / MW / LW) */}
+                  <div className="flex items-center gap-1 bg-zinc-950 p-1 rounded-lg border border-zinc-800">
+                    {PERIOD_OPTIONS.map((po) => {
+                      const activeP = (currentPlatoon.period || 'All') === po.id;
+                      return (
+                        <button
+                          key={po.id}
+                          type="button"
+                          title={po.title}
+                          onClick={() => handleSelectPlatoonPeriod(po.id)}
+                          className={`px-2 py-0.5 rounded text-[10.5px] font-mono font-bold transition-colors cursor-pointer ${
+                            activeP
+                              ? 'bg-amber-400 text-black'
+                              : 'text-zinc-400 hover:text-white'
+                          }`}
+                        >
+                          {po.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Live Points & Order Dice (Tablet/Desktop; mobile uses fixed bottom bar) */}
+                <div className="hidden sm:flex items-center gap-4 text-xs font-mono text-zinc-300">
+                  <div>
+                    Platoon: <strong className="text-zinc-100">{currentPlatoonPoints} pts</strong>
+                  </div>
+                  <div className="h-3 w-px bg-zinc-700" />
+                  <div>
+                    Total Points: <strong className="text-sm font-bold text-white">{totalPoints}</strong>
+                  </div>
+                  <div className="h-3 w-px bg-zinc-700" />
+                  <div className="flex items-center gap-1.5">
+                    <span>Order Dice:</span>
+                    <strong className="text-sm font-bold text-amber-400">{totalOrderDice}</strong>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* 3. 5-COLUMN SLOT GRID (Exact EasyArmy Platoon Structure) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 items-start pt-1">
+                {(currentType?.columns || []).map((col, colIdx) => (
+                  <div key={col.id || colIdx} className="space-y-2">
+                    {col.slots.map((slot) => (
+                      <Slot
+                        key={slot.id}
+                        slot={slot}
+                        factionData={factionData}
+                        platoonTypeId={currentType.id}
+                        periodKey={currentPlatoon.period || 'All'}
+                        value={currentPlatoon.slots[slot.id]}
+                        onSelect={(unitName, slotLabel) => handleSelectSlot(slot.id, unitName, slotLabel)}
+                        onEdit={(slotId, unitItem, slotLabel) => handleOpenEditModal(slotId, unitItem, slotLabel)}
+                        onClear={() => handleClearSlot(slot.id)}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* FLOATING EXPORT BUTTON (tablet / desktop) */}
+            <div className="hidden sm:block fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-6 z-40 no-print">
+              <button
+                type="button"
+                onClick={() => setIsExportModalOpen(true)}
+                className="h-12 px-5 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-black font-extrabold text-xs sm:text-sm font-tactical uppercase tracking-wider transition-all duration-150 shadow-2xl hover:shadow-amber-400/25 border-2 border-amber-300 flex items-center gap-3 cursor-pointer group"
+              >
+                <div className="w-6 h-6 rounded bg-black/10 flex items-center justify-center text-black group-hover:scale-110 transition-transform">
+                  <DownloadIcon className="w-4 h-4 text-black" />
+                </div>
+                <span className="font-black text-sm tracking-wide">EXPORT ROSTER</span>
+                <span className="bg-black/15 text-[10px] px-2 py-0.5 rounded font-mono font-bold tracking-tight text-black/90">
+                  PDF / JSON
+                </span>
+              </button>
+            </div>
+
+            {/* MOBILE BOTTOM BAR (app mode): live totals + export */}
+            <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 no-print bg-zinc-950/95 backdrop-blur-md border-t border-zinc-800 safe-bottom safe-x pt-2">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 font-mono text-[11px] text-zinc-400 min-w-0">
+                  <div className="leading-tight">
+                    <div className="uppercase text-[9.5px]">Total</div>
+                    <div className="text-white font-black text-base">{totalPoints}<span className="text-[10px] text-zinc-500 font-bold"> pts</span></div>
+                  </div>
+                  <div className="h-7 w-px bg-zinc-800" />
+                  <div className="leading-tight">
+                    <div className="uppercase text-[9.5px]">Dice</div>
+                    <div className="text-amber-400 font-black text-base">{totalOrderDice}</div>
+                  </div>
+                  <div className="h-7 w-px bg-zinc-800" />
+                  <div className="leading-tight min-w-0">
+                    <div className="uppercase text-[9.5px]">Platoon</div>
+                    <div className="text-zinc-200 font-bold text-sm truncate">{currentPlatoonPoints} pts</div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsExportModalOpen(true)}
+                  className="h-11 px-4 rounded-xl bg-amber-400 active:bg-amber-300 text-black font-black text-xs font-tactical uppercase tracking-wider flex items-center gap-2 shadow-lg shrink-0 cursor-pointer"
+                >
+                  <DownloadIcon className="w-4 h-4" />
+                  Export
+                </button>
+              </div>
+            </div>
+
+            {/* ACCOUNT MODALS */}
+            <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} />
+            <MyListsModal
+              isOpen={isMyListsOpen}
+              onClose={() => setIsMyListsOpen(false)}
+              user={user}
+              currentListId={currentListId}
+              onLoadList={handleLoadCloudList}
+              onSaveCurrentAsNew={() => handleCloudSave(true)}
+              onListDeleted={(id) => {
+                if (id === currentListId) setCurrentListId(null);
+              }}
+            />
+
+            {/* FULL-WINDOW UNIT EDIT MODAL */}
+            <UnitEditModal
+              isOpen={editingUnitModal.isOpen}
+              onClose={() => setEditingUnitModal({ isOpen: false, slotId: null, slotLabel: null, unitItem: null })}
+              factionData={factionData}
+              unitItem={editingUnitModal.unitItem}
+              slotLabel={editingUnitModal.slotLabel}
+              onSave={handleSaveUnitFromModal}
+              onClearUnit={() => {
+                if (editingUnitModal.slotId) {
+                  handleClearSlot(editingUnitModal.slotId);
+                }
+              }}
+            />
+            {/* EXPORT & ROSTER MANAGEMENT MODAL */}
+            <ExportModal
+              isOpen={isExportModalOpen}
+              onClose={() => setIsExportModalOpen(false)}
+              factionData={factionData}
+              armyListName={armyListName}
+              setArmyListName={setArmyListName}
+              armyNotes={armyNotes}
+              setArmyNotes={setArmyNotes}
+              totalPoints={totalPoints}
+              totalOrderDice={totalOrderDice}
+              platoons={platoons}
+              onExportJSON={handleExportJSON}
+              onTriggerImportJSON={handleTriggerImportJSON}
+              onNativePrint={handleNativePrint}
+              onDirectPDFDownload={handleDirectPDFDownload}
+              isGeneratingPdf={isGeneratingPdf}
+            />
+
+            {/* PRINT-ONLY ROSTER */}
+            <div id="printable-army-roster" className="print-only">
+              <ArmyRosterPrintView
+                factionData={factionData}
+                armyListName={armyListName}
+                armyNotes={armyNotes}
+                totalPoints={totalPoints}
+                totalOrderDice={totalOrderDice}
+                platoons={platoons}
+                isPreview={false}
+              />
+            </div>
+          </div>
+        );
+      }
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+
+      // Installable app / offline support (requires HTTPS or localhost)
+      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+        window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+      }
+    </script>
+  </body>
+</html>

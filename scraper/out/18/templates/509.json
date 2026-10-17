@@ -1,0 +1,2099 @@
+{
+ "template": {
+  "id": 509,
+  "country": "Soviet Union",
+  "name": "*v3 rulebook - Soviet - Heavy Weapons Platoon",
+  "source": "Version 3 Rulebook"
+ },
+ "title": "*v3 rulebook - Soviet - Heavy Weapons Platoon",
+ "source": "Version 3 Rulebook",
+ "layout": [
+  [
+   {
+    "section": "Platoon Commander",
+    "required": true,
+    "units": [
+     "Platoon Commander"
+    ]
+   },
+   {
+    "section": "Heavy Weapons",
+    "required": true,
+    "units": [
+     "Mortar Team",
+     "Machine Gun Team"
+    ]
+   },
+   {
+    "section": "Heavy Weapons",
+    "required": true,
+    "units": [
+     "Mortar Team",
+     "Machine Gun Team"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Mortar",
+    "required": false,
+    "units": [
+     "Mortar Team"
+    ]
+   },
+   {
+    "section": "Mortar",
+    "required": false,
+    "units": [
+     "Mortar Team"
+    ]
+   },
+   {
+    "section": "Mortar",
+    "required": false,
+    "units": [
+     "Mortar Team"
+    ]
+   },
+   {
+    "section": "Machine Gun",
+    "required": false,
+    "units": [
+     "Machine Gun Team"
+    ]
+   },
+   {
+    "section": "Machine Gun",
+    "required": false,
+    "units": [
+     "Machine Gun Team"
+    ]
+   },
+   {
+    "section": "Machine Gun",
+    "required": false,
+    "units": [
+     "Machine Gun Team"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   },
+   {
+    "section": "Anti-tank",
+    "required": false,
+    "units": [
+     "Anti-tank Team",
+     "Dog Mines Anti-Tank Team"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "Half-Track Truck",
+     "Gaz 'Jeep'",
+     "T-20 Komsomolets",
+     "Truck",
+     "Light Truck",
+     "Civilian Car"
+    ]
+   }
+  ]
+ ],
+ "units": [
+  {
+   "section": "Platoon Commander",
+   "listName": "Platoon Commander",
+   "name": "Platoon Commander",
+   "source": "Version 3 Rulebook - page 253",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 21,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 30,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 39,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "1 officer and up to 2 further men",
+    "Weapons": "Pistol, submachine gun, rifle, or assault rifle as depicted on models"
+   },
+   "options": [
+    {
+     "id": 8,
+     "input": "checkbox",
+     "name": "Option8",
+     "group": "The officer may be accompanied by up to 2 men at a cost of:",
+     "text": "+7pts each (Inexperienced)",
+     "points": 7,
+     "per": "each",
+     "min": 1,
+     "max": 2,
+     "selectName": "OptionsDD8",
+     "disabled": false
+    },
+    {
+     "id": 9,
+     "input": "checkbox",
+     "name": "Option9",
+     "group": "The officer may be accompanied by up to 2 men at a cost of:",
+     "text": "+10pts each (Regular)",
+     "points": 10,
+     "per": "each",
+     "min": 1,
+     "max": 2,
+     "selectName": "OptionsDD9",
+     "disabled": false
+    },
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": "The officer may be accompanied by up to 2 men at a cost of:",
+     "text": "+13pts each (Veteran)",
+     "points": 13,
+     "per": "each",
+     "min": 1,
+     "max": 2,
+     "selectName": "OptionsDD10",
+     "disabled": false
+    },
+    {
+     "id": 27,
+     "input": "checkbox",
+     "name": "Option27",
+     "group": "If all compulsory units in the same platoon are equipped with same option:",
+     "text": "Unit may be given bicycles for +1pt per man.",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 28,
+     "input": "checkbox",
+     "name": "Option28",
+     "group": "If all compulsory units in the same platoon are equipped with same option:",
+     "text": "Unit may be given motorcycles for +5pts per man.",
+     "points": 5,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 29,
+     "input": "checkbox",
+     "name": "Option29",
+     "group": "If all compulsory units in the same platoon are equipped with same option:",
+     "text": "Unit may be given horses for +3pts per man.",
+     "points": 3,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "with Pistol",
+     "Range": "6\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "with Submachine gun",
+     "Range": "12\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "Assault"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry (equipped as modeled)",
+     "Range": "-",
+     "Shots": "-",
+     "Pen": "-",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Platoon Commander",
+     "Range": "-",
+     "Shots": "-",
+     "Pen": "-",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [
+    "Entire squad mounted on motorcycles — Motorbikes",
+    "Entire squad mounted upon bicycles — Bicycles",
+    "Entire squad mounted upon horses — Cavalry"
+   ],
+   "rules": [
+    {
+     "name": "Assault",
+     "ref": "v3 page 96",
+     "text": "This weapon suffers no penalty 'to hit' when moving and shooting. In addition, infantry models armed with an assault weapon count as having the Tough Fighters special rule (Tough Fighters: When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage)"
+    },
+    {
+     "name": "Bicycles",
+     "ref": "v3 page 119",
+     "text": "When moving on roads, they double their Run move to 24\" (cannot be used to Assault). The first time they receive any order other than Run, or if they receive a Pin marker, they dismount and abandon their bicycles for the rest of the game."
+    },
+    {
+     "name": "Cavalry",
+     "ref": "v3 page 119",
+     "text": "Can dismount and fight on foot as infantry, from which point none of these rules apply - need to replace mounted figures with non-mounted figures. When cavalry, moves 9\" at an Advance, 18\" at Run. Cannot enter buildings or board transport vehicles unless they have dismounted. Cannot gain advantages of Down, and their cover saves are always reduced by 1. Can escape as a recce vehicle (at normal speed, not double speed). Can dismount as part of Advance move - cannot remount. Can only fire pistol or carbine (treated as pistol) when mounted. While mounted, cavalry have Tough Fighters special rule (p122- When fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage). Can regroup up to 2D6\" after combat."
+    },
+    {
+     "name": "Motorbikes",
+     "ref": "v3 page 121",
+     "text": "Moves at 12\" at an Advance and 24\" at a Run with the same movement rules and restrictions as Wheeled vehicles, except they may make any number of turns as they move. Cannot enter builders or board transports. Do not benefit from any advantage from going/being Down. Can react by making and escape move in the same way as recce (at normal move, not double speed). Can dismount as part of any Advance move and fight as infantry, but cannot remount. Motorcycle riders cannot shoot while moving. Cannot assault and if assaulted can make an escape move as for other recce vehicles. If attacked at close quarters each man fights as infantry (including sidecar passengers if equipped). Regroup 2D6\" rather than D6\"."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Heavy Weapons",
+   "listName": "Mortar Team",
+   "name": "Mortar Team",
+   "source": "Version 3 Rulebook - page 258",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 21,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 30,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 39,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "2 men",
+    "Weapons": "1 light mortar",
+    "Special Rules": "Team weapon\nFixed (if medium or heavy mortar option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Upgrade light mortar to medium mortar for +15pts, gaining 1 extra man and the Fixed special rule",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Upgrade light mortar to heavy mortar for +30pts, gaining 2 extra men and the Fixed special rule",
+     "points": 30,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": null,
+     "text": "Medium and heavy mortars may add a spotter for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Heavy Mortar team",
+     "Range": "12\"-72\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Team (4 men), Fixed, Indirect fire, HE (3\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Light Mortar team",
+     "Range": "12-36\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Team (2 men), Indirect fire, HE (1\"), Cannot fire smoke"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Medium Mortar team",
+     "Range": "12\"-60\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Team (3 men), Fixed, Indirect fire, HE (2\")"
+    }
+   ],
+   "weaponNotes": [
+    "Spotter — Spotter"
+   ],
+   "rules": [
+    {
+     "name": "Fixed",
+     "ref": "v3 page 96",
+     "text": "When ordered to Fire, fixed weapons can only target an enemy unit that lies at least partially within their front arc (i.e. within an angle of 45 degrees to each side of their barrel). Targets outside of this arc cannot be shot at with a Fire order. When ordered to Advance, fixed weapons do not move from their position, but can instead be rotated on the spot to face any direction, and can then fire suffering the normal -1 to hit for 'fire on the move'. When ordered to Run, fixed weapons that are carried and crewed by infantry teams move the normal 12\" over open ground or 6\" over rough ground, obstacles, etc. Fixed weapon units can never assault other units. If assaulted by an enemy, the gun itself is ignored and the crew models are assaulted as normal. Exceptions for artillery fixed weapons are listed in the Artillery section on page 123 (Any artillery piece defined as light or medium can be moved by the crew with a Run order, as normal for fixed weapons - except that these units can only move 6\" rather than 12\" with a Run order. Heavy and super-heavy anti-tank guns and heavy howitzers, as well as any lighter gun whose crew is reduced to a single man, cannot be moved by their crew with a Run order (though they may be rotated by way of an Advance order, as normal for fixed weapons). They can only be moved by means of a tow. Page 125 note: 'platform-mounted', 'rotating platform' or 'turntable' guns can rotate for free (no -1 movement penalty)."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Indirect fire",
+     "ref": "v3 page 101",
+     "text": "- cannot hit targets within their minimum range, measured from the centre the weapon itself. Units hit by indirect file receive no cover saves of any kind. However, if the target unit is or goes Down when shot at with indirect fire, the number of hits suffered is still halved. When fired against vehicles, hits from indirect fire weapons always strike the top armour, counting the +1 penetration modifier to damage regardless of the actual position of the firer. If an open-topped armoured vehicle is hit by indirect fire add the +1 penetration modifier to the roll to damage, and also add +1 to the die roll on the Armoured Vehicle Damage Results Tables. Cannot fire indirect fire weapons from Ambush. Indirect fire weapons can fire smoke (page 128)."
+    },
+    {
+     "name": "Spotter",
+     "ref": "v3 page 102",
+     "text": "Cannot be placed within coherency of the weapon crew. Either the weapon crew or the spotter can be given an order - but not both. Spotters can never assault or fire any weapon against enemy units. Spotter without an order die next to it counts as Down. (Errata 6 Feb 2025: Spotters have the Infiltrators special rule - page 120. Spotter/observer can only spt for a single Indirect Fire weapon per game turn. If firing unit switches to a different spotter it resets ranging-in process.) Cannot spot for inexperienced indirect fire weapon. When associated weapons unit is destroyed, spotter is removed also. Spotters are always ignored for the purpose of victory conditions. If spotter destroyed, the weapons team or artillery unit is not affected (other than no spotter). If already ranged in when spotter destroyed, can continue firing at 2+."
+    },
+    {
+     "name": "Team (2 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Team (3 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Team (4 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Heavy Weapons",
+   "listName": "Machine Gun Team",
+   "name": "Machine Gun Team",
+   "source": "Version 3 Rulebook - page 257",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 35,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 50,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 65,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "3 men",
+    "Weapons": "1 medium machine gun",
+    "Special Rules": "Team weapon\nFixed\nFlak (if pintle-mounted)\nGun shield (if fitted)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "The machine gun may have a gun shield for +5pts",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "The machine gun may have a pintle-mount tripod for +5pts",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": null,
+     "text": "The machine gun may be upgraded to a heavy machine gun, and gain an additional crewman, for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Heavy Machine gun team",
+     "Range": "48\"",
+     "Shots": "6",
+     "Pen": "+1",
+     "Special": "Team (4 men), Fixed"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Medium Machine gun team",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "Team (3 men), Fixed"
+    }
+   ],
+   "weaponNotes": [
+    "Gun shield — Gun shield",
+    "Pintle-mount — Flak"
+   ],
+   "rules": [
+    {
+     "name": "Fixed",
+     "ref": "v3 page 96",
+     "text": "When ordered to Fire, fixed weapons can only target an enemy unit that lies at least partially within their front arc (i.e. within an angle of 45 degrees to each side of their barrel). Targets outside of this arc cannot be shot at with a Fire order. When ordered to Advance, fixed weapons do not move from their position, but can instead be rotated on the spot to face any direction, and can then fire suffering the normal -1 to hit for 'fire on the move'. When ordered to Run, fixed weapons that are carried and crewed by infantry teams move the normal 12\" over open ground or 6\" over rough ground, obstacles, etc. Fixed weapon units can never assault other units. If assaulted by an enemy, the gun itself is ignored and the crew models are assaulted as normal. Exceptions for artillery fixed weapons are listed in the Artillery section on page 123 (Any artillery piece defined as light or medium can be moved by the crew with a Run order, as normal for fixed weapons - except that these units can only move 6\" rather than 12\" with a Run order. Heavy and super-heavy anti-tank guns and heavy howitzers, as well as any lighter gun whose crew is reduced to a single man, cannot be moved by their crew with a Run order (though they may be rotated by way of an Advance order, as normal for fixed weapons). They can only be moved by means of a tow. Page 125 note: 'platform-mounted', 'rotating platform' or 'turntable' guns can rotate for free (no -1 movement penalty)."
+    },
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "Gun shield",
+     "ref": "v3 page 126",
+     "text": "The crew counts as in soft cover from small arms hits that come from models within the front arc of the gun. Note that hits from heavy weapons, close quarters attacks, and any attacks that ignore cover saves also ignore the Gun Shield rule."
+    },
+    {
+     "name": "Team (3 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Team (4 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Mortar",
+   "listName": "Mortar Team",
+   "name": "Mortar Team",
+   "source": "Version 3 Rulebook - page 258",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 21,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 30,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 39,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "2 men",
+    "Weapons": "1 light mortar",
+    "Special Rules": "Team weapon\nFixed (if medium or heavy mortar option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Upgrade light mortar to medium mortar for +15pts, gaining 1 extra man and the Fixed special rule",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Upgrade light mortar to heavy mortar for +30pts, gaining 2 extra men and the Fixed special rule",
+     "points": 30,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": null,
+     "text": "Medium and heavy mortars may add a spotter for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Heavy Mortar team",
+     "Range": "12\"-72\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Team (4 men), Fixed, Indirect fire, HE (3\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Light Mortar team",
+     "Range": "12-36\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Team (2 men), Indirect fire, HE (1\"), Cannot fire smoke"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Medium Mortar team",
+     "Range": "12\"-60\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Team (3 men), Fixed, Indirect fire, HE (2\")"
+    }
+   ],
+   "weaponNotes": [
+    "Spotter — Spotter"
+   ],
+   "rules": [
+    {
+     "name": "Fixed",
+     "ref": "v3 page 96",
+     "text": "When ordered to Fire, fixed weapons can only target an enemy unit that lies at least partially within their front arc (i.e. within an angle of 45 degrees to each side of their barrel). Targets outside of this arc cannot be shot at with a Fire order. When ordered to Advance, fixed weapons do not move from their position, but can instead be rotated on the spot to face any direction, and can then fire suffering the normal -1 to hit for 'fire on the move'. When ordered to Run, fixed weapons that are carried and crewed by infantry teams move the normal 12\" over open ground or 6\" over rough ground, obstacles, etc. Fixed weapon units can never assault other units. If assaulted by an enemy, the gun itself is ignored and the crew models are assaulted as normal. Exceptions for artillery fixed weapons are listed in the Artillery section on page 123 (Any artillery piece defined as light or medium can be moved by the crew with a Run order, as normal for fixed weapons - except that these units can only move 6\" rather than 12\" with a Run order. Heavy and super-heavy anti-tank guns and heavy howitzers, as well as any lighter gun whose crew is reduced to a single man, cannot be moved by their crew with a Run order (though they may be rotated by way of an Advance order, as normal for fixed weapons). They can only be moved by means of a tow. Page 125 note: 'platform-mounted', 'rotating platform' or 'turntable' guns can rotate for free (no -1 movement penalty)."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Indirect fire",
+     "ref": "v3 page 101",
+     "text": "- cannot hit targets within their minimum range, measured from the centre the weapon itself. Units hit by indirect file receive no cover saves of any kind. However, if the target unit is or goes Down when shot at with indirect fire, the number of hits suffered is still halved. When fired against vehicles, hits from indirect fire weapons always strike the top armour, counting the +1 penetration modifier to damage regardless of the actual position of the firer. If an open-topped armoured vehicle is hit by indirect fire add the +1 penetration modifier to the roll to damage, and also add +1 to the die roll on the Armoured Vehicle Damage Results Tables. Cannot fire indirect fire weapons from Ambush. Indirect fire weapons can fire smoke (page 128)."
+    },
+    {
+     "name": "Spotter",
+     "ref": "v3 page 102",
+     "text": "Cannot be placed within coherency of the weapon crew. Either the weapon crew or the spotter can be given an order - but not both. Spotters can never assault or fire any weapon against enemy units. Spotter without an order die next to it counts as Down. (Errata 6 Feb 2025: Spotters have the Infiltrators special rule - page 120. Spotter/observer can only spt for a single Indirect Fire weapon per game turn. If firing unit switches to a different spotter it resets ranging-in process.) Cannot spot for inexperienced indirect fire weapon. When associated weapons unit is destroyed, spotter is removed also. Spotters are always ignored for the purpose of victory conditions. If spotter destroyed, the weapons team or artillery unit is not affected (other than no spotter). If already ranged in when spotter destroyed, can continue firing at 2+."
+    },
+    {
+     "name": "Team (2 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Team (3 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Team (4 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Machine Gun",
+   "listName": "Machine Gun Team",
+   "name": "Machine Gun Team",
+   "source": "Version 3 Rulebook - page 257",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 35,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 50,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 65,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "3 men",
+    "Weapons": "1 medium machine gun",
+    "Special Rules": "Team weapon\nFixed\nFlak (if pintle-mounted)\nGun shield (if fitted)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "The machine gun may have a gun shield for +5pts",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "The machine gun may have a pintle-mount tripod for +5pts",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": null,
+     "text": "The machine gun may be upgraded to a heavy machine gun, and gain an additional crewman, for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Heavy Machine gun team",
+     "Range": "48\"",
+     "Shots": "6",
+     "Pen": "+1",
+     "Special": "Team (4 men), Fixed"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Medium Machine gun team",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "Team (3 men), Fixed"
+    }
+   ],
+   "weaponNotes": [
+    "Gun shield — Gun shield",
+    "Pintle-mount — Flak"
+   ],
+   "rules": [
+    {
+     "name": "Fixed",
+     "ref": "v3 page 96",
+     "text": "When ordered to Fire, fixed weapons can only target an enemy unit that lies at least partially within their front arc (i.e. within an angle of 45 degrees to each side of their barrel). Targets outside of this arc cannot be shot at with a Fire order. When ordered to Advance, fixed weapons do not move from their position, but can instead be rotated on the spot to face any direction, and can then fire suffering the normal -1 to hit for 'fire on the move'. When ordered to Run, fixed weapons that are carried and crewed by infantry teams move the normal 12\" over open ground or 6\" over rough ground, obstacles, etc. Fixed weapon units can never assault other units. If assaulted by an enemy, the gun itself is ignored and the crew models are assaulted as normal. Exceptions for artillery fixed weapons are listed in the Artillery section on page 123 (Any artillery piece defined as light or medium can be moved by the crew with a Run order, as normal for fixed weapons - except that these units can only move 6\" rather than 12\" with a Run order. Heavy and super-heavy anti-tank guns and heavy howitzers, as well as any lighter gun whose crew is reduced to a single man, cannot be moved by their crew with a Run order (though they may be rotated by way of an Advance order, as normal for fixed weapons). They can only be moved by means of a tow. Page 125 note: 'platform-mounted', 'rotating platform' or 'turntable' guns can rotate for free (no -1 movement penalty)."
+    },
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "Gun shield",
+     "ref": "v3 page 126",
+     "text": "The crew counts as in soft cover from small arms hits that come from models within the front arc of the gun. Note that hits from heavy weapons, close quarters attacks, and any attacks that ignore cover saves also ignore the Gun Shield rule."
+    },
+    {
+     "name": "Team (3 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Team (4 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Anti-tank",
+   "listName": "Anti-tank Team",
+   "name": "Anti-tank Team",
+   "source": "Version 3 Rulebook - page 257",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 18,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 25,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 33,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "2 men",
+    "Weapons": "1 anti-tank rifle",
+    "Special Rules": "Extra selection (AT)\nTeam weapon\nFixed (if Ampulomet option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "The anti-tank rifle may be upgraded to an Ampulomet Molotov-launcher, and gain an additional crewman, for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Ampulomet",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Team (3 men), Fixed, HE (2\"), Ampulomet"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Anti-tank rifle team",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+2",
+     "Special": "Team (2 men)"
+    }
+   ],
+   "weaponNotes": [
+    "Extra selection (AT) — Extra selection (AT)"
+   ],
+   "rules": [
+    {
+     "name": "Ampulomet",
+     "ref": "v3 page 257",
+     "text": "If an Ampulomet hits an armoured vehicle and fails to penetrate its armour, roll a die. On the score of a 6 the vehicle is 'on fire' as described for a damage result of 3 on the Damage Results on Armoured Vehicles Tables."
+    },
+    {
+     "name": "Extra selection (AT)",
+     "ref": "v3 page 257",
+     "text": "You may take up to 3 anti-tank teams (any mix of anti-tank rifle teams, Ampulomet anti-tank teams, and dog-mines anti-tank teams) as 1 anti-tank team selection."
+    },
+    {
+     "name": "Fixed",
+     "ref": "v3 page 96",
+     "text": "When ordered to Fire, fixed weapons can only target an enemy unit that lies at least partially within their front arc (i.e. within an angle of 45 degrees to each side of their barrel). Targets outside of this arc cannot be shot at with a Fire order. When ordered to Advance, fixed weapons do not move from their position, but can instead be rotated on the spot to face any direction, and can then fire suffering the normal -1 to hit for 'fire on the move'. When ordered to Run, fixed weapons that are carried and crewed by infantry teams move the normal 12\" over open ground or 6\" over rough ground, obstacles, etc. Fixed weapon units can never assault other units. If assaulted by an enemy, the gun itself is ignored and the crew models are assaulted as normal. Exceptions for artillery fixed weapons are listed in the Artillery section on page 123 (Any artillery piece defined as light or medium can be moved by the crew with a Run order, as normal for fixed weapons - except that these units can only move 6\" rather than 12\" with a Run order. Heavy and super-heavy anti-tank guns and heavy howitzers, as well as any lighter gun whose crew is reduced to a single man, cannot be moved by their crew with a Run order (though they may be rotated by way of an Advance order, as normal for fixed weapons). They can only be moved by means of a tow. Page 125 note: 'platform-mounted', 'rotating platform' or 'turntable' guns can rotate for free (no -1 movement penalty)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Team (2 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Team (3 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Anti-tank",
+   "listName": "Dog Mines Anti-Tank Team",
+   "name": "Dog Mines Anti-Tank Team",
+   "source": "Version 3 Rulebook - page 257",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 26,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 36,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 46,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "2 handlers",
+    "Weapons": "Each handler has a rifle, anti-tank grenades, and a dog mine",
+    "Special Rules": "Tank hunters\nExtra selection (AT)\nDog Mines"
+   },
+   "options": [
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": "Add up to 2 additional handlers (equipped as above) at:",
+     "text": "+13pts each (Inexperienced)",
+     "points": 13,
+     "per": "each",
+     "min": 1,
+     "max": 2,
+     "selectName": "OptionsDD12",
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "checkbox",
+     "name": "Option13",
+     "group": "Add up to 2 additional handlers (equipped as above) at:",
+     "text": "+18pts each (Regular)",
+     "points": 18,
+     "per": "each",
+     "min": 1,
+     "max": 2,
+     "selectName": "OptionsDD13",
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "checkbox",
+     "name": "Option14",
+     "group": "Add up to 2 additional handlers (equipped as above) at:",
+     "text": "+23pts each (Veteran)",
+     "points": 23,
+     "per": "each",
+     "min": 1,
+     "max": 2,
+     "selectName": "OptionsDD14",
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "checkbox",
+     "name": "Option15",
+     "group": null,
+     "text": "Any handler may have a submachine gun instead of a rifle for +4pts each",
+     "points": 4,
+     "per": "each",
+     "min": 1,
+     "max": 4,
+     "selectName": "OptionsDD15",
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Dog Handler with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Dog Handler with Submachine Gun",
+     "Range": "12\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "Assault"
+    }
+   ],
+   "weaponNotes": [
+    "Entire squad equipped with anti-tank grenades — Tank hunters",
+    "Entire squad equipped with dog mines — Dog mines"
+   ],
+   "rules": [
+    {
+     "name": "Assault",
+     "ref": "v3 page 96",
+     "text": "This weapon suffers no penalty 'to hit' when moving and shooting. In addition, infantry models armed with an assault weapon count as having the Tough Fighters special rule (Tough Fighters: When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage)"
+    },
+    {
+     "name": "Dog mines",
+     "ref": "v3 page 257",
+     "text": "A dog mine is a one-shot weapon with a range of 18\". Dog mines may only target stationary vehicle (i.e. any vehicle that is not sporting an order dice showing a Run or Advance order). Dog mines are fired as normal, except that instead of rolling to hit, roll on the following chart. Note that if a recce vehicle reacts to the dog mine attack by moving, the dog mine automatically scores a 2-3: 1: The dog, due to familiarity with Soviet vehicles, hits the closest friendly stationary vehicle within range instead of the target (no line of sight is needed in this case). Resolve the hit as described for 4-6 below. If no target presents itself, see 2-3 below. 2-3: The dog is either gunned down or bolts from the noise of battle and deserts. 4-6: The dog scampers to the target, crawls underneath and explodes. The vehicle suffers a hit with a Pen of +5 (no Pen modifiers apply)."
+    },
+    {
+     "name": "Tank hunters",
+     "ref": "v3 page 122",
+     "text": "If a tank hunter unit wins an assault and scores damage against an armoured vehicle, the effect is resolved on the Damage Result table as for a normal anti-tank penetration rather than as for superficial damage. In addition, these troops don't suffer from the Tank Fear rule when assaulting fully-enclosed armoured vehicles."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Transports",
+   "listName": "Half-Track Truck",
+   "name": "Half-Track Truck",
+   "source": "Version 3 Rulebook - page 266",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 22,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 27,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 32,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 12 men",
+    "Tow": "Light Howitzer, light or medium anti-tank gun, light or heavy anti-aircraft gun"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a forward-facing pintle-mounted MMG covering the front arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Half-track truck",
+     "Weapons": "Half-track truck",
+     "Range": "Half-track",
+     "Shots": "12",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light howitzer; light or medium anti-tank gun; light or medium anti-aircraft gun",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Gaz 'Jeep'",
+   "name": "Gaz 'Jeep'",
+   "source": "Version 3 Rulebook - page 266",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 14,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 18,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 22,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 3 men",
+    "Tow": "Light anti-tank gun, light anti-aircraft gun"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Gaz Jeep",
+     "Weapons": "Gaz Jeep",
+     "Range": "Wheeled",
+     "Shots": "3",
+     "Pen": "6+",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "T-20 Komsomolets",
+   "name": "T-20 Komsomolets",
+   "source": "Version 3 Rulebook - page 266",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 37,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 46,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 55,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing LMG",
+    "Damage Value": "7+ (armoured carrier)",
+    "Transport": "Up to 6 men",
+    "Tow": "Any anti-tank gun, any anti-aircraft gun, light or medium howitzer",
+    "Special Rules": "Open-topped"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "T-20 Komsomolets",
+     "Weapons": "T-20 Komsomolets",
+     "Range": "Tracked",
+     "Shots": "6",
+     "Pen": "7+",
+     "Special": "Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Any anti-tank gun; any anti-aircraft gun; light or medium howitzer",
+     "Weapons": "Forward facing LMG",
+     "Range": "36\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Truck",
+   "name": "Truck",
+   "source": "Version 3 Rulebook - page 279",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 22,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 27,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 32,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 12 men",
+    "Tow": "Light howitzer, light or medium anti-tank gun, light anti-aircraft gun"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a pintle-mounted MMG covering the forward arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Truck",
+     "Weapons": "Truck",
+     "Range": "Wheeled",
+     "Shots": "12",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light howitzer; light or medium anti-tank gun, light anti-aircraft gun",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Light Truck",
+   "name": "Light Truck",
+   "source": "Version 3 Rulebook - page 280",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 18,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 23,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 28,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 8 men",
+    "Tow": "Light howitzer, light or medium anti-tank gun, light anti-aircraft gun"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a pintle-mounted MMG covering the forward arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Light Truck",
+     "Weapons": "Light Truck",
+     "Range": "Wheeled",
+     "Shots": "8",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light howitzer; light or medium anti-tank gun, light anti-aircraft gun",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Civilian Car",
+   "name": "Civilian Car",
+   "source": "Version 3 Rulebook - page 280",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 14,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 18,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 22,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 3 men"
+   },
+   "options": [],
+   "period": null,
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/Civilian-car.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Civilian Car",
+     "Weapons": "Civilian Car",
+     "Range": "Wheeled",
+     "Shots": "3",
+     "Pen": "6+",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "The Great Patriotic War",
+     "ref": null,
+     "text": "Whenever a unit of infantry or artillery models fails a morale check and would otherwise be destroyed as a consequence, take the test again and apply this second result. This re-roll applies to all infantry and artillery units and not to vehicles."
+    },
+    {
+     "name": "For the Motherland!",
+     "ref": null,
+     "text": "Every Inexperienced unit that has one or more pin markers can make a test to lose one pin marker if there are any enemy within 12\" immediately before an order is given to it. Roll a die: on a roll of 4, 5 or 6 the test is passed and the unit loses one pin marker; on a 1, 2 or 3 the test is failed and the unit retains the pin markers it has. Once this has been done, continue to test to see if the unit obeys its order in the usual way, even if they have lost their last pin marker."
+    },
+    {
+     "name": "Not One Step Back!",
+     "ref": null,
+     "text": "Soviet armies may include a single commissar for each rifle platoon. Commissars are political officers and do not confer a morale bonus to nearby troops. When a friendly infantry unit fails an order test within 6\" of a commissar, remove one model from the unit and re-roll the dice. Note that there is no choice in the matter. The second result stands as normal - the commissar may only make a single re-roll for each unit affected. This rule does not apply to units other than infantry, and does not apply to infantry units already reduced to one or two models, or consisting of only one or two models to start with."
+    },
+    {
+     "name": "Massed Batteries",
+     "ref": null,
+     "text": "When rolling to determine the 'Fire for effect!' radius (D6+6\") from the aiming point of an artillery barrage, instead of rolling one die roll two dice and take the highest score."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  }
+ ]
+}

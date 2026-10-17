@@ -1,0 +1,461 @@
+{
+ "country": {
+  "id": 18,
+  "name": "Soviet Union",
+  "selected": true
+ },
+ "templates": [
+  {
+   "id": 662,
+   "country": "Soviet Union",
+   "name": "** v3 Armies of the Soviet Union - Rifle (All)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 663,
+   "country": "Soviet Union",
+   "name": "** v3 Armies of the Soviet Union - Rifle (EW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 665,
+   "country": "Soviet Union",
+   "name": "** v3 Armies of the Soviet Union - Rifle (LW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 664,
+   "country": "Soviet Union",
+   "name": "** v3 Armies of the Soviet Union - Rifle (MW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 682,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Armoured (All)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 683,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Armoured (EW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 685,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Armoured (LW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 684,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Armoured (MW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 678,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Artillery (All)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 679,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Artillery (EW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 681,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Artillery (LW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 680,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Artillery (MW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 666,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Engineer (All)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 667,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Engineer (EW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 669,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Engineer (LW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 668,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Engineer (MW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 674,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Hvy Weapon(All)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 675,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Hvy Weapon(EW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 677,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Hvy Weapon(LW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 676,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Hvy Weapon(MW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 670,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Recce (All)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 671,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Recce (EW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 673,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Recce (LW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 672,
+   "country": "Soviet Union",
+   "name": "*v3 Armies of the Soviet Union - Recce (MW)",
+   "source": "Armies of the Soviet Union (v3)"
+  },
+  {
+   "id": 512,
+   "country": "Soviet Union",
+   "name": "*v3 rulebook - Soviet - Armoured Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 511,
+   "country": "Soviet Union",
+   "name": "*v3 rulebook - Soviet - Artillery Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 510,
+   "country": "Soviet Union",
+   "name": "*v3 rulebook - Soviet - Engineer Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 509,
+   "country": "Soviet Union",
+   "name": "*v3 rulebook - Soviet - Heavy Weapons Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 513,
+   "country": "Soviet Union",
+   "name": "*v3 rulebook - Soviet - Recce Infantry Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 508,
+   "country": "Soviet Union",
+   "name": "*v3 rulebook - Soviet - Rifle Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 37,
+   "country": "Soviet Union",
+   "name": "1941 July-September, Battle of Kiev Hitler's Greatest Victory",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 36,
+   "country": "Soviet Union",
+   "name": "1941 June, Barbarossa! Attack on the Fortified Regions",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 40,
+   "country": "Soviet Union",
+   "name": "1941 October-December, Operation Typhoon Defending the Road to Moscow",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 38,
+   "country": "Soviet Union",
+   "name": "1941 September-October, Zhukov Takes Command Leningrad Approaches",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 41,
+   "country": "Soviet Union",
+   "name": "1941-1942 December-January, Blitzfreeze The Fascists Driven from Moscow",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 39,
+   "country": "Soviet Union",
+   "name": "1941-1942 November-July, Seige of Sevastopol The Struggle for the Crimea",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 322,
+   "country": "Soviet Union",
+   "name": "1942 Anti-tank Artillery Battery December 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 45,
+   "country": "Soviet Union",
+   "name": "1942 August-November, Battle of Stalingrad Street-fighting Academy",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 42,
+   "country": "Soviet Union",
+   "name": "1942 January-April, Rzhev-Vyazma Overplaying a Good Hand",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 44,
+   "country": "Soviet Union",
+   "name": "1942 July, Battle of Voronezhv Panzers Back on the Offensive",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 43,
+   "country": "Soviet Union",
+   "name": "1942 May, Second Battle of Kharkov A Noose Already Prepared",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 319,
+   "country": "Soviet Union",
+   "name": "1942 Soviet Cavalry Troop November 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 46,
+   "country": "Soviet Union",
+   "name": "1942-1943 November-February, Operation Uranus Death on the Volga",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 47,
+   "country": "Soviet Union",
+   "name": "1943 February-March, Third Battle of Kharkov A Fatal Attraction",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 48,
+   "country": "Soviet Union",
+   "name": "1943 July-August, Battle of Kursk Defence in Depth",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 49,
+   "country": "Soviet Union",
+   "name": "1944 January, Leningrad-Novgorod Offensive The End of 900 Days of Terror",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 50,
+   "country": "Soviet Union",
+   "name": "1944 June-August, Operation Bagration The Destruction of Army Group Centre",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 52,
+   "country": "Soviet Union",
+   "name": "1945 April, Seelow Heights The Gates of Berlin",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 53,
+   "country": "Soviet Union",
+   "name": "1945 April-May, Berlin Death of the Third Reich",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 51,
+   "country": "Soviet Union",
+   "name": "1945 January-February, Vistula-Oder Offensive Into the Reich",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 323,
+   "country": "Soviet Union",
+   "name": "235th Flame Tank Brigade Armoured Platoon December 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 194,
+   "country": "Soviet Union",
+   "name": "3rd Guards Tank Corps Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 195,
+   "country": "Soviet Union",
+   "name": "53rd Guards Tank Brigade Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 315,
+   "country": "Soviet Union",
+   "name": "Don-Volga August 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 290,
+   "country": "Soviet Union",
+   "name": "Forward Detachment Reconnaissance Party",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 289,
+   "country": "Soviet Union",
+   "name": "Guards Mechanised Brigade Tank Platoon",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 196,
+   "country": "Soviet Union",
+   "name": "NKVD Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 318,
+   "country": "Soviet Union",
+   "name": "No Land Beyond the Volga Sept-Nov 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 317,
+   "country": "Soviet Union",
+   "name": "Not One Step Back! September 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 321,
+   "country": "Soviet Union",
+   "name": "Operation Uranus Forward Detachment November 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 320,
+   "country": "Soviet Union",
+   "name": "Operation Uranus Tank Platoon Nov-Dec 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 148,
+   "country": "Soviet Union",
+   "name": "Red Army Winter War Forces",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 291,
+   "country": "Soviet Union",
+   "name": "Soviet Anti-tank Strongpoint",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 143,
+   "country": "Soviet Union",
+   "name": "Soviet Army, Manchuria 1945 (Empire in Flames)",
+   "source": "Empires in Flames"
+  },
+  {
+   "id": 70,
+   "country": "Soviet Union",
+   "name": "Soviet Reinforced Platoon",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 156,
+   "country": "Soviet Union",
+   "name": "Soviet rule book units only",
+   "source": "v2 Rulebook"
+  },
+  {
+   "id": 123,
+   "country": "Soviet Union",
+   "name": "Soviet Tank Platoon",
+   "source": "Tank Wars"
+  },
+  {
+   "id": 316,
+   "country": "Soviet Union",
+   "name": "Tractor Factory August 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 174,
+   "country": "Soviet Union",
+   "name": "Trans-Baikal Military District Reinforced Platoon Ostfront book",
+   "source": "Armies of the Soviet Union"
+  },
+  {
+   "id": 288,
+   "country": "Soviet Union",
+   "name": "Urban Assault Group",
+   "source": "Fortress Budapest"
+  }
+ ],
+ "selected": [
+  662,
+  663,
+  665,
+  664,
+  682,
+  683,
+  685,
+  684,
+  678,
+  679,
+  681,
+  680,
+  666,
+  667,
+  669,
+  668,
+  674,
+  675,
+  677,
+  676,
+  670,
+  671,
+  673,
+  672,
+  512,
+  511,
+  510,
+  509,
+  513,
+  508
+ ]
+}

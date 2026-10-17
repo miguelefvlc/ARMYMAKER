@@ -1,0 +1,5 @@
+# Credenciales de EasyArmy (NO compartir este archivo)
+.env
+.cookies.json
+cache/
+debug/
