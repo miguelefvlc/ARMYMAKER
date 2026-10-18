@@ -4,30 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>LIST MAKER — Army List Builder</title>
-    <!-- Installable app (PWA) -->
-    <link rel="manifest" href="./manifest.webmanifest" />
-    <meta name="theme-color" content="#161B15" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="LIST MAKER" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512.png" />
     <script>
-      window.__deferredPwaPrompt = null;
-      window.addEventListener('beforeinstallprompt', function (e) {
-        e.preventDefault();
-        window.__deferredPwaPrompt = e;
-        window.dispatchEvent(new Event('pwa-install-available'));
-      });
-      window.addEventListener('appinstalled', function () {
-        window.__deferredPwaPrompt = null;
-        window.dispatchEvent(new Event('pwa-install-available'));
-      });
-      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
-        navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function () {});
+      // Clean up any previously registered service workers
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (registrations) {
+          for (var i = 0; i < registrations.length; i++) {
+            registrations[i].unregister();
+          }
+        }).catch(function () {});
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3152,24 +3136,6 @@
         const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
         const [currentListId, setCurrentListId] = useState(draft?.currentListId || null);
         const [isSaving, setIsSaving] = useState(false);
-        const [pwaPrompt, setPwaPrompt] = useState(() => window.__deferredPwaPrompt || null);
-
-        useEffect(() => {
-          const syncPwa = () => setPwaPrompt(window.__deferredPwaPrompt || null);
-          window.addEventListener('pwa-install-available', syncPwa);
-          return () => window.removeEventListener('pwa-install-available', syncPwa);
-        }, []);
-
-        const handleInstallPwa = async () => {
-          const promptEvent = window.__deferredPwaPrompt || pwaPrompt;
-          if (!promptEvent) return;
-          promptEvent.prompt();
-          try {
-            await promptEvent.userChoice;
-          } catch {}
-          window.__deferredPwaPrompt = null;
-          setPwaPrompt(null);
-        };
 
         const showToast = (message, type = "info") => {
           setToast({ message, type });
@@ -3490,17 +3456,6 @@
 
                 {/* Right: Actions & Account */}
                 <div className="flex items-center justify-end gap-1 sm:gap-1.5 shrink-0">
-                  {pwaPrompt && (
-                    <button
-                      type="button"
-                      onClick={handleInstallPwa}
-                      className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-[#3D4B35] hover:bg-[#4A5B3E] border border-amber-400/50 text-amber-300 text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                      title="Install App (Standalone Mode without browser bar)"
-                    >
-                      <DownloadIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300" />
-                      <span className="hidden sm:inline">Install App</span>
-                    </button>
-                  )}
                   <button
                     type="button"
                     onClick={handleNewList}
