@@ -2017,7 +2017,7 @@
                     setIsOpen(!isOpen);
                   }
                 }}
-                className={`px-2.5 py-1.5 flex items-center justify-between gap-2 cursor-pointer text-xs font-medium tracking-wide transition-colors ${
+                className={`px-2 py-1 flex items-center justify-between gap-1.5 cursor-pointer text-xs font-medium tracking-wide transition-colors ${
                   isMandatory
                     ? 'bg-[#733028] hover:bg-[#85382F] text-[#F7F5EE] shadow-sm'
                     : 'bg-[#3D4B35] hover:bg-[#4A5B3E] text-[#F7F5EE]'
@@ -2029,48 +2029,38 @@
                       slot={slot}
                       unitName={value.name}
                       platoonTypeId={platoonTypeId}
-                      className="w-6 h-[18px] text-amber-300 shrink-0"
+                      className="w-5 h-4 text-amber-300 shrink-0"
                     />
                   )}
-                  <span className="truncate font-bold text-[11px] uppercase tracking-wider">{slot.label}</span>
+                  <span className="truncate font-bold text-[10.5px] sm:text-[11px] uppercase tracking-wider">{slot.label}</span>
                 </div>
                 {!isFilled && (
-                  <span className="font-mono font-bold text-[11px] bg-black/25 hover:bg-black/40 px-1 py-0.5 rounded shrink-0 transition-colors text-amber-300">
+                  <span className="font-mono font-bold text-[10px] bg-black/25 hover:bg-black/40 px-1 py-0.2 rounded shrink-0 transition-colors text-amber-300 leading-tight">
                     {isOpen ? '[-]' : '[+]'}
                   </span>
                 )}
               </div>
-              {/* Slot Body */}
-              <div
-                onClick={() => {
-                  if (isFilled) {
-                    onEdit(slot.id, value, slot.label);
-                  } else {
-                    setIsOpen(!isOpen);
-                  }
-                }}
-                className={`px-2.5 py-1.5 min-h-[36px] flex items-center justify-between cursor-pointer transition-colors text-xs ${
-                  isFilled
-                    ? 'bg-zinc-850 hover:bg-zinc-800'
-                    : 'bg-zinc-950/80 hover:bg-zinc-900/90'
-                }`}
-              >
-                {isFilled ? (
-                  <div className="flex items-center justify-between w-full gap-2">
+              {/* Slot Body (Only rendered when filled) */}
+              {isFilled && (
+                <div
+                  onClick={() => onEdit(slot.id, value, slot.label)}
+                  className="px-2 py-1 flex items-center justify-between cursor-pointer transition-colors text-xs bg-zinc-850 hover:bg-zinc-800"
+                >
+                  <div className="flex items-center justify-between w-full gap-1.5">
                     <div className="min-w-0 flex-1">
-                      <div className="font-semibold text-amber-300 truncate font-mono text-[11px]">
+                      <div className="font-semibold text-amber-300 truncate font-mono text-[10.5px] sm:text-[11px] leading-tight">
                         {value.name}
                       </div>
-                      <div className="text-[10px] text-zinc-400 font-mono flex items-center gap-1.5">
-                        <span className="text-zinc-300">{EXP_LABELS[value.config?.experience] || value.config?.experience || "Regular"}</span>
+                      <div className="text-[9.5px] sm:text-[10px] text-zinc-400 font-mono flex items-center gap-1 leading-tight mt-0.5">
+                        <span className="text-zinc-300 truncate">{EXP_LABELS[value.config?.experience] || value.config?.experience || "Regular"}</span>
                         <span className="text-zinc-600">•</span>
                         {summary?.headCountText && (
                           <>
-                            <span className="text-zinc-300">{summary.headCountText}</span>
+                            <span className="text-zinc-300 shrink-0">{summary.headCountText}</span>
                             <span className="text-zinc-600">•</span>
                           </>
                         )}
-                        <span className="text-amber-300 font-bold">{value.points || 0} pts</span>
+                        <span className="text-amber-300 font-bold shrink-0">{value.points || 0} pts</span>
                       </div>
                     </div>
 
@@ -2087,14 +2077,12 @@
                       </button>
                     </div>
                   </div>
-                ) : (
-                  <div className="w-full h-3" />
-                )}
-              </div>
+                </div>
+              )}
             </div>
             {/* DROPDOWN UNIT SELECTOR */}
             {isOpen && (
-              <div className="absolute left-0 right-0 top-full mt-1 z-50 min-w-[280px] sm:min-w-[330px] bg-zinc-900 border border-zinc-700 rounded-lg shadow-2xl overflow-hidden backdrop-blur-md animate-in fade-in duration-100">
+              <div className="absolute left-0 right-0 top-full mt-1 z-50 min-w-[230px] sm:min-w-[300px] max-w-[calc(100vw-1.5rem)] bg-zinc-900 border border-zinc-700 rounded-lg shadow-2xl overflow-hidden backdrop-blur-md animate-in fade-in duration-100">
                 <div className="px-3 py-2 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between text-[11px] font-mono text-zinc-400">
                   <span className="uppercase tracking-wider font-bold text-zinc-200">{slot.label} ({availableUnits.length})</span>
                   <button
@@ -2788,20 +2776,10 @@
         return (
           <div className={`w-full max-w-4xl mx-auto ${isPreview ? '' : 'bg-white text-zinc-900 font-sans'}`}>
             {/* ROSTER HEADER */}
-            <div className="border-b-2 border-zinc-900 pb-3 mb-4 grid grid-cols-3 items-center gap-3">
-              {/* Left: Faction & List Name */}
-              <div className="min-w-0">
-                <div className="text-[10.5px] font-mono font-bold uppercase tracking-wider text-zinc-600 truncate">
-                  {factionData?.faction || 'Soviet Union'} • {factionData?.book || 'Bolt Action v3'}
-                </div>
-                <h1 className="text-lg sm:text-xl font-black font-tactical tracking-wider text-zinc-950 uppercase truncate mt-0.5">
-                  {armyListName || `${factionData?.faction || 'Bolt Action'} Force`}
-                </h1>
-              </div>
-
-              {/* Center: Helmet Logo + LIST MAKER below */}
-              <div className="flex flex-col items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" className="w-9 h-9 rounded-lg shadow-xs">
+            <div className="border-b-2 border-zinc-900 pb-3 mb-3 space-y-2">
+              {/* Top Centered Logo + LIST MAKER */}
+              <div className="flex flex-col items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" className="w-11 h-11 rounded-xl shadow-xs">
                   <rect width="64" height="64" rx="14" fill="#161B15"/>
                   <circle cx="32" cy="32" r="27" fill="#283224" stroke="#7A7F52" strokeWidth="2"/>
                   <path d="M21 38 L26 48 H37 L42 40" stroke="#C4A238" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -2816,29 +2794,40 @@
                 </div>
               </div>
 
-              {/* Right: Totals */}
-              <div className="flex flex-wrap items-center justify-end gap-1.5 text-xs font-mono font-bold">
-                <div className="bg-zinc-950 text-white px-2.5 py-1.5 rounded shadow-sm">
-                  TOTAL: <span className="text-amber-400 font-black">{totalPoints} PTS</span>
+              {/* Bottom Header Row: Faction & List Name (Left) + Totals (Right) */}
+              <div className="flex flex-wrap items-end justify-between gap-2">
+                <div className="min-w-0">
+                  <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-600 truncate">
+                    {factionData?.faction || 'Soviet Union'} • {factionData?.book || 'Bolt Action v3'}
+                  </div>
+                  <h1 className="text-base sm:text-xl font-black font-tactical tracking-wider text-zinc-950 uppercase truncate">
+                    {armyListName || `${factionData?.faction || 'Bolt Action'} Force`}
+                  </h1>
                 </div>
-                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2 py-1.5 rounded">
-                  Order Dice: <span className="text-zinc-950 font-black">{totalOrderDice}</span>
-                </div>
-                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2 py-1.5 rounded">
-                  Platoons: <span className="text-zinc-950 font-black">{platoons.length}</span>
+
+                <div className="flex flex-wrap items-center gap-1.5 text-[10.5px] sm:text-xs font-mono font-bold">
+                  <div className="bg-zinc-950 text-white px-2 py-1 rounded shadow-sm">
+                    TOTAL: <span className="text-amber-400 font-black">{totalPoints} PTS</span>
+                  </div>
+                  <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2 py-1 rounded">
+                    Dice: <span className="text-zinc-950 font-black">{totalOrderDice}</span>
+                  </div>
+                  <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2 py-1 rounded">
+                    Platoons: <span className="text-zinc-950 font-black">{platoons.length}</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             {armyNotes && armyNotes.trim() && (
-              <div className="mb-4 p-2.5 bg-zinc-50 border border-zinc-200 rounded text-xs font-mono text-zinc-700">
+              <div className="mb-3 p-2.5 bg-zinc-50 border border-zinc-200 rounded text-xs font-mono text-zinc-700">
                 <span className="font-bold text-zinc-900 uppercase text-[10px] block mb-0.5">Force Notes:</span>
                 <p className="whitespace-pre-line leading-relaxed text-justify" style={{ textAlign: 'justify' }}>{armyNotes}</p>
               </div>
             )}
 
             {/* PLATOONS */}
-            <div className="space-y-5">
+            <div className="space-y-4">
               {platoons.map((p) => {
                 const pType = platoonTypes.find(t => t.id === p.typeId) || platoonTypes[0];
                 const activeUnits = Object.entries(p.slots).filter(([_, u]) => u && u.name);
@@ -2848,20 +2837,20 @@
                 const platoonDice = activeUnits.length;
                 return (
                   <div key={p.id} className="platoon-print-block">
-                    <div className="bg-zinc-900 text-white px-3 py-1.5 rounded-t flex items-center justify-between text-xs font-mono font-bold tracking-wider uppercase mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className="text-amber-400">PLATOON #{p.id}</span>
-                        <span className="text-zinc-200 font-tactical font-black text-sm tracking-wider">{pType?.title}</span>
+                    <div className="bg-zinc-900 text-white px-2.5 py-1.5 rounded-t flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs font-mono font-bold tracking-wider uppercase mb-2">
+                      <div className="flex items-center gap-1.5 min-w-0">
+                        <span className="text-amber-400 shrink-0">PLATOON #{p.id}</span>
+                        <span className="text-zinc-200 font-tactical font-black text-xs sm:text-sm tracking-wider truncate">{pType?.title}</span>
                         {p.period && p.period !== 'All' && (
-                          <span className="text-[10px] px-1.5 py-0.2 bg-zinc-800 rounded text-amber-300">
+                          <span className="text-[9.5px] px-1.5 py-0.2 bg-zinc-800 rounded text-amber-300 shrink-0">
                             {p.period}
                           </span>
                         )}
                       </div>
-                      <div className="flex items-center gap-3 text-[11px] font-normal text-zinc-300">
+                      <div className="flex items-center gap-2 text-[10.5px] sm:text-[11px] font-normal text-zinc-300 shrink-0">
                         <span>Points: <strong className="text-white font-bold">{platoonPts} pts</strong></span>
                         <span>•</span>
-                        <span>Order Dice: <strong className="text-amber-400 font-bold">{platoonDice}</strong></span>
+                        <span>Dice: <strong className="text-amber-400 font-bold">{platoonDice}</strong></span>
                       </div>
                     </div>
 
@@ -3052,14 +3041,14 @@
                         className="w-full bg-zinc-900 border border-zinc-750 focus:border-amber-400 rounded-lg px-3 py-1.5 text-xs text-white font-mono placeholder-zinc-600 outline-none transition-colors"
                       />
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-mono shrink-0 pt-3 sm:pt-0">
-                      <div className="bg-zinc-900 border border-zinc-750 px-3 py-1.5 rounded-lg text-zinc-200">
+                    <div className="flex flex-wrap items-center gap-1.5 text-[11px] sm:text-xs font-mono shrink-0">
+                      <div className="bg-zinc-900 border border-zinc-750 px-2.5 py-1 rounded-lg text-zinc-200">
                         Points: <strong className="text-amber-400">{totalPoints}</strong>
                       </div>
-                      <div className="bg-zinc-900 border border-zinc-750 px-3 py-1.5 rounded-lg text-zinc-200">
-                        Order Dice: <strong className="text-white">{totalOrderDice}</strong>
+                      <div className="bg-zinc-900 border border-zinc-750 px-2.5 py-1 rounded-lg text-zinc-200">
+                        Dice: <strong className="text-white">{totalOrderDice}</strong>
                       </div>
-                      <div className="bg-zinc-900 border border-zinc-750 px-3 py-1.5 rounded-lg text-zinc-200">
+                      <div className="bg-zinc-900 border border-zinc-750 px-2.5 py-1 rounded-lg text-zinc-200">
                         Platoons: <strong className="text-white">{platoons.length}</strong>
                       </div>
                     </div>
@@ -3465,22 +3454,22 @@
               </div>
             )}
 
-            <div className="max-w-[1400px] mx-auto space-y-3.5 no-print">
+            <div className="max-w-[1400px] mx-auto space-y-2 sm:space-y-2.5 no-print">
 
-              {/* TOP BRAND HEADER: CENTERED LOGO ONLY */}
-              <div className="flex flex-col items-center justify-center pt-1">
-                <img src="./icons/favicon.svg" alt="Military Helmet" className="w-9 h-9 rounded-lg shrink-0 shadow" />
+              {/* TOP BRAND HEADER: CENTERED LOGO ONLY (LARGER ICON) */}
+              <div className="flex flex-col items-center justify-center pt-0.5">
+                <img src="./icons/favicon.svg" alt="Military Helmet" className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl shrink-0 shadow-md" />
                 <div className="font-tactical font-black text-xs sm:text-sm tracking-wider uppercase text-white leading-none mt-1">
                   LIST <span className="text-amber-400">MAKER</span>
                 </div>
               </div>
 
               {/* 0. APP BAR: FACTION (LEFT) & ACTIONS (RIGHT) */}
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center justify-between gap-1.5 sm:gap-2">
                 {/* Left: Faction Selector */}
                 <div className="flex items-center min-w-0">
-                  <div className="flex items-center gap-1.5 bg-zinc-900 border border-zinc-750 rounded-lg px-2.5 h-9 text-xs font-mono">
-                    <span className="text-zinc-400 text-[10.5px] uppercase font-bold hidden sm:inline">Faction:</span>
+                  <div className="flex items-center gap-1 bg-zinc-900 border border-zinc-750 rounded-lg px-2 sm:px-2.5 h-8 sm:h-9 text-[11px] sm:text-xs font-mono">
+                    <span className="text-zinc-400 text-[10px] uppercase font-bold hidden sm:inline">Faction:</span>
                     <select
                       value={activeFactionId}
                       onChange={(e) => {
@@ -3488,7 +3477,7 @@
                         setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
                         setActivePlatoonId(1);
                       }}
-                      className="bg-transparent text-amber-400 font-bold text-xs focus:outline-none cursor-pointer"
+                      className="bg-transparent text-amber-400 font-bold text-[11px] sm:text-xs focus:outline-none cursor-pointer max-w-[130px] sm:max-w-none truncate"
                     >
                       {availableFactions.map(fId => (
                         <option key={fId} value={fId} className="bg-zinc-900 text-white">
@@ -3500,44 +3489,44 @@
                 </div>
 
                 {/* Right: Actions & Account */}
-                <div className="flex items-center justify-end gap-1.5 shrink-0">
+                <div className="flex items-center justify-end gap-1 sm:gap-1.5 shrink-0">
                   {pwaPrompt && (
                     <button
                       type="button"
                       onClick={handleInstallPwa}
-                      className="h-9 px-2.5 rounded-lg bg-[#3D4B35] hover:bg-[#4A5B3E] border border-amber-400/50 text-amber-300 text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                      className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-[#3D4B35] hover:bg-[#4A5B3E] border border-amber-400/50 text-amber-300 text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
                       title="Install App (Standalone Mode without browser bar)"
                     >
-                      <DownloadIcon className="w-4 h-4 text-amber-300" />
+                      <DownloadIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300" />
                       <span className="hidden sm:inline">Install App</span>
                     </button>
                   )}
                   <button
                     type="button"
                     onClick={handleNewList}
-                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                    className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
                     title="New list"
                   >
-                    <Plus className="w-4 h-4" />
+                    <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     <span className="hidden md:inline">New</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => setIsMyListsOpen(true)}
-                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                    className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
                     title="My Saved Lists (Cloud & Device)"
                   >
-                    <FolderIcon className="w-4 h-4 text-amber-400" />
+                    <FolderIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
                     <span className="hidden md:inline">My Lists</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => handleCloudSave(false)}
                     disabled={isSaving}
-                    className="h-9 px-3 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-black text-xs font-mono font-extrabold flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                    className="h-8 sm:h-9 px-2.5 sm:px-3 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-black text-[11px] sm:text-xs font-mono font-extrabold flex items-center gap-1 transition-colors shadow cursor-pointer"
                     title={user ? (currentListId ? 'Save changes to Cloud' : 'Save list to Cloud') : 'Save list'}
                   >
-                    <CloudIcon className="w-4 h-4" />
+                    <CloudIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     <span className="hidden sm:inline">{isSaving ? 'Saving...' : 'Save'}</span>
                   </button>
 
@@ -3546,18 +3535,18 @@
                       <button
                         type="button"
                         onClick={() => setIsUserMenuOpen((v) => !v)}
-                        className="h-9 px-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-amber-300 font-black font-mono text-xs flex items-center gap-2 transition-colors cursor-pointer"
+                        className="h-8 sm:h-9 px-1.5 sm:px-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-amber-300 font-black font-mono text-[11px] sm:text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
                         title={user.email}
                       >
                         {(user.user_metadata?.avatar_url || user.user_metadata?.picture || user.picture) ? (
                           <img
                             src={user.user_metadata?.avatar_url || user.user_metadata?.picture || user.picture}
                             alt=""
-                            className="w-6 h-6 rounded-full object-cover"
+                            className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover"
                             referrerPolicy="no-referrer"
                           />
                         ) : (
-                          <span className="w-6 h-6 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center uppercase">
+                          <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center uppercase">
                             {(user.email || '?')[0]}
                           </span>
                         )}
@@ -3606,10 +3595,10 @@
                     <button
                       type="button"
                       onClick={() => setIsAuthModalOpen(true)}
-                      className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                      className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 hover:text-white text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
                       title="Sign in to sync lists across devices"
                     >
-                      <UserIcon className="w-4 h-4" />
+                      <UserIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       <span className="hidden sm:inline">Sign In</span>
                     </button>
                   )}
@@ -3617,23 +3606,23 @@
               </div>
 
               {/* 1. CONTROL BAR: LIST NAME, PLATOON TABS, PERIOD SELECTOR & LIVE TOTALS */}
-              <div className="bg-zinc-900 border border-zinc-750 rounded-xl px-3 sm:px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 sm:gap-4 text-xs font-mono shadow-sm">
-                <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+              <div className="bg-zinc-900 border border-zinc-750 rounded-xl px-2.5 sm:px-3.5 py-2 flex flex-wrap items-center justify-between gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono shadow-sm">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2.5 min-w-0">
                   {/* Army List Name (In place of Faction Selector) */}
-                  <div className="flex items-center gap-1.5 bg-zinc-850 border border-zinc-750 rounded-lg px-2.5 py-1">
+                  <div className="flex items-center bg-zinc-850 border border-zinc-750 rounded-lg px-2 py-0.5 sm:py-1">
                     <input
                       type="text"
                       value={armyListName}
                       onChange={(e) => setArmyListName(e.target.value)}
                       placeholder="Untitled Army List..."
-                      className="bg-transparent text-amber-300 font-bold text-xs font-mono focus:outline-none w-36 sm:w-48 placeholder-zinc-500"
+                      className="bg-transparent text-amber-300 font-bold text-[11px] sm:text-xs font-mono focus:outline-none w-28 sm:w-44 placeholder-zinc-500 truncate"
                       title="Click to rename list"
                     />
                   </div>
 
                   {/* Platoon Tabs */}
-                  <div className="relative flex flex-wrap items-center gap-2" ref={platoonDropdownRef}>
-                    <span className="text-zinc-300 font-bold">Platoon:</span>
+                  <div className="relative flex flex-wrap items-center gap-1.5" ref={platoonDropdownRef}>
+                    <span className="hidden sm:inline text-zinc-300 font-bold">Platoon:</span>
 
                     {platoons.map((p) => {
                       const isActive = p.id === activePlatoonId;
@@ -3643,7 +3632,7 @@
                         <div
                           key={p.id}
                           onClick={() => handlePlatoonButtonClick(p.id)}
-                          className={`h-7 pl-2.5 ${platoons.length > 1 ? 'pr-1.5' : 'pr-2'} rounded text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer select-none ${
+                          className={`h-6 sm:h-7 pl-2 ${platoons.length > 1 ? 'pr-1' : 'pr-1.5'} rounded text-[10.5px] sm:text-xs font-bold transition-all flex items-center gap-1 cursor-pointer select-none ${
                             isActive
                               ? 'bg-amber-400 text-black shadow-md font-extrabold ring-1 ring-amber-300'
                               : 'bg-zinc-800 text-zinc-200 hover:bg-zinc-750 hover:text-white border border-zinc-700/80'
@@ -3651,16 +3640,16 @@
                           title={isActive ? "Click to change platoon type" : `Switch to Platoon #${p.id}`}
                         >
                           <span>#{p.id}</span>
-                          <span className="uppercase tracking-wider font-semibold text-[10.5px] opacity-90">
+                          <span className="uppercase tracking-wider font-semibold text-[10px] sm:text-[10.5px] opacity-90 truncate max-w-[110px] sm:max-w-none">
                             {pType?.name || p.typeId}
                           </span>
-                          <ChevronDown className={`w-3.5 h-3.5 opacity-75 transition-transform ${isActive && isPlatoonDropdownOpen ? 'rotate-180' : ''}`} />
+                          <ChevronDown className={`w-3 h-3 sm:w-3.5 sm:h-3.5 opacity-75 transition-transform shrink-0 ${isActive && isPlatoonDropdownOpen ? 'rotate-180' : ''}`} />
 
                           {platoons.length > 1 && (
                             <button
                               type="button"
                               onClick={(e) => handleDeletePlatoon(e, p.id)}
-                              className={`ml-0.5 w-4 h-4 rounded flex items-center justify-center text-xs leading-none font-mono font-black transition-colors cursor-pointer ${
+                              className={`ml-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded flex items-center justify-center text-xs leading-none font-mono font-black transition-colors cursor-pointer ${
                                 isActive
                                   ? 'text-black/65 hover:text-red-700 hover:bg-black/15'
                                   : 'text-zinc-400 hover:text-red-400 hover:bg-zinc-900/80'
@@ -3675,14 +3664,14 @@
                     })}
                     <button
                       onClick={handleAddPlatoon}
-                      className="h-7 px-2 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white border border-dashed border-zinc-600 flex items-center justify-center gap-1 transition-colors font-bold text-xs cursor-pointer"
+                      className="h-6 sm:h-7 px-1.5 sm:px-2 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white border border-dashed border-zinc-600 flex items-center justify-center gap-1 transition-colors font-bold text-xs cursor-pointer"
                       title="Add Platoon"
                     >
-                      <Plus className="w-3.5 h-3.5 text-amber-400" />
+                      <Plus className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400" />
                     </button>
                     {/* Platoon Type Dropdown */}
                     {isPlatoonDropdownOpen && (
-                      <div className="absolute left-0 top-full mt-2 z-50 w-72 sm:w-80 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl overflow-hidden backdrop-blur-md animate-in fade-in slide-in-from-top-1 duration-150">
+                      <div className="absolute left-0 top-full mt-2 z-50 w-64 sm:w-80 max-w-[calc(100vw-2rem)] bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl overflow-hidden backdrop-blur-md animate-in fade-in slide-in-from-top-1 duration-150">
                         <div className="px-3.5 py-2 bg-zinc-950 border-b border-zinc-800 text-[11px] font-mono text-zinc-400 flex items-center justify-between">
                           <span>Select Selector for <strong>Platoon #{activePlatoonId}</strong></span>
                           <button
@@ -3700,15 +3689,15 @@
                               <button
                                 key={t.id}
                                 onClick={() => handleSelectPlatoonType(t.id)}
-                                className={`w-full text-left px-3 py-2.5 rounded-lg text-xs font-mono font-bold tracking-wider uppercase transition-colors flex items-center justify-between cursor-pointer ${
+                                className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono font-bold tracking-wider uppercase transition-colors flex items-center justify-between cursor-pointer ${
                                   isSelected
                                     ? 'bg-amber-400/15 text-amber-300 border border-amber-500/30'
                                     : 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
                                 }`}
                               >
-                                <div>
-                                  <div>{t.title}</div>
-                                  <div className="text-[9.5px] font-normal text-zinc-500 normal-case">{t.officialTitle}</div>
+                                <div className="min-w-0">
+                                  <div className="truncate">{t.title}</div>
+                                  <div className="text-[9.5px] font-normal text-zinc-500 normal-case truncate">{t.officialTitle}</div>
                                 </div>
                                 {isSelected && <Check className="w-4 h-4 text-amber-400 shrink-0 ml-2" />}
                               </button>
@@ -3720,7 +3709,7 @@
                   </div>
 
                   {/* Period Selector (All / EW / MW / LW) */}
-                  <div className="flex items-center gap-1 bg-zinc-850 p-1 rounded-lg border border-zinc-750">
+                  <div className="flex items-center gap-0.5 sm:gap-1 bg-zinc-850 p-0.5 sm:p-1 rounded-lg border border-zinc-750">
                     {PERIOD_OPTIONS.map((po) => {
                       const activeP = (currentPlatoon.period || 'All') === po.id;
                       return (
@@ -3729,7 +3718,7 @@
                           type="button"
                           title={po.title}
                           onClick={() => handleSelectPlatoonPeriod(po.id)}
-                          className={`px-2 py-0.5 rounded text-[10.5px] font-mono font-bold transition-colors cursor-pointer ${
+                          className={`px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[10.5px] font-mono font-bold transition-colors cursor-pointer ${
                             activeP
                               ? 'bg-amber-400 text-black'
                               : 'text-zinc-300 hover:text-white'
@@ -3743,7 +3732,7 @@
                 </div>
 
                 {/* Live Points & Order Dice (Tablet/Desktop; mobile uses fixed bottom bar) */}
-                <div className="hidden sm:flex items-center gap-4 text-xs font-mono text-zinc-300">
+                <div className="hidden sm:flex items-center gap-3 text-xs font-mono text-zinc-300">
                   <div>
                     Platoon: <strong className="text-zinc-100">{currentPlatoonPoints} pts</strong>
                   </div>
@@ -3761,9 +3750,9 @@
               </div>
 
               {/* 3. 5-COLUMN SLOT GRID (Exact EasyArmy Platoon Structure) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 items-start pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1.5 sm:gap-2 items-start pt-0.5">
                 {(currentType?.columns || []).map((col, colIdx) => (
-                  <div key={col.id || colIdx} className="space-y-2">
+                  <div key={col.id || colIdx} className="space-y-1.5">
                     {col.slots.map((slot) => (
                       <Slot
                         key={slot.id}
@@ -3786,7 +3775,7 @@
               <button
                 type="button"
                 onClick={() => setIsExportModalOpen(true)}
-                className="h-11 px-5 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-black font-extrabold text-sm font-tactical uppercase tracking-wider transition-all duration-150 shadow-2xl border border-amber-300 flex items-center gap-2 cursor-pointer"
+                className="h-10 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-black font-extrabold text-sm font-tactical uppercase tracking-wider transition-all duration-150 shadow-2xl border border-amber-300 flex items-center gap-2 cursor-pointer"
               >
                 <DownloadIcon className="w-4 h-4 text-black" />
                 <span className="font-black tracking-wide">EXPORT</span>
@@ -3794,30 +3783,30 @@
             </div>
 
             {/* MOBILE BOTTOM BAR (app mode): live totals + export */}
-            <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 no-print bg-zinc-950/95 backdrop-blur-md border-t border-zinc-800 safe-bottom safe-x pt-2">
-              <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3 font-mono text-[11px] text-zinc-400 min-w-0">
+            <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 no-print bg-zinc-950/95 backdrop-blur-md border-t border-zinc-800 safe-bottom safe-x pt-1.5">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2.5 font-mono text-[10px] text-zinc-400 min-w-0">
                   <div className="leading-tight">
-                    <div className="uppercase text-[9.5px]">Total</div>
-                    <div className="text-white font-black text-base">{totalPoints}<span className="text-[10px] text-zinc-500 font-bold"> pts</span></div>
+                    <div className="uppercase text-[9px]">Total</div>
+                    <div className="text-white font-black text-sm">{totalPoints}<span className="text-[9.5px] text-zinc-500 font-bold"> pts</span></div>
                   </div>
-                  <div className="h-7 w-px bg-zinc-800" />
+                  <div className="h-6 w-px bg-zinc-800" />
                   <div className="leading-tight">
-                    <div className="uppercase text-[9.5px]">Dice</div>
-                    <div className="text-amber-400 font-black text-base">{totalOrderDice}</div>
+                    <div className="uppercase text-[9px]">Dice</div>
+                    <div className="text-amber-400 font-black text-sm">{totalOrderDice}</div>
                   </div>
-                  <div className="h-7 w-px bg-zinc-800" />
+                  <div className="h-6 w-px bg-zinc-800" />
                   <div className="leading-tight min-w-0">
-                    <div className="uppercase text-[9.5px]">Platoon</div>
-                    <div className="text-zinc-200 font-bold text-sm truncate">{currentPlatoonPoints} pts</div>
+                    <div className="uppercase text-[9px]">Platoon</div>
+                    <div className="text-zinc-200 font-bold text-xs truncate">{currentPlatoonPoints} pts</div>
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={() => setIsExportModalOpen(true)}
-                  className="h-11 px-4 rounded-xl bg-amber-400 active:bg-amber-300 text-black font-black text-xs font-tactical uppercase tracking-wider flex items-center gap-2 shadow-lg shrink-0 cursor-pointer"
+                  className="h-9 px-3.5 rounded-lg bg-amber-400 active:bg-amber-300 text-black font-black text-[11px] font-tactical uppercase tracking-wider flex items-center gap-1.5 shadow-lg shrink-0 cursor-pointer"
                 >
-                  <DownloadIcon className="w-4 h-4" />
+                  <DownloadIcon className="w-3.5 h-3.5" />
                   EXPORT
                 </button>
               </div>
