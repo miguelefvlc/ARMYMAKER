@@ -41,9 +41,12 @@ listmaker/
 ├── ARCHITECTURE.md              # Este documento técnico
 ├── README.md                    # Descripción general del repositorio
 ├── factions/                    # Módulos de datos por facción
-│   ├── soviet_union_app_data.js # Registro activo en window.EASYARMY_FACTIONS
+│   ├── soviet_union_app_data.js # Registro activo Unión Soviética
 │   ├── soviet_union.json        # Dataset estructurado en JSON
-│   └── soviet_union.md          # Referencia humana en Markdown
+│   ├── soviet_union.md          # Referencia humana en Markdown
+│   ├── germany_app_data.js      # Registro activo Alemania
+│   ├── germany.json             # Dataset estructurado en JSON
+│   └── germany.md               # Referencia humana en Markdown
 ├── icons/                       # Iconos de la app y PWA (192px, 512px, favicon SVG)
 ├── images/                      # Ilustraciones oficiales de unidades
 └── scraper/                     # Scripts de scraping para EasyArmy

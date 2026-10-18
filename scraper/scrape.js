@@ -26,11 +26,11 @@ await c.login(process.env.EASYARMY_EMAIL, process.env.EASYARMY_PASSWORD);
 console.log('Logged in.');
 
 // Dedicated scraper list (never touches the user's own lists)
-if (!state.guid) {
-  const r = await c.request('/BoltAction/NewPlatoon');
-  state.guid = r.url.match(/NewPlatoon\/([0-9a-f-]{36})/i)[1];
-  saveState();
-}
+const r = await c.request('/BoltAction/NewPlatoon');
+const m = r.url.match(/NewPlatoon\/([0-9a-f-]{36})/i);
+if (!m) throw new Error('Could not get scraper list GUID: ' + r.url);
+state.guid = m[1];
+saveState();
 const G = state.guid;
 console.log('Scraper list GUID:', G);
 
@@ -71,9 +71,17 @@ for (const [ti, tpl] of todo.entries()) {
   for (const s of seen.values()) {
     i++;
     try {
-      const page = await c.page(`/BoltAction/Unit/${G}/1/${s.cbID}`);
-      fs.writeFileSync(path.join(HTML_DIR, `unit_${tpl.id}_${s.cbID}.html`), page.text);
-      const unit = parseUnit(page.text);
+      const unitCachedFile = path.join(HTML_DIR, `unit_${s.cbID}.html`);
+      let htmlText;
+      if (fs.existsSync(unitCachedFile)) {
+        htmlText = fs.readFileSync(unitCachedFile, 'utf8');
+      } else {
+        const page = await c.page(`/BoltAction/Unit/${G}/1/${s.cbID}`);
+        htmlText = page.text;
+        fs.writeFileSync(unitCachedFile, htmlText);
+      }
+      fs.writeFileSync(path.join(HTML_DIR, `unit_${tpl.id}_${s.cbID}.html`), htmlText);
+      const unit = parseUnit(htmlText);
       units.push({ section: s.section, listName: s.name, ...unit });
       process.stdout.write(`\r  units ${i}/${seen.size}  ${s.name.slice(0, 50).padEnd(50)}`);
     } catch (e) {

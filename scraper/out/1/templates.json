@@ -1,0 +1,947 @@
+{
+ "country": {
+  "id": 1,
+  "name": "German",
+  "selected": true
+ },
+ "templates": [
+  {
+   "id": 590,
+   "country": "German",
+   "name": "** v3 Armies of Germany - Rifle Platoon ** (All)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 596,
+   "country": "German",
+   "name": "** v3 Armies of Germany - Rifle Platoon ** (EW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 608,
+   "country": "German",
+   "name": "** v3 Armies of Germany - Rifle Platoon ** (LW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 602,
+   "country": "German",
+   "name": "** v3 Armies of Germany - Rifle Platoon ** (MW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 595,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Armoured Platoon (All)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 601,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Armoured Platoon (EW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 613,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Armoured Platoon (LW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 607,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Armoured Platoon (MW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 594,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Artillery Platoon (All)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 600,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Artillery Platoon (EW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 612,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Artillery Platoon (LW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 606,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Artillery Platoon (MW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 592,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Engineer Platoon (All)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 598,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Engineer Platoon (EW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 610,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Engineer Platoon (LW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 604,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Engineer Platoon (MW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 593,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Heavy Weapons Platoon (All",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 599,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Heavy Weapons Platoon (EW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 611,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Heavy Weapons Platoon (LW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 605,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Heavy Weapons Platoon (MW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 591,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Recce Infantry Platoon(All",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 597,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Recce Infantry Platoon(EW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 609,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Recce Infantry Platoon(LW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 603,
+   "country": "German",
+   "name": "*v3 Armies of Germany - Recce Infantry Platoon(MW)",
+   "source": "Armies of Germany (v3)"
+  },
+  {
+   "id": 489,
+   "country": "German",
+   "name": "*v3 rulebook - German - Armoured Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 488,
+   "country": "German",
+   "name": "*v3 rulebook - German - Artillery Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 487,
+   "country": "German",
+   "name": "*v3 rulebook - German - Engineer Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 486,
+   "country": "German",
+   "name": "*v3 rulebook - German - Heavy Weapons Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 490,
+   "country": "German",
+   "name": "*v3 rulebook - German - Recce Infantry Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 485,
+   "country": "German",
+   "name": "*v3 rulebook - German - Rifle Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 265,
+   "country": "German",
+   "name": "100th Panzer Replacement and Training Battalion Tank Platoon",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 240,
+   "country": "German",
+   "name": "10th SS Aufklarungs Battalion Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 375,
+   "country": "German",
+   "name": "116th Panzer Division Panzer Grenadier",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 350,
+   "country": "German",
+   "name": "12th SS Heavy/Mortar Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 349,
+   "country": "German",
+   "name": "12th SS Panzer Regiment Armoured Platoon Tank Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 348,
+   "country": "German",
+   "name": "12th SS Panzergrenadier Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 351,
+   "country": "German",
+   "name": "16. FD(L) 16. Luftwaffe Field Division",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 242,
+   "country": "German",
+   "name": "16th SS Training and Replacement Battalion Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 386,
+   "country": "German",
+   "name": "17 SS Aufklärungs Platoon",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 385,
+   "country": "German",
+   "name": "17th SS Panzergrenadier",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 384,
+   "country": "German",
+   "name": "17th SS Panzerkompanie Armoured Platoon",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 1,
+   "country": "German",
+   "name": "1939 - The September Campaign Blitzkrieg 1939-42",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 2,
+   "country": "German",
+   "name": "1940 - The Battle of France Blitzkrieg 1939-42",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 272,
+   "country": "German",
+   "name": "1940 Panzer Division Tank Platoon",
+   "source": "Battle of France"
+  },
+  {
+   "id": 3,
+   "country": "German",
+   "name": "1941 - Operation Barbarossa Blitzkrieg 1939-42",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 7,
+   "country": "German",
+   "name": "1941 - Operation Mercury North Africa 1941-43",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 215,
+   "country": "German",
+   "name": "1941 DAK Anti-tank Gun Platoon Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 216,
+   "country": "German",
+   "name": "1941 DAK Armoured Reconnaissance Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 214,
+   "country": "German",
+   "name": "1941 DAK Light Division Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 213,
+   "country": "German",
+   "name": "1941 DAK Panzer Division Armoured Platoon Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 6,
+   "country": "German",
+   "name": "1941-42 - Rommel Triumphant North Africa 1941-43",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 4,
+   "country": "German",
+   "name": "1942 - Operation Blue Blitzkrieg 1939-42",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 5,
+   "country": "German",
+   "name": "1942 - Stalingrad, Death on the Volga Blitzkrieg 1939-42",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 220,
+   "country": "German",
+   "name": "1942 DAK Anti-tank Gun Platoon Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 217,
+   "country": "German",
+   "name": "1942 DAK Light Africa Division Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 218,
+   "country": "German",
+   "name": "1942 DAK Panzer Division (Heavy) Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 219,
+   "country": "German",
+   "name": "1942 DAK Panzer Division (Medium) Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 8,
+   "country": "German",
+   "name": "1942-43 - Rommel's Defeat North Africa 1941-43",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 9,
+   "country": "German",
+   "name": "1943 - Operation Citadel Eastern Front 1943-44",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 10,
+   "country": "German",
+   "name": "1943-44 - Anti-partisan Security Patrol Eastern Front 1943-44",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 12,
+   "country": "German",
+   "name": "1943-44 - Defense of Italy Western Front 1943-44",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 13,
+   "country": "German",
+   "name": "1944 - Atlantic Wall Resistance Nest Western Front 1943-44",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 11,
+   "country": "German",
+   "name": "1944 - Defense of the East Eastern Front 1943-44",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 14,
+   "country": "German",
+   "name": "1944 - Normandy Western Front 1943-44",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 16,
+   "country": "German",
+   "name": "1944-45 - Holding the West Wall The Fall of the Third Reich 1945",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 15,
+   "country": "German",
+   "name": "1944-45 - Operation Watch on the Rhine The Fall of the Third Reich 1945",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 278,
+   "country": "German",
+   "name": "1944-45 Panzergrenadier Reinforced Platoon",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 18,
+   "country": "German",
+   "name": "1945 - Last Levy The Fall of the Third Reich 1945",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 17,
+   "country": "German",
+   "name": "1945 - Operation Spring Awakening The Fall of the Third Reich 1945",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 263,
+   "country": "German",
+   "name": "21st Panzer Division Panzergrenadier (D-Day)",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 328,
+   "country": "German",
+   "name": "22nd Panzer Division Armoured Platoon November 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 329,
+   "country": "German",
+   "name": "57th Panzer Corps Armoured Platoon December 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 191,
+   "country": "German",
+   "name": "5th Panzer Division Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 243,
+   "country": "German",
+   "name": "6th Fallschirmjäger Regiment Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 282,
+   "country": "German",
+   "name": "6th SS Panzer Army Armoured Platoon Tank Platoon",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 260,
+   "country": "German",
+   "name": "91st Luftlande Division",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 447,
+   "country": "German",
+   "name": "Airborne Raiders Reinforced Platoon",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 330,
+   "country": "German",
+   "name": "Alarmeinheiten November-December 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 444,
+   "country": "German",
+   "name": "Beach Landing Reinforced Platoon",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 446,
+   "country": "German",
+   "name": "Brandenburg Infiltration Commando",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 448,
+   "country": "German",
+   "name": "British Union of Fascists - Blackshirt",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 287,
+   "country": "German",
+   "name": "Budapest Pocket Defenders (German & Hungarian)",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 377,
+   "country": "German",
+   "name": "Defence of Paris",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 376,
+   "country": "German",
+   "name": "Defenders of Cherbourg 1944",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 453,
+   "country": "German",
+   "name": "Deutsche England Korps Kampfgruppe ArmouredPlatoon",
+   "source": "Gigant"
+  },
+  {
+   "id": 452,
+   "country": "German",
+   "name": "Deutsche England Korps Motorised Reconnaissance",
+   "source": "Gigant"
+  },
+  {
+   "id": 239,
+   "country": "German",
+   "name": "Dutch SS Wachtbatallion III Nordwest Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 273,
+   "country": "German",
+   "name": "Early War Anti-tank Gun Platoon",
+   "source": "Battle of France"
+  },
+  {
+   "id": 193,
+   "country": "German",
+   "name": "Extended Last Levy Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 381,
+   "country": "German",
+   "name": "Fallschirm-Sturmgeschütz",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 406,
+   "country": "German",
+   "name": "Fallschirmjäger (Italy, 1943)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 399,
+   "country": "German",
+   "name": "Fallschirmjäger (Primosole Bridge)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 382,
+   "country": "German",
+   "name": "Fallschirmjäger Anti-tank",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 145,
+   "country": "German",
+   "name": "Fallschirmjäger Platoon Crete - Duel in the Sun",
+   "source": "Duel in the Sun"
+  },
+  {
+   "id": 380,
+   "country": "German",
+   "name": "Fallschirmjäger Regiment 6",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 445,
+   "country": "German",
+   "name": "Fallschirmjäger Reinforced Platoon (Sea Lion)",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 383,
+   "country": "German",
+   "name": "Fallschirmjäger Support Weapons",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 246,
+   "country": "German",
+   "name": "FlaK Battalion Armoured Platoon Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 189,
+   "country": "German",
+   "name": "Forlorn Hope Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 449,
+   "country": "German",
+   "name": "Gangster Reinforced Platoon",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 324,
+   "country": "German",
+   "name": "Gates of Stalingrad August-September 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 68,
+   "country": "German",
+   "name": "German Reinforced Platoon",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 153,
+   "country": "German",
+   "name": "German rule book units only",
+   "source": "v2 Rulebook"
+  },
+  {
+   "id": 238,
+   "country": "German",
+   "name": "German Second-Line Unit Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 121,
+   "country": "German",
+   "name": "German Tank Platoon",
+   "source": "Tank Wars"
+  },
+  {
+   "id": 407,
+   "country": "German",
+   "name": "Grenadier (Italy, 1943)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 280,
+   "country": "German",
+   "name": "Heavy Anti-aircraft Battery Reinforced Platoon",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 190,
+   "country": "German",
+   "name": "Heavy Tank Abteilung Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 401,
+   "country": "German",
+   "name": "Hermann Göring Division (Sicily and Salerno)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 226,
+   "country": "German",
+   "name": "Hermann Göring Division (Tunisia) Duel in the Sun",
+   "source": "Duel in the Sun"
+  },
+  {
+   "id": 275,
+   "country": "German",
+   "name": "Infantry Regiment 9 - Potsdam",
+   "source": "Battle of France"
+  },
+  {
+   "id": 327,
+   "country": "German",
+   "name": "Into Hell October-November 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 454,
+   "country": "German",
+   "name": "IRA Midlands Brigade Mechanised Active ServiceUnit",
+   "source": "Gigant"
+  },
+  {
+   "id": 281,
+   "country": "German",
+   "name": "IV SS Panzer Corps Armoured Platoon Tank Platoon",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 397,
+   "country": "German",
+   "name": "Kampfgruppe East HGD",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 228,
+   "country": "German",
+   "name": "Kampfgruppe Hecker Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 264,
+   "country": "German",
+   "name": "Kampfgruppe Oppeln Tank Platoon",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 199,
+   "country": "German",
+   "name": "Kampfgruppe Peiper Battle of the Bulge",
+   "source": "Battle of the Bulge"
+  },
+  {
+   "id": 398,
+   "country": "German",
+   "name": "Kampfgruppe Schmalz",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 403,
+   "country": "German",
+   "name": "Kampfgruppe Stempel (16th Panzer)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 404,
+   "country": "German",
+   "name": "Kampfgruppe Ulich (29th Panzer)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 402,
+   "country": "German",
+   "name": "Kampfgruppe von Doering",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 396,
+   "country": "German",
+   "name": "Kampfgruppe West HGD",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 274,
+   "country": "German",
+   "name": "Kraftradschützen Reinforced Platoon",
+   "source": "Battle of France"
+  },
+  {
+   "id": 373,
+   "country": "German",
+   "name": "Late-war Anti-tank Gun",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 197,
+   "country": "German",
+   "name": "Late-War Fallschirmjäger (Independent) Battle of the Bulge",
+   "source": "Battle of the Bulge"
+  },
+  {
+   "id": 198,
+   "country": "German",
+   "name": "Late-War Fallschirmjäger (Panzer support) Battle of the Bulge",
+   "source": "Battle of the Bulge"
+  },
+  {
+   "id": 374,
+   "country": "German",
+   "name": "Late-war Panzergrenadier Heavy",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 367,
+   "country": "German",
+   "name": "Lions of Carentan",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 352,
+   "country": "German",
+   "name": "Luftwaffe Defence Force",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 353,
+   "country": "German",
+   "name": "Luftwaffe FD Machine Gun Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 354,
+   "country": "German",
+   "name": "Luftwaffe Flak Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 259,
+   "country": "German",
+   "name": "Merville Defence",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 262,
+   "country": "German",
+   "name": "Omaha Beach Resistance Nest",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 331,
+   "country": "German",
+   "name": "Operation Thunderclap December 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 277,
+   "country": "German",
+   "name": "Panzer Kampfgruppe Armoured Platoon Tank Platoon",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 244,
+   "country": "German",
+   "name": "Panzer Kompanie 224 Armoured Platoon Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 279,
+   "country": "German",
+   "name": "Panzer Reconnaissance Reinforced Platoon",
+   "source": "Fortress Budapest"
+  },
+  {
+   "id": 347,
+   "country": "German",
+   "name": "Panzer-Lehr Normandy 1944",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 159,
+   "country": "German",
+   "name": "Panzerbrigade 150",
+   "source": "Armies of Germany"
+  },
+  {
+   "id": 200,
+   "country": "German",
+   "name": "Panzerbrigade 150 Battle of the Bulge",
+   "source": "Battle of the Bulge"
+  },
+  {
+   "id": 405,
+   "country": "German",
+   "name": "Panzergrenadier (Italy, 1943)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 400,
+   "country": "German",
+   "name": "Panzergrenadier (Sicily)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 326,
+   "country": "German",
+   "name": "Rattenkrieg September 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 201,
+   "country": "German",
+   "name": "ROA Reinforced Platoon Road to Berlin",
+   "source": "Road to Berlin"
+  },
+  {
+   "id": 241,
+   "country": "German",
+   "name": "Schwere Panzerjäger Abteilung 559 Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 325,
+   "country": "German",
+   "name": "Stalingrad Armoured Kampfgruppe August-September 1942",
+   "source": "Stalingrad"
+  },
+  {
+   "id": 346,
+   "country": "German",
+   "name": "Static Division Reinforced Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 261,
+   "country": "German",
+   "name": "Static Division's Resistance Nest",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 245,
+   "country": "German",
+   "name": "StuG Abteilung 280 Armoured Platoon Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 192,
+   "country": "German",
+   "name": "Warsaw Uprising Road to Berlin",
+   "source": "Road to Berlin"
+  }
+ ],
+ "selected": [
+  590,
+  596,
+  608,
+  602,
+  595,
+  601,
+  613,
+  607,
+  594,
+  600,
+  612,
+  606,
+  592,
+  598,
+  610,
+  604,
+  593,
+  599,
+  611,
+  605,
+  591,
+  597,
+  609,
+  603,
+  489,
+  488,
+  487,
+  486,
+  490,
+  485
+ ]
+}
