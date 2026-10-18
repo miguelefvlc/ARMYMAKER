@@ -1,5 +1,7 @@
 # Bolt Action v3 — Multi-Faction Army List Builder
 Clean, fast, standalone Army List Builder for **Bolt Action: Third Edition**, powered directly by official **EasyArmy (`wg.easyarmy.com`)** scraped datasets and local unit illustrations.
+
+> 📚 **Documentación técnica completa**: Consulta [`ARCHITECTURE.md`](./ARCHITECTURE.md) para conocer en detalle la arquitectura del motor, el flujo de componentes y la guía paso a paso para añadir nuevas facciones.
 ## Architecture & Multi-Faction Scalability
 - **[`index.html`](file:///c:/Users/mipas/Desktop/listmaker/index.html)** — 100% faction-agnostic React application engine (compatible directly with Live Server or `start.bat`). Uses official EasyArmy English nomenclature, 5-column platoon layouts, period selectors (`All`, `Early War`, `Mid War`, `Late War`), full-window unit editor with right-side unit illustrations, and A4 PDF / JSON roster export.
 - **`factions/`** — Self-contained faction modules:
