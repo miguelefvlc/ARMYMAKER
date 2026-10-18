@@ -12,7 +12,7 @@ fs.mkdirSync(OUT, { recursive: true });
 
 const BG = [22, 27, 21];             // #161B15
 const BADGE_BG = [40, 50, 36];      // #283224
-const BADGE_BORDER = [122, 127, 82]; // #7A7F52
+const BADGE_BORDER = [223, 191, 82]; // #DFBF52 (Yellow/Gold)
 const AMBER = [223, 191, 82];       // #DFBF52
 const AMBER_DARK = [196, 162, 56];  // #C4A238
 const STAR_RED = [115, 48, 40];     // #733028
@@ -170,8 +170,7 @@ function render(size, scale = 1) {
 
 // Write crisp SVG favicon as well (Symmetrical Front View)
 const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#161B15"/>
-  <circle cx="32" cy="32" r="27" fill="#283224" stroke="#7A7F52" stroke-width="2"/>
+  <circle cx="32" cy="32" r="28" fill="#283224" stroke="#DFBF52" stroke-width="2.5"/>
   <!-- Chinstrap (Symmetrical front loop) -->
   <path d="M21 38.5 C21 47.5, 26 51, 32 51 C38 51, 43 47.5, 43 38.5" stroke="#C4A238" stroke-width="2.4" stroke-linecap="round" fill="none"/>
   <path d="M29.5 51 H34.5" stroke="#7A7F52" stroke-width="2.8" stroke-linecap="round"/>

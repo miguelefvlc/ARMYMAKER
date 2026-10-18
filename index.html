@@ -194,8 +194,7 @@
       );
       const HelmetLogo = ({ className = "w-11 h-11" }) => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
-          <rect width="64" height="64" rx="14" fill="#161B15"/>
-          <circle cx="32" cy="32" r="27" fill="#283224" stroke="#7A7F52" strokeWidth="2"/>
+          <circle cx="32" cy="32" r="28" fill="#283224" stroke="#DFBF52" strokeWidth="2.5"/>
           {/* Chinstrap (Symmetrical front loop) */}
           <path d="M21 38.5 C21 47.5, 26 51, 32 51 C38 51, 43 47.5, 43 38.5" stroke="#C4A238" strokeWidth="2.4" strokeLinecap="round" fill="none"/>
           <path d="M29.5 51 H34.5" stroke="#7A7F52" strokeWidth="2.8" strokeLinecap="round"/>
@@ -3421,147 +3420,156 @@
 
             <div className="max-w-[1400px] mx-auto space-y-2 sm:space-y-2.5 no-print">
 
-              {/* TOP BRAND HEADER: FULL-WIDTH CELL ALIGNED WITH LOWER CELLS */}
-              <div className="w-full bg-zinc-900 border border-zinc-750 rounded-xl py-2 sm:py-2.5 px-3 sm:px-4 flex items-center justify-center shadow-sm select-none">
-                <div className="flex items-center justify-center gap-2.5 sm:gap-3.5">
-                  <span className="font-tactical font-black text-lg sm:text-2xl tracking-widest uppercase text-white leading-none">
-                    LIST
-                  </span>
-                  <HelmetLogo className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl shrink-0 shadow-sm" />
-                  <span className="font-tactical font-black text-lg sm:text-2xl tracking-widest uppercase text-amber-400 leading-none">
-                    MAKER
-                  </span>
+              {/* TOP BRAND HEADER: FULL-WIDTH CELL WITH DEAD-CENTER HELMET LOGO */}
+              <div className="w-full bg-zinc-900 border border-zinc-750 rounded-xl py-2 px-3 sm:px-4 shadow-sm select-none">
+                <div className="w-full relative flex items-center justify-center">
+                  <div className="flex-1 flex justify-end items-center pr-3 sm:pr-4">
+                    <span className="font-tactical font-black text-lg sm:text-2xl tracking-widest uppercase text-white leading-none">
+                      LIST
+                    </span>
+                  </div>
+                  <div className="shrink-0 flex items-center justify-center">
+                    <HelmetLogo className="w-9 h-9 sm:w-11 sm:h-11 shrink-0 drop-shadow" />
+                  </div>
+                  <div className="flex-1 flex justify-start items-center pl-3 sm:pl-4">
+                    <span className="font-tactical font-black text-lg sm:text-2xl tracking-widest uppercase text-amber-400 leading-none">
+                      MAKER
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              {/* 0. APP BAR: FACTION (LEFT) & ACTIONS (RIGHT) */}
-              <div className="flex items-center justify-between gap-1.5 sm:gap-2">
-                {/* Left: Faction Selector */}
-                <div className="flex items-center min-w-0">
-                  <div className="flex items-center gap-1 bg-zinc-900 border border-zinc-750 rounded-lg px-2 sm:px-2.5 h-8 sm:h-9 text-[11px] sm:text-xs font-mono">
-                    <span className="text-zinc-400 text-[10px] uppercase font-bold hidden sm:inline">Faction:</span>
-                    <select
-                      value={activeFactionId}
-                      onChange={(e) => {
-                        setActiveFactionId(e.target.value);
-                        setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
-                        setActivePlatoonId(1);
-                      }}
-                      className="bg-transparent text-amber-400 font-bold text-[11px] sm:text-xs focus:outline-none cursor-pointer max-w-[130px] sm:max-w-none truncate"
-                    >
-                      {availableFactions.map(fId => (
-                        <option key={fId} value={fId} className="bg-zinc-900 text-white">
-                          {FACTIONS_REGISTRY[fId]?.faction || fId}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+              {/* 0. APP BAR: EXPANDED CELLS SPANNING FULL ROW */}
+              <div className="flex items-center gap-1.5 sm:gap-2 w-full font-mono text-[11px] sm:text-xs">
+                {/* 1. Faction Selector */}
+                <div className="flex-[1.3] sm:flex-1 min-w-0 h-8 sm:h-9 flex items-center justify-center bg-zinc-900 border border-zinc-750 rounded-lg px-2 sm:px-2.5">
+                  <span className="text-zinc-400 text-[10px] uppercase font-bold hidden sm:inline mr-1">Faction:</span>
+                  <select
+                    value={activeFactionId}
+                    onChange={(e) => {
+                      setActiveFactionId(e.target.value);
+                      setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
+                      setActivePlatoonId(1);
+                    }}
+                    className="bg-transparent text-amber-400 font-bold text-[11px] sm:text-xs focus:outline-none cursor-pointer truncate w-full sm:w-auto text-center"
+                  >
+                    {availableFactions.map(fId => (
+                      <option key={fId} value={fId} className="bg-zinc-900 text-white">
+                        {FACTIONS_REGISTRY[fId]?.faction || fId}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
-                {/* Right: Actions & Account */}
-                <div className="flex items-center justify-end gap-1 sm:gap-1.5 shrink-0">
-                  <button
-                    type="button"
-                    onClick={handleNewList}
-                    className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                    title="New list"
-                  >
-                    <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    <span className="hidden md:inline">New</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setIsMyListsOpen(true)}
-                    className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                    title="My Saved Lists (Cloud & Device)"
-                  >
-                    <FolderIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
-                    <span className="hidden md:inline">My Lists</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => handleCloudSave(false)}
-                    disabled={isSaving}
-                    className="h-8 sm:h-9 px-2.5 sm:px-3 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-black text-[11px] sm:text-xs font-mono font-extrabold flex items-center gap-1 transition-colors shadow cursor-pointer"
-                    title={user ? (currentListId ? 'Save changes to Cloud' : 'Save list to Cloud') : 'Save list'}
-                  >
-                    <CloudIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    <span className="hidden sm:inline">{isSaving ? 'Saving...' : 'Save'}</span>
-                  </button>
+                {/* 2. New List */}
+                <button
+                  type="button"
+                  onClick={handleNewList}
+                  className="flex-1 min-w-0 h-8 sm:h-9 px-1.5 sm:px-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white font-bold flex items-center justify-center gap-1 transition-colors cursor-pointer"
+                  title="New list"
+                >
+                  <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                  <span className="truncate">New</span>
+                </button>
 
-                  {user ? (
-                    <div className="relative">
-                      <button
-                        type="button"
-                        onClick={() => setIsUserMenuOpen((v) => !v)}
-                        className="h-8 sm:h-9 px-1.5 sm:px-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-amber-300 font-black font-mono text-[11px] sm:text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
-                        title={user.email}
-                      >
-                        {(user.user_metadata?.avatar_url || user.user_metadata?.picture || user.picture) ? (
-                          <img
-                            src={user.user_metadata?.avatar_url || user.user_metadata?.picture || user.picture}
-                            alt=""
-                            className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover"
-                            referrerPolicy="no-referrer"
-                          />
-                        ) : (
-                          <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center uppercase">
-                            {(user.email || '?')[0]}
-                          </span>
-                        )}
-                        <span className="hidden md:inline text-zinc-200 font-semibold max-w-[120px] truncate normal-case">
-                          {user.user_metadata?.full_name || user.user_metadata?.name || user.name || (user.email || '').split('@')[0]}
-                        </span>
-                      </button>
-                      {isUserMenuOpen && (
-                        <div className="absolute right-0 top-full mt-2 z-50 w-64 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl overflow-hidden">
-                          <div className="px-3.5 py-2.5 bg-zinc-950 border-b border-zinc-800">
-                            <div className="text-[10px] font-mono uppercase text-zinc-500">Signed in as</div>
-                            {(user.user_metadata?.full_name || user.user_metadata?.name || user.name) && (
-                              <div className="text-xs font-bold text-white truncate">
-                                {user.user_metadata?.full_name || user.user_metadata?.name || user.name}
-                              </div>
-                            )}
-                            <div className="text-[11px] font-mono text-zinc-400 truncate">{user.email}</div>
-                          </div>
-                          <div className="p-1.5 space-y-0.5 text-xs font-mono">
-                            <button
-                              type="button"
-                              onClick={() => setIsMyListsOpen(true)}
-                              className="w-full text-left px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-zinc-800 flex items-center gap-2 cursor-pointer"
-                            >
-                              <FolderIcon className="w-4 h-4 text-amber-400" /> My Lists
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => handleCloudSave(true)}
-                              className="w-full text-left px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-zinc-800 flex items-center gap-2 cursor-pointer"
-                            >
-                              <CloudIcon className="w-4 h-4 text-amber-400" /> Save as new list
-                            </button>
-                            <button
-                              type="button"
-                              onClick={handleSignOut}
-                              className="w-full text-left px-3 py-2.5 rounded-lg text-red-300 hover:bg-red-950/60 flex items-center gap-2 cursor-pointer"
-                            >
-                              <LogOutIcon className="w-4 h-4" /> Sign out
-                            </button>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ) : (
+                {/* 3. My Lists */}
+                <button
+                  type="button"
+                  onClick={() => setIsMyListsOpen(true)}
+                  className="flex-1 min-w-0 h-8 sm:h-9 px-1.5 sm:px-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white font-bold flex items-center justify-center gap-1 transition-colors cursor-pointer"
+                  title="My Saved Lists (Cloud & Device)"
+                >
+                  <FolderIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+                  <span className="truncate hidden sm:inline">My Lists</span>
+                  <span className="truncate sm:hidden">Lists</span>
+                </button>
+
+                {/* 4. Save Button */}
+                <button
+                  type="button"
+                  onClick={() => handleCloudSave(false)}
+                  disabled={isSaving}
+                  className="flex-1 min-w-0 h-8 sm:h-9 px-1.5 sm:px-2 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-black font-extrabold flex items-center justify-center gap-1 transition-colors shadow cursor-pointer"
+                  title={user ? (currentListId ? 'Save changes to Cloud' : 'Save list to Cloud') : 'Save list'}
+                >
+                  <CloudIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                  <span className="truncate">{isSaving ? '...' : 'Save'}</span>
+                </button>
+
+                {/* 5. Account / Sign In */}
+                {user ? (
+                  <div className="flex-1 min-w-0 relative">
                     <button
                       type="button"
-                      onClick={() => setIsAuthModalOpen(true)}
-                      className="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 hover:text-white text-[11px] sm:text-xs font-mono font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                      title="Sign in to sync lists across devices"
+                      onClick={() => setIsUserMenuOpen((v) => !v)}
+                      className="w-full h-8 sm:h-9 px-1.5 sm:px-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-amber-300 font-black font-mono text-[11px] sm:text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                      title={user.email}
                     >
-                      <UserIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                      <span className="hidden sm:inline">Sign In</span>
+                      {(user.user_metadata?.avatar_url || user.user_metadata?.picture || user.picture) ? (
+                        <img
+                          src={user.user_metadata?.avatar_url || user.user_metadata?.picture || user.picture}
+                          alt=""
+                          className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover shrink-0"
+                          referrerPolicy="no-referrer"
+                        />
+                      ) : (
+                        <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center uppercase shrink-0">
+                          {(user.email || '?')[0]}
+                        </span>
+                      )}
+                      <span className="hidden md:inline text-zinc-200 font-semibold max-w-[90px] lg:max-w-[120px] truncate normal-case">
+                        {user.user_metadata?.full_name || user.user_metadata?.name || user.name || (user.email || '').split('@')[0]}
+                      </span>
                     </button>
-                  )}
-                </div>
+                    {isUserMenuOpen && (
+                      <div className="absolute right-0 top-full mt-2 z-50 w-64 bg-zinc-900 border border-zinc-750 rounded-xl shadow-2xl overflow-hidden">
+                        <div className="px-3.5 py-2.5 bg-zinc-950 border-b border-zinc-800">
+                          <div className="text-[10px] font-mono uppercase text-zinc-500">Signed in as</div>
+                          {(user.user_metadata?.full_name || user.user_metadata?.name || user.name) && (
+                            <div className="text-xs font-bold text-white truncate">
+                              {user.user_metadata?.full_name || user.user_metadata?.name || user.name}
+                            </div>
+                          )}
+                          <div className="text-[11px] font-mono text-zinc-400 truncate">{user.email}</div>
+                        </div>
+                        <div className="p-1.5 space-y-0.5 text-xs font-mono">
+                          <button
+                            type="button"
+                            onClick={() => setIsMyListsOpen(true)}
+                            className="w-full text-left px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-zinc-800 flex items-center gap-2 cursor-pointer"
+                          >
+                            <FolderIcon className="w-4 h-4 text-amber-400" /> My Lists
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleCloudSave(true)}
+                            className="w-full text-left px-3 py-2.5 rounded-lg text-zinc-200 hover:bg-zinc-800 flex items-center gap-2 cursor-pointer"
+                          >
+                            <CloudIcon className="w-4 h-4 text-amber-400" /> Save as new list
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handleSignOut}
+                            className="w-full text-left px-3 py-2.5 rounded-lg text-red-300 hover:bg-red-950/60 flex items-center gap-2 cursor-pointer"
+                          >
+                            <LogOutIcon className="w-4 h-4" /> Sign out
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setIsAuthModalOpen(true)}
+                    className="flex-1 min-w-0 h-8 sm:h-9 px-1.5 sm:px-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white font-bold flex items-center justify-center gap-1 transition-colors cursor-pointer"
+                    title="Sign in to sync lists across devices"
+                  >
+                    <UserIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                    <span className="truncate hidden sm:inline">Sign In</span>
+                    <span className="truncate sm:hidden">Login</span>
+                  </button>
+                )}
               </div>
 
               {/* 1. CONTROL BAR: LIST NAME, PLATOON TABS, PERIOD SELECTOR & LIVE TOTALS */}
