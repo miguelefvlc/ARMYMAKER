@@ -200,8 +200,17 @@
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
         </svg>
       );
-      const HelmetLogo = ({ className = "w-11 h-11" }) => (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      const HelmetLogo = ({ className = "w-11 h-11", width = 44, height = 44 }) => (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 64 64"
+          width={width}
+          height={height}
+          fill="none"
+          className={className}
+          style={{ overflow: 'visible' }}
+          aria-hidden="true"
+        >
           <circle cx="32" cy="32" r="28" fill="#283224" stroke="#DFBF52" strokeWidth="2.5"/>
           {/* Chinstrap (Symmetrical front loop) */}
           <path d="M21 38.5 C21 47.5, 26 51, 32 51 C38 51, 43 47.5, 43 38.5" stroke="#C4A238" strokeWidth="2.4" strokeLinecap="round" fill="none"/>
@@ -1094,6 +1103,7 @@
         if (options.extra_crew) extraPersonnel += 1;
         if (options.spotter) extraPersonnel += 1;
         const totalModels = isVehicle ? 1 : baseMen + extraMen + extraPersonnel;
+        const menLabel = totalModels === 1 ? '1 man' : `${totalModels} men`;
         // Collect active option descriptions with their point costs
         const selectedOptions = [];
         const expKey = config?.experience || def.defaultExp || 'regular';
@@ -1103,7 +1113,7 @@
           const costPerMan = expData.extraCost ?? 10;
           selectedOptions.push({
             id: 'extra_men',
-            text: `+${extraMen} additional sold (@ +${costPerMan}pts each)`,
+            text: `+${extraMen} additional ${extraMen === 1 ? 'man' : 'men'} (@ +${costPerMan}pts each)`,
             points: extraMen * costPerMan,
           });
         }
@@ -1124,7 +1134,7 @@
             const pts = totalModels * (opt.costPerMan || 0);
             selectedOptions.push({
               id: opt.id,
-              text: `${opt.rawText || opt.label} (${totalModels} sold)`,
+              text: `${opt.rawText || opt.label} (${menLabel})`,
               points: pts,
             });
           } else {
@@ -1137,16 +1147,16 @@
         }
 
         const headCountText = isVehicle
-          ? '1 veh'
+          ? '1 vehicle'
           : totalModels > 0
-          ? `${totalModels} sold`
+          ? menLabel
           : def.composition;
 
         const compositionSummary = isVehicle
-          ? '1 veh'
+          ? '1 vehicle'
           : extraMen > 0
-          ? `${def.composition} + ${extraMen} (${totalModels} sold)`
-          : `${def.composition} (${totalModels} sold)`;
+          ? `${def.composition} + ${extraMen} (${menLabel})`
+          : `${def.composition} (${menLabel})`;
 
         return {
           isVehicle,
@@ -1373,7 +1383,7 @@
                       {def.maxExtraMen > 0 && (
                         <div className="p-3 rounded-lg bg-zinc-900/90 border border-zinc-800 space-y-2">
                           <div className="text-[11px] font-mono font-bold text-amber-300/90">
-                            {def.extraMenGroupText || `Add up to ${def.maxExtraMen} men:`}
+                            {def.extraMenGroupText || (def.maxExtraMen === 1 ? 'Add 1 additional man:' : `Add up to ${def.maxExtraMen} men:`)}
                           </div>
                           <div className="flex items-center justify-between gap-3">
                             <label className="flex items-center gap-2.5 cursor-pointer select-none min-w-0">
@@ -1384,7 +1394,7 @@
                                 className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-500 focus:ring-0 cursor-pointer shrink-0"
                               />
                               <span className={`text-xs font-mono ${extraMen > 0 ? 'text-amber-300 font-bold' : 'text-zinc-200'}`}>
-                                +{costPerMan}pts each ({EXP_LABELS[experience] || experience}) — up to {def.maxExtraMen} men
+                                +{costPerMan}pts each ({EXP_LABELS[experience] || experience}) — up to {def.maxExtraMen} {def.maxExtraMen === 1 ? 'man' : 'men'}
                               </span>
                             </label>
                             <div className="flex items-center gap-2.5 shrink-0">
@@ -1808,11 +1818,13 @@
         return { type: 'infantry', dots: 1 };
       }
 
-      function UnitTacticalIcon({ slot, unitName, platoonTypeId, className = "w-8 h-6 text-amber-300 shrink-0" }) {
+      function UnitTacticalIcon({ slot, unitName, platoonTypeId, className = "w-8 h-6 text-amber-300 shrink-0", width = 32, height = 24, color = "currentColor" }) {
         const { type, dots } = resolveTacticalIconType(slot, unitName, platoonTypeId);
         return (
           <svg
             viewBox="0 0 38 30"
+            width={width}
+            height={height}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={className}
@@ -1820,79 +1832,79 @@
             aria-hidden="true"
           >
             {/* Top Unit Size Dots */}
-            {dots === 1 && <circle cx="19" cy="3.5" r="1.5" fill="currentColor" />}
+            {dots === 1 && <circle cx="19" cy="3.5" r="1.5" fill={color} />}
             {dots === 2 && (
               <>
-                <circle cx="16" cy="3.5" r="1.5" fill="currentColor" />
-                <circle cx="22" cy="3.5" r="1.5" fill="currentColor" />
+                <circle cx="16" cy="3.5" r="1.5" fill={color} />
+                <circle cx="22" cy="3.5" r="1.5" fill={color} />
               </>
             )}
             {dots === 3 && (
               <>
-                <circle cx="13" cy="3.5" r="1.5" fill="currentColor" />
-                <circle cx="19" cy="3.5" r="1.5" fill="currentColor" />
-                <circle cx="25" cy="3.5" r="1.5" fill="currentColor" />
+                <circle cx="13" cy="3.5" r="1.5" fill={color} />
+                <circle cx="19" cy="3.5" r="1.5" fill={color} />
+                <circle cx="25" cy="3.5" r="1.5" fill={color} />
               </>
             )}
 
             {/* Outer Tactical Rectangle Frame */}
-            <rect x="3" y="7.5" width="32" height="19.5" rx="0.5" fill="none" stroke="currentColor" strokeWidth="1.7" />
+            <rect x="3" y="7.5" width="32" height="19.5" rx="0.5" fill="none" stroke={color} strokeWidth="1.7" />
 
             {/* Interior Tactical Symbol */}
             {type === 'hq' && (
-              <text x="19" y="21" textAnchor="middle" fill="currentColor" fontSize="10.5" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.4">
+              <text x="19" y="21" textAnchor="middle" fill={color} fontSize="10.5" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.4">
                 HQ
               </text>
             )}
 
             {type === 'infantry' && (
               <>
-                <line x1="3" y1="7.5" x2="35" y2="27" stroke="currentColor" strokeWidth="1.6" />
-                <line x1="35" y1="7.5" x2="3" y2="27" stroke="currentColor" strokeWidth="1.6" />
+                <line x1="3" y1="7.5" x2="35" y2="27" stroke={color} strokeWidth="1.6" />
+                <line x1="35" y1="7.5" x2="3" y2="27" stroke={color} strokeWidth="1.6" />
               </>
             )}
 
             {type === 'medic' && (
               <>
-                <line x1="19" y1="7.5" x2="19" y2="27" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="3" y1="17.25" x2="35" y2="17.25" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="19" y1="7.5" x2="19" y2="27" stroke={color} strokeWidth="1.5" />
+                <line x1="3" y1="17.25" x2="35" y2="17.25" stroke={color} strokeWidth="1.5" />
               </>
             )}
 
             {type === 'observer' && (
-              <polygon points="19,10.5 12.5,23 25.5,23" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+              <polygon points="19,10.5 12.5,23 25.5,23" fill="none" stroke={color} strokeWidth="1.6" strokeLinejoin="round" />
             )}
 
             {type === 'sniper' && (
               <>
-                <circle cx="19" cy="17.25" r="4.6" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="19" y1="10.5" x2="19" y2="24" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="12.2" y1="17.25" x2="25.8" y2="17.25" stroke="currentColor" strokeWidth="1.5" />
+                <circle cx="19" cy="17.25" r="4.6" fill="none" stroke={color} strokeWidth="1.5" />
+                <line x1="19" y1="10.5" x2="19" y2="24" stroke={color} strokeWidth="1.5" />
+                <line x1="12.2" y1="17.25" x2="25.8" y2="17.25" stroke={color} strokeWidth="1.5" />
               </>
             )}
 
             {type === 'anti_tank' && (
-              <polyline points="3,27 19,7.5 35,27" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+              <polyline points="3,27 19,7.5 35,27" fill="none" stroke={color} strokeWidth="1.6" strokeLinejoin="round" />
             )}
 
             {type === 'mortar' && (
               <>
-                <line x1="3" y1="7.5" x2="8.5" y2="11" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="35" y1="7.5" x2="29.5" y2="11" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="3" y1="27" x2="8.5" y2="23.5" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="35" y1="27" x2="29.5" y2="23.5" stroke="currentColor" strokeWidth="1.5" />
-                <circle cx="19" cy="22" r="2.4" fill="currentColor" />
-                <line x1="19" y1="11" x2="19" y2="21" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                <line x1="3" y1="7.5" x2="8.5" y2="11" stroke={color} strokeWidth="1.5" />
+                <line x1="35" y1="7.5" x2="29.5" y2="11" stroke={color} strokeWidth="1.5" />
+                <line x1="3" y1="27" x2="8.5" y2="23.5" stroke={color} strokeWidth="1.5" />
+                <line x1="35" y1="27" x2="29.5" y2="23.5" stroke={color} strokeWidth="1.5" />
+                <circle cx="19" cy="22" r="2.4" fill={color} />
+                <line x1="19" y1="11" x2="19" y2="21" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
               </>
             )}
 
             {type === 'mg' && (
               <>
-                <line x1="3" y1="7.5" x2="8.5" y2="11" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="35" y1="7.5" x2="29.5" y2="11" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="3" y1="27" x2="8.5" y2="23.5" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="35" y1="27" x2="29.5" y2="23.5" stroke="currentColor" strokeWidth="1.5" />
-                <text x="19" y="20.5" textAnchor="middle" fill="currentColor" fontSize="9.2" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.3">
+                <line x1="3" y1="7.5" x2="8.5" y2="11" stroke={color} strokeWidth="1.5" />
+                <line x1="35" y1="7.5" x2="29.5" y2="11" stroke={color} strokeWidth="1.5" />
+                <line x1="3" y1="27" x2="8.5" y2="23.5" stroke={color} strokeWidth="1.5" />
+                <line x1="35" y1="27" x2="29.5" y2="23.5" stroke={color} strokeWidth="1.5" />
+                <text x="19" y="20.5" textAnchor="middle" fill={color} fontSize="9.2" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.3">
                   MG
                 </text>
               </>
@@ -1902,7 +1914,7 @@
               <path
                 d="M8.5 22.5 V12.5 H29.5 V22.5 M19 12.5 V22.5"
                 fill="none"
-                stroke="currentColor"
+                stroke={color}
                 strokeWidth="1.6"
                 strokeLinecap="square"
                 strokeLinejoin="miter"
@@ -1911,40 +1923,40 @@
 
             {type === 'flamethrower' && (
               <>
-                <polyline points="3,7.5 19,17.25 35,7.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-                <line x1="19" y1="17.25" x2="19" y2="27" stroke="currentColor" strokeWidth="1.6" />
+                <polyline points="3,7.5 19,17.25 35,7.5" fill="none" stroke={color} strokeWidth="1.6" strokeLinejoin="round" />
+                <line x1="19" y1="17.25" x2="19" y2="27" stroke={color} strokeWidth="1.6" />
               </>
             )}
 
             {type === 'artillery' && (
-              <circle cx="19" cy="17.25" r="3.4" fill="currentColor" />
+              <circle cx="19" cy="17.25" r="3.4" fill={color} />
             )}
 
             {type === 'armoured_hq' && (
               <>
-                <rect x="7" y="10.75" width="24" height="13" rx="5.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <text x="19" y="20" textAnchor="middle" fill="currentColor" fontSize="8.2" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.3">
+                <rect x="7" y="10.75" width="24" height="13" rx="5.5" fill="none" stroke={color} strokeWidth="1.5" />
+                <text x="19" y="20" textAnchor="middle" fill={color} fontSize="8.2" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.3">
                   HQ
                 </text>
               </>
             )}
 
             {type === 'armoured' && (
-              <rect x="7" y="10.75" width="24" height="13" rx="5.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+              <rect x="7" y="10.75" width="24" height="13" rx="5.5" fill="none" stroke={color} strokeWidth="1.6" />
             )}
 
             {type === 'transport' && (
               <>
-                <circle cx="19" cy="17.25" r="5.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="19" y1="11.75" x2="19" y2="22.75" stroke="currentColor" strokeWidth="1.2" />
-                <line x1="13.5" y1="17.25" x2="24.5" y2="17.25" stroke="currentColor" strokeWidth="1.2" />
-                <line x1="15.1" y1="13.35" x2="22.9" y2="21.15" stroke="currentColor" strokeWidth="1.2" />
-                <line x1="22.9" y1="13.35" x2="15.1" y2="21.15" stroke="currentColor" strokeWidth="1.2" />
+                <circle cx="19" cy="17.25" r="5.5" fill="none" stroke={color} strokeWidth="1.5" />
+                <line x1="19" y1="11.75" x2="19" y2="22.75" stroke={color} strokeWidth="1.2" />
+                <line x1="13.5" y1="17.25" x2="24.5" y2="17.25" stroke={color} strokeWidth="1.2" />
+                <line x1="15.1" y1="13.35" x2="22.9" y2="21.15" stroke={color} strokeWidth="1.2" />
+                <line x1="22.9" y1="13.35" x2="15.1" y2="21.15" stroke={color} strokeWidth="1.2" />
               </>
             )}
 
             {type === 'recce' && (
-              <line x1="3" y1="27" x2="35" y2="7.5" stroke="currentColor" strokeWidth="1.6" />
+              <line x1="3" y1="27" x2="35" y2="7.5" stroke={color} strokeWidth="1.6" />
             )}
           </svg>
         );
@@ -1959,10 +1971,12 @@
         recce: { es: 'Pelotón de reconocimiento', en: 'Recce Platoon' },
       };
 
-      function PlatoonTacticalIcon({ typeId, className = "w-7 h-5 shrink-0" }) {
+      function PlatoonTacticalIcon({ typeId, className = "w-7 h-5 shrink-0", width = 28, height = 20, color = "currentColor" }) {
         return (
           <svg
             viewBox="0 0 38 30"
+            width={width}
+            height={height}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={className}
@@ -1970,27 +1984,27 @@
             aria-hidden="true"
           >
             {/* Top 3 dots indicating platoon echelon */}
-            <circle cx="13" cy="3.5" r="1.5" fill="currentColor" />
-            <circle cx="19" cy="3.5" r="1.5" fill="currentColor" />
-            <circle cx="25" cy="3.5" r="1.5" fill="currentColor" />
+            <circle cx="13" cy="3.5" r="1.5" fill={color} />
+            <circle cx="19" cy="3.5" r="1.5" fill={color} />
+            <circle cx="25" cy="3.5" r="1.5" fill={color} />
 
             {/* Tactical outer frame */}
-            <rect x="3" y="7.5" width="32" height="19.5" rx="0.5" fill="none" stroke="currentColor" strokeWidth="1.7" />
+            <rect x="3" y="7.5" width="32" height="19.5" rx="0.5" fill="none" stroke={color} strokeWidth="1.7" />
 
             {/* Interior symbols based on Bolt Action v3 Rulebook */}
             {(typeId === 'infantry' || !typeId) && (
               <>
-                <line x1="3" y1="7.5" x2="35" y2="27" stroke="currentColor" strokeWidth="1.6" />
-                <line x1="35" y1="7.5" x2="3" y2="27" stroke="currentColor" strokeWidth="1.6" />
+                <line x1="3" y1="7.5" x2="35" y2="27" stroke={color} strokeWidth="1.6" />
+                <line x1="35" y1="7.5" x2="3" y2="27" stroke={color} strokeWidth="1.6" />
               </>
             )}
 
             {typeId === 'heavy_weapon' && (
               <>
-                <line x1="3" y1="7.5" x2="19" y2="13.5" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="35" y1="7.5" x2="19" y2="13.5" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="19" y1="12" x2="19" y2="21.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                <circle cx="19" cy="22" r="2.5" fill="currentColor" />
+                <line x1="3" y1="7.5" x2="19" y2="13.5" stroke={color} strokeWidth="1.5" />
+                <line x1="35" y1="7.5" x2="19" y2="13.5" stroke={color} strokeWidth="1.5" />
+                <line x1="19" y1="12" x2="19" y2="21.5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+                <circle cx="19" cy="22" r="2.5" fill={color} />
               </>
             )}
 
@@ -1998,7 +2012,7 @@
               <path
                 d="M8.5 22.5 V12.5 H29.5 V22.5 M19 12.5 V22.5"
                 fill="none"
-                stroke="currentColor"
+                stroke={color}
                 strokeWidth="1.7"
                 strokeLinecap="square"
                 strokeLinejoin="miter"
@@ -2006,15 +2020,15 @@
             )}
 
             {typeId === 'artillery' && (
-              <circle cx="19" cy="17.25" r="3.6" fill="currentColor" />
+              <circle cx="19" cy="17.25" r="3.6" fill={color} />
             )}
 
             {typeId === 'armoured' && (
-              <rect x="7" y="10.75" width="24" height="13" rx="5.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+              <rect x="7" y="10.75" width="24" height="13" rx="5.5" fill="none" stroke={color} strokeWidth="1.6" />
             )}
 
             {typeId === 'recce' && (
-              <line x1="3" y1="27" x2="35" y2="7.5" stroke="currentColor" strokeWidth="1.6" />
+              <line x1="3" y1="27" x2="35" y2="7.5" stroke={color} strokeWidth="1.6" />
             )}
           </svg>
         );
@@ -2428,7 +2442,7 @@
               const isAltMode = /\(alt\.\s*mode\)/i.test(w.name);
               rows.push({
                 qty: isAltMode ? '' : '1',
-                weapons: idx === 0 && compRaw ? `${w.name} (${compRaw}${extraMen > 0 ? ` + ${extraMen} men` : ''})` : w.name,
+                weapons: idx === 0 && compRaw ? `${w.name} (${compRaw}${extraMen > 0 ? ` + ${extraMen} ${extraMen === 1 ? 'man' : 'men'}` : ''})` : w.name,
                 range: w.range || '-',
                 shots: w.shots || '-',
                 pen: w.pen || 'n/a',
@@ -2721,7 +2735,7 @@
           const dStats = getWeaponProfile(defaultWeapon);
           rows.push({
             qty: String(remainingDefaultMen),
-            weapons: defaultWeapon === 'Unarmed' ? 'Unarmed men' : `Infantry with ${defaultWeapon}`,
+            weapons: defaultWeapon === 'Unarmed' ? (remainingDefaultMen === 1 ? 'Unarmed man' : 'Unarmed men') : `Infantry with ${defaultWeapon}`,
             ...dStats,
           });
         }
@@ -2871,7 +2885,7 @@
                 <span className="font-tactical font-black text-sm sm:text-base tracking-widest uppercase text-zinc-950 leading-none">
                   LIST
                 </span>
-                <HelmetLogo className="w-8 h-8 rounded-lg shadow-xs" />
+                <HelmetLogo width={32} height={32} className="w-8 h-8 rounded-lg shadow-xs shrink-0" />
                 <span className="font-tactical font-black text-sm sm:text-base tracking-widest uppercase text-[#9A7B1C] leading-none">
                   MAKER
                 </span>
@@ -2922,7 +2936,7 @@
                   <div key={p.id} className="platoon-print-block">
                     <div className="bg-zinc-900 text-white px-2.5 py-1.5 rounded-t flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs font-mono font-bold tracking-wider uppercase mb-2">
                       <div className="flex items-center gap-2 min-w-0">
-                        <PlatoonTacticalIcon typeId={p.typeId} className="w-6 h-4 sm:w-7 sm:h-5 text-amber-400 shrink-0" />
+                        <PlatoonTacticalIcon typeId={p.typeId} width={28} height={20} color="#DFBF52" className="w-6 h-4 sm:w-7 sm:h-5 text-amber-400 shrink-0" />
                         <span className="text-amber-400 shrink-0">PLATOON #{p.id}</span>
                         <span className="text-zinc-200 font-tactical font-black text-xs sm:text-sm tracking-wider truncate">{pType?.title}</span>
                         {p.period && p.period !== 'All' && (
@@ -2969,6 +2983,9 @@
                                   slot={matchedSlot}
                                   unitName={unitItem.name}
                                   platoonTypeId={pType?.id || p.typeId}
+                                  width={24}
+                                  height={20}
+                                  color="#18181b"
                                   className="w-6 h-5 text-zinc-900 shrink-0"
                                 />
                                 <h3 className="font-bold font-sans text-sm text-zinc-950 tracking-tight">
@@ -3464,7 +3481,39 @@
             margin: [8, 8, 8, 8],
             filename: `${cleanName}_${totalPoints}pts.pdf`,
             image: { type: "jpeg", quality: 0.98 },
-            html2canvas: { scale: 2, useCORS: true, logging: false },
+            html2canvas: {
+              scale: 2,
+              useCORS: true,
+              logging: false,
+              onclone: (clonedDoc) => {
+                // Ensure all SVG elements in the cloned document have explicit width, height, xmlns, and concrete colors
+                const svgs = clonedDoc.querySelectorAll('svg');
+                svgs.forEach((svg) => {
+                  const rect = svg.getBoundingClientRect ? svg.getBoundingClientRect() : null;
+                  const w = (rect && rect.width > 0) ? Math.round(rect.width) : (parseInt(svg.getAttribute('width'), 10) || 28);
+                  const h = (rect && rect.height > 0) ? Math.round(rect.height) : (parseInt(svg.getAttribute('height'), 10) || 22);
+                  svg.setAttribute('width', String(w));
+                  svg.setAttribute('height', String(h));
+                  svg.style.width = w + 'px';
+                  svg.style.height = h + 'px';
+                  svg.style.overflow = 'visible';
+                  if (!svg.getAttribute('xmlns')) {
+                    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                  }
+                  const compColor = (window.getComputedStyle && window.getComputedStyle(svg).color) || '#18181b';
+                  svg.querySelectorAll('*').forEach((child) => {
+                    const fill = child.getAttribute('fill');
+                    if (fill === 'currentColor') {
+                      child.setAttribute('fill', compColor);
+                    }
+                    const stroke = child.getAttribute('stroke');
+                    if (stroke === 'currentColor') {
+                      child.setAttribute('stroke', compColor);
+                    }
+                  });
+                });
+              }
+            },
             jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
           };
           window.html2pdf().set(opt).from(element).save().then(() => {
