@@ -3467,10 +3467,18 @@
 
             <div className="max-w-[1400px] mx-auto space-y-3.5 no-print">
 
-              {/* 0. APP BAR: FACTION (LEFT), CENTERED BRAND (ICON + LIST MAKER BELOW), ACTIONS (RIGHT) */}
+              {/* TOP BRAND HEADER: CENTERED LOGO ONLY */}
+              <div className="flex flex-col items-center justify-center pt-1">
+                <img src="./icons/favicon.svg" alt="Military Helmet" className="w-9 h-9 rounded-lg shrink-0 shadow" />
+                <div className="font-tactical font-black text-xs sm:text-sm tracking-wider uppercase text-white leading-none mt-1">
+                  LIST <span className="text-amber-400">MAKER</span>
+                </div>
+              </div>
+
+              {/* 0. APP BAR: FACTION (LEFT) & ACTIONS (RIGHT) */}
               <div className="flex items-center justify-between gap-2">
                 {/* Left: Faction Selector */}
-                <div className="flex items-center min-w-0 flex-1">
+                <div className="flex items-center min-w-0">
                   <div className="flex items-center gap-1.5 bg-zinc-900 border border-zinc-750 rounded-lg px-2.5 h-9 text-xs font-mono">
                     <span className="text-zinc-400 text-[10.5px] uppercase font-bold hidden sm:inline">Faction:</span>
                     <select
@@ -3491,16 +3499,8 @@
                   </div>
                 </div>
 
-                {/* Center: Icon with LIST MAKER underneath */}
-                <div className="flex flex-col items-center justify-center shrink-0">
-                  <img src="./icons/favicon.svg" alt="Military Helmet" className="w-8 h-8 rounded-lg shrink-0" />
-                  <div className="font-tactical font-black text-[11px] sm:text-xs tracking-wider uppercase text-white leading-none mt-1">
-                    LIST <span className="text-amber-400">MAKER</span>
-                  </div>
-                </div>
-
                 {/* Right: Actions & Account */}
-                <div className="flex items-center justify-end gap-1.5 shrink-0 flex-1">
+                <div className="flex items-center justify-end gap-1.5 shrink-0">
                   {pwaPrompt && (
                     <button
                       type="button"
