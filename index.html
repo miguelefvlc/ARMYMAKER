@@ -3,17 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Bolt Action v3 — Army List Builder</title>
+    <title>LIST MAKER — Army List Builder</title>
     <!-- Installable app (PWA) -->
     <link rel="manifest" href="./manifest.webmanifest" />
-    <meta name="theme-color" content="#09090b" />
+    <meta name="theme-color" content="#161B15" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Bolt Action" />
-    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LIST MAKER" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512.png" />
+    <script>
+      window.__deferredPwaPrompt = null;
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        window.__deferredPwaPrompt = e;
+        window.dispatchEvent(new Event('pwa-install-available'));
+      });
+      window.addEventListener('appinstalled', function () {
+        window.__deferredPwaPrompt = null;
+        window.dispatchEvent(new Event('pwa-install-available'));
+      });
+      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+        navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function () {});
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,8 +46,32 @@
               mono: ['JetBrains Mono', 'monospace'],
             },
             colors: {
-              tacticalRed: '#b84242',
-              tacticalRedHover: '#a83636',
+              tacticalRed: '#733028',
+              tacticalRedHover: '#85382F',
+              zinc: {
+                50: '#F7F5EE',
+                100: '#EFECE1',
+                200: '#E2DEC9',
+                300: '#C8C5B0',
+                400: '#9FA896',
+                500: '#78826E',
+                600: '#5C6950',
+                700: '#4A5B3E',
+                750: '#3D4B34',
+                800: '#333F2D',
+                850: '#283224',
+                900: '#20281E',
+                950: '#161B15',
+              },
+              amber: {
+                50: '#FBF8EB',
+                100: '#F5ECC8',
+                200: '#EFE09E',
+                300: '#EAD071',
+                400: '#DFBF52',
+                500: '#C4A238',
+                600: '#9E8025',
+              },
             }
           }
         }
@@ -53,8 +93,8 @@
     <script src="./config.js"></script>
     <style>
       body {
-        background-color: #09090b;
-        color: #f4f4f5;
+        background-color: #161B15;
+        color: #F4F1E8;
         font-family: 'Inter', sans-serif;
         -webkit-tap-highlight-color: transparent;
         overscroll-behavior-y: none;
@@ -77,14 +117,14 @@
         height: 6px;
       }
       ::-webkit-scrollbar-track {
-        background: #18181b;
+        background: #20281E;
       }
       ::-webkit-scrollbar-thumb {
-        background: #3f3f46;
+        background: #4A5B3E;
         border-radius: 3px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #52525b;
+        background: #7A7F52;
       }
 
       @media print {
@@ -325,7 +365,7 @@
 
       function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-w-md" }) {
         return (
-          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/85 backdrop-blur-sm no-print">
+          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm no-print">
             <div className={`bg-zinc-900 border border-zinc-700 rounded-t-2xl sm:rounded-2xl shadow-2xl w-full ${maxWidth} max-h-[92dvh] overflow-hidden flex flex-col`}>
               <div className="px-5 py-3.5 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between gap-4 shrink-0">
                 <div className="flex items-center gap-3 min-w-0">
@@ -1058,7 +1098,8 @@
         if (!def) return null;
         const options = config?.options || {};
         const extraMen = Number(config?.extraMen || 0);
-        const isVehicle = !!def.damageValue;
+        const hasVehicleRows = (def.weaponsTable || []).some((w) => w.rowType === 'vehicle_stat');
+        const isVehicle = !!def.damageValue || hasVehicleRows;
         const baseMen = getUnitBaseMen(def);
 
         let extraPersonnel = 0;
@@ -1074,7 +1115,7 @@
           const costPerMan = expData.extraCost ?? 10;
           selectedOptions.push({
             id: 'extra_men',
-            text: `+${extraMen} additional ${extraMen === 1 ? 'man' : 'men'} (@ +${costPerMan}pts each)`,
+            text: `+${extraMen} additional sold (@ +${costPerMan}pts each)`,
             points: extraMen * costPerMan,
           });
         }
@@ -1095,7 +1136,7 @@
             const pts = totalModels * (opt.costPerMan || 0);
             selectedOptions.push({
               id: opt.id,
-              text: `${opt.rawText || opt.label} (${totalModels} models)`,
+              text: `${opt.rawText || opt.label} (${totalModels} sold)`,
               points: pts,
             });
           } else {
@@ -1108,16 +1149,16 @@
         }
 
         const headCountText = isVehicle
-          ? `DV: ${def.damageValue}`
+          ? '1 veh'
           : totalModels > 0
-          ? `${totalModels} ${totalModels === 1 ? 'model' : 'models'}`
+          ? `${totalModels} sold`
           : def.composition;
 
         const compositionSummary = isVehicle
-          ? def.composition || '1 Vehicle'
+          ? '1 veh'
           : extraMen > 0
-          ? `${def.composition} + ${extraMen} additional ${extraMen === 1 ? 'man' : 'men'} (${totalModels} total)`
-          : def.composition;
+          ? `${def.composition} + ${extraMen} (${totalModels} sold)`
+          : `${def.composition} (${totalModels} sold)`;
 
         return {
           isVehicle,
@@ -1208,7 +1249,7 @@
           return Object.entries(def.profile || {});
         }, [def]);
         return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/85 backdrop-blur-sm animate-in fade-in duration-100 no-print">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-100 no-print">
             <div className="bg-zinc-900 border-0 sm:border border-zinc-700 rounded-none sm:rounded-2xl shadow-2xl w-full sm:w-[96vw] max-w-[1440px] h-[100dvh] sm:h-[92dvh] overflow-hidden flex flex-col">
               {/* TOP HEADER BAR */}
               <div className="px-3.5 sm:px-5 py-2.5 sm:py-3.5 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between gap-2 shrink-0 safe-top">
@@ -1216,6 +1257,11 @@
                   <h2 className="text-base sm:text-xl font-black font-tactical text-white tracking-wide uppercase truncate">
                     {def.cardTitle || def.name}
                   </h2>
+                  {summary?.headCountText && (
+                    <span className="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-amber-300 font-mono text-xs font-bold">
+                      {summary.headCountText}
+                    </span>
+                  )}
                   {slotLabel && (
                     <span className="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 font-mono text-[11px] font-semibold">
                       {slotLabel}
@@ -1226,20 +1272,9 @@
                       Period: {def.period}
                     </span>
                   )}
-                  {def.page && (
-                    <span className="text-xs font-mono text-zinc-400 hidden md:inline">
-                      {def.page}
-                    </span>
-                  )}
                 </div>
 
                 <div className="flex items-center gap-2 shrink-0">
-                  {summary?.headCountText && (
-                    <div className="hidden sm:flex bg-zinc-900 border border-zinc-700 px-3 py-1 rounded-lg text-zinc-200 font-mono text-xs font-semibold items-center gap-1.5">
-                      <Users className="w-3.5 h-3.5 text-amber-400" />
-                      <span>{summary.headCountText}</span>
-                    </div>
-                  )}
 
                   <div className="bg-amber-400 text-black px-2.5 sm:px-3.5 py-1 rounded-lg font-black font-mono text-xs sm:text-sm shadow">
                     {calculatedPoints} pts
@@ -1248,7 +1283,7 @@
                   <button
                     type="button"
                     onClick={handleSave}
-                    className="hidden sm:inline-flex px-4 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs font-mono transition-colors shadow cursor-pointer"
+                    className="hidden sm:inline-flex px-4 py-1.5 rounded-lg bg-[#7A7F52] hover:bg-[#8A8F5E] text-[#E7E1CF] border border-[#B2A77A]/40 font-extrabold text-xs font-mono transition-colors shadow cursor-pointer"
                   >
                     Save Unit
                   </button>
@@ -1595,9 +1630,8 @@
                         <div className="space-y-2 text-xs font-mono">
                           {def.unitRules.map((r, idx) => (
                             <div key={idx} className="p-2.5 rounded-lg bg-zinc-900/70 border border-zinc-800/80">
-                              <div className="font-bold text-amber-300 flex items-center justify-between">
+                              <div className="font-bold text-amber-300">
                                 <span>{r.name}</span>
-                                {r.ref && <span className="text-[10px] text-zinc-500 font-normal">({r.ref})</span>}
                               </div>
                               {r.text && (
                                 <p className="text-zinc-300 text-[11px] leading-relaxed mt-1 font-sans">
@@ -1720,6 +1754,202 @@
         );
       }
       // =========================================================================
+      // TACTICAL UNIT ICON (Bolt Action v3 Official NATO-Style Symbols)
+      // =========================================================================
+      function resolveTacticalIconType(slot, unitName, platoonTypeId) {
+        const key = ((slot?.slotKey || slot?.label || '') + '').toLowerCase();
+        const uName = ((unitName || '') + '').toLowerCase();
+
+        if (key.includes('command vehicle') || key.includes('cmd vehicle') || key.includes('recce vehicles rule')) {
+          return { type: 'armoured_hq', dots: 1 };
+        }
+        if (key.includes('commander') || key.includes('commissar') || key.includes('hq') || key.includes('officer')) {
+          if (platoonTypeId === 'armoured') return { type: 'armoured_hq', dots: 1 };
+          return { type: 'hq', dots: 1 };
+        }
+        if (key.includes('engineer')) {
+          return { type: 'engineer', dots: 2 };
+        }
+        if (key.includes('infantry') || key.includes('squad')) {
+          return { type: 'infantry', dots: 2 };
+        }
+        if (key.includes('medic')) {
+          return { type: 'medic', dots: 1 };
+        }
+        if (key.includes('observer')) {
+          return { type: 'observer', dots: 1 };
+        }
+        if (key.includes('sniper')) {
+          return { type: 'sniper', dots: 1 };
+        }
+        if (key.includes('flamethrower')) {
+          return { type: 'flamethrower', dots: 1 };
+        }
+        if (key.includes('heavy weapon')) {
+          if (uName.includes('machine gun') || uName.includes('mmg') || uName.includes('hmg')) {
+            return { type: 'mg', dots: 1 };
+          }
+          return { type: 'mortar', dots: 1 };
+        }
+        if (key.includes('machine gun')) {
+          return { type: 'mg', dots: 1 };
+        }
+        if (key.includes('mortar')) {
+          return { type: 'mortar', dots: 1 };
+        }
+        if (key.includes('anti-tank') || key.includes('anti tank')) {
+          return { type: 'anti_tank', dots: 1 };
+        }
+        if (key.includes('artillery') || key.includes('gun')) {
+          return { type: 'artillery', dots: slot?.mandatory ? 2 : 1 };
+        }
+        if (key.includes('transport') || key.includes('tow')) {
+          return { type: 'transport', dots: 1 };
+        }
+        if (key.includes('vehicle') || key.includes('tank') || key.includes('armoured')) {
+          return { type: 'armoured', dots: 1 };
+        }
+        return { type: 'infantry', dots: 1 };
+      }
+
+      function UnitTacticalIcon({ slot, unitName, platoonTypeId, className = "w-8 h-6 text-amber-300 shrink-0" }) {
+        const { type, dots } = resolveTacticalIconType(slot, unitName, platoonTypeId);
+        return (
+          <svg
+            viewBox="0 0 36 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            aria-hidden="true"
+          >
+            {/* Top Unit Size Dots */}
+            {dots === 1 && <circle cx="18" cy="2.4" r="1.45" fill="currentColor" />}
+            {dots === 2 && (
+              <>
+                <circle cx="15" cy="2.4" r="1.45" fill="currentColor" />
+                <circle cx="21" cy="2.4" r="1.45" fill="currentColor" />
+              </>
+            )}
+            {dots === 3 && (
+              <>
+                <circle cx="12.5" cy="2.4" r="1.45" fill="currentColor" />
+                <circle cx="18" cy="2.4" r="1.45" fill="currentColor" />
+                <circle cx="23.5" cy="2.4" r="1.45" fill="currentColor" />
+              </>
+            )}
+
+            {/* Outer Tactical Rectangle Frame */}
+            <rect x="2" y="6" width="32" height="20" rx="0.5" fill="none" stroke="currentColor" strokeWidth="1.7" />
+
+            {/* Interior Tactical Symbol */}
+            {type === 'hq' && (
+              <text x="18" y="19.6" textAnchor="middle" fill="currentColor" fontSize="10.5" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.4">
+                HQ
+              </text>
+            )}
+
+            {type === 'infantry' && (
+              <>
+                <line x1="2" y1="6" x2="34" y2="26" stroke="currentColor" strokeWidth="1.6" />
+                <line x1="34" y1="6" x2="2" y2="26" stroke="currentColor" strokeWidth="1.6" />
+              </>
+            )}
+
+            {type === 'medic' && (
+              <>
+                <line x1="18" y1="6" x2="18" y2="26" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="2" y1="16" x2="34" y2="16" stroke="currentColor" strokeWidth="1.5" />
+              </>
+            )}
+
+            {type === 'observer' && (
+              <polygon points="18,9.5 11.5,22 24.5,22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+            )}
+
+            {type === 'sniper' && (
+              <>
+                <circle cx="18" cy="16" r="4.6" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="18" y1="9.2" x2="18" y2="22.8" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="11.2" y1="16" x2="24.8" y2="16" stroke="currentColor" strokeWidth="1.5" />
+              </>
+            )}
+
+            {type === 'anti_tank' && (
+              <polyline points="2,26 18,6 34,26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+            )}
+
+            {type === 'mortar' && (
+              <>
+                <line x1="2" y1="6" x2="7.5" y2="9.5" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="34" y1="6" x2="28.5" y2="9.5" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="2" y1="26" x2="7.5" y2="22.5" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="34" y1="26" x2="28.5" y2="22.5" stroke="currentColor" strokeWidth="1.5" />
+                <circle cx="18" cy="20.8" r="2.4" fill="currentColor" />
+                <line x1="18" y1="9.5" x2="18" y2="20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </>
+            )}
+
+            {type === 'mg' && (
+              <>
+                <line x1="2" y1="6" x2="7.5" y2="9.5" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="34" y1="6" x2="28.5" y2="9.5" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="2" y1="26" x2="7.5" y2="22.5" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="34" y1="26" x2="28.5" y2="22.5" stroke="currentColor" strokeWidth="1.5" />
+                <text x="18" y="19.3" textAnchor="middle" fill="currentColor" fontSize="9.2" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.3">
+                  MG
+                </text>
+              </>
+            )}
+
+            {type === 'engineer' && (
+              <path
+                d="M7.5 21.5 V11.5 H28.5 V21.5 M18 11.5 V18.5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+              />
+            )}
+
+            {type === 'flamethrower' && (
+              <>
+                <polyline points="2,6 18,16 34,6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+                <line x1="18" y1="16" x2="18" y2="26" stroke="currentColor" strokeWidth="1.6" />
+              </>
+            )}
+
+            {type === 'artillery' && (
+              <circle cx="18" cy="16" r="3.4" fill="currentColor" />
+            )}
+
+            {type === 'armoured_hq' && (
+              <>
+                <rect x="6" y="9.5" width="24" height="13" rx="5.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                <text x="18" y="18.8" textAnchor="middle" fill="currentColor" fontSize="8.2" fontWeight="800" fontFamily="Inter, sans-serif" letterSpacing="0.3">
+                  HQ
+                </text>
+              </>
+            )}
+
+            {type === 'armoured' && (
+              <rect x="6" y="9.5" width="24" height="13" rx="5.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+            )}
+
+            {type === 'transport' && (
+              <>
+                <circle cx="18" cy="16" r="5.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="18" y1="10.5" x2="18" y2="21.5" stroke="currentColor" strokeWidth="1.2" />
+                <line x1="12.5" y1="16" x2="23.5" y2="16" stroke="currentColor" strokeWidth="1.2" />
+                <line x1="14.1" y1="12.1" x2="21.9" y2="19.9" stroke="currentColor" strokeWidth="1.2" />
+                <line x1="21.9" y1="12.1" x2="14.1" y2="19.9" stroke="currentColor" strokeWidth="1.2" />
+              </>
+            )}
+          </svg>
+        );
+      }
+
+      // =========================================================================
       // SLOT COMPONENT (Original EasyArmy Slot Names & Period-Filtered Units)
       // =========================================================================
       function Slot({ slot, factionData, platoonTypeId, periodKey, value, onSelect, onEdit, onClear }) {
@@ -1771,11 +2001,11 @@
               className={`w-full rounded-md border transition-all duration-150 overflow-hidden shadow-sm select-none ${
                 isMandatory
                   ? isFilled
-                    ? 'border-[#c44545]/60 bg-zinc-900'
-                    : 'border-[#c44545]/80 bg-zinc-900/90 hover:border-[#d9534f]'
+                    ? 'border-amber-400/70 bg-zinc-900'
+                    : 'border-[#8C3D32]/90 bg-zinc-900/95 hover:border-[#A3483B]'
                   : isFilled
-                    ? 'border-zinc-700 bg-zinc-900'
-                    : 'border-zinc-800/90 bg-zinc-900/70 hover:border-zinc-700'
+                    ? 'border-amber-400/60 bg-zinc-900'
+                    : 'border-[#4A5B3E]/85 bg-zinc-900/80 hover:border-[#7A7F52]'
               }`}
             >
               {/* Slot Header (Exact EasyArmy Section Name) */}
@@ -1787,21 +2017,26 @@
                     setIsOpen(!isOpen);
                   }
                 }}
-                className={`px-2.5 py-1.5 flex items-center justify-between cursor-pointer text-xs font-medium tracking-wide transition-colors ${
+                className={`px-2.5 py-1.5 flex items-center justify-between gap-2 cursor-pointer text-xs font-medium tracking-wide transition-colors ${
                   isMandatory
-                    ? 'bg-[#b84242] hover:bg-[#a83636] text-rose-50 shadow-sm'
-                    : 'bg-zinc-800/90 hover:bg-zinc-750 text-zinc-200'
+                    ? 'bg-[#733028] hover:bg-[#85382F] text-[#F7F5EE] shadow-sm'
+                    : 'bg-[#3D4B35] hover:bg-[#4A5B3E] text-[#F7F5EE]'
                 }`}
               >
                 <div className="flex items-center gap-1.5 min-w-0">
-                  <span className="font-mono font-bold text-[11px] bg-black/20 hover:bg-black/35 px-1 py-0.5 rounded shrink-0 transition-colors">
-                    {isFilled ? '[*]' : isOpen ? '[-]' : '[+]'}
-                  </span>
-                  <span className="truncate font-semibold text-[11px] uppercase tracking-wider">{slot.label}</span>
+                  {isFilled && (
+                    <UnitTacticalIcon
+                      slot={slot}
+                      unitName={value.name}
+                      platoonTypeId={platoonTypeId}
+                      className="w-6 h-[18px] text-amber-300 shrink-0"
+                    />
+                  )}
+                  <span className="truncate font-bold text-[11px] uppercase tracking-wider">{slot.label}</span>
                 </div>
-                {isMandatory && !isFilled && (
-                  <span className="text-[9px] font-mono uppercase bg-black/25 px-1.5 py-0.5 rounded text-rose-100 shrink-0">
-                    Req
+                {!isFilled && (
+                  <span className="font-mono font-bold text-[11px] bg-black/25 hover:bg-black/40 px-1 py-0.5 rounded shrink-0 transition-colors text-amber-300">
+                    {isOpen ? '[-]' : '[+]'}
                   </span>
                 )}
               </div>
@@ -1814,15 +2049,14 @@
                     setIsOpen(!isOpen);
                   }
                 }}
-                className="px-2.5 py-1.5 min-h-[36px] flex items-center justify-between cursor-pointer bg-zinc-950/60 hover:bg-zinc-900/80 transition-colors text-xs"
+                className={`px-2.5 py-1.5 min-h-[36px] flex items-center justify-between cursor-pointer transition-colors text-xs ${
+                  isFilled
+                    ? 'bg-zinc-850 hover:bg-zinc-800'
+                    : 'bg-zinc-950/80 hover:bg-zinc-900/90'
+                }`}
               >
                 {isFilled ? (
                   <div className="flex items-center justify-between w-full gap-2">
-                    {def?.image && (
-                      <div className="w-9 h-7 rounded bg-white p-0.5 flex items-center justify-center shrink-0 border border-zinc-700 overflow-hidden">
-                        <img src={`./${def.image}`} alt={value.name} className="max-w-full max-h-full object-contain" />
-                      </div>
-                    )}
                     <div className="min-w-0 flex-1">
                       <div className="font-semibold text-amber-300 truncate font-mono text-[11px]">
                         {value.name}
@@ -1830,9 +2064,9 @@
                       <div className="text-[10px] text-zinc-400 font-mono flex items-center gap-1.5">
                         <span className="text-zinc-300">{EXP_LABELS[value.config?.experience] || value.config?.experience || "Regular"}</span>
                         <span className="text-zinc-600">•</span>
-                        {summary && !summary.isVehicle && summary.totalModels > 0 && (
+                        {summary?.headCountText && (
                           <>
-                            <span className="text-zinc-300">{summary.totalModels} men</span>
+                            <span className="text-zinc-300">{summary.headCountText}</span>
                             <span className="text-zinc-600">•</span>
                           </>
                         )}
@@ -1840,17 +2074,7 @@
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1 shrink-0">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onEdit(slot.id, value, slot.label);
-                        }}
-                        className="text-zinc-400 hover:text-amber-400 p-0.5 rounded transition-colors"
-                        title="Configure unit"
-                      >
-                        <EditIcon className="w-3.5 h-3.5" />
-                      </button>
+                    <div className="flex items-center shrink-0">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
@@ -2564,26 +2788,43 @@
         return (
           <div className={`w-full max-w-4xl mx-auto ${isPreview ? '' : 'bg-white text-zinc-900 font-sans'}`}>
             {/* ROSTER HEADER */}
-            <div className="border-b-2 border-zinc-900 pb-3 mb-4 flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="w-3.5 h-3.5 rounded-full bg-red-700 inline-block shadow-xs"></span>
-                  <h1 className="text-xl sm:text-2xl font-black font-tactical tracking-wider text-zinc-950 uppercase">
-                    {armyListName || `${factionData?.faction || 'Bolt Action'} Force`}
-                  </h1>
+            <div className="border-b-2 border-zinc-900 pb-3 mb-4 grid grid-cols-3 items-center gap-3">
+              {/* Left: Faction & List Name */}
+              <div className="min-w-0">
+                <div className="text-[10.5px] font-mono font-bold uppercase tracking-wider text-zinc-600 truncate">
+                  {factionData?.faction || 'Soviet Union'} • {factionData?.book || 'Bolt Action v3'}
                 </div>
-                <div className="text-xs font-mono font-semibold text-zinc-600 mt-0.5">
-                  {factionData?.book || 'Bolt Action v3'} • Official Force Roster
+                <h1 className="text-lg sm:text-xl font-black font-tactical tracking-wider text-zinc-950 uppercase truncate mt-0.5">
+                  {armyListName || `${factionData?.faction || 'Bolt Action'} Force`}
+                </h1>
+              </div>
+
+              {/* Center: Helmet Logo + LIST MAKER below */}
+              <div className="flex flex-col items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" className="w-9 h-9 rounded-lg shadow-xs">
+                  <rect width="64" height="64" rx="14" fill="#161B15"/>
+                  <circle cx="32" cy="32" r="27" fill="#283224" stroke="#7A7F52" strokeWidth="2"/>
+                  <path d="M21 38 L26 48 H37 L42 40" stroke="#C4A238" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 35 C12 20 20 13 32 13 C44 13 51 20 51 34 C53 35.5 54 37.5 54 39.5 C54 41.5 51.5 42.5 48 42 C38 40.5 24 39 14 38.5 C11 38.3 10 36.5 12 35 Z" fill="#DFBF52"/>
+                  <path d="M13.5 34.5 C24 35 38 36.2 50.5 38" stroke="#20281E" strokeWidth="2.2" strokeLinecap="round"/>
+                  <path d="M19 25 C21 19.5 26 16.8 31.5 16.5" stroke="#20281E" strokeWidth="2" strokeLinecap="round"/>
+                  <polygon points="31,20 32.6,23.6 36.5,24 33.5,26.6 34.4,30.4 31,28.4 27.6,30.4 28.5,26.6 25.5,24 29.4,23.6" fill="#733028"/>
+                  <circle cx="42.5" cy="33" r="1.4" fill="#20281E"/>
+                </svg>
+                <div className="font-tactical font-black text-xs tracking-wider uppercase text-zinc-950 leading-none mt-1">
+                  LIST <span className="text-[#9A7B1C]">MAKER</span>
                 </div>
               </div>
-              <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-bold">
-                <div className="bg-zinc-950 text-white px-3 py-1.5 rounded shadow-sm">
+
+              {/* Right: Totals */}
+              <div className="flex flex-wrap items-center justify-end gap-1.5 text-xs font-mono font-bold">
+                <div className="bg-zinc-950 text-white px-2.5 py-1.5 rounded shadow-sm">
                   TOTAL: <span className="text-amber-400 font-black">{totalPoints} PTS</span>
                 </div>
-                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2.5 py-1.5 rounded">
+                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2 py-1.5 rounded">
                   Order Dice: <span className="text-zinc-950 font-black">{totalOrderDice}</span>
                 </div>
-                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2.5 py-1.5 rounded">
+                <div className="bg-zinc-100 border border-zinc-300 text-zinc-800 px-2 py-1.5 rounded">
                   Platoons: <span className="text-zinc-950 font-black">{platoons.length}</span>
                 </div>
               </div>
@@ -2592,7 +2833,7 @@
             {armyNotes && armyNotes.trim() && (
               <div className="mb-4 p-2.5 bg-zinc-50 border border-zinc-200 rounded text-xs font-mono text-zinc-700">
                 <span className="font-bold text-zinc-900 uppercase text-[10px] block mb-0.5">Force Notes:</span>
-                <p className="whitespace-pre-line leading-relaxed">{armyNotes}</p>
+                <p className="whitespace-pre-line leading-relaxed text-justify" style={{ textAlign: 'justify' }}>{armyNotes}</p>
               </div>
             )}
 
@@ -2627,19 +2868,21 @@
                     <div className="space-y-2.5">
                       {activeUnits.map(([slotId, unitItem]) => {
                         const def = getUnitDefinition(factionData, unitItem.name);
+                        const summary = getUnitSummary(def, unitItem.config);
                         const rosterTable = buildUnitRosterTable(def, unitItem.config);
                         let slotName = slotId;
+                        let matchedSlot = { id: slotId, label: slotId, slotKey: slotId };
                         for (const col of pType?.columns || []) {
                           const foundSlot = col.slots.find(s => s.id === slotId);
                           if (foundSlot) {
                             slotName = foundSlot.label;
+                            matchedSlot = foundSlot;
                             break;
                           }
                         }
 
                         const exp = unitItem.config?.experience || def.defaultExp || "regular";
                         const expLabel = EXP_LABELS[exp] || exp;
-                        const sourceRef = (def.page || '').replace(/\s*-\s*page/i, ' page');
 
                         return (
                           <div
@@ -2648,13 +2891,19 @@
                           >
                             {/* UNIT HEADER ROW (EasyArmy Structure + Clean Modern Aesthetic) */}
                             <div className="px-3 py-2 bg-zinc-50/90 border-b border-zinc-200 flex items-center justify-between gap-3">
-                              <div className="min-w-0 flex items-baseline gap-2 flex-wrap">
+                              <div className="min-w-0 flex items-center gap-2 flex-wrap">
+                                <UnitTacticalIcon
+                                  slot={matchedSlot}
+                                  unitName={unitItem.name}
+                                  platoonTypeId={pType?.id || p.typeId}
+                                  className="w-6 h-[18px] text-zinc-900 shrink-0"
+                                />
                                 <h3 className="font-bold font-sans text-sm text-zinc-950 tracking-tight">
                                   {def.cardTitle || unitItem.name}
                                 </h3>
-                                {sourceRef && (
-                                  <span className="text-[11px] text-zinc-500 font-sans">
-                                    ({sourceRef})
+                                {summary?.headCountText && (
+                                  <span className="text-[11px] font-mono font-semibold text-zinc-600">
+                                    ({summary.headCountText})
                                   </span>
                                 )}
                                 <span className="text-[9.5px] font-mono uppercase px-1.5 py-0.2 rounded bg-zinc-200/70 text-zinc-700 font-semibold">
@@ -2710,36 +2959,32 @@
               })}
             </div>
 
-            {/* UNIT SPECIAL RULES */}
+            {/* UNIT SPECIAL RULES (COMPACT SINGLE-COLUMN LIST) */}
             {armyActiveRules.length > 0 && (
-              <div className="rules-print-block mt-5 pt-3 border-t-2 border-zinc-800 break-inside-avoid">
-                <h2 className="text-xs font-black font-tactical uppercase tracking-wider text-zinc-900 mb-2">
+              <div className="rules-print-block mt-4 pt-2.5 border-t-2 border-zinc-800 break-inside-avoid">
+                <h2 className="text-[11px] font-black font-tactical uppercase tracking-wider text-zinc-900 mb-1.5">
                   Unit Special Rules
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[10px] font-sans">
+                <div className="space-y-1 text-[9.5px] font-sans text-justify" style={{ textAlign: 'justify' }}>
                   {armyActiveRules.map((r, idx) => (
-                    <div key={idx} className="p-2 bg-zinc-50 border border-zinc-200 rounded">
-                      <div className="font-bold text-zinc-900 mb-0.5">
-                        {r.name} {r.ref ? <span className="text-zinc-500 font-normal">({r.ref})</span> : null}
-                      </div>
-                      <div className="text-zinc-700 leading-snug">{r.text}</div>
+                    <div key={idx} className="leading-snug text-zinc-800 text-justify" style={{ textAlign: 'justify' }}>
+                      <strong className="font-bold text-zinc-950">{r.name}:</strong> {r.text}
                     </div>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* FACTION ARMY SPECIAL RULES */}
+            {/* FACTION ARMY SPECIAL RULES (COMPACT SINGLE-COLUMN LIST) */}
             {factionData?.armyRules && factionData.armyRules.length > 0 && (
-              <div className="rules-print-block mt-5 pt-3 border-t-2 border-zinc-800 break-inside-avoid">
-                <h2 className="text-xs font-black font-tactical uppercase tracking-wider text-zinc-900 mb-2">
+              <div className="rules-print-block mt-3.5 pt-2.5 border-t border-zinc-300 break-inside-avoid">
+                <h2 className="text-[11px] font-black font-tactical uppercase tracking-wider text-zinc-900 mb-1.5">
                   {factionData.faction} Army Special Rules
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[10px] font-sans">
+                <div className="space-y-1 text-[9.5px] font-sans text-justify" style={{ textAlign: 'justify' }}>
                   {factionData.armyRules.map((rule, idx) => (
-                    <div key={idx} className="p-2 bg-zinc-50 border border-zinc-200 rounded">
-                      <div className="font-bold text-zinc-900 mb-0.5">{rule.name}</div>
-                      <div className="text-zinc-700 leading-snug">{rule.text}</div>
+                    <div key={idx} className="leading-snug text-zinc-800 text-justify" style={{ textAlign: 'justify' }}>
+                      <strong className="font-bold text-zinc-950">{rule.name}:</strong> {rule.text}
                     </div>
                   ))}
                 </div>
@@ -2753,7 +2998,7 @@
         );
       }
       // =========================================================================
-      // EXPORT & ROSTER MANAGEMENT MODAL (PDF & JSON)
+      // EXPORT ROSTER MODAL (PDF ONLY)
       // =========================================================================
       function ExportModal({
         isOpen,
@@ -2766,30 +3011,22 @@
         totalPoints,
         totalOrderDice,
         platoons,
-        onExportJSON,
-        onTriggerImportJSON,
-        onNativePrint,
         onDirectPDFDownload,
         isGeneratingPdf
       }) {
         if (!isOpen) return null;
         const totalUnits = platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0);
         return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/85 backdrop-blur-sm animate-in fade-in duration-150 no-print">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150 no-print">
             <div className="bg-zinc-900 border border-zinc-750 rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col max-h-[92vh]">
               <div className="px-5 py-3.5 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400">
                     <DownloadIcon className="w-4 h-4" />
                   </div>
-                  <div>
-                    <h2 className="text-base font-black font-tactical text-white tracking-wide uppercase">
-                      Export & Manage Force Roster
-                    </h2>
-                    <p className="text-[11px] font-mono text-zinc-400">
-                      Print or download official PDF roster, or save/load JSON army list
-                    </p>
-                  </div>
+                  <h2 className="text-base font-black font-tactical text-white tracking-wide uppercase">
+                    Export
+                  </h2>
                 </div>
 
                 <button
@@ -2842,81 +3079,16 @@
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div className="bg-gradient-to-b from-zinc-850 to-zinc-900 border border-zinc-750 rounded-xl p-3.5 flex flex-col justify-between shadow-sm">
-                    <div>
-                      <div className="flex items-center gap-2 text-amber-400 mb-1.5 font-tactical font-black text-xs uppercase tracking-wider">
-                        <FileTextIcon className="w-4 h-4" />
-                        <span>PDF ROSTER</span>
-                      </div>
-                      <p className="text-[11px] font-mono text-zinc-400 leading-snug mb-3">
-                        Generate printable A4 force roster with weapons and special rules.
-                      </p>
-                    </div>
+                <button
+                  type="button"
+                  onClick={onDirectPDFDownload}
+                  disabled={totalUnits === 0 || isGeneratingPdf}
+                  className="w-full py-3 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-black font-black text-sm font-tactical uppercase tracking-wider flex items-center justify-center gap-2.5 transition-all shadow-md cursor-pointer"
+                >
+                  <DownloadIcon className="w-4 h-4" />
+                  <span>{isGeneratingPdf ? "Generating PDF..." : "Download PDF"}</span>
+                </button>
 
-                    <div className="space-y-1.5">
-                      <button
-                        type="button"
-                        onClick={onNativePrint}
-                        disabled={totalUnits === 0}
-                        className="w-full py-2 px-3 rounded-lg bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-black font-extrabold text-xs font-mono flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
-                      >
-                        <PrinterIcon className="w-4 h-4" />
-                        <span>Print / Save PDF</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={onDirectPDFDownload}
-                        disabled={totalUnits === 0 || isGeneratingPdf}
-                        className="w-full py-1.5 px-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-50 text-zinc-200 hover:text-white font-bold text-[11px] font-mono flex items-center justify-center gap-1.5 transition-colors border border-zinc-700 cursor-pointer"
-                      >
-                        <DownloadIcon className="w-3.5 h-3.5" />
-                        <span>{isGeneratingPdf ? "Generating..." : "Direct PDF Download"}</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-b from-zinc-850 to-zinc-900 border border-zinc-750 rounded-xl p-3.5 flex flex-col justify-between shadow-sm">
-                    <div>
-                      <div className="flex items-center gap-2 text-blue-400 mb-1.5 font-tactical font-black text-xs uppercase tracking-wider">
-                        <FileCodeIcon className="w-4 h-4" />
-                        <span>EXPORT JSON</span>
-                      </div>
-                      <p className="text-[11px] font-mono text-zinc-400 leading-snug mb-3">
-                        Save your roster to a .json file to back up or share.
-                      </p>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={onExportJSON}
-                      disabled={totalUnits === 0}
-                      className="w-full py-2 px-3 rounded-lg bg-blue-500 hover:bg-blue-400 disabled:opacity-50 text-white font-extrabold text-xs font-mono flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
-                    >
-                      <DownloadIcon className="w-4 h-4" />
-                      <span>Download JSON (.json)</span>
-                    </button>
-                  </div>
-                  <div className="bg-gradient-to-b from-zinc-850 to-zinc-900 border border-zinc-750 rounded-xl p-3.5 flex flex-col justify-between shadow-sm">
-                    <div>
-                      <div className="flex items-center gap-2 text-emerald-400 mb-1.5 font-tactical font-black text-xs uppercase tracking-wider">
-                        <UploadIcon className="w-4 h-4" />
-                        <span>IMPORT JSON</span>
-                      </div>
-                      <p className="text-[11px] font-mono text-zinc-400 leading-snug mb-3">
-                        Load a previously saved .json army roster file.
-                      </p>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={onTriggerImportJSON}
-                      className="w-full py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs font-mono flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
-                    >
-                      <UploadIcon className="w-4 h-4" />
-                      <span>Load JSON File</span>
-                    </button>
-                  </div>
-                </div>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
                     <span className="font-bold uppercase tracking-wider flex items-center gap-1.5">
@@ -2939,19 +3111,6 @@
                   </div>
                 </div>
               </div>
-              <div className="px-5 py-3 bg-zinc-950 border-t border-zinc-800 flex items-center justify-between text-xs font-mono">
-                <span className="text-zinc-500 text-[11px]">
-                  Bolt Action v3 • Multi-Faction Engine
-                </span>
-                <button
-                  type="button"
-                  onClick={onClose}
-                  className="px-4 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 hover:text-white font-bold transition-colors border border-zinc-700 cursor-pointer"
-                >
-                  Close
-                </button>
-              </div>
-
             </div>
           </div>
         );
@@ -2996,7 +3155,6 @@
         const [armyNotes, setArmyNotes] = useState(draft?.notes || "");
         const [toast, setToast] = useState(null);
         const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
-        const jsonFileInputRef = useRef(null);
 
         // Accounts & cloud lists
         const { user } = useAuth();
@@ -3005,6 +3163,24 @@
         const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
         const [currentListId, setCurrentListId] = useState(draft?.currentListId || null);
         const [isSaving, setIsSaving] = useState(false);
+        const [pwaPrompt, setPwaPrompt] = useState(() => window.__deferredPwaPrompt || null);
+
+        useEffect(() => {
+          const syncPwa = () => setPwaPrompt(window.__deferredPwaPrompt || null);
+          window.addEventListener('pwa-install-available', syncPwa);
+          return () => window.removeEventListener('pwa-install-available', syncPwa);
+        }, []);
+
+        const handleInstallPwa = async () => {
+          const promptEvent = window.__deferredPwaPrompt || pwaPrompt;
+          if (!promptEvent) return;
+          promptEvent.prompt();
+          try {
+            await promptEvent.userChoice;
+          } catch {}
+          window.__deferredPwaPrompt = null;
+          setPwaPrompt(null);
+        };
 
         const showToast = (message, type = "info") => {
           setToast({ message, type });
@@ -3250,71 +3426,6 @@
           }
         };
 
-        const handleExportJSON = () => {
-          const exportData = {
-            app: "BoltActionArmyBuilder",
-            version: "2.0",
-            gameSystem: "Bolt Action v3",
-            exportDate: new Date().toISOString(),
-            factionId: activeFactionId,
-            faction: factionData?.faction || "Soviet Union",
-            listName: armyListName,
-            notes: armyNotes,
-            totalPoints,
-            totalOrderDice,
-            platoons
-          };
-          const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          const cleanName = (armyListName || "BoltAction_Roster").replace(/[^a-zA-Z0-9_-]/g, "_");
-          a.href = url;
-          a.download = `${cleanName}_${totalPoints}pts.json`;
-          a.click();
-          URL.revokeObjectURL(url);
-          showToast("Roster exported to JSON successfully.", "success");
-        };
-
-        const handleTriggerImportJSON = () => {
-          if (jsonFileInputRef.current) {
-            jsonFileInputRef.current.click();
-          }
-        };
-
-        const handleImportJSONFile = (e) => {
-          const file = e.target.files?.[0];
-          if (!file) return;
-
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            try {
-              const data = JSON.parse(event.target.result);
-              if (!data || !Array.isArray(data.platoons) || data.platoons.length === 0) {
-                showToast("Invalid Bolt Action roster JSON file.", "error");
-                return;
-              }
-              if (data.factionId && FACTIONS_REGISTRY[data.factionId]) {
-                setActiveFactionId(data.factionId);
-              }
-              setPlatoons(data.platoons);
-              if (data.listName) setArmyListName(data.listName);
-              if (data.notes !== undefined) setArmyNotes(data.notes);
-              setActivePlatoonId(data.platoons[0]?.id || 1);
-              showToast(`Loaded "${data.listName || 'Roster'}" (${data.totalPoints || 0} pts)`, "success");
-              setIsExportModalOpen(false);
-            } catch (err) {
-              showToast("Failed to parse JSON file: " + err.message, "error");
-            } finally {
-              e.target.value = "";
-            }
-          };
-          reader.readAsText(file);
-        };
-
-        const handleNativePrint = () => {
-          window.print();
-        };
-
         const handleDirectPDFDownload = () => {
           const element = document.getElementById("printable-army-roster-preview");
           if (!element || !window.html2pdf) {
@@ -3354,40 +3465,57 @@
               </div>
             )}
 
-            <input
-              type="file"
-              ref={jsonFileInputRef}
-              onChange={handleImportJSONFile}
-              accept=".json,application/json"
-              className="hidden"
-            />
-
             <div className="max-w-[1400px] mx-auto space-y-3.5 no-print">
 
-              {/* 0. APP BAR: BRAND, LIST NAME, CLOUD/LOCAL SAVE, MY LISTS & ACCOUNT */}
+              {/* 0. APP BAR: FACTION (LEFT), CENTERED BRAND (ICON + LIST MAKER BELOW), ACTIONS (RIGHT) */}
               <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center gap-2 min-w-0 flex-1">
-                  <img src="./icons/favicon.svg" alt="Military Helmet" className="w-8 h-8 rounded-lg shrink-0" />
-                  <div className="min-w-0 leading-tight flex-1 max-w-xs">
-                    <div className="font-tactical font-black text-sm sm:text-base tracking-wider uppercase text-white truncate">
-                      Bolt Action <span className="text-amber-400">v3</span>
-                    </div>
-                    <input
-                      type="text"
-                      value={armyListName}
-                      onChange={(e) => setArmyListName(e.target.value)}
-                      placeholder="Untitled Army List..."
-                      className="w-full bg-transparent text-[11px] font-mono text-zinc-400 focus:text-amber-300 focus:outline-none truncate border-b border-transparent focus:border-amber-400/50"
-                      title="Click to rename list"
-                    />
+                {/* Left: Faction Selector */}
+                <div className="flex items-center min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5 bg-zinc-900 border border-zinc-750 rounded-lg px-2.5 h-9 text-xs font-mono">
+                    <span className="text-zinc-400 text-[10.5px] uppercase font-bold hidden sm:inline">Faction:</span>
+                    <select
+                      value={activeFactionId}
+                      onChange={(e) => {
+                        setActiveFactionId(e.target.value);
+                        setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
+                        setActivePlatoonId(1);
+                      }}
+                      className="bg-transparent text-amber-400 font-bold text-xs focus:outline-none cursor-pointer"
+                    >
+                      {availableFactions.map(fId => (
+                        <option key={fId} value={fId} className="bg-zinc-900 text-white">
+                          {FACTIONS_REGISTRY[fId]?.faction || fId}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1.5 shrink-0">
+                {/* Center: Icon with LIST MAKER underneath */}
+                <div className="flex flex-col items-center justify-center shrink-0">
+                  <img src="./icons/favicon.svg" alt="Military Helmet" className="w-8 h-8 rounded-lg shrink-0" />
+                  <div className="font-tactical font-black text-[11px] sm:text-xs tracking-wider uppercase text-white leading-none mt-1">
+                    LIST <span className="text-amber-400">MAKER</span>
+                  </div>
+                </div>
+
+                {/* Right: Actions & Account */}
+                <div className="flex items-center justify-end gap-1.5 shrink-0 flex-1">
+                  {pwaPrompt && (
+                    <button
+                      type="button"
+                      onClick={handleInstallPwa}
+                      className="h-9 px-2.5 rounded-lg bg-[#3D4B35] hover:bg-[#4A5B3E] border border-amber-400/50 text-amber-300 text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                      title="Install App (Standalone Mode without browser bar)"
+                    >
+                      <DownloadIcon className="w-4 h-4 text-amber-300" />
+                      <span className="hidden sm:inline">Install App</span>
+                    </button>
+                  )}
                   <button
                     type="button"
                     onClick={handleNewList}
-                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
                     title="New list"
                   >
                     <Plus className="w-4 h-4" />
@@ -3396,7 +3524,7 @@
                   <button
                     type="button"
                     onClick={() => setIsMyListsOpen(true)}
-                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                    className="h-9 px-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-750 text-zinc-200 hover:text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
                     title="My Saved Lists (Cloud & Device)"
                   >
                     <FolderIcon className="w-4 h-4 text-amber-400" />
@@ -3488,48 +3616,24 @@
                 </div>
               </div>
 
-              {/* 1. TOP PLATOON SELECTOR BANNER */}
-              <div
-                onClick={() => setIsPlatoonDropdownOpen(!isPlatoonDropdownOpen)}
-                className="bg-white text-zinc-900 border-2 border-zinc-200 hover:border-amber-400 rounded-xl shadow-sm py-2.5 px-4 flex items-center justify-between cursor-pointer transition-colors group"
-              >
-                <div className="w-full text-center">
-                  <div className="text-lg sm:text-2xl font-black tracking-widest text-zinc-900 font-tactical select-none uppercase">
-                    {currentType?.title || "RIFLE PLATOON"}
-                  </div>
-                  <div className="text-[11px] font-mono text-zinc-500">
-                    {factionData?.periods?.[currentType?.id]?.[currentPlatoon.period || 'All']?.title || currentType?.officialTitle || factionData?.book}
-                  </div>
-                </div>
-                <ChevronDown className={`w-5 h-5 text-zinc-500 group-hover:text-zinc-800 transition-transform shrink-0 ${isPlatoonDropdownOpen ? 'rotate-180' : ''}`} />
-              </div>
-
-              {/* 2. CONTROL BAR: FACTION, PLATOON TABS, PERIOD SELECTOR & LIVE TOTALS */}
-              <div className="bg-zinc-900/90 border border-zinc-800/80 rounded-xl px-3 sm:px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 sm:gap-4 text-xs font-mono shadow-sm">
+              {/* 1. CONTROL BAR: LIST NAME, PLATOON TABS, PERIOD SELECTOR & LIVE TOTALS */}
+              <div className="bg-zinc-900 border border-zinc-750 rounded-xl px-3 sm:px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 sm:gap-4 text-xs font-mono shadow-sm">
                 <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-                  {/* Faction Selector (Scalable to additional factions) */}
-                  <div className="flex items-center gap-1.5 bg-zinc-950 border border-zinc-800 rounded-lg px-2.5 py-1">
-                    <span className="text-zinc-500 text-[10.5px] uppercase font-bold">Faction:</span>
-                    <select
-                      value={activeFactionId}
-                      onChange={(e) => {
-                        setActiveFactionId(e.target.value);
-                        setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
-                        setActivePlatoonId(1);
-                      }}
-                      className="bg-transparent text-amber-400 font-bold text-xs focus:outline-none cursor-pointer"
-                    >
-                      {availableFactions.map(fId => (
-                        <option key={fId} value={fId} className="bg-zinc-900 text-white">
-                          {FACTIONS_REGISTRY[fId]?.faction || fId}
-                        </option>
-                      ))}
-                    </select>
+                  {/* Army List Name (In place of Faction Selector) */}
+                  <div className="flex items-center gap-1.5 bg-zinc-850 border border-zinc-750 rounded-lg px-2.5 py-1">
+                    <input
+                      type="text"
+                      value={armyListName}
+                      onChange={(e) => setArmyListName(e.target.value)}
+                      placeholder="Untitled Army List..."
+                      className="bg-transparent text-amber-300 font-bold text-xs font-mono focus:outline-none w-36 sm:w-48 placeholder-zinc-500"
+                      title="Click to rename list"
+                    />
                   </div>
 
                   {/* Platoon Tabs */}
                   <div className="relative flex flex-wrap items-center gap-2" ref={platoonDropdownRef}>
-                    <span className="text-zinc-400 font-bold">Platoon:</span>
+                    <span className="text-zinc-300 font-bold">Platoon:</span>
 
                     {platoons.map((p) => {
                       const isActive = p.id === activePlatoonId;
@@ -3539,16 +3643,18 @@
                         <div
                           key={p.id}
                           onClick={() => handlePlatoonButtonClick(p.id)}
-                          className={`h-7 pl-2.5 ${platoons.length > 1 ? 'pr-1.5' : 'pr-2.5'} rounded text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer select-none ${
+                          className={`h-7 pl-2.5 ${platoons.length > 1 ? 'pr-1.5' : 'pr-2'} rounded text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer select-none ${
                             isActive
                               ? 'bg-amber-400 text-black shadow-md font-extrabold ring-1 ring-amber-300'
-                              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-white border border-zinc-700/60'
+                              : 'bg-zinc-800 text-zinc-200 hover:bg-zinc-750 hover:text-white border border-zinc-700/80'
                           }`}
+                          title={isActive ? "Click to change platoon type" : `Switch to Platoon #${p.id}`}
                         >
                           <span>#{p.id}</span>
                           <span className="uppercase tracking-wider font-semibold text-[10.5px] opacity-90">
                             {pType?.name || p.typeId}
                           </span>
+                          <ChevronDown className={`w-3.5 h-3.5 opacity-75 transition-transform ${isActive && isPlatoonDropdownOpen ? 'rotate-180' : ''}`} />
 
                           {platoons.length > 1 && (
                             <button
@@ -3614,7 +3720,7 @@
                   </div>
 
                   {/* Period Selector (All / EW / MW / LW) */}
-                  <div className="flex items-center gap-1 bg-zinc-950 p-1 rounded-lg border border-zinc-800">
+                  <div className="flex items-center gap-1 bg-zinc-850 p-1 rounded-lg border border-zinc-750">
                     {PERIOD_OPTIONS.map((po) => {
                       const activeP = (currentPlatoon.period || 'All') === po.id;
                       return (
@@ -3626,7 +3732,7 @@
                           className={`px-2 py-0.5 rounded text-[10.5px] font-mono font-bold transition-colors cursor-pointer ${
                             activeP
                               ? 'bg-amber-400 text-black'
-                              : 'text-zinc-400 hover:text-white'
+                              : 'text-zinc-300 hover:text-white'
                           }`}
                         >
                           {po.label}
@@ -3680,15 +3786,10 @@
               <button
                 type="button"
                 onClick={() => setIsExportModalOpen(true)}
-                className="h-12 px-5 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-black font-extrabold text-xs sm:text-sm font-tactical uppercase tracking-wider transition-all duration-150 shadow-2xl hover:shadow-amber-400/25 border-2 border-amber-300 flex items-center gap-3 cursor-pointer group"
+                className="h-11 px-5 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-black font-extrabold text-sm font-tactical uppercase tracking-wider transition-all duration-150 shadow-2xl border border-amber-300 flex items-center gap-2 cursor-pointer"
               >
-                <div className="w-6 h-6 rounded bg-black/10 flex items-center justify-center text-black group-hover:scale-110 transition-transform">
-                  <DownloadIcon className="w-4 h-4 text-black" />
-                </div>
-                <span className="font-black text-sm tracking-wide">EXPORT ROSTER</span>
-                <span className="bg-black/15 text-[10px] px-2 py-0.5 rounded font-mono font-bold tracking-tight text-black/90">
-                  PDF / JSON
-                </span>
+                <DownloadIcon className="w-4 h-4 text-black" />
+                <span className="font-black tracking-wide">EXPORT</span>
               </button>
             </div>
 
@@ -3717,7 +3818,7 @@
                   className="h-11 px-4 rounded-xl bg-amber-400 active:bg-amber-300 text-black font-black text-xs font-tactical uppercase tracking-wider flex items-center gap-2 shadow-lg shrink-0 cursor-pointer"
                 >
                   <DownloadIcon className="w-4 h-4" />
-                  Export
+                  EXPORT
                 </button>
               </div>
             </div>
@@ -3750,7 +3851,7 @@
                 }
               }}
             />
-            {/* EXPORT & ROSTER MANAGEMENT MODAL */}
+            {/* EXPORT MODAL */}
             <ExportModal
               isOpen={isExportModalOpen}
               onClose={() => setIsExportModalOpen(false)}
@@ -3762,9 +3863,6 @@
               totalPoints={totalPoints}
               totalOrderDice={totalOrderDice}
               platoons={platoons}
-              onExportJSON={handleExportJSON}
-              onTriggerImportJSON={handleTriggerImportJSON}
-              onNativePrint={handleNativePrint}
               onDirectPDFDownload={handleDirectPDFDownload}
               isGeneratingPdf={isGeneratingPdf}
             />
@@ -3786,11 +3884,6 @@
       }
       const root = ReactDOM.createRoot(document.getElementById('root'));
       root.render(<App />);
-
-      // Installable app / offline support (requires HTTPS or localhost)
-      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
-        window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
-      }
     </script>
   </body>
 </html>

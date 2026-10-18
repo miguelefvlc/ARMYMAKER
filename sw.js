@@ -1,8 +1,8 @@
-// Service worker: makes the app installable and usable offline.
+// Service worker: makes the app installable (standalone PWA) and usable offline.
 // - App shell (index.html, config.js): network-first, falls back to cache when offline.
 // - Static assets (faction data, unit images, icons, CDN libraries): stale-while-revalidate.
 // - Supabase API / auth requests and non-GET requests are never cached.
-const CACHE = 'bolt-action-v3';
+const CACHE = 'list-maker-v4';
 const PRECACHE = [
   './',
   './index.html',
@@ -12,11 +12,17 @@ const PRECACHE = [
   './icons/favicon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
+  './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png',
 ];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));
+  event.waitUntil(
+    caches
+      .open(CACHE)
+      .then((c) => Promise.allSettled(PRECACHE.map((url) => c.add(url))))
+      .then(() => self.skipWaiting())
+  );
 });
 
 self.addEventListener('activate', (event) => {
