@@ -2799,7 +2799,7 @@
                     {factionData?.faction || 'Soviet Union'} • {factionData?.book || 'Bolt Action v3'}
                   </div>
                   <h1 className="text-base sm:text-xl font-black font-tactical tracking-wider text-zinc-950 uppercase truncate">
-                    {armyListName || `${factionData?.faction || 'Bolt Action'} Force`}
+                    {armyListName || 'Untitled Force'}
                   </h1>
                 </div>
 
@@ -3035,7 +3035,7 @@
                         type="text"
                         value={armyListName}
                         onChange={(e) => setArmyListName(e.target.value)}
-                        placeholder="e.g. Soviet Union - 1000 pts"
+                        placeholder="Untitled..."
                         className="w-full bg-zinc-900 border border-zinc-750 focus:border-amber-400 rounded-lg px-3 py-1.5 text-xs text-white font-mono placeholder-zinc-600 outline-none transition-colors"
                       />
                     </div>
@@ -3105,29 +3105,20 @@
       // =========================================================================
       // MAIN APPLICATION
       // =========================================================================
-      const DRAFT_KEY = 'boltaction.draft.v1';
-      function loadDraft() {
-        try {
-          const d = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
-          if (d && Array.isArray(d.platoons) && d.platoons.length > 0) return d;
-        } catch {}
-        return null;
-      }
+      // Clear any legacy draft so the app always opens completely clean and empty by default
+      try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
 
       function App() {
-        const draft = useMemo(() => loadDraft(), []);
         const availableFactions = Object.keys(FACTIONS_REGISTRY);
-        const [activeFactionId, setActiveFactionId] = useState(
-          draft?.factionId && FACTIONS_REGISTRY[draft.factionId] ? draft.factionId : availableFactions[0] || 'soviet_union'
-        );
+        const [activeFactionId, setActiveFactionId] = useState(availableFactions[0] || 'soviet_union');
         const factionData = FACTIONS_REGISTRY[activeFactionId] || window.EASYARMY_SOVIET_DATA;
         const platoonTypes = factionData?.platoons || [];
 
-        const [platoons, setPlatoons] = useState(
-          draft?.platoons || [{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]
-        );
+        const [platoons, setPlatoons] = useState([
+          { id: 1, typeId: 'infantry', period: 'All', slots: {} }
+        ]);
 
-        const [activePlatoonId, setActivePlatoonId] = useState(draft?.platoons?.[0]?.id || 1);
+        const [activePlatoonId, setActivePlatoonId] = useState(1);
         const [isPlatoonDropdownOpen, setIsPlatoonDropdownOpen] = useState(false);
         const platoonDropdownRef = useRef(null);
 
@@ -3138,8 +3129,8 @@
           unitItem: null
         });
         const [isExportModalOpen, setIsExportModalOpen] = useState(false);
-        const [armyListName, setArmyListName] = useState(draft?.listName || `${factionData?.faction || 'Soviet Union'} - 1000 pts`);
-        const [armyNotes, setArmyNotes] = useState(draft?.notes || "");
+        const [armyListName, setArmyListName] = useState("");
+        const [armyNotes, setArmyNotes] = useState("");
         const [toast, setToast] = useState(null);
         const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
 
@@ -3148,23 +3139,13 @@
         const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
         const [isMyListsOpen, setIsMyListsOpen] = useState(false);
         const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-        const [currentListId, setCurrentListId] = useState(draft?.currentListId || null);
+        const [currentListId, setCurrentListId] = useState(null);
         const [isSaving, setIsSaving] = useState(false);
 
         const showToast = (message, type = "info") => {
           setToast({ message, type });
           setTimeout(() => setToast(null), 4000);
         };
-
-        // Autosave the working list locally (survives reloads / closing the app)
-        useEffect(() => {
-          try {
-            localStorage.setItem(
-              DRAFT_KEY,
-              JSON.stringify({ factionId: activeFactionId, platoons, listName: armyListName, notes: armyNotes, currentListId })
-            );
-          } catch {}
-        }, [activeFactionId, platoons, armyListName, armyNotes, currentListId]);
 
         // Close the user menu on outside tap
         useEffect(() => {
@@ -3256,7 +3237,7 @@
           if (!window.confirm('Start a new empty list? Unsaved changes to the current list will be lost.')) return;
           setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
           setActivePlatoonId(1);
-          setArmyListName(`${factionData?.faction || 'Soviet Union'} - 1000 pts`);
+          setArmyListName('');
           setArmyNotes('');
           setCurrentListId(null);
         };
@@ -3590,7 +3571,7 @@
                       type="text"
                       value={armyListName}
                       onChange={(e) => setArmyListName(e.target.value)}
-                      placeholder="Untitled Army List..."
+                      placeholder="Untitled..."
                       className="bg-transparent text-amber-300 font-bold text-[11px] sm:text-xs font-mono focus:outline-none w-28 sm:w-44 placeholder-zinc-500 truncate"
                       title="Click to rename list"
                     />
