@@ -10,11 +10,12 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'icons');
 fs.mkdirSync(OUT, { recursive: true });
 
-const BG = [9, 9, 11];             // zinc-950 (#09090b)
-const BADGE_BG = [24, 24, 27];     // zinc-900 (#18181b)
-const AMBER = [251, 191, 36];      // amber-400 (#fbbf24)
-const AMBER_DARK = [217, 119, 6];  // amber-600 (#d97706)
-const STAR_RED = [184, 66, 66];    // tactical red (#b84242)
+const BG = [22, 27, 21];             // #161B15
+const BADGE_BG = [40, 50, 36];      // #283224
+const BADGE_BORDER = [122, 127, 82]; // #7A7F52
+const AMBER = [223, 191, 82];       // #DFBF52
+const AMBER_DARK = [196, 162, 56];  // #C4A238
+const STAR_RED = [115, 48, 40];     // #733028
 
 // CRC32 for PNG chunks
 const CRC_TABLE = new Uint32Array(256).map((_, n) => {
@@ -74,81 +75,70 @@ function inPolygon(x, y, poly) {
   return inside;
 }
 
-function distToSegment(px, py, x1, y1, x2, y2) {
-  const dx = x2 - x1;
-  const dy = y2 - y1;
-  const l2 = dx * dx + dy * dy;
-  if (l2 === 0) return Math.hypot(px - x1, py - y1);
-  let t = ((px - x1) * dx + (py - y1) * dy) / l2;
-  t = Math.max(0, Math.min(1, t));
-  return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
-}
-
-// Evaluates point (u, v) in normalized [-1, 1] coords for the WWII Combat Helmet
+// Evaluates point (u, v) for symmetrical front-view WWII combat helmet
 function sampleHelmet(uRaw, vRaw, scale) {
-  const u = uRaw / scale;
+  const uSigned = uRaw / scale;
+  const u = Math.abs(uSigned);
   const v = vRaw / scale;
 
-  // Subtle circular tactical badge backing
+  // Circular tactical badge backing
   const rBadge = Math.hypot(u, v);
   let color = BG;
-  if (rBadge <= 0.80) {
-    color = rBadge >= 0.75 ? AMBER_DARK : BADGE_BG;
+  if (rBadge <= 0.82) {
+    color = rBadge >= 0.77 ? BADGE_BORDER : BADGE_BG;
   }
 
-  // Helmet coordinates:
-  // Upper dome: centered around (0, 0.06), rx = 0.56, ry = 0.52 for v <= 0.08
-  const domeX = u / 0.55;
-  const domeY = (v - 0.08) / 0.52;
-  const inUpperDome = v <= 0.12 && (domeX * domeX + domeY * domeY <= 1.0);
+  // Chinstrap loop hanging symmetrically under helmet
+  const strapD = Math.abs(Math.hypot(u / 0.32, (v - 0.18) / 0.30) - 1.0);
+  if (strapD < 0.042 && v >= 0.20 && v <= 0.49) {
+    color = AMBER_DARK;
+    if (v >= 0.46 && u < 0.08) color = BADGE_BORDER;
+  }
 
-  // Flared skirt / rim (front visor on left, deeper neck guard on right)
-  // Rim bottom curve dips from front-left (-0.64, 0.15) across middle (0, 0.20) to rear-right (0.64, 0.28)
-  const rimBottomY = 0.17 + 0.07 * u + 0.06 * (u * u);
-  const rimTopY = -0.02 + 0.04 * u;
-  const halfWidthAtV = 0.55 + Math.max(0, (v + 0.02) * 0.42);
-  const inSkirt = v >= rimTopY && v <= rimBottomY && Math.abs(u) <= Math.min(0.65, halfWidthAtV);
+  // Inner helmet visor depth / face shadow
+  if (v >= 0.18 && v <= 0.26 && u <= 0.44 && (v - 0.18) < (0.07 * (1 - (u / 0.44) * (u / 0.44)))) {
+    color = BG;
+  }
 
-  // Rounded brim corners at left (-0.59, 0.12) and right (0.59, 0.21)
-  const inLeftLip = Math.hypot((u + 0.55) / 0.10, (v - 0.10) / 0.07) <= 1.0;
-  const inRightLip = Math.hypot((u - 0.55) / 0.11, (v - 0.18) / 0.09) <= 1.0;
+  // Upper dome: centered around (0, 0.04), rx = 0.54, ry = 0.50
+  const domeX = u / 0.54;
+  const domeY = (v - 0.04) / 0.50;
+  const inUpperDome = v <= 0.16 && (domeX * domeX + domeY * domeY <= 1.0);
 
-  const inHelmetShell = inUpperDome || inSkirt || inLeftLip || inRightLip;
+  // Lower flared rim / brow
+  const rimBottomY = 0.18 + 0.09 * (u * u);
+  const inSkirt = v >= 0.08 && v <= rimBottomY && u <= (0.54 + 0.12 * Math.max(0, v - 0.08));
+
+  // Rounded ear flare lips
+  const inEarLip = Math.hypot((u - 0.52) / 0.08, (v - 0.19) / 0.05) <= 1.0;
+
+  const inHelmetShell = inUpperDome || inSkirt || inEarLip;
 
   if (inHelmetShell) {
     color = AMBER;
 
-    // Dark separation groove along the flare line
-    const grooveY = 0.07 + 0.06 * u + 0.04 * (u * u);
-    if (Math.abs(v - grooveY) < 0.024 && Math.abs(u) < 0.56) {
-      color = BADGE_BG;
+    // Brow visor crease line across front
+    const browY = 0.13 + 0.07 * (u * u);
+    if (Math.abs(v - browY) < 0.022 && u < 0.54) {
+      color = [32, 40, 30]; // dark crease #20281E
     }
 
-    // Specular crown highlight arc on top-left of dome
-    const hlDist = Math.abs(Math.hypot(u + 0.05, v - 0.08) - 0.40);
-    if (v < -0.08 && u < 0.12 && u > -0.38 && hlDist < 0.028) {
-      color = BADGE_BG;
+    // Specular crown highlight arch on dome (symmetrical)
+    const hlDist = Math.abs(Math.hypot(u / 0.40, (v - 0.02) / 0.36) - 1.0);
+    if (v < -0.06 && v > -0.28 && hlDist < 0.032 && u < 0.35) {
+      color = [244, 241, 232]; // #F4F1E8
     }
 
-    // Side rivet dots
-    if (Math.hypot(u - 0.32, v - 0.02) < 0.032 || Math.hypot(u + 0.34, v - 0.01) < 0.030) {
-      color = BADGE_BG;
+    // Symmetrical air vents / rivets at u = 0.38, v = 0.02
+    if (Math.hypot(u - 0.38, v - 0.02) < 0.032) {
+      color = [32, 40, 30];
     }
 
-    // Front emblem star on the helmet dome
-    const star = starPolygon(-0.04, -0.14, 0.15, 0.062);
-    if (inPolygon(u, v, star)) {
+    // Centered tactical red star emblem
+    const star = starPolygon(0, -0.15, 0.15, 0.062);
+    if (inPolygon(uSigned, v, star)) {
       color = STAR_RED;
     }
-  }
-
-  // Chinstrap loop hanging slightly below the helmet
-  const strapDistLeft = distToSegment(u, v, -0.34, 0.16, -0.16, 0.42);
-  const strapDistRight = distToSegment(u, v, 0.30, 0.23, 0.14, 0.42);
-  const strapDistBottom = distToSegment(u, v, -0.16, 0.42, 0.14, 0.42);
-  const strapDist = Math.min(strapDistLeft, strapDistRight, strapDistBottom);
-  if (!inHelmetShell && v > 0.14 && strapDist <= 0.028) {
-    color = AMBER_DARK;
   }
 
   return color;
@@ -178,22 +168,28 @@ function render(size, scale = 1) {
   return encodePNG(size, px);
 }
 
-// Write crisp SVG favicon as well
+// Write crisp SVG favicon as well (Symmetrical Front View)
 const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#09090b"/>
-  <circle cx="32" cy="32" r="27" fill="#18181b" stroke="#d97706" stroke-width="2"/>
-  <!-- Chinstrap -->
-  <path d="M21 38 L26 48 H37 L42 40" stroke="#d97706" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- WWII Military Helmet Shell -->
-  <path d="M12 35 C12 20 20 13 32 13 C44 13 51 20 51 34 C53 35.5 54 37.5 54 39.5 C54 41.5 51.5 42.5 48 42 C38 40.5 24 39 14 38.5 C11 38.3 10 36.5 12 35 Z" fill="#fbbf24"/>
-  <!-- Helmet Flare Groove -->
-  <path d="M13.5 34.5 C24 35 38 36.2 50.5 38" stroke="#18181b" stroke-width="2.2" stroke-linecap="round"/>
-  <!-- Dome Highlight -->
-  <path d="M19 25 C21 19.5 26 16.8 31.5 16.5" stroke="#18181b" stroke-width="2" stroke-linecap="round"/>
-  <!-- Tactical Star Emblem -->
-  <polygon points="31,20 32.6,23.6 36.5,24 33.5,26.6 34.4,30.4 31,28.4 27.6,30.4 28.5,26.6 25.5,24 29.4,23.6" fill="#b84242"/>
-  <!-- Side Rivet -->
-  <circle cx="42.5" cy="33" r="1.4" fill="#18181b"/>
+  <rect width="64" height="64" rx="14" fill="#161B15"/>
+  <circle cx="32" cy="32" r="27" fill="#283224" stroke="#7A7F52" stroke-width="2"/>
+  <!-- Chinstrap (Symmetrical front loop) -->
+  <path d="M21 38.5 C21 47.5, 26 51, 32 51 C38 51, 43 47.5, 43 38.5" stroke="#C4A238" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <path d="M29.5 51 H34.5" stroke="#7A7F52" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- Inner helmet brow opening / shadow -->
+  <path d="M16 40 C21 43.5, 43 43.5, 48 40 C44 42.5, 20 42.5, 16 40 Z" fill="#161B15"/>
+  <!-- Helmet Shell (Symmetrical Front View) -->
+  <path d="M12.5 38.5 C13 28, 17 14, 32 14 C47 14, 51 28, 51.5 38.5 C51.5 40.5, 48 42, 44 41 C37 39.5, 27 39.5, 20 41 C16 42, 12.5 40.5, 12.5 38.5 Z" fill="#DFBF52"/>
+  <!-- Visor / Brow Arch Line -->
+  <path d="M14 37.5 C20 35.5, 44 35.5, 50 37.5" stroke="#20281E" stroke-width="2" stroke-linecap="round"/>
+  <!-- Lower rim line -->
+  <path d="M16 40.5 C23 39, 41 39, 48 40.5" stroke="#20281E" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Symmetrical Crown Highlight Arch -->
+  <path d="M22 26 C24 18.5, 28 16.5, 32 16.5 C36 16.5, 40 18.5, 42 26" stroke="#F4F1E8" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+  <!-- Symmetrical Rivets / Air Vents -->
+  <circle cx="18.5" cy="31.5" r="1.3" fill="#20281E"/>
+  <circle cx="45.5" cy="31.5" r="1.3" fill="#20281E"/>
+  <!-- Tactical Red Star Emblem -->
+  <polygon points="32,19.5 33.2,23.2 36.9,23.2 33.9,25.4 35,29.1 32,26.9 29,29.1 30.1,25.4 27.1,23.2 30.8,23.2" fill="#733028"/>
 </svg>
 `;
 

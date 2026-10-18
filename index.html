@@ -196,12 +196,24 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
           <rect width="64" height="64" rx="14" fill="#161B15"/>
           <circle cx="32" cy="32" r="27" fill="#283224" stroke="#7A7F52" strokeWidth="2"/>
-          <path d="M21 38 L26 48 H37 L42 40" stroke="#C4A238" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 35 C12 20 20 13 32 13 C44 13 51 20 51 34 C53 35.5 54 37.5 54 39.5 C54 41.5 51.5 42.5 48 42 C38 40.5 24 39 14 38.5 C11 38.3 10 36.5 12 35 Z" fill="#DFBF52"/>
-          <path d="M13.5 34.5 C24 35 38 36.2 50.5 38" stroke="#20281E" strokeWidth="2.2" strokeLinecap="round"/>
-          <path d="M19 25 C21 19.5 26 16.8 31.5 16.5" stroke="#20281E" strokeWidth="2" strokeLinecap="round"/>
-          <polygon points="31,20 32.6,23.6 36.5,24 33.5,26.6 34.4,30.4 31,28.4 27.6,30.4 28.5,26.6 25.5,24 29.4,23.6" fill="#733028"/>
-          <circle cx="42.5" cy="33" r="1.4" fill="#20281E"/>
+          {/* Chinstrap (Symmetrical front loop) */}
+          <path d="M21 38.5 C21 47.5, 26 51, 32 51 C38 51, 43 47.5, 43 38.5" stroke="#C4A238" strokeWidth="2.4" strokeLinecap="round" fill="none"/>
+          <path d="M29.5 51 H34.5" stroke="#7A7F52" strokeWidth="2.8" strokeLinecap="round"/>
+          {/* Inner helmet brow opening / shadow */}
+          <path d="M16 40 C21 43.5, 43 43.5, 48 40 C44 42.5, 20 42.5, 16 40 Z" fill="#161B15"/>
+          {/* Helmet Shell (Symmetrical Front View) */}
+          <path d="M12.5 38.5 C13 28, 17 14, 32 14 C47 14, 51 28, 51.5 38.5 C51.5 40.5, 48 42, 44 41 C37 39.5, 27 39.5, 20 41 C16 42, 12.5 40.5, 12.5 38.5 Z" fill="#DFBF52"/>
+          {/* Visor / Brow Arch Line */}
+          <path d="M14 37.5 C20 35.5, 44 35.5, 50 37.5" stroke="#20281E" strokeWidth="2" strokeLinecap="round"/>
+          {/* Lower rim line */}
+          <path d="M16 40.5 C23 39, 41 39, 48 40.5" stroke="#20281E" strokeWidth="1.2" strokeLinecap="round"/>
+          {/* Symmetrical Crown Highlight Arch */}
+          <path d="M22 26 C24 18.5, 28 16.5, 32 16.5 C36 16.5, 40 18.5, 42 26" stroke="#F4F1E8" strokeWidth="1.6" strokeLinecap="round" opacity="0.55"/>
+          {/* Symmetrical Rivets / Air Vents */}
+          <circle cx="18.5" cy="31.5" r="1.3" fill="#20281E"/>
+          <circle cx="45.5" cy="31.5" r="1.3" fill="#20281E"/>
+          {/* Tactical Red Star Emblem */}
+          <polygon points="32,19.5 33.2,23.2 36.9,23.2 33.9,25.4 35,29.1 32,26.9 29,29.1 30.1,25.4 27.1,23.2 30.8,23.2" fill="#733028"/>
         </svg>
       );
       const DownloadIcon = ({ className = "w-4 h-4" }) => (
@@ -2770,11 +2782,14 @@
             {/* ROSTER HEADER */}
             <div className="border-b-2 border-zinc-900 pb-3 mb-3 space-y-2">
               {/* Top Centered Logo + LIST MAKER */}
-              <div className="flex flex-col items-center justify-center">
-                <HelmetLogo className="w-11 h-11 rounded-xl shadow-xs" />
-                <div className="font-tactical font-black text-xs tracking-wider uppercase text-zinc-950 leading-none mt-1">
-                  LIST <span className="text-[#9A7B1C]">MAKER</span>
-                </div>
+              <div className="flex items-center justify-center gap-2 pb-1">
+                <span className="font-tactical font-black text-sm sm:text-base tracking-widest uppercase text-zinc-950 leading-none">
+                  LIST
+                </span>
+                <HelmetLogo className="w-8 h-8 rounded-lg shadow-xs" />
+                <span className="font-tactical font-black text-sm sm:text-base tracking-widest uppercase text-[#9A7B1C] leading-none">
+                  MAKER
+                </span>
               </div>
 
               {/* Bottom Header Row: Faction & List Name (Left) + Totals (Right) */}
@@ -3425,12 +3440,15 @@
 
             <div className="max-w-[1400px] mx-auto space-y-2 sm:space-y-2.5 no-print">
 
-              {/* TOP BRAND HEADER: CENTERED LOGO ONLY (LARGER ICON) */}
-              <div className="flex flex-col items-center justify-center pt-0.5">
-                <HelmetLogo className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl shrink-0 shadow-md" />
-                <div className="font-tactical font-black text-xs sm:text-sm tracking-wider uppercase text-white leading-none mt-1">
-                  LIST <span className="text-amber-400">MAKER</span>
-                </div>
+              {/* TOP BRAND HEADER: "LIST [LOGO] MAKER" */}
+              <div className="flex items-center justify-center gap-2 sm:gap-3 pt-1 pb-0.5 select-none">
+                <span className="font-tactical font-black text-lg sm:text-2xl tracking-widest uppercase text-white leading-none">
+                  LIST
+                </span>
+                <HelmetLogo className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl shrink-0 shadow-md" />
+                <span className="font-tactical font-black text-lg sm:text-2xl tracking-widest uppercase text-amber-400 leading-none">
+                  MAKER
+                </span>
               </div>
 
               {/* 0. APP BAR: FACTION (LEFT) & ACTIONS (RIGHT) */}
