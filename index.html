@@ -2023,7 +2023,7 @@
                   <span className="truncate font-bold text-[10.5px] sm:text-[11px] uppercase tracking-wider">{slot.label}</span>
                 </div>
                 {!isFilled && (
-                  <span className="font-mono font-bold text-[10px] bg-black/40 hover:bg-black/60 px-1 py-0.2 rounded shrink-0 transition-colors text-amber-300 leading-tight">
+                  <span className="font-mono font-bold text-[11px] shrink-0 text-amber-300 leading-tight select-none">
                     {isOpen ? '[-]' : '[+]'}
                   </span>
                 )}
@@ -3679,27 +3679,6 @@
                     )}
                   </div>
 
-                  {/* Period Selector (All / EW / MW / LW) */}
-                  <div className="flex items-center gap-0.5 sm:gap-1 bg-zinc-850 p-0.5 sm:p-1 rounded-lg border border-zinc-750">
-                    {PERIOD_OPTIONS.map((po) => {
-                      const activeP = (currentPlatoon.period || 'All') === po.id;
-                      return (
-                        <button
-                          key={po.id}
-                          type="button"
-                          title={po.title}
-                          onClick={() => handleSelectPlatoonPeriod(po.id)}
-                          className={`px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[10.5px] font-mono font-bold transition-colors cursor-pointer ${
-                            activeP
-                              ? 'bg-amber-400 text-black'
-                              : 'text-zinc-300 hover:text-white'
-                          }`}
-                        >
-                          {po.label}
-                        </button>
-                      );
-                    })}
-                  </div>
                 </div>
 
                 {/* Live Points & Order Dice (Tablet/Desktop; mobile uses fixed bottom bar) */}
