@@ -18,7 +18,9 @@
     <script>
       if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
         window.addEventListener('load', function () {
-          navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function () {});
+          navigator.serviceWorker.register('./sw.js', { scope: './' }).then(function (reg) {
+            reg.update();
+          }).catch(function () {});
         });
       }
     </script>
@@ -80,6 +82,7 @@
     <!-- Faction Data Modules (Scalable Multi-Faction Registry: window.EASYARMY_FACTIONS) -->
     <script src="./factions/soviet_union_app_data.js"></script>
     <script src="./factions/germany_app_data.js"></script>
+    <script src="./factions/japan_app_data.js"></script>
     <!-- Accounts & cloud-saved lists (Google Identity Services + Supabase) -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

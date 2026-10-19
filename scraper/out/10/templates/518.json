@@ -1,0 +1,3207 @@
+{
+ "template": {
+  "id": 518,
+  "country": "Japanese",
+  "name": "*v3 rulebook - Japanese - Armoured Platoon",
+  "source": "Version 3 Rulebook"
+ },
+ "title": "*v3 rulebook - Japanese - Armoured Platoon",
+ "source": "Version 3 Rulebook",
+ "layout": [
+  [
+   {
+    "section": "Command Vehicle",
+    "required": true,
+    "units": [
+     "Light Tanks",
+     "Medium Tanks",
+     "'Homeland Defence' Medium Tanks",
+     "Open-Topped Tank Destroyers",
+     "Type 3 Ho-Ni III Tank Destroyer",
+     "Armoured Cars",
+     "Tankettes",
+     "Type 98 AA Truck",
+     "Type 95 Kurogane (no transport)"
+    ]
+   },
+   {
+    "section": "Cmd Vehicle Options",
+    "required": true,
+    "units": [
+     "Command Vehicle rule"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": true,
+    "units": [
+     "Light Tanks",
+     "Medium Tanks",
+     "'Homeland Defence' Medium Tanks",
+     "Open-Topped Tank Destroyers",
+     "Type 3 Ho-Ni III Tank Destroyer",
+     "Armoured Cars",
+     "Tankettes",
+     "Type 98 AA Truck",
+     "Type 95 Kurogane (no transport)"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "Light Tanks",
+     "Medium Tanks",
+     "'Homeland Defence' Medium Tanks",
+     "Open-Topped Tank Destroyers",
+     "Type 3 Ho-Ni III Tank Destroyer",
+     "Armoured Cars",
+     "Tankettes",
+     "Type 98 AA Truck",
+     "Type 95 Kurogane (no transport)"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "Light Tanks",
+     "Medium Tanks",
+     "'Homeland Defence' Medium Tanks",
+     "Open-Topped Tank Destroyers",
+     "Type 3 Ho-Ni III Tank Destroyer",
+     "Armoured Cars",
+     "Tankettes",
+     "Type 98 AA Truck",
+     "Type 95 Kurogane (no transport)"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "Light Tanks",
+     "Medium Tanks",
+     "'Homeland Defence' Medium Tanks",
+     "Open-Topped Tank Destroyers",
+     "Type 3 Ho-Ni III Tank Destroyer",
+     "Armoured Cars",
+     "Tankettes",
+     "Type 98 AA Truck",
+     "Type 95 Kurogane (no transport)"
+    ]
+   }
+  ]
+ ],
+ "units": [
+  {
+   "section": "Command Vehicle",
+   "listName": "Light Tanks",
+   "name": "Light Tanks",
+   "source": "Version 3 Rulebook - page 274",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 76,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 95,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 114,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted low-velocity light anti-tank gun, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG (Ha-Go)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "One-man turret (Ha-Go and Ka-Mi only)\nLow-velocity light anti-tank gun (Ha-Go and Ka-Mi only)\nAmphibious (if Ka-Mi option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Remove the rear-facing MMG and gain the Amphibious rule for -5pts (Ka-Mi)",
+     "points": -5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the light anti-tank gun with a light howitzer and lose all special rules for +20pts (Ka-Nu)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Weapons": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Amphibious, One-man turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Type 4 Ke-Nu Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Type 95 Ha-Go Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "One-man turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Amphibious",
+     "ref": "v3 page 149",
+     "text": "An amphibious vehicle can move directly forward only over otherwise impassible deep water at half speed by means of an Advance action. A vehicle cannot make any other action whilst moving over water - it cannot reverse, cannot turn, and will ignore all rules that otherwise oblige it to reverse or go Down. A vehicle that is immobilised whilst in the water is destroyed along with any occupants. Vehicles can shoot whilst afloat accept hull mounted weapons on vehicles equipped with floatation screen"
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    },
+    {
+     "name": "Low velocity light anti-tank gun",
+     "ref": "v3 page 274",
+     "text": "This light anti-tank gun has a Pen rating of +3 instead of the usual +4."
+    },
+    {
+     "name": "One-man turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Medium Tanks",
+   "name": "Medium Tanks",
+   "source": "Version 3 Rulebook - page 274",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 92,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 115,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 138,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted low-velocity light anti-tank gun and 1 co-axial MMG (Ke-Ni)",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Low-velocity light anti-tank gun (Ke-Ni only)\nSlow (if Yi-Go option is taken)\nCommand vehicle (if Shi-Ki option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the main gun for a light anti-tank gun for +10pts (Ke-To)",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light howitzer, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG, gaining the Slow rule, for +10pts (Yi-Go)",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light howitzer, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG for +20pts (Chi-Ha)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted MMG and 1 forward-facing hull-mounted light anti-tank gun, gaining the Command Vehicle rule, for +20pts (Shi-Ki)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted medium anti-tank gun, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG for +40pts (Shinhoto Chi-Ha)",
+     "points": 40,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 2 Ke-To Light Tank",
+     "Weapons": "Type 2 Ke-To Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ke-To Light Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ke-To Light Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Type 89 Yi-Go Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Type 97 Chi-Ha Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97 Shi-Ki Command Tank",
+     "Weapons": "Type 97 Shi-Ki Command Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Command vehicle"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Shi-Ki Command Tank",
+     "Weapons": "Forward-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Shi-Ki Command Tank",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 98 Ke-Ni Light Tank",
+     "Weapons": "Type 98 Ke-Ni Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 98 Ke-Ni Light Tank",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 98 Ke-Ni Light Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Command vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    },
+    {
+     "name": "Low velocity light anti-tank gun",
+     "ref": "v3 page 274",
+     "text": "This light anti-tank gun has a Pen rating of +3 instead of the usual +4."
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "'Homeland Defence' Medium Tanks",
+   "name": "'Homeland Defence' Medium Tanks",
+   "source": "Version 3 Rulebook - page 275",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 156,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 195,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted medium anti-tank gun, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG (Chi-He)",
+    "Damage Value": "9+ (medium tank)",
+    "Special Rules": "Amphibious (if Ka-Chi option taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light howitzer, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG for -20pts (Ho-I)",
+     "points": -20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted medium anti-tank gun and 1 forward-facing hull-mounted MMG for -5pts (Chi-Nu)",
+     "points": -5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weaopns with 1 turret-mounted medium anti-tank gun with co-axial MMG and 1 forward-facing hull-mounted MMG, gaining the Amphibious special rule for free (Ka-Chi)",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Type 1 Chi-He Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Type 2 Ho-I Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 3 Chi-Nu Medium Tank",
+     "Weapons": "Type 3 Chi-Nu Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Chi-Nu Medium Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Chi-Nu Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "Amphibious"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Amphibious",
+     "ref": "v3 page 149",
+     "text": "An amphibious vehicle can move directly forward only over otherwise impassible deep water at half speed by means of an Advance action. A vehicle cannot make any other action whilst moving over water - it cannot reverse, cannot turn, and will ignore all rules that otherwise oblige it to reverse or go Down. A vehicle that is immobilised whilst in the water is destroyed along with any occupants. Vehicles can shoot whilst afloat accept hull mounted weapons on vehicles equipped with floatation screen"
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Open-Topped Tank Destroyers",
+   "name": "Open-Topped Tank Destroyers",
+   "source": "Version 3 Rulebook - page 275",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 104,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 130,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing medium anti-tank gun (Ho-Ni)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Open-topped\nVersatile (Ho-Ni only)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the main gun with a forward-facing heavy howitzer for +45pts (Ho-Ro)",
+     "points": 45,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 1 Ho-Ni Tank Destroyer",
+     "Weapons": "Type 1 Ho-Ni Tank Destroyer",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Open-topped, Versatile"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Ho-Ni Tank Destroyer",
+     "Weapons": "Forward-facing medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Ho-Ni Tank Destroyer",
+     "Weapons": "(firing as light howitzer)",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Front arc, Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 4 Ho-Ro Assault Gun",
+     "Weapons": "Type 4 Ho-Ro Assault Gun",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ho-Ro Assault Gun",
+     "Weapons": "Forward-facing heavy howitzer",
+     "Range": "72\"(42-84\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Front arc, Howitzer, HE (4\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (4\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +4, PIN: D3 (3D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Versatile",
+     "ref": "v3 page 259",
+     "text": "Can also fire as a light howitzer 48\"(30-60), HE (2\"). (declare what shell is loaded if setting on Ambush)"
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Type 3 Ho-Ni III Tank Destroyer",
+   "name": "Type 3 Ho-Ni III Tank Destroyer",
+   "source": "Version 3 Rulebook - page 275",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 108,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 135,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 casement-mounted forward-facing medium anti-tank gun",
+    "Damage Value": "8+ (light tank)"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 3 Ho-Ni III Tank Destroyer",
+     "Weapons": "Type 3 Ho-Ni III Tank Destroyer",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ho-Ni III Tank Destroyer",
+     "Weapons": "Forward-facing medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Front arc, HE (1\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Armoured Cars",
+   "name": "Armoured Cars",
+   "source": "Version 3 Rulebook - page 276",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 44,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 55,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 66,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted LMG (so-Mo, Sumida)",
+    "Damage Value": "7+ (armoured car)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace LMG with 2 turret-mounted MMGs for +15pts (Type 87)",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 87 Armoured Car",
+     "Weapons": "Type 87 Armoured Car",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 87 Armoured Car",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 87 Armoured Car",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 91 So-Mo armoured car",
+     "Weapons": "Type 91 So-Mo armoured car",
+     "Range": "Wheeled",
+     "Shots": "6",
+     "Pen": "7+",
+     "Special": "Railroad Wheels"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 91 So-Mo armoured car",
+     "Weapons": "Turret-mounted LMG",
+     "Range": "36\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Railroad Wheels",
+     "ref": "v3 page 62 AoIJ",
+     "text": "This vehicle treats any railroads on the battlefield as roads."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Tankettes",
+   "name": "Tankettes",
+   "source": "Version 3 Rulebook - page 276",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 56,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 70,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 84,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted MMG (Type 94)",
+    "Damage Value": "7+ (armoured car)",
+    "Special Rules": "Recce (Type 94 and Type 92 only)\nOne-man turret (if Type 97 Te-Ke option is taken)\nLow-velocity light anti-tank gun (if Type 97 Te-Ke option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Add 1 forward-facing hull-mounted HMG for +20pts (Type 92)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace MMG with low-velocity light anti-tank gun, gaining the One-man Turret special rule and losing the Recce special rule for +20pts (Type 97 Te-Ke)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 92 Tankette",
+     "Weapons": "Type 92 Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 92 Tankette",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 92 Tankette",
+     "Weapons": "Forward facing hull-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 94 Tankette",
+     "Weapons": "Type 94 Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 94 Tankette",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97 Te-Ke Tankette",
+     "Weapons": "Type 97 Te-Ke Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, One-man turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Te-Ke Tankette",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Low velocity light anti-tank gun",
+     "ref": "v3 page 274",
+     "text": "This light anti-tank gun has a Pen rating of +3 instead of the usual +4."
+    },
+    {
+     "name": "One-man turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Type 98 AA Truck",
+   "name": "Type 98 AA Truck",
+   "source": "Version 3 Rulebook - page 276",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 40,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 50,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 60,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 platform-mounted light autocannon with 360-degree arc of fire",
+    "Damage Value": "6+ (soft-skin)",
+    "Special Rules": "Flak"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 98 AA Truck",
+     "Weapons": "Type 98 AA Truck",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "Flak"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 98 AA Truck",
+     "Weapons": "Platform-mounted light autocannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\"), 360 degree arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Type 95 Kurogane (no transport)",
+   "name": "Type 95 Kurogane (no transport)",
+   "source": "Version 3 Rulebook - page 277",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 35,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 39,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 43,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 pintle-mounted MMG with 360-degree arc of fire",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "None",
+    "Tow": "None"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 95 Kurogane (no transport)",
+     "Weapons": "Type 95 Kurogane (no transport)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Kurogane (no transport)",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Cmd Vehicle Options",
+   "listName": "Command Vehicle rule",
+   "name": "Command Vehicle rule",
+   "source": "Version 3 Rulebook - page 188",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Command Vehicle special rule already included with primary vehicle",
+     "points": 0,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Add Command Vehicle special rule",
+     "points": 10,
+     "checked": false
+    }
+   ],
+   "profile": {},
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [],
+   "weaponNotes": [
+    "Command Vehicle special rule"
+   ],
+   "rules": [
+    {
+     "name": "Command Vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Light Tanks",
+   "name": "Light Tanks",
+   "source": "Version 3 Rulebook - page 274",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 76,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 95,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 114,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted low-velocity light anti-tank gun, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG (Ha-Go)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "One-man turret (Ha-Go and Ka-Mi only)\nLow-velocity light anti-tank gun (Ha-Go and Ka-Mi only)\nAmphibious (if Ka-Mi option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Remove the rear-facing MMG and gain the Amphibious rule for -5pts (Ka-Mi)",
+     "points": -5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the light anti-tank gun with a light howitzer and lose all special rules for +20pts (Ka-Nu)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Weapons": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Amphibious, One-man turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ka-Mi Light Amphibious Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Type 4 Ke-Nu Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ke-Nu Light Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Type 95 Ha-Go Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "One-man turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Ha-Go Light Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Amphibious",
+     "ref": "v3 page 149",
+     "text": "An amphibious vehicle can move directly forward only over otherwise impassible deep water at half speed by means of an Advance action. A vehicle cannot make any other action whilst moving over water - it cannot reverse, cannot turn, and will ignore all rules that otherwise oblige it to reverse or go Down. A vehicle that is immobilised whilst in the water is destroyed along with any occupants. Vehicles can shoot whilst afloat accept hull mounted weapons on vehicles equipped with floatation screen"
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    },
+    {
+     "name": "Low velocity light anti-tank gun",
+     "ref": "v3 page 274",
+     "text": "This light anti-tank gun has a Pen rating of +3 instead of the usual +4."
+    },
+    {
+     "name": "One-man turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Medium Tanks",
+   "name": "Medium Tanks",
+   "source": "Version 3 Rulebook - page 274",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 92,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 115,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 138,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted low-velocity light anti-tank gun and 1 co-axial MMG (Ke-Ni)",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Low-velocity light anti-tank gun (Ke-Ni only)\nSlow (if Yi-Go option is taken)\nCommand vehicle (if Shi-Ki option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the main gun for a light anti-tank gun for +10pts (Ke-To)",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light howitzer, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG, gaining the Slow rule, for +10pts (Yi-Go)",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light howitzer, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG for +20pts (Chi-Ha)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted MMG and 1 forward-facing hull-mounted light anti-tank gun, gaining the Command Vehicle rule, for +20pts (Shi-Ki)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted medium anti-tank gun, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG for +40pts (Shinhoto Chi-Ha)",
+     "points": 40,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 2 Ke-To Light Tank",
+     "Weapons": "Type 2 Ke-To Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ke-To Light Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ke-To Light Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Type 89 Yi-Go Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 89 Yi-Go Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Type 97 Chi-Ha Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Chi-Ha Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97 Shi-Ki Command Tank",
+     "Weapons": "Type 97 Shi-Ki Command Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Command vehicle"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Shi-Ki Command Tank",
+     "Weapons": "Forward-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Shi-Ki Command Tank",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97-Kai Shinhoto Chi-Ha Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 98 Ke-Ni Light Tank",
+     "Weapons": "Type 98 Ke-Ni Light Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 98 Ke-Ni Light Tank",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 98 Ke-Ni Light Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Command vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    },
+    {
+     "name": "Low velocity light anti-tank gun",
+     "ref": "v3 page 274",
+     "text": "This light anti-tank gun has a Pen rating of +3 instead of the usual +4."
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "'Homeland Defence' Medium Tanks",
+   "name": "'Homeland Defence' Medium Tanks",
+   "source": "Version 3 Rulebook - page 275",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 156,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 195,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted medium anti-tank gun, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG (Chi-He)",
+    "Damage Value": "9+ (medium tank)",
+    "Special Rules": "Amphibious (if Ka-Chi option taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light howitzer, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG for -20pts (Ho-I)",
+     "points": -20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted medium anti-tank gun and 1 forward-facing hull-mounted MMG for -5pts (Chi-Nu)",
+     "points": -5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weaopns with 1 turret-mounted medium anti-tank gun with co-axial MMG and 1 forward-facing hull-mounted MMG, gaining the Amphibious special rule for free (Ka-Chi)",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Type 1 Chi-He Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Chi-He Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Type 2 Ho-I Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Turret-mounted light howitzer",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Turret-mounted rear-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Turret rear arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 2 Ho-I Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 3 Chi-Nu Medium Tank",
+     "Weapons": "Type 3 Chi-Nu Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Chi-Nu Medium Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Chi-Nu Medium Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "Amphibious"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ka-Chi Medium Amphibious Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Amphibious",
+     "ref": "v3 page 149",
+     "text": "An amphibious vehicle can move directly forward only over otherwise impassible deep water at half speed by means of an Advance action. A vehicle cannot make any other action whilst moving over water - it cannot reverse, cannot turn, and will ignore all rules that otherwise oblige it to reverse or go Down. A vehicle that is immobilised whilst in the water is destroyed along with any occupants. Vehicles can shoot whilst afloat accept hull mounted weapons on vehicles equipped with floatation screen"
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Open-Topped Tank Destroyers",
+   "name": "Open-Topped Tank Destroyers",
+   "source": "Version 3 Rulebook - page 275",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 104,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 130,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing medium anti-tank gun (Ho-Ni)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Open-topped\nVersatile (Ho-Ni only)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the main gun with a forward-facing heavy howitzer for +45pts (Ho-Ro)",
+     "points": 45,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 1 Ho-Ni Tank Destroyer",
+     "Weapons": "Type 1 Ho-Ni Tank Destroyer",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Open-topped, Versatile"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Ho-Ni Tank Destroyer",
+     "Weapons": "Forward-facing medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 1 Ho-Ni Tank Destroyer",
+     "Weapons": "(firing as light howitzer)",
+     "Range": "48\"(30-60\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Front arc, Howitzer, HE (2\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 4 Ho-Ro Assault Gun",
+     "Weapons": "Type 4 Ho-Ro Assault Gun",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 4 Ho-Ro Assault Gun",
+     "Weapons": "Forward-facing heavy howitzer",
+     "Range": "72\"(42-84\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Front arc, Howitzer, HE (4\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (2\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (4\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +4, PIN: D3 (3D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Versatile",
+     "ref": "v3 page 259",
+     "text": "Can also fire as a light howitzer 48\"(30-60), HE (2\"). (declare what shell is loaded if setting on Ambush)"
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Type 3 Ho-Ni III Tank Destroyer",
+   "name": "Type 3 Ho-Ni III Tank Destroyer",
+   "source": "Version 3 Rulebook - page 275",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 108,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 135,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 casement-mounted forward-facing medium anti-tank gun",
+    "Damage Value": "8+ (light tank)"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 3 Ho-Ni III Tank Destroyer",
+     "Weapons": "Type 3 Ho-Ni III Tank Destroyer",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 3 Ho-Ni III Tank Destroyer",
+     "Weapons": "Forward-facing medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Front arc, HE (1\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Armoured Cars",
+   "name": "Armoured Cars",
+   "source": "Version 3 Rulebook - page 276",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 44,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 55,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 66,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted LMG (so-Mo, Sumida)",
+    "Damage Value": "7+ (armoured car)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace LMG with 2 turret-mounted MMGs for +15pts (Type 87)",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 87 Armoured Car",
+     "Weapons": "Type 87 Armoured Car",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 87 Armoured Car",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 87 Armoured Car",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 91 So-Mo armoured car",
+     "Weapons": "Type 91 So-Mo armoured car",
+     "Range": "Wheeled",
+     "Shots": "6",
+     "Pen": "7+",
+     "Special": "Railroad Wheels"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 91 So-Mo armoured car",
+     "Weapons": "Turret-mounted LMG",
+     "Range": "36\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Railroad Wheels",
+     "ref": "v3 page 62 AoIJ",
+     "text": "This vehicle treats any railroads on the battlefield as roads."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Tankettes",
+   "name": "Tankettes",
+   "source": "Version 3 Rulebook - page 276",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 56,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 70,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 84,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted MMG (Type 94)",
+    "Damage Value": "7+ (armoured car)",
+    "Special Rules": "Recce (Type 94 and Type 92 only)\nOne-man turret (if Type 97 Te-Ke option is taken)\nLow-velocity light anti-tank gun (if Type 97 Te-Ke option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Add 1 forward-facing hull-mounted HMG for +20pts (Type 92)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace MMG with low-velocity light anti-tank gun, gaining the One-man Turret special rule and losing the Recce special rule for +20pts (Type 97 Te-Ke)",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 92 Tankette",
+     "Weapons": "Type 92 Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 92 Tankette",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 92 Tankette",
+     "Weapons": "Forward facing hull-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 94 Tankette",
+     "Weapons": "Type 94 Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 94 Tankette",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 97 Te-Ke Tankette",
+     "Weapons": "Type 97 Te-Ke Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, One-man turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 97 Te-Ke Tankette",
+     "Weapons": "Turret-mounted low-velocity light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+3",
+     "Special": "Low velocity light anti-tank gun, HE (1\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Low velocity light anti-tank gun",
+     "ref": "v3 page 274",
+     "text": "This light anti-tank gun has a Pen rating of +3 instead of the usual +4."
+    },
+    {
+     "name": "One-man turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Type 98 AA Truck",
+   "name": "Type 98 AA Truck",
+   "source": "Version 3 Rulebook - page 276",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 40,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 50,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 60,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 platform-mounted light autocannon with 360-degree arc of fire",
+    "Damage Value": "6+ (soft-skin)",
+    "Special Rules": "Flak"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 98 AA Truck",
+     "Weapons": "Type 98 AA Truck",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "Flak"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 98 AA Truck",
+     "Weapons": "Platform-mounted light autocannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\"), 360 degree arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Type 95 Kurogane (no transport)",
+   "name": "Type 95 Kurogane (no transport)",
+   "source": "Version 3 Rulebook - page 277",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 35,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 39,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 43,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 pintle-mounted MMG with 360-degree arc of fire",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "None",
+    "Tow": "None"
+   },
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 95 Kurogane (no transport)",
+     "Weapons": "Type 95 Kurogane (no transport)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Type 95 Kurogane (no transport)",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  }
+ ]
+}

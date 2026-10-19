@@ -1,0 +1,2819 @@
+{
+ "template": {
+  "id": 693,
+  "country": "Japanese",
+  "name": "*v3 Armies of Imperial Japan - Engineer (LW)",
+  "source": "Armies of Imperial Japan (v3)"
+ },
+ "title": "*v3 Armies of Imperial Japan - Engineer (LW)",
+ "source": "Armies of Imperial Japan (v3)",
+ "layout": [
+  [
+   {
+    "section": "Platoon Commander",
+    "required": true,
+    "units": [
+     "Platoon Commander"
+    ]
+   },
+   {
+    "section": "Engineers",
+    "required": true,
+    "units": [
+     "IJA Engineer Squad",
+     "Pioneers"
+    ]
+   },
+   {
+    "section": "Engineers",
+    "required": true,
+    "units": [
+     "IJA Engineer Squad",
+     "Pioneers"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Engineers",
+    "required": false,
+    "units": [
+     "IJA Engineer Squad",
+     "Pioneers",
+     "Soko Sagyo SS-KI Armoured Work Vehicle"
+    ]
+   },
+   {
+    "section": "Engineers",
+    "required": false,
+    "units": [
+     "IJA Engineer Squad",
+     "Pioneers"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Flamethrower",
+    "required": false,
+    "units": [
+     "Flamethrower Team"
+    ]
+   },
+   {
+    "section": "Flamethrower",
+    "required": false,
+    "units": [
+     "Flamethrower Team"
+    ]
+   },
+   {
+    "section": "Flamethrower",
+    "required": false,
+    "units": [
+     "Flamethrower Team"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   },
+   {
+    "section": "Transports",
+    "required": false,
+    "units": [
+     "General-purpose Truck",
+     "Light Truck",
+     "Type 1 Ho-Ha Half-Track",
+     "Su-Ki 2-ton Amphibious Truck",
+     "Type 1 Ho-Ki Carrier",
+     "Type 95 Kurogane",
+     "Type 98 So-Da Carrier",
+     "Type 98 Shi-Ke Prime Mover",
+     "Type 98 Ro-Ke Prime Mover",
+     "Daihatsu-Class Landing Craft",
+     "Toku Daihatsu-Class Landing Craft"
+    ]
+   }
+  ]
+ ],
+ "units": [
+  {
+   "section": "Platoon Commander",
+   "listName": "Platoon Commander",
+   "name": "Platoon Commander",
+   "source": "Armies of Imperial Japan (v3) - page 26",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 21,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 30,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 39,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Composition": "1 Officer",
+    "Weapons": "Pistol and Shin Gunto",
+    "Special Rules": "Yamato Damashii (if taken)\nIntelligence (it taken)"
+   },
+   "options": [
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": "The officer may be accompanied by up to 4 men with rifles at a cost of",
+     "text": "+7pts each (Inexperienced)",
+     "points": 7,
+     "per": "each",
+     "min": 1,
+     "max": 4,
+     "selectName": "OptionsDD11",
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": "The officer may be accompanied by up to 4 men with rifles at a cost of",
+     "text": "+10pts each (Regular)",
+     "points": 10,
+     "per": "each",
+     "min": 1,
+     "max": 4,
+     "selectName": "OptionsDD12",
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "checkbox",
+     "name": "Option13",
+     "group": "The officer may be accompanied by up to 4 men with rifles at a cost of",
+     "text": "+13pts each (Veteran)",
+     "points": 13,
+     "per": "each",
+     "min": 1,
+     "max": 4,
+     "selectName": "OptionsDD13",
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "checkbox",
+     "name": "Option14",
+     "group": null,
+     "text": "The officer may replace their pistol with a submachine gun for +3pts",
+     "points": 3,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "checkbox",
+     "name": "Option15",
+     "group": null,
+     "text": "The officer may replace their pistol with a rifle for +1pts",
+     "points": 1,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 16,
+     "input": "checkbox",
+     "name": "Option16",
+     "group": null,
+     "text": "Any model may replace their rifle with a pistol for -1pt each",
+     "points": -1,
+     "per": "each",
+     "min": 1,
+     "max": 4,
+     "selectName": "OptionsDD16",
+     "disabled": false
+    },
+    {
+     "id": 17,
+     "input": "checkbox",
+     "name": "Option17",
+     "group": null,
+     "text": "Up to 1 man may replace their rifle with a submachine gun for +4pts",
+     "points": 4,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 18,
+     "input": "checkbox",
+     "name": "Option18",
+     "group": null,
+     "text": "One man may replace their rifle with a pistol and Battle Flag for +25pts",
+     "points": 25,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 19,
+     "input": "checkbox",
+     "name": "Option19",
+     "group": null,
+     "text": "One man may be given a Signaling Bugle in addition to their weapons for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 20,
+     "input": "checkbox",
+     "name": "Option20",
+     "group": null,
+     "text": "One officer in the entire force may have Intelligence training for +50pts.",
+     "points": 50,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 21,
+     "input": "checkbox",
+     "name": "Option21",
+     "group": null,
+     "text": "HQ Options: Any unit may be given bicycles for +1pt per model",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 22,
+     "input": "checkbox",
+     "name": "Option22",
+     "group": null,
+     "text": "HQ Options: Any unit may be given horses for +3pts per model",
+     "points": 3,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 31,
+     "input": "checkbox",
+     "name": "Option31",
+     "group": "Yamato Damashii",
+     "text": "SNLF commanders (-5pts/-10pts)",
+     "points": -5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 32,
+     "input": "checkbox",
+     "name": "Option32",
+     "group": "Yamato Damashii",
+     "text": "SNLF iron discipline (Veteran, +1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 33,
+     "input": "checkbox",
+     "name": "Option33",
+     "group": "Yamato Damashii",
+     "text": "Paratroopers (Veteran, Tough Fighters +1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 34,
+     "input": "checkbox",
+     "name": "Option34",
+     "group": "Yamato Damashii",
+     "text": "Paratrooper bicycles (+1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 35,
+     "input": "checkbox",
+     "name": "Option35",
+     "group": "Yamato Damashii",
+     "text": "Veteran Jungle Fighters(Veteran, +3pts per model)",
+     "points": 3,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 36,
+     "input": "checkbox",
+     "name": "Option36",
+     "group": "Yamato Damashii",
+     "text": "Home Defence (Inexperienced infantry, Inexperienced or Regular officers, +0pts)",
+     "points": 0,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 37,
+     "input": "checkbox",
+     "name": "Option37",
+     "group": "Yamato Damashii",
+     "text": "If Paratroopers, one model may replace their rifle with a submachine gun for +3pts",
+     "points": 3,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-platoon-commander.png",
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Pistol",
+     "Range": "6\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Submachine gun",
+     "Range": "12\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "Assault"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Officer with Pistol",
+     "Range": "6\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Officer with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Officer with SMG",
+     "Range": "12\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "Assault"
+    }
+   ],
+   "weaponNotes": [
+    "Entire squad mounted upon bicycles — Bicycles",
+    "Entire squad mounted upon horses — Cavalry",
+    "Home Defence — Green, Unpredictable",
+    "Intelligence — Intelligence",
+    "Officer has Shin Gunto in addition to other weapons — Shin Gunto, Tough Fighters",
+    "One of the men has Signaling Bugle in addtion to their weapons — Signaling Bugle",
+    "One of the men with pistol also carrying Battle Flag — Battle Flag",
+    "Paratroopers — Tough Fighters",
+    "SNLF (Veteran) — Iron Discipline",
+    "SNLF Commander — SNLF Commander",
+    "Veteran Jungle Fighters — Behind enemy lines, Ambush Tactics, Fieldcraft (artillery)"
+   ],
+   "rules": [
+    {
+     "name": "Ambush Tactics",
+     "ref": "v3 page 23 AoGB",
+     "text": "When deployed on the table, these units may start the game on Ambush. (also page 24 AoIJ)"
+    },
+    {
+     "name": "Assault",
+     "ref": "v3 page 96",
+     "text": "This weapon suffers no penalty 'to hit' when moving and shooting. In addition, infantry models armed with an assault weapon count as having the Tough Fighters special rule (Tough Fighters: When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage)"
+    },
+    {
+     "name": "Battle Flag",
+     "ref": "v3 page 25 AoIJ",
+     "text": "Any Infantry or Artillery unit within 12” and line of sight to a Battle Flag adds +1 to its morale value. Only one Battle Flag may be included in a force. In addition, if you roll 1 on the Air Strike table, the enemy cannot target a unit that is within 12” of a flag. A Battle Flag cannot be given to a unit’s leader (e.g. NCOs, officers, etc), or to a model with a Signalling Bugle."
+    },
+    {
+     "name": "Behind enemy lines",
+     "ref": "v3",
+     "text": "When outflanking as described on page 172, unit ignores the -1 modifier to the order test for coming onto the table."
+    },
+    {
+     "name": "Bicycles",
+     "ref": "v3 page 119",
+     "text": "When moving on roads, they double their Run move to 24\" (cannot be used to Assault). The first time they receive any order other than Run, or if they receive a Pin marker, they dismount and abandon their bicycles for the rest of the game."
+    },
+    {
+     "name": "Cavalry",
+     "ref": "v3 page 119",
+     "text": "Can dismount and fight on foot as infantry, from which point none of these rules apply - need to replace mounted figures with non-mounted figures. When cavalry, moves 9\" at an Advance, 18\" at Run. Cannot enter buildings or board transport vehicles unless they have dismounted. Cannot gain advantages of Down, and their cover saves are always reduced by 1. Can escape as a recce vehicle (at normal speed, not double speed). Can dismount as part of Advance move - cannot remount. Can only fire pistol or carbine (treated as pistol) when mounted. While mounted, cavalry have Tough Fighters special rule (p122- When fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage). Can regroup up to 2D6\" after combat."
+    },
+    {
+     "name": "Fieldcraft (artillery)",
+     "ref": "v3 page 24 AoIJ",
+     "text": "(v3 page 120) Treat rough ground as open ground instead. (AoIJ: this applies to light howitzers and light anti-tank guns too, but not to other artillery units)."
+    },
+    {
+     "name": "Green",
+     "ref": "v3 page 120",
+     "text": "Green units are inexperienced and have a morale rating of 8. The first time the unit suffers a casualty, roll a die (after taking any morale checks caused by the attack). On a roll of a 1 the unit suffers an additional D6 pin markers and goes Down. There is no further effect. On a 2, 3, 4, or 5 the unit fights on. There is not further effect. On a 6 the unit is immediately up-rated to Regular with a morale value of 9 for the rest of the battle."
+    },
+    {
+     "name": "Intelligence",
+     "ref": "v3 page 26 AoG",
+     "text": "Once per game, at the beginning of any turn (as long as the Intelligence Officer is on the table), the Officer may act on intelligence gathered about the enemy force before the first die is drawn from the dice bag. Roll a D6, a Veteran Officer receives a +1 modifier on the roll, an Inexperienced one receives a -1 modifier. On a 4+, the player using this ability may choose a die from the bag for the first activation. If both players are doing this in the same turn and both succeed in this roll, the results cancel out and the dice is randomly drawn, as normal. Only one Officer in the entire force may have Intelligence training."
+    },
+    {
+     "name": "Iron Discipline",
+     "ref": "v3 page 23 AoGB",
+     "text": "May remove 2 pin markers rather than the usual 1 if an order test is passed."
+    },
+    {
+     "name": "Shin Gunto",
+     "ref": "v3 page 25 AoIJ",
+     "text": "Any model armed with a sword (Shin Gunto) gains the Tough Fighters special rule. If the model already has the Tough Fighters special rule, it rolls an additional dice in close quarters against infantry and artillery units."
+    },
+    {
+     "name": "Signaling Bugle",
+     "ref": "v3 page 25 AoIJ",
+     "text": "All Inexperienced enemy Infantry and Artillery units within 36” of a Signalling Bugle suffer from a -1 modifier to their morale value, as long as they have no line of sight to the model carrying the Bugle. Only one Signalling Bugle may be included in a force. A Signalling Bugle cannot be given to a unit’s leader (e.g. NCOs, officers, etc), or to a model with a Battle Flag."
+    },
+    {
+     "name": "SNLF Commander",
+     "ref": "v3 page 24 AoIJ",
+     "text": "SNLF platoon commanders reduce their costs by 5pts and SNLF company commanders reduce their cost by 10pts. On the other hand, their 'You Men Snap to Action' ability (including when executing a Banzai! order) only affects other SNLF units, amphibious vehicles and all transport vehicles that are transporting at least one SNLF unit."
+    },
+    {
+     "name": "Tough Fighters",
+     "ref": "v3 page 122",
+     "text": "When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage."
+    },
+    {
+     "name": "Unpredictable",
+     "ref": "v3 page 24 AoIJ",
+     "text": "Any time a Home Defence unit fails an orders test, roll a D6 and consult the chart below:1-2: The unit immediately goes Down, in addition it takes D3 pin markers.3-4: The unit immediately goes Down as normal.5-6: The unit immediately makes a Run order towards the nearest visible enemy unit. If this move would bring them into contact with that unit, it counts as an assault into close quarters."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Engineers",
+   "listName": "IJA Engineer Squad",
+   "name": "IJA Engineer Squad",
+   "source": "Armies of Imperial Japan (v3) - page 38",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 40,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 55,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 70,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Composition": "1 NCO and 4 men",
+    "Weapons": "Rifles",
+    "Special Rules": "Engineers\nTank Hunters (if anti-tank grenades taken)\nYamato Damashii (if option taken)"
+   },
+   "options": [
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": "Add up to 7 men with rifles at:",
+     "text": "+8pts each (Inexperienced)",
+     "points": 8,
+     "per": "each",
+     "min": 1,
+     "max": 7,
+     "selectName": "OptionsDD11",
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": "Add up to 7 men with rifles at:",
+     "text": "+11pts each (Regular)",
+     "points": 11,
+     "per": "each",
+     "min": 1,
+     "max": 7,
+     "selectName": "OptionsDD12",
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "checkbox",
+     "name": "Option13",
+     "group": "Add up to 7 men with rifles at:",
+     "text": "+14pts each (Veteran)",
+     "points": 14,
+     "per": "each",
+     "min": 1,
+     "max": 7,
+     "selectName": "OptionsDD13",
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "checkbox",
+     "name": "Option14",
+     "group": null,
+     "text": "The NCO may replace their rifle with a submachine gun for +4pts",
+     "points": 4,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "checkbox",
+     "name": "Option15",
+     "group": null,
+     "text": "The NCO may have a Shin Gunto for +1pt",
+     "points": 1,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 16,
+     "input": "checkbox",
+     "name": "Option16",
+     "group": null,
+     "text": "The NCO may replace their rifle with a Shin Gunto and a pistol for free",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 17,
+     "input": "checkbox",
+     "name": "Option17",
+     "group": null,
+     "text": "Up to 1 man may replace their rifle with a light machine gun for +15pts each - another man becomes the loader",
+     "points": 15,
+     "per": "each",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 18,
+     "input": "checkbox",
+     "name": "Option18",
+     "group": null,
+     "text": "The squad may be given anti-tank grenades for +2pts per figure",
+     "points": 2,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 19,
+     "input": "checkbox",
+     "name": "Option19",
+     "group": null,
+     "text": "Up to 1 man may take a demolition charge in addition to other weapons for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 31,
+     "input": "checkbox",
+     "name": "Option31",
+     "group": "Yamato Damashii",
+     "text": "SNLF (non-Veteran)",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 32,
+     "input": "checkbox",
+     "name": "Option32",
+     "group": "Yamato Damashii",
+     "text": "SNLF iron discipline (Veteran, +1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 33,
+     "input": "checkbox",
+     "name": "Option33",
+     "group": "Yamato Damashii",
+     "text": "Paratroopers (Veteran, Tough Fighters +1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 34,
+     "input": "checkbox",
+     "name": "Option34",
+     "group": "Yamato Damashii",
+     "text": "Paratrooper bicycles (+1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 35,
+     "input": "checkbox",
+     "name": "Option35",
+     "group": "Yamato Damashii",
+     "text": "Veteran Jungle Fighters(Veteran, +3pts per model)",
+     "points": 3,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 36,
+     "input": "checkbox",
+     "name": "Option36",
+     "group": "Yamato Damashii",
+     "text": "Home Defence (Inexperienced infantry, Inexperienced or Regular officers, +0pts)",
+     "points": 0,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 37,
+     "input": "checkbox",
+     "name": "Option37",
+     "group": "Yamato Damashii",
+     "text": "If Paratroopers, NCO may replace their rifle with a submachine gun for +3pts",
+     "points": 3,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Light Machine gun (requires loader)",
+     "Range": "36\"",
+     "Shots": "4",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "men have demolition charge in addtion to other weapons",
+     "Range": "3\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "HE (3\"), One-shot, Demolition charge"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "NCO with Pistol",
+     "Range": "6\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "NCO with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "NCO with Submachine gun",
+     "Range": "12\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "Assault"
+    }
+   ],
+   "weaponNotes": [
+    "Engineers — Engineers",
+    "Entire squad equipped with anti-tank grenades — Tank hunters",
+    "Entire squad mounted upon bicycles — Bicycles",
+    "Home Defence — Green, Unpredictable",
+    "NCO has Shin Gunto in addition to other weapons — Shin Gunto, Tough Fighters",
+    "Paratroopers — Tough Fighters",
+    "SNLF (non-Veteran)",
+    "SNLF (Veteran) — Iron Discipline",
+    "Veteran Jungle Fighters — Behind enemy lines, Ambush Tactics, Fieldcraft (artillery)"
+   ],
+   "rules": [
+    {
+     "name": "Ambush Tactics",
+     "ref": "v3 page 23 AoGB",
+     "text": "When deployed on the table, these units may start the game on Ambush. (also page 24 AoIJ)"
+    },
+    {
+     "name": "Assault",
+     "ref": "v3 page 96",
+     "text": "This weapon suffers no penalty 'to hit' when moving and shooting. In addition, infantry models armed with an assault weapon count as having the Tough Fighters special rule (Tough Fighters: When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage)"
+    },
+    {
+     "name": "Behind enemy lines",
+     "ref": "v3",
+     "text": "When outflanking as described on page 172, unit ignores the -1 modifier to the order test for coming onto the table."
+    },
+    {
+     "name": "Bicycles",
+     "ref": "v3 page 119",
+     "text": "When moving on roads, they double their Run move to 24\" (cannot be used to Assault). The first time they receive any order other than Run, or if they receive a Pin marker, they dismount and abandon their bicycles for the rest of the game."
+    },
+    {
+     "name": "Demolition charge",
+     "ref": "v3 page 24 AoG",
+     "text": "A unit may place a demolition charge once per game by taking a Fire order. Place a marker (on a 25mm round base) in base contact with a single man in the firing unit. Once placed, if the placing unit is assaulted by an enemy, or destroyed in any way, the marker is removed. To trigger the charge, the unit must make a Run order in a subsequent turn and move at least 3\" away (this cannot be used to assault an enemy unit). After the Run move is complete, the demolition charge immediately explodes, with the 3\" template centred on the marker. If the marker is placed in contact with a building, when it explodes treat this as a direct hit by a 3\" HE weapon against the building (and any unit inside) instead of using the template. If the marker is placed in contact with a vehicle, and it explodes before the vehicle moves away, treat this as a direct hit by a 3\" HE weapon against the vehicle instead of using the template."
+    },
+    {
+     "name": "Engineers",
+     "ref": "v3 page 120",
+     "text": "When a unit of engineers assaults a building, the defenders cannot benefit from the defensive position bonus (see apge 110). In addition (page 296, 297): Engineering units attempting to cut barbed wire are automatically successful, but still require a Down order to do so. Combat engineers can clear an adjacent anti-tank ditch by receiving a Down order, but not as a reaction to enemy fire. Always benefit from re-roll when moving at an Advance even when crossing the enemy's minefields. Engineers receive +1 to clearing minefields (page 299)."
+    },
+    {
+     "name": "Fieldcraft (artillery)",
+     "ref": "v3 page 24 AoIJ",
+     "text": "(v3 page 120) Treat rough ground as open ground instead. (AoIJ: this applies to light howitzers and light anti-tank guns too, but not to other artillery units)."
+    },
+    {
+     "name": "Green",
+     "ref": "v3 page 120",
+     "text": "Green units are inexperienced and have a morale rating of 8. The first time the unit suffers a casualty, roll a die (after taking any morale checks caused by the attack). On a roll of a 1 the unit suffers an additional D6 pin markers and goes Down. There is no further effect. On a 2, 3, 4, or 5 the unit fights on. There is not further effect. On a 6 the unit is immediately up-rated to Regular with a morale value of 9 for the rest of the battle."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Iron Discipline",
+     "ref": "v3 page 23 AoGB",
+     "text": "May remove 2 pin markers rather than the usual 1 if an order test is passed."
+    },
+    {
+     "name": "One-shot",
+     "ref": "v3-page 102",
+     "text": "This is a disposable weapon that can be fired only once per game. Once fired, replace the model with another model that does not carry the disposable weapon, armed with either a pistol or rifle. (09-2026 errata) Once fired, replace the model with another model armed in the same way but that no longer carries the disposable weapon. If a unit of infantry includes models armeed with one-shot weapons, then each of these models is allowed to fire its one-shot weapon against a separate enemy unit. Declare the targets for all weapons that are firing at a different target before proceeding to roll for all of them separately."
+    },
+    {
+     "name": "Shin Gunto",
+     "ref": "v3 page 25 AoIJ",
+     "text": "Any model armed with a sword (Shin Gunto) gains the Tough Fighters special rule. If the model already has the Tough Fighters special rule, it rolls an additional dice in close quarters against infantry and artillery units."
+    },
+    {
+     "name": "Tank hunters",
+     "ref": "v3 page 122",
+     "text": "If a tank hunter unit wins an assault and scores damage against an armoured vehicle, the effect is resolved on the Damage Result table as for a normal anti-tank penetration rather than as for superficial damage. In addition, these troops don't suffer from the Tank Fear rule when assaulting fully-enclosed armoured vehicles."
+    },
+    {
+     "name": "Tough Fighters",
+     "ref": "v3 page 122",
+     "text": "When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage."
+    },
+    {
+     "name": "Unpredictable",
+     "ref": "v3 page 24 AoIJ",
+     "text": "Any time a Home Defence unit fails an orders test, roll a D6 and consult the chart below:1-2: The unit immediately goes Down, in addition it takes D3 pin markers.3-4: The unit immediately goes Down as normal.5-6: The unit immediately makes a Run order towards the nearest visible enemy unit. If this move would bring them into contact with that unit, it counts as an assault into close quarters."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Engineers",
+   "listName": "Pioneers",
+   "name": "Pioneers",
+   "source": "Armies of Imperial Japan (v3) - page 39",
+   "experience": [
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 55,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 70,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Composition": "1 NCO and 4 men",
+    "Weapons": "Rifles",
+    "Special Rules": "Engineers\nTank Hunters (if anti-tank grenades taken)"
+   },
+   "options": [
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": "Add up to 7 men with rifles at:",
+     "text": "+11pts each (Regular)",
+     "points": 11,
+     "per": "each",
+     "min": 1,
+     "max": 7,
+     "selectName": "OptionsDD12",
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "checkbox",
+     "name": "Option13",
+     "group": "Add up to 7 men with rifles at:",
+     "text": "+14pts each (Veteran)",
+     "points": 14,
+     "per": "each",
+     "min": 1,
+     "max": 7,
+     "selectName": "OptionsDD13",
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "checkbox",
+     "name": "Option14",
+     "group": null,
+     "text": "The NCO may replace their rifle with a submachine gun for +4pts",
+     "points": 4,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "checkbox",
+     "name": "Option15",
+     "group": null,
+     "text": "The NCO may have a Shin Gunto for +1pt",
+     "points": 1,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 16,
+     "input": "checkbox",
+     "name": "Option16",
+     "group": null,
+     "text": "The NCO may replace their rifle with a Shin Gunto and a pistol for free",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 17,
+     "input": "checkbox",
+     "name": "Option17",
+     "group": null,
+     "text": "Up to 1 man may replace their rifle with a light machine gun for +15pts each - another man becomes the loader",
+     "points": 15,
+     "per": "each",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 18,
+     "input": "checkbox",
+     "name": "Option18",
+     "group": null,
+     "text": "Up to 1 man may replace their rifle with a flamethrower for +30pts - another man becomes the assistant",
+     "points": 30,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 19,
+     "input": "checkbox",
+     "name": "Option19",
+     "group": null,
+     "text": "The squad may be given anti-tank grenades for +2pts per figure",
+     "points": 2,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Flamethrower (requires assistant)",
+     "Range": "6\"",
+     "Shots": "1(D6)",
+     "Pen": "+2",
+     "Special": "Team (2 men), Flamethrower"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Light Machine gun (requires loader)",
+     "Range": "36\"",
+     "Shots": "4",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Infantry with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "NCO with Pistol",
+     "Range": "6\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "NCO with Rifle",
+     "Range": "24\"",
+     "Shots": "1",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "NCO with Submachine gun",
+     "Range": "12\"",
+     "Shots": "2",
+     "Pen": "n/a",
+     "Special": "Assault"
+    }
+   ],
+   "weaponNotes": [
+    "Engineers — Engineers",
+    "Entire squad equipped with anti-tank grenades — Tank hunters",
+    "NCO has Shin Gunto in addition to other weapons — Shin Gunto, Tough Fighters"
+   ],
+   "rules": [
+    {
+     "name": "Assault",
+     "ref": "v3 page 96",
+     "text": "This weapon suffers no penalty 'to hit' when moving and shooting. In addition, infantry models armed with an assault weapon count as having the Tough Fighters special rule (Tough Fighters: When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage)"
+    },
+    {
+     "name": "Engineers",
+     "ref": "v3 page 120",
+     "text": "When a unit of engineers assaults a building, the defenders cannot benefit from the defensive position bonus (see apge 110). In addition (page 296, 297): Engineering units attempting to cut barbed wire are automatically successful, but still require a Down order to do so. Combat engineers can clear an adjacent anti-tank ditch by receiving a Down order, but not as a reaction to enemy fire. Always benefit from re-roll when moving at an Advance even when crossing the enemy's minefields. Engineers receive +1 to clearing minefields (page 299)."
+    },
+    {
+     "name": "Flamethrower",
+     "ref": "v3 page 97",
+     "text": "Hits from flamethowers allow no cover saves. When shooting with a flamethrower, roll a single die to hit as normal, but if you score a hit, it is turned into D6 hits (or D6+1 in the case of a vehicle-mounted flamethrower). As no saves are allowed, simply roll for damaage in the usual manner. Flamethrowers always hit the top armour of vehicles. Also, they don't suffer the -1 Pen penalty when firing at long range against armoured vehicles, nor the +1 Pen for firing at point-blank range. Causes D3+1 pins to target, 1 pin to firing unit. A unit hit by a flamethrower must check its morale regardless of casualties. After shooting roll a D6 (for each flamethrower fired). On a result of 1 or 2 the flamethrower has run out of fuel. Infantry: replace model with unarmed model, else remove the model instead (no morale check caused). Vehicles: no other effects. When rolling on Vehicle Damage Results table against a vehicle equipped with flamethrowers, add an extra +1 to the roll."
+    },
+    {
+     "name": "Shin Gunto",
+     "ref": "v3 page 25 AoIJ",
+     "text": "Any model armed with a sword (Shin Gunto) gains the Tough Fighters special rule. If the model already has the Tough Fighters special rule, it rolls an additional dice in close quarters against infantry and artillery units."
+    },
+    {
+     "name": "Tank hunters",
+     "ref": "v3 page 122",
+     "text": "If a tank hunter unit wins an assault and scores damage against an armoured vehicle, the effect is resolved on the Damage Result table as for a normal anti-tank penetration rather than as for superficial damage. In addition, these troops don't suffer from the Tank Fear rule when assaulting fully-enclosed armoured vehicles."
+    },
+    {
+     "name": "Team (2 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Tough Fighters",
+     "ref": "v3 page 122",
+     "text": "When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Engineers",
+   "listName": "Soko Sagyo SS-KI Armoured Work Vehicle",
+   "name": "Soko Sagyo SS-KI Armoured Work Vehicle",
+   "source": "Armies of Imperial Japan (v3) - page 61",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 88,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 110,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 132,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Hull-mounted forward-facing MMG, 1 hull-mounted small flamethrower firing to the front arc, 1 hull-mounted small flamethrower firing to the left arc, 1 hull-mounted small flamethrower firing to the right arc",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Multiple Flamethrowers\nSmall Vehicle Flamethrowers\nMine Rake\nBridging\nEngineering Selection"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Upgrade to Bo type for +5pts. This adds another small flamethrower firing to the rear arc.",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-SS-Ki.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "SS-KI Armoured Work Vehicle",
+     "Weapons": "SS-KI Armoured Work Vehicle",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Flamethrower, Mine rake, Bridging, Multiple flamethrowers, Engineering Selection (0-1)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "SS-KI Armoured Work Vehicle",
+     "Weapons": "Forward-facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "SS-KI Armoured Work Vehicle",
+     "Weapons": "Front arc Flamethrower (small vehicle)",
+     "Range": "12\"",
+     "Shots": "1(D6)",
+     "Pen": "+2",
+     "Special": "Small vehicle flamethrower, Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "SS-KI Armoured Work Vehicle",
+     "Weapons": "Left arc Flamethrower (small vehicle)",
+     "Range": "12\"",
+     "Shots": "1(D6)",
+     "Pen": "+2",
+     "Special": "Small vehicle flamethrower, Left arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "SS-KI Armoured Work Vehicle",
+     "Weapons": "Right arc Flamethrower (small vehicle)",
+     "Range": "12\"",
+     "Shots": "1(D6)",
+     "Pen": "+2",
+     "Special": "Small vehicle flamethrower, Right arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "SS-KI Armoured Work Vehicle",
+     "Weapons": "Rear arc Flamethrower (small vehicle)",
+     "Range": "12\"",
+     "Shots": "1(D6)",
+     "Pen": "+2",
+     "Special": "Small vehicle flamethrower, Rear arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Bridging",
+     "ref": "v3 page 61 AoIJ",
+     "text": "Whenever you give a Down order to this unit, you may mark it as having its ramps extended. While ramps are extended the vehicle cannot move, but other vehicles may drive over it and 3\" in front and behind it, treating the area as open ground, though vehicles may not use Run orders to cross."
+    },
+    {
+     "name": "Engineering Selection (0-1)",
+     "ref": "v3 page 64 AoIJ",
+     "text": "0–1 of these vehicles may also be taken in an Engineer Platoon instead of one of the non-mandatory Engineer squads."
+    },
+    {
+     "name": "Flamethrower",
+     "ref": "v3 page 97",
+     "text": "Hits from flamethowers allow no cover saves. When shooting with a flamethrower, roll a single die to hit as normal, but if you score a hit, it is turned into D6 hits (or D6+1 in the case of a vehicle-mounted flamethrower). As no saves are allowed, simply roll for damaage in the usual manner. Flamethrowers always hit the top armour of vehicles. Also, they don't suffer the -1 Pen penalty when firing at long range against armoured vehicles, nor the +1 Pen for firing at point-blank range. Causes D3+1 pins to target, 1 pin to firing unit. A unit hit by a flamethrower must check its morale regardless of casualties. After shooting roll a D6 (for each flamethrower fired). On a result of 1 or 2 the flamethrower has run out of fuel. Infantry: replace model with unarmed model, else remove the model instead (no morale check caused). Vehicles: no other effects. When rolling on Vehicle Damage Results table against a vehicle equipped with flamethrowers, add an extra +1 to the roll."
+    },
+    {
+     "name": "Mine rake",
+     "ref": "v3 page 61 AoIJ",
+     "text": "Clear minefields on a roll of 4 or more despite only having a damage value of 7+"
+    },
+    {
+     "name": "Multiple flamethrowers",
+     "ref": "v3 page 209",
+     "text": "The vehicle can only use one flamethower per turn."
+    },
+    {
+     "name": "Small vehicle flamethrower",
+     "ref": "v3 page 245",
+     "text": "Flamethrower causes D6 hits rather than D6+1 hits."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Flamethrower",
+   "listName": "Flamethrower Team",
+   "name": "Flamethrower Team",
+   "source": "Armies of Imperial Japan (v3) - page 42",
+   "experience": [
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 50,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 65,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Team": "2 men",
+    "Weapons": "1 Infantry flamethrower",
+    "Special Rules": "Flamethrower\nTeam Weapon\nTank Hunters (if anti-tank grenades taken)\nYamato Damashii (if taken)"
+   },
+   "options": [
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "May add up to 2 crewman for +5pts each",
+     "points": 5,
+     "per": "each",
+     "min": 1,
+     "max": 2,
+     "selectName": "OptionsDD11",
+     "disabled": false
+    },
+    {
+     "id": 19,
+     "input": "checkbox",
+     "name": "Option19",
+     "group": null,
+     "text": "The squad may be given anti-tank grenades for +2pts per figure",
+     "points": 2,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 31,
+     "input": "checkbox",
+     "name": "Option31",
+     "group": "Yamato Damashii",
+     "text": "SNLF (non-Veteran)",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 32,
+     "input": "checkbox",
+     "name": "Option32",
+     "group": "Yamato Damashii",
+     "text": "SNLF iron discipline (Veteran, +1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 33,
+     "input": "checkbox",
+     "name": "Option33",
+     "group": "Yamato Damashii",
+     "text": "Paratroopers (Veteran, Tough Fighters +1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 34,
+     "input": "checkbox",
+     "name": "Option34",
+     "group": "Yamato Damashii",
+     "text": "Paratrooper bicycles (+1pt per model)",
+     "points": 1,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 35,
+     "input": "checkbox",
+     "name": "Option35",
+     "group": "Yamato Damashii",
+     "text": "Veteran Jungle Fighters(Veteran, +3pts per model)",
+     "points": 3,
+     "per": "model",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-flamethrower.png",
+   "weapons": [
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Extra crewman",
+     "Range": "-",
+     "Shots": "-",
+     "Pen": "-",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": null,
+     "Weapons": "Flamethrower (infantry) team",
+     "Range": "6\"",
+     "Shots": "1(D6)",
+     "Pen": "+2",
+     "Special": "Team (2 men), Flamethrower"
+    }
+   ],
+   "weaponNotes": [
+    "Entire squad equipped with anti-tank grenades — Tank hunters",
+    "Entire squad mounted upon bicycles — Bicycles",
+    "Paratroopers — Tough Fighters",
+    "SNLF (non-Veteran)",
+    "SNLF (Veteran) — Iron Discipline",
+    "Veteran Jungle Fighters — Behind enemy lines, Ambush Tactics, Fieldcraft (artillery)"
+   ],
+   "rules": [
+    {
+     "name": "Ambush Tactics",
+     "ref": "v3 page 23 AoGB",
+     "text": "When deployed on the table, these units may start the game on Ambush. (also page 24 AoIJ)"
+    },
+    {
+     "name": "Behind enemy lines",
+     "ref": "v3",
+     "text": "When outflanking as described on page 172, unit ignores the -1 modifier to the order test for coming onto the table."
+    },
+    {
+     "name": "Bicycles",
+     "ref": "v3 page 119",
+     "text": "When moving on roads, they double their Run move to 24\" (cannot be used to Assault). The first time they receive any order other than Run, or if they receive a Pin marker, they dismount and abandon their bicycles for the rest of the game."
+    },
+    {
+     "name": "Fieldcraft (artillery)",
+     "ref": "v3 page 24 AoIJ",
+     "text": "(v3 page 120) Treat rough ground as open ground instead. (AoIJ: this applies to light howitzers and light anti-tank guns too, but not to other artillery units)."
+    },
+    {
+     "name": "Flamethrower",
+     "ref": "v3 page 97",
+     "text": "Hits from flamethowers allow no cover saves. When shooting with a flamethrower, roll a single die to hit as normal, but if you score a hit, it is turned into D6 hits (or D6+1 in the case of a vehicle-mounted flamethrower). As no saves are allowed, simply roll for damaage in the usual manner. Flamethrowers always hit the top armour of vehicles. Also, they don't suffer the -1 Pen penalty when firing at long range against armoured vehicles, nor the +1 Pen for firing at point-blank range. Causes D3+1 pins to target, 1 pin to firing unit. A unit hit by a flamethrower must check its morale regardless of casualties. After shooting roll a D6 (for each flamethrower fired). On a result of 1 or 2 the flamethrower has run out of fuel. Infantry: replace model with unarmed model, else remove the model instead (no morale check caused). Vehicles: no other effects. When rolling on Vehicle Damage Results table against a vehicle equipped with flamethrowers, add an extra +1 to the roll."
+    },
+    {
+     "name": "Iron Discipline",
+     "ref": "v3 page 23 AoGB",
+     "text": "May remove 2 pin markers rather than the usual 1 if an order test is passed."
+    },
+    {
+     "name": "Tank hunters",
+     "ref": "v3 page 122",
+     "text": "If a tank hunter unit wins an assault and scores damage against an armoured vehicle, the effect is resolved on the Damage Result table as for a normal anti-tank penetration rather than as for superficial damage. In addition, these troops don't suffer from the Tank Fear rule when assaulting fully-enclosed armoured vehicles."
+    },
+    {
+     "name": "Team (2 men)",
+     "ref": "v3 page 103",
+     "text": "A Team weapon shoots at full effectiveness so long as there are at least two team members to serve it. If only one man remains to serve a team weapon, then the weapon suffers a -1 'to hit' penalty. For squad-based team weapons, loader must remain within 1\" or weapon suffers the -1 to-hit penalty."
+    },
+    {
+     "name": "Tough Fighters",
+     "ref": "v3 page 122",
+     "text": "When a model with this special rule fails to damage in close quarters against enemy infantry or artillery units, it can re-roll the failed rolls to damage."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Transports",
+   "listName": "General-purpose Truck",
+   "name": "General-purpose Truck",
+   "source": "Armies of Imperial Japan (v3) - page 67",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 22,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 28,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 34,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 13 men",
+    "Tow": "Light howitzer; light or medium anti-tank gun; light anti-aircraft gun"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May have a pintle-mounted MMG covering the forward arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-truck.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "General Purpose Truck",
+     "Weapons": "General Purpose Truck",
+     "Range": "Wheeled",
+     "Shots": "13",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light howitzer; light or medium anti-tank gun, light anti-aircraft gun",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Light Truck",
+   "name": "Light Truck",
+   "source": "Armies of Imperial Japan (v3) - page 70",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 18,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 23,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 28,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 8 men",
+    "Tow": "Light howitzer, light or medium anti-tank gun, light anti-aircraft gun"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May have a pintle-mounted MMG covering the forward arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-truck.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Light Truck",
+     "Weapons": "Light Truck",
+     "Range": "Wheeled",
+     "Shots": "8",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light howitzer; light or medium anti-tank gun, light anti-aircraft gun",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Type 1 Ho-Ha Half-Track",
+   "name": "Type 1 Ho-Ha Half-Track",
+   "source": "Armies of Imperial Japan (v3) - page 70",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 38,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 48,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 58,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "7+ (armoured carrier)",
+    "Transport": "Up to 13 men",
+    "Tow": "Light or medium howitzers, light or medium anti-tank guns, light anti-aircraft guns",
+    "Special Rules": "Open-topped"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May add a hull-mounted MMG covering the front arc +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "May add a hull-mounted MMG covering the left arc +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": null,
+     "text": "May add a hull-mounted MMG covering the right arc +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "checkbox",
+     "name": "Option13",
+     "group": null,
+     "text": "May have a pintle-mounted MMG covering the rear arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 1 Ho-Ha Half Track",
+     "Weapons": "Type 1 Ho-Ha Half Track",
+     "Range": "Half-track",
+     "Shots": "13",
+     "Pen": "7+",
+     "Special": "Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light or medium howitzers; light or medium anti-tank guns, light anti-aircraft guns",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light or medium howitzers; light or medium anti-tank guns, light anti-aircraft guns",
+     "Weapons": "Hull-mounted left arc MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Left arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light or medium howitzers; light or medium anti-tank guns, light anti-aircraft guns",
+     "Weapons": "Rear-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc, Flak (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light or medium howitzers; light or medium anti-tank guns, light anti-aircraft guns",
+     "Weapons": "Hull-mounted right arc MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Right arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Su-Ki 2-ton Amphibious Truck",
+   "name": "Su-Ki 2-ton Amphibious Truck",
+   "source": "Armies of Imperial Japan (v3) - page 70",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 22,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 28,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 34,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 13 men",
+    "Special Rules": "Amphibious"
+   },
+   "options": [],
+   "period": "M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Su-Ki 2-ton Amphibious Truck",
+     "Weapons": "Su-Ki 2-ton Amphibious Truck",
+     "Range": "Wheeled",
+     "Shots": "13",
+     "Pen": "6+",
+     "Special": "Amphibious"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Amphibious",
+     "ref": "v3 page 149",
+     "text": "An amphibious vehicle can move directly forward only over otherwise impassible deep water at half speed by means of an Advance action. A vehicle cannot make any other action whilst moving over water - it cannot reverse, cannot turn, and will ignore all rules that otherwise oblige it to reverse or go Down. A vehicle that is immobilised whilst in the water is destroyed along with any occupants. Vehicles can shoot whilst afloat accept hull mounted weapons on vehicles equipped with floatation screen"
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Type 1 Ho-Ki Carrier",
+   "name": "Type 1 Ho-Ki Carrier",
+   "source": "Armies of Imperial Japan (v3) - page 71",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 48,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 60,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 72,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "7+ (armoured carrier)",
+    "Transport": "Up to 24 men",
+    "Tow": "Light or medium howitzers; light or medium anti-tank guns; light anti-aircraft guns",
+    "Special Rules": "Open-Topped"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May add 1 pintle-mounted MMG covering the forward arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "May add 1 pintle-mounted MMG covering the rear arc for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 1 Ho-Ki Carrier",
+     "Weapons": "Type 1 Ho-Ki Carrier",
+     "Range": "Tracked",
+     "Shots": "24",
+     "Pen": "7+",
+     "Special": "Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light or medium howitzers; light or medium anti-tank guns, light anti-aircraft guns",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: light or medium howitzers; light or medium anti-tank guns, light anti-aircraft guns",
+     "Weapons": "Rear-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Type 95 Kurogane",
+   "name": "Type 95 Kurogane",
+   "source": "Armies of Imperial Japan (v3) - page 71",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 15,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 19,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 23,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 4 men"
+   },
+   "options": [],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Kurogane.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 95 Kurogane",
+     "Weapons": "Type 95 Kurogane",
+     "Range": "Wheeled",
+     "Shots": "4",
+     "Pen": "6+",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Type 98 So-Da Carrier",
+   "name": "Type 98 So-Da Carrier",
+   "source": "Armies of Imperial Japan (v3) - page 72",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 33,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 41,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 49,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "7+ (armoured carrier)",
+    "Transport": "Up to 6 men",
+    "Tow": "Light or medium howitzers; light or medium anti-tank guns; light anti-aircraft guns",
+    "Special Rules": "Open-Topped"
+   },
+   "options": [],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 98 So-Da Carrier",
+     "Weapons": "Type 98 So-Da Carrier",
+     "Range": "Tracked",
+     "Shots": "6",
+     "Pen": "7+",
+     "Special": "Open-topped"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Type 98 Shi-Ke Prime Mover",
+   "name": "Type 98 Shi-Ke Prime Mover",
+   "source": "Armies of Imperial Japan (v3) - page 72",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 8,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 10,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 12,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 4 men",
+    "Tow": "Any anti-tank gun, howitzer or anti-aircraft gun",
+    "Special Rules": "Slow"
+   },
+   "options": [],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 98 Shi-Ke Prime Mover",
+     "Weapons": "Type 98 Shi-Ke Prime Mover",
+     "Range": "Tracked",
+     "Shots": "4",
+     "Pen": "6+",
+     "Special": "Slow"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Type 98 Ro-Ke Prime Mover",
+   "name": "Type 98 Ro-Ke Prime Mover",
+   "source": "Armies of Imperial Japan (v3) - page 73",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 10,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 12,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 14,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "Up to 6 men",
+    "Tow": "Any anti-tank gun, howitzer or anti-aircraft gun",
+    "Special Rules": "Slow"
+   },
+   "options": [],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Type 98 Ro-Ke Prime Mover",
+     "Weapons": "Type 98 Ro-Ke Prime Mover",
+     "Range": "Tracked",
+     "Shots": "6",
+     "Pen": "6+",
+     "Special": "Slow"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Daihatsu-Class Landing Craft",
+   "name": "Daihatsu-Class Landing Craft",
+   "source": "Armies of Imperial Japan (v3) - page 0",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 36,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 45,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 54,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Pintle-mounted HMG with a 360 degrees arc of fire",
+    "Damage Value": "6+ (soft-skin)",
+    "Transport": "70 men, or one vehicle with DMG value of 8+ or less and 36 men",
+    "Special Rules": "Errata 09/2026\nWaterborne\nSlow\nLanding Craft"
+   },
+   "options": [],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Daihatsu-Class Landing Craft",
+     "Weapons": "Daihatsu-Class Landing Craft",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "Waterborne, Slow, Landing Craft"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Daihatsu-Class Landing Craft",
+     "Weapons": "Pintle-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "Landing Craft",
+     "ref": "v3 page 88 AoUS",
+     "text": "Standard rules for transports apply, with the exception that units must begin the game on landing craft and cannot board them unless the landing craft is partially on solid ground."
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    },
+    {
+     "name": "Waterborne",
+     "ref": "v3 page 88 AoUS",
+     "text": "May only move in areas of deep or shallow water, being treated as a tracked vehicle for speed and turning ability."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Transports",
+   "listName": "Toku Daihatsu-Class Landing Craft",
+   "name": "Toku Daihatsu-Class Landing Craft",
+   "source": "Armies of Imperial Japan (v3) - page 0",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 64,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 80,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 96,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Pintle-mounted HMG with a 360 degrees arc of fire",
+    "Damage Value": "7+ (armoured carrier)",
+    "Transport": "100 men, or two vehicles with DMG value of 8+ or less, or one such vehicle and 50 men",
+    "Special Rules": "Errata 09/2026\nWaterborne\nSlow\nOpen-topped\nLanding Craft"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Upgrade the HMG to a light autocannon (with the Flak rule) for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Toku Daihatsu-Class Landing Craft",
+     "Weapons": "Toku Daihatsu-Class Landing Craft",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Waterborne, Slow, Open-topped, Landing Craft"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Toku Daihatsu-Class Landing Craft",
+     "Weapons": "Pintle-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Toku Daihatsu-Class Landing Craft",
+     "Weapons": "Pintle-mounted light autocannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "Flak, 360 degree arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "Landing Craft",
+     "ref": "v3 page 88 AoUS",
+     "text": "Standard rules for transports apply, with the exception that units must begin the game on landing craft and cannot board them unless the landing craft is partially on solid ground."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    },
+    {
+     "name": "Waterborne",
+     "ref": "v3 page 88 AoUS",
+     "text": "May only move in areas of deep or shallow water, being treated as a tracked vehicle for speed and turning ability."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Death Before Dishonour",
+     "ref": null,
+     "text": "All Imperial Japanese infantry and artillery units have the Fanatics special rule. In addition, they automatically pass morale checks for being assaulted by enemy tanks (note that artillery pieces are still destroyed as normal)."
+    },
+    {
+     "name": "Banzai!",
+     "ref": null,
+     "text": "A Japanese Officer may be given a special Banzai! order. This counts as a \"You Men Snap to Action\" with the following exceptions: If the order is given successfully, assign the officer a Run order die. Then"
+    },
+    {
+     "name": "ALL",
+     "ref": null,
+     "text": "infantry units within 6” that haven’t already received an order that turn are issued a Run order. Note that this includes infantry units which cannot normally assault enemies, such as those with the Fixed special rule, or the Self-defence special rule. All infantry units can and will assault into close quarters if given the opportunity (09/2026 errata). Note that, other than for the initiating officer, no order test is required for any units affected by a Banzai! order. This means that affected units execute their Run orders automatically, without any dice rolled, and as such retain any pin markers they have."
+    },
+    {
+     "name": "Lack of Radios",
+     "ref": null,
+     "text": "When you give the Command Vehicle special rule to a vehicle that does not have it in its entry for the purposes of choosing a command vehicle for an Armoured Platoon, you can give it the rule for free instead of paying the normal +10pts. If you do so, the vehicle reduces the radius of its Command Vehicle rule from 12” to 6”. This represents communication by means of flags or hand signals."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  }
+ ]
+}

@@ -1,0 +1,371 @@
+{
+ "country": {
+  "id": 10,
+  "name": "Japanese",
+  "selected": true
+ },
+ "templates": [
+  {
+   "id": 686,
+   "country": "Japanese",
+   "name": "** v3 Armies of Imperial Japan - Rifle (All)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 687,
+   "country": "Japanese",
+   "name": "** v3 Armies of Imperial Japan - Rifle (EW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 689,
+   "country": "Japanese",
+   "name": "** v3 Armies of Imperial Japan - Rifle (LW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 688,
+   "country": "Japanese",
+   "name": "** v3 Armies of Imperial Japan - Rifle (MW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 706,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Armoured (All)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 707,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Armoured (EW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 709,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Armoured (LW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 708,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Armoured (MW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 702,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Artillery (All)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 703,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Artillery (EW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 705,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Artillery (LW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 704,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Artillery (MW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 690,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Engineer (All)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 691,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Engineer (EW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 693,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Engineer (LW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 692,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Engineer (MW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 698,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Heavy Weapon (All)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 699,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Heavy Weapon (EW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 701,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Heavy Weapon (LW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 700,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Heavy Weapon (MW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 694,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Recce (All)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 695,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Recce (EW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 697,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Recce (LW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 696,
+   "country": "Japanese",
+   "name": "*v3 Armies of Imperial Japan - Recce (MW)",
+   "source": "Armies of Imperial Japan (v3)"
+  },
+  {
+   "id": 518,
+   "country": "Japanese",
+   "name": "*v3 rulebook - Japanese - Armoured Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 517,
+   "country": "Japanese",
+   "name": "*v3 rulebook - Japanese - Artillery Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 516,
+   "country": "Japanese",
+   "name": "*v3 rulebook - Japanese - Engineer Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 515,
+   "country": "Japanese",
+   "name": "*v3 rulebook - Japanese - Heavy Weapons Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 514,
+   "country": "Japanese",
+   "name": "*v3 rulebook - Japanese - Rifle Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 519,
+   "country": "Japanese",
+   "name": "*v3 rulebook - Japanese -Recce Infantry Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 95,
+   "country": "Japanese",
+   "name": "1931-32, The Invasion of Manchuria",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 99,
+   "country": "Japanese",
+   "name": "1942, 2nd Raiding Regiment at Palembang",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 98,
+   "country": "Japanese",
+   "name": "1942, The Battle for Guadalcanal",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 97,
+   "country": "Japanese",
+   "name": "1942, The Fall of Corregidor",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 96,
+   "country": "Japanese",
+   "name": "1942, The Fall of Singapore",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 100,
+   "country": "Japanese",
+   "name": "1942, The Yokosuka 1st SNLF Paratroopers at Menado",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 101,
+   "country": "Japanese",
+   "name": "1943, The Battle for Tarawa",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 102,
+   "country": "Japanese",
+   "name": "1944, Burma",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 105,
+   "country": "Japanese",
+   "name": "1945, Battle for Okinawa Sugar Loaf Hill",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 103,
+   "country": "Japanese",
+   "name": "1945, Iwo Jima",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 104,
+   "country": "Japanese",
+   "name": "1945, Negros Island",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 106,
+   "country": "Japanese",
+   "name": "General Amamiya's 24th Division Counter-Offensive",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 169,
+   "country": "Japanese",
+   "name": "IJA Heavy Machine Gun Platoon New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 141,
+   "country": "Japanese",
+   "name": "IJA Kwantung Army, 1937 (Empires in Flames)",
+   "source": "Empires in Flames"
+  },
+  {
+   "id": 142,
+   "country": "Japanese",
+   "name": "IJA Kwantung Army, 1945 (Empires in Flames)",
+   "source": "Empires in Flames"
+  },
+  {
+   "id": 430,
+   "country": "Japanese",
+   "name": "Imperial Japanese Army and Navy, Guam 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 338,
+   "country": "Japanese",
+   "name": "Imperial Japanese Army and Navy, Palau 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 335,
+   "country": "Japanese",
+   "name": "Imperial Japanese Army and Navy, Saipan 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 249,
+   "country": "Japanese",
+   "name": "Imperial Japanese Kwantung Army",
+   "source": "Ostfront"
+  },
+  {
+   "id": 170,
+   "country": "Japanese",
+   "name": "Japanese Army, New Guinea 1943-45 New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 168,
+   "country": "Japanese",
+   "name": "Japanese Pacific Defenders New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 90,
+   "country": "Japanese",
+   "name": "Japanese Reinforced Platoon",
+   "source": "Armies of Imperial Japan"
+  },
+  {
+   "id": 157,
+   "country": "Japanese",
+   "name": "Japanese rule book units only",
+   "source": "v2 Rulebook"
+  },
+  {
+   "id": 127,
+   "country": "Japanese",
+   "name": "Japanese Tank Platoon",
+   "source": "Tank Wars"
+  },
+  {
+   "id": 167,
+   "country": "Japanese",
+   "name": "South Seas Detachment New Guinea book",
+   "source": "New Guinea"
+  }
+ ],
+ "selected": [
+  686,
+  687,
+  689,
+  688,
+  706,
+  707,
+  709,
+  708,
+  702,
+  703,
+  705,
+  704,
+  690,
+  691,
+  693,
+  692,
+  698,
+  699,
+  701,
+  700,
+  694,
+  695,
+  697,
+  696,
+  518,
+  517,
+  516,
+  515,
+  514,
+  519
+ ]
+}

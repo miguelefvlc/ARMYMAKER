@@ -7,4 +7,4 @@ Thumbs.db
 .env.local
 scraper/raw_html/
 scraper/debug_*
-scraper/out/1/html/
+scraper/out/*/html/

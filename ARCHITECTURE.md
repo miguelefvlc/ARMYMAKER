@@ -46,7 +46,10 @@ army-maker/
 │   ├── soviet_union.md          # Referencia humana en Markdown
 │   ├── germany_app_data.js      # Registro activo Alemania
 │   ├── germany.json             # Dataset estructurado en JSON
-│   └── germany.md               # Referencia humana en Markdown
+│   ├── germany.md               # Referencia humana en Markdown
+│   ├── japan_app_data.js        # Registro activo Japón Imperial
+│   ├── japan.json               # Dataset estructurado en JSON
+│   └── japan.md                 # Referencia humana en Markdown
 ├── icons/                       # Iconos de la app y PWA (192px, 512px, favicon SVG)
 ├── images/                      # Ilustraciones oficiales de unidades
 └── scraper/                     # Scripts de scraping para EasyArmy
@@ -176,6 +179,7 @@ En el bloque `<head>` de `index.html`, añade la línea correspondiente:
 <!-- Faction Data Modules -->
 <script src="./factions/soviet_union_app_data.js"></script>
 <script src="./factions/germany_app_data.js"></script>
+<script src="./factions/japan_app_data.js"></script>
 ```
 
 ### Paso 3: Cachear en el Service Worker (`sw.js`)
@@ -187,6 +191,7 @@ const PRECACHE = [
   './index.html',
   './factions/soviet_union_app_data.js',
   './factions/germany_app_data.js',
+  './factions/japan_app_data.js',
   // ...
 ];
 ```

@@ -15,6 +15,9 @@ Clean, fast, standalone Army List Builder for **Bolt Action: Third Edition**, po
   - [`factions/germany.md`](./factions/germany.md) — Complete, organized Markdown reference for Germany.
   - [`factions/germany.json`](./factions/germany.json) — Structured JSON dataset.
   - [`factions/germany_app_data.js`](./factions/germany_app_data.js) — Registers `window.EASYARMY_FACTIONS['germany']`.
+  - [`factions/japan.md`](./factions/japan.md) — Complete, organized Markdown reference for Imperial Japan.
+  - [`factions/japan.json`](./factions/japan.json) — Structured JSON dataset.
+  - [`factions/japan_app_data.js`](./factions/japan_app_data.js) — Registers `window.EASYARMY_FACTIONS['japan']`.
 - **[`images/units/`](./images/units)** — Local official unit illustrations (`.png`).
 - **`scraper/`** — Automated EasyArmy crawler & builder suite:
   - [`scraper/client.js`](./scraper/client.js) — Authenticated HTTP session client with local HTML cache.
@@ -22,6 +25,8 @@ Clean, fast, standalone Army List Builder for **Bolt Action: Third Edition**, po
   - [`scraper/scrape.js`](./scraper/scrape.js) — Full template & unit crawler.
   - [`scraper/download_images.js`](./scraper/download_images.js) — Unit image downloader.
   - [`scraper/build_soviet.js`](./scraper/build_soviet.js) — Generates Soviet Union faction data and documentation.
+  - [`scraper/build_germany.js`](./scraper/build_germany.js) — Generates Germany faction data and documentation.
+  - [`scraper/build_japan.js`](./scraper/build_japan.js) — Generates Imperial Japan faction data and documentation.
 
 ## Adding a New Faction
 
