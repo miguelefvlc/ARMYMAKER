@@ -235,6 +235,96 @@
           <polygon points="32,19.5 33.2,23.2 36.9,23.2 33.9,25.4 35,29.1 32,26.9 29,29.1 30.1,25.4 27.1,23.2 30.8,23.2" fill="#733028"/>
         </svg>
       );
+      // =========================================================================
+      // WWII FACTION FLAGS (COLOR HISTORICAL REGIMENTAL FLAGS)
+      // =========================================================================
+      const SovietUnionFlag = ({ className = "w-9 h-6" }) => (
+        <svg viewBox="0 0 60 40" className={className} xmlns="http://www.w3.org/2000/svg" aria-label="Soviet Union WWII Flag">
+          <rect width="60" height="40" rx="2.5" fill="#C8102E" />
+          {/* Gold Star Outline */}
+          <polygon points="13,4.5 14.1,7.8 17.6,7.8 14.8,9.9 15.9,13.2 13,11.1 10.2,13.2 11.2,9.9 8.4,7.8 11.8,7.8" fill="#FFD702" />
+          <polygon points="13,5.5 13.9,7.9 16.4,7.9 14.4,9.4 15.2,11.8 13,10.2 10.8,11.8 11.6,9.4 9.6,7.9 12.1,7.9" fill="#C8102E" />
+          {/* Sickle */}
+          <path d="M12.5 24 C8.5 24, 5.2 20, 6 14.2 C6.6 9.8, 10.8 8, 14.5 8.5 C11.5 9.8, 9 12.2, 9 15.5 C9 19.5, 12.5 21.5, 15.5 20.8 Z" fill="#FFD702" />
+          <path d="M12.5 23.5 C13 25, 13.5 26.5, 14 28 C13.3 28.3, 12.7 28, 12.2 26.8 C11.8 25.6, 11.8 24.5, 12.5 23.5 Z" fill="#D4A700" />
+          {/* Hammer */}
+          <rect x="7" y="19" width="14" height="2.2" transform="rotate(-45 7 19)" fill="#FFD702" rx="0.5" />
+          <rect x="14.5" y="10" width="5.5" height="3.2" transform="rotate(-45 14.5 10)" fill="#FFD702" rx="0.5" />
+        </svg>
+      );
+
+      const GermanyFlag = ({ className = "w-9 h-6" }) => (
+        <svg viewBox="0 0 60 40" className={className} xmlns="http://www.w3.org/2000/svg" aria-label="Germany WWII Flag">
+          <rect width="60" height="40" rx="2.5" fill="#B31217" />
+          {/* White Cross Underlay */}
+          <rect x="0" y="15.5" width="60" height="9" fill="#FFFFFF" />
+          <rect x="18.5" y="0" width="9" height="40" fill="#FFFFFF" />
+          {/* Black Cross Overlay (Balkenkreuz) */}
+          <rect x="0" y="17.5" width="60" height="5" fill="#18181B" />
+          <rect x="20.5" y="0" width="5" height="40" fill="#18181B" />
+          {/* Center White Disc with Black Ring */}
+          <circle cx="23" cy="20" r="10" fill="#FFFFFF" stroke="#18181B" strokeWidth="1.2" />
+          {/* Center Iron Cross */}
+          <g transform="translate(23, 20)">
+            <path
+              d="M-6.5 -6.5 Q-2.5 -2.5 -2.5 0 Q-2.5 2.5 -6.5 6.5 Q-2.5 2.5 0 2.5 Q2.5 2.5 6.5 6.5 Q2.5 2.5 2.5 0 Q2.5 -2.5 6.5 -6.5 Q2.5 -2.5 0 -2.5 Q-2.5 -2.5 -6.5 -6.5 Z"
+              fill="#18181B"
+              stroke="#FFFFFF"
+              strokeWidth="0.8"
+            />
+            <circle cx="0" cy="0" r="1.2" fill="#FFFFFF" />
+          </g>
+          {/* Iron Cross in Canton (Upper Left) */}
+          <g transform="translate(9, 8) scale(0.65)">
+            <path
+              d="M-6.5 -6.5 Q-2.5 -2.5 -2.5 0 Q-2.5 2.5 -6.5 6.5 Q-2.5 2.5 0 2.5 Q2.5 2.5 6.5 6.5 Q2.5 2.5 2.5 0 Q2.5 -2.5 6.5 -6.5 Q2.5 -2.5 0 -2.5 Q-2.5 -2.5 -6.5 -6.5 Z"
+              fill="#18181B"
+              stroke="#FFFFFF"
+              strokeWidth="0.8"
+            />
+          </g>
+        </svg>
+      );
+
+      const JapanFlag = ({ className = "w-9 h-6" }) => {
+        const rays = [0, 22.5, 45, 67.5, 90, 112.5, 135, 157.5, 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5];
+        return (
+          <svg viewBox="0 0 60 40" className={className} xmlns="http://www.w3.org/2000/svg" aria-label="Imperial Japan WWII Flag">
+            <defs>
+              <clipPath id="jp-flag-clip">
+                <rect width="60" height="40" rx="2.5" />
+              </clipPath>
+            </defs>
+            <g clipPath="url(#jp-flag-clip)">
+              <rect width="60" height="40" fill="#FFFFFF" />
+              <g transform="translate(30, 20)">
+                {rays.map((deg) => (
+                  <polygon
+                    key={deg}
+                    points="0,0 -5.5,-35 5.5,-35"
+                    transform={`rotate(${deg})`}
+                    fill="#BE0027"
+                  />
+                ))}
+                <circle cx="0" cy="0" r="8" fill="#BE0027" />
+              </g>
+            </g>
+          </svg>
+        );
+      };
+
+      const FactionFlag = ({ factionId, className = "w-9 h-6" }) => {
+        const fid = (factionId || '').toLowerCase();
+        if (fid.includes('soviet') || fid.includes('ussr')) return <SovietUnionFlag className={className} />;
+        if (fid.includes('german')) return <GermanyFlag className={className} />;
+        if (fid.includes('japan')) return <JapanFlag className={className} />;
+        return (
+          <svg viewBox="0 0 60 40" className={className} xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="40" rx="2.5" fill="#283224" stroke="#DFBF52" strokeWidth="1.5"/>
+            <polygon points="30,12 32.5,19 40,19 34,23.5 36.2,30.5 30,26 23.8,30.5 26,23.5 20,19 27.5,19" fill="#DFBF52"/>
+          </svg>
+        );
+      };
       const DownloadIcon = ({ className = "w-4 h-4" }) => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
@@ -2897,8 +2987,9 @@
               {/* Bottom Header Row: Faction & List Name (Left) + Totals (Right) */}
               <div className="flex flex-wrap items-end justify-between gap-2">
                 <div className="min-w-0">
-                  <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-600 truncate">
-                    {factionData?.faction || 'Soviet Union'} • {factionData?.book || 'Bolt Action v3'}
+                  <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-600 truncate flex items-center gap-1.5">
+                    <FactionFlag factionId={factionData?.id} className="w-4 h-2.5 rounded-[1.5px] border border-zinc-400 shadow-2xs shrink-0" />
+                    <span>{factionData?.faction || 'Soviet Union'} • {factionData?.book || 'Bolt Action v3'}</span>
                   </div>
                   <h1 className="text-base sm:text-xl font-black font-tactical tracking-wider text-zinc-950 uppercase truncate">
                     {armyListName || 'Untitled Force'}
@@ -3717,10 +3808,13 @@
               </div>
 
               {/* 1. CONTROL BAR: LIST NAME, PLATOON TABS, PERIOD SELECTOR & LIVE TOTALS */}
-              <div className="bg-zinc-900 border border-zinc-750 rounded-xl px-2.5 sm:px-3.5 py-2 flex flex-wrap items-center justify-between gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono shadow-sm">
+              <div className="bg-zinc-900 border border-zinc-750 rounded-xl px-2.5 sm:px-3.5 py-2 flex flex-wrap items-center justify-between gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono shadow-sm relative">
                 <div className="flex flex-wrap items-center gap-1.5 sm:gap-2.5 min-w-0">
                   {/* Army List Name (In place of Faction Selector) */}
-                  <div className="flex items-center bg-zinc-850 border border-zinc-750 rounded-lg px-2 py-0.5 sm:py-1">
+                  <div className="flex items-center bg-zinc-850 border border-zinc-750 rounded-lg px-2 py-0.5 sm:py-1 gap-1.5">
+                    <div className="md:hidden shrink-0 flex items-center" title={`${factionData?.faction || activeFactionId} (WWII)`}>
+                      <FactionFlag factionId={activeFactionId} className="w-5 h-3.5 rounded-[2px] shadow-2xs border border-black/30" />
+                    </div>
                     <input
                       type="text"
                       value={armyListName}
@@ -3879,6 +3973,22 @@
                     </div>
                   </div>
 
+                </div>
+
+                {/* CENTER FACTION FLAG (Directly aligned with HelmetLogo in Row 1) */}
+                <div
+                  className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center z-10 select-none pointer-events-none"
+                  title={`${factionData?.faction || activeFactionId} (WWII)`}
+                >
+                  <div
+                    onClick={() => showToast(`${factionData?.faction || activeFactionId} (WWII)`, "info")}
+                    className="pointer-events-auto flex items-center justify-center p-1 sm:p-1.5 rounded-lg bg-zinc-950/90 border border-zinc-750 shadow-md drop-shadow hover:border-amber-400/60 transition-all cursor-pointer group"
+                  >
+                    <FactionFlag
+                      factionId={activeFactionId}
+                      className="w-8 h-5 sm:w-9 sm:h-5.5 rounded-[2.5px] shadow-xs shrink-0 border border-black/40 group-hover:scale-105 transition-transform"
+                    />
+                  </div>
                 </div>
 
                 {/* Live Points & Order Dice (Tablet/Desktop; mobile uses fixed bottom bar) */}
