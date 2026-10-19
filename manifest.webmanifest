@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "LIST MAKER — Army List Builder",
-  "short_name": "LIST MAKER",
-  "description": "Bolt Action v3 army list builder with official EasyArmy nomenclature.",
+  "name": "ARMY MAKER — Army List Builder",
+  "short_name": "ARMY MAKER",
+  "description": "ARMY MAKER — Bolt Action v3 army list builder with official EasyArmy nomenclature.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

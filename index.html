@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>LIST MAKER — Army List Builder</title>
+    <title>ARMY MAKER — Army List Builder</title>
     <!-- PWA / Standalone App Mode (No browser bars, full app feel) -->
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="theme-color" content="#161B15" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="LIST MAKER" />
+    <meta name="apple-mobile-web-app-title" content="ARMY MAKER" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
@@ -2880,10 +2880,10 @@
           <div className={`w-full max-w-4xl mx-auto ${isPreview ? '' : 'bg-white text-zinc-900 font-sans'}`}>
             {/* ROSTER HEADER */}
             <div className="border-b-2 border-zinc-900 pb-3 mb-3 space-y-2">
-              {/* Top Centered Logo + LIST MAKER */}
+              {/* Top Centered Logo + ARMY MAKER */}
               <div className="flex items-center justify-center gap-2 pb-1">
                 <span className="font-tactical font-black text-sm sm:text-base tracking-widest uppercase text-zinc-950 leading-none">
-                  LIST
+                  ARMY
                 </span>
                 <HelmetLogo width={32} height={32} className="w-8 h-8 rounded-lg shadow-xs shrink-0" />
                 <span className="font-tactical font-black text-sm sm:text-base tracking-widest uppercase text-[#9A7B1C] leading-none">
@@ -3081,7 +3081,7 @@
               </div>
             )}
             <div className="mt-5 pt-2 border-t border-zinc-300 flex items-center justify-between text-[9px] font-mono text-zinc-500">
-              <span>Bolt Action v3 Army Builder • {factionData?.book}</span>
+              <span>ARMY MAKER — Bolt Action v3 Army Builder • {factionData?.book}</span>
               <span>Generated on {currentDateStr}</span>
             </div>
           </div>
@@ -3495,7 +3495,7 @@
             return;
           }
           setIsGeneratingPdf(true);
-          const cleanName = (armyListName || "BoltAction_Roster").replace(/[^a-zA-Z0-9_-]/g, "_");
+          const cleanName = (armyListName || "ArmyMaker_Roster").replace(/[^a-zA-Z0-9_-]/g, "_");
           const opt = {
             margin: [8, 8, 8, 8],
             filename: `${cleanName}_${totalPoints}pts.pdf`,
@@ -3566,7 +3566,7 @@
                 <div className="w-full relative flex items-center justify-center">
                   <div className="flex-1 flex justify-end items-center pr-3 sm:pr-4">
                     <span className="font-tactical font-black text-lg sm:text-2xl tracking-widest uppercase text-white leading-none">
-                      LIST
+                      ARMY
                     </span>
                   </div>
                   <div className="shrink-0 flex items-center justify-center">

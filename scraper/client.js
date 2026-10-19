@@ -71,7 +71,7 @@ export class Client {
             method: m,
             redirect: 'manual',
             headers: {
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) listmaker-personal-scraper',
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) army-maker-personal-scraper',
               Cookie: this.cookieHeader(),
               ...(b ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}),
             },

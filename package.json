@@ -1,7 +1,12 @@
 {
-  "name": "listmaker",
+  "name": "army-maker",
   "version": "1.0.0",
-  "description": "Modern Bolt Action v3 Army List Builder",
+  "description": "ARMY MAKER — Modern Bolt Action v3 Army List Builder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelefvlc/ARMYMAKER.git"
+  },
+  "homepage": "https://github.com/miguelefvlc/ARMYMAKER#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",

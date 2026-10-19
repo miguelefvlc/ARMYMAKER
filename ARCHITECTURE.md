@@ -1,4 +1,4 @@
-# 📖 LIST MAKER — Documentación de Arquitectura y Escalabilidad
+# 📖 ARMY MAKER — Documentación de Arquitectura y Escalabilidad
 
 > **Referencia Técnica Rápida para Desarrolladores**  
 > Bolt Action v3 Army List Builder • Stack Zero-Build React 18 SPA • Motor Multi-Facción
@@ -7,7 +7,7 @@
 
 ## 1. Visión General del Proyecto
 
-**LIST MAKER** es un constructor de listas de ejército para **Bolt Action: Tercera Edición (v3)** diseñado con un enfoque modular, ultraligero y de alto rendimiento.
+**ARMY MAKER** es un constructor de listas de ejército para **Bolt Action: Tercera Edición (v3)** diseñado con un enfoque modular, ultraligero y de alto rendimiento.
 
 - **Filosofía**: Zero-build runtime. Funciona directamente abriendo `index.html` o mediante un servidor estático (GitHub Pages, Live Server, `start.bat`), sin requerir empaquetadores en tiempo de ejecución.
 - **PWA Standalone**: Instalable como aplicación de escritorio, tablet y móvil sin barras del navegador ni dependencias externas pesadas.
@@ -32,7 +32,7 @@
 ## 3. Estructura de Directorios
 
 ```text
-listmaker/
+army-maker/
 ├── index.html                   # Core de la aplicación (Motor React, componentes, estilos)
 ├── config.js                    # Credenciales públicas Supabase & Google OAuth
 ├── manifest.webmanifest         # Manifiesto PWA (display: standalone, iconos)
@@ -58,7 +58,7 @@ listmaker/
 
 ```mermaid
 graph TD
-    App[App Container] --> BrandHeader[Header: HelmetLogo & LIST MAKER]
+    App[App Container] --> BrandHeader[Header: HelmetLogo & ARMY MAKER]
     App --> ControlBar[Control Bar: Faction, Platoon Tabs, Live Totals]
     App --> PlatoonGrid[5-Column EasyArmy Slot Grid]
     PlatoonGrid --> Slot[Slot Component: Header, TacticalIcon, Body, [+] / Dropdown]

@@ -1,7 +1,7 @@
 @echo off
-title Bolt Action v3 Army Builder
+title ARMY MAKER — Bolt Action v3 Army Builder
 echo ========================================================
-echo       BOLT ACTION v3 - MODERN ARMY BUILDER
+echo       ARMY MAKER - BOLT ACTION v3 ARMY BUILDER
 echo ========================================================
 echo Iniciando servidor de desarrollo en http://localhost:5173 ...
 start http://localhost:5173
