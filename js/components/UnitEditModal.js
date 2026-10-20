@@ -48,11 +48,13 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
         const [experience, setExperience] = useState(unitItem.config?.experience || def.defaultExp || "regular");
         const [extraMen, setExtraMen] = useState(unitItem.config?.extraMen || 0);
         const [options, setOptions] = useState(unitItem.config?.options || {});
+        const [imageError, setImageError] = useState(false);
 
         useEffect(() => {
           setExperience(unitItem.config?.experience || def.defaultExp || "regular");
           setExtraMen(unitItem.config?.extraMen || 0);
           setOptions(unitItem.config?.options || {});
+          setImageError(false);
         }, [unitItem, def]);
 
         const currentConfig = useMemo(() => ({
@@ -165,9 +167,24 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
               {/* MAIN TWO-COLUMN BODY (EasyArmy Official Layout) */}
               <div className="flex-1 overflow-y-auto p-3 sm:p-6">
                 {/* COMPACT MOBILE / PORTRAIT-TABLET ILLUSTRATION BANNER */}
-                {def.image && (
+                {def.image && !imageError ? (
                   <div className="lg:hidden mb-4 bg-white rounded-xl p-3 border-2 border-zinc-700 flex items-center justify-center max-h-48 overflow-hidden shadow">
-                    <img src={`./${def.image}`} alt={def.name} className="max-h-40 w-auto object-contain" />
+                    <img
+                      src={`./${def.image}`}
+                      alt={def.name}
+                      onError={() => setImageError(true)}
+                      className="max-h-40 w-auto object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div className="lg:hidden mb-4 bg-zinc-950/90 rounded-xl p-3 border border-zinc-800 flex items-center gap-3">
+                    <div className="p-2 bg-zinc-900 rounded-lg border border-zinc-800 shrink-0">
+                      <UnitTacticalIcon slot={{ label: slotLabel }} unitName={def.name} className="w-8 h-6 text-amber-400" width={32} height={24} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xs font-tactical font-bold text-white uppercase truncate">{def.cardTitle || def.name}</div>
+                      <div className="text-[11px] font-mono text-zinc-400 truncate">{slotLabel || def.sections?.[0] || 'Unit'} • {def.period || 'E/M/L'}</div>
+                    </div>
                   </div>
                 )}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-start">
@@ -474,21 +491,41 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
                         <span>Unit Illustration</span>
                         <span className="font-mono text-[11px] text-zinc-500">{def.name}</span>
                       </div>
-                      {def.image ? (
+                      {def.image && !imageError ? (
                         <div className="w-full min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] rounded-xl bg-white p-4 flex items-center justify-center overflow-hidden border-2 border-zinc-700 shadow-xl">
                           <img
                             src={`./${def.image}`}
                             alt={def.name}
+                            onError={() => setImageError(true)}
                             className="max-w-full max-h-[400px] w-auto h-auto object-contain transition-transform duration-200 hover:scale-105"
                           />
                         </div>
                       ) : (
-                        <div className="w-full min-h-[220px] rounded-xl bg-zinc-900 border border-zinc-800 flex flex-col items-center justify-center p-6 text-center">
-                          <div className="text-zinc-500 font-tactical uppercase tracking-widest text-sm font-bold">
-                            No Illustration Available
+                        <div className="w-full min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900/90 to-zinc-950 border border-zinc-800 flex flex-col items-center justify-center p-8 text-center relative overflow-hidden shadow-inner">
+                          {/* Background tactical pattern */}
+                          <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#DFBF52_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                          
+                          <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800 shadow-lg mb-4 ring-1 ring-amber-400/20">
+                            <UnitTacticalIcon
+                              slot={{ label: slotLabel }}
+                              unitName={def.name}
+                              className="w-20 h-14 text-amber-400"
+                              width={80}
+                              height={56}
+                            />
                           </div>
-                          <div className="text-zinc-600 font-mono text-xs mt-1">
-                            {def.name}
+
+                          <div className="text-zinc-200 font-tactical uppercase tracking-wider text-sm font-bold max-w-xs">
+                            {def.cardTitle || def.name}
+                          </div>
+
+                          <div className="text-amber-400 font-mono text-[11px] mt-1.5 uppercase tracking-widest font-semibold">
+                            {slotLabel || def.sections?.[0] || 'Combat Unit'}
+                          </div>
+
+                          <div className="mt-5 pt-3 border-t border-zinc-800/80 w-full max-w-xs flex items-center justify-between text-[10.5px] font-mono text-zinc-500">
+                            <span>Period: {def.period || 'All'}</span>
+                            <span>{def.page || 'Bolt Action v3'}</span>
                           </div>
                         </div>
                       )}

@@ -4,10 +4,10 @@ window.EASYARMY_FACTIONS['france'] = {
   "id": "france",
   "faction": "France",
   "book": "Armies of France (v3)",
-  "scrapedAt": "2026-10-20T20:28:39.922Z",
+  "scrapedAt": "2026-10-20T21:04:23.576Z",
   "totalTemplatesCrawled": 12,
   "totalUniqueUnits": 39,
-  "totalUniqueImages": 4,
+  "totalUniqueImages": 37,
   "armyRules": [
     {
       "name": "Forward Artillery Doctrine",
@@ -3689,7 +3689,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Platoon Commander",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-headquarters.jpg",
       "sections": [
         "Platoon Commander"
       ],
@@ -3794,7 +3794,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Company Commander",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-headquarters.jpg",
       "sections": [
         "Company Commander"
       ],
@@ -3899,7 +3899,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Artillery Forward Observer",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-headquarters.jpg",
       "sections": [
         "Forward Observer"
       ],
@@ -4001,7 +4001,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Air Force Forward Observer",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-headquarters.jpg",
       "sections": [
         "Forward Observer"
       ],
@@ -4081,7 +4081,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Medic",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-headquarters.jpg",
       "sections": [
         "Medic"
       ],
@@ -4135,7 +4135,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Chaplain",
       "page": "Version 3 Rulebook page 188",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-headquarters.jpg",
       "sections": [
         "Chaplain"
       ],
@@ -4178,7 +4178,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Infantry Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-infantry-section.jpg",
       "sections": [
         "Infantry"
       ],
@@ -4358,7 +4358,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Groupe Franc/SES/GIA/Chasseurs Alpins Veteran Infantry Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-elite-infantry.jpg",
       "sections": [
         "Infantry",
         "Engineers"
@@ -4496,7 +4496,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Foreign Legion Veteran Infantry Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-elite-infantry.jpg",
       "sections": [
         "Infantry"
       ],
@@ -4623,7 +4623,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Moroccan Goumier Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-infantry-section.jpg",
       "sections": [
         "Infantry"
       ],
@@ -4699,7 +4699,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Motorcycle Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-infantry-section.jpg",
       "sections": [
         "Infantry"
       ],
@@ -4775,7 +4775,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Cavalry Section",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/French-cavalry.png",
       "sections": [
         "Infantry"
       ],
@@ -4868,7 +4868,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Machine Gun Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-weapons-teams.jpg",
       "sections": [
         "Machine Gun",
         "Heavy Weapons"
@@ -4918,7 +4918,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Boys Anti-Tank Rifle Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-weapons-teams.jpg",
       "sections": [
         "Anti-tank (Secondary)",
         "Anti-tank",
@@ -4969,7 +4969,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Light Mortar Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-weapons-teams.jpg",
       "sections": [
         "Mortar"
       ],
@@ -5045,7 +5045,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Medium Mortar Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-weapons-teams.jpg",
       "sections": [
         "Mortar",
         "Heavy Weapons"
@@ -5105,7 +5105,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Sniper Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-weapons-teams.jpg",
       "sections": [
         "Sniper"
       ],
@@ -5170,7 +5170,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Flamethrower Team",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-weapons-teams.jpg",
       "sections": [
         "Flamethrower"
       ],
@@ -5216,7 +5216,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Howitzers (Field Artillery)",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-artillery-howitzer.jpg",
       "sections": [
         "Artillery"
       ],
@@ -5324,7 +5324,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Anti-Tank Guns",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-artillery-howitzer.jpg",
       "sections": [
         "Anti-tank",
         "Artillery",
@@ -5421,7 +5421,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "AA Automatic Cannons",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-artillery-howitzer.jpg",
       "sections": [
         "Artillery"
       ],
@@ -5582,7 +5582,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Char D & Renault Light Tanks (R35, R39, R40, Char D1, Char D2)",
       "page": "Armies of France (v3) page 4",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/WGB-FI-108-Somua-S35-a.jpg",
       "sections": [
         "Vehicle",
         "Command Vehicle"
@@ -5912,7 +5912,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Char 2C Super-Heavy Tank",
       "page": "Armies of France (v3) page 4",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/402015501-Char-B1-platoon5.jpg",
       "sections": [
         "Vehicle",
         "Command Vehicle"
@@ -6019,7 +6019,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Portees (Citroën-Kégresse, Laffly S20TL, Laffly W15 TCC)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/402415501_AMDPanhard178armouredcar02.jpg",
       "sections": [
         "Vehicle",
         "Anti-tank",
@@ -6239,7 +6239,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "AMC Schneider P16 Half-Track",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/402415501_AMDPanhard178armouredcar02.jpg",
       "sections": [
         "Vehicle",
         "Command Vehicle"
@@ -6312,7 +6312,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Laffly Transports (Laffly S15, V15, S20TL)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -6400,7 +6400,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Berliet VUDB Carrier",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
       "sections": [
         "Transports"
       ],
@@ -6458,7 +6458,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Open-Topped Carriers (Unic/Citroën-Kégresse half-track, Lorraine 38)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -6538,7 +6538,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Fully-Tracked, Fully-Enclosed Armoured Tractors (Renault Chenillette UE, Lorraine 37, Somua MCG)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -6625,7 +6625,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Truck (Citroën 23, Matford, Renault AGK)",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -6695,7 +6695,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Light Truck",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -6746,7 +6746,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Civilian Car / Staff Car",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/Civilian-car.png",
       "sections": [
         "Transports"
       ],
@@ -6796,7 +6796,7 @@ window.EASYARMY_FACTIONS['france'] = {
       "cardTitle": "Field Ambulance",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": null,
+      "image": "images/units/french-headquarters.jpg",
       "sections": [
         "Medic",
         "Transports"
