@@ -1,0 +1,869 @@
+{
+ "country": {
+  "id": 4,
+  "name": "British",
+  "selected": true
+ },
+ "templates": [
+  {
+   "id": 638,
+   "country": "British",
+   "name": "** v3 Armies of Great Britain - Rifle Platoon(All)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 639,
+   "country": "British",
+   "name": "** v3 Armies of Great Britain - Rifle Platoon(EW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 641,
+   "country": "British",
+   "name": "** v3 Armies of Great Britain - Rifle Platoon(LW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 640,
+   "country": "British",
+   "name": "** v3 Armies of Great Britain - Rifle Platoon(MW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 658,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Armoured Platoon(All",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 659,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Armoured Platoon(EW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 661,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Armoured Platoon(LW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 660,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Armoured Platoon(MW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 642,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Engineer Platoon(All",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 643,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Engineer Platoon(EW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 645,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Engineer Platoon(LW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 644,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Engineer Platoon(MW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 646,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Heavy Weapon (All)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 647,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Heavy Weapon (EW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 649,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Heavy Weapon (LW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 648,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Heavy Weapon (MW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 650,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Recce Infantry (All)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 651,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Recce Infantry (EW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 653,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Recce Infantry (LW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 652,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain - Recce Infantry (MW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 654,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain -Artillery Platoon(All",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 655,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain -Artillery Platoon(EW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 657,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain -Artillery Platoon(LW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 656,
+   "country": "British",
+   "name": "*v3 Armies of Great Britain -Artillery Platoon(MW)",
+   "source": "Armies of Great Britain (v3)"
+  },
+  {
+   "id": 501,
+   "country": "British",
+   "name": "*v3 rulebook - British - Armoured Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 500,
+   "country": "British",
+   "name": "*v3 rulebook - British - Artillery Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 499,
+   "country": "British",
+   "name": "*v3 rulebook - British - Engineer Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 498,
+   "country": "British",
+   "name": "*v3 rulebook - British - Heavy Weapons Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 502,
+   "country": "British",
+   "name": "*v3 rulebook - British - Recce Infantry Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 497,
+   "country": "British",
+   "name": "*v3 rulebook - British - Rifle Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 55,
+   "country": "British",
+   "name": "1940 - Dad's Army",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 54,
+   "country": "British",
+   "name": "1940 - Fall of France",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 203,
+   "country": "British",
+   "name": "1940 Western Desert Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 57,
+   "country": "British",
+   "name": "1940-41 - East Africa",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 58,
+   "country": "British",
+   "name": "1940-41 - Operation Compass",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 206,
+   "country": "British",
+   "name": "1940-41 British Armoured Brigade Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 205,
+   "country": "British",
+   "name": "1940-42 Commonwealth Infantry Brigade Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 59,
+   "country": "British",
+   "name": "1940-43 - Behind Enemy Lines",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 56,
+   "country": "British",
+   "name": "1940-44 - Raiders",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 62,
+   "country": "British",
+   "name": "1942 - Fall of Singapore",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 60,
+   "country": "British",
+   "name": "1942 - Operation Lightfoot",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 163,
+   "country": "British",
+   "name": "1942 Australian Army New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 146,
+   "country": "British",
+   "name": "1942 Australian Reinforced Platoon PDF",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 207,
+   "country": "British",
+   "name": "1942 British Armoured Brigade Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 61,
+   "country": "British",
+   "name": "1942-43 - Tunisia",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 63,
+   "country": "British",
+   "name": "1942-45 - Burma",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 147,
+   "country": "British",
+   "name": "1943-45 Australian Jungle Division PDF",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 164,
+   "country": "British",
+   "name": "1943-45 Australian Jungle Division New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 66,
+   "country": "British",
+   "name": "1944 - Market Garden",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 64,
+   "country": "British",
+   "name": "1944 - Monte Cassino",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 65,
+   "country": "British",
+   "name": "1944 - Normandy",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 67,
+   "country": "British",
+   "name": "1945 - Into The Reich",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 408,
+   "country": "British",
+   "name": "1st Airborne (Primosole Bridge)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 412,
+   "country": "British",
+   "name": "201st Guards",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 233,
+   "country": "British",
+   "name": "21st Independent Company Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 418,
+   "country": "British",
+   "name": "8th Indian Division",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 414,
+   "country": "British",
+   "name": "A Force",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 234,
+   "country": "British",
+   "name": "Airborne Reconnaissance Troop Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 183,
+   "country": "British",
+   "name": "Airfield Defence Reinforced Platoon (Regular) Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 162,
+   "country": "British",
+   "name": "Australian Imperial Force New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 166,
+   "country": "British",
+   "name": "Australian Kanga Force New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 161,
+   "country": "British",
+   "name": "Australian Reinforced Platoon New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 165,
+   "country": "British",
+   "name": "Australian Tank Platoon New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 266,
+   "country": "British",
+   "name": "BEF Motorcycle Platoon Tank Platoon",
+   "source": "Battle of France"
+  },
+  {
+   "id": 177,
+   "country": "British",
+   "name": "British 1st Army Tank Brigade Germany Strikes",
+   "source": "Germany Strikes!"
+  },
+  {
+   "id": 476,
+   "country": "British",
+   "name": "British 1st Infantry Division (Anzio)",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 255,
+   "country": "British",
+   "name": "British 6th Airborne",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 229,
+   "country": "British",
+   "name": "British Airlanding Platoon Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 232,
+   "country": "British",
+   "name": "British or Polish Paratroop Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 247,
+   "country": "British",
+   "name": "British Reinforced Platoon",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 155,
+   "country": "British",
+   "name": "British rule book units only",
+   "source": "v2 Rulebook"
+  },
+  {
+   "id": 124,
+   "country": "British",
+   "name": "British Tank Platoon",
+   "source": "Tank Wars"
+  },
+  {
+   "id": 258,
+   "country": "British",
+   "name": "British/Canadian Beach Assault",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 251,
+   "country": "British",
+   "name": "British/Canadian D-Day (Off the Beaches)",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 343,
+   "country": "British",
+   "name": "British/Canadian Self-Propelled Artillery Platoon 1944-45",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 358,
+   "country": "British",
+   "name": "Canadian Airborne 1944-45",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 359,
+   "country": "British",
+   "name": "Canadian Armoured Division 1943-44",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 360,
+   "country": "British",
+   "name": "Canadian Armoured Division 1945",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 355,
+   "country": "British",
+   "name": "Canadian Army 1939-42",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 419,
+   "country": "British",
+   "name": "Canadian First Division",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 356,
+   "country": "British",
+   "name": "Canadian Infantry Division 1943-44",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 357,
+   "country": "British",
+   "name": "Canadian Infantry Division 1945",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 416,
+   "country": "British",
+   "name": "Chavasse Force",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 435,
+   "country": "British",
+   "name": "Coastal Defence Reinforced Platoon (Home Guard) Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 182,
+   "country": "British",
+   "name": "Coastal Defence Reinforced Platoon (Regular) Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 411,
+   "country": "British",
+   "name": "Commando/RMC Troop (Sicily and Salerno)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 334,
+   "country": "British",
+   "name": "Defence of Milne Bay",
+   "source": "New Guinea"
+  },
+  {
+   "id": 436,
+   "country": "British",
+   "name": "Early-War Commando Troop",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 410,
+   "country": "British",
+   "name": "Eight Army (Sicily)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 420,
+   "country": "British",
+   "name": "Eighth Army (Italy, 1943)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 268,
+   "country": "British",
+   "name": "Frankforce Tank Platoon",
+   "source": "Battle of France"
+  },
+  {
+   "id": 235,
+   "country": "British",
+   "name": "Glider Pilot Regiment Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 267,
+   "country": "British",
+   "name": "Grenadier Guards",
+   "source": "Battle of France"
+  },
+  {
+   "id": 236,
+   "country": "British",
+   "name": "Guards Division Battlegroup Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 188,
+   "country": "British",
+   "name": "Home Guard Reinforced Platoon Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 477,
+   "country": "British",
+   "name": "II NZ Corps Reinforced Platoon",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 479,
+   "country": "British",
+   "name": "II Polish Corps (Apr-Jun, 1944)",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 204,
+   "country": "British",
+   "name": "Jock Column Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 339,
+   "country": "British",
+   "name": "Late-War British Anti-tank Reinforced Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 341,
+   "country": "British",
+   "name": "Late-War British Machine-gun Reinforced Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 340,
+   "country": "British",
+   "name": "Late-War British Mortar Reinforced Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 344,
+   "country": "British",
+   "name": "LateWar Allied Armoured Division NW Europe Platoon",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 237,
+   "country": "British",
+   "name": "Line-of-Communications Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 451,
+   "country": "British",
+   "name": "Local Defence Volunteer Sports Team Patrols",
+   "source": "Gigant"
+  },
+  {
+   "id": 442,
+   "country": "British",
+   "name": "LW Commando Troop (Burma) (Army Commando)",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 441,
+   "country": "British",
+   "name": "LW Commando Troop (Burma) (Royal Marines)",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 440,
+   "country": "British",
+   "name": "LW Commando Troop (NW Europe) (Army Commando)",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 439,
+   "country": "British",
+   "name": "LW Commando Troop (NW Europe) (Royal Marines)",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 256,
+   "country": "British",
+   "name": "Merville Assault (Historical)",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 257,
+   "country": "British",
+   "name": "Merville Assault (Planned)",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 342,
+   "country": "British",
+   "name": "Mid/Late-War Royal Artillery Gun Troop",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 437,
+   "country": "British",
+   "name": "MW Commando Troop Beach/Raiding Party",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 438,
+   "country": "British",
+   "name": "MW Commando Troop, North Africa/Mediterranean",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 417,
+   "country": "British",
+   "name": "No. 1 Demolition Squadron Popski's Private Army",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 132,
+   "country": "British",
+   "name": "Normandy Royal Marine Commando Troop",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 443,
+   "country": "British",
+   "name": "NW Europe LW Commando Heavy Weapons Troop",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 450,
+   "country": "British",
+   "name": "O'Connor Force Armoured Platoon",
+   "source": "Gigant"
+  },
+  {
+   "id": 480,
+   "country": "British",
+   "name": "Operation Honker",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 222,
+   "country": "British",
+   "name": "Perhaps a Bit of Piracy (Special Forces) Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 158,
+   "country": "British",
+   "name": "Polish 1st Armoured Division (unofficial) Reinforced Platoon",
+   "source": "Armies of Great Britain"
+  },
+  {
+   "id": 345,
+   "country": "British",
+   "name": "RAF Regiment Armoured Squadron (Armoured Platoon)",
+   "source": "D-Day: British & Canadian Sectors"
+  },
+  {
+   "id": 181,
+   "country": "British",
+   "name": "Regular Army Anti-Parachute Light Infantry Patrol Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 180,
+   "country": "British",
+   "name": "Regular Army Infantry Reinforced Platoon Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 179,
+   "country": "British",
+   "name": "Regular Army Reinforced Tank Platoon Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 478,
+   "country": "British",
+   "name": "Revenge Force Reinforced Tank Platoon",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 224,
+   "country": "British",
+   "name": "SAS Early Reinforced Platoon (Special Forces) Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 225,
+   "country": "British",
+   "name": "SAS Independen Reinforced Platoon (Special Forces) Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 387,
+   "country": "British",
+   "name": "SAS Northwest Europe",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 185,
+   "country": "British",
+   "name": "Shire Patrol Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 223,
+   "country": "British",
+   "name": "Sowing Mayhem (Special Forces) Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 409,
+   "country": "British",
+   "name": "Special Raiding Squadron (Sicily)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 415,
+   "country": "British",
+   "name": "Termoli Assault Force",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 71,
+   "country": "British",
+   "name": "University College Nottingham Officers' Training",
+   "source": "Gigant"
+  },
+  {
+   "id": 184,
+   "country": "British",
+   "name": "Urban Militia Patrol Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 186,
+   "country": "British",
+   "name": "Water Patrol Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 187,
+   "country": "British",
+   "name": "Womens Federation Toxophilite Club Patrol Sea Lion",
+   "source": "Sea Lion"
+  },
+  {
+   "id": 413,
+   "country": "British",
+   "name": "X Corps",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 475,
+   "country": "British",
+   "name": "X Corps Reinforced Platoon(January-February 1944)",
+   "source": "Italy: Tough Gut"
+  }
+ ],
+ "selected": [
+  638,
+  639,
+  641,
+  640,
+  658,
+  659,
+  661,
+  660,
+  642,
+  643,
+  645,
+  644,
+  646,
+  647,
+  649,
+  648,
+  650,
+  651,
+  653,
+  652,
+  654,
+  655,
+  657,
+  656,
+  501,
+  500,
+  499,
+  498,
+  502,
+  497
+ ]
+}

@@ -1,0 +1,293 @@
+{
+ "country": {
+  "id": 5,
+  "name": "Italian",
+  "selected": true
+ },
+ "templates": [
+  {
+   "id": 711,
+   "country": "Italian",
+   "name": "* v3 Armies of Italy - Rifle (All)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 712,
+   "country": "Italian",
+   "name": "* v3 Armies of Italy - Rifle (EW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 713,
+   "country": "Italian",
+   "name": "* v3 Armies of Italy - Rifle (MW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 731,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Armoured (All)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 732,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Armoured (EW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 733,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Armoured (MW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 727,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Artillery (All)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 728,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Artillery (EW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 729,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Artillery (MW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 715,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Engineer (All)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 716,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Engineer (EW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 717,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Engineer (MW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 723,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Heavy Weapons (All)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 724,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Heavy Weapons (EW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 725,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Heavy Weapons (MW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 719,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Recce (All)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 720,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Recce (EW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 721,
+   "country": "Italian",
+   "name": "*v3 Armies of Italy - Recce (MW)",
+   "source": "Armies of Italy (v3)"
+  },
+  {
+   "id": 558,
+   "country": "Italian",
+   "name": "*v3 PDF - Italy - Armoured Platoon",
+   "source": "Italy Version 3 PDF"
+  },
+  {
+   "id": 557,
+   "country": "Italian",
+   "name": "*v3 PDF - Italy - Artillery Platoon",
+   "source": "Italy Version 3 PDF"
+  },
+  {
+   "id": 556,
+   "country": "Italian",
+   "name": "*v3 PDF - Italy - Engineer Platoon",
+   "source": "Italy Version 3 PDF"
+  },
+  {
+   "id": 555,
+   "country": "Italian",
+   "name": "*v3 PDF - Italy - Heavy Weapons Platoon",
+   "source": "Italy Version 3 PDF"
+  },
+  {
+   "id": 559,
+   "country": "Italian",
+   "name": "*v3 PDF - Italy - Recce Infantry Platoon",
+   "source": "Italy Version 3 PDF"
+  },
+  {
+   "id": 554,
+   "country": "Italian",
+   "name": "*v3 PDF - Italy - Rifle Platoon",
+   "source": "Italy Version 3 PDF"
+  },
+  {
+   "id": 208,
+   "country": "Italian",
+   "name": "1940-41 Italian Armoured Brigade Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 73,
+   "country": "Italian",
+   "name": "1940-41: The Invasion of Greece",
+   "source": "Armies of Italy and the Axis"
+  },
+  {
+   "id": 74,
+   "country": "Italian",
+   "name": "1940-43: The War in Africa",
+   "source": "Armies of Italy and the Axis"
+  },
+  {
+   "id": 75,
+   "country": "Italian",
+   "name": "1941-43: The Eastern Front",
+   "source": "Armies of Italy and the Axis"
+  },
+  {
+   "id": 209,
+   "country": "Italian",
+   "name": "1942 AS42 Reinforced Infantry Platoon Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 211,
+   "country": "Italian",
+   "name": "1942 Bersaglieri MG Platoon Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 210,
+   "country": "Italian",
+   "name": "1942 Folgore Paracadutisti Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 212,
+   "country": "Italian",
+   "name": "1942 Italian Armoured Brigade Western Desert",
+   "source": "Western Desert"
+  },
+  {
+   "id": 76,
+   "country": "Italian",
+   "name": "1943: The Defence of Sicily",
+   "source": "Armies of Italy and the Axis"
+  },
+  {
+   "id": 248,
+   "country": "Italian",
+   "name": "Arditi X Patrol (Special Forces)",
+   "source": "Armies of Italy and the Axis"
+  },
+  {
+   "id": 227,
+   "country": "Italian",
+   "name": "Compagnia Sahariana Patrol (Special Forces)",
+   "source": "Armies of Italy and the Axis"
+  },
+  {
+   "id": 392,
+   "country": "Italian",
+   "name": "Divisione Costiera",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 393,
+   "country": "Italian",
+   "name": "Fucilieri Reinforced Platoon",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 391,
+   "country": "Italian",
+   "name": "Gruppo Mobili Carri",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 394,
+   "country": "Italian",
+   "name": "Gruppo Tattico",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 276,
+   "country": "Italian",
+   "name": "Italian Army Group West",
+   "source": "Battle of France"
+  },
+  {
+   "id": 72,
+   "country": "Italian",
+   "name": "Italian Reinforced Platoon",
+   "source": "Armies of Italy and the Axis"
+  },
+  {
+   "id": 125,
+   "country": "Italian",
+   "name": "Italian Tank Platoon",
+   "source": "Tank Wars"
+  },
+  {
+   "id": 395,
+   "country": "Italian",
+   "name": "X Reggimento Arditi",
+   "source": "Italy: Soft Underbelly"
+  }
+ ],
+ "selected": [
+  711,
+  712,
+  713,
+  731,
+  732,
+  733,
+  727,
+  728,
+  729,
+  715,
+  716,
+  717,
+  723,
+  724,
+  725,
+  719,
+  720,
+  721,
+  558,
+  557,
+  556,
+  555,
+  559,
+  554
+ ]
+}

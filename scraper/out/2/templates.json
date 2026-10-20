@@ -1,0 +1,599 @@
+{
+ "country": {
+  "id": 2,
+  "name": "United States",
+  "selected": true
+ },
+ "templates": [
+  {
+   "id": 614,
+   "country": "United States",
+   "name": "** v3 Armies of the U.S. - Rifle Platoon ** (All)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 615,
+   "country": "United States",
+   "name": "** v3 Armies of the U.S. - Rifle Platoon ** (EW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 617,
+   "country": "United States",
+   "name": "** v3 Armies of the U.S. - Rifle Platoon ** (LW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 616,
+   "country": "United States",
+   "name": "** v3 Armies of the U.S. - Rifle Platoon ** (MW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 634,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Armoured Platoon (All)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 635,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Armoured Platoon (EW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 637,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Armoured Platoon (LW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 636,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Armoured Platoon (MW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 630,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Artillery Platoon (All)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 631,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Artillery Platoon (EW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 633,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Artillery Platoon (LW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 632,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Artillery Platoon (MW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 618,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Engineer Platoon (All)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 619,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Engineer Platoon (EW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 621,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Engineer Platoon (LW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 620,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Engineer Platoon (MW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 622,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Heavy Weapon Platoon(All)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 623,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Heavy Weapon Platoon(EW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 625,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Heavy Weapon Platoon(LW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 624,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. - Heavy Weapon Platoon(MW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 626,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. -Recce Infantry Platoon(All",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 627,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. -Recce Infantry Platoon(EW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 629,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. -Recce Infantry Platoon(LW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 628,
+   "country": "United States",
+   "name": "*v3 Armies of the U.S. -Recce Infantry Platoon(MW)",
+   "source": "Armies of the United States (v3)"
+  },
+  {
+   "id": 495,
+   "country": "United States",
+   "name": "*v3 rulebook - U.S. - Armoured Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 494,
+   "country": "United States",
+   "name": "*v3 rulebook - U.S. - Artillery Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 493,
+   "country": "United States",
+   "name": "*v3 rulebook - U.S. - Engineer Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 492,
+   "country": "United States",
+   "name": "*v3 rulebook - U.S. - Heavy Weapons Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 496,
+   "country": "United States",
+   "name": "*v3 rulebook - U.S. - Recce Infantry Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 491,
+   "country": "United States",
+   "name": "*v3 rulebook - U.S. - Rifle Platoon",
+   "source": "Version 3 Rulebook"
+  },
+  {
+   "id": 19,
+   "country": "United States",
+   "name": "1942 - Operation Torch North Africa 1942-43",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 34,
+   "country": "United States",
+   "name": "1942-43 - Guadalcanal Pacific - 1942-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 21,
+   "country": "United States",
+   "name": "1943 - El Guettar- First US Victory North Africa 1942-43",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 20,
+   "country": "United States",
+   "name": "1943 - Kasserine Pass North Africa 1942-43",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 24,
+   "country": "United States",
+   "name": "1943 - Operation Avalanche Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 23,
+   "country": "United States",
+   "name": "1943 - Operation Husky Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 22,
+   "country": "United States",
+   "name": "1943 - Rommel's Defeat North Africa 1942-43",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 26,
+   "country": "United States",
+   "name": "1944 - Anzio, The Road To Rome Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 31,
+   "country": "United States",
+   "name": "1944 - Bastogne Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 30,
+   "country": "United States",
+   "name": "1944 - Battle of the Bulge Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 25,
+   "country": "United States",
+   "name": "1944 - Cassino Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 27,
+   "country": "United States",
+   "name": "1944 - Normandy Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 28,
+   "country": "United States",
+   "name": "1944 - Operation Cobra Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 29,
+   "country": "United States",
+   "name": "1944 - Operation Market Garden Western Europe 1943-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 35,
+   "country": "United States",
+   "name": "1944-45 - Iwo Jima Pacific - 1942-45",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 32,
+   "country": "United States",
+   "name": "1945 - Operation Grenade The Fall of the Third Reich 1945",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 33,
+   "country": "United States",
+   "name": "1945 - Rhineland The Fall of the Third Reich 1945",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 423,
+   "country": "United States",
+   "name": "1st Infantry Division (Sicily)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 424,
+   "country": "United States",
+   "name": "2nd Armoured",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 421,
+   "country": "United States",
+   "name": "82nd Airborne Division (Sicily)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 231,
+   "country": "United States",
+   "name": "Airlanding Platoon Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 175,
+   "country": "United States",
+   "name": "Anti-tank Reinforced Platoon Battle of the Bulge book",
+   "source": "Battle of the Bulge"
+  },
+  {
+   "id": 425,
+   "country": "United States",
+   "name": "Armoured Infantry Platoon (Sicily and Italy)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 144,
+   "country": "United States",
+   "name": "Battling Bastards of Bataan December 1941-May 1942",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 361,
+   "country": "United States",
+   "name": "Bloody Gulch",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 482,
+   "country": "United States",
+   "name": "Cassino Tank/Tank Destroyer Tank Platoon",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 388,
+   "country": "United States",
+   "name": "Darby's Rangers",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 503,
+   "country": "United States",
+   "name": "FSSF (Anizo Stalemate and Breakout)",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 427,
+   "country": "United States",
+   "name": "FSSF (Monte la Difensa)",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 171,
+   "country": "United States",
+   "name": "Ghost Mountain Boys New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 505,
+   "country": "United States",
+   "name": "II Corps (From Gustav Line to Rome)",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 390,
+   "country": "United States",
+   "name": "Late-War Ranger Company",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 389,
+   "country": "United States",
+   "name": "Late-War Rangers Mortar Company",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 379,
+   "country": "United States",
+   "name": "Late-war US Airborne Glider Weapons",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 368,
+   "country": "United States",
+   "name": "Late-war US Armoured Rifle Company",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 365,
+   "country": "United States",
+   "name": "Late-war US Army Anti-tank",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 230,
+   "country": "United States",
+   "name": "Parachute Platoon Market Garden",
+   "source": "Market Garden"
+  },
+  {
+   "id": 484,
+   "country": "United States",
+   "name": "Task Force Harmon Reinforced Platoon",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 69,
+   "country": "United States",
+   "name": "U.S. Reinforced Platoon",
+   "source": "Armies of the United States"
+  },
+  {
+   "id": 154,
+   "country": "United States",
+   "name": "U.S. rule book units only",
+   "source": "v2 Rulebook"
+  },
+  {
+   "id": 122,
+   "country": "United States",
+   "name": "U.S. Tank Platoon",
+   "source": "Tank Wars"
+  },
+  {
+   "id": 252,
+   "country": "United States",
+   "name": "US Airborne (D-Day)",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 378,
+   "country": "United States",
+   "name": "US Airborne Reinforced Platoon (Normandy)",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 369,
+   "country": "United States",
+   "name": "US Army Cavalry Reconnaissance Armoured Platoon",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 173,
+   "country": "United States",
+   "name": "US Army Late War, New Guinea New Guinea book",
+   "source": "New Guinea"
+  },
+  {
+   "id": 370,
+   "country": "United States",
+   "name": "US Army Late-war Mechanised Tank Destroyer Platoon",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 366,
+   "country": "United States",
+   "name": "US Army Light Artillery Battalion Firing Battery",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 364,
+   "country": "United States",
+   "name": "US Army Machinegun Platoon",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 363,
+   "country": "United States",
+   "name": "US Army Mortar Platoon",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 362,
+   "country": "United States",
+   "name": "US Army Weapons Platoon",
+   "source": "D-Day: US Sector"
+  },
+  {
+   "id": 432,
+   "country": "United States",
+   "name": "US Army, Guam 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 434,
+   "country": "United States",
+   "name": "US Army, Palau 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 429,
+   "country": "United States",
+   "name": "US Army, Saipan 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 253,
+   "country": "United States",
+   "name": "US Beach Landing",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 254,
+   "country": "United States",
+   "name": "US D-Day (Afternoon)",
+   "source": "D-Day: Overlord"
+  },
+  {
+   "id": 481,
+   "country": "United States",
+   "name": "US II Corps (Cassino Jan-Feb 1944)",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 431,
+   "country": "United States",
+   "name": "US Marines, Guam 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 433,
+   "country": "United States",
+   "name": "US Marines, Palau 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 428,
+   "country": "United States",
+   "name": "US Marines, Saipan 1944",
+   "source": "Mariana & Palau Islands"
+  },
+  {
+   "id": 426,
+   "country": "United States",
+   "name": "VI Corps",
+   "source": "Italy: Soft Underbelly"
+  },
+  {
+   "id": 504,
+   "country": "United States",
+   "name": "VI Corps (Anzio Breakout)",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 483,
+   "country": "United States",
+   "name": "VI Corps (Anzio, Jan-Feb 1944)",
+   "source": "Italy: Tough Gut"
+  },
+  {
+   "id": 422,
+   "country": "United States",
+   "name": "X Force, Darby's Rangers (Sicily)",
+   "source": "Italy: Soft Underbelly"
+  }
+ ],
+ "selected": [
+  614,
+  615,
+  617,
+  616,
+  634,
+  635,
+  637,
+  636,
+  630,
+  631,
+  633,
+  632,
+  618,
+  619,
+  621,
+  620,
+  622,
+  623,
+  625,
+  624,
+  626,
+  627,
+  629,
+  628,
+  495,
+  494,
+  493,
+  492,
+  496,
+  491
+ ]
+}

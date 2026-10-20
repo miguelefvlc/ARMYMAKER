@@ -17,6 +17,13 @@
     <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512.png" />
     <script>
       if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+        var refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+          }
+        });
         window.addEventListener('load', function () {
           navigator.serviceWorker.register('./sw.js', { scope: './' }).then(function (reg) {
             reg.update();
@@ -83,6 +90,9 @@
     <script src="./factions/soviet_union_app_data.js"></script>
     <script src="./factions/germany_app_data.js"></script>
     <script src="./factions/japan_app_data.js"></script>
+    <script src="./factions/usa_app_data.js"></script>
+    <script src="./factions/great_britain_app_data.js"></script>
+    <script src="./factions/italy_app_data.js"></script>
     <!-- Accounts & cloud-saved lists (Google Identity Services + Supabase) -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -173,9 +183,12 @@
       // =========================================================================
       // SVG ICONS
       // =========================================================================
-      const ChevronDown = ({ className = "w-4 h-4" }) => (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-          <path d="m6 9 6 6 6-6"/>
+      const GoogleIcon = ({ className = "w-4 h-4" }) => (
+        <svg viewBox="0 0 48 48" className={className}>
+          <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
+          <path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+          <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+          <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/>
         </svg>
       );
       const Plus = ({ className = "w-4 h-4" }) => (
@@ -265,6 +278,19 @@
           <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/>
         </svg>
       );
+
+      // =========================================================================
+      // FACTIONS REGISTRY & CONSTANTS (100% Faction-Agnostic Multi-Faction Engine)
+      // =========================================================================
+      const FACTIONS_REGISTRY = window.EASYARMY_FACTIONS || {
+        soviet_union: window.EASYARMY_SOVIET_DATA,
+      };
+
+      const EXP_LABELS = {
+        inexperienced: 'Inexperienced',
+        regular: 'Regular',
+        veteran: 'Veteran',
+      };
 
       // =========================================================================
       // ACCOUNTS & CLOUD / LOCAL LISTS (Google Sign-In + Supabase + Local Library)
@@ -574,12 +600,7 @@
               <form onSubmit={handleQuickGoogleSubmit} className="space-y-4">
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-950 border border-zinc-800">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow">
-                    <svg viewBox="0 0 48 48" className="w-6 h-6">
-                      <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
-                      <path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
-                      <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
-                      <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/>
-                    </svg>
+                    <GoogleIcon className="w-6 h-6" />
                   </div>
                   <div className="text-xs font-mono">
                     <div className="text-white font-bold">Continue with your Google Account</div>
@@ -615,12 +636,7 @@
                   type="submit"
                   className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-extrabold text-sm flex items-center justify-center gap-2.5 transition-colors shadow cursor-pointer"
                 >
-                  <svg viewBox="0 0 48 48" className="w-4 h-4">
-                    <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
-                    <path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
-                    <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
-                    <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/>
-                  </svg>
+                  <GoogleIcon className="w-4 h-4" />
                   Sign In with Google
                 </button>
 
@@ -684,12 +700,7 @@
                       onClick={handleGoogle}
                       className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-bold text-sm flex items-center justify-center gap-2.5 transition-colors shadow cursor-pointer"
                     >
-                      <svg viewBox="0 0 48 48" className="w-4 h-4">
-                        <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
-                        <path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
-                        <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
-                        <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/>
-                      </svg>
+                      <GoogleIcon className="w-4 h-4" />
                       Continue with Google
                     </button>
                     <div className="flex items-center gap-3 text-[10.5px] font-mono uppercase text-zinc-500">
@@ -763,6 +774,42 @@
               </div>
             )}
           </ModalShell>
+        );
+      }
+
+      function SavedListRow({ list, isCurrent, onOpen, onDelete, deleteTitle }) {
+        return (
+          <div
+            className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
+              isCurrent ? 'bg-amber-400/10 border-amber-500/40' : 'bg-zinc-950/70 border-zinc-800 hover:border-zinc-700'
+            }`}
+          >
+            <button type="button" onClick={onOpen} className="flex-1 min-w-0 text-left cursor-pointer">
+              <div className="font-bold text-sm text-white truncate">{list.name}</div>
+              <div className="text-[11px] font-mono text-zinc-400 flex flex-wrap items-center gap-x-2">
+                <span>{FACTIONS_REGISTRY[list.faction_id]?.faction || list.faction_id}</span>
+                <span className="text-zinc-600">•</span>
+                <span className="text-amber-400 font-bold">{list.total_points} pts</span>
+                <span className="text-zinc-600">•</span>
+                <span>{list.order_dice} dice</span>
+                <span className="text-zinc-600">•</span>
+                <span>{new Date(list.updated_at).toLocaleDateString()}</span>
+              </div>
+            </button>
+            {isCurrent && (
+              <span className="hidden sm:inline text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-amber-400 text-black font-bold">
+                Active
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={onDelete}
+              className="p-2 rounded-lg text-zinc-500 hover:text-red-400 hover:bg-zinc-900 transition-colors cursor-pointer"
+              title={deleteTitle}
+            >
+              <Trash className="w-4 h-4" />
+            </button>
+          </div>
         );
       }
 
@@ -874,43 +921,16 @@
                     <div className="text-[10.5px] font-mono uppercase tracking-wider text-amber-400 font-bold">
                       Cloud Lists ({cloudLists.length})
                     </div>
-                    {cloudLists.map((l) => {
-                      const isCurrent = l.id === currentListId;
-                      return (
-                        <div
-                          key={l.id}
-                          className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
-                            isCurrent ? 'bg-amber-400/10 border-amber-500/40' : 'bg-zinc-950/70 border-zinc-800 hover:border-zinc-700'
-                          }`}
-                        >
-                          <button type="button" onClick={() => handleOpenCloud(l.id)} className="flex-1 min-w-0 text-left cursor-pointer">
-                            <div className="font-bold text-sm text-white truncate">{l.name}</div>
-                            <div className="text-[11px] font-mono text-zinc-400 flex flex-wrap items-center gap-x-2">
-                              <span>{FACTIONS_REGISTRY[l.faction_id]?.faction || l.faction_id}</span>
-                              <span className="text-zinc-600">•</span>
-                              <span className="text-amber-400 font-bold">{l.total_points} pts</span>
-                              <span className="text-zinc-600">•</span>
-                              <span>{l.order_dice} dice</span>
-                              <span className="text-zinc-600">•</span>
-                              <span>{new Date(l.updated_at).toLocaleDateString()}</span>
-                            </div>
-                          </button>
-                          {isCurrent && (
-                            <span className="hidden sm:inline text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-amber-400 text-black font-bold">
-                              Active
-                            </span>
-                          )}
-                          <button
-                            type="button"
-                            onClick={() => handleDeleteCloud(l)}
-                            className="p-2 rounded-lg text-zinc-500 hover:text-red-400 hover:bg-zinc-900 transition-colors cursor-pointer"
-                            title="Delete cloud list"
-                          >
-                            <Trash className="w-4 h-4" />
-                          </button>
-                        </div>
-                      );
-                    })}
+                    {cloudLists.map((l) => (
+                      <SavedListRow
+                        key={l.id}
+                        list={l}
+                        isCurrent={l.id === currentListId}
+                        onOpen={() => handleOpenCloud(l.id)}
+                        onDelete={() => handleDeleteCloud(l)}
+                        deleteTitle="Delete cloud list"
+                      />
+                    ))}
                   </div>
                 )}
 
@@ -919,43 +939,16 @@
                     <div className="text-[10.5px] font-mono uppercase tracking-wider text-zinc-400 font-bold">
                       Saved on This Device ({localLists.length})
                     </div>
-                    {localLists.map((l) => {
-                      const isCurrent = l.id === currentListId;
-                      return (
-                        <div
-                          key={l.id}
-                          className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
-                            isCurrent ? 'bg-amber-400/10 border-amber-500/40' : 'bg-zinc-950/70 border-zinc-800 hover:border-zinc-700'
-                          }`}
-                        >
-                          <button type="button" onClick={() => handleOpenLocal(l)} className="flex-1 min-w-0 text-left cursor-pointer">
-                            <div className="font-bold text-sm text-white truncate">{l.name}</div>
-                            <div className="text-[11px] font-mono text-zinc-400 flex flex-wrap items-center gap-x-2">
-                              <span>{FACTIONS_REGISTRY[l.faction_id]?.faction || l.faction_id}</span>
-                              <span className="text-zinc-600">•</span>
-                              <span className="text-amber-400 font-bold">{l.total_points} pts</span>
-                              <span className="text-zinc-600">•</span>
-                              <span>{l.order_dice} dice</span>
-                              <span className="text-zinc-600">•</span>
-                              <span>{new Date(l.updated_at).toLocaleDateString()}</span>
-                            </div>
-                          </button>
-                          {isCurrent && (
-                            <span className="hidden sm:inline text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-amber-400 text-black font-bold">
-                              Active
-                            </span>
-                          )}
-                          <button
-                            type="button"
-                            onClick={() => handleDeleteLocal(l)}
-                            className="p-2 rounded-lg text-zinc-500 hover:text-red-400 hover:bg-zinc-900 transition-colors cursor-pointer"
-                            title="Delete local list"
-                          >
-                            <Trash className="w-4 h-4" />
-                          </button>
-                        </div>
-                      );
-                    })}
+                    {localLists.map((l) => (
+                      <SavedListRow
+                        key={l.id}
+                        list={l}
+                        isCurrent={l.id === currentListId}
+                        onOpen={() => handleOpenLocal(l)}
+                        onDelete={() => handleDeleteLocal(l)}
+                        deleteTitle="Delete local list"
+                      />
+                    ))}
                   </div>
                 )}
               </div>
@@ -964,17 +957,8 @@
         );
       }
       // =========================================================================
-      // FACTION REGISTRY & ENGINE HELPERS (100% Faction-Agnostic)
+      // ENGINE HELPERS & BACKWARD COMPATIBILITY
       // =========================================================================
-      const FACTIONS_REGISTRY = window.EASYARMY_FACTIONS || {
-        soviet_union: window.EASYARMY_SOVIET_DATA,
-      };
-
-      const EXP_LABELS = {
-        inexperienced: 'Inexperienced',
-        regular: 'Regular',
-        veteran: 'Veteran',
-      };
       // Backward-compatibility alias map for any legacy saved JSON lists
       const LEGACY_UNIT_ALIASES = {
         "Tanque ligero T-26A": "T-26A Light Tank",
@@ -1175,6 +1159,39 @@
         if (pts > 0) return `+${pts} pts`;
         if (pts < 0) return `${pts} pts`;
         return `0 pts`;
+      }
+
+      function QuantityStepper({ value, max, onChange, min = 0 }) {
+        return (
+          <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-700 rounded-lg px-1.5 py-0.5 select-none">
+            <button
+              type="button"
+              onClick={() => onChange(Math.max(min, value - 1))}
+              className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer select-none"
+            >
+              −
+            </button>
+            <select
+              value={value}
+              onChange={(e) => onChange(Number(e.target.value))}
+              className="bg-transparent text-amber-300 font-mono font-bold text-xs focus:outline-none text-center cursor-pointer"
+            >
+              {min === 0 && <option value={0} className="bg-zinc-900 text-zinc-400">0</option>}
+              {Array.from({ length: max - min }, (_, i) => min + i + (min === 0 ? 1 : 0)).map((num) => (
+                <option key={num} value={num} className="bg-zinc-900 text-amber-300">
+                  {min === 0 ? `+${num}` : num}
+                </option>
+              ))}
+            </select>
+            <button
+              type="button"
+              onClick={() => onChange(Math.min(max, value + 1))}
+              className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer select-none"
+            >
+              +
+            </button>
+          </div>
+        );
       }
 
       // =========================================================================
@@ -1401,32 +1418,11 @@
                               </span>
                             </label>
                             <div className="flex items-center gap-2.5 shrink-0">
-                              <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-700 rounded-lg px-1.5 py-0.5">
-                                <button
-                                  type="button"
-                                  onClick={() => setExtraMen(Math.max(0, extraMen - 1))}
-                                  className="px-2 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
-                                >
-                                  −
-                                </button>
-                                <select
-                                  value={extraMen}
-                                  onChange={(e) => setExtraMen(Number(e.target.value))}
-                                  className="bg-transparent text-amber-300 font-mono font-bold text-xs focus:outline-none text-center cursor-pointer"
-                                >
-                                  <option value={0} className="bg-zinc-900 text-zinc-400">0</option>
-                                  {Array.from({ length: def.maxExtraMen }, (_, i) => i + 1).map(num => (
-                                    <option key={num} value={num} className="bg-zinc-900 text-amber-300">+{num}</option>
-                                  ))}
-                                </select>
-                                <button
-                                  type="button"
-                                  onClick={() => setExtraMen(Math.min(def.maxExtraMen, extraMen + 1))}
-                                  className="px-2 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
-                                >
-                                  +
-                                </button>
-                              </div>
+                              <QuantityStepper
+                                value={extraMen}
+                                max={def.maxExtraMen}
+                                onChange={setExtraMen}
+                              />
                               <span className="text-amber-400 font-mono text-xs font-bold w-20 text-right">
                                 {formatPtsDelta(extraMen > 0 ? extraMen * costPerMan : costPerMan)}
                               </span>
@@ -1466,33 +1462,11 @@
                                     </label>
 
                                     <div className="flex items-center gap-2.5 shrink-0">
-                                      <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-700 rounded-lg px-1.5 py-0.5">
-                                        <button
-                                          type="button"
-                                          onClick={() => handleOptionCount(opt.id, Math.max(0, val - 1))}
-                                          className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
-                                        >
-                                          −
-                                        </button>
-                                        <select
-                                          value={val}
-                                          onChange={(e) => handleOptionCount(opt.id, Number(e.target.value))}
-                                          className="bg-transparent text-amber-300 font-mono font-bold text-xs focus:outline-none text-center cursor-pointer"
-                                        >
-                                          <option value={0} className="bg-zinc-900 text-zinc-400">0</option>
-                                          {Array.from({ length: maxAllowed }, (_, i) => i + 1).map(num => (
-                                            <option key={num} value={num} className="bg-zinc-900 text-amber-300">{num}</option>
-                                          ))}
-                                        </select>
-                                        <button
-                                          type="button"
-                                          onClick={() => handleOptionCount(opt.id, Math.min(maxAllowed, val + 1))}
-                                          className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer"
-                                        >
-                                          +
-                                        </button>
-                                      </div>
-
+                                      <QuantityStepper
+                                        value={val}
+                                        max={maxAllowed}
+                                        onChange={(newCount) => handleOptionCount(opt.id, newCount)}
+                                      />
                                       <span className="text-amber-400 font-mono text-xs font-bold w-20 text-right">
                                         {formatPtsDelta(val > 0 ? val * opt.cost : opt.cost)}
                                       </span>
@@ -2054,19 +2028,21 @@
           return getUnitSummary(def, value.config);
         }, [def, value]);
         const availableUnits = useMemo(() => {
+          if (!isOpen) return [];
           const sKey = slot.slotKey || slot.label;
           const periodSlots = factionData?.platoonPeriods?.[platoonTypeId]?.[periodKey || 'All']?.slots;
           if (periodSlots && periodSlots[sKey]) {
             return periodSlots[sKey];
           }
           return factionData?.slotCatalog?.[sKey] || factionData?.slotCatalog?.[slot.label] || [];
-        }, [factionData, platoonTypeId, periodKey, slot]);
+        }, [isOpen, factionData, platoonTypeId, periodKey, slot]);
 
         const filteredUnits = useMemo(() => {
+          if (!isOpen) return [];
           if (!searchTerm) return availableUnits;
           const q = searchTerm.toLowerCase();
           return availableUnits.filter(u => u.toLowerCase().includes(q));
-        }, [availableUnits, searchTerm]);
+        }, [isOpen, availableUnits, searchTerm]);
 
         useEffect(() => {
           function handleClickOutside(event) {
@@ -2283,9 +2259,9 @@
         return s;
       }
 
-      function findUnitWeaponRow(def, regex, fallback) {
+      function findUnitWeaponRow(def, regex, fallback, excludeRegex = null) {
         const found = (def?.weaponsTable || []).find(
-          (w) => w.rowType !== 'vehicle_stat' && regex.test(w.name || '')
+          (w) => w.rowType !== 'vehicle_stat' && regex.test(w.name || '') && (!excludeRegex || !excludeRegex.test(w.name || ''))
         );
         if (found) {
           return {
@@ -2411,6 +2387,10 @@
                 ? 'Reinforced Front Armour'
                 : /improved ballistics/i.test(txt)
                 ? 'Improved Ballistics'
+                : /schürzen|schurzen|armour skirts/i.test(txt)
+                ? 'Schürzen (Protects vs shaped charges)'
+                : /gyro-stabiliser|gyrostabiliser/i.test(txt)
+                ? 'Gyro-stabiliser'
                 : '',
             });
           }
@@ -2422,10 +2402,9 @@
         // CASE 2: ARTILLERY & WEAPONS TEAMS (Mortar, MMG, Sniper, AT Rifle, etc.)
         // ---------------------------------------------------------------------
         const compRaw = def.composition || '';
-        const compLower = compRaw.toLowerCase();
         const isTeamOrArtillery =
           !!def.profile?.Team ||
-          /artillery|gun|howitzer|mortar|machine gun|sniper|flamethrower|anti-tank rifle|ampulomet|dog/i.test(
+          /artillery|gun|howitzer|mortar|machine gun|sniper|flamethrower|anti-tank rifle|ampulomet|dog|piat|boys|solothurn|brixia/i.test(
             `${def.name} ${compRaw}`
           ) && !/squad|section|platoon|commander|commissar|medic|observer/i.test(def.name);
 
@@ -2554,7 +2533,11 @@
         }
 
         let leaderWeapon = defaultWeapon;
+        let leaderSpecial = '';
         let smgMen = 0;
+        let assaultRifleMen = 0;
+        let barMen = 0;
+        let shotgunMen = 0;
         let pistolMen = 0;
         let lmgMen = /(\b1\b|one)\s+light machine gun|\b1\s+lmg\b/i.test(def.weapons || '') ? 1 : 0;
         let flamethrowerMen = 0;
@@ -2583,6 +2566,22 @@
             continue;
           }
 
+          // 1b. PIAT (Britain)
+          if (lower.includes('piat')) {
+            const piatStats = findUnitWeaponRow(def, /piat/i, {
+              range: '12"',
+              shots: '1',
+              pen: '+5',
+              special: 'Team, Shaped Charge',
+            });
+            extraRows.push({
+              qty: String(count),
+              weapons: 'PIAT',
+              ...piatStats,
+            });
+            continue;
+          }
+
           // 2. Anti-tank grenades
           if (lower.includes('anti-tank grenades') || lower.includes('molotov')) {
             extraRows.push({
@@ -2596,7 +2595,31 @@
             continue;
           }
 
-          // 3. Entire squad SMG replacement
+          // 3. Shin Gunto (Japan)
+          if (lower.includes('shin gunto')) {
+            if (lower.includes('pistol')) {
+              leaderWeapon = 'Shin Gunto and Pistol';
+              leaderSpecial = 'Tough fighters, Assault';
+            } else {
+              leaderSpecial = 'Tough fighters';
+            }
+            continue;
+          }
+
+          // 4. Demolition charge
+          if (lower.includes('demolition charge')) {
+            extraRows.push({
+              qty: String(count),
+              weapons: 'Demolition charge (carried in addition to other weapons)',
+              range: 'Throw',
+              shots: '1',
+              pen: '+5',
+              special: 'One-shot, Demolition',
+            });
+            continue;
+          }
+
+          // 5. Entire squad SMG replacement
           if ((lower.includes('entire squad') || lower.includes('all men')) && (lower.includes('submachine') || lower.includes('smg'))) {
             leaderWeapon = 'Submachine gun';
             defaultWeapon = 'Submachine gun';
@@ -2613,10 +2636,18 @@
             continue;
           }
 
-          // 4. Leader-specific weapon replacement (NCO / Officer / Commissar)
+          // 6. Leader-specific weapon replacement (NCO / Officer / Commissar)
           const mentionsLeader = /\b(nco|officer|commissar)\b/i.test(lower);
           const mentionsOtherMen = /\b(\d+|up to|additional)\s*men\b/i.test(lower);
           if (mentionsLeader && !mentionsOtherMen) {
+            if (lower.includes('assault rifle') || lower.includes('sturmgewehr') || /\bstg\b/.test(lower)) {
+              leaderWeapon = 'Assault rifle';
+              continue;
+            }
+            if (lower.includes('carbine')) {
+              leaderWeapon = 'Carbine';
+              continue;
+            }
             if (lower.includes('submachine') || lower.includes('smg')) {
               leaderWeapon = 'Submachine gun';
               continue;
@@ -2631,10 +2662,29 @@
             }
           }
 
-          // 5. Men weapon replacements (SMG, LMG, Flamethrower, Light Mortar, AT Rifle, Pistol)
+          // 7. Men weapon replacements (Assault Rifle, BAR, Shotgun, SMG, LMG, Flamethrower, Light Mortar, AT Rifle, Pistol)
+          if (lower.includes('assault rifle') || lower.includes('sturmgewehr') || /\bstg\b/.test(lower)) {
+            if (mentionsLeader && mentionsOtherMen) {
+              leaderWeapon = 'Assault rifle';
+              assaultRifleMen += Math.min(totalMen, Math.max(0, count - 1));
+            } else {
+              assaultRifleMen += count;
+            }
+            continue;
+          }
+
+          if (lower.includes('automatic rifle') || lower.includes('browning automatic rifle') || /\bbar\b/i.test(lower)) {
+            barMen += count;
+            continue;
+          }
+
+          if (lower.includes('shotgun')) {
+            shotgunMen += count;
+            continue;
+          }
+
           if ((lower.includes('submachine') || lower.includes('smg')) && !lower.includes('guard dog')) {
             if (mentionsLeader && mentionsOtherMen) {
-              // Combined option like "The NCO and up to X men may have SMGs"
               leaderWeapon = 'Submachine gun';
               smgMen += Math.min(totalMen, Math.max(0, count - 1));
             } else {
@@ -2643,7 +2693,7 @@
             continue;
           }
 
-          if (lower.includes('light machine gun') || /\blmg\b/.test(lower)) {
+          if (lower.includes('light machine gun') || /\blmg\b/.test(lower) || lower.includes('breda') || lower.includes('vickers k')) {
             lmgMen += count;
             continue;
           }
@@ -2653,12 +2703,12 @@
             continue;
           }
 
-          if (lower.includes('light mortar')) {
+          if (lower.includes('light mortar') || lower.includes('knee mortar') || lower.includes('grenade discharger') || lower.includes('brixia')) {
             lightMortarMen += count;
             continue;
           }
 
-          if (lower.includes('anti-tank rifle')) {
+          if (lower.includes('anti-tank rifle') || lower.includes('boys') || lower.includes('solothurn')) {
             atRifleMen += count;
             continue;
           }
@@ -2668,7 +2718,7 @@
             continue;
           }
 
-          // 6. Other squad upgrades / special rules (Airborne, NKVD, Naval Brigade, Body Armour, Skis, Cavalry, Dogs, etc.)
+          // 8. Other squad upgrades / special rules (Airborne, NKVD, Naval Brigade, Body Armour, Skis, Cavalry, Dogs, etc.)
           let specialRule = '';
           if (lower.includes('stubborn') || lower.includes('airborne')) specialRule = 'Stubborn';
           else if (lower.includes('fanatics') || lower.includes('nkvd')) specialRule = 'Fanatics';
@@ -2691,6 +2741,22 @@
 
         const getWeaponProfile = (wName) => {
           const wl = wName.toLowerCase();
+          if (wl.includes('assault rifle') || wl.includes('sturmgewehr')) {
+            return findUnitWeaponRow(def, /assault rifle|sturmgewehr/i, {
+              range: '18"',
+              shots: '2',
+              pen: 'n/a',
+              special: 'Assault',
+            });
+          }
+          if (wl.includes('carbine')) {
+            return findUnitWeaponRow(def, /carbine/i, {
+              range: '18"',
+              shots: '1',
+              pen: 'n/a',
+              special: 'Assault',
+            });
+          }
           if (wl.includes('submachine')) {
             return findUnitWeaponRow(def, /submachine gun|\bsmg\b/i, {
               range: '12"',
@@ -2698,6 +2764,14 @@
               pen: 'n/a',
               special: 'Assault',
             });
+          }
+          if (wl.includes('shin gunto')) {
+            return {
+              range: '-',
+              shots: '-',
+              pen: 'n/a',
+              special: 'Tough fighters',
+            };
           }
           if (wl.includes('pistol')) {
             return findUnitWeaponRow(def, /pistol/i, {
@@ -2710,12 +2784,12 @@
           if (wl.includes('unarmed')) {
             return { range: '-', shots: '-', pen: 'n/a', special: '' };
           }
-          return findUnitWeaponRow(def, /rifle/i, {
+          return findUnitWeaponRow(def, /\brifle\b/i, {
             range: '24"',
             shots: '1',
             pen: 'n/a',
             special: '',
-          });
+          }, /assault|anti-tank|automatic/i);
         };
 
         const rows = [];
@@ -2723,15 +2797,17 @@
         // Leader row
         if (hasLeader) {
           const lStats = getWeaponProfile(leaderWeapon);
+          const combinedSpecial = [cleanSpecialText(lStats.special), leaderSpecial].filter(Boolean).join(', ');
           rows.push({
             qty: '1',
             weapons: leaderWeapon === 'Unarmed' ? `${leaderLabel} (Unarmed)` : `${leaderLabel} with ${leaderWeapon}`,
             ...lStats,
+            special: combinedSpecial,
           });
         }
 
         // Calculate remaining default-weapon men
-        const replacedMen = smgMen + pistolMen + lmgMen + flamethrowerMen + lightMortarMen + atRifleMen;
+        const replacedMen = assaultRifleMen + barMen + shotgunMen + smgMen + pistolMen + lmgMen + flamethrowerMen + lightMortarMen + atRifleMen;
         const remainingDefaultMen = Math.max(0, totalMen - replacedMen);
 
         if (remainingDefaultMen > 0) {
@@ -2740,6 +2816,43 @@
             qty: String(remainingDefaultMen),
             weapons: defaultWeapon === 'Unarmed' ? (remainingDefaultMen === 1 ? 'Unarmed man' : 'Unarmed men') : `Infantry with ${defaultWeapon}`,
             ...dStats,
+          });
+        }
+
+        if (assaultRifleMen > 0) {
+          const arStats = getWeaponProfile('Assault rifle');
+          rows.push({
+            qty: String(Math.min(totalMen, assaultRifleMen)),
+            weapons: 'Infantry with Assault rifle',
+            ...arStats,
+          });
+        }
+
+        if (barMen > 0) {
+          const barStats = findUnitWeaponRow(def, /automatic rifle|browning automatic rifle|\bbar\b/i, {
+            range: '30"',
+            shots: '2',
+            pen: 'n/a',
+            special: '',
+          });
+          rows.push({
+            qty: String(Math.min(totalMen, barMen)),
+            weapons: 'Infantry with BAR (Browning Automatic Rifle)',
+            ...barStats,
+          });
+        }
+
+        if (shotgunMen > 0) {
+          const sgStats = findUnitWeaponRow(def, /shotgun/i, {
+            range: '12"',
+            shots: '1',
+            pen: 'n/a',
+            special: 'Assault',
+          });
+          rows.push({
+            qty: String(Math.min(totalMen, shotgunMen)),
+            weapons: 'Infantry with Shotgun',
+            ...sgStats,
           });
         }
 
@@ -2790,7 +2903,7 @@
         }
 
         if (lightMortarMen > 0) {
-          const lmStats = findUnitWeaponRow(def, /light mortar/i, {
+          const lmStats = findUnitWeaponRow(def, /light mortar|knee mortar/i, {
             range: '12"-24"',
             shots: '1',
             pen: 'HE',
@@ -3216,7 +3329,13 @@
 
       function App() {
         const availableFactions = Object.keys(FACTIONS_REGISTRY);
-        const [activeFactionId, setActiveFactionId] = useState(availableFactions[0] || 'soviet_union');
+        const [activeFactionId, setActiveFactionId] = useState(() => {
+          try {
+            const saved = localStorage.getItem('boltaction.last_faction');
+            if (saved && FACTIONS_REGISTRY[saved]) return saved;
+          } catch {}
+          return availableFactions[0] || 'soviet_union';
+        });
         const factionData = FACTIONS_REGISTRY[activeFactionId] || window.EASYARMY_SOVIET_DATA;
         const platoonTypes = factionData?.platoons || [];
 
@@ -3475,12 +3594,6 @@
             return p;
           }));
         };
-        const handleAddPlatoon = () => {
-          const nextId = platoons.length > 0 ? Math.max(...platoons.map(p => p.id)) + 1 : 1;
-          const newPlatoon = { id: nextId, typeId: currentPlatoon.typeId, period: 'All', slots: {} };
-          setPlatoons([...platoons, newPlatoon]);
-          setActivePlatoonId(nextId);
-        };
         const handleDeletePlatoon = (e, platoonId) => {
           if (e && e.stopPropagation) e.stopPropagation();
           if (platoons.length <= 1) return;
@@ -3586,12 +3699,14 @@
               {/* 0. APP BAR: EXPANDED CELLS SPANNING FULL ROW */}
               <div className="flex items-center gap-1.5 sm:gap-2 w-full font-mono text-[11px] sm:text-xs">
                 {/* 1. Faction Selector */}
-                <div className="flex-[1.3] sm:flex-1 min-w-0 h-8 sm:h-9 flex items-center justify-center bg-zinc-900 border border-zinc-750 rounded-lg px-2 sm:px-2.5">
+                <div className="flex-[1.3] sm:flex-1 min-w-0 h-8 sm:h-9 flex items-center justify-center bg-zinc-900 border border-zinc-750 hover:border-amber-400/60 rounded-lg px-2 sm:px-2.5 transition-colors">
                   <span className="text-zinc-400 text-[10px] uppercase font-bold hidden sm:inline mr-1">Faction:</span>
                   <select
                     value={activeFactionId}
                     onChange={(e) => {
-                      setActiveFactionId(e.target.value);
+                      const nextFId = e.target.value;
+                      setActiveFactionId(nextFId);
+                      try { localStorage.setItem('boltaction.last_faction', nextFId); } catch {}
                       setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
                       setActivePlatoonId(1);
                     }}
@@ -3603,6 +3718,7 @@
                       </option>
                     ))}
                   </select>
+                  <span className="text-amber-400/80 text-[8px] ml-1 pointer-events-none select-none">▼</span>
                 </div>
 
                 {/* 2. New List */}

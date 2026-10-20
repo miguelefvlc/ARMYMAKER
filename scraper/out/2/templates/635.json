@@ -1,0 +1,1396 @@
+{
+ "template": {
+  "id": 635,
+  "country": "United States",
+  "name": "*v3 Armies of the U.S. - Armoured Platoon (EW)",
+  "source": "Armies of the United States (v3)"
+ },
+ "title": "*v3 Armies of the U.S. - Armoured Platoon (EW)",
+ "source": "Armies of the United States (v3)",
+ "layout": [
+  [
+   {
+    "section": "Command Vehicle",
+    "required": true,
+    "units": [
+     "M3 Stuart Light Tank",
+     "M3 Lee/Grant Medium Tank",
+     "M6 Gun Motor Carriage",
+     "Mortar Jeep",
+     "M3 White Scout Car (Recce)"
+    ]
+   },
+   {
+    "section": "Cmd Vehicle Options",
+    "required": true,
+    "units": [
+     "Command Vehicle rule"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": true,
+    "units": [
+     "M3 Stuart Light Tank",
+     "M3 Lee/Grant Medium Tank",
+     "M6 Gun Motor Carriage",
+     "Mortar Jeep",
+     "M3 White Scout Car (Recce)"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "M3 Stuart Light Tank",
+     "M3 Lee/Grant Medium Tank",
+     "M6 Gun Motor Carriage",
+     "Mortar Jeep",
+     "M3 White Scout Car (Recce)"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "M3 Stuart Light Tank",
+     "M3 Lee/Grant Medium Tank",
+     "M6 Gun Motor Carriage",
+     "Mortar Jeep",
+     "M3 White Scout Car (Recce)"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "M3 Stuart Light Tank",
+     "M3 Lee/Grant Medium Tank",
+     "M6 Gun Motor Carriage",
+     "Mortar Jeep",
+     "M3 White Scout Car (Recce)"
+    ]
+   }
+  ]
+ ],
+ "units": [
+  {
+   "section": "Command Vehicle",
+   "listName": "M3 Stuart Light Tank",
+   "name": "M3 Stuart Light Tank",
+   "source": "Armies of the United States (v3) - page 54",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 125,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Turret-mounted light anti-tank gun with coaxial MMG and 1 forward facing, hull-mounted MMG",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Hull-mounted LMGs (if option is taken)\nVulnerable\nRecce (if option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Take the Recce rule for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Add a pintle-mounted MMG to the turret for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": null,
+     "text": "Add two hull-mounted forward-facing LMGs for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-Stuart.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "M3 Stuart light tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Recce",
+     "Range": "-",
+     "Shots": "-",
+     "Pen": "-",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Two hull-mounted forward-facing LMGs",
+     "Range": "36\"",
+     "Shots": "4",
+     "Pen": "n/a",
+     "Special": "Front arc, Hull-mounted LMGs, (4 shots total at one target)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Hull-mounted LMGs",
+     "ref": "v3 page 54 AoUS",
+     "text": "To represent the awkwardness of this weapon layout, these two weapons must be fired against the same target."
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "M3 Lee/Grant Medium Tank",
+   "name": "M3 Lee/Grant Medium Tank",
+   "source": "Armies of the United States (v3) - page 57",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 188,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 235,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Hull-mounted medium anti-tank gun covering the front and right arcs, 1 turret-mounted light anti-tank gun with co-axial MMG, and 1 MMG with 360-degree arc of fire",
+    "Damage Value": "9+ (medium tank)",
+    "Special Rules": "Improved HE (2\")\nEasily Catches Fire\nVulnerable"
+   },
+   "options": [],
+   "period": "E/M",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-Lee.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "M3 Lee/Grant medium tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "Easily catches fire, Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "Hull-mounted front/right arc medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Improved HE (2\"), Front arc, Right arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "MMG with 360 degree arc of fire",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "360 degree arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Easily catches fire",
+     "ref": "v3 page 57 AoUS",
+     "text": "If a roll on the Armoured Vehicle Damage Results Tables results in the vehicle catching fire add D3 pin markers rather than just 1 before taking a morale test."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Improved HE (2\")",
+     "ref": "v3 page 57 AoUS",
+     "text": "Instead of HE (1\") the medium anti-tank gun has HE (2\") - PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "M6 Gun Motor Carriage",
+   "name": "M6 Gun Motor Carriage",
+   "source": "Armies of the United States (v3) - page 68",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 52,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 65,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 78,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Light anti-tank gun covering either the front arc or the rear arc (errata)",
+    "Damage Value": "6+ (soft-skin)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May have a pintle-mounted HMG with a 360-degree arc of fire for +25pts (errata)",
+     "points": 25,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M6-GMC.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M6 GMC",
+     "Weapons": "M6 GMC",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M6 GMC",
+     "Weapons": "Front OR Rear-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\"), Rear arc OR Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M6 GMC",
+     "Weapons": "Pintle-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Mortar Jeep",
+   "name": "Mortar Jeep",
+   "source": "Armies of the United States (v3) - page 74",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 36,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 45,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 54,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Hull-mounted rear-facing light mortar",
+    "Damage Value": "6+ (soft-skin)"
+   },
+   "options": [],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Mortar Jeep",
+     "Weapons": "Mortar Jeep",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Mortar Jeep",
+     "Weapons": "Hull-mounted rear-facing Light mortar",
+     "Range": "12-36\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Indirect fire, HE (1\"), rear arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Indirect fire",
+     "ref": "v3 page 101",
+     "text": "- cannot hit targets within their minimum range, measured from the centre the weapon itself. Units hit by indirect file receive no cover saves of any kind. However, if the target unit is or goes Down when shot at with indirect fire, the number of hits suffered is still halved. When fired against vehicles, hits from indirect fire weapons always strike the top armour, counting the +1 penetration modifier to damage regardless of the actual position of the firer. If an open-topped armoured vehicle is hit by indirect fire add the +1 penetration modifier to the roll to damage, and also add +1 to the die roll on the Armoured Vehicle Damage Results Tables. Cannot fire indirect fire weapons from Ambush. Indirect fire weapons can fire smoke (page 128)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "M3 White Scout Car (Recce)",
+   "name": "M3 White Scout Car (Recce)",
+   "source": "Armies of the United States (v3) - page 80",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 54,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 68,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 82,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Pintle-mounted HMG covering the forward arc",
+    "Damage Value": "7+ (armoured car)",
+    "Transport": "None",
+    "Tow": "Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+    "Special Rules": "Open-topped"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May add a pintle-mounted MMG covering the right and rear arcs for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "May add a pintle-mounted MMG covering the left and rear arcs for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-White-Scout-car.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M3 White Scout Car (Recce)",
+     "Weapons": "M3 White Scout Car (Recce)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+     "Weapons": "Front pintle-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Flak, Front arc (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+     "Weapons": "Left and rear arcs pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, Left arc, Rear arc, (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+     "Weapons": "Right and rear arcs pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, Right arc, Rear arc, (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Cmd Vehicle Options",
+   "listName": "Command Vehicle rule",
+   "name": "Command Vehicle rule",
+   "source": "Version 3 Rulebook - page 188",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Command Vehicle special rule already included with primary vehicle",
+     "points": 0,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Add Command Vehicle special rule",
+     "points": 10,
+     "checked": false
+    }
+   ],
+   "profile": {},
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [],
+   "weaponNotes": [
+    "Command Vehicle special rule"
+   ],
+   "rules": [
+    {
+     "name": "Command Vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Vehicle",
+   "listName": "M3 Stuart Light Tank",
+   "name": "M3 Stuart Light Tank",
+   "source": "Armies of the United States (v3) - page 54",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 125,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Turret-mounted light anti-tank gun with coaxial MMG and 1 forward facing, hull-mounted MMG",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Hull-mounted LMGs (if option is taken)\nVulnerable\nRecce (if option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Take the Recce rule for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Add a pintle-mounted MMG to the turret for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "checkbox",
+     "name": "Option12",
+     "group": null,
+     "text": "Add two hull-mounted forward-facing LMGs for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-Stuart.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "M3 Stuart light tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Recce",
+     "Range": "-",
+     "Shots": "-",
+     "Pen": "-",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Stuart light tank",
+     "Weapons": "Two hull-mounted forward-facing LMGs",
+     "Range": "36\"",
+     "Shots": "4",
+     "Pen": "n/a",
+     "Special": "Front arc, Hull-mounted LMGs, (4 shots total at one target)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Hull-mounted LMGs",
+     "ref": "v3 page 54 AoUS",
+     "text": "To represent the awkwardness of this weapon layout, these two weapons must be fired against the same target."
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "M3 Lee/Grant Medium Tank",
+   "name": "M3 Lee/Grant Medium Tank",
+   "source": "Armies of the United States (v3) - page 57",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 188,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 235,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Hull-mounted medium anti-tank gun covering the front and right arcs, 1 turret-mounted light anti-tank gun with co-axial MMG, and 1 MMG with 360-degree arc of fire",
+    "Damage Value": "9+ (medium tank)",
+    "Special Rules": "Improved HE (2\")\nEasily Catches Fire\nVulnerable"
+   },
+   "options": [],
+   "period": "E/M",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-Lee.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "M3 Lee/Grant medium tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "Easily catches fire, Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "Hull-mounted front/right arc medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Improved HE (2\"), Front arc, Right arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M3 Lee/Grant medium tank",
+     "Weapons": "MMG with 360 degree arc of fire",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "360 degree arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Easily catches fire",
+     "ref": "v3 page 57 AoUS",
+     "text": "If a roll on the Armoured Vehicle Damage Results Tables results in the vehicle catching fire add D3 pin markers rather than just 1 before taking a morale test."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Improved HE (2\")",
+     "ref": "v3 page 57 AoUS",
+     "text": "Instead of HE (1\") the medium anti-tank gun has HE (2\") - PEN: +2, PIN: D2 (D6 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "M6 Gun Motor Carriage",
+   "name": "M6 Gun Motor Carriage",
+   "source": "Armies of the United States (v3) - page 68",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 52,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 65,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 78,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Light anti-tank gun covering either the front arc or the rear arc (errata)",
+    "Damage Value": "6+ (soft-skin)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May have a pintle-mounted HMG with a 360-degree arc of fire for +25pts (errata)",
+     "points": 25,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M6-GMC.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M6 GMC",
+     "Weapons": "M6 GMC",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M6 GMC",
+     "Weapons": "Front OR Rear-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\"), Rear arc OR Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M6 GMC",
+     "Weapons": "Pintle-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Mortar Jeep",
+   "name": "Mortar Jeep",
+   "source": "Armies of the United States (v3) - page 74",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 36,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 45,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 54,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Hull-mounted rear-facing light mortar",
+    "Damage Value": "6+ (soft-skin)"
+   },
+   "options": [],
+   "period": "E/M/L",
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Mortar Jeep",
+     "Weapons": "Mortar Jeep",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Mortar Jeep",
+     "Weapons": "Hull-mounted rear-facing Light mortar",
+     "Range": "12-36\"",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Indirect fire, HE (1\"), rear arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Indirect fire",
+     "ref": "v3 page 101",
+     "text": "- cannot hit targets within their minimum range, measured from the centre the weapon itself. Units hit by indirect file receive no cover saves of any kind. However, if the target unit is or goes Down when shot at with indirect fire, the number of hits suffered is still halved. When fired against vehicles, hits from indirect fire weapons always strike the top armour, counting the +1 penetration modifier to damage regardless of the actual position of the firer. If an open-topped armoured vehicle is hit by indirect fire add the +1 penetration modifier to the roll to damage, and also add +1 to the die roll on the Armoured Vehicle Damage Results Tables. Cannot fire indirect fire weapons from Ambush. Indirect fire weapons can fire smoke (page 128)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "M3 White Scout Car (Recce)",
+   "name": "M3 White Scout Car (Recce)",
+   "source": "Armies of the United States (v3) - page 80",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 54,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 68,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 82,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 Pintle-mounted HMG covering the forward arc",
+    "Damage Value": "7+ (armoured car)",
+    "Transport": "None",
+    "Tow": "Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+    "Special Rules": "Open-topped"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "May add a pintle-mounted MMG covering the right and rear arcs for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "May add a pintle-mounted MMG covering the left and rear arcs for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": "E/M/L",
+   "image": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-White-Scout-car.png",
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M3 White Scout Car (Recce)",
+     "Weapons": "M3 White Scout Car (Recce)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+     "Weapons": "Front pintle-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Flak, Front arc (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+     "Weapons": "Left and rear arcs pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, Left arc, Rear arc, (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Tow: Light or medium anti-tank gun; light howitzer; light anti-aircraft gun",
+     "Weapons": "Right and rear arcs pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, Right arc, Rear arc, (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Fire and Manoeuvre",
+     "ref": null,
+     "text": "For every three men who fire a rifle/carbine when a unit shoots, you may add one additional dice to the total of shots fired (these shots are assumed to come from any of the men armed as such). For example four men would add one additional shot, and twelve men would add four shots. (10-2025 errata)"
+    },
+    {
+     "name": "Air Superiority",
+     "ref": null,
+     "text": "The Forward Air Observer unit can call an Air Strike twice instead of once per game. Resolve the first air strike as normal. Then, after the first air strike as been resolved, the FAO may call a second."
+    },
+    {
+     "name": "Modern Communications",
+     "ref": null,
+     "text": "When units take an order test to move from reserve onto the table, do not apply the usual -1 penalty."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  }
+ ]
+}

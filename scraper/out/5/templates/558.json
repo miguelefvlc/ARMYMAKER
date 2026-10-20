@@ -1,0 +1,4286 @@
+{
+ "template": {
+  "id": 558,
+  "country": "Italian",
+  "name": "*v3 PDF - Italy - Armoured Platoon",
+  "source": "Italy Version 3 PDF"
+ },
+ "title": "*v3 PDF - Italy - Armoured Platoon",
+ "source": "Italy Version 3 PDF",
+ "layout": [
+  [
+   {
+    "section": "Command Vehicle",
+    "required": true,
+    "units": [
+     "Tankettes",
+     "Medium Tanks",
+     "'Light' Semovente",
+     "'Heavy' Semovente",
+     "100/17 on Lancia 3RO",
+     "AA Trucks",
+     "Sahariana",
+     "L6/40",
+     "Lancia Ansaldo IZ and IZM",
+     "Autoblinda"
+    ]
+   },
+   {
+    "section": "Cmd Vehicle Options",
+    "required": true,
+    "units": [
+     "Command Vehicle rule"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": true,
+    "units": [
+     "Tankettes",
+     "Medium Tanks",
+     "'Light' Semovente",
+     "'Heavy' Semovente",
+     "100/17 on Lancia 3RO",
+     "AA Trucks",
+     "Sahariana",
+     "L6/40",
+     "Lancia Ansaldo IZ and IZM",
+     "Autoblinda"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "Tankettes",
+     "Medium Tanks",
+     "'Light' Semovente",
+     "'Heavy' Semovente",
+     "100/17 on Lancia 3RO",
+     "AA Trucks",
+     "Sahariana",
+     "L6/40",
+     "Lancia Ansaldo IZ and IZM",
+     "Autoblinda"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "Tankettes",
+     "Medium Tanks",
+     "'Light' Semovente",
+     "'Heavy' Semovente",
+     "100/17 on Lancia 3RO",
+     "AA Trucks",
+     "Sahariana",
+     "L6/40",
+     "Lancia Ansaldo IZ and IZM",
+     "Autoblinda"
+    ]
+   }
+  ],
+  [
+   {
+    "section": "Vehicle",
+    "required": false,
+    "units": [
+     "Tankettes",
+     "Medium Tanks",
+     "'Light' Semovente",
+     "'Heavy' Semovente",
+     "100/17 on Lancia 3RO",
+     "AA Trucks",
+     "Sahariana",
+     "L6/40",
+     "Lancia Ansaldo IZ and IZM",
+     "Autoblinda"
+    ]
+   }
+  ]
+ ],
+ "units": [
+  {
+   "section": "Command Vehicle",
+   "listName": "Tankettes",
+   "name": "Tankettes",
+   "source": "Italy Version 3 PDF - page 4",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 40,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 50,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 60,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "Two turret-mounted medium machine guns (FIAT 3000 L5 series)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "One-Man Turret\nSlow"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace both medum machine guns with a light anti-tank gun for +30pts",
+     "points": 30,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace both medium machine guns with 1 forward-facing hull-mounted medium machine gun, loosing both the One-Man Turret and Slow special rules for +5pts (L3/33).",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "Two medium machine guns for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "An anti-tank rifle for +5pts",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "An HMG for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 16,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A flamethrower with co-axial medium machine gun (gaining the Slow rule) for +35pts (L3/35)",
+     "points": 35,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Fiat 3000 (L5 Series)",
+     "Weapons": "Fiat 3000 (L5 Series)",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "One-man turret, Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Fiat 3000 (L5 Series)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Fiat 3000 (L5 Series)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Fiat 3000 (L5 Series) with light anti-tank gun",
+     "Weapons": "Fiat 3000 (L5 Series) with light anti-tank gun",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "One-man turret, Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Fiat 3000 (L5 Series) with light anti-tank gun",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette",
+     "Weapons": "L3 Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with anti-tank rifle",
+     "Weapons": "L3 Tankette with anti-tank rifle",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with anti-tank rifle",
+     "Weapons": "Forward facing hull-mounted anti-tank rifle",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+2",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with flamethrower and co-axial MMG",
+     "Weapons": "L3 Tankette with flamethrower and co-axial MMG",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with flamethrower and co-axial MMG",
+     "Weapons": "Forward facing hull-mounted flamethrower",
+     "Range": "12\"",
+     "Shots": "1(D6+1)",
+     "Pen": "+2",
+     "Special": "Front arc, Flamethrower"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with flamethrower and co-axial MMG",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with HMG",
+     "Weapons": "L3 Tankette with HMG",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with HMG",
+     "Weapons": "Forward facing hull-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with two MMGs",
+     "Weapons": "L3 Tankette with two MMGs",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with two MMGs",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with two MMGs",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flamethrower",
+     "ref": "v3 page 97",
+     "text": "Hits from flamethowers allow no cover saves. When shooting with a flamethrower, roll a single die to hit as normal, but if you score a hit, it is turned into D6 hits (or D6+1 in the case of a vehicle-mounted flamethrower). As no saves are allowed, simply roll for damaage in the usual manner. Flamethrowers always hit the top armour of vehicles. Also, they don't suffer the -1 Pen penalty when firing at long range against armoured vehicles, nor the +1 Pen for firing at point-blank range. Causes D3+1 pins to target, 1 pin to firing unit. A unit hit by a flamethrower must check its morale regardless of casualties. After shooting roll a D6 (for each flamethrower fired). On a result of 1 or 2 the flamethrower has run out of fuel. Infantry: replace model with unarmed model, else remove the model instead (no morale check caused). Vehicles: no other effects. When rolling on Vehicle Damage Results table against a vehicle equipped with flamethrowers, add an extra +1 to the roll."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "One-man turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Medium Tanks",
+   "name": "Medium Tanks",
+   "source": "Italy Version 3 PDF - page 4",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 125,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 150,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing hull-mounted light anti-tank gun and 2 turret-mounted medium machine guns (M11/39)",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Vulnerable\nSlow (if downgraded to an M13/40)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light anti-tank gun with co-axial medium machine gun and 2 hull-mounted medium machine guns for +10pts (M14/41)",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "The M14/41 may take the Slow special rule for -10pts (M13/40)",
+     "points": -10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light anti-tank gun with 2 co-axial medium machine guns and 2 hull-mounted medium machine guns, and cancel the Vulnerable rule for +25pts (M15/42)",
+     "points": 25,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted medium anti-tank gun with 1 co-axial medium machine gun, increase the Damage Value to 9+ and cancel the Vulneralbe rule for +60pts (P26/40)",
+     "points": 60,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "checkbox",
+     "name": "Option14",
+     "group": null,
+     "text": "Any vehicle may add an additional turret-mounted pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "M11/39 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "Forward-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "M13/40 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Slow, Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "M14/41 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "M15/42 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Twin co-axial MMGs",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "P26/40 'Heavy' Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "'Light' Semovente",
+   "name": "'Light' Semovente",
+   "source": "Italy Version 3 PDF - page 4",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 56,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 70,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 84,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing hull-mounted light anti-tank gun (47/32)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Vulnerable\nOpen-topped\nCommand Vehicle (if option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Upgrade to Command tank for -20pts, replacing the anti-tank gun with a heavy machine gun (M41 carro comando)",
+     "points": -20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace the main gun with 1 forward-facing hull-mounted super heavy anti-tank gun for +90pts (90/53)",
+     "points": 90,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M41 Carro Comando",
+     "Weapons": "M41 Carro Comando",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Vulnerable, Command vehicle, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M41 Carro Comando",
+     "Weapons": "Forward facing hull-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 47/32",
+     "Weapons": "Semovente 47/32",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Vulnerable, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 47/32",
+     "Weapons": "Forward-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 90/53",
+     "Weapons": "Semovente 90/53",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Vulnerable, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 90/53",
+     "Weapons": "Forward facing super-heavy anti-tank gun",
+     "Range": "84\"",
+     "Shots": "1",
+     "Pen": "+7",
+     "Special": "Front arc, HE (3\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 90/53",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Command vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    },
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "'Heavy' Semovente",
+   "name": "'Heavy' Semovente",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 136,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 170,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 204,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing hull-mounted medium anti-tank gun (75/18)",
+    "Damage Value": "9+ (medium tank)",
+    "Special Rules": "Vulnerable (75/18 only)\nImproved HE (75/18 only)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add an additional forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace the main gun with 1 forward-facing hull-mounted super heavy anti-tank gun, and remove both special rules for +75pts (105/25)",
+     "points": 75,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 105/25",
+     "Weapons": "Semovente 105/25",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 105/25",
+     "Weapons": "Forward facing super-heavy anti-tank gun",
+     "Range": "84\"",
+     "Shots": "1",
+     "Pen": "+7",
+     "Special": "Front arc, HE (3\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 75/18",
+     "Weapons": "Semovente 75/18",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 75/18",
+     "Weapons": "Forward-facing medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Front arc, (75mm) HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 75/18",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "(75mm) HE (2\")",
+     "ref": "v3",
+     "text": "Instead of HE (1\") the medium anti-tank gun has HE (2\") (75mm gun tanks)."
+    },
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "100/17 on Lancia 3RO",
+   "name": "100/17 on Lancia 3RO",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 84,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 105,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 126,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing or rear-facing medium howitzer",
+    "Damage Value": "6+ (soft-skin)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add an additional forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "100/17 on Lancia 3RO",
+     "Weapons": "100/17 on Lancia 3RO",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "100/17 on Lancia 3RO",
+     "Weapons": "Forward-facing or rear-facing medium howitzer",
+     "Range": "60\"(36-72\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Front arc, Howitzer, HE (3\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "100/17 on Lancia 3RO",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "AA Trucks",
+   "name": "AA Trucks",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 44,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 55,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 66,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 light automatic cannon with 360-degree arc of fire",
+    "Damage Value": "6+ (soft-skin)",
+    "Special Rules": "Flak\nStabilizer jacks (if option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the light automatic cannon with a super heavy anti-tank gun and stabilizer jacks for +105pts",
+     "points": 105,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "AA Truck with light automatic cannon",
+     "Weapons": "AA Truck with light automatic cannon",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "AA Truck with light automatic cannon",
+     "Weapons": "Light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "Flak, HE (1\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "AA Truck with super-heavy anti-tank gun",
+     "Weapons": "AA Truck with super-heavy anti-tank gun",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "AA Truck with super-heavy anti-tank gun",
+     "Weapons": "Super-heavy anti-tank gun",
+     "Range": "84\"",
+     "Shots": "1",
+     "Pen": "+7",
+     "Special": "Flak, HE (3\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Sahariana",
+   "name": "Sahariana",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 30,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Special Rules": "Recce (dual direction steering)\nFlak (only for the pintle-mounted medium machine guns and for the light automatic cannon)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Add a rear-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A pintle-mounted medium machine gun for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "An anti-tank rifle for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A light automatic cannon for +35pts",
+     "points": 35,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 16,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A light anti-tank gun for +55pts",
+     "points": 55,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Sahariana",
+     "Weapons": "Sahariana",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "Recce (Dual direction steering)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "360 degree arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "360 degree arc, Flak, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Platform mounted anti-tank rifle",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+2",
+     "Special": "360 degree arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Rear pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, Rear arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Recce (Dual direction steering)",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "L6/40",
+   "name": "L6/40",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 80,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 120,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted light automatic cannon with co-axial medium machine gun",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Recce\nVulnerable\nOne-Man Turret\nIf flamethrower option is taken, the vehicle loses the Recce rule\nCommand Vehicle and Open-topped (if Command Vehicle option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the automatic cannon with a flamethrower (retaining the co-axial medium machine gun) for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Alternatively, upgrade to Command Vehicle for free gaining Command Vehicle and Open-topped rules",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L6/40",
+     "Weapons": "L6/40",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable, One-man Turret, Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40",
+     "Weapons": "Turret-mounted light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L6/40 Command tank",
+     "Weapons": "L6/40 Command tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Command Vehicle, Open-topped, Vulnerable, One-man Turret, Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 Command tank",
+     "Weapons": "Turret-mounted light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 Command tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L6/40 with flamethrower",
+     "Weapons": "L6/40 with flamethrower",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable, One-man Turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 with flamethrower",
+     "Weapons": "Turret-mounted flamethrower",
+     "Range": "12\"",
+     "Shots": "1(D6+1)",
+     "Pen": "+2",
+     "Special": "Flamethrower"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 with flamethrower",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Command Vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    },
+    {
+     "name": "Flamethrower",
+     "ref": "v3 page 97",
+     "text": "Hits from flamethowers allow no cover saves. When shooting with a flamethrower, roll a single die to hit as normal, but if you score a hit, it is turned into D6 hits (or D6+1 in the case of a vehicle-mounted flamethrower). As no saves are allowed, simply roll for damaage in the usual manner. Flamethrowers always hit the top armour of vehicles. Also, they don't suffer the -1 Pen penalty when firing at long range against armoured vehicles, nor the +1 Pen for firing at point-blank range. Causes D3+1 pins to target, 1 pin to firing unit. A unit hit by a flamethrower must check its morale regardless of casualties. After shooting roll a D6 (for each flamethrower fired). On a result of 1 or 2 the flamethrower has run out of fuel. Infantry: replace model with unarmed model, else remove the model instead (no morale check caused). Vehicles: no other effects. When rolling on Vehicle Damage Results table against a vehicle equipped with flamethrowers, add an extra +1 to the roll."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "One-man Turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Lancia Ansaldo IZ and IZM",
+   "name": "Lancia Ansaldo IZ and IZM",
+   "source": "Italy Version 3 PDF - page 6",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 64,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 80,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 96,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "Two turret-mounted medium machiine guns",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Recce\nToo many turrets! (IZ version only)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add one hull-mounted, rear facing medium machine gun for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Add one medium machine gun mounted in a second, independent turret for +5pts. This is the original IZ version, which also suffers the 'Too many turrets!' rule and cannot have the optional rear-mounted medium machine gun",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Lancia Ansaldo IZ Armoured Car",
+     "Weapons": "Lancia Ansaldo IZ Armoured Car",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, Too many turrets!"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZ Armoured Car",
+     "Weapons": "Turret-mounted twin MMGs",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZ Armoured Car",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Lancia Ansaldo IZM Armoured Car",
+     "Weapons": "Lancia Ansaldo IZM Armoured Car",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZM Armoured Car",
+     "Weapons": "Turret-mounted twin MMGs",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZM Armoured Car",
+     "Weapons": "Rear-facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Too many turrets!",
+     "ref": "v3 page 67 AoI",
+     "text": "The additional MMG of the IZ may target the same or a different unit from the other two MMGs, however, it is always necessary to take an order test when issuing an Advance order, even if the IZ has no pin markers (in this case, take the test at the vehicle’s unmodified morale)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Command Vehicle",
+   "listName": "Autoblinda",
+   "name": "Autoblinda",
+   "source": "Italy Version 3 PDF - page 6",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 80,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 120,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted light automatic cannon with co-axial medium machine gun and 1 rear facing hull-mounted medium machine gun (AB41)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Recce (the AB40 and AB41 also have dual direction steering)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a turret-mounted pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace the automatic cannon and co-axial medium machine gun with 2 medium machine guns for -15pts (AB40)",
+     "points": -15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace all weapons with 1 forward-facing medium machine gun, losing the Dual direction steering and gaining the Open-topped rule for -45pts (Lince)",
+     "points": -45,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Autoblinda 40 (AB40)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce (Dual direction steering)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Rear facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Autoblinda 41 (AB41)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce (Dual direction steering)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Turret-mounted light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Rear facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Autoblinda Lince",
+     "Weapons": "Autoblinda Lince",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda Lince",
+     "Weapons": "Forward-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda Lince",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Recce (Dual direction steering)",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Cmd Vehicle Options",
+   "listName": "Command Vehicle rule",
+   "name": "Command Vehicle rule",
+   "source": "Version 3 Rulebook - page 188",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Command Vehicle special rule already included with primary vehicle",
+     "points": 0,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Add Command Vehicle special rule",
+     "points": 10,
+     "checked": false
+    }
+   ],
+   "profile": {},
+   "options": [],
+   "period": null,
+   "image": null,
+   "weapons": [],
+   "weaponNotes": [
+    "Command Vehicle special rule"
+   ],
+   "rules": [
+    {
+     "name": "Command Vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": false
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Tankettes",
+   "name": "Tankettes",
+   "source": "Italy Version 3 PDF - page 4",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 40,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 50,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 60,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "Two turret-mounted medium machine guns (FIAT 3000 L5 series)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "One-Man Turret\nSlow"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace both medum machine guns with a light anti-tank gun for +30pts",
+     "points": 30,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace both medium machine guns with 1 forward-facing hull-mounted medium machine gun, loosing both the One-Man Turret and Slow special rules for +5pts (L3/33).",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "Two medium machine guns for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "An anti-tank rifle for +5pts",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "An HMG for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 16,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A flamethrower with co-axial medium machine gun (gaining the Slow rule) for +35pts (L3/35)",
+     "points": 35,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Fiat 3000 (L5 Series)",
+     "Weapons": "Fiat 3000 (L5 Series)",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "One-man turret, Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Fiat 3000 (L5 Series)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Fiat 3000 (L5 Series)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Fiat 3000 (L5 Series) with light anti-tank gun",
+     "Weapons": "Fiat 3000 (L5 Series) with light anti-tank gun",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "One-man turret, Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Fiat 3000 (L5 Series) with light anti-tank gun",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette",
+     "Weapons": "L3 Tankette",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with anti-tank rifle",
+     "Weapons": "L3 Tankette with anti-tank rifle",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with anti-tank rifle",
+     "Weapons": "Forward facing hull-mounted anti-tank rifle",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+2",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with flamethrower and co-axial MMG",
+     "Weapons": "L3 Tankette with flamethrower and co-axial MMG",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Slow"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with flamethrower and co-axial MMG",
+     "Weapons": "Forward facing hull-mounted flamethrower",
+     "Range": "12\"",
+     "Shots": "1(D6+1)",
+     "Pen": "+2",
+     "Special": "Front arc, Flamethrower"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with flamethrower and co-axial MMG",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with HMG",
+     "Weapons": "L3 Tankette with HMG",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with HMG",
+     "Weapons": "Forward facing hull-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L3 Tankette with two MMGs",
+     "Weapons": "L3 Tankette with two MMGs",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with two MMGs",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L3 Tankette with two MMGs",
+     "Weapons": "Forward facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flamethrower",
+     "ref": "v3 page 97",
+     "text": "Hits from flamethowers allow no cover saves. When shooting with a flamethrower, roll a single die to hit as normal, but if you score a hit, it is turned into D6 hits (or D6+1 in the case of a vehicle-mounted flamethrower). As no saves are allowed, simply roll for damaage in the usual manner. Flamethrowers always hit the top armour of vehicles. Also, they don't suffer the -1 Pen penalty when firing at long range against armoured vehicles, nor the +1 Pen for firing at point-blank range. Causes D3+1 pins to target, 1 pin to firing unit. A unit hit by a flamethrower must check its morale regardless of casualties. After shooting roll a D6 (for each flamethrower fired). On a result of 1 or 2 the flamethrower has run out of fuel. Infantry: replace model with unarmed model, else remove the model instead (no morale check caused). Vehicles: no other effects. When rolling on Vehicle Damage Results table against a vehicle equipped with flamethrowers, add an extra +1 to the roll."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "One-man turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Medium Tanks",
+   "name": "Medium Tanks",
+   "source": "Italy Version 3 PDF - page 4",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 125,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 150,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing hull-mounted light anti-tank gun and 2 turret-mounted medium machine guns (M11/39)",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Vulnerable\nSlow (if downgraded to an M13/40)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light anti-tank gun with co-axial medium machine gun and 2 hull-mounted medium machine guns for +10pts (M14/41)",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "The M14/41 may take the Slow special rule for -10pts (M13/40)",
+     "points": -10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted light anti-tank gun with 2 co-axial medium machine guns and 2 hull-mounted medium machine guns, and cancel the Vulnerable rule for +25pts (M15/42)",
+     "points": 25,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace all weapons with 1 turret-mounted medium anti-tank gun with 1 co-axial medium machine gun, increase the Damage Value to 9+ and cancel the Vulneralbe rule for +60pts (P26/40)",
+     "points": 60,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "checkbox",
+     "name": "Option14",
+     "group": null,
+     "text": "Any vehicle may add an additional turret-mounted pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "M11/39 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "Forward-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M11/39 Medium Tank",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "M13/40 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Slow, Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M13/40 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "M14/41 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M14/41 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "M15/42 Medium Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Turret-mounted light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Twin co-axial MMGs",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M15/42 Medium Tank",
+     "Weapons": "Hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "P26/40 'Heavy' Tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "Turret-mounted medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "P26/40 'Heavy' Tank",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Slow",
+     "ref": "v3 page 150",
+     "text": "Any vehicle with the Slow special rule has a basic move rate of 6\" when Advancing and 12\" at a Run."
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "'Light' Semovente",
+   "name": "'Light' Semovente",
+   "source": "Italy Version 3 PDF - page 4",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 56,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 70,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 84,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing hull-mounted light anti-tank gun (47/32)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Vulnerable\nOpen-topped\nCommand Vehicle (if option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Upgrade to Command tank for -20pts, replacing the anti-tank gun with a heavy machine gun (M41 carro comando)",
+     "points": -20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace the main gun with 1 forward-facing hull-mounted super heavy anti-tank gun for +90pts (90/53)",
+     "points": 90,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "M41 Carro Comando",
+     "Weapons": "M41 Carro Comando",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Vulnerable, Command vehicle, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "M41 Carro Comando",
+     "Weapons": "Forward facing hull-mounted HMG",
+     "Range": "48\"",
+     "Shots": "3",
+     "Pen": "+1",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 47/32",
+     "Weapons": "Semovente 47/32",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Vulnerable, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 47/32",
+     "Weapons": "Forward-facing light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "Front arc, HE (1\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 90/53",
+     "Weapons": "Semovente 90/53",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Vulnerable, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 90/53",
+     "Weapons": "Forward facing super-heavy anti-tank gun",
+     "Range": "84\"",
+     "Shots": "1",
+     "Pen": "+7",
+     "Special": "Front arc, HE (3\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 90/53",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Command vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    },
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "'Heavy' Semovente",
+   "name": "'Heavy' Semovente",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 136,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 170,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 204,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing hull-mounted medium anti-tank gun (75/18)",
+    "Damage Value": "9+ (medium tank)",
+    "Special Rules": "Vulnerable (75/18 only)\nImproved HE (75/18 only)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add an additional forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace the main gun with 1 forward-facing hull-mounted super heavy anti-tank gun, and remove both special rules for +75pts (105/25)",
+     "points": 75,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 105/25",
+     "Weapons": "Semovente 105/25",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 105/25",
+     "Weapons": "Forward facing super-heavy anti-tank gun",
+     "Range": "84\"",
+     "Shots": "1",
+     "Pen": "+7",
+     "Special": "Front arc, HE (3\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Semovente 75/18",
+     "Weapons": "Semovente 75/18",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "9+",
+     "Special": "Vulnerable"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 75/18",
+     "Weapons": "Forward-facing medium anti-tank gun",
+     "Range": "60\"",
+     "Shots": "1",
+     "Pen": "+5",
+     "Special": "Front arc, (75mm) HE (2\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Semovente 75/18",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "(75mm) HE (2\")",
+     "ref": "v3",
+     "text": "Instead of HE (1\") the medium anti-tank gun has HE (2\") (75mm gun tanks)."
+    },
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "100/17 on Lancia 3RO",
+   "name": "100/17 on Lancia 3RO",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 84,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 105,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 126,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 forward-facing or rear-facing medium howitzer",
+    "Damage Value": "6+ (soft-skin)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add an additional forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "100/17 on Lancia 3RO",
+     "Weapons": "100/17 on Lancia 3RO",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "100/17 on Lancia 3RO",
+     "Weapons": "Forward-facing or rear-facing medium howitzer",
+     "Range": "60\"(36-72\")",
+     "Shots": "1",
+     "Pen": "HE",
+     "Special": "Front arc, Howitzer, HE (3\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "100/17 on Lancia 3RO",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    },
+    {
+     "name": "Howitzer",
+     "ref": "v3 page 100",
+     "text": "Can either shoot directly at a target drawing its line of fire 'over open sights' in the normal way, or it can shoot indirect fire. When using indirect fire, a howitzer has a minimum range; when firing over open sights it has no minimum range."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "AA Trucks",
+   "name": "AA Trucks",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 44,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 55,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 66,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 light automatic cannon with 360-degree arc of fire",
+    "Damage Value": "6+ (soft-skin)",
+    "Special Rules": "Flak\nStabilizer jacks (if option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the light automatic cannon with a super heavy anti-tank gun and stabilizer jacks for +105pts",
+     "points": 105,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "AA Truck with light automatic cannon",
+     "Weapons": "AA Truck with light automatic cannon",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "AA Truck with light automatic cannon",
+     "Weapons": "Light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "Flak, HE (1\")"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "AA Truck with super-heavy anti-tank gun",
+     "Weapons": "AA Truck with super-heavy anti-tank gun",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "AA Truck with super-heavy anti-tank gun",
+     "Weapons": "Super-heavy anti-tank gun",
+     "Range": "84\"",
+     "Shots": "1",
+     "Pen": "+7",
+     "Special": "Flak, HE (3\")"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "HE (3\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +3, PIN: D3 (2D6 if in building) - Infantry and artillery can go down to halve the hits taken. 10+ hits on building collapses it and kills all inside."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Sahariana",
+   "name": "Sahariana",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 30,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "None",
+    "Damage Value": "6+ (soft-skin)",
+    "Special Rules": "Recce (dual direction steering)\nFlak (only for the pintle-mounted medium machine guns and for the light automatic cannon)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a forward-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Add a rear-facing pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 13,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A pintle-mounted medium machine gun for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 14,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "An anti-tank rifle for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 15,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A light automatic cannon for +35pts",
+     "points": 35,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 16,
+     "input": "radio",
+     "name": "Option13",
+     "group": null,
+     "text": "A light anti-tank gun for +55pts",
+     "points": 55,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Sahariana",
+     "Weapons": "Sahariana",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "6+",
+     "Special": "Recce (Dual direction steering)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Forward-facing pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc, Flak (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Light anti-tank gun",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+4",
+     "Special": "360 degree arc, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "360 degree arc, Flak, HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Platform mounted anti-tank rifle",
+     "Range": "48\"",
+     "Shots": "1",
+     "Pen": "+2",
+     "Special": "360 degree arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Sahariana",
+     "Weapons": "Rear pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, Rear arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Recce (Dual direction steering)",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "L6/40",
+   "name": "L6/40",
+   "source": "Italy Version 3 PDF - page 5",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 80,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 120,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted light automatic cannon with co-axial medium machine gun",
+    "Damage Value": "8+ (light tank)",
+    "Special Rules": "Recce\nVulnerable\nOne-Man Turret\nIf flamethrower option is taken, the vehicle loses the Recce rule\nCommand Vehicle and Open-topped (if Command Vehicle option is taken)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Replace the automatic cannon with a flamethrower (retaining the co-axial medium machine gun) for +20pts",
+     "points": 20,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option10",
+     "group": null,
+     "text": "Alternatively, upgrade to Command Vehicle for free gaining Command Vehicle and Open-topped rules",
+     "points": null,
+     "per": null,
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L6/40",
+     "Weapons": "L6/40",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable, One-man Turret, Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40",
+     "Weapons": "Turret-mounted light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L6/40 Command tank",
+     "Weapons": "L6/40 Command tank",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Command Vehicle, Open-topped, Vulnerable, One-man Turret, Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 Command tank",
+     "Weapons": "Turret-mounted light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 Command tank",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "L6/40 with flamethrower",
+     "Weapons": "L6/40 with flamethrower",
+     "Range": "Tracked",
+     "Shots": "-",
+     "Pen": "8+",
+     "Special": "Vulnerable, One-man Turret"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 with flamethrower",
+     "Weapons": "Turret-mounted flamethrower",
+     "Range": "12\"",
+     "Shots": "1(D6+1)",
+     "Pen": "+2",
+     "Special": "Flamethrower"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "L6/40 with flamethrower",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Command Vehicle",
+     "ref": "v3 page 149",
+     "text": "Adds a morale bonus of +1 to itself and to any other friendly vehicle within 12\" (not cumulative with morale bonus, and other command vehicles). In addition, when it activates, it can use one 'You men, snap to action!' extra dice on any one friendly vehicle within 12\", except for other command vehicles. Command vehicles count as platoon commanders for the purpose of receiving orders from other officers."
+    },
+    {
+     "name": "Flamethrower",
+     "ref": "v3 page 97",
+     "text": "Hits from flamethowers allow no cover saves. When shooting with a flamethrower, roll a single die to hit as normal, but if you score a hit, it is turned into D6 hits (or D6+1 in the case of a vehicle-mounted flamethrower). As no saves are allowed, simply roll for damaage in the usual manner. Flamethrowers always hit the top armour of vehicles. Also, they don't suffer the -1 Pen penalty when firing at long range against armoured vehicles, nor the +1 Pen for firing at point-blank range. Causes D3+1 pins to target, 1 pin to firing unit. A unit hit by a flamethrower must check its morale regardless of casualties. After shooting roll a D6 (for each flamethrower fired). On a result of 1 or 2 the flamethrower has run out of fuel. Infantry: replace model with unarmed model, else remove the model instead (no morale check caused). Vehicles: no other effects. When rolling on Vehicle Damage Results table against a vehicle equipped with flamethrowers, add an extra +1 to the roll."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "One-man Turret",
+     "ref": "v3 page 149",
+     "text": "Must make an order test when issuing an Advance order, even if the tank is not pinned. In addition, you can fire either the main gun or any rear-mounted machine gun, but not both in the same turn."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Vulnerable",
+     "ref": "v3",
+     "text": "Because of its light armour, all shorts to the side and rear of the vehicle get an additional +1 penetration modifier (i.e. in total, +2 for side hits and +3 for rear hits)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Lancia Ansaldo IZ and IZM",
+   "name": "Lancia Ansaldo IZ and IZM",
+   "source": "Italy Version 3 PDF - page 6",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 64,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 80,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 96,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "Two turret-mounted medium machiine guns",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Recce\nToo many turrets! (IZ version only)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add one hull-mounted, rear facing medium machine gun for +10pts",
+     "points": 10,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "checkbox",
+     "name": "Option11",
+     "group": null,
+     "text": "Add one medium machine gun mounted in a second, independent turret for +5pts. This is the original IZ version, which also suffers the 'Too many turrets!' rule and cannot have the optional rear-mounted medium machine gun",
+     "points": 5,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Lancia Ansaldo IZ Armoured Car",
+     "Weapons": "Lancia Ansaldo IZ Armoured Car",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, Too many turrets!"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZ Armoured Car",
+     "Weapons": "Turret-mounted twin MMGs",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZ Armoured Car",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Lancia Ansaldo IZM Armoured Car",
+     "Weapons": "Lancia Ansaldo IZM Armoured Car",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZM Armoured Car",
+     "Weapons": "Turret-mounted twin MMGs",
+     "Range": "36\"",
+     "Shots": "6",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Lancia Ansaldo IZM Armoured Car",
+     "Weapons": "Rear-facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Too many turrets!",
+     "ref": "v3 page 67 AoI",
+     "text": "The additional MMG of the IZ may target the same or a different unit from the other two MMGs, however, it is always necessary to take an order test when issuing an Advance order, even if the IZ has no pin markers (in this case, take the test at the vehicle’s unmodified morale)."
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  },
+  {
+   "section": "Vehicle",
+   "listName": "Autoblinda",
+   "name": "Autoblinda",
+   "source": "Italy Version 3 PDF - page 6",
+   "experience": [
+    {
+     "choice": 1,
+     "level": "Inexperienced",
+     "points": 80,
+     "checked": false
+    },
+    {
+     "choice": 2,
+     "level": "Regular",
+     "points": 100,
+     "checked": false
+    },
+    {
+     "choice": 3,
+     "level": "Veteran",
+     "points": 120,
+     "checked": false
+    }
+   ],
+   "profile": {
+    "Weapons": "1 turret-mounted light automatic cannon with co-axial medium machine gun and 1 rear facing hull-mounted medium machine gun (AB41)",
+    "Damage Value": "7+ (armoured carrier)",
+    "Special Rules": "Recce (the AB40 and AB41 also have dual direction steering)"
+   },
+   "options": [
+    {
+     "id": 10,
+     "input": "checkbox",
+     "name": "Option10",
+     "group": null,
+     "text": "Add a turret-mounted pintle-mounted medium machine gun for +15pts",
+     "points": 15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 11,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace the automatic cannon and co-axial medium machine gun with 2 medium machine guns for -15pts (AB40)",
+     "points": -15,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    },
+    {
+     "id": 12,
+     "input": "radio",
+     "name": "Option11",
+     "group": null,
+     "text": "Replace all weapons with 1 forward-facing medium machine gun, losing the Dual direction steering and gaining the Open-topped rule for -45pts (Lince)",
+     "points": -45,
+     "per": "unit",
+     "min": null,
+     "max": null,
+     "selectName": null,
+     "disabled": false
+    }
+   ],
+   "period": null,
+   "image": null,
+   "weapons": [
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Autoblinda 40 (AB40)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce (Dual direction steering)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Turret-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 40 (AB40)",
+     "Weapons": "Rear facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Autoblinda 41 (AB41)",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce (Dual direction steering)"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Turret-mounted light automatic cannon",
+     "Range": "48\"",
+     "Shots": "2",
+     "Pen": "+2",
+     "Special": "HE (1\")"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Co-axial MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "-"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda 41 (AB41)",
+     "Weapons": "Rear facing hull-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Rear arc"
+    },
+    {
+     "rowType": "vehicle_stat",
+     "variant": "Autoblinda Lince",
+     "Weapons": "Autoblinda Lince",
+     "Range": "Wheeled",
+     "Shots": "-",
+     "Pen": "7+",
+     "Special": "Recce, Open-topped"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda Lince",
+     "Weapons": "Forward-facing MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Front arc"
+    },
+    {
+     "rowType": "weapon",
+     "variant": "Autoblinda Lince",
+     "Weapons": "Pintle-mounted MMG",
+     "Range": "36\"",
+     "Shots": "3",
+     "Pen": "n/a",
+     "Special": "Flak, 360 degree arc (6 shots at airplanes)"
+    }
+   ],
+   "weaponNotes": [],
+   "rules": [
+    {
+     "name": "Flak",
+     "ref": "v3 page 117",
+     "text": "All enemy with the Flak special rule automatically fire at the attacking aircraft if the token model lies within their range and firing arc, regardless of whether they have already taken an action or not that turn. Flak fire does not require an action and takes place outside of the normal turn sequence. Firing a pintle-mounted machine gun flak weapon against an attacking aircraft does not make the vehicle count as open-topped for the turn. Any flak units in Ambush retain their Ambush status if they shoot at an aircraft. Hidden lose their hidden status. Friendly units must test to hold their fire (Inexperienced 4+, Regular 3+, Veteran 2+) - in case of Rookie pilot all flak units open fire automatically. Measure range - Line of Site ignored. Flak weapons not pinned hit on 5+, pinner hit on 6 - ignore all other modifiers. If HE hits, multiply as for inside a building. If 3 or more hits, shot down."
+    },
+    {
+     "name": "HE (1\")",
+     "ref": "v3 page 97",
+     "text": "PEN: +1, PIN: D2 (D3 if in building) - Infantry and artillery can go down to halve the hits taken (rounded up)."
+    },
+    {
+     "name": "Open-topped",
+     "ref": "v3 page 149",
+     "text": "Pinned by hits from small arms in the same way as soft-skins and infantry. If assaulted by infantry, open-topped armoured vehicles are destroyed automatically if the vehicle is damaged, in the same way as for soft-skins. If hit against top armour then add an additional +1 to the damage result roll. Note that all hits upon the upper surface of armoured vehicles count +1 penetration regardless of whether the target is open or not - so open-topped armoured vehicles suffer a double penalty: +1 penetration and +1 damage result"
+    },
+    {
+     "name": "Recce (Dual direction steering)",
+     "ref": "v3 page 150",
+     "text": ""
+    },
+    {
+     "name": "Recce",
+     "ref": "v3 page 150",
+     "text": ""
+    }
+   ],
+   "armyRules": [
+    {
+     "name": "Ferrea Mole, Ferreo Cuore (Iron Hulls, Iron Hearts)",
+     "ref": null,
+     "text": "Any Italian vehicle with this special rule in its entry may re-roll failed Advance and Run order tests. This rule does not apply when coming onto the table from reserve or outflanking, and it also does not apply for assaults."
+    },
+    {
+     "name": "Alzo Zero! (Open Sights!)",
+     "ref": null,
+     "text": "All Italian artillery units may reroll any failed morale checks."
+    },
+    {
+     "name": "Mixed Quality",
+     "ref": null,
+     "text": "All Inexperienced Italian infantry units have the Green special rule."
+    },
+    {
+     "name": "Defensive Strategy",
+     "ref": null,
+     "text": "During the first turn of the game, the enemy cannot order their units on the table to Run as they cautiously probe the terrain in front of the Italian line for minefields and make their way across barbed wire. Enemy units in first wave are exempt and can be ordered to Run as normal to enter the table. Any of your Regular or Veteran unit that is set up on the table before Turn 1 may start the game already in Ambush. If you decide to do so, set one of your order dice in place next to them as you deploy them, as if you had ordered them to Ambush, before drawing the first order die on Turn 1. In scenarios that require an attacker and a defender the Italian player may choose if they want to be defender or not, except if both forces are Italian, in which case this rule has no effect."
+    }
+   ],
+   "notes": null,
+   "isVehicleTable": true
+  }
+ ]
+}
