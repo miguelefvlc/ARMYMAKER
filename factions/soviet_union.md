@@ -4,8 +4,8 @@
 > - **Source Book**: *Armies of the Soviet Union: Third Edition* (+ *Bolt Action v3 Rulebook*)
 > - **Platoon Selectors Indexed**: **30 official templates** (*All*, *Early War*, *Mid War*, *Late War* & *Rulebook v3*)
 > - **Unique Units Indexed**: **124 units** with complete costs, options, limits, weapon tables & special rules
-> - **Local Unit Illustrations**: **73 PNG images** in [`images/units/`](file:///c:/Users/mipas/Desktop/listmaker/images/units)
-> - **Data Bundles**: [`factions/soviet_union.json`](file:///c:/Users/mipas/Desktop/listmaker/factions/soviet_union.json) · [`factions/soviet_union_app_data.js`](file:///c:/Users/mipas/Desktop/listmaker/factions/soviet_union_app_data.js)
+> - **Local Unit Illustrations**: **73 PNG images** in [`images/units/`](./images/units)
+> - **Data Bundles**: [`factions/soviet_union.json`](./factions/soviet_union.json) · [`factions/soviet_union_app_data.js`](./factions/soviet_union_app_data.js)
 
 ---
 
@@ -398,7 +398,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 21 pts · **Regular**: 30 pts · **Veteran**: 39 pts | `Platoon Commander` | Armies of the Soviet Union (v3) - page 31 | [`Soviet-platoon-commander.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-platoon-commander.png) |
+| `E/M/L` | **Inexperienced**: 21 pts · **Regular**: 30 pts · **Veteran**: 39 pts | `Platoon Commander` | Armies of the Soviet Union (v3) - page 31 | [`Soviet-platoon-commander.png`](./images/units/Soviet-platoon-commander.png) |
 
 - **Composition**: 1 Officer
 - **Weapons**: Rifle
@@ -443,7 +443,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 42 pts · **Regular**: 60 pts · **Veteran**: 78 pts | `Company Commander` | Armies of the Soviet Union (v3) - page 31 | [`Soviet-company-commander.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-company-commander.png) |
+| `E/M/L` | **Inexperienced**: 42 pts · **Regular**: 60 pts · **Veteran**: 78 pts | `Company Commander` | Armies of the Soviet Union (v3) - page 31 | [`Soviet-company-commander.png`](./images/units/Soviet-company-commander.png) |
 
 - **Composition**: 1 Officer
 - **Weapons**: Rifle
@@ -488,7 +488,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Regular**: 23 pts · **Veteran**: 30 pts | `Medic` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-medic.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-medic.png) |
+| `E/M/L` | **Regular**: 23 pts · **Veteran**: 30 pts | `Medic` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-medic.png`](./images/units/Soviet-medic.png) |
 
 - **Composition**: 1 Medic
 - **Weapons**: None
@@ -538,7 +538,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 15 pts | `Commissar` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-commissar.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-commissar.png) |
+| `E/M` | **Inexperienced**: 15 pts | `Commissar` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-commissar.png`](./images/units/Soviet-commissar.png) |
 
 - **Composition**: 1 Commissar
 - **Weapons**: Rifle
@@ -578,7 +578,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Regular**: 75 pts · **Veteran**: 90 pts | `Forward Observer` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-observer.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-observer.png) |
+| `E/M/L` | **Regular**: 75 pts · **Veteran**: 90 pts | `Forward Observer` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-observer.png`](./images/units/Soviet-observer.png) |
 
 - **Composition**: 1 Forward Observer
 - **Weapons**: Rifle
@@ -619,7 +619,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Regular**: 75 pts · **Veteran**: 90 pts | `Forward Observer` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-observer.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-observer.png) |
+| `E/M/L` | **Regular**: 75 pts · **Veteran**: 90 pts | `Forward Observer` | Armies of the Soviet Union (v3) - page 32 | [`Soviet-observer.png`](./images/units/Soviet-observer.png) |
 
 - **Composition**: 1 Forward Observer
 - **Weapons**: Rifle
@@ -664,7 +664,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 35 pts | `Infantry` | Armies of the Soviet Union (v3) - page 33 | [`Soviet-infantry.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-infantry.png) |
+| `E/M/L` | **Inexperienced**: 35 pts | `Infantry` | Armies of the Soviet Union (v3) - page 33 | [`Soviet-infantry.png`](./images/units/Soviet-infantry.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -690,7 +690,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 35 pts · **Regular**: 50 pts | `Infantry` | Armies of the Soviet Union (v3) - page 34 | [`Soviet-infantry.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-infantry.png) |
+| `E/M/L` | **Inexperienced**: 35 pts · **Regular**: 50 pts | `Infantry` | Armies of the Soviet Union (v3) - page 34 | [`Soviet-infantry.png`](./images/units/Soviet-infantry.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -721,7 +721,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 55 pts · **Regular**: 70 pts | `Infantry` | Armies of the Soviet Union (v3) - page 34 | [`Soviet-infantry.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-infantry.png) |
+| `E/M/L` | **Inexperienced**: 55 pts · **Regular**: 70 pts | `Infantry` | Armies of the Soviet Union (v3) - page 34 | [`Soviet-infantry.png`](./images/units/Soviet-infantry.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Submachine guns
@@ -750,7 +750,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Regular**: 70 pts · **Veteran**: 85 pts | `Infantry` | Armies of the Soviet Union (v3) - page 35 | [`Soviet-tank-riders.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-tank-riders.png) |
+| `E/M/L` | **Regular**: 70 pts · **Veteran**: 85 pts | `Infantry` | Armies of the Soviet Union (v3) - page 35 | [`Soviet-tank-riders.png`](./images/units/Soviet-tank-riders.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Submachine guns
@@ -780,7 +780,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E` | **Regular**: 50 pts | `Infantry` | Armies of the Soviet Union (v3) - page 36 | [`Soviet-infantry.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-infantry.png) |
+| `E` | **Regular**: 50 pts | `Infantry` | Armies of the Soviet Union (v3) - page 36 | [`Soviet-infantry.png`](./images/units/Soviet-infantry.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -812,7 +812,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Regular**: 50 pts | `Infantry` | Armies of the Soviet Union (v3) - page 36 | [`Soviet-infantry.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-infantry.png) |
+| `M/L` | **Regular**: 50 pts | `Infantry` | Armies of the Soviet Union (v3) - page 36 | [`Soviet-infantry.png`](./images/units/Soviet-infantry.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -846,7 +846,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Veteran**: 65 pts | `Infantry` | Armies of the Soviet Union (v3) - page 37 | [`Soviet-Veterans.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Veterans.png) |
+| `M/L` | **Veteran**: 65 pts | `Infantry` | Armies of the Soviet Union (v3) - page 37 | [`Soviet-Veterans.png`](./images/units/Soviet-Veterans.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -881,7 +881,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 45 pts · **Regular**: 60 pts | `Infantry` | Armies of the Soviet Union (v3) - page 37 | [`Soviet-NKVD.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-NKVD.png) |
+| `E/M/L` | **Inexperienced**: 45 pts · **Regular**: 60 pts | `Infantry` | Armies of the Soviet Union (v3) - page 37 | [`Soviet-NKVD.png`](./images/units/Soviet-NKVD.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -1043,7 +1043,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 35 pts | `Infantry` | Armies of the Soviet Union (v3) - page 40 | [`Soviet-Peoples-Militia.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Peoples-Militia.png) |
+| `E/M/L` | **Inexperienced**: 35 pts | `Infantry` | Armies of the Soviet Union (v3) - page 40 | [`Soviet-Peoples-Militia.png`](./images/units/Soviet-Peoples-Militia.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -1145,7 +1145,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Veteran**: 70 pts | `Infantry` | Armies of the Soviet Union (v3) - page 42 | [`Soviet-airborne.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-airborne.png) |
+| `E/M/L` | **Veteran**: 70 pts | `Infantry` | Armies of the Soviet Union (v3) - page 42 | [`Soviet-airborne.png`](./images/units/Soviet-airborne.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -1178,7 +1178,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Regular**: 55 pts · **Veteran**: 70 pts | `Infantry` | Armies of the Soviet Union (v3) - page 42 | [`Soviet-naval.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-naval.png) |
+| `E/M/L` | **Regular**: 55 pts · **Veteran**: 70 pts | `Infantry` | Armies of the Soviet Union (v3) - page 42 | [`Soviet-naval.png`](./images/units/Soviet-naval.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -1211,7 +1211,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 35 pts | `Infantry` | Armies of the Soviet Union (v3) - page 43 | [`Soviet-partisans.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-partisans.png) |
+| `E/M/L` | **Inexperienced**: 35 pts | `Infantry` | Armies of the Soviet Union (v3) - page 43 | [`Soviet-partisans.png`](./images/units/Soviet-partisans.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -1241,7 +1241,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Veteran**: 60 pts | `Infantry` | Armies of the Soviet Union (v3) - page 43 | [`Soviet-scout-squad.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-scout-squad.png) |
+| `M/L` | **Veteran**: 60 pts | `Infantry` | Armies of the Soviet Union (v3) - page 43 | [`Soviet-scout-squad.png`](./images/units/Soviet-scout-squad.png) |
 
 - **Composition**: 1 NCO and 3 men
 - **Weapons**: Rifles
@@ -1308,7 +1308,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E` | **Veteran**: 70 pts | `Engineers` | Armies of the Soviet Union (v3) - page 45 | [`Soviet-engineers.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-engineers.png) |
+| `E` | **Veteran**: 70 pts | `Engineers` | Armies of the Soviet Union (v3) - page 45 | [`Soviet-engineers.png`](./images/units/Soviet-engineers.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -1345,7 +1345,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Veteran**: 70 pts | `Engineers` | Armies of the Soviet Union (v3) - page 45 | [`Soviet-engineers.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-engineers.png) |
+| `M/L` | **Veteran**: 70 pts | `Engineers` | Armies of the Soviet Union (v3) - page 45 | [`Soviet-engineers.png`](./images/units/Soviet-engineers.png) |
 
 - **Composition**: 1 NCO and 4 men
 - **Weapons**: Rifles
@@ -1384,7 +1384,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Regular**: 50 pts · **Veteran**: 65 pts | `Flamethrower` | Armies of the Soviet Union (v3) - page 51 | [`Soviet-flamethrower-team.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-flamethrower-team.png) |
+| `E/M/L` | **Regular**: 50 pts · **Veteran**: 65 pts | `Flamethrower` | Armies of the Soviet Union (v3) - page 51 | [`Soviet-flamethrower-team.png`](./images/units/Soviet-flamethrower-team.png) |
 
 - **Team**: 2 men
 - **Weapons**: 1 infantry flamethrower
@@ -1415,7 +1415,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 21 pts · **Regular**: 30 pts · **Veteran**: 39 pts | `Mortar`, `Heavy Weapons` | Armies of the Soviet Union (v3) - page 51 | [`Soviet-light-mortar.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-light-mortar.png) |
+| `E/M/L` | **Inexperienced**: 21 pts · **Regular**: 30 pts · **Veteran**: 39 pts | `Mortar`, `Heavy Weapons` | Armies of the Soviet Union (v3) - page 51 | [`Soviet-light-mortar.png`](./images/units/Soviet-light-mortar.png) |
 
 - **Team**: 2 men
 - **Weapons**: 1 Light mortar
@@ -1441,7 +1441,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Regular**: 52 pts · **Veteran**: 67 pts | `Sniper` | Armies of the Soviet Union (v3) - page 49 | [`Soviet-sniper.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-sniper.png) |
+| `E/M/L` | **Regular**: 52 pts · **Veteran**: 67 pts | `Sniper` | Armies of the Soviet Union (v3) - page 49 | [`Soviet-sniper.png`](./images/units/Soviet-sniper.png) |
 
 - **Team**: 2 men
 - **Weapons**: Pistols and rifles
@@ -1467,7 +1467,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 18 pts · **Regular**: 25 pts · **Veteran**: 33 pts | `Anti-tank` | Armies of the Soviet Union (v3) - page 47 | [`Soviet-AT-rifle.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-AT-rifle.png) |
+| `E/M/L` | **Inexperienced**: 18 pts · **Regular**: 25 pts · **Veteran**: 33 pts | `Anti-tank` | Armies of the Soviet Union (v3) - page 47 | [`Soviet-AT-rifle.png`](./images/units/Soviet-AT-rifle.png) |
 
 - **Team**: 2 men
 - **Weapons**: 1 Anti-tank rifle
@@ -1495,7 +1495,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 28 pts · **Regular**: 40 pts · **Veteran**: 52 pts | `Anti-tank` | Armies of the Soviet Union (v3) - page 48 | [`Soviet-Ampulomet.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Ampulomet.png) |
+| `E/M` | **Inexperienced**: 28 pts · **Regular**: 40 pts · **Veteran**: 52 pts | `Anti-tank` | Armies of the Soviet Union (v3) - page 48 | [`Soviet-Ampulomet.png`](./images/units/Soviet-Ampulomet.png) |
 
 - **Team**: 3 men
 - **Weapons**: 1 Ampulomet
@@ -1575,7 +1575,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 26 pts · **Regular**: 36 pts · **Veteran**: 46 pts | `Anti-tank` | Armies of the Soviet Union (v3) - page 49 | [`Soviet-dog-mines.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-dog-mines.png) |
+| `E/M` | **Inexperienced**: 26 pts · **Regular**: 36 pts · **Veteran**: 46 pts | `Anti-tank` | Armies of the Soviet Union (v3) - page 49 | [`Soviet-dog-mines.png`](./images/units/Soviet-dog-mines.png) |
 
 - **Team**: 2 handlers
 - **Weapons**: Each handler has a rifle, anti-tank grenades and a dog mine
@@ -1603,7 +1603,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 35 pts · **Regular**: 50 pts · **Veteran**: 65 pts | `Heavy Weapons`, `Machine Gun` | Armies of the Soviet Union (v3) - page 46 | [`Soviet-MMG.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-MMG.png) |
+| `E/M/L` | **Inexperienced**: 35 pts · **Regular**: 50 pts · **Veteran**: 65 pts | `Heavy Weapons`, `Machine Gun` | Armies of the Soviet Union (v3) - page 46 | [`Soviet-MMG.png`](./images/units/Soviet-MMG.png) |
 
 - **Team**: 3 men
 - **Weapons**: 1 MMG
@@ -1631,7 +1631,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 49 pts · **Regular**: 70 pts · **Veteran**: 91 pts | `Heavy Weapons`, `Machine Gun` | Armies of the Soviet Union (v3) - page 47 | [`Soviet-HMG.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-HMG.png) |
+| `E/M/L` | **Inexperienced**: 49 pts · **Regular**: 70 pts · **Veteran**: 91 pts | `Heavy Weapons`, `Machine Gun` | Armies of the Soviet Union (v3) - page 47 | [`Soviet-HMG.png`](./images/units/Soviet-HMG.png) |
 
 - **Team**: 4 men
 - **Weapons**: 1 HMG
@@ -1657,7 +1657,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 32 pts · **Regular**: 45 pts · **Veteran**: 59 pts | `Heavy Weapons`, `Mortar` | Armies of the Soviet Union (v3) - page 52 | [`Soviet-medium-mortar.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-medium-mortar.png) |
+| `E/M/L` | **Inexperienced**: 32 pts · **Regular**: 45 pts · **Veteran**: 59 pts | `Heavy Weapons`, `Mortar` | Armies of the Soviet Union (v3) - page 52 | [`Soviet-medium-mortar.png`](./images/units/Soviet-medium-mortar.png) |
 
 - **Team**: 3 men
 - **Weapons**: 1 Medium mortar
@@ -1683,7 +1683,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 42 pts · **Regular**: 60 pts · **Veteran**: 78 pts | `Heavy Weapons`, `Mortar` | Armies of the Soviet Union (v3) - page 52 | [`Soviet-Heavy-mortar.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Heavy-mortar.png) |
+| `E/M/L` | **Inexperienced**: 42 pts · **Regular**: 60 pts · **Veteran**: 78 pts | `Heavy Weapons`, `Mortar` | Armies of the Soviet Union (v3) - page 52 | [`Soviet-Heavy-mortar.png`](./images/units/Soviet-Heavy-mortar.png) |
 
 - **Team**: 4 men
 - **Weapons**: 1 Heavy mortar
@@ -1889,7 +1889,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 35 pts · **Regular**: 50 pts · **Veteran**: 65 pts | `Artillery` | Armies of the Soviet Union (v3) - page 57 | [`Soviet-45mm-AT-gun.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-45mm-AT-gun.png) |
+| `E/M/L` | **Inexperienced**: 35 pts · **Regular**: 50 pts · **Veteran**: 65 pts | `Artillery` | Armies of the Soviet Union (v3) - page 57 | [`Soviet-45mm-AT-gun.png`](./images/units/Soviet-45mm-AT-gun.png) |
 
 - **Team**: 3 men
 - **Weapons**: 1 Light anti-tank gun
@@ -1931,7 +1931,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 60 pts · **Regular**: 85 pts · **Veteran**: 110 pts | `Artillery` | Armies of the Soviet Union (v3) - page 58 | [`Soviet-ZiS2.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-ZiS2.png) |
+| `M/L` | **Inexperienced**: 60 pts · **Regular**: 85 pts · **Veteran**: 110 pts | `Artillery` | Armies of the Soviet Union (v3) - page 58 | [`Soviet-ZiS2.png`](./images/units/Soviet-ZiS2.png) |
 
 - **Team**: 3 men
 - **Weapons**: 1 Medium anti-tank gun
@@ -1949,7 +1949,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 60 pts · **Regular**: 85 pts · **Veteran**: 110 pts | `Artillery` | Armies of the Soviet Union (v3) - page 59 | [`Soviet-ZiS3.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-ZiS3.png) |
+| `M/L` | **Inexperienced**: 60 pts · **Regular**: 85 pts · **Veteran**: 110 pts | `Artillery` | Armies of the Soviet Union (v3) - page 59 | [`Soviet-ZiS3.png`](./images/units/Soviet-ZiS3.png) |
 
 - **Team**: 4 men
 - **Weapons**: 1 Medium anti-tank gun
@@ -2015,7 +2015,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 52 pts · **Regular**: 65 pts · **Veteran**: 78 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 60 | [`Soviet-T26a.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-T26a.png) |
+| `E/M` | **Inexperienced**: 52 pts · **Regular**: 65 pts · **Veteran**: 78 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 60 | [`Soviet-T26a.png`](./images/units/Soviet-T26a.png) |
 
 - **Weapons**: 1 MMG mounted in a turret covering the front, left and rear arc, 1 MMG mounted in a turret covering the front, right and rear arc
 - **Damage Value**: 7+ (armoured carrier)
@@ -2034,7 +2034,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 84 pts · **Regular**: 105 pts · **Veteran**: 126 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 61 | [`Soviet-T26b.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-T26b.png) |
+| `E/M` | **Inexperienced**: 84 pts · **Regular**: 105 pts · **Veteran**: 126 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 61 | [`Soviet-T26b.png`](./images/units/Soviet-T26b.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with co-axial MMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -2058,7 +2058,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 84 pts · **Regular**: 105 pts · **Veteran**: 126 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 61 | [`Soviet-OT26.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-OT26.png) |
+| `E/M` | **Inexperienced**: 84 pts · **Regular**: 105 pts · **Veteran**: 126 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 61 | [`Soviet-OT26.png`](./images/units/Soviet-OT26.png) |
 
 - **Weapons**: 1 Turret-mounted flamethrower with co-axial MMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -2077,7 +2077,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 108 pts · **Regular**: 135 pts · **Veteran**: 162 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 61 | [`Soviet-BT7a.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-BT7a.png) |
+| `E/M` | **Inexperienced**: 108 pts · **Regular**: 135 pts · **Veteran**: 162 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 61 | [`Soviet-BT7a.png`](./images/units/Soviet-BT7a.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with co-axial MMG
 - **Damage Value**: 8+ (light tank)
@@ -2188,7 +2188,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 100 pts · **Regular**: 125 pts · **Veteran**: 150 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 64 | [`Soviet-T70.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-T70.png) |
+| `M/L` | **Inexperienced**: 100 pts · **Regular**: 125 pts · **Veteran**: 150 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 64 | [`Soviet-T70.png`](./images/units/Soviet-T70.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with co-axial MMG
 - **Damage Value**: 8+ (light tank)
@@ -2243,7 +2243,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 156 pts · **Regular**: 195 pts · **Veteran**: 234 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 66 | [`Soviet-T34.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-T34.png) |
+| `E/M/L` | **Inexperienced**: 156 pts · **Regular**: 195 pts · **Veteran**: 234 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 66 | [`Soviet-T34.png`](./images/units/Soviet-T34.png) |
 
 - **Weapons**: 1 Turret-mounted medium anti-tank gun with co-axial MMG and forward-facing hull-mounted MMG
 - **Damage Value**: 9+ (medium tank)
@@ -2271,7 +2271,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 180 pts · **Regular**: 225 pts · **Veteran**: 270 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 66 | [`Soviet-T34-85.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-T34-85.png) |
+| `M/L` | **Inexperienced**: 180 pts · **Regular**: 225 pts · **Veteran**: 270 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 66 | [`Soviet-T34-85.png`](./images/units/Soviet-T34-85.png) |
 
 - **Weapons**: 1 Turret-mounted heavy anti-tank gun with co-axial MMG and forward-facing hull-mounted MMG
 - **Damage Value**: 9+ (medium tank)
@@ -2299,7 +2299,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 140 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 68 | [`Soviet-T34-factory.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-T34-factory.png) |
+| `M/L` | **Inexperienced**: 140 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 68 | [`Soviet-T34-factory.png`](./images/units/Soviet-T34-factory.png) |
 
 - **Weapons**: 1 Turret-mounted medium anti-tank gun with co-axial MMG and forward-facing hull-mounted MMG
 - **Damage Value**: 9+ (medium tank)
@@ -2360,7 +2360,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 224 pts · **Regular**: 280 pts · **Veteran**: 336 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 69 | [`Soviet-KV1e.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-KV1e.png) |
+| `E/M/L` | **Inexperienced**: 224 pts · **Regular**: 280 pts · **Veteran**: 336 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 69 | [`Soviet-KV1e.png`](./images/units/Soviet-KV1e.png) |
 
 - **Weapons**: 1 Turret-mounted medium anti-tank gun with co-axial MMG, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG
 - **Damage Value**: 10+ (heavy tank);
@@ -2397,7 +2397,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 236 pts · **Regular**: 295 pts · **Veteran**: 354 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 69 | [`Soviet-KV85.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-KV85.png) |
+| `M/L` | **Inexperienced**: 236 pts · **Regular**: 295 pts · **Veteran**: 354 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 69 | [`Soviet-KV85.png`](./images/units/Soviet-KV85.png) |
 
 - **Weapons**: 1 Turret-mounted heavy anti-tank gun with co-axial MMG, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG
 - **Damage Value**: 10+ (heavy tank);
@@ -2422,7 +2422,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `L` | **Inexperienced**: 228 pts · **Regular**: 285 pts · **Veteran**: 342 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 70 | [`Soviet-IS2.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-IS2.png) |
+| `L` | **Inexperienced**: 228 pts · **Regular**: 285 pts · **Veteran**: 342 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 70 | [`Soviet-IS2.png`](./images/units/Soviet-IS2.png) |
 
 - **Weapons**: 1 Turret-mounted heavy anti-tank gun with co-axial MMG, 1 turret-mounted rear-facing MMG
 - **Damage Value**: 10+ (heavy tank);
@@ -2448,7 +2448,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `L` | **Inexperienced**: 360 pts · **Regular**: 450 pts · **Veteran**: 540 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 71 | [`Soviet-IS3.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-IS3.png) |
+| `L` | **Inexperienced**: 360 pts · **Regular**: 450 pts · **Veteran**: 540 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 71 | [`Soviet-IS3.png`](./images/units/Soviet-IS3.png) |
 
 - **Weapons**: 1 Turret-mounted heavy anti-tank gun with co-axial MMG, and 1 pintle-mounted HMG on the turret
 - **Damage Value**: 11+ (super-heavy tank)
@@ -2469,7 +2469,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 240 pts · **Regular**: 300 pts · **Veteran**: 360 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 75 | [`Soviet-KV2.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-KV2.png) |
+| `E/M` | **Inexperienced**: 240 pts · **Regular**: 300 pts · **Veteran**: 360 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 75 | [`Soviet-KV2.png`](./images/units/Soviet-KV2.png) |
 
 - **Weapons**: 1 Turret-mounted heavy howitzer with co-axial MMG, 1 turret-mounted rear-facing MMG, and 1 forward-facing hull-mounted MMG
 - **Damage Value**: 10+ (heavy tank);
@@ -2504,7 +2504,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E` | **Inexperienced**: 88 pts · **Regular**: 110 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 72 | [`Soviet-ZiS30.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-ZiS30.png) |
+| `E` | **Inexperienced**: 88 pts · **Regular**: 110 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 72 | [`Soviet-ZiS30.png`](./images/units/Soviet-ZiS30.png) |
 
 - **Weapons**: 1 Forward-facing medium anti-tank gun, 1 forward-facing LMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -2529,7 +2529,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 164 pts · **Regular**: 205 pts · **Veteran**: 246 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 72 | [`Soviet-SU85.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-SU85.png) |
+| `M/L` | **Inexperienced**: 164 pts · **Regular**: 205 pts · **Veteran**: 246 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 72 | [`Soviet-SU85.png`](./images/units/Soviet-SU85.png) |
 
 - **Weapons**: 1 Forward-facing heavy anti-tank gun
 - **Damage Value**: 9+ (medium tank)
@@ -2552,7 +2552,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `L` | **Inexperienced**: 196 pts · **Regular**: 245 pts · **Veteran**: 294 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 72 | [`Soviet-SU100.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-SU100.png) |
+| `L` | **Inexperienced**: 196 pts · **Regular**: 245 pts · **Veteran**: 294 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 72 | [`Soviet-SU100.png`](./images/units/Soviet-SU100.png) |
 
 - **Weapons**: 1 Forward-facing super-heavy anti-tank gun
 - **Damage Value**: 9+ (medium tank)
@@ -2575,7 +2575,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `L` | **Inexperienced**: 236 pts · **Regular**: 295 pts · **Veteran**: 354 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 73 | [`Soviet-ISU122.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-ISU122.png) |
+| `L` | **Inexperienced**: 236 pts · **Regular**: 295 pts · **Veteran**: 354 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 73 | [`Soviet-ISU122.png`](./images/units/Soviet-ISU122.png) |
 
 - **Weapons**: 1 Forward-facing heavy anti-tank gun
 - **Damage Value**: 10+ (heavy tank);
@@ -2599,7 +2599,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 84 pts · **Regular**: 105 pts · **Veteran**: 126 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 74 | [`Soviet-SU76.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-SU76.png) |
+| `M/L` | **Inexperienced**: 84 pts · **Regular**: 105 pts · **Veteran**: 126 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 74 | [`Soviet-SU76.png`](./images/units/Soviet-SU76.png) |
 
 - **Weapons**: 1 Forward-facing light howitzer
 - **Damage Value**: 8+ (light tank)
@@ -2651,7 +2651,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 156 pts · **Regular**: 195 pts · **Veteran**: 234 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 75 | [`Soviet-SU122m.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-SU122m.png) |
+| `M/L` | **Inexperienced**: 156 pts · **Regular**: 195 pts · **Veteran**: 234 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 75 | [`Soviet-SU122m.png`](./images/units/Soviet-SU122m.png) |
 
 - **Weapons**: 1 Forward-facing medium howitzer
 - **Damage Value**: 9+ (medium tank)
@@ -2669,7 +2669,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 240 pts · **Regular**: 300 pts · **Veteran**: 360 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 76 | [`Soviet-ISU-152.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-ISU-152.png) |
+| `M/L` | **Inexperienced**: 240 pts · **Regular**: 300 pts · **Veteran**: 360 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 76 | [`Soviet-ISU-152.png`](./images/units/Soviet-ISU-152.png) |
 
 - **Weapons**: 1 Forward-facing heavy howitzer
 - **Damage Value**: 10+ (heavy tank);
@@ -2693,7 +2693,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 60 pts · **Regular**: 75 pts · **Veteran**: 90 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 77 | [`Soviet-Katyusha.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Katyusha.png) |
+| `E/M/L` | **Inexperienced**: 60 pts · **Regular**: 75 pts · **Veteran**: 90 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 77 | [`Soviet-Katyusha.png`](./images/units/Soviet-Katyusha.png) |
 
 - **Weapons**: 1 Forward-facing multiple rocket launcher
 - **Damage Value**: 6+ (soft-skin)
@@ -2712,7 +2712,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 16 pts · **Regular**: 20 pts · **Veteran**: 24 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 77 | [`Soviet-Tachanka.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Tachanka.png) |
+| `E/M/L` | **Inexperienced**: 16 pts · **Regular**: 20 pts · **Veteran**: 24 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 77 | [`Soviet-Tachanka.png`](./images/units/Soviet-Tachanka.png) |
 
 - **Weapons**: 1 Hull-mounted rear-facing MMG
 - **Damage Value**: 3+ (literally soft-skinned)
@@ -2731,7 +2731,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 180 pts · **Regular**: 225 pts · **Veteran**: 270 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 78 | [`Soviet-Bronekator.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Bronekator.png) |
+| `E/M/L` | **Inexperienced**: 180 pts · **Regular**: 225 pts · **Veteran**: 270 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 78 | [`Soviet-Bronekator.png`](./images/units/Soviet-Bronekator.png) |
 
 - **Weapons**: 1 Turret-mounted medium anti-tank gun with co-axial MMG, 3 turret-mounted MMGs (each in its own turret)
 - **Damage Value**: 9+ (medium tank)
@@ -2771,7 +2771,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 44 pts · **Regular**: 55 pts · **Veteran**: 66 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 79 | [`Soviet-Gaz-with-Quad-Maxim.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Gaz-with-Quad-Maxim.png) |
+| `E/M/L` | **Inexperienced**: 44 pts · **Regular**: 55 pts · **Veteran**: 66 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 79 | [`Soviet-Gaz-with-Quad-Maxim.png`](./images/units/Soviet-Gaz-with-Quad-Maxim.png) |
 
 - **Weapons**: 1 Turret mounting 4 MMGs
 - **Damage Value**: 6+ (soft-skin)
@@ -2794,7 +2794,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 48 pts · **Regular**: 60 pts · **Veteran**: 72 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 79 | [`Soviet-BA64.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-BA64.png) |
+| `M/L` | **Inexperienced**: 48 pts · **Regular**: 60 pts · **Veteran**: 72 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 79 | [`Soviet-BA64.png`](./images/units/Soviet-BA64.png) |
 
 - **Weapons**: 1 Turret-mounted LMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -2862,7 +2862,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E` | **Inexperienced**: 96 pts · **Regular**: 120 pts · **Veteran**: 144 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 82 | [`Soviet-BA6.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-BA6.png) |
+| `E` | **Inexperienced**: 96 pts · **Regular**: 120 pts · **Veteran**: 144 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 82 | [`Soviet-BA6.png`](./images/units/Soviet-BA6.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with co-axial LMG and 1 hull-mounted forward-facing LMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -2910,7 +2910,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 52 pts · **Regular**: 65 pts · **Veteran**: 78 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 83 | [`Soviet-FAI-armoured-car.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-FAI-armoured-car.png) |
+| `E/M` | **Inexperienced**: 52 pts · **Regular**: 65 pts · **Veteran**: 78 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 83 | [`Soviet-FAI-armoured-car.png`](./images/units/Soviet-FAI-armoured-car.png) |
 
 - **Weapons**: 1 Turret-mounted LMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -2955,7 +2955,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 54 pts · **Regular**: 68 pts · **Veteran**: 82 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 91 | [`Soviet-white-scout-car.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-white-scout-car.png) |
+| `M/L` | **Inexperienced**: 54 pts · **Regular**: 68 pts · **Veteran**: 82 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 91 | [`Soviet-white-scout-car.png`](./images/units/Soviet-white-scout-car.png) |
 
 - **Weapons**: 1 Pintle-mounted HMG covering the forward arc
 - **Damage Value**: 7+ (armoured carrier)
@@ -2981,7 +2981,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 45 pts · **Regular**: 55 pts · **Veteran**: 65 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 92 | [`Soviet-universal-carrier.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-universal-carrier.png) |
+| `M/L` | **Inexperienced**: 45 pts · **Regular**: 55 pts · **Veteran**: 65 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 92 | [`Soviet-universal-carrier.png`](./images/units/Soviet-universal-carrier.png) |
 
 - **Weapons**: 1 Forward-facing hull-mounted LMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -3013,7 +3013,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M` | **Inexperienced**: 124 pts · **Regular**: 155 pts · **Veteran**: 186 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 88 | [`Soviet-Valentine.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Valentine.png) |
+| `M` | **Inexperienced**: 124 pts · **Regular**: 155 pts · **Veteran**: 186 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 88 | [`Soviet-Valentine.png`](./images/units/Soviet-Valentine.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with co-axial MMG
 - **Damage Value**: 9+ (medium tank)
@@ -3033,7 +3033,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 100 pts · **Regular**: 125 pts · **Veteran**: 150 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 88 | [`Soviet-M3-stuart.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-M3-stuart.png) |
+| `M/L` | **Inexperienced**: 100 pts · **Regular**: 125 pts · **Veteran**: 150 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 88 | [`Soviet-M3-stuart.png`](./images/units/Soviet-M3-stuart.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with coaxial MMG and 1 forward-facing, hull-mounted MMG
 - **Damage Value**: 8+ (light tank)
@@ -3059,7 +3059,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 124 pts · **Regular**: 155 pts · **Veteran**: 186 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`Soviet-M5A1.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-M5A1.png) |
+| `M/L` | **Inexperienced**: 124 pts · **Regular**: 155 pts · **Veteran**: 186 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`Soviet-M5A1.png`](./images/units/Soviet-M5A1.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with coaxial MMG and 1 forward-facing, hull-mounted MMG
 - **Damage Value**: 8+ (light tank)
@@ -3087,7 +3087,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M` | **Regular**: 105 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`British-Tetrarch.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/British-Tetrarch.png) |
+| `M` | **Regular**: 105 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`British-Tetrarch.png`](./images/units/British-Tetrarch.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with co-axial MMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -3106,7 +3106,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 128 pts · **Regular**: 160 pts · **Veteran**: 192 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`Soviet-M10.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-M10.png) |
+| `M/L` | **Inexperienced**: 128 pts · **Regular**: 160 pts · **Veteran**: 192 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`Soviet-M10.png`](./images/units/Soviet-M10.png) |
 
 - **Weapons**: 1 Turret-mounted heavy anti-tank gun
 - **Damage Value**: 8+ (light tank)
@@ -3130,7 +3130,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M` | **Inexperienced**: 180 pts · **Regular**: 225 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`Soviet-M3-Lee.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-M3-Lee.png) |
+| `M` | **Inexperienced**: 180 pts · **Regular**: 225 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 89 | [`Soviet-M3-Lee.png`](./images/units/Soviet-M3-Lee.png) |
 
 - **Weapons**: Hull-mounted 75mm medium anti-tank gun covering the front and right arcs, 1 turret-mounted light anti-tank gun with co-axial MMG
 - **Damage Value**: 9+ (medium tank)
@@ -3151,7 +3151,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 164 pts · **Regular**: 205 pts · **Veteran**: 246 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Sherman75.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Sherman75.png) |
+| `M/L` | **Inexperienced**: 164 pts · **Regular**: 205 pts · **Veteran**: 246 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Sherman75.png`](./images/units/Soviet-Sherman75.png) |
 
 - **Weapons**: 1 Turret-mounted 75mm medium anti-tank gun with co-axial MMG and 1 forward-facing hull-mounted MMG
 - **Damage Value**: 9+ (medium tank)
@@ -3182,7 +3182,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 180 pts · **Regular**: 225 pts · **Veteran**: 270 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Sherman76.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Sherman76.png) |
+| `M/L` | **Inexperienced**: 180 pts · **Regular**: 225 pts · **Veteran**: 270 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Sherman76.png`](./images/units/Soviet-Sherman76.png) |
 
 - **Weapons**: 1 Turret-mounted heavy anti-tank gun with co-axial MMG and 1 forward-facing hull-mounted MMG
 - **Damage Value**: 9+ (medium tank)
@@ -3207,7 +3207,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M` | **Inexperienced**: 124 pts · **Regular**: 155 pts · **Veteran**: 186 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Matilda-II.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Matilda-II.png) |
+| `M` | **Inexperienced**: 124 pts · **Regular**: 155 pts · **Veteran**: 186 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Matilda-II.png`](./images/units/Soviet-Matilda-II.png) |
 
 - **Weapons**: 1 Turret-mounted light anti-tank gun with co-axial MMG
 - **Damage Value**: 9+ (medium tank)
@@ -3227,7 +3227,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 200 pts · **Regular**: 250 pts · **Veteran**: 300 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Churchill.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Churchill.png) |
+| `M/L` | **Inexperienced**: 200 pts · **Regular**: 250 pts · **Veteran**: 300 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 90 | [`Soviet-Churchill.png`](./images/units/Soviet-Churchill.png) |
 
 - **Weapons**: 1 Turret-mounted medium anti-tank gun with co-axial MMG and 1 forward-facing hull-mounted MMG (this represents the Churchill Mk III or IV)
 - **Damage Value**: 10+ (heavy tank);
@@ -3280,7 +3280,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 100 pts · **Regular**: 125 pts · **Veteran**: 150 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 91 | [`Soviet-M17-AA.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-M17-AA.png) |
+| `M/L` | **Inexperienced**: 100 pts · **Regular**: 125 pts · **Veteran**: 150 pts | `Command Vehicle`, `Vehicle` | Armies of the Soviet Union (v3) - page 91 | [`Soviet-M17-AA.png`](./images/units/Soviet-M17-AA.png) |
 
 - **Weapons**: 1 Turret mounting 4 HMGs
 - **Damage Value**: 7+ (armoured carrier)
@@ -3303,7 +3303,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E` | **Inexperienced**: 22 pts · **Regular**: 27 pts · **Veteran**: 32 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 84 | [`Soviet-truck.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-truck.png) |
+| `E` | **Inexperienced**: 22 pts · **Regular**: 27 pts · **Veteran**: 32 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 84 | [`Soviet-truck.png`](./images/units/Soviet-truck.png) |
 
 - **Weapons**: None
 - **Damage Value**: 6+ (soft-skin)
@@ -3328,7 +3328,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 22 pts · **Regular**: 27 pts · **Veteran**: 32 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 84 | [`Soviet-truck.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-truck.png) |
+| `M/L` | **Inexperienced**: 22 pts · **Regular**: 27 pts · **Veteran**: 32 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 84 | [`Soviet-truck.png`](./images/units/Soviet-truck.png) |
 
 - **Weapons**: None
 - **Damage Value**: 6+ (soft-skin)
@@ -3379,7 +3379,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 14 pts · **Regular**: 18 pts · **Veteran**: 22 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 85 | [`Soviet-Ford-GPA.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Ford-GPA.png) |
+| `M/L` | **Inexperienced**: 14 pts · **Regular**: 18 pts · **Veteran**: 22 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 85 | [`Soviet-Ford-GPA.png`](./images/units/Soviet-Ford-GPA.png) |
 
 - **Weapons**: None
 - **Damage Value**: 6+ (soft-skin)
@@ -3404,7 +3404,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M` | **Inexperienced**: 37 pts · **Regular**: 46 pts · **Veteran**: 55 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 85 | [`Soviet-Komsomolets.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Komsomolets.png) |
+| `E/M` | **Inexperienced**: 37 pts · **Regular**: 46 pts · **Veteran**: 55 pts | `Transports`, `Tows` | Armies of the Soviet Union (v3) - page 85 | [`Soviet-Komsomolets.png`](./images/units/Soviet-Komsomolets.png) |
 
 - **Weapons**: 1 Hull-mounted forward-facing LMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -3425,7 +3425,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 40 pts · **Regular**: 50 pts · **Veteran**: 60 pts | `Transports` | Armies of the Soviet Union (v3) - page 86 | [`Soviet-Aerosan.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-Aerosan.png) |
+| `E/M/L` | **Inexperienced**: 40 pts · **Regular**: 50 pts · **Veteran**: 60 pts | `Transports` | Armies of the Soviet Union (v3) - page 86 | [`Soviet-Aerosan.png`](./images/units/Soviet-Aerosan.png) |
 
 - **Weapons**: 1 Pintle-mounted LMG covering the front, left and right arcs
 - **Damage Value**: 7+ (armoured carrier)
@@ -3445,7 +3445,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 54 pts · **Regular**: 68 pts · **Veteran**: 82 pts | `Transports` | Armies of the Soviet Union (v3) - page 91 | [`Soviet-white-scout-car.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-white-scout-car.png) |
+| `M/L` | **Inexperienced**: 54 pts · **Regular**: 68 pts · **Veteran**: 82 pts | `Transports` | Armies of the Soviet Union (v3) - page 91 | [`Soviet-white-scout-car.png`](./images/units/Soviet-white-scout-car.png) |
 
 - **Weapons**: 1 Pintle-mounted HMG covering the forward arc
 - **Damage Value**: 7+ (armoured carrier)
@@ -3497,7 +3497,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `M/L` | **Inexperienced**: 40 pts · **Regular**: 50 pts · **Veteran**: 60 pts | `Transports` | Armies of the Soviet Union (v3) - page 92 | [`Soviet-universal-carrier.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Soviet-universal-carrier.png) |
+| `M/L` | **Inexperienced**: 40 pts · **Regular**: 50 pts · **Veteran**: 60 pts | `Transports` | Armies of the Soviet Union (v3) - page 92 | [`Soviet-universal-carrier.png`](./images/units/Soviet-universal-carrier.png) |
 
 - **Weapons**: 1 Forward-facing hull-mounted LMG
 - **Damage Value**: 7+ (armoured carrier)
@@ -3574,7 +3574,7 @@
 
 | Period | Base Cost (Experience) | Slots | Source | Illustration |
 | :---: | :--- | :--- | :--- | :--- |
-| `E/M/L` | **Inexperienced**: 14 pts · **Regular**: 18 pts · **Veteran**: 22 pts | `Transports` | Version 3 Rulebook - page 280 | [`Civilian-car.png`](file:///c:/Users/mipas/Desktop/listmaker/images/units/Civilian-car.png) |
+| `E/M/L` | **Inexperienced**: 14 pts · **Regular**: 18 pts · **Veteran**: 22 pts | `Transports` | Version 3 Rulebook - page 280 | [`Civilian-car.png`](./images/units/Civilian-car.png) |
 
 - **Weapons**: None
 - **Damage Value**: 6+ (soft-skin)
