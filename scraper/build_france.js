@@ -132,7 +132,7 @@ const units = {
     cardTitle: "Platoon Commander",
     page: "Armies of France (v3) page 1",
     period: "E/M/L",
-    image: "images/units/french-headquarters.jpg",
+    image: null,
     sections: ["Platoon Commander"],
     profile: {
       Composition: "1 Officer and up to 2 men",
@@ -206,7 +206,7 @@ const units = {
     cardTitle: "Company Commander",
     page: "Armies of France (v3) page 1",
     period: "E/M/L",
-    image: "images/units/french-headquarters.jpg",
+    image: null,
     sections: ["Company Commander"],
     profile: {
       Composition: "1 Officer and up to 2 men",
@@ -280,7 +280,7 @@ const units = {
     cardTitle: "Artillery Forward Observer",
     page: "Armies of France (v3) page 1",
     period: "E/M/L",
-    image: "images/units/french-headquarters.jpg",
+    image: null,
     sections: ["Forward Observer"],
     profile: {
       Composition: "1 Forward Observer and up to 2 men",
@@ -354,7 +354,7 @@ const units = {
     cardTitle: "Air Force Forward Observer",
     page: "Armies of France (v3) page 1",
     period: "E/M/L",
-    image: "images/units/french-headquarters.jpg",
+    image: null,
     sections: ["Forward Observer"],
     profile: {
       Composition: "1 Forward Observer and up to 2 men",
@@ -413,7 +413,7 @@ const units = {
     cardTitle: "Medic",
     page: "Armies of France (v3) page 1",
     period: "E/M/L",
-    image: "images/units/french-headquarters.jpg",
+    image: null,
     sections: ["Medic"],
     profile: {
       Composition: "1 Medic and up to 2 men",
@@ -460,7 +460,7 @@ const units = {
     cardTitle: "Chaplain",
     page: "Version 3 Rulebook page 188",
     period: "E/M/L",
-    image: "images/units/french-headquarters.jpg",
+    image: null,
     sections: ["Chaplain"],
     profile: {
       Composition: "1 Chaplain",
@@ -498,7 +498,7 @@ const units = {
     cardTitle: "Infantry Section",
     page: "Armies of France (v3) page 2",
     period: "E/M/L",
-    image: "images/units/french-infantry-section.jpg",
+    image: null,
     sections: ["Infantry"],
     profile: {
       Composition: "1 NCO and 4 men",
@@ -636,7 +636,7 @@ const units = {
     cardTitle: "Groupe Franc/SES/GIA/Chasseurs Alpins Veteran Infantry Section",
     page: "Armies of France (v3) page 2",
     period: "E/M/L",
-    image: "images/units/french-elite-infantry.jpg",
+    image: null,
     sections: ["Infantry", "Engineers"],
     profile: {
       Composition: "1 NCO and 4 men",
@@ -741,7 +741,7 @@ const units = {
     cardTitle: "Foreign Legion Veteran Infantry Section",
     page: "Armies of France (v3) page 2",
     period: "E/M/L",
-    image: "images/units/french-elite-infantry.jpg",
+    image: null,
     sections: ["Infantry"],
     profile: {
       Composition: "1 NCO and 4 men",
@@ -829,7 +829,7 @@ const units = {
     cardTitle: "Moroccan Goumier Section",
     page: "Armies of France (v3) page 2",
     period: "E/M/L",
-    image: "images/units/french-infantry-section.jpg",
+    image: null,
     sections: ["Infantry"],
     profile: {
       Composition: "1 NCO and 4 men",
@@ -887,7 +887,7 @@ const units = {
     cardTitle: "Motorcycle Section",
     page: "Armies of France (v3) page 2",
     period: "E/M/L",
-    image: "images/units/french-infantry-section.jpg",
+    image: null,
     sections: ["Infantry"],
     profile: {
       Composition: "1 NCO and 5 men on motorcycle/sidecars",
@@ -945,7 +945,7 @@ const units = {
     cardTitle: "Cavalry Section",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/French-cavalry.png",
+    image: null,
     sections: ["Infantry"],
     profile: {
       Composition: "1 NCO and 5 men mounted on horses",
@@ -1010,7 +1010,7 @@ const units = {
     cardTitle: "Machine Gun Team",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-weapons-teams.jpg",
+    image: null,
     sections: ["Machine Gun", "Heavy Weapons"],
     profile: {
       Composition: "3 men",
@@ -1045,7 +1045,7 @@ const units = {
     cardTitle: "Boys Anti-Tank Rifle Team",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-weapons-teams.jpg",
+    image: null,
     sections: ["Anti-tank (Secondary)", "Anti-tank", "Heavy Weapons"],
     profile: {
       Composition: "2 men",
@@ -1080,7 +1080,7 @@ const units = {
     cardTitle: "Light Mortar Team",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-weapons-teams.jpg",
+    image: null,
     sections: ["Mortar"],
     profile: {
       Composition: "2 men",
@@ -1135,7 +1135,7 @@ const units = {
     cardTitle: "Medium Mortar Team",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-weapons-teams.jpg",
+    image: null,
     sections: ["Mortar", "Heavy Weapons"],
     profile: {
       Composition: "3 men",
@@ -1180,7 +1180,7 @@ const units = {
     cardTitle: "Sniper Team",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-weapons-teams.jpg",
+    image: null,
     sections: ["Sniper"],
     profile: {
       Composition: "2 men",
@@ -1226,7 +1226,7 @@ const units = {
     cardTitle: "Flamethrower Team",
     page: "Armies of France (v3)",
     period: "E/M/L",
-    image: "images/units/french-weapons-teams.jpg",
+    image: null,
     sections: ["Flamethrower"],
     profile: {
       Composition: "2 men",
@@ -1260,7 +1260,7 @@ const units = {
     cardTitle: "Howitzers (Field Artillery)",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-artillery-howitzer.jpg",
+    image: null,
     sections: ["Artillery"],
     profile: {
       Composition: "3 men",
@@ -1340,7 +1340,7 @@ const units = {
     cardTitle: "Anti-Tank Guns",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-artillery-howitzer.jpg",
+    image: null,
     sections: ["Anti-tank", "Artillery", "Heavy Weapons"],
     profile: {
       Composition: "3 men",
@@ -1407,7 +1407,7 @@ const units = {
     cardTitle: "AA Automatic Cannons",
     page: "Armies of France (v3) page 3",
     period: "E/M/L",
-    image: "images/units/french-artillery-howitzer.jpg",
+    image: null,
     sections: ["Artillery"],
     profile: {
       Composition: "3 men",
@@ -1517,7 +1517,7 @@ const units = {
     cardTitle: "Char D & Renault Light Tanks (R35, R39, R40, Char D1, Char D2)",
     page: "Armies of France (v3) page 4",
     period: "E/M/L",
-    image: "images/units/WGB-FI-108-Somua-S35-a.jpg",
+    image: null,
     sections: ["Vehicle", "Command Vehicle"],
     profile: {
       Weapons: "1 turret-mounted low-velocity light anti-tank gun with coaxial MMG (Renault R35)",
@@ -1722,7 +1722,7 @@ const units = {
     cardTitle: "Char 2C Super-Heavy Tank",
     page: "Armies of France (v3) page 4",
     period: "E/M/L",
-    image: "images/units/402015501-Char-B1-platoon5.jpg",
+    image: null,
     sections: ["Vehicle", "Command Vehicle"],
     profile: {
       Weapons: "1 light howitzer, 4 medium machine guns",
@@ -1778,7 +1778,7 @@ const units = {
     cardTitle: "Portees (Citroën-Kégresse, Laffly S20TL, Laffly W15 TCC)",
     page: "Armies of France (v3) page 5",
     period: "E/M/L",
-    image: "images/units/402415501_AMDPanhard178armouredcar02.jpg",
+    image: null,
     sections: ["Vehicle", "Anti-tank", "Artillery"],
     profile: {
       Weapons: "1 forward or rear-facing light anti-tank gun",
@@ -1909,7 +1909,7 @@ const units = {
     cardTitle: "AMC Schneider P16 Half-Track",
     page: "Armies of France (v3) page 5",
     period: "E/M/L",
-    image: "images/units/402415501_AMDPanhard178armouredcar02.jpg",
+    image: null,
     sections: ["Vehicle", "Command Vehicle"],
     profile: {
       Weapons: "1 turret low-velocity light anti-tank gun with coaxial MMG",
@@ -1952,7 +1952,7 @@ const units = {
     cardTitle: "Laffly Transports (Laffly S15, V15, S20TL)",
     page: "Armies of France (v3) page 5",
     period: "E/M/L",
-    image: "images/units/wgb-wm-134-p107-unic-b.jpg",
+    image: null,
     sections: ["Transports", "Tows"],
     profile: {
       Weapons: "None",
@@ -2017,7 +2017,7 @@ const units = {
     cardTitle: "Berliet VUDB Carrier",
     page: "Armies of France (v3) page 5",
     period: "E/M/L",
-    image: "images/units/wgb-wm-134-p107-unic-b.jpg",
+    image: null,
     sections: ["Transports"],
     profile: {
       Weapons: "1 forward-facing LMG",
@@ -2053,7 +2053,7 @@ const units = {
     cardTitle: "Open-Topped Carriers (Unic/Citroën-Kégresse half-track, Lorraine 38)",
     page: "Armies of France (v3) page 5",
     period: "E/M/L",
-    image: "images/units/wgb-wm-134-p107-unic-b.jpg",
+    image: null,
     sections: ["Transports", "Tows"],
     profile: {
       Weapons: "None",
@@ -2110,7 +2110,7 @@ const units = {
     cardTitle: "Fully-Tracked, Fully-Enclosed Armoured Tractors (Renault Chenillette UE, Lorraine 37, Somua MCG)",
     page: "Armies of France (v3) page 5",
     period: "E/M/L",
-    image: "images/units/wgb-wm-134-p107-unic-b.jpg",
+    image: null,
     sections: ["Transports", "Tows"],
     profile: {
       Weapons: "None",
@@ -2174,7 +2174,7 @@ const units = {
     cardTitle: "Truck (Citroën 23, Matford, Renault AGK)",
     page: "Armies of France (v3)",
     period: "E/M/L",
-    image: "images/units/wgb-wm-134-p107-unic-b.jpg",
+    image: null,
     sections: ["Transports", "Tows"],
     profile: {
       Weapons: "None",
@@ -2221,7 +2221,7 @@ const units = {
     cardTitle: "Light Truck",
     page: "Armies of France (v3)",
     period: "E/M/L",
-    image: "images/units/wgb-wm-134-p107-unic-b.jpg",
+    image: null,
     sections: ["Transports", "Tows"],
     profile: {
       Weapons: "None",
@@ -2256,7 +2256,7 @@ const units = {
     cardTitle: "Civilian Car / Staff Car",
     page: "Armies of France (v3)",
     period: "E/M/L",
-    image: "images/units/Civilian-car.png",
+    image: null,
     sections: ["Transports"],
     profile: {
       Weapons: "None",
@@ -2291,7 +2291,7 @@ const units = {
     cardTitle: "Field Ambulance",
     page: "Armies of France (v3)",
     period: "E/M/L",
-    image: "images/units/french-headquarters.jpg",
+    image: null,
     sections: ["Medic", "Transports"],
     profile: {
       Weapons: "None",

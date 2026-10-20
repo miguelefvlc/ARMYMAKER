@@ -2,10 +2,10 @@
   "id": "france",
   "faction": "France",
   "book": "Armies of France (v3)",
-  "scrapedAt": "2026-10-20T21:04:23.576Z",
+  "scrapedAt": "2026-10-20T20:28:39.922Z",
   "totalTemplatesCrawled": 12,
   "totalUniqueUnits": 39,
-  "totalUniqueImages": 37,
+  "totalUniqueImages": 4,
   "armyRules": [
     {
       "name": "Forward Artillery Doctrine",
@@ -3687,7 +3687,7 @@
       "cardTitle": "Platoon Commander",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": "images/units/french-headquarters.jpg",
+      "image": null,
       "sections": [
         "Platoon Commander"
       ],
@@ -3792,7 +3792,7 @@
       "cardTitle": "Company Commander",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": "images/units/french-headquarters.jpg",
+      "image": null,
       "sections": [
         "Company Commander"
       ],
@@ -3897,7 +3897,7 @@
       "cardTitle": "Artillery Forward Observer",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": "images/units/french-headquarters.jpg",
+      "image": null,
       "sections": [
         "Forward Observer"
       ],
@@ -3999,7 +3999,7 @@
       "cardTitle": "Air Force Forward Observer",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": "images/units/french-headquarters.jpg",
+      "image": null,
       "sections": [
         "Forward Observer"
       ],
@@ -4079,7 +4079,7 @@
       "cardTitle": "Medic",
       "page": "Armies of France (v3) page 1",
       "period": "E/M/L",
-      "image": "images/units/french-headquarters.jpg",
+      "image": null,
       "sections": [
         "Medic"
       ],
@@ -4133,7 +4133,7 @@
       "cardTitle": "Chaplain",
       "page": "Version 3 Rulebook page 188",
       "period": "E/M/L",
-      "image": "images/units/french-headquarters.jpg",
+      "image": null,
       "sections": [
         "Chaplain"
       ],
@@ -4176,7 +4176,7 @@
       "cardTitle": "Infantry Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": "images/units/french-infantry-section.jpg",
+      "image": null,
       "sections": [
         "Infantry"
       ],
@@ -4356,7 +4356,7 @@
       "cardTitle": "Groupe Franc/SES/GIA/Chasseurs Alpins Veteran Infantry Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": "images/units/french-elite-infantry.jpg",
+      "image": null,
       "sections": [
         "Infantry",
         "Engineers"
@@ -4494,7 +4494,7 @@
       "cardTitle": "Foreign Legion Veteran Infantry Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": "images/units/french-elite-infantry.jpg",
+      "image": null,
       "sections": [
         "Infantry"
       ],
@@ -4621,7 +4621,7 @@
       "cardTitle": "Moroccan Goumier Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": "images/units/french-infantry-section.jpg",
+      "image": null,
       "sections": [
         "Infantry"
       ],
@@ -4697,7 +4697,7 @@
       "cardTitle": "Motorcycle Section",
       "page": "Armies of France (v3) page 2",
       "period": "E/M/L",
-      "image": "images/units/french-infantry-section.jpg",
+      "image": null,
       "sections": [
         "Infantry"
       ],
@@ -4773,7 +4773,7 @@
       "cardTitle": "Cavalry Section",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/French-cavalry.png",
+      "image": null,
       "sections": [
         "Infantry"
       ],
@@ -4866,7 +4866,7 @@
       "cardTitle": "Machine Gun Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-weapons-teams.jpg",
+      "image": null,
       "sections": [
         "Machine Gun",
         "Heavy Weapons"
@@ -4916,7 +4916,7 @@
       "cardTitle": "Boys Anti-Tank Rifle Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-weapons-teams.jpg",
+      "image": null,
       "sections": [
         "Anti-tank (Secondary)",
         "Anti-tank",
@@ -4967,7 +4967,7 @@
       "cardTitle": "Light Mortar Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-weapons-teams.jpg",
+      "image": null,
       "sections": [
         "Mortar"
       ],
@@ -5043,7 +5043,7 @@
       "cardTitle": "Medium Mortar Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-weapons-teams.jpg",
+      "image": null,
       "sections": [
         "Mortar",
         "Heavy Weapons"
@@ -5103,7 +5103,7 @@
       "cardTitle": "Sniper Team",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-weapons-teams.jpg",
+      "image": null,
       "sections": [
         "Sniper"
       ],
@@ -5168,7 +5168,7 @@
       "cardTitle": "Flamethrower Team",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": "images/units/french-weapons-teams.jpg",
+      "image": null,
       "sections": [
         "Flamethrower"
       ],
@@ -5214,7 +5214,7 @@
       "cardTitle": "Howitzers (Field Artillery)",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-artillery-howitzer.jpg",
+      "image": null,
       "sections": [
         "Artillery"
       ],
@@ -5322,7 +5322,7 @@
       "cardTitle": "Anti-Tank Guns",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-artillery-howitzer.jpg",
+      "image": null,
       "sections": [
         "Anti-tank",
         "Artillery",
@@ -5419,7 +5419,7 @@
       "cardTitle": "AA Automatic Cannons",
       "page": "Armies of France (v3) page 3",
       "period": "E/M/L",
-      "image": "images/units/french-artillery-howitzer.jpg",
+      "image": null,
       "sections": [
         "Artillery"
       ],
@@ -5580,7 +5580,7 @@
       "cardTitle": "Char D & Renault Light Tanks (R35, R39, R40, Char D1, Char D2)",
       "page": "Armies of France (v3) page 4",
       "period": "E/M/L",
-      "image": "images/units/WGB-FI-108-Somua-S35-a.jpg",
+      "image": null,
       "sections": [
         "Vehicle",
         "Command Vehicle"
@@ -5910,7 +5910,7 @@
       "cardTitle": "Char 2C Super-Heavy Tank",
       "page": "Armies of France (v3) page 4",
       "period": "E/M/L",
-      "image": "images/units/402015501-Char-B1-platoon5.jpg",
+      "image": null,
       "sections": [
         "Vehicle",
         "Command Vehicle"
@@ -6017,7 +6017,7 @@
       "cardTitle": "Portees (Citroën-Kégresse, Laffly S20TL, Laffly W15 TCC)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": "images/units/402415501_AMDPanhard178armouredcar02.jpg",
+      "image": null,
       "sections": [
         "Vehicle",
         "Anti-tank",
@@ -6237,7 +6237,7 @@
       "cardTitle": "AMC Schneider P16 Half-Track",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": "images/units/402415501_AMDPanhard178armouredcar02.jpg",
+      "image": null,
       "sections": [
         "Vehicle",
         "Command Vehicle"
@@ -6310,7 +6310,7 @@
       "cardTitle": "Laffly Transports (Laffly S15, V15, S20TL)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
+      "image": null,
       "sections": [
         "Transports",
         "Tows"
@@ -6398,7 +6398,7 @@
       "cardTitle": "Berliet VUDB Carrier",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
+      "image": null,
       "sections": [
         "Transports"
       ],
@@ -6456,7 +6456,7 @@
       "cardTitle": "Open-Topped Carriers (Unic/Citroën-Kégresse half-track, Lorraine 38)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
+      "image": null,
       "sections": [
         "Transports",
         "Tows"
@@ -6536,7 +6536,7 @@
       "cardTitle": "Fully-Tracked, Fully-Enclosed Armoured Tractors (Renault Chenillette UE, Lorraine 37, Somua MCG)",
       "page": "Armies of France (v3) page 5",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
+      "image": null,
       "sections": [
         "Transports",
         "Tows"
@@ -6623,7 +6623,7 @@
       "cardTitle": "Truck (Citroën 23, Matford, Renault AGK)",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
+      "image": null,
       "sections": [
         "Transports",
         "Tows"
@@ -6693,7 +6693,7 @@
       "cardTitle": "Light Truck",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
+      "image": null,
       "sections": [
         "Transports",
         "Tows"
@@ -6744,7 +6744,7 @@
       "cardTitle": "Civilian Car / Staff Car",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": "images/units/Civilian-car.png",
+      "image": null,
       "sections": [
         "Transports"
       ],
@@ -6794,7 +6794,7 @@
       "cardTitle": "Field Ambulance",
       "page": "Armies of France (v3)",
       "period": "E/M/L",
-      "image": "images/units/french-headquarters.jpg",
+      "image": null,
       "sections": [
         "Medic",
         "Transports"
