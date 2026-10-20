@@ -2,6 +2,8 @@
 // UNIT CONFIGURATION MODAL (Two-Column Layout: Options, Weapons, Rules, Illustration)
 // =========================================================================
 
+const { useState, useEffect, useRef, useMemo } = React;
+
 function QuantityStepper({ value, max, onChange, min = 0 }) {
         return (
           <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-700 rounded-lg px-1.5 py-0.5 select-none">
@@ -54,6 +56,15 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
           setExtraMen(unitItem.config?.extraMen || 0);
           setOptions(unitItem.config?.options || {});
         }, [unitItem, def]);
+
+        useEffect(() => {
+          if (!isOpen) return;
+          const onKeyDown = (e) => {
+            if (e.key === 'Escape') onClose();
+          };
+          window.addEventListener('keydown', onKeyDown);
+          return () => window.removeEventListener('keydown', onKeyDown);
+        }, [isOpen, onClose]);
 
         const currentConfig = useMemo(() => ({
           experience,
@@ -574,8 +585,6 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
           </div>
         );
       }
-      // =========================================================================
-
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

@@ -4,11 +4,9 @@
 
 const { useState, useEffect, useRef, useMemo } = React;
 
-const FACTIONS_REGISTRY = window.EASYARMY_FACTIONS || {
-  soviet_union: window.EASYARMY_SOVIET_DATA,
-};
+const FACTIONS_REGISTRY = window.EASYARMY_FACTIONS || {};
 
-const EXP_LABELS = {
+const EXP_LABELS = window.EXP_LABELS || {
   inexperienced: 'Inexperienced',
   regular: 'Regular',
   veteran: 'Veteran',
@@ -25,7 +23,7 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
           } catch {}
           return availableFactions[0] || 'soviet_union';
         });
-        const factionData = FACTIONS_REGISTRY[activeFactionId] || window.EASYARMY_SOVIET_DATA;
+        const factionData = FACTIONS_REGISTRY[activeFactionId] || Object.values(FACTIONS_REGISTRY)[0];
         const platoonTypes = factionData?.platoons || [];
 
         const [platoons, setPlatoons] = useState([
@@ -192,8 +190,8 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
           [platoons]
         );
         const currentPlatoonPoints = useMemo(
-          () => Object.values(currentPlatoon.slots).reduce((sum, u) => sum + (u?.points || 0), 0),
-          [currentPlatoon.slots]
+          () => Object.values(currentPlatoon?.slots || {}).reduce((sum, u) => sum + (u?.points || 0), 0),
+          [currentPlatoon?.slots]
         );
 
 
@@ -394,10 +392,17 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
                     value={activeFactionId}
                     onChange={(e) => {
                       const nextFId = e.target.value;
+                      if (nextFId === activeFactionId) return;
+                      if (totalOrderDice > 0 && !window.confirm('Cambiar de facción reiniciará la lista actual. ¿Continuar? / Changing faction will reset the current list. Continue?')) {
+                        return;
+                      }
                       setActiveFactionId(nextFId);
                       try { localStorage.setItem('boltaction.last_faction', nextFId); } catch {}
                       setPlatoons([{ id: 1, typeId: 'infantry', period: 'All', slots: {} }]);
                       setActivePlatoonId(1);
+                      setArmyListName('');
+                      setArmyNotes('');
+                      setCurrentListId(null);
                     }}
                     className="bg-transparent text-amber-400 font-bold text-[11px] sm:text-xs focus:outline-none cursor-pointer truncate w-full sm:w-auto text-center"
                   >

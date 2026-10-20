@@ -2,6 +2,8 @@
 // ARMY ROSTER PRINT & PDF VIEW (Official Tournament A4 Roster)
 // =========================================================================
 
+const { useMemo } = React;
+
 function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints, totalOrderDice, platoons, isPreview = false }) {
         const platoonTypes = factionData?.platoons || [];
         const totalUnits = useMemo(() => platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0), [platoons]);
@@ -271,9 +273,6 @@ function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints
           </div>
         );
       }
-      // =========================================================================
-
-      // =========================================================================
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

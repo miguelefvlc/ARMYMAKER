@@ -99,10 +99,10 @@ const GoogleIcon = ({ className = "w-4 h-4" }) => (
       );
 
       // =========================================================================
-      // FACTIONS REGISTRY & CONSTANTS (100% Faction-Agnostic Multi-Faction Engine)
+      // NATO TACTICAL SYMBOLOGY & MILITARY INSIGNIA RESOLVER
       // =========================================================================
 
-function resolveTacticalIconType(slot, unitName, platoonTypeId) {
+      function resolveTacticalIconType(slot, unitName, platoonTypeId) {
         const key = ((slot?.slotKey || slot?.label || '') + '').toLowerCase();
         const uName = ((unitName || '') + '').toLowerCase();
 
@@ -377,9 +377,6 @@ function resolveTacticalIconType(slot, unitName, platoonTypeId) {
         );
       }
 
-      // =========================================================================
-      // SLOT COMPONENT (Original EasyArmy Slot Names & Period-Filtered Units)
-
 // Attach to window for global access
 if (typeof window !== 'undefined') {
   window.GoogleIcon = GoogleIcon;
@@ -398,4 +395,5 @@ if (typeof window !== 'undefined') {
   window.resolveTacticalIconType = resolveTacticalIconType;
   window.UnitTacticalIcon = UnitTacticalIcon;
   window.PlatoonTacticalIcon = PlatoonTacticalIcon;
+  window.PLATOON_TACTICAL_INFO = PLATOON_TACTICAL_INFO;
 }
