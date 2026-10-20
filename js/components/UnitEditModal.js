@@ -575,7 +575,7 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
         );
       }
       // =========================================================================
-      // TACTICAL UNIT ICON (Bolt Action v3 Official NATO-Style Symbols)
+
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

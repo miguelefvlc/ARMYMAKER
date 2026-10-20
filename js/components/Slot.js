@@ -240,7 +240,7 @@ function Slot({ slot, factionData, platoonTypeId, periodKey, value, onSelect, on
         );
       }
       // =========================================================================
-      // PRINTABLE / PDF ARMY ROSTER VIEW (EasyArmy Breakdown Table + Clean UI)
+
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

@@ -272,7 +272,7 @@ function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints
         );
       }
       // =========================================================================
-      // EXPORT ROSTER MODAL (PDF ONLY)
+
       // =========================================================================
 
 // Attach to window for global access

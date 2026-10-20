@@ -103,7 +103,7 @@ army-maker/
 
 ## 4. Estado de la Aplicación y Flujo de Datos
 
-El estado principal reside en el componente raíz `App` dentro de `index.html`:
+El estado principal reside en el componente raíz `App` dentro de `js/app.js`:
 
 ```javascript
 // Variables de estado clave en App
@@ -258,26 +258,36 @@ Abre `index.html` y añade la etiqueta `<script>` en la sección `<!-- Faction D
 <script src="./factions/<nueva_facción>_app_data.js"></script>
 ```
 
-### Paso 3: Registrar la Facción en `FACTIONS_REGISTRY` (`index.html`)
-En las primeras líneas del script de `index.html`, añade la entrada en la constante `FACTIONS_REGISTRY`:
+### Paso 3: Detección Automática en la UI
+No necesitas tocar ningún componente de React. En `js/app.js`, `FACTIONS_REGISTRY` lee automáticamente todas las claves de `window.EASYARMY_FACTIONS`. La nueva facción aparecerá de inmediato en el selector de la cabecera con su nombre oficial (`appBundle.faction`).
 
-```javascript
-const FACTIONS_REGISTRY = [
-  { id: 'germany', name: 'Germany' },
-  { id: 'soviet_union', name: 'Soviet Union' },
-  { id: 'japan', name: 'Imperial Japan' },
-  { id: '<nueva_facción>', name: 'Nombre Descriptivo' },
-];
-```
-
-### Paso 4: Añadir la Ruta al Precache de `sw.js`
-Abre `sw.js` e incluye la ruta en el array `PRECACHE` para habilitar el soporte offline:
+### Paso 4: Añadir la Ruta al Precache de `sw.js` (Opcional para PWA Offline)
+Abre `sw.js` e incluye la ruta en el array `PRECACHE` y sube la versión de caché para soporte offline:
 
 ```javascript
 const PRECACHE = [
   './',
   './index.html',
   './config.js',
+  './manifest.webmanifest',
+  './css/styles.css',
+  './js/engine.js',
+  './js/storage.js',
+  './js/icons.js',
+  './js/components/Modals.js',
+  './js/components/UnitEditModal.js',
+  './js/components/Slot.js',
+  './js/components/ArmyRosterPrintView.js',
+  './js/app.js',
+  './factions/soviet_union_app_data.js',
+  './factions/germany_app_data.js',
+  './factions/japan_app_data.js',
+  './factions/usa_app_data.js',
+  './factions/great_britain_app_data.js',
+  './factions/italy_app_data.js',
+  './factions/<nueva_facción>_app_data.js',
+];
+```
   './manifest.webmanifest',
   './factions/soviet_union_app_data.js',
   './factions/germany_app_data.js',
