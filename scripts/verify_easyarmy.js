@@ -8,7 +8,8 @@ const factions = [
   { id: 'japan', outId: '10', mainTpls: [686, 690, 694, 698, 702, 706] },
   { id: 'usa', outId: '2', mainTpls: [614, 618, 626, 622, 630, 634] },
   { id: 'great_britain', outId: '4', mainTpls: [638, 642, 650, 646, 654, 658] },
-  { id: 'italy', outId: '5', mainTpls: [711, 715, 719, 723, 727, 731] }
+  { id: 'italy', outId: '5', mainTpls: [711, 715, 719, 723, 727, 731] },
+  { id: 'france', outId: null, mainTpls: [750, 752, 754, 756, 758, 760] }
 ];
 
 let totalWarnings = 0;
@@ -34,51 +35,63 @@ for (const f of factions) {
   console.log(`- Slot catalog categories: ${Object.keys(appData.slotCatalog || {}).length}`);
 
   // 1. Verify Platoons structure vs EasyArmy raw templates
-  for (const p of appData.platoons) {
-    const rawTplFile = path.join('scraper', 'out', f.outId, 'templates', `${p.templateId}.json`);
-    if (!fs.existsSync(rawTplFile)) {
-      console.error(`  [ERROR] Missing raw template file: ${rawTplFile}`);
-      totalWarnings++;
-      continue;
-    }
-    const rawTpl = JSON.parse(fs.readFileSync(rawTplFile, 'utf8'));
-
-    let appSlots = 0;
-    let rawSlots = 0;
-    p.columns.forEach((col, cIdx) => {
-      appSlots += col.slots.length;
-      const rawCol = rawTpl.layout[cIdx];
-      if (!rawCol) {
-        console.warn(`  [WARN] Missing raw column ${cIdx} in template ${p.title}`);
+  if (f.outId) {
+    for (const p of appData.platoons) {
+      const rawTplFile = path.join('scraper', 'out', f.outId, 'templates', `${p.templateId}.json`);
+      if (!fs.existsSync(rawTplFile)) {
+        console.error(`  [ERROR] Missing raw template file: ${rawTplFile}`);
         totalWarnings++;
-        return;
+        continue;
       }
-      rawSlots += rawCol.length;
+      const rawTpl = JSON.parse(fs.readFileSync(rawTplFile, 'utf8'));
 
-      col.slots.forEach((s, sIdx) => {
-        const rawBox = rawCol[sIdx];
-        if (!rawBox) {
-          console.warn(`  [WARN] Missing raw box ${sIdx} in column ${cIdx} for ${p.title}`);
+      let appSlots = 0;
+      let rawSlots = 0;
+      p.columns.forEach((col, cIdx) => {
+        appSlots += col.slots.length;
+        const rawCol = rawTpl.layout[cIdx];
+        if (!rawCol) {
+          console.warn(`  [WARN] Missing raw column ${cIdx} in template ${p.title}`);
           totalWarnings++;
           return;
         }
-        if (!!s.mandatory !== !!rawBox.required) {
-          console.warn(`  [WARN] Mandatory mismatch in ${p.title} Col ${cIdx+1} Slot ${sIdx+1} (${s.label}): app=${s.mandatory}, raw=${rawBox.required}`);
-          totalWarnings++;
-        }
-        // Verify available units in box exist in appData
-        for (const uName of rawBox.units) {
-          if (!appData.units[uName]) {
-            console.warn(`  [WARN] Unit "${uName}" from raw EasyArmy slot [${rawBox.section}] is missing in appData.units!`);
+        rawSlots += rawCol.length;
+
+        col.slots.forEach((s, sIdx) => {
+          const rawBox = rawCol[sIdx];
+          if (!rawBox) {
+            console.warn(`  [WARN] Missing raw box ${sIdx} in column ${cIdx} for ${p.title}`);
+            totalWarnings++;
+            return;
+          }
+          if (!!s.mandatory !== !!rawBox.required) {
+            console.warn(`  [WARN] Mandatory mismatch in ${p.title} Col ${cIdx+1} Slot ${sIdx+1} (${s.label}): app=${s.mandatory}, raw=${rawBox.required}`);
             totalWarnings++;
           }
-        }
+          // Verify available units in box exist in appData
+          for (const uName of rawBox.units) {
+            if (!appData.units[uName]) {
+              console.warn(`  [WARN] Unit "${uName}" from raw EasyArmy slot [${rawBox.section}] is missing in appData.units!`);
+              totalWarnings++;
+            }
+          }
+        });
       });
-    });
 
-    if (appSlots !== rawSlots) {
-      console.warn(`  [WARN] Total slots mismatch in ${p.title}: app=${appSlots}, raw=${rawSlots}`);
-      totalWarnings++;
+      if (appSlots !== rawSlots) {
+        console.warn(`  [WARN] Total slots mismatch in ${p.title}: app=${appSlots}, raw=${rawSlots}`);
+        totalWarnings++;
+      }
+    }
+  } else {
+    // Verify slot catalog units exist in appData.units
+    for (const [slotKey, uList] of Object.entries(appData.slotCatalog || {})) {
+      for (const uName of uList) {
+        if (!appData.units[uName]) {
+          console.warn(`  [WARN] Unit "${uName}" from slot [${slotKey}] is missing in appData.units!`);
+          totalWarnings++;
+        }
+      }
     }
   }
 

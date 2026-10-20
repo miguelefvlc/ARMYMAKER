@@ -42,14 +42,13 @@ army-maker/
 ├── README.md                    # Descripción general del repositorio
 ├── factions/                    # Módulos de datos por facción
 │   ├── soviet_union_app_data.js # Registro activo Unión Soviética
-│   ├── soviet_union.json        # Dataset estructurado en JSON
-│   ├── soviet_union.md          # Referencia humana en Markdown
 │   ├── germany_app_data.js      # Registro activo Alemania
-│   ├── germany.json             # Dataset estructurado en JSON
-│   ├── germany.md               # Referencia humana en Markdown
 │   ├── japan_app_data.js        # Registro activo Japón Imperial
-│   ├── japan.json               # Dataset estructurado en JSON
-│   └── japan.md                 # Referencia humana en Markdown
+│   ├── usa_app_data.js          # Registro activo Estados Unidos
+│   ├── great_britain_app_data.js# Registro activo Gran Bretaña
+│   ├── italy_app_data.js        # Registro activo Italia
+│   ├── france_app_data.js       # Registro activo Francia
+│   └── *.json / *.md            # Datasets JSON y manuales Markdown por facción
 ├── icons/                       # Iconos de la app y PWA (192px, 512px, favicon SVG)
 ├── images/                      # Ilustraciones oficiales de unidades
 └── scraper/                     # Scripts de scraping para EasyArmy
@@ -180,6 +179,10 @@ En el bloque `<head>` de `index.html`, añade la línea correspondiente:
 <script src="./factions/soviet_union_app_data.js"></script>
 <script src="./factions/germany_app_data.js"></script>
 <script src="./factions/japan_app_data.js"></script>
+<script src="./factions/usa_app_data.js"></script>
+<script src="./factions/great_britain_app_data.js"></script>
+<script src="./factions/italy_app_data.js"></script>
+<script src="./factions/france_app_data.js"></script>
 ```
 
 ### Paso 3: Cachear en el Service Worker (`sw.js`)

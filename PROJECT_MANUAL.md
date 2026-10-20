@@ -88,6 +88,7 @@ army-maker/
 │   ├── usa_app_data.js          # Catálogo completo: Estados Unidos (v3)
 │   ├── great_britain_app_data.js# Catálogo completo: Gran Bretaña (v3)
 │   ├── italy_app_data.js        # Catálogo completo: Italia (v3)
+│   ├── france_app_data.js       # Catálogo completo: Francia (v3)
 │
 ├── scripts/                     # SCRIPTS DE DESARROLLO Y VERIFICACIÓN
 │   ├── verify_easyarmy.js       # Suite de auditoría automatizada contra EasyArmy (`npm test`)

@@ -341,6 +341,8 @@ function cleanSpecialText(s) {
                 ? 'Schürzen (Protects vs shaped charges)'
                 : /gyro-stabiliser|gyrostabiliser/i.test(txt)
                 ? 'Gyro-stabiliser'
+                : /command vehicle/i.test(txt)
+                ? 'Command Vehicle'
                 : '',
             });
           }
@@ -528,6 +530,22 @@ function cleanSpecialText(s) {
               qty: String(count),
               weapons: 'PIAT',
               ...piatStats,
+            });
+            continue;
+          }
+
+          // 1c. VB Launcher (France)
+          if (lower.includes('vb launcher')) {
+            const vbStats = findUnitWeaponRow(def, /vb launcher/i, {
+              range: '6"-18"',
+              shots: '1',
+              pen: 'HE',
+              special: 'Indirect fire, HE (1")',
+            });
+            extraRows.push({
+              qty: String(count),
+              weapons: 'man has VB launcher attachment (rifle or light mortar)',
+              ...vbStats,
             });
             continue;
           }
