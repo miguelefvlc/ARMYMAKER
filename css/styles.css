@@ -1,0 +1,75 @@
+body {
+  background-color: #161B15;
+  color: #F4F1E8;
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+/* App mode: respect notches / home indicator */
+.safe-top { padding-top: max(0.75rem, env(safe-area-inset-top)); }
+.safe-bottom { padding-bottom: max(0.5rem, env(safe-area-inset-bottom)); }
+.safe-x {
+  padding-left: max(0.75rem, env(safe-area-inset-left));
+  padding-right: max(0.75rem, env(safe-area-inset-right));
+}
+/* iOS zooms into inputs with font-size < 16px */
+@media (max-width: 640px) {
+  input, select, textarea { font-size: 16px !important; }
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #20281E;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A5B3E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A7F52;
+}
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #18181b !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .no-print, header, nav, button, .modal-backdrop, #root > div > .no-print, .fixed {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 8mm 8mm 10mm 8mm;
+  }
+  .unit-card, .platoon-print-block, .rules-print-block {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  svg {
+    overflow: visible !important;
+  }
+}
+@media screen {
+  .print-only {
+    display: none;
+  }
+}
+#printable-army-roster-preview svg,
+.unit-card svg,
+.platoon-print-block svg {
+  overflow: visible !important;
+}

@@ -2,12 +2,21 @@
 // - App shell (index.html, config.js): network-first, falls back to cache when offline.
 // - Static assets (faction data, unit images, icons, CDN libraries): stale-while-revalidate.
 // - Supabase API / auth requests and non-GET requests are never cached.
-const CACHE = 'army-maker-v7';
+const CACHE = 'army-maker-v8';
 const PRECACHE = [
   './',
   './index.html',
   './config.js',
   './manifest.webmanifest',
+  './css/styles.css',
+  './js/engine.js',
+  './js/storage.js',
+  './js/icons.js',
+  './js/components/Modals.js',
+  './js/components/UnitEditModal.js',
+  './js/components/Slot.js',
+  './js/components/ArmyRosterPrintView.js',
+  './js/app.js',
   './factions/soviet_union_app_data.js',
   './factions/germany_app_data.js',
   './factions/japan_app_data.js',

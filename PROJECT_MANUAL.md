@@ -57,25 +57,37 @@ graph TD
 
 ```text
 army-maker/
-├── index.html                   # Aplicación principal: Componentes React, controladores, estilos
+├── index.html                   # Esqueleto de la aplicación: CDNs, enlaces de scripts y contenedor raíz
 ├── config.js                    # Credenciales públicas seguras de Supabase y cliente OAuth
 ├── manifest.webmanifest         # Manifiesto PWA para instalación de la app
-├── sw.js                        # Service Worker para funcionamiento sin conexión
+├── sw.js                        # Service Worker v8 (estrategia offline y precache de todos los módulos)
 ├── package.json                 # Configuración de herramientas de desarrollo y suite de tests
 ├── vite.config.js               # Servidor de desarrollo local ligero
 ├── PROJECT_MANUAL.md            # Este manual de arquitectura y guía técnica
 ├── ARCHITECTURE.md              # Documento complementario de diseño de software
 ├── README.md                    # Descripción general del proyecto
 │
-├── factions/                    # MÓDULOS DE DATOS MULTI-FACCIÓN
+├── css/                         # CAPA DE ESTILOS Y PRESENTACIÓN
+│   └── styles.css               # Temas militares, scrollbars tácticas, animaciones y reglas @media print A4
+│
+├── js/                          # CAPA LÓGICA Y SERVICIOS
+│   ├── engine.js                # Motor de reglas Bolt Action v3 (puntos, dados, desglose balístico de armas)
+│   ├── storage.js               # Servicios de persistencia (Supabase Cloud, LocalStorage y hook useAuth)
+│   ├── icons.js                 # Iconografía SVG y símbolos tácticos OTAN
+│   ├── app.js                   # Componente raíz App (estado de lista, layout y navegación de pelotones)
+│   └── components/              # COMPONENTES MODULARES DE INTERFAZ
+│       ├── Modals.js            # ModalShell, AuthModal, SavedListRow, MyListsModal, ExportModal
+│       ├── UnitEditModal.js     # Modal de dos columnas: selección de experiencia, opciones, armas y reglas
+│       ├── Slot.js              # Casilla individual de pelotón con buscador desplegable de unidades
+│       └── ArmyRosterPrintView.js # Hoja oficial de batalla y vista previa A4 para torneo
+│
+├── factions/                    # MÓDULOS DE DATOS DE LAS GRANDES POTENCIAS V3
 │   ├── soviet_union_app_data.js # Catálogo completo: Unión Soviética (v3)
 │   ├── germany_app_data.js      # Catálogo completo: Alemania (v3)
 │   ├── japan_app_data.js        # Catálogo completo: Japón Imperial (v3)
 │   ├── usa_app_data.js          # Catálogo completo: Estados Unidos (v3)
-│   ├── soviet_union.json        # Dataset en JSON bruto para herramientas externas
-│   ├── germany.json             # Dataset en JSON bruto para herramientas externas
-│   ├── japan.json               # Dataset en JSON bruto para herramientas externas
-│   └── usa.json                 # Dataset en JSON bruto para herramientas externas
+│   ├── great_britain_app_data.js# Catálogo completo: Gran Bretaña (v3)
+│   ├── italy_app_data.js        # Catálogo completo: Italia (v3)
 │
 ├── scripts/                     # SCRIPTS DE DESARROLLO Y VERIFICACIÓN
 │   ├── verify_easyarmy.js       # Suite de auditoría automatizada contra EasyArmy (`npm test`)
