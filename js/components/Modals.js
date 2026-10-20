@@ -2,17 +2,7 @@
 // MODALS (Auth, Saved Lists & Cloud Sync, JSON / Backup Export)
 // =========================================================================
 
-const { useState, useEffect, useRef, useMemo } = React;
-
 function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-w-md" }) {
-        useEffect(() => {
-          const onKeyDown = (e) => {
-            if (e.key === 'Escape') onClose();
-          };
-          window.addEventListener('keydown', onKeyDown);
-          return () => window.removeEventListener('keydown', onKeyDown);
-        }, [onClose]);
-
         return (
           <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm no-print">
             <div className={`bg-zinc-900 border border-zinc-700 rounded-t-2xl sm:rounded-2xl shadow-2xl w-full ${maxWidth} max-h-[92dvh] overflow-hidden flex flex-col`}>
@@ -404,7 +394,7 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
             <button type="button" onClick={onOpen} className="flex-1 min-w-0 text-left cursor-pointer">
               <div className="font-bold text-sm text-white truncate">{list.name}</div>
               <div className="text-[11px] font-mono text-zinc-400 flex flex-wrap items-center gap-x-2">
-                <span>{(window.EASYARMY_FACTIONS || {})[list.faction_id]?.faction || list.faction_id}</span>
+                <span>{FACTIONS_REGISTRY[list.faction_id]?.faction || list.faction_id}</span>
                 <span className="text-zinc-600">•</span>
                 <span className="text-amber-400 font-bold">{list.total_points} pts</span>
                 <span className="text-zinc-600">•</span>
@@ -693,6 +683,11 @@ function ExportModal({
           </div>
         );
       }
+      // =========================================================================
+      // MAIN APPLICATION
+      // =========================================================================
+      // Clear any legacy draft so the app always opens completely clean and empty by default
+      try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

@@ -3,12 +3,6 @@
 // Pure JavaScript calculation and ballistic weapon roster logic
 // =========================================================================
 
-const EXP_LABELS = {
-  inexperienced: 'Inexperienced',
-  regular: 'Regular',
-  veteran: 'Veteran',
-};
-
 const LEGACY_UNIT_ALIASES = {
         "Tanque ligero T-26A": "T-26A Light Tank",
         "Tanque ligero T-26B": "T-26B Light Tank",
@@ -910,7 +904,6 @@ function cleanSpecialText(s) {
 
 // Export / Attach to global scope (works in browser window and Node globalThis)
 const _root = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
-_root.EXP_LABELS = EXP_LABELS;
 _root.LEGACY_UNIT_ALIASES = LEGACY_UNIT_ALIASES;
 _root.getUnitDefinition = getUnitDefinition;
 _root.getUnitBaseMen = getUnitBaseMen;

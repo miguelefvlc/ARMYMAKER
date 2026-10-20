@@ -2,8 +2,6 @@
 // SLOT COMPONENT (Platoon Box, Unit Selection, Search, Edit & Clear)
 // =========================================================================
 
-const { useState, useEffect, useRef, useMemo } = React;
-
 function Slot({ slot, factionData, platoonTypeId, periodKey, value, onSelect, onEdit, onClear }) {
         const [isOpen, setIsOpen] = useState(false);
         const [searchTerm, setSearchTerm] = useState("");
@@ -41,20 +39,10 @@ function Slot({ slot, factionData, platoonTypeId, periodKey, value, onSelect, on
               setSearchTerm("");
             }
           }
-          function handleKeyDown(event) {
-            if (event.key === 'Escape') {
-              setIsOpen(false);
-              setSearchTerm("");
-            }
-          }
           if (isOpen) {
             document.addEventListener('mousedown', handleClickOutside);
-            document.addEventListener('keydown', handleKeyDown);
           }
-          return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-            document.removeEventListener('keydown', handleKeyDown);
-          };
+          return () => document.removeEventListener('mousedown', handleClickOutside);
         }, [isOpen]);
         const isMandatory = slot.mandatory;
         const isFilled = !!value;
@@ -251,6 +239,8 @@ function Slot({ slot, factionData, platoonTypeId, periodKey, value, onSelect, on
           </div>
         );
       }
+      // =========================================================================
+
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

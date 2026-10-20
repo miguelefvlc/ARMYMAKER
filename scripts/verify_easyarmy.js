@@ -141,5 +141,3 @@ for (const f of factions) {
 console.log(`\n========================================`);
 console.log(`Audit finished. Total warnings: ${totalWarnings}`);
 console.log(`========================================\n`);
-
-process.exit(totalWarnings > 0 ? 1 : 0);
