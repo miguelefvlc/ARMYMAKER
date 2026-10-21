@@ -55,10 +55,16 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
         const currentOrigin =
           window.location.origin && window.location.origin !== 'null' && !window.location.origin.startsWith('file:')
             ? window.location.origin
-            : 'http://localhost:5173';
-        const currentPath = window.location.pathname && window.location.pathname.startsWith('/')
+            : 'https://miguelefvlc.github.io';
+        let currentPath = window.location.pathname && window.location.pathname.startsWith('/')
           ? window.location.pathname
-          : '/';
+          : '/ARMYMAKER/';
+        if (currentPath.endsWith('index.html')) {
+          currentPath = currentPath.slice(0, -'index.html'.length);
+        }
+        if (!currentPath.endsWith('/')) {
+          currentPath += '/';
+        }
         const redirectTo = currentOrigin + currentPath;
 
         const handleSaveConfig = (e) => {
