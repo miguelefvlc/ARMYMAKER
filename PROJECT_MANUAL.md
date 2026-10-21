@@ -62,7 +62,8 @@ army-maker/
 ├── manifest.webmanifest         # Manifiesto PWA para instalación de la app
 ├── sw.js                        # Service Worker v8 (estrategia offline y precache de todos los módulos)
 ├── package.json                 # Configuración de herramientas de desarrollo y suite de tests
-├── vite.config.js               # Servidor de desarrollo local ligero
+├── server.js                    # Servidor local nativo multi-puerto (5173 y 3000) sin dependencias
+├── vite.config.js               # Configuración Vite alternativa
 ├── PROJECT_MANUAL.md            # Este manual de arquitectura y guía técnica
 ├── ARCHITECTURE.md              # Documento complementario de diseño de software
 ├── README.md                    # Descripción general del proyecto
@@ -344,3 +345,6 @@ npm test
 4. **Protección Balística en Expresiones Regulares**:
    - `findUnitWeaponRow` incluye un parámetro de exclusión `excludeRegex` para evitar que búsquedas de fusiles estándar (`Rifle`) coincidan accidentalmente con fusiles de asalto (`Assault rifle` / `Sturmgewehr`).
    - Soporte multi-facción completo en la tabla de roster: espadas *Shin Gunto* japonesas, cargas de demolición, morteros de rodilla, blindajes *Schürzen* alemanes y proyectiles *Panzerfaust*.
+5. **Servidor Local Nativo Multi-Puerto sin Dependencias (`server.js`)**:
+   - Resuelve el error de ejecución en unidades virtuales de Google Drive donde `node_modules/.bin` no puede crear enlaces simbólicos a `vite`.
+   - Escucha en el puerto principal `5173` y mantiene un puerto de respaldo en `3000` para capturar cualquier redirección de autenticación (Google OAuth / Supabase).

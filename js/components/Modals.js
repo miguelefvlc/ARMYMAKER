@@ -52,7 +52,14 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
 
         if (!isOpen) return null;
 
-        const redirectTo = window.location.origin + window.location.pathname;
+        const currentOrigin =
+          window.location.origin && window.location.origin !== 'null' && !window.location.origin.startsWith('file:')
+            ? window.location.origin
+            : 'http://localhost:5173';
+        const currentPath = window.location.pathname && window.location.pathname.startsWith('/')
+          ? window.location.pathname
+          : '/';
+        const redirectTo = currentOrigin + currentPath;
 
         const handleSaveConfig = (e) => {
           e.preventDefault();
