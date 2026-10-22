@@ -902,6 +902,256 @@ function cleanSpecialText(s) {
         return { isVehicle: false, rows };
       }
 
+      // =========================================================================
+      // UNIT VALIDATION & DYNAMIC LIMIT CALCULATION ENGINE
+      // Validates squad weapon replacements, leader options, additions, and caps
+      // =========================================================================
+      function validateUnitConfiguration(def, config) {
+        if (!def) return { isValid: true, errors: [], dynamicMaxes: {}, breakdown: null };
+
+        // Vehicles and transports have fixed weapon loadouts and options (pintle, etc.)
+        const hasVehicleRows = (def.weaponsTable || []).some((w) => w.rowType === 'vehicle_stat');
+        if (def.damageValue || hasVehicleRows) {
+          return { isValid: true, errors: [], dynamicMaxes: {}, breakdown: null };
+        }
+
+        const compRaw = def.composition || def.profile?.Composition || '';
+        const options = config?.options || {};
+        const extraMen = Number(config?.extraMen || 0);
+
+        // 1. Parse Squad Structure
+        let leaderLabel = 'NCO';
+        let hasLeader = false;
+        let leaderCount = 0;
+        let baseRankAndFile = 0;
+
+        const ncoMatch = compRaw.match(/(\d+)\s*nco.*?(\d+)\s*men/i);
+        if (ncoMatch) {
+          leaderLabel = 'NCO';
+          hasLeader = true;
+          leaderCount = parseInt(ncoMatch[1], 10);
+          baseRankAndFile = parseInt(ncoMatch[2], 10);
+        } else if (/officer|commander/i.test(compRaw)) {
+          leaderLabel = 'Officer';
+          hasLeader = true;
+          leaderCount = 1;
+          const m = compRaw.match(/and\s*(\d+)\s*men/i);
+          baseRankAndFile = m ? parseInt(m[1], 10) : 0;
+        } else if (/commissar/i.test(compRaw)) {
+          leaderLabel = 'Commissar';
+          hasLeader = true;
+          leaderCount = 1;
+          const m = compRaw.match(/and\s*(\d+)\s*men/i);
+          baseRankAndFile = m ? parseInt(m[1], 10) : 0;
+        } else if (/medic/i.test(compRaw)) {
+          leaderLabel = 'Medic';
+          hasLeader = true;
+          leaderCount = 1;
+          const m = compRaw.match(/and\s*(\d+)\s*(unarmed\s*)?men/i);
+          baseRankAndFile = m ? parseInt(m[1], 10) : 0;
+        } else if (/observer/i.test(compRaw)) {
+          leaderLabel = 'Forward Observer';
+          hasLeader = true;
+          leaderCount = 1;
+          const m = compRaw.match(/and\s*(\d+)\s*men/i);
+          baseRankAndFile = m ? parseInt(m[1], 10) : 0;
+        } else {
+          const m = compRaw.match(/(\d+)\s*men/i);
+          if (m) {
+            hasLeader = false;
+            leaderCount = 0;
+            baseRankAndFile = parseInt(m[1], 10);
+          } else {
+            leaderLabel = def.name;
+            hasLeader = false;
+            leaderCount = 0;
+            baseRankAndFile = getUnitBaseMen(def);
+          }
+        }
+
+        const extraCrew = options.extra_crew ? 1 : 0;
+        const availableRankAndFile = baseRankAndFile + extraMen + extraCrew;
+        const totalSquadModels = leaderCount + availableRankAndFile;
+
+        // 2. Classify each option
+        const categorized = [];
+        const errors = [];
+        const dynamicMaxes = {};
+
+        let leaderReplacementsCount = 0;
+        const leaderReplacementsNames = [];
+
+        for (const opt of def.optionsList || []) {
+          if (opt.id === 'extra_men') continue;
+          const fullText = `${opt.group || ''} ${opt.rawText || opt.label || ''}`;
+          const lower = fullText.toLowerCase();
+
+          // In addition to other weapons (Panzerfaust, demolition charge, etc.)
+          const isAddition = /in addition (to )?(other |their )?weapons/i.test(lower);
+
+          // Squad-wide or per-man upgrades (SN-42 body armour, AT grenades, Stubborn, etc.)
+          const isPerManOrSquadUpgrade =
+            opt.type === 'per_man' ||
+            /entire squad|all models|all men/i.test(lower) ||
+            /body armour|anti-tank grenades|molotov|skis|horses|cavalry|tough fighters|fanatics|stubborn|infiltrator/i.test(lower);
+
+          // Leader-only weapon replacement (e.g. NCO SMG, Officer Pistol, NCO Assault Rifle)
+          const mentionsLeader = /\b(nco|officer|commissar)\b/i.test(lower);
+          const mentionsOtherMen = /\b(\d+|up to|additional)\s*men\b/i.test(lower) || /\band\b.*?\bmen\b/i.test(lower);
+          const isLeaderOnly = mentionsLeader && !mentionsOtherMen;
+          const isCombinedLeaderAndMen = mentionsLeader && mentionsOtherMen;
+
+          // Weapon replacement
+          const isWeaponOption =
+            /replace.*(rifle|carbine|submachine|weapon)|submachine gun|assault rifle|light machine gun|\blmg\b|flamethrower|light mortar|knee mortar|anti-tank rifle|shotgun|pistol/i.test(lower);
+
+          const isRankAndFileReplacement =
+            !isAddition &&
+            !isPerManOrSquadUpgrade &&
+            !isLeaderOnly &&
+            !isCombinedLeaderAndMen &&
+            (isWeaponOption || /any model|any man|anybody|up to \d+ men/i.test(lower));
+
+          categorized.push({
+            opt,
+            lower,
+            isAddition,
+            isPerManOrSquadUpgrade,
+            isLeaderOnly,
+            isCombinedLeaderAndMen,
+            isRankAndFileReplacement
+          });
+        }
+
+        // 3. Count active replacements
+        let totalRankAndFileReplacements = 0;
+        const rankAndFileBreakdown = [];
+        let hasTeamWeapon = false;
+
+        for (const item of categorized) {
+          const { opt, lower, isLeaderOnly, isCombinedLeaderAndMen, isRankAndFileReplacement } = item;
+          const val = options[opt.id];
+          if (!val) continue;
+
+          if (isLeaderOnly) {
+            leaderReplacementsCount += 1;
+            leaderReplacementsNames.push(opt.rawText || opt.label);
+          }
+
+          if (isCombinedLeaderAndMen) {
+            const count = opt.type === 'counter' ? Number(val) : 1;
+            if (count > 0) {
+              if (hasLeader) {
+                leaderReplacementsCount += 1;
+                leaderReplacementsNames.push(`${opt.rawText || opt.label} (Leader)`);
+                const menPortion = Math.max(0, count - 1);
+                if (menPortion > 0) {
+                  totalRankAndFileReplacements += menPortion;
+                  rankAndFileBreakdown.push({ opt, count: menPortion, label: opt.rawText || opt.label });
+                }
+              } else {
+                totalRankAndFileReplacements += count;
+                rankAndFileBreakdown.push({ opt, count, label: opt.rawText || opt.label });
+              }
+            }
+          }
+
+          if (isRankAndFileReplacement) {
+            const count = opt.type === 'counter' ? Number(val) : 1;
+            if (count > 0) {
+              totalRankAndFileReplacements += count;
+              rankAndFileBreakdown.push({ opt, count, label: opt.rawText || opt.label });
+            }
+          }
+
+          if (/light machine gun|\blmg\b|flamethrower/i.test(lower)) {
+            hasTeamWeapon = true;
+          }
+        }
+
+        // 4. Calculate dynamic maxes for all counter options
+        for (const item of categorized) {
+          const { opt, isAddition, isCombinedLeaderAndMen, isRankAndFileReplacement } = item;
+          if (opt.type !== 'counter') continue;
+
+          if (isAddition) {
+            const maxSquad = Math.min(opt.max ?? totalSquadModels, totalSquadModels);
+            dynamicMaxes[opt.id] = Math.max(0, maxSquad);
+          } else if (isCombinedLeaderAndMen) {
+            const maxCapacity = (hasLeader ? 1 : 0) + availableRankAndFile;
+            dynamicMaxes[opt.id] = Math.max(0, Math.min(opt.max ?? maxCapacity, maxCapacity));
+          } else if (isRankAndFileReplacement) {
+            const currentOptCount = Number(options[opt.id] || 0);
+            const otherReplacements = totalRankAndFileReplacements - currentOptCount;
+            const remainingCapacity = Math.max(0, availableRankAndFile - otherReplacements);
+            const dynamicMax = Math.min(opt.max ?? availableRankAndFile, remainingCapacity);
+            dynamicMaxes[opt.id] = Math.max(0, dynamicMax);
+          } else {
+            dynamicMaxes[opt.id] = opt.max || 1;
+          }
+        }
+
+        // 5. Detect Errors
+        // Error A: Rank-and-file weapon replacements exceed available rank-and-file soldiers
+        if (totalRankAndFileReplacements > availableRankAndFile) {
+          const detail = rankAndFileBreakdown.map((b) => `${b.count}× ${b.opt.label || b.opt.id}`).join(', ');
+          errors.push(
+            `Exceso de armas: ${totalRankAndFileReplacements} soldados han reemplazado su fusil (${detail}), pero solo hay ${availableRankAndFile} soldados regulares en la escuadra (${hasLeader ? `el ${leaderLabel} cuenta en otra casilla` : 'sin líder'}).`
+          );
+        }
+
+        // Error B: Specific counter option exceeds its dynamic max
+        for (const item of categorized) {
+          const { opt, isAddition, isRankAndFileReplacement } = item;
+          if (opt.type !== 'counter') continue;
+          const val = Number(options[opt.id] || 0);
+          const dMax = dynamicMaxes[opt.id] ?? opt.max ?? 1;
+          if (val > dMax) {
+            if (isRankAndFileReplacement) {
+              errors.push(
+                `"${opt.rawText || opt.label}": seleccionado ${val}, pero el máximo disponible es ${dMax} soldados.`
+              );
+            } else if (isAddition) {
+              errors.push(
+                `"${opt.rawText || opt.label}": seleccionado ${val}, pero excede el tamaño de la escuadra (${totalSquadModels} modelos).`
+              );
+            }
+          }
+        }
+
+        // Error C: Leader taking more than 1 primary weapon replacement
+        if (leaderReplacementsCount > 1) {
+          errors.push(
+            `Conflicto en ${leaderLabel}: ha seleccionado más de una opción de reemplazo de arma (${leaderReplacementsNames.join(' y ')}). Solo puede llevar una.`
+          );
+        }
+
+        // Error D: Team weapon requires at least 2 models
+        if (hasTeamWeapon && totalSquadModels < 2) {
+          errors.push(
+            `El arma de apoyo requiere al menos 2 soldados en la escuadra (tirador y servidor/asistente).`
+          );
+        }
+
+        return {
+          isValid: errors.length === 0,
+          errors: Array.from(new Set(errors)),
+          dynamicMaxes,
+          breakdown: {
+            hasLeader,
+            leaderLabel,
+            leaderCount,
+            baseRankAndFile,
+            extraMen,
+            availableRankAndFile,
+            totalSquadModels,
+            leaderReplacementsCount,
+            totalRankAndFileReplacements,
+            remainingRifles: Math.max(0, availableRankAndFile - totalRankAndFileReplacements)
+          }
+        };
+      }
+
 // Export / Attach to global scope (works in browser window and Node globalThis)
 const _root = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 _root.LEGACY_UNIT_ALIASES = LEGACY_UNIT_ALIASES;
@@ -913,3 +1163,4 @@ _root.formatPtsDelta = formatPtsDelta;
 _root.cleanSpecialText = cleanSpecialText;
 _root.findUnitWeaponRow = findUnitWeaponRow;
 _root.buildUnitRosterTable = buildUnitRosterTable;
+_root.validateUnitConfiguration = validateUnitConfiguration;

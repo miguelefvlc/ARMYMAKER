@@ -2,32 +2,56 @@
 // UNIT CONFIGURATION MODAL (Two-Column Layout: Options, Weapons, Rules, Illustration)
 // =========================================================================
 
-function QuantityStepper({ value, max, onChange, min = 0 }) {
+function QuantityStepper({ value, max, onChange, min = 0, isInvalid = false }) {
+        const isOverMax = value > max;
+        const displayMax = Math.max(min, max, value);
+
         return (
-          <div className="flex items-center gap-1 bg-zinc-950 border border-zinc-700 rounded-lg px-1.5 py-0.5 select-none">
+          <div className={`flex items-center gap-1 rounded-lg px-1.5 py-0.5 select-none transition-all ${
+            isOverMax || isInvalid
+              ? 'bg-red-950/70 border-2 border-red-500 text-red-300 shadow-sm shadow-red-950/50'
+              : 'bg-zinc-950 border border-zinc-700 text-zinc-300'
+          }`}>
             <button
               type="button"
+              disabled={value <= min}
               onClick={() => onChange(Math.max(min, value - 1))}
-              className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer select-none"
+              className={`px-1.5 py-0.5 font-mono font-bold text-xs select-none transition-colors ${
+                value <= min ? 'text-zinc-600 cursor-not-allowed' : 'text-zinc-400 hover:text-white cursor-pointer'
+              }`}
+              title="Disminuir"
             >
               −
             </button>
             <select
               value={value}
               onChange={(e) => onChange(Number(e.target.value))}
-              className="bg-transparent text-amber-300 font-mono font-bold text-xs focus:outline-none text-center cursor-pointer"
+              className={`bg-transparent font-mono font-bold text-xs focus:outline-none text-center cursor-pointer ${
+                isOverMax ? 'text-red-400 underline decoration-red-500' : 'text-amber-300'
+              }`}
             >
               {min === 0 && <option value={0} className="bg-zinc-900 text-zinc-400">0</option>}
-              {Array.from({ length: max - min }, (_, i) => min + i + (min === 0 ? 1 : 0)).map((num) => (
-                <option key={num} value={num} className="bg-zinc-900 text-amber-300">
-                  {min === 0 ? `+${num}` : num}
-                </option>
-              ))}
+              {Array.from({ length: Math.max(0, displayMax - min) }, (_, i) => min + i + (min === 0 ? 1 : 0)).map((num) => {
+                const numOver = num > max;
+                return (
+                  <option
+                    key={num}
+                    value={num}
+                    className={numOver ? 'bg-red-950 text-red-300 font-bold' : 'bg-zinc-900 text-amber-300'}
+                  >
+                    {min === 0 ? `+${num}` : num} {numOver ? `(máx ${max})` : ''}
+                  </option>
+                );
+              })}
             </select>
             <button
               type="button"
+              disabled={value >= max}
               onClick={() => onChange(Math.min(max, value + 1))}
-              className="px-1.5 py-0.5 text-zinc-400 hover:text-white font-mono font-bold text-xs cursor-pointer select-none"
+              className={`px-1.5 py-0.5 font-mono font-bold text-xs select-none transition-colors ${
+                value >= max ? 'text-zinc-600 cursor-not-allowed' : 'text-zinc-400 hover:text-white cursor-pointer'
+              }`}
+              title={value >= max ? `Alcanzado el máximo permitido (${max})` : 'Aumentar'}
             >
               +
             </button>
@@ -69,6 +93,10 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
           () => getUnitSummary(def, currentConfig),
           [def, currentConfig]
         );
+        const validation = useMemo(
+          () => validateUnitConfiguration(def, currentConfig),
+          [def, currentConfig]
+        );
 
         const handleOptionToggle = (optId, checked) => {
           setOptions(prev => ({ ...prev, [optId]: checked }));
@@ -79,6 +107,7 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
         };
 
         const handleSave = () => {
+          if (!validation.isValid) return;
           onSave({
             name: def.name,
             points: calculatedPoints,
@@ -146,8 +175,14 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
 
                   <button
                     type="button"
-                    onClick={handleSave}
-                    className="hidden sm:inline-flex px-4 py-1.5 rounded-lg bg-[#7A7F52] hover:bg-[#8A8F5E] text-[#E7E1CF] border border-[#B2A77A]/40 font-extrabold text-xs font-mono transition-colors shadow cursor-pointer"
+                    disabled={!validation.isValid}
+                    onClick={validation.isValid ? handleSave : undefined}
+                    className={`hidden sm:inline-flex px-4 py-1.5 rounded-lg font-extrabold text-xs font-mono transition-colors shadow ${
+                      validation.isValid
+                        ? 'bg-[#7A7F52] hover:bg-[#8A8F5E] text-[#E7E1CF] border border-[#B2A77A]/40 cursor-pointer'
+                        : 'bg-zinc-800 text-zinc-500 border border-zinc-700/60 cursor-not-allowed opacity-60'
+                    }`}
+                    title={validation.isValid ? 'Save Unit' : (validation.errors[0] || 'Error en la configuración')}
                   >
                     Save Unit
                   </button>
@@ -173,6 +208,29 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-start">
                   {/* LEFT COLUMN (7/12): COST, UNIT PROFILE, OPTIONS, WEAPONS TABLE, SPECIAL RULES */}
                   <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+
+                    {/* ALERT BANNER: VALIDATION ERRORS */}
+                    {!validation.isValid && validation.errors.length > 0 && (
+                      <div className="bg-red-950/85 border-2 border-red-500 rounded-xl p-3.5 sm:p-4 text-red-200 shadow-xl space-y-2 animate-in fade-in duration-150">
+                        <div className="flex items-center gap-2 text-red-400 font-tactical font-black text-sm uppercase tracking-wide">
+                          <AlertTriangleIcon className="w-5 h-5 shrink-0 text-red-400 animate-pulse" />
+                          <span>Error de cálculo en la unidad</span>
+                        </div>
+                        <ul className="list-disc list-inside space-y-1.5 text-xs font-mono text-red-200">
+                          {validation.errors.map((err, idx) => (
+                            <li key={idx} className="leading-snug">
+                              {err}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="text-[11px] font-mono text-red-300/80 pt-1.5 border-t border-red-800/60 flex items-center justify-between flex-wrap gap-2">
+                          <span>Corrige las opciones señaladas para poder guardar la unidad.</span>
+                          <span className="px-2 py-0.5 rounded bg-red-900/60 border border-red-600/60 text-red-200 font-bold">
+                            Guardado bloqueado
+                          </span>
+                        </div>
+                      </div>
+                    )}
 
                     {/* 1. COST / EXPERIENCE SELECTOR */}
                     <div className="bg-zinc-950/90 border border-zinc-800 rounded-xl p-4 space-y-2.5">
@@ -287,25 +345,41 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
                               if (opt.type === "counter") {
                                 const val = Number(options[opt.id] || 0);
                                 const isChecked = val > 0;
-                                const maxAllowed = opt.max || 1;
+                                const maxAllowed = validation.dynamicMaxes[opt.id] ?? opt.max ?? 1;
+                                const isExceeded = val > maxAllowed;
                                 return (
-                                  <div key={opt.id} className="flex items-center justify-between py-2.5 px-3 hover:bg-zinc-800/40 transition-colors gap-3">
+                                  <div
+                                    key={opt.id}
+                                    className={`flex items-center justify-between py-2.5 px-3 transition-colors gap-3 ${
+                                      isExceeded
+                                        ? 'bg-red-950/40 border-l-4 border-l-red-500'
+                                        : 'hover:bg-zinc-800/40'
+                                    }`}
+                                  >
                                     <label className="flex items-center gap-2.5 cursor-pointer min-w-0 select-none">
                                       <input
                                         type="checkbox"
                                         checked={isChecked}
-                                        onChange={(e) => handleOptionCount(opt.id, e.target.checked ? 1 : 0)}
+                                        onChange={(e) => handleOptionCount(opt.id, e.target.checked ? (maxAllowed > 0 ? 1 : 0) : 0)}
                                         className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-500 focus:ring-0 cursor-pointer shrink-0"
                                       />
-                                      <span className={`text-xs font-mono leading-snug ${isChecked ? 'text-amber-300 font-semibold' : 'text-zinc-200'}`}>
-                                        {displayLabel}
-                                      </span>
+                                      <div className="flex flex-col min-w-0">
+                                        <span className={`text-xs font-mono leading-snug ${isExceeded ? 'text-red-300 font-bold' : isChecked ? 'text-amber-300 font-semibold' : 'text-zinc-200'}`}>
+                                          {displayLabel}
+                                        </span>
+                                        {isExceeded && (
+                                          <span className="text-[10.5px] font-mono text-red-400 font-bold mt-0.5">
+                                            ⚠️ Excede el máximo permitido ({val} asignados, máximo disponible {maxAllowed})
+                                          </span>
+                                        )}
+                                      </div>
                                     </label>
 
                                     <div className="flex items-center gap-2.5 shrink-0">
                                       <QuantityStepper
                                         value={val}
                                         max={maxAllowed}
+                                        isInvalid={isExceeded}
                                         onChange={(newCount) => handleOptionCount(opt.id, newCount)}
                                       />
                                       <span className="text-amber-400 font-mono text-xs font-bold w-20 text-right">
@@ -533,6 +607,25 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
                         <span className="font-tactical font-bold uppercase text-sm text-white">Total Unit Cost</span>
                         <span className="text-base font-black text-amber-400">{calculatedPoints} pts</span>
                       </div>
+
+                      {/* VALIDATION BREAKDOWN / STATUS */}
+                      {validation.breakdown && (
+                        <div className="pt-2 mt-2 border-t border-zinc-800/80 space-y-1 text-[11px]">
+                          <div className="flex items-center justify-between text-zinc-400">
+                            <span>Fusiles / Armas base:</span>
+                            <span className={`font-bold font-mono ${validation.breakdown.remainingRifles < 0 ? 'text-red-400' : 'text-zinc-200'}`}>
+                              {validation.breakdown.remainingRifles} restantes de {validation.breakdown.availableRankAndFile}
+                            </span>
+                          </div>
+                        </div>
+                      )}
+
+                      {!validation.isValid && (
+                        <div className="p-2.5 rounded-lg bg-red-950/70 border border-red-500/70 text-red-300 text-xs font-mono flex items-center gap-2">
+                          <AlertTriangleIcon className="w-4 h-4 text-red-400 shrink-0" />
+                          <span>Configuración inválida ({validation.errors.length} error{validation.errors.length > 1 ? 'es' : ''})</span>
+                        </div>
+                      )}
                     </div>
 
                   </div>
@@ -562,10 +655,16 @@ function QuantityStepper({ value, max, onChange, min = 0 }) {
                   </button>
                   <button
                     type="button"
-                    onClick={handleSave}
-                    className="px-5 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-black text-xs font-mono transition-colors shadow cursor-pointer"
+                    disabled={!validation.isValid}
+                    onClick={validation.isValid ? handleSave : undefined}
+                    className={`px-5 py-1.5 rounded-lg font-black text-xs font-mono transition-colors shadow ${
+                      validation.isValid
+                        ? 'bg-amber-400 hover:bg-amber-300 text-black cursor-pointer'
+                        : 'bg-zinc-800 text-zinc-500 border border-zinc-700/60 cursor-not-allowed opacity-60'
+                    }`}
+                    title={validation.isValid ? `Save Unit (${calculatedPoints} pts)` : (validation.errors[0] || 'Error en la configuración')}
                   >
-                    Save Unit ({calculatedPoints} pts)
+                    {validation.isValid ? `Save Unit (${calculatedPoints} pts)` : 'No se puede guardar (Errores)'}
                   </button>
                 </div>
               </div>

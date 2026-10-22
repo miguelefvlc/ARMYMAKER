@@ -41,6 +41,13 @@ const GoogleIcon = ({ className = "w-4 h-4" }) => (
           <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
         </svg>
       );
+      const AlertTriangleIcon = ({ className = "w-4 h-4" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      );
       const HelmetLogo = ({ className = "w-11 h-11", width = 44, height = 44 }) => (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -395,6 +402,7 @@ if (typeof window !== 'undefined') {
   window.XIcon = XIcon;
   window.Search = Search;
   window.CopyIcon = CopyIcon;
+  window.AlertTriangleIcon = AlertTriangleIcon;
   window.HelmetLogo = HelmetLogo;
   window.DownloadIcon = DownloadIcon;
   window.EyeIcon = EyeIcon;
