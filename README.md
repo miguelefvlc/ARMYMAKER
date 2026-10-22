@@ -50,3 +50,4 @@ Clean, fast, standalone Army List Builder for **Bolt Action: Third Edition**, po
 2. Download unit images with `scraper/download_images.js`.
 3. Build `factions/<faction_id>.json`, `factions/<faction_id>.md`, and `factions/<faction_id>_app_data.js` registering `window.EASYARMY_FACTIONS['<faction_id>']`.
 4. Include `<script src="./factions/<faction_id>_app_data.js"></script>` in `index.html`. The Faction selector in the top bar will automatically list the new faction.
+<!-- auto-sync verified -->
