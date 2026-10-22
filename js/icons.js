@@ -35,6 +35,12 @@ const GoogleIcon = ({ className = "w-4 h-4" }) => (
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
         </svg>
       );
+      const CopyIcon = ({ className = "w-3.5 h-3.5" }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+          <rect width="13" height="13" x="8" y="8" rx="2" ry="2"/>
+          <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+        </svg>
+      );
       const HelmetLogo = ({ className = "w-11 h-11", width = 44, height = 44 }) => (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -388,6 +394,7 @@ if (typeof window !== 'undefined') {
   window.Trash = Trash;
   window.XIcon = XIcon;
   window.Search = Search;
+  window.CopyIcon = CopyIcon;
   window.HelmetLogo = HelmetLogo;
   window.DownloadIcon = DownloadIcon;
   window.EyeIcon = EyeIcon;

@@ -40,6 +40,7 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
           slotLabel: null,
           unitItem: null
         });
+        const [draggedSlot, setDraggedSlot] = useState(null);
         const [isExportModalOpen, setIsExportModalOpen] = useState(false);
         const [armyListName, setArmyListName] = useState("");
         const [armyNotes, setArmyNotes] = useState("");
@@ -283,6 +284,81 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
             return p;
           }));
         };
+
+        const handleCopySlot = (sourceSlotId, targetSlotId, sourcePlatoonId = activePlatoonId, targetPlatoonId = activePlatoonId) => {
+          // 1. Platoon validation ("Entre pelotones no lo permite")
+          if (sourcePlatoonId !== targetPlatoonId || sourcePlatoonId !== activePlatoonId) {
+            return;
+          }
+
+          // 2. Cannot copy onto itself
+          if (sourceSlotId === targetSlotId) {
+            return;
+          }
+
+          // 3. Current active platoon
+          const platoon = platoons.find(p => p.id === activePlatoonId);
+          if (!platoon) return;
+
+          const sourceUnit = platoon.slots[sourceSlotId];
+          if (!sourceUnit) return;
+
+          // 4. Verify slot titles match ("obligatoriamente el título de la celda tiene que ser el mismo, sino, no deja")
+          const pType = platoonTypes.find(t => t.id === platoon.typeId);
+          let sourceSlotDef = null;
+          let targetSlotDef = null;
+          if (pType && pType.columns) {
+            for (const col of pType.columns) {
+              for (const s of col.slots || []) {
+                if (s.id === sourceSlotId) sourceSlotDef = s;
+                if (s.id === targetSlotId) targetSlotDef = s;
+              }
+            }
+          }
+
+          const sourceTitle = (sourceSlotDef?.label || '').trim().toLowerCase();
+          const targetTitle = (targetSlotDef?.label || '').trim().toLowerCase();
+
+          if (!sourceTitle || !targetTitle || sourceTitle !== targetTitle) {
+            return;
+          }
+
+          // 5. Deep clone source unit config
+          const clonedUnit = JSON.parse(JSON.stringify(sourceUnit));
+
+          // Ensure recalculated points integrity
+          const def = getUnitDefinition(factionData, clonedUnit.name);
+          if (def && clonedUnit.config) {
+            clonedUnit.points = calculateUnitPoints(def, clonedUnit.config);
+          }
+
+          // 6. Update platoon slots with the cloned configuration
+          setPlatoons(prevPlatoons => prevPlatoons.map(p => {
+            if (p.id === activePlatoonId) {
+              return {
+                ...p,
+                slots: {
+                  ...p.slots,
+                  [targetSlotId]: clonedUnit
+                }
+              };
+            }
+            return p;
+          }));
+
+          setDraggedSlot(null);
+          showToast(`Copiado: "${clonedUnit.name}" a ${targetSlotDef?.label || 'celda'}`, "success");
+        };
+
+        useEffect(() => {
+          setDraggedSlot(null);
+        }, [activePlatoonId]);
+
+        useEffect(() => {
+          const handleGlobalDragEnd = () => setDraggedSlot(null);
+          window.addEventListener('dragend', handleGlobalDragEnd);
+          return () => window.removeEventListener('dragend', handleGlobalDragEnd);
+        }, []);
         const handleDeletePlatoon = (e, platoonId) => {
           if (e && e.stopPropagation) e.stopPropagation();
           if (platoons.length <= 1) return;
@@ -741,11 +817,16 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
                         slot={slot}
                         factionData={factionData}
                         platoonTypeId={currentType.id}
+                        platoonId={currentPlatoon.id}
                         periodKey={currentPlatoon.period || 'All'}
                         value={currentPlatoon.slots[slot.id]}
                         onSelect={(unitName, slotLabel) => handleSelectSlot(slot.id, unitName, slotLabel)}
                         onEdit={(slotId, unitItem, slotLabel) => handleOpenEditModal(slotId, unitItem, slotLabel)}
                         onClear={() => handleClearSlot(slot.id)}
+                        draggedSlot={draggedSlot}
+                        onDragStart={(info) => setDraggedSlot(info)}
+                        onDragEnd={() => setDraggedSlot(null)}
+                        onCopySlot={handleCopySlot}
                       />
                     ))}
                   </div>
