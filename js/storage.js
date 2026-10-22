@@ -1,5 +1,5 @@
 // =========================================================================
-// ACCOUNTS & CLOUD / LOCAL LISTS (Google Sign-In + Supabase + Local Library)
+// ACCOUNTS & CLOUD / LOCAL LISTS (Supabase + Local Library)
 // =========================================================================
 
 const LOCAL_LISTS_KEY = 'boltaction.saved_lists.v1';
@@ -18,7 +18,6 @@ function getEffectiveSupabaseConfig() {
   return {
     supabaseUrl: winCfg.supabaseUrl || saved?.supabaseUrl || DEFAULT_SUPABASE_URL,
     supabaseAnonKey: winCfg.supabaseAnonKey || saved?.supabaseAnonKey || DEFAULT_SUPABASE_KEY,
-    googleClientId: winCfg.googleClientId || saved?.googleClientId || '',
   };
 }
 

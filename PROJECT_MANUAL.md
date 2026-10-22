@@ -13,7 +13,7 @@ Su diseño prioriza:
 1. **Fidelidad al 100% con EasyArmy (`wg.easyarmy.com`)**: Nomenclatura oficial, periodos históricos (All, Early War, Mid War, Late War), estructura de pelotones, opciones de equipamiento y costes en puntos.
 2. **Filosofía Zero-Build**: No requiere empaquetadores en tiempo de compilación (Webpack, Vite, Rollup) para ejecutarse en producción. Funciona abriendo directamente `index.html` en cualquier navegador web moderno o mediante cualquier servidor de archivos estáticos (GitHub Pages, Live Server, `start.bat`).
 3. **PWA Standalone & Offline-First**: Instalable en dispositivos móviles, tablets y ordenadores de escritorio como una aplicación nativa sin barras de navegación gracias a `manifest.webmanifest` y `sw.js`.
-4. **Sincronización Híbrida**: Almacenamiento local ultrarrápido y reactivo en `localStorage`, respaldado con persistencia en la nube mediante **Supabase (PostgreSQL + RLS)** y autenticación con **Google OAuth**.
+4. **Sincronización Híbrida**: Almacenamiento local ultrarrápido y reactivo en `localStorage`, respaldado con persistencia en la nube mediante **Supabase (PostgreSQL + RLS)** y autenticación por correo y contraseña.
 5. **Generador de Roster Oficial PDF**: Impresión y exportación A4 limpia con desglose balístico por unidad, reglas especiales contextuales, notas de pelotón y resumen de dados de orden.
 
 ---
@@ -34,7 +34,7 @@ graph TD
     FactionsRegistry --> FactionGB[factions/great_britain_app_data.js]
     FactionsRegistry --> FactionIta[factions/italy_app_data.js]
     FactionsRegistry --> FactionFuture[factions/future_faction_app_data.js]
-    Index --> SupabaseClient[Supabase JS v2 + Google Identity]
+    Index --> SupabaseClient[Supabase JS v2]
     Index --> LocalStorage[LocalStorage Draft Cache]
     Index --> Html2Pdf[html2pdf.js: Exportador Roster A4]
 ```
@@ -47,7 +47,7 @@ graph TD
 | **Diseño y Estilos** | Tailwind CSS (CDN) | Clases utilitarias y paleta táctica militar (`#161B15`, `#20281E`, `#3D4B34`, `#C4A238`, `#733028`). |
 | **Iconografía** | SVG Nativos en Línea + Iconos Tácticos OTAN | Cero peticiones HTTP externas. Símbolos reglamentarios adaptativos de Bolt Action v3. |
 | **Base de Datos / Cloud** | Supabase JS v2 | Guardado y recuperación de listas en PostgreSQL con Row Level Security (RLS). |
-| **Autenticación** | Google Identity Services | Inicio de sesión con un solo clic con botón oficial o personalizado. |
+| **Autenticación** | Supabase Auth (Email / Password) | Gestión segura de cuentas de usuario y sincronización de listas en la nube. |
 | **PDF Engine** | `html2pdf.js` (`html2canvas` + `jsPDF`) | Generación en cliente de hojas de lista A4 vectorizadas para competición y torneo. |
 | **Caché Offline** | Service Worker (`sw.js`) | Estrategia *Stale-While-Revalidate* para librerías y datos; *Network-First* para la shell. |
 
@@ -347,4 +347,4 @@ npm test
    - Soporte multi-facción completo en la tabla de roster: espadas *Shin Gunto* japonesas, cargas de demolición, morteros de rodilla, blindajes *Schürzen* alemanes y proyectiles *Panzerfaust*.
 5. **Servidor Local Nativo Multi-Puerto sin Dependencias (`server.js`)**:
    - Resuelve el error de ejecución en unidades virtuales de Google Drive donde `node_modules/.bin` no puede crear enlaces simbólicos a `vite`.
-   - Escucha en el puerto principal `5173` y mantiene un puerto de respaldo en `3000` para capturar cualquier redirección de autenticación (Google OAuth / Supabase).
+   - Escucha en el puerto principal `5173` y mantiene un puerto de respaldo en `3000` para capturar cualquier redirección de autenticación (Supabase).

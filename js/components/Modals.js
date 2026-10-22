@@ -32,21 +32,18 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
       }
 
       function AuthModal({ isOpen, onClose }) {
-        const [mode, setMode] = useState('signin'); // signin | signup | reset | google_quick | config
+        const [mode, setMode] = useState('signin'); // signin | signup | reset | config
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
-        const [googleEmail, setGoogleEmail] = useState('');
-        const [googleName, setGoogleName] = useState('');
         const [busy, setBusy] = useState(false);
         const [message, setMessage] = useState(null);
         const [sbUrl, setSbUrl] = useState(initialSbCfg.supabaseUrl || '');
         const [sbKey, setSbKey] = useState(initialSbCfg.supabaseAnonKey || '');
-        const [gClientId, setGClientId] = useState(initialSbCfg.googleClientId || '');
 
         useEffect(() => {
           if (isOpen) {
             setMessage(null);
-            if (mode === 'config' || mode === 'google_quick') setMode('signin');
+            if (mode === 'config') setMode('signin');
           }
         }, [isOpen]);
 
@@ -74,7 +71,6 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
             JSON.stringify({
               supabaseUrl: sbUrl.trim(),
               supabaseAnonKey: sbKey.trim(),
-              googleClientId: gClientId.trim(),
             })
           );
           window.location.reload();
@@ -131,80 +127,11 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
           }
         };
 
-        const handleGoogle = async () => {
-          setMessage(null);
-          // 1. If Supabase Cloud is connected, use Supabase Google OAuth
-          if (supabaseClient) {
-            const { error } = await supabaseClient.auth.signInWithOAuth({
-              provider: 'google',
-              options: { redirectTo },
-            });
-            if (error) setMessage({ type: 'error', text: error.message });
-            return;
-          }
-
-          // 2. If Google OAuth Client ID is configured, open native Google Account Chooser popup
-          const activeGoogleClientId = gClientId.trim() || initialSbCfg.googleClientId;
-          if (activeGoogleClientId && window.google?.accounts?.oauth2) {
-            try {
-              const tokenClient = window.google.accounts.oauth2.initTokenClient({
-                client_id: activeGoogleClientId,
-                scope: 'openid email profile',
-                callback: async (resp) => {
-                  if (resp.error) {
-                    setMessage({ type: 'error', text: resp.error_description || resp.error });
-                    return;
-                  }
-                  try {
-                    const r = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-                      headers: { Authorization: `Bearer ${resp.access_token}` },
-                    });
-                    const profile = await r.json();
-                    signInLocalUser({
-                      id: `google-${profile.sub || profile.email}`,
-                      email: profile.email,
-                      name: profile.name,
-                      picture: profile.picture,
-                      provider: 'google',
-                    });
-                    onClose();
-                  } catch (fetchErr) {
-                    setMessage({ type: 'error', text: 'Failed to read Google profile.' });
-                  }
-                },
-              });
-              tokenClient.requestAccessToken({ prompt: 'select_account' });
-              return;
-            } catch (gErr) {
-              setMessage({ type: 'error', text: gErr.message || String(gErr) });
-              return;
-            }
-          }
-
-          // 3. Instant Google Account Sign-In modal step
-          setMode('google_quick');
-        };
-
-        const handleQuickGoogleSubmit = (e) => {
-          e.preventDefault();
-          let clean = googleEmail.trim().toLowerCase();
-          if (!clean) return;
-          if (!clean.includes('@')) clean = `${clean}@gmail.com`;
-          signInLocalUser({
-            id: `google-${clean}`,
-            email: clean,
-            name: googleName.trim() || clean.split('@')[0],
-            provider: 'google',
-          });
-          onClose();
-        };
-
         const titles = {
           signin: 'Sign In',
           signup: 'Create Account',
           reset: 'Reset Password',
-          google_quick: 'Sign in with Google',
-          config: 'OAuth & Cloud Settings',
+          config: 'Cloud Settings',
         };
         const inputCls =
           "w-full bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-lg px-3 py-2.5 text-sm text-white font-mono placeholder-zinc-600 outline-none transition-colors";
@@ -216,71 +143,8 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
             icon={<UserIcon className="w-4 h-4" />}
             onClose={onClose}
           >
-            {mode === 'google_quick' ? (
-              <form onSubmit={handleQuickGoogleSubmit} className="space-y-4">
-                <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-950 border border-zinc-800">
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow">
-                    <GoogleIcon className="w-6 h-6" />
-                  </div>
-                  <div className="text-xs font-mono">
-                    <div className="text-white font-bold">Continue with your Google Account</div>
-                    <div className="text-zinc-400 text-[11px]">Enter your Gmail address to sign in and link your lists</div>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[10.5px] font-mono uppercase text-zinc-400 font-bold mb-1">Google Email (Gmail)</label>
-                  <input
-                    type="email"
-                    required
-                    autoFocus
-                    value={googleEmail}
-                    onChange={(e) => setGoogleEmail(e.target.value)}
-                    placeholder="your.email@gmail.com"
-                    className={inputCls}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[10.5px] font-mono uppercase text-zinc-400 font-bold mb-1">Display Name (optional)</label>
-                  <input
-                    type="text"
-                    value={googleName}
-                    onChange={(e) => setGoogleName(e.target.value)}
-                    placeholder="Commander Name"
-                    className={inputCls}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-extrabold text-sm flex items-center justify-center gap-2.5 transition-colors shadow cursor-pointer"
-                >
-                  <GoogleIcon className="w-4 h-4" />
-                  Sign In with Google
-                </button>
-
-                <div className="flex items-center justify-between text-xs font-mono pt-1">
-                  <button type="button" onClick={() => setMode('signin')} className="text-amber-400 hover:text-amber-300 cursor-pointer">
-                    ← Back
-                  </button>
-                  <button type="button" onClick={() => setMode('config')} className="text-zinc-500 hover:text-zinc-300 text-[11px] cursor-pointer">
-                    ⚙ Configure OAuth Client ID
-                  </button>
-                </div>
-              </form>
-            ) : mode === 'config' ? (
+            {mode === 'config' ? (
               <form onSubmit={handleSaveConfig} className="space-y-3 text-xs font-mono text-zinc-300 leading-relaxed">
-                <div>
-                  <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Google OAuth Client ID (Optional)</label>
-                  <input
-                    type="text"
-                    value={gClientId}
-                    onChange={(e) => setGClientId(e.target.value)}
-                    placeholder="1234567890-abc.apps.googleusercontent.com"
-                    className={inputCls}
-                  />
-                </div>
                 <div>
                   <label className="block text-[10.5px] uppercase text-zinc-400 font-bold mb-1">Supabase Project URL (Optional)</label>
                   <input
@@ -313,24 +177,6 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
               </form>
             ) : (
               <div className="space-y-4">
-                {mode !== 'reset' && (
-                  <>
-                    <button
-                      type="button"
-                      onClick={handleGoogle}
-                      className="w-full py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-900 font-bold text-sm flex items-center justify-center gap-2.5 transition-colors shadow cursor-pointer"
-                    >
-                      <GoogleIcon className="w-4 h-4" />
-                      Continue with Google
-                    </button>
-                    <div className="flex items-center gap-3 text-[10.5px] font-mono uppercase text-zinc-500">
-                      <div className="h-px flex-1 bg-zinc-800" />
-                      or with email
-                      <div className="h-px flex-1 bg-zinc-800" />
-                    </div>
-                  </>
-                )}
-
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <input
                     type="email"
@@ -375,7 +221,7 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
                   </button>
                 </form>
 
-                <div className="flex items-center justify-between text-xs font-mono">
+                <div className="flex items-center justify-between text-xs font-mono pt-1">
                   {mode === 'signin' ? (
                     <>
                       <button type="button" onClick={() => setMode('signup')} className="text-amber-400 hover:text-amber-300 cursor-pointer">
@@ -383,6 +229,9 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
                       </button>
                       <button type="button" onClick={() => setMode('reset')} className="text-zinc-400 hover:text-white cursor-pointer">
                         Forgot password?
+                      </button>
+                      <button type="button" onClick={() => setMode('config')} className="text-zinc-500 hover:text-zinc-300 text-[11px] cursor-pointer" title="Configure Cloud storage">
+                        ⚙ Settings
                       </button>
                     </>
                   ) : (
