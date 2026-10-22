@@ -6630,7 +6630,7 @@ window.EASYARMY_FACTIONS['italy'] = {
       "cardTitle": "Civilian Car",
       "page": "Version 3 Rulebook - page 280",
       "period": "E/M/L",
-      "image": "images/units/Civilian-car.png",
+      "image": "images/units/italy/Civilian-car.png",
       "sections": [
         "Transports"
       ],
@@ -8718,7 +8718,7 @@ window.EASYARMY_FACTIONS['italy'] = {
       "cardTitle": "Mule Team",
       "page": "Armies of Italy (v3) - page 69",
       "period": "E/M",
-      "image": "images/units/British-mule-team.png",
+      "image": "images/units/italy/British-mule-team.png",
       "sections": [
         "Tows"
       ],

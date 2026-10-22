@@ -63,7 +63,7 @@ function localImgPath(rawUrl) {
   if (!rawUrl) return null;
   try {
     const u = rawUrl.startsWith('http') ? new URL(rawUrl) : new URL(rawUrl, 'https://wg.easyarmy.com');
-    return `images/units/${path.basename(u.pathname)}`;
+    return `images/units/soviet_union/${path.basename(u.pathname)}`;
   } catch {
     return null;
   }

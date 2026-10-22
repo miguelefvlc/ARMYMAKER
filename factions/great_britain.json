@@ -3983,7 +3983,7 @@
       "name": "Platoon Commander",
       "source": "Armies of Great Britain (v3) - page 25",
       "period": "E/M/L",
-      "image": "images/units/British-platoon-commander.png",
+      "image": "images/units/great_britain/British-platoon-commander.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-platoon-commander.png",
       "sections": [
         "Platoon Commander"
@@ -4307,7 +4307,7 @@
       "name": "Rifle Section",
       "source": "Armies of Great Britain (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/British-infantry.png",
+      "image": "images/units/great_britain/British-infantry.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-infantry.png",
       "sections": [
         "Infantry"
@@ -4457,7 +4457,7 @@
       "name": "Home Guard Section",
       "source": "Armies of Great Britain (v3) - page 29",
       "period": "E/M",
-      "image": "images/units/British-Local-Defence-Force.png",
+      "image": "images/units/great_britain/British-Local-Defence-Force.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Local-Defence-Force.png",
       "sections": [
         "Infantry"
@@ -4646,7 +4646,7 @@
       "name": "Airborne Section",
       "source": "Armies of Great Britain (v3) - page 30",
       "period": "M/L",
-      "image": "images/units/British-airborne.png",
+      "image": "images/units/great_britain/British-airborne.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-airborne.png",
       "sections": [
         "Infantry"
@@ -4977,7 +4977,7 @@
       "name": "Chindit Section",
       "source": "Armies of Great Britain (v3) - page 31",
       "period": "M/L",
-      "image": "images/units/British-Chindits.png",
+      "image": "images/units/great_britain/British-Chindits.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Chindits.png",
       "sections": [
         "Infantry"
@@ -5098,7 +5098,7 @@
       "name": "Commando Subsection",
       "source": "Armies of Great Britain (v3) - page 32",
       "period": "E/M/L",
-      "image": "images/units/British-commandos.png",
+      "image": "images/units/great_britain/British-commandos.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-commandos.png",
       "sections": [
         "Infantry"
@@ -5558,7 +5558,7 @@
       "name": "SAS Infantry Section",
       "source": "Armies of Great Britain (v3) - page 35",
       "period": "M/L",
-      "image": "images/units/British-SAS.png",
+      "image": "images/units/great_britain/British-SAS.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-SAS.png",
       "sections": [
         "Infantry"
@@ -5867,7 +5867,7 @@
       "name": "Company Commander",
       "source": "Armies of Great Britain (v3) - page 25",
       "period": "E/M/L",
-      "image": "images/units/British-company-commander.png",
+      "image": "images/units/great_britain/British-company-commander.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-company-commander.png",
       "sections": [
         "Company Commander"
@@ -6191,7 +6191,7 @@
       "name": "Medic",
       "source": "Armies of Great Britain (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/British-medic.png",
+      "image": "images/units/great_britain/British-medic.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-medic.png",
       "sections": [
         "Medic"
@@ -6352,7 +6352,7 @@
       "name": "Field Ambulance",
       "source": "Armies of Great Britain (v3) - page 96",
       "period": "E/M/L",
-      "image": "images/units/British-ambulance.png",
+      "image": "images/units/great_britain/British-ambulance.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-ambulance.png",
       "sections": [
         "Medic"
@@ -6568,7 +6568,7 @@
       "name": "Artillery Forward Observer",
       "source": "Armies of Great Britain (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/British-observer.png",
+      "image": "images/units/great_britain/British-observer.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-observer.png",
       "sections": [
         "Forward Observer"
@@ -6826,7 +6826,7 @@
       "name": "Air Force Forward Observer",
       "source": "Armies of Great Britain (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/British-observer.png",
+      "image": "images/units/great_britain/British-observer.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-observer.png",
       "sections": [
         "Forward Observer"
@@ -7084,7 +7084,7 @@
       "name": "Sniper Team",
       "source": "Armies of Great Britain (v3) - page 39",
       "period": "E/M/L",
-      "image": "images/units/British-sniper.png",
+      "image": "images/units/great_britain/British-sniper.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-sniper.png",
       "sections": [
         "Sniper"
@@ -7228,7 +7228,7 @@
       "name": "Boys Anti-tank Rifle Team",
       "source": "Armies of Great Britain (v3) - page 38",
       "period": "E/M",
-      "image": "images/units/British-Anti-tank-rifle.png",
+      "image": "images/units/great_britain/British-Anti-tank-rifle.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Anti-tank-rifle.png",
       "sections": [
         "Anti-tank"
@@ -7373,7 +7373,7 @@
       "name": "Blacker Bombard Anti-tank Team",
       "source": "Armies of Great Britain (v3) - page 38",
       "period": "M",
-      "image": "images/units/British-Blackard-Bomber.png",
+      "image": "images/units/great_britain/British-Blackard-Bomber.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Blackard-Bomber.png",
       "sections": [
         "Anti-tank"
@@ -7422,7 +7422,7 @@
       "name": "PIAT Anti-tank Team",
       "source": "Armies of Great Britain (v3) - page 39",
       "period": "M/L",
-      "image": "images/units/British-PIAT.png",
+      "image": "images/units/great_britain/British-PIAT.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-PIAT.png",
       "sections": [
         "Anti-tank"
@@ -7568,7 +7568,7 @@
       "name": "Light Mortar Team",
       "source": "Armies of Great Britain (v3) - page 41",
       "period": "E/M/L",
-      "image": "images/units/British-light-mortar.png",
+      "image": "images/units/great_britain/British-light-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-light-mortar.png",
       "sections": [
         "Light mortar",
@@ -7757,7 +7757,7 @@
       "name": "Jeep",
       "source": "Armies of Great Britain (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/British-jeep.png",
+      "image": "images/units/great_britain/British-jeep.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-jeep.png",
       "sections": [
         "Transports",
@@ -7804,7 +7804,7 @@
       "name": "Bren Carrier",
       "source": "Armies of Great Britain (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/British-universal-carrier.png",
+      "image": "images/units/great_britain/British-universal-carrier.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-universal-carrier.png",
       "sections": [
         "Transports",
@@ -7913,7 +7913,7 @@
       "name": "3-ton Trucks",
       "source": "Armies of Great Britain (v3) - page 89",
       "period": "E/M/L",
-      "image": "images/units/British-3-ton-truck.png",
+      "image": "images/units/great_britain/British-3-ton-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-3-ton-truck.png",
       "sections": [
         "Transports",
@@ -8001,7 +8001,7 @@
       "name": "30cwt Trucks",
       "source": "Armies of Great Britain (v3) - page 90",
       "period": "E/M/L",
-      "image": "images/units/British-30cwt-truck.png",
+      "image": "images/units/great_britain/British-30cwt-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-30cwt-truck.png",
       "sections": [
         "Transports",
@@ -8089,7 +8089,7 @@
       "name": "15cwt Trucks",
       "source": "Armies of Great Britain (v3) - page 90",
       "period": "E/M/L",
-      "image": "images/units/British-15cwt-truck.png",
+      "image": "images/units/great_britain/British-15cwt-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-15cwt-truck.png",
       "sections": [
         "Transports",
@@ -8136,7 +8136,7 @@
       "name": "Utility Cars",
       "source": "Armies of Great Britain (v3) - page 90",
       "period": "E/M/L",
-      "image": "images/units/British-car.png",
+      "image": "images/units/great_britain/British-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-car.png",
       "sections": [
         "Transports"
@@ -8181,7 +8181,7 @@
       "name": "M5 Half-track",
       "source": "Armies of Great Britain (v3) - page 91",
       "period": "M/L",
-      "image": "images/units/British-M5-Half-track.png",
+      "image": "images/units/great_britain/British-M5-Half-track.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M5-Half-track.png",
       "sections": [
         "Transports",
@@ -8280,7 +8280,7 @@
       "name": "M3 White Scout Car",
       "source": "Armies of Great Britain (v3) - page 91",
       "period": "E/M/L",
-      "image": "images/units/British-White-scout-car.png",
+      "image": "images/units/great_britain/British-White-scout-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-White-scout-car.png",
       "sections": [
         "Transports",
@@ -8488,7 +8488,7 @@
       "name": "Priest Kangaroo",
       "source": "Armies of Great Britain (v3) - page 92",
       "period": "L",
-      "image": "images/units/British-Priest-Kangaroo.png",
+      "image": "images/units/great_britain/British-Priest-Kangaroo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Priest-Kangaroo.png",
       "sections": [
         "Transports",
@@ -8578,7 +8578,7 @@
       "name": "Sherman and Ram Kangaroo",
       "source": "Armies of Great Britain (v3) - page 93",
       "period": "L",
-      "image": "images/units/British-Ram-Kangaroo.png",
+      "image": "images/units/great_britain/British-Ram-Kangaroo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Ram-Kangaroo.png",
       "sections": [
         "Transports",
@@ -8668,7 +8668,7 @@
       "name": "LVT 4 Buffalo",
       "source": "Armies of Great Britain (v3) - page 93",
       "period": "L",
-      "image": "images/units/British-LVT4-Buffalo.png",
+      "image": "images/units/great_britain/British-LVT4-Buffalo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-LVT4-Buffalo.png",
       "sections": [
         "Transports"
@@ -8853,7 +8853,7 @@
       "name": "Dorchester Command Truck (Guy Lizard)",
       "source": "Armies of Great Britain (v3) - page 95",
       "period": "E/M",
-      "image": "images/units/British-Guy-Lizard.png",
+      "image": "images/units/great_britain/British-Guy-Lizard.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Guy-Lizard.png",
       "sections": [
         "Transports",
@@ -8904,7 +8904,7 @@
       "name": "Landing Craft, Assault",
       "source": "Armies of Great Britain (v3) - page 95",
       "period": "E/M/L",
-      "image": "images/units/British-LCA.png",
+      "image": "images/units/great_britain/British-LCA.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-LCA.png",
       "sections": [
         "Transports"
@@ -9081,7 +9081,7 @@
       "name": "Landing Craft, Mechanized",
       "source": "Armies of Great Britain (v3) - page 95",
       "period": "E/M/L",
-      "image": "images/units/British-LCM.png",
+      "image": "images/units/great_britain/British-LCM.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-LCM.png",
       "sections": [
         "Transports"
@@ -9582,7 +9582,7 @@
       "name": "Flamethrower Team",
       "source": "Armies of Great Britain (v3) - page 40",
       "period": "E/M/L",
-      "image": "images/units/British-flamethrower.png",
+      "image": "images/units/great_britain/British-flamethrower.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-flamethrower.png",
       "sections": [
         "Flamethrower"
@@ -9774,7 +9774,7 @@
       "name": "Medium Machine Gun Team",
       "source": "Armies of Great Britain (v3) - page 37",
       "period": "E/M/L",
-      "image": "images/units/British-MMG.png",
+      "image": "images/units/great_britain/British-MMG.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-MMG.png",
       "sections": [
         "Heavy Weapons",
@@ -9921,7 +9921,7 @@
       "name": "Medium Mortar Team",
       "source": "Armies of Great Britain (v3) - page 41",
       "period": "E/M/L",
-      "image": "images/units/British-Medium-Mortar.png",
+      "image": "images/units/great_britain/British-Medium-Mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Medium-Mortar.png",
       "sections": [
         "Heavy Weapons",
@@ -10082,7 +10082,7 @@
       "name": "Heavy Mortar Team",
       "source": "Armies of Great Britain (v3) - page 42",
       "period": "M/L",
-      "image": "images/units/British-heavy-mortar.png",
+      "image": "images/units/great_britain/British-heavy-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-heavy-mortar.png",
       "sections": [
         "Heavy Weapons",
@@ -10173,7 +10173,7 @@
       "name": "Light Artillery",
       "source": "Armies of Great Britain (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/British-25-pdr.png",
+      "image": "images/units/great_britain/British-25-pdr.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-25-pdr.png",
       "sections": [
         "Artillery"
@@ -10296,7 +10296,7 @@
       "name": "Medium Artillery",
       "source": "Armies of Great Britain (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/British-medium-artillery.png",
+      "image": "images/units/great_britain/British-medium-artillery.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-medium-artillery.png",
       "sections": [
         "Artillery"
@@ -10477,7 +10477,7 @@
       "name": "QF 2-pdr",
       "source": "Armies of Great Britain (v3) - page 46",
       "period": "E/M/L",
-      "image": "images/units/British-2pdr.png",
+      "image": "images/units/great_britain/British-2pdr.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-2pdr.png",
       "sections": [
         "Artillery"
@@ -10555,7 +10555,7 @@
       "name": "QF 6-pdr",
       "source": "Armies of Great Britain (v3) - page 47",
       "period": "M/L",
-      "image": "images/units/British-6-pdr.png",
+      "image": "images/units/great_britain/British-6-pdr.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-6-pdr.png",
       "sections": [
         "Artillery"
@@ -10664,7 +10664,7 @@
       "name": "QF 17-pdr",
       "source": "Armies of Great Britain (v3) - page 48",
       "period": "M/L",
-      "image": "images/units/British-17pdr.png",
+      "image": "images/units/great_britain/British-17pdr.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-17pdr.png",
       "sections": [
         "Artillery"
@@ -10740,7 +10740,7 @@
       "name": "20mm Oerlikon/Polsten Cannon",
       "source": "Armies of Great Britain (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/British-polsten-gun.png",
+      "image": "images/units/great_britain/British-polsten-gun.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-polsten-gun.png",
       "sections": [
         "Artillery"
@@ -10887,7 +10887,7 @@
       "name": "40mm Bofors Gun",
       "source": "Armies of Great Britain (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/British-Bofors.png",
+      "image": "images/units/great_britain/British-Bofors.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Bofors.png",
       "sections": [
         "Artillery"
@@ -11028,7 +11028,7 @@
       "name": "Quad Tractor",
       "source": "Armies of Great Britain (v3) - page 91",
       "period": "E/M/L",
-      "image": "images/units/British-quad-tractor-and-25pdr.png",
+      "image": "images/units/great_britain/British-quad-tractor-and-25pdr.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-quad-tractor-and-25pdr.png",
       "sections": [
         "Tows"
@@ -11151,7 +11151,7 @@
       "name": "Mule Team",
       "source": "Armies of Great Britain (v3) - page 94",
       "period": "E/M/L",
-      "image": "images/units/British-mule-team.png",
+      "image": "images/units/great_britain/British-mule-team.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-mule-team.png",
       "sections": [
         "Tows"
@@ -11412,7 +11412,7 @@
       "name": "Light Tank Mk II-VI B & India Pattern",
       "source": "Armies of Great Britain (v3) - page 52",
       "period": "E/M",
-      "image": "images/units/British-Vicker-VIB.png",
+      "image": "images/units/great_britain/British-Vicker-VIB.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Vicker-VIB.png",
       "sections": [
         "Command Vehicle",
@@ -11475,7 +11475,7 @@
       "name": "Light Tank Mk VI C & India Pattern",
       "source": "Armies of Great Britain (v3) - page 52",
       "period": "E/M",
-      "image": "images/units/British-Vicker-VIc.png",
+      "image": "images/units/great_britain/British-Vicker-VIc.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Vicker-VIc.png",
       "sections": [
         "Command Vehicle",
@@ -11635,7 +11635,7 @@
       "name": "Light Tank Mk VII Tetrarch",
       "source": "Armies of Great Britain (v3) - page 53",
       "period": "M/L",
-      "image": "images/units/British-Tetrarch.png",
+      "image": "images/units/great_britain/British-Tetrarch.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Tetrarch.png",
       "sections": [
         "Command Vehicle",
@@ -11770,7 +11770,7 @@
       "name": "A9 Cruiser Tank Mk I",
       "source": "Armies of Great Britain (v3) - page 53",
       "period": "E",
-      "image": "images/units/British-A9-Mk-1.png",
+      "image": "images/units/great_britain/British-A9-Mk-1.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-A9-Mk-1.png",
       "sections": [
         "Command Vehicle",
@@ -11929,7 +11929,7 @@
       "name": "A10 Cruiser Tank Mk II, IIA & IICS",
       "source": "Armies of Great Britain (v3) - page 54",
       "period": "E",
-      "image": "images/units/British-A10-Cruiser-Mk-II.png",
+      "image": "images/units/great_britain/British-A10-Cruiser-Mk-II.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-A10-Cruiser-Mk-II.png",
       "sections": [
         "Command Vehicle",
@@ -12085,7 +12085,7 @@
       "name": "A13 Cruiser Tank Mk III",
       "source": "Armies of Great Britain (v3) - page 54",
       "period": "E",
-      "image": "images/units/British-A13-Cruiser-Mk-III.png",
+      "image": "images/units/great_britain/British-A13-Cruiser-Mk-III.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-A13-Cruiser-Mk-III.png",
       "sections": [
         "Command Vehicle",
@@ -12186,7 +12186,7 @@
       "name": "A13 Mk II, Cruiser Tank Mk IV & IVA",
       "source": "Armies of Great Britain (v3) - page 55",
       "period": "E",
-      "image": "images/units/British-A13-Cruiser-Mk-IVA.png",
+      "image": "images/units/great_britain/British-A13-Cruiser-Mk-IVA.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-A13-Cruiser-Mk-IVA.png",
       "sections": [
         "Command Vehicle",
@@ -12384,7 +12384,7 @@
       "name": "Cruiser Tank Mk VI Crusader I & ICS",
       "source": "Armies of Great Britain (v3) - page 55",
       "period": "E/M",
-      "image": "images/units/British-Crusader.png",
+      "image": "images/units/great_britain/British-Crusader.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Crusader.png",
       "sections": [
         "Command Vehicle",
@@ -12507,7 +12507,7 @@
       "name": "Cruiser Tank Mk VI Crusader II & IICS",
       "source": "Armies of Great Britain (v3) - page 56",
       "period": "E/M",
-      "image": "images/units/British-Crusader.png",
+      "image": "images/units/great_britain/British-Crusader.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Crusader.png",
       "sections": [
         "Command Vehicle",
@@ -12677,7 +12677,7 @@
       "name": "Cruiser Tank Mk VIII Cromwell",
       "source": "Armies of Great Britain (v3) - page 57",
       "period": "L",
-      "image": "images/units/British-Cromwell.png",
+      "image": "images/units/great_britain/British-Cromwell.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Cromwell.png",
       "sections": [
         "Command Vehicle",
@@ -12849,7 +12849,7 @@
       "name": "Cruiser Tank Mk VIII Centaur CS",
       "source": "Armies of Great Britain (v3) - page 57",
       "period": "L",
-      "image": "images/units/British-Centaur.png",
+      "image": "images/units/great_britain/British-Centaur.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Centaur.png",
       "sections": [
         "Command Vehicle",
@@ -12991,7 +12991,7 @@
       "name": "Cruiser Tank Comet",
       "source": "Armies of Great Britain (v3) - page 58",
       "period": "L",
-      "image": "images/units/British-comet.png",
+      "image": "images/units/great_britain/British-comet.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-comet.png",
       "sections": [
         "Command Vehicle",
@@ -13064,7 +13064,7 @@
       "name": "Infantry Tank Mk I Matilda",
       "source": "Armies of Great Britain (v3) - page 59",
       "period": "E",
-      "image": "images/units/British-Matilda-I.png",
+      "image": "images/units/great_britain/British-Matilda-I.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Matilda-I.png",
       "sections": [
         "Command Vehicle",
@@ -13117,7 +13117,7 @@
       "name": "Infantry Tank Mk II Matilda II & IIC",
       "source": "Armies of Great Britain (v3) - page 60",
       "period": "E/M/L",
-      "image": "images/units/British-matilda-II.png",
+      "image": "images/units/great_britain/British-matilda-II.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-matilda-II.png",
       "sections": [
         "Command Vehicle",
@@ -13224,7 +13224,7 @@
       "name": "Infantry Tank Mk III Valentine I-VIIA",
       "source": "Armies of Great Britain (v3) - page 60",
       "period": "E/M",
-      "image": "images/units/British-Valentine-V.png",
+      "image": "images/units/great_britain/British-Valentine-V.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Valentine-V.png",
       "sections": [
         "Command Vehicle",
@@ -13291,7 +13291,7 @@
       "name": "Infantry Tank Mk III Valentine VIII-X",
       "source": "Armies of Great Britain (v3) - page 61",
       "period": "M/L",
-      "image": "images/units/British-Valentine-IX.png",
+      "image": "images/units/great_britain/British-Valentine-IX.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Valentine-IX.png",
       "sections": [
         "Command Vehicle",
@@ -13454,7 +13454,7 @@
       "name": "Infantry Tank Mk IV Churchill I-VI & IICS",
       "source": "Armies of Great Britain (v3) - page 61",
       "period": "E/M/L",
-      "image": "images/units/British-Churchill-III.png",
+      "image": "images/units/great_britain/British-Churchill-III.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Churchill-III.png",
       "sections": [
         "Command Vehicle",
@@ -13765,7 +13765,7 @@
       "name": "Infantry Tank Mk IV Churchill VII-VIII",
       "source": "Armies of Great Britain (v3) - page 62",
       "period": "L",
-      "image": "images/units/British-Churchill-VII.png",
+      "image": "images/units/great_britain/British-Churchill-VII.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Churchill-VII.png",
       "sections": [
         "Command Vehicle",
@@ -13964,7 +13964,7 @@
       "name": "Infantry Tank Mk IV Churchill Crocodile",
       "source": "Armies of Great Britain (v3) - page 63",
       "period": "L",
-      "image": "images/units/British-crocodile.png",
+      "image": "images/units/great_britain/British-crocodile.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-crocodile.png",
       "sections": [
         "Command Vehicle",
@@ -14038,7 +14038,7 @@
       "name": "M3 Stuart I & Stuart II",
       "source": "Armies of Great Britain (v3) - page 64",
       "period": "E/M",
-      "image": "images/units/British-M3-Stuart.png",
+      "image": "images/units/great_britain/British-M3-Stuart.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M3-Stuart.png",
       "sections": [
         "Command Vehicle",
@@ -14174,7 +14174,7 @@
       "name": "M3A1 Stuart III & Stuart IV",
       "source": "Armies of Great Britain (v3) - page 65",
       "period": "M/L",
-      "image": "images/units/British-M3-Stuart.png",
+      "image": "images/units/great_britain/British-M3-Stuart.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M3-Stuart.png",
       "sections": [
         "Command Vehicle",
@@ -14407,7 +14407,7 @@
       "name": "M5A1 Stuart VI",
       "source": "Armies of Great Britain (v3) - page 65",
       "period": "M/L",
-      "image": "images/units/British-M5A1-Stuart.png",
+      "image": "images/units/great_britain/British-M5A1-Stuart.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M5A1-Stuart.png",
       "sections": [
         "Command Vehicle",
@@ -14524,7 +14524,7 @@
       "name": "M3 Grant I & Lee I",
       "source": "Armies of Great Britain (v3) - page 66",
       "period": "E/M",
-      "image": "images/units/British-M3-Grant.png",
+      "image": "images/units/great_britain/British-M3-Grant.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M3-Grant.png",
       "sections": [
         "Command Vehicle",
@@ -14980,7 +14980,7 @@
       "name": "Sherman II, III & V (75mm)",
       "source": "Armies of Great Britain (v3) - page 69",
       "period": "M/L",
-      "image": "images/units/British-Sherman-III.png",
+      "image": "images/units/great_britain/British-Sherman-III.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Sherman-III.png",
       "sections": [
         "Command Vehicle",
@@ -15330,7 +15330,7 @@
       "name": "Sherman IC, IC Hybrid & VC Firefly",
       "source": "Armies of Great Britain (v3) - page 70",
       "period": "L",
-      "image": "images/units/British-Sherman-Vc.png",
+      "image": "images/units/great_britain/British-Sherman-Vc.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Sherman-Vc.png",
       "sections": [
         "Command Vehicle",
@@ -15436,7 +15436,7 @@
       "name": "DD Sherman",
       "source": "Armies of Great Britain (v3) - page 71",
       "period": "L",
-      "image": "images/units/British-Sherman-DD.png",
+      "image": "images/units/great_britain/British-Sherman-DD.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Sherman-DD.png",
       "sections": [
         "Command Vehicle",
@@ -15618,7 +15618,7 @@
       "name": "M24 Chaffee Light Tank",
       "source": "Armies of Great Britain (v3) - page 72",
       "period": "L",
-      "image": "images/units/British-M24-Chaffee.png",
+      "image": "images/units/great_britain/British-M24-Chaffee.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M24-Chaffee.png",
       "sections": [
         "Command Vehicle",
@@ -15743,7 +15743,7 @@
       "name": "2-pdr Portee",
       "source": "Armies of Great Britain (v3) - page 72",
       "period": "E/M",
-      "image": "images/units/British-2pdr-portee.png",
+      "image": "images/units/great_britain/British-2pdr-portee.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-2pdr-portee.png",
       "sections": [
         "Command Vehicle",
@@ -15953,7 +15953,7 @@
       "name": "Archer SP 17-pdr",
       "source": "Armies of Great Britain (v3) - page 74",
       "period": "L",
-      "image": "images/units/British-Archer-SP-17pdr.png",
+      "image": "images/units/great_britain/British-Archer-SP-17pdr.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Archer-SP-17pdr.png",
       "sections": [
         "Command Vehicle",
@@ -16178,7 +16178,7 @@
       "name": "M10 Wolverine",
       "source": "Armies of Great Britain (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/British-M10-Wolverine.png",
+      "image": "images/units/great_britain/British-M10-Wolverine.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M10-Wolverine.png",
       "sections": [
         "Command Vehicle",
@@ -16257,7 +16257,7 @@
       "name": "M10 17-pdr Achilles",
       "source": "Armies of Great Britain (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/British-Achillies-17pdr.png",
+      "image": "images/units/great_britain/British-Achillies-17pdr.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Achillies-17pdr.png",
       "sections": [
         "Command Vehicle",
@@ -16337,7 +16337,7 @@
       "name": "Machine Gun Carrier",
       "source": "Armies of Great Britain (v3) - page 76",
       "period": "E/M/L",
-      "image": "images/units/British-MMG-carrier.png",
+      "image": "images/units/great_britain/British-MMG-carrier.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-MMG-carrier.png",
       "sections": [
         "Command Vehicle",
@@ -16395,7 +16395,7 @@
       "name": "3-inch Mortar Carrier",
       "source": "Armies of Great Britain (v3) - page 76",
       "period": "E/M/L",
-      "image": "images/units/British-mortar-carrier.png",
+      "image": "images/units/great_britain/British-mortar-carrier.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-mortar-carrier.png",
       "sections": [
         "Command Vehicle",
@@ -16455,7 +16455,7 @@
       "name": "Bishop SP 25-pdr",
       "source": "Armies of Great Britain (v3) - page 76",
       "period": "M",
-      "image": "images/units/British-Bishop.png",
+      "image": "images/units/great_britain/British-Bishop.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Bishop.png",
       "sections": [
         "Command Vehicle",
@@ -16509,7 +16509,7 @@
       "name": "M7 Priest",
       "source": "Armies of Great Britain (v3) - page 77",
       "period": "M/L",
-      "image": "images/units/British-M7-Priest.png",
+      "image": "images/units/great_britain/British-M7-Priest.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M7-Priest.png",
       "sections": [
         "Command Vehicle",
@@ -16666,7 +16666,7 @@
       "name": "Bofors AA Truck",
       "source": "Armies of Great Britain (v3) - page 78",
       "period": "M/L",
-      "image": "images/units/British-Bofors-AA-truck.png",
+      "image": "images/units/great_britain/British-Bofors-AA-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Bofors-AA-truck.png",
       "sections": [
         "Command Vehicle",
@@ -16869,7 +16869,7 @@
       "name": "Crusader III AA Mk I & Mk II",
       "source": "Armies of Great Britain (v3) - page 78",
       "period": "L",
-      "image": "images/units/British-Crusader-AA.png",
+      "image": "images/units/great_britain/British-Crusader-AA.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Crusader-AA.png",
       "sections": [
         "Command Vehicle",
@@ -17025,7 +17025,7 @@
       "name": "Armadillo",
       "source": "Armies of Great Britain (v3) - page 79",
       "period": "E/M",
-      "image": "images/units/British-Armadillo.png",
+      "image": "images/units/great_britain/British-Armadillo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Armadillo.png",
       "sections": [
         "Command Vehicle",
@@ -17312,7 +17312,7 @@
       "name": "Lanchester 6x4 Armoured Car",
       "source": "Armies of Great Britain (v3) - page 80",
       "period": "E",
-      "image": "images/units/British-Lanchester-6x4.png",
+      "image": "images/units/great_britain/British-Lanchester-6x4.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Lanchester-6x4.png",
       "sections": [
         "Command Vehicle",
@@ -17495,7 +17495,7 @@
       "name": "Humber Armoured Car Mk II & IV and Fox",
       "source": "Armies of Great Britain (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/British-Humber-armoured-car.png",
+      "image": "images/units/great_britain/British-Humber-armoured-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Humber-armoured-car.png",
       "sections": [
         "Command Vehicle",
@@ -17637,7 +17637,7 @@
       "name": "Daimler Armoured Car",
       "source": "Armies of Great Britain (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/British-Daimler.png",
+      "image": "images/units/great_britain/British-Daimler.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Daimler.png",
       "sections": [
         "Command Vehicle",
@@ -17840,7 +17840,7 @@
       "name": "Morris Light Reconnaissance Car",
       "source": "Armies of Great Britain (v3) - page 82",
       "period": "E/M/L",
-      "image": "images/units/British-Morris-Light-Recce.png",
+      "image": "images/units/great_britain/British-Morris-Light-Recce.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Morris-Light-Recce.png",
       "sections": [
         "Command Vehicle",
@@ -17907,7 +17907,7 @@
       "name": "Morris CS9 Armoured Car",
       "source": "Armies of Great Britain (v3) - page 82",
       "period": "E/M",
-      "image": "images/units/British-Morris-C9-armoured-car.png",
+      "image": "images/units/great_britain/British-Morris-C9-armoured-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Morris-C9-armoured-car.png",
       "sections": [
         "Command Vehicle",
@@ -18003,7 +18003,7 @@
       "name": "Daimler Dingo",
       "source": "Armies of Great Britain (v3) - page 83",
       "period": "E/M/L",
-      "image": "images/units/British-Daimler-Dingo.png",
+      "image": "images/units/great_britain/British-Daimler-Dingo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Daimler-Dingo.png",
       "sections": [
         "Command Vehicle",
@@ -18061,7 +18061,7 @@
       "name": "Humber Scout Car",
       "source": "Armies of Great Britain (v3) - page 83",
       "period": "M/L",
-      "image": "images/units/British-Humber-scout-car.png",
+      "image": "images/units/great_britain/British-Humber-scout-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Humber-scout-car.png",
       "sections": [
         "Command Vehicle",
@@ -18119,7 +18119,7 @@
       "name": "AEC Heavy Armoured Car Mk I-III",
       "source": "Armies of Great Britain (v3) - page 83",
       "period": "M/L",
-      "image": "images/units/British-AEC-Mk-III.png",
+      "image": "images/units/great_britain/British-AEC-Mk-III.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-AEC-Mk-III.png",
       "sections": [
         "Command Vehicle",
@@ -18391,7 +18391,7 @@
       "name": "M8 Greyhound",
       "source": "Armies of Great Britain (v3) - page 84",
       "period": "M/L",
-      "image": "images/units/British-M8-armoured-car.png",
+      "image": "images/units/great_britain/British-M8-armoured-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-M8-armoured-car.png",
       "sections": [
         "Command Vehicle",
@@ -18480,7 +18480,7 @@
       "name": "LRDG Armed Truck",
       "source": "Armies of Great Britain (v3) - page 85",
       "period": "E/M",
-      "image": "images/units/British-LRDG-truck.png",
+      "image": "images/units/great_britain/British-LRDG-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-LRDG-truck.png",
       "sections": [
         "Command Vehicle",
@@ -18717,7 +18717,7 @@
       "name": "SAS Jeep - North Africa",
       "source": "Armies of Great Britain (v3) - page 85",
       "period": "M",
-      "image": "images/units/British-SAS-Jeep-Africa.png",
+      "image": "images/units/great_britain/British-SAS-Jeep-Africa.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-SAS-Jeep-Africa.png",
       "sections": [
         "Command Vehicle",
@@ -18883,7 +18883,7 @@
       "name": "SAS Jeep - Europe",
       "source": "Armies of Great Britain (v3) - page 86",
       "period": "M/L",
-      "image": "images/units/British-SAS-Jeep-Europe.png",
+      "image": "images/units/great_britain/British-SAS-Jeep-Europe.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-SAS-Jeep-Europe.png",
       "sections": [
         "Command Vehicle",
@@ -19012,7 +19012,7 @@
       "name": "British Airborne Recce Jeep",
       "source": "Armies of Great Britain (v3) - page 86",
       "period": "L",
-      "image": "images/units/British-Airborne-jeep.png",
+      "image": "images/units/great_britain/British-Airborne-jeep.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Airborne-jeep.png",
       "sections": [
         "Command Vehicle",
@@ -19083,7 +19083,7 @@
       "name": "Recce Carrier",
       "source": "Armies of Great Britain (v3) - page 87",
       "period": "E/M/L",
-      "image": "images/units/British-universal-carrier.png",
+      "image": "images/units/great_britain/British-universal-carrier.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-universal-carrier.png",
       "sections": [
         "Command Vehicle",
@@ -19191,7 +19191,7 @@
       "name": "Wasp Flamethrower Carrier",
       "source": "Armies of Great Britain (v3) - page 87",
       "period": "L",
-      "image": "images/units/British-Wasp.png",
+      "image": "images/units/great_britain/British-Wasp.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-Wasp.png",
       "sections": [
         "Command Vehicle",
@@ -19290,7 +19290,7 @@
       "name": "Jeep (no transport)",
       "source": "Armies of Great Britain (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/British-jeep-no-tranpsport.png",
+      "image": "images/units/great_britain/British-jeep-no-tranpsport.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-jeep-no-tranpsport.png",
       "sections": [
         "Command Vehicle",

@@ -5963,7 +5963,7 @@
       "name": "Civilian Car",
       "source": "Version 3 Rulebook - page 280",
       "period": "E/M/L",
-      "image": "images/units/Civilian-car.png",
+      "image": "images/units/italy/Civilian-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Civilian-car.png",
       "sections": [
         "Transports"
@@ -7584,7 +7584,7 @@
       "name": "Mule Team",
       "source": "Armies of Italy (v3) - page 69",
       "period": "E/M",
-      "image": "images/units/British-mule-team.png",
+      "image": "images/units/italy/British-mule-team.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-mule-team.png",
       "sections": [
         "Tows"

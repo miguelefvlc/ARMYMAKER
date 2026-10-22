@@ -593,7 +593,9 @@ function ExportModal({
         totalOrderDice,
         platoons,
         onDirectPDFDownload,
-        isGeneratingPdf
+        isGeneratingPdf,
+        exportOptions,
+        setExportOptions
       }) {
         if (!isOpen) return null;
         const totalUnits = platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0);
@@ -660,6 +662,54 @@ function ExportModal({
                   </div>
                 </div>
 
+                {/* PDF CONTENT SECTIONS / EXPORT OPTIONS */}
+                <div className="bg-zinc-950/70 border border-zinc-800 rounded-xl p-3 sm:p-3.5 space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <label className="text-[10.5px] font-mono font-bold uppercase tracking-wider text-zinc-400">
+                      Opciones de Roster / PDF Sections
+                    </label>
+                    <span className="text-[10px] font-mono text-zinc-500 hidden sm:inline">
+                      Desmarca para excluir del PDF
+                    </span>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <label className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg border text-xs font-mono cursor-pointer transition-all select-none ${
+                      exportOptions?.includeUnitRules !== false
+                        ? 'bg-amber-400/10 border-amber-400/50 text-amber-300 font-semibold shadow-xs'
+                        : 'bg-zinc-900/60 border-zinc-750 text-zinc-500 hover:text-zinc-300 hover:border-zinc-650'
+                    }`}>
+                      <input
+                        type="checkbox"
+                        checked={exportOptions?.includeUnitRules !== false}
+                        onChange={(e) =>
+                          setExportOptions &&
+                          setExportOptions((prev) => ({ ...prev, includeUnitRules: e.target.checked }))
+                        }
+                        className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-400 accent-amber-400 focus:ring-0 cursor-pointer shrink-0"
+                      />
+                      <span>Unit Special Rules</span>
+                    </label>
+
+                    <label className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg border text-xs font-mono cursor-pointer transition-all select-none ${
+                      exportOptions?.includeArmyRules !== false
+                        ? 'bg-amber-400/10 border-amber-400/50 text-amber-300 font-semibold shadow-xs'
+                        : 'bg-zinc-900/60 border-zinc-750 text-zinc-500 hover:text-zinc-300 hover:border-zinc-650'
+                    }`}>
+                      <input
+                        type="checkbox"
+                        checked={exportOptions?.includeArmyRules !== false}
+                        onChange={(e) =>
+                          setExportOptions &&
+                          setExportOptions((prev) => ({ ...prev, includeArmyRules: e.target.checked }))
+                        }
+                        className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-400 accent-amber-400 focus:ring-0 cursor-pointer shrink-0"
+                      />
+                      <span>Army Special Rules</span>
+                    </label>
+                  </div>
+                </div>
+
                 <button
                   type="button"
                   onClick={onDirectPDFDownload}
@@ -687,6 +737,7 @@ function ExportModal({
                         totalOrderDice={totalOrderDice}
                         platoons={platoons}
                         isPreview={true}
+                        exportOptions={exportOptions}
                       />
                     </div>
                   </div>

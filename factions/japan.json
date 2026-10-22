@@ -2921,7 +2921,7 @@
       "name": "Platoon Commander",
       "source": "Armies of Imperial Japan (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/Japan-platoon-commander.png",
+      "image": "images/units/japan/Japan-platoon-commander.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-platoon-commander.png",
       "sections": [
         "Platoon Commander"
@@ -3230,7 +3230,7 @@
       "name": "IJA Infantry Squad (Early/Mid-war)",
       "source": "Armies of Imperial Japan (v3) - page 29",
       "period": "E/M",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-infantry.png",
       "sections": [
         "Infantry"
@@ -3414,7 +3414,7 @@
       "name": "IJA Infantry Squad (Late-war)",
       "source": "Armies of Imperial Japan (v3) - page 29",
       "period": "L",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-infantry.png",
       "sections": [
         "Infantry"
@@ -3620,7 +3620,7 @@
       "name": "IJA Grenadier Squad",
       "source": "Armies of Imperial Japan (v3) - page 30",
       "period": "E/M",
-      "image": "images/units/Japan-grenadiers.png",
+      "image": "images/units/japan/Japan-grenadiers.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-grenadiers.png",
       "sections": [
         "Infantry"
@@ -3807,7 +3807,7 @@
       "name": "SNLF Squad (Early/Mid-war)",
       "source": "Armies of Imperial Japan (v3) - page 31",
       "period": "E/M",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-infantry.png",
       "sections": [
         "Infantry"
@@ -3980,7 +3980,7 @@
       "name": "SNLF Squad (Late-war)",
       "source": "Armies of Imperial Japan (v3) - page 31",
       "period": "L",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-infantry.png",
       "sections": [
         "Infantry"
@@ -4175,7 +4175,7 @@
       "name": "SNLF Grenadier Squad",
       "source": "Armies of Imperial Japan (v3) - page 31",
       "period": "E/M",
-      "image": "images/units/Japan-grenadiers.png",
+      "image": "images/units/japan/Japan-grenadiers.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-grenadiers.png",
       "sections": [
         "Infantry"
@@ -4351,7 +4351,7 @@
       "name": "IJA Paratrooper Squad",
       "source": "Armies of Imperial Japan (v3) - page 32",
       "period": "M/L",
-      "image": "images/units/Japan-paratrooper-IJA.png",
+      "image": "images/units/japan/Japan-paratrooper-IJA.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-paratrooper-IJA.png",
       "sections": [
         "Infantry"
@@ -4826,7 +4826,7 @@
       "name": "Japanese/Manchukuoan Cavalry Squad",
       "source": "Armies of Imperial Japan (v3) - page 33",
       "period": "E/M/L",
-      "image": "images/units/Japan-cavalry.png",
+      "image": "images/units/japan/Japan-cavalry.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-cavalry.png",
       "sections": [
         "Infantry"
@@ -5037,7 +5037,7 @@
       "name": "Bamboo Spear Fighters - Boeitai Squad",
       "source": "Armies of Imperial Japan (v3) - page 35",
       "period": "L",
-      "image": "images/units/Japan-spear-fighters.png",
+      "image": "images/units/japan/Japan-spear-fighters.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-spear-fighters.png",
       "sections": [
         "Infantry"
@@ -5473,7 +5473,7 @@
       "name": "Company Commander",
       "source": "Armies of Imperial Japan (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/Japan-company-commander.png",
+      "image": "images/units/japan/Japan-company-commander.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-company-commander.png",
       "sections": [
         "Company Commander"
@@ -5782,7 +5782,7 @@
       "name": "Kempeitai Officer",
       "source": "Armies of Imperial Japan (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/Japan-platoon-commander.png",
+      "image": "images/units/japan/Japan-platoon-commander.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-platoon-commander.png",
       "sections": [
         "Political Officer"
@@ -6126,7 +6126,7 @@
       "name": "Artillery Forward Observer",
       "source": "Armies of Imperial Japan (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/Japan-observer.png",
+      "image": "images/units/japan/Japan-observer.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-observer.png",
       "sections": [
         "Forward Observer"
@@ -6344,7 +6344,7 @@
       "name": "Air Force Forward Observer",
       "source": "Armies of Imperial Japan (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/Japan-observer.png",
+      "image": "images/units/japan/Japan-observer.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-observer.png",
       "sections": [
         "Forward Observer"
@@ -6564,7 +6564,7 @@
       "name": "Sniper Team",
       "source": "Armies of Imperial Japan (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/Japan-Sniper-team.png",
+      "image": "images/units/japan/Japan-Sniper-team.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Sniper-team.png",
       "sections": [
         "Sniper"
@@ -6675,7 +6675,7 @@
       "name": "Lone Sniper",
       "source": "Armies of Imperial Japan (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/Japan-lone-sniper.png",
+      "image": "images/units/japan/Japan-lone-sniper.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-lone-sniper.png",
       "sections": [
         "Sniper"
@@ -6821,7 +6821,7 @@
       "name": "Anti-tank Rifle Team",
       "source": "Armies of Imperial Japan (v3) - page 40",
       "period": "E/M/L",
-      "image": "images/units/Japan-AT-rifle.png",
+      "image": "images/units/japan/Japan-AT-rifle.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-AT-rifle.png",
       "sections": [
         "Anti-tank"
@@ -6965,7 +6965,7 @@
       "name": "Suicide Anti-tank Team - Nikuhaku",
       "source": "Armies of Imperial Japan (v3) - page 40",
       "period": "M/L",
-      "image": "images/units/Japan-suicide-AT.png",
+      "image": "images/units/japan/Japan-suicide-AT.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-suicide-AT.png",
       "sections": [
         "Anti-tank"
@@ -7015,7 +7015,7 @@
       "name": "Suicide Anti-infantry Team - Kirikomi Tai",
       "source": "Armies of Imperial Japan (v3) - page 41",
       "period": "M/L",
-      "image": "images/units/Japan-suicide-infantry.png",
+      "image": "images/units/japan/Japan-suicide-infantry.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-suicide-infantry.png",
       "sections": [
         "Anti-tank"
@@ -7230,7 +7230,7 @@
       "name": "Light Mortar Team",
       "source": "Armies of Imperial Japan (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/Japan-light-mortar.png",
+      "image": "images/units/japan/Japan-light-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-light-mortar.png",
       "sections": [
         "Light mortar",
@@ -7377,7 +7377,7 @@
       "name": "General-purpose Truck",
       "source": "Armies of Imperial Japan (v3) - page 67",
       "period": "E/M/L",
-      "image": "images/units/Japan-truck.png",
+      "image": "images/units/japan/Japan-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-truck.png",
       "sections": [
         "Transports",
@@ -7444,7 +7444,7 @@
       "name": "Light Truck",
       "source": "Armies of Imperial Japan (v3) - page 70",
       "period": "E/M/L",
-      "image": "images/units/Japan-truck.png",
+      "image": "images/units/japan/Japan-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-truck.png",
       "sections": [
         "Transports",
@@ -7775,7 +7775,7 @@
       "name": "Type 95 Kurogane",
       "source": "Armies of Imperial Japan (v3) - page 71",
       "period": "E/M/L",
-      "image": "images/units/Japan-Kurogane.png",
+      "image": "images/units/japan/Japan-Kurogane.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Kurogane.png",
       "sections": [
         "Transports"
@@ -8569,7 +8569,7 @@
       "name": "Soko Sagyo SS-KI Armoured Work Vehicle",
       "source": "Armies of Imperial Japan (v3) - page 61",
       "period": "E/M/L",
-      "image": "images/units/Japan-SS-Ki.png",
+      "image": "images/units/japan/Japan-SS-Ki.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-SS-Ki.png",
       "sections": [
         "Engineers",
@@ -8679,7 +8679,7 @@
       "name": "Flamethrower Team",
       "source": "Armies of Imperial Japan (v3) - page 42",
       "period": "E/M/L",
-      "image": "images/units/Japan-flamethrower.png",
+      "image": "images/units/japan/Japan-flamethrower.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-flamethrower.png",
       "sections": [
         "Flamethrower"
@@ -8867,7 +8867,7 @@
       "name": "Medium Machine Gun Team",
       "source": "Armies of Imperial Japan (v3) - page 39",
       "period": "E/M/L",
-      "image": "images/units/Japan-MMG.png",
+      "image": "images/units/japan/Japan-MMG.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-MMG.png",
       "sections": [
         "Heavy Weapons",
@@ -8999,7 +8999,7 @@
       "name": "Medium Mortar Team",
       "source": "Armies of Imperial Japan (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/Japan-medium-mortar.png",
+      "image": "images/units/japan/Japan-medium-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-medium-mortar.png",
       "sections": [
         "Heavy Weapons",
@@ -9145,7 +9145,7 @@
       "name": "Heavy Mortar Team",
       "source": "Armies of Imperial Japan (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/Japan-Heavy-mortar.png",
+      "image": "images/units/japan/Japan-Heavy-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Heavy-mortar.png",
       "sections": [
         "Heavy Weapons",
@@ -9229,7 +9229,7 @@
       "name": "Type 92 70mm Battalion Gun (Early-war)",
       "source": "Armies of Imperial Japan (v3) - page 45",
       "period": "E",
-      "image": "images/units/Japan-Type-92-70mm.png",
+      "image": "images/units/japan/Japan-Type-92-70mm.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Type-92-70mm.png",
       "sections": [
         "Artillery"
@@ -9351,7 +9351,7 @@
       "name": "Type 92 70mm Battalion Gun (Mid/Late-war)",
       "source": "Armies of Imperial Japan (v3) - page 45",
       "period": "M/L",
-      "image": "images/units/Japan-Type-92-70mm.png",
+      "image": "images/units/japan/Japan-Type-92-70mm.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Type-92-70mm.png",
       "sections": [
         "Artillery"
@@ -9949,7 +9949,7 @@
       "name": "Medium Artillery",
       "source": "Armies of Imperial Japan (v3) - page 46",
       "period": "E/M/L",
-      "image": "images/units/Japan-105mm-howitzer.png",
+      "image": "images/units/japan/Japan-105mm-howitzer.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-105mm-howitzer.png",
       "sections": [
         "Artillery"
@@ -10275,7 +10275,7 @@
       "name": "Type 98 20mm AA Gun",
       "source": "Armies of Imperial Japan (v3) - page 47",
       "period": "E/M/L",
-      "image": "images/units/Japan-Type-98-20mm.png",
+      "image": "images/units/japan/Japan-Type-98-20mm.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Type-98-20mm.png",
       "sections": [
         "Artillery"
@@ -10916,7 +10916,7 @@
       "name": "Type 1 47mm Anti-tank Gun",
       "source": "Armies of Imperial Japan (v3) - page 49",
       "period": "M/L",
-      "image": "images/units/Japan-47mm-AT.png",
+      "image": "images/units/japan/Japan-47mm-AT.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-47mm-AT.png",
       "sections": [
         "Artillery"
@@ -11085,7 +11085,7 @@
       "name": "Mule Team",
       "source": "Armies of Imperial Japan (v3) - page 73",
       "period": "E/M/L",
-      "image": "images/units/British-mule-team.png",
+      "image": "images/units/japan/British-mule-team.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/British-mule-team.png",
       "sections": [
         "Tows"
@@ -11278,7 +11278,7 @@
       "name": "Type 95 Ha-Go Light Tank",
       "source": "Armies of Imperial Japan (v3) - page 51",
       "period": "E/M/L",
-      "image": "images/units/Japan-Ha-Go.png",
+      "image": "images/units/japan/Japan-Ha-Go.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Ha-Go.png",
       "sections": [
         "Command Vehicle",
@@ -11485,7 +11485,7 @@
       "name": "Type 4 Ke-Nu Light Tank",
       "source": "Armies of Imperial Japan (v3) - page 52",
       "period": "L",
-      "image": "images/units/Japan-Ke-Nu.png",
+      "image": "images/units/japan/Japan-Ke-Nu.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Ke-Nu.png",
       "sections": [
         "Command Vehicle",
@@ -11634,7 +11634,7 @@
       "name": "Type 97 Chi-Ha Medium Tank",
       "source": "Armies of Imperial Japan (v3) - page 53",
       "period": "E/M/L",
-      "image": "images/units/Japan-Chi-Ha.png",
+      "image": "images/units/japan/Japan-Chi-Ha.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Chi-Ha.png",
       "sections": [
         "Command Vehicle",
@@ -11709,7 +11709,7 @@
       "name": "Type 97 Chi-Ha - Dug In",
       "source": "Armies of Imperial Japan (v3) - page 54",
       "period": "M/L",
-      "image": "images/units/Japan-dug-in-Chi-Ha.png",
+      "image": "images/units/japan/Japan-dug-in-Chi-Ha.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-dug-in-Chi-Ha.png",
       "sections": [
         "Command Vehicle",
@@ -12062,7 +12062,7 @@
       "name": "Type 3 Chi-Nu Medium Tank",
       "source": "Armies of Imperial Japan (v3) - page 58",
       "period": "L",
-      "image": "images/units/Japan-Chi-Nu.png",
+      "image": "images/units/japan/Japan-Chi-Nu.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Chi-Nu.png",
       "sections": [
         "Command Vehicle",
@@ -12123,7 +12123,7 @@
       "name": "Type 2 Ka-Mi Light Amphibious Tank",
       "source": "Armies of Imperial Japan (v3) - page 58",
       "period": "M/L",
-      "image": "images/units/Japan-Ka-mi.png",
+      "image": "images/units/japan/Japan-Ka-mi.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Ka-mi.png",
       "sections": [
         "Command Vehicle",
@@ -12326,7 +12326,7 @@
       "name": "Type 1 Ho-Ni Tank Destroyer",
       "source": "Armies of Imperial Japan (v3) - page 59",
       "period": "L",
-      "image": "images/units/Japan-Ho-Ni.png",
+      "image": "images/units/japan/Japan-Ho-Ni.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Ho-Ni.png",
       "sections": [
         "Command Vehicle",
@@ -12422,7 +12422,7 @@
       "name": "Type 3 Ho-Ni III Tank Destroyer",
       "source": "Armies of Imperial Japan (v3) - page 59",
       "period": "L",
-      "image": "images/units/Japan-Ho-Ni-III.png",
+      "image": "images/units/japan/Japan-Ho-Ni-III.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Ho-Ni-III.png",
       "sections": [
         "Command Vehicle",
@@ -12474,7 +12474,7 @@
       "name": "Type 4 Ho-Ro Assault Gun",
       "source": "Armies of Imperial Japan (v3) - page 60",
       "period": "L",
-      "image": "images/units/Japan-Ho-Ro.png",
+      "image": "images/units/japan/Japan-Ho-Ro.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Ho-Ro.png",
       "sections": [
         "Command Vehicle",
@@ -12661,7 +12661,7 @@
       "name": "Type 91 So-Mo",
       "source": "Armies of Imperial Japan (v3) - page 62",
       "period": "E/M/L",
-      "image": "images/units/Japan-So-Mo.png",
+      "image": "images/units/japan/Japan-So-Mo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-So-Mo.png",
       "sections": [
         "Command Vehicle",
@@ -12719,7 +12719,7 @@
       "name": "Type 94 Tankette",
       "source": "Armies of Imperial Japan (v3) - page 63",
       "period": "E/M/L",
-      "image": "images/units/Japan-Type-94-tankette.png",
+      "image": "images/units/japan/Japan-Type-94-tankette.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Type-94-tankette.png",
       "sections": [
         "Command Vehicle",
@@ -13096,7 +13096,7 @@
       "name": "Type 98 AA Truck",
       "source": "Armies of Imperial Japan (v3) - page 67",
       "period": "E/M/L",
-      "image": "images/units/Japan-AA-truck.png",
+      "image": "images/units/japan/Japan-AA-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-AA-truck.png",
       "sections": [
         "Command Vehicle",
@@ -13155,7 +13155,7 @@
       "name": "Type 95 Kurogane (no transport)",
       "source": "Armies of Imperial Japan (v3) - page 71",
       "period": "E/M/L",
-      "image": "images/units/Japan-Kurogane.png",
+      "image": "images/units/japan/Japan-Kurogane.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/Japan-Kurogane.png",
       "sections": [
         "Command Vehicle",

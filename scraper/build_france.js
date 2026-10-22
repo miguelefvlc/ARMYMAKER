@@ -1459,7 +1459,7 @@ const units = {
     cardTitle: "Renault FT",
     page: "Armies of France (v3) page 4",
     period: "E/M/L",
-    image: "images/units/WGB-FI-111-Renault-FT-17-Chinese-a.jpg",
+    image: "images/units/france/WGB-FI-111-Renault-FT-17-Chinese-a.jpg",
     sections: ["Vehicle", "Command Vehicle"],
     profile: {
       Weapons: "1 turret-mounted medium machine gun",
@@ -1595,7 +1595,7 @@ const units = {
     cardTitle: "FCM36, AMC35, Somua S35 and Hotchkiss Light Tanks",
     page: "Armies of France (v3) page 4",
     period: "E/M/L",
-    image: "images/units/WGB-FI-108-Somua-S35-a.jpg",
+    image: "images/units/france/WGB-FI-108-Somua-S35-a.jpg",
     sections: ["Vehicle", "Command Vehicle"],
     profile: {
       Weapons: "1 turret-mounted low-velocity light anti-tank gun with coaxial MMG (H35, FCM36)",
@@ -1672,7 +1672,7 @@ const units = {
     cardTitle: "Char B1 and B1 Bis Heavy Breakthrough Tank",
     page: "Armies of France (v3) page 4",
     period: "E/M/L",
-    image: "images/units/402015501-Char-B1-platoon5.jpg",
+    image: "images/units/france/402015501-Char-B1-platoon5.jpg",
     sections: ["Vehicle", "Command Vehicle"],
     profile: {
       Weapons: "1 turret light AT gun with coaxial MMG, 1 hull light howitzer, 1 hull MMG",
@@ -1825,7 +1825,7 @@ const units = {
     cardTitle: "Armoured Cars (Laffly S15TOE, AMR33/35, AMD Laffly 80AM/50AM, AMD Panhard 178)",
     page: "Armies of France (v3) page 5",
     period: "E/M/L",
-    image: "images/units/402415501_AMDPanhard178armouredcar02.jpg",
+    image: "images/units/france/402415501_AMDPanhard178armouredcar02.jpg",
     sections: ["Vehicle", "Command Vehicle"],
     profile: {
       Weapons: "1 turret-mounted medium machine gun (Laffly S15TOE)",

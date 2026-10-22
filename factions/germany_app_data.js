@@ -5024,7 +5024,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Platoon Commander",
       "page": "Armies of Germany (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/German-Commander.png",
+      "image": "images/units/germany/German-Commander.png",
       "sections": [
         "Platoon Commander"
       ],
@@ -5339,7 +5339,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Heer Infantry Squad",
       "page": "Armies of Germany (v3) - page 28",
       "period": "E/M",
-      "image": "images/units/402612003_GermanHeerWinterStarterArmy03_500x500.jpg",
+      "image": "images/units/germany/402612003_GermanHeerWinterStarterArmy03_500x500.jpg",
       "sections": [
         "Infantry"
       ],
@@ -5480,7 +5480,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Heer Grenadier Squad",
       "page": "Armies of Germany (v3) - page 29",
       "period": "M/L",
-      "image": "images/units/402612002_GermanGrenadierStarterArmy_02.jpg",
+      "image": "images/units/germany/402612002_GermanGrenadierStarterArmy_02.jpg",
       "sections": [
         "Infantry"
       ],
@@ -5684,7 +5684,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Heer Veteran Grenadier Squad",
       "page": "Armies of Germany (v3) - page 29",
       "period": "L",
-      "image": "images/units/WGB-WM-06-Veteran-Grenadier-Squad-b.jpg",
+      "image": "images/units/germany/WGB-WM-06-Veteran-Grenadier-Squad-b.jpg",
       "sections": [
         "Infantry"
       ],
@@ -5892,7 +5892,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzergrenadier Squad",
       "page": "Armies of Germany (v3) - page 31",
       "period": "M/L",
-      "image": "images/units/WGB-WM-512-LW-Panzergrenadiers-b.jpg",
+      "image": "images/units/germany/WGB-WM-512-LW-Panzergrenadiers-b.jpg",
       "sections": [
         "Infantry"
       ],
@@ -6141,7 +6141,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Kradschützen Squad",
       "page": "Armies of Germany (v3) - page 31",
       "period": "E/M/L",
-      "image": "images/units/403012022-Blitzkrieg-German-Kradschutzen-motorcycle-combination-_1939-42_-01.jpg",
+      "image": "images/units/germany/403012022-Blitzkrieg-German-Kradschutzen-motorcycle-combination-_1939-42_-01.jpg",
       "sections": [
         "Infantry"
       ],
@@ -6292,7 +6292,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Gebirgsjäger Squad (Early War)",
       "page": "Armies of Germany (v3) - page 32",
       "period": "E/M",
-      "image": "images/units/402212001_Gebirgsjagersquad01.jpg",
+      "image": "images/units/germany/402212001_Gebirgsjagersquad01.jpg",
       "sections": [
         "Infantry"
       ],
@@ -6442,7 +6442,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Gebirgsjäger Squad (Late War)",
       "page": "Armies of Germany (v3) - page 32",
       "period": "M/L",
-      "image": "images/units/402212001_Gebirgsjagersquad01.jpg",
+      "image": "images/units/germany/402212001_Gebirgsjagersquad01.jpg",
       "sections": [
         "Infantry"
       ],
@@ -6833,7 +6833,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Feldgendarmerie Squad",
       "page": "Armies of Germany (v3) - page 33",
       "period": "E/M/L",
-      "image": "images/units/WGB-HR-05-Feldgendarmes-a.jpg",
+      "image": "images/units/germany/WGB-HR-05-Feldgendarmes-a.jpg",
       "sections": [
         "Infantry"
       ],
@@ -8301,7 +8301,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Waffen-SS Squad (Early War)",
       "page": "Armies of Germany (v3) - page 37",
       "period": "E/M",
-      "image": "images/units/402012101-Waffen-SS-01.jpg",
+      "image": "images/units/germany/402012101-Waffen-SS-01.jpg",
       "sections": [
         "Infantry"
       ],
@@ -8448,7 +8448,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Waffen-SS Squad (Late War)",
       "page": "Armies of Germany (v3) - page 38",
       "period": "M/L",
-      "image": "images/units/402012101-Waffen-SS-01.jpg",
+      "image": "images/units/germany/402012101-Waffen-SS-01.jpg",
       "sections": [
         "Infantry"
       ],
@@ -8675,7 +8675,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Waffen-SS Cavalry Squad",
       "page": "Armies of Germany (v3) - page 38",
       "period": "M/L",
-      "image": "images/units/WGB-LSS-15-Waffen-SS-Cavalry-a.jpg",
+      "image": "images/units/germany/WGB-LSS-15-Waffen-SS-Cavalry-a.jpg",
       "sections": [
         "Infantry"
       ],
@@ -9050,7 +9050,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Fallschirmjäger Squad (Early War)",
       "page": "Armies of Germany (v3) - page 39",
       "period": "E/M",
-      "image": "images/units/wgb-lfj-02-fj-squad-a.jpg",
+      "image": "images/units/germany/wgb-lfj-02-fj-squad-a.jpg",
       "sections": [
         "Infantry"
       ],
@@ -9233,7 +9233,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Fallschirmjäger Squad (Late War)",
       "page": "Armies of Germany (v3) - page 40",
       "period": "M/L",
-      "image": "images/units/wgb-lfj-02-fj-squad-a.jpg",
+      "image": "images/units/germany/wgb-lfj-02-fj-squad-a.jpg",
       "sections": [
         "Infantry"
       ],
@@ -9447,7 +9447,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Green Fallschirmjäger Squad (Late War)",
       "page": "Armies of Germany (v3) - page 40",
       "period": "L",
-      "image": "images/units/wgb-lfj-02-fj-squad-a.jpg",
+      "image": "images/units/germany/wgb-lfj-02-fj-squad-a.jpg",
       "sections": [
         "Infantry"
       ],
@@ -9646,7 +9646,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Luftwaffe Field Divisions Squad",
       "page": "Armies of Germany (v3) - page 41",
       "period": "M/L",
-      "image": "images/units/WGB-WM-08-Luftwaffe-Field-Division-Squad-b.jpg",
+      "image": "images/units/germany/WGB-WM-08-Luftwaffe-Field-Division-Squad-b.jpg",
       "sections": [
         "Infantry"
       ],
@@ -9962,7 +9962,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Volksgrenadier Squad",
       "page": "Armies of Germany (v3) - page 42",
       "period": "L",
-      "image": "images/units/402212003-Volksgrenadiers-a.jpg",
+      "image": "images/units/germany/402212003-Volksgrenadiers-a.jpg",
       "sections": [
         "Infantry"
       ],
@@ -10164,7 +10164,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Volkssturm Squad",
       "page": "Armies of Germany (v3) - page 42",
       "period": "L",
-      "image": "images/units/WGB-WM-03-Last-Levy-c.jpg",
+      "image": "images/units/germany/WGB-WM-03-Last-Levy-c.jpg",
       "sections": [
         "Infantry"
       ],
@@ -10536,7 +10536,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Kriegsmarine Squad",
       "page": "Armies of Germany (v3) - page 43",
       "period": "L",
-      "image": "images/units/WGB-WM-05-Kriegsmarine-b.jpg",
+      "image": "images/units/germany/WGB-WM-05-Kriegsmarine-b.jpg",
       "sections": [
         "Infantry"
       ],
@@ -11067,7 +11067,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Company Commander",
       "page": "Armies of Germany (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/German-Commander.png",
+      "image": "images/units/germany/German-Commander.png",
       "sections": [
         "Company Commander"
       ],
@@ -11382,7 +11382,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Medic",
       "page": "Armies of Germany (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/German-Medic.png",
+      "image": "images/units/germany/German-Medic.png",
       "sections": [
         "Medic"
       ],
@@ -11571,7 +11571,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Field Ambulance",
       "page": "Armies of Germany (v3) - page 92",
       "period": "E/M/L",
-      "image": "images/units/405102007_Kubelwagen-Ambulance01.jpg",
+      "image": "images/units/germany/405102007_Kubelwagen-Ambulance01.jpg",
       "sections": [
         "Medic"
       ],
@@ -11625,7 +11625,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/8 Ambulance",
       "page": "Armies of Germany (v3) - page 93",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-143-sdkfz-251-8-ambulance-a_1.jpg",
+      "image": "images/units/germany/wgb-wm-143-sdkfz-251-8-ambulance-a_1.jpg",
       "sections": [
         "Medic"
       ],
@@ -11791,7 +11791,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Artillery Forward Observer",
       "page": "Armies of Germany (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/403012034_AfrikaKorpsFOOteam01.jpg",
+      "image": "images/units/germany/403012034_AfrikaKorpsFOOteam01.jpg",
       "sections": [
         "Forward Observer"
       ],
@@ -12058,7 +12058,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Air Force Forward Observer",
       "page": "Armies of Germany (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/403012034_AfrikaKorpsFOOteam01.jpg",
+      "image": "images/units/germany/403012034_AfrikaKorpsFOOteam01.jpg",
       "sections": [
         "Forward Observer"
       ],
@@ -12325,7 +12325,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sniper Team",
       "page": "Armies of Germany (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/402212015_BlitzkriegGermanweaponsteams02.jpg",
+      "image": "images/units/germany/402212015_BlitzkriegGermanweaponsteams02.jpg",
       "sections": [
         "Sniper"
       ],
@@ -12445,7 +12445,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzerschreck Anti-tank Team",
       "page": "Armies of Germany (v3) - page 47",
       "period": "M/L",
-      "image": "images/units/402212014_GermanHeerweaponsteams02.jpg",
+      "image": "images/units/germany/402212014_GermanHeerweaponsteams02.jpg",
       "sections": [
         "Anti-tank"
       ],
@@ -12562,7 +12562,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Anti-tank Rifle Team",
       "page": "Armies of Germany (v3) - page 47",
       "period": "E/M",
-      "image": "images/units/402212015_BlitzkriegGermanweaponsteams02.jpg",
+      "image": "images/units/germany/402212015_BlitzkriegGermanweaponsteams02.jpg",
       "sections": [
         "Anti-tank"
       ],
@@ -12674,7 +12674,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Light Mortar Team",
       "page": "Armies of Germany (v3) - page 48",
       "period": "E/M",
-      "image": "images/units/402212015_BlitzkriegGermanweaponsteams02.jpg",
+      "image": "images/units/germany/402212015_BlitzkriegGermanweaponsteams02.jpg",
       "sections": [
         "Light mortar",
         "Heavy Weapons",
@@ -12798,7 +12798,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/1 Half-track 'Hanomag'",
       "page": "Armies of Germany (v3) - page 86",
       "period": "E/M/L",
-      "image": "images/units/402012025-Sd.Kfz-251-C-Hanomag-01.jpg",
+      "image": "images/units/germany/402012025-Sd.Kfz-251-C-Hanomag-01.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -12895,7 +12895,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/10",
       "page": "Armies of Germany (v3) - page 87",
       "period": "E/M/L",
-      "image": "images/units/402012013-Sd.Kfz-251-10-Ausf-D-Pak36-01_c00ed686-df09-418c-b909-a545ec9d6ebd.jpg",
+      "image": "images/units/germany/402012013-Sd.Kfz-251-10-Ausf-D-Pak36-01_c00ed686-df09-418c-b909-a545ec9d6ebd.jpg",
       "sections": [
         "Transports",
         "Tows",
@@ -13003,7 +13003,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 250/1",
       "page": "Armies of Germany (v3) - page 87",
       "period": "E/M/L",
-      "image": "images/units/402412009-Sd-Kfz-250-1-Neu-half-track-02.jpg",
+      "image": "images/units/germany/402412009-Sd-Kfz-250-1-Neu-half-track-02.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13118,7 +13118,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 3, 6 and 10 half-track",
       "page": "Armies of Germany (v3) - page 87",
       "period": "E/M/L",
-      "image": "images/units/405102005-Sd.Kfz-10-Demag-halftrack1.jpg",
+      "image": "images/units/germany/405102005-Sd.Kfz-10-Demag-halftrack1.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13170,7 +13170,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 7 half-track",
       "page": "Armies of Germany (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-122-sdkfz-7-b.jpg",
+      "image": "images/units/germany/wgb-wm-122-sdkfz-7-b.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13222,7 +13222,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Trucks",
       "page": "Armies of Germany (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/402012018-Opel-Blitz-and-Maultier-06.jpg",
+      "image": "images/units/germany/402012018-Opel-Blitz-and-Maultier-06.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13322,7 +13322,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Maultier half-track",
       "page": "Armies of Germany (v3) - page 88",
       "period": "M/L",
-      "image": "images/units/402012018-Opel-Blitz-and-Maultier-08.jpg",
+      "image": "images/units/germany/402012018-Opel-Blitz-and-Maultier-08.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13482,7 +13482,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Kübelwagen",
       "page": "Armies of Germany (v3) - page 89",
       "period": "E/M/L",
-      "image": "images/units/German-kubelwagen.png",
+      "image": "images/units/germany/German-kubelwagen.png",
       "sections": [
         "Transports"
       ],
@@ -13533,7 +13533,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Schwimmwagen",
       "page": "Armies of Germany (v3) - page 89",
       "period": "M/L",
-      "image": "images/units/WGB-WM-238-Schwimmwagen-01.jpg",
+      "image": "images/units/germany/WGB-WM-238-Schwimmwagen-01.jpg",
       "sections": [
         "Transports"
       ],
@@ -13591,7 +13591,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Trippel SG6 Trippelwagen",
       "page": "Armies of Germany (v3) - page 90",
       "period": "E/M",
-      "image": "images/units/405102104-Waffen-SS-SG-6-Trippelwagen1.jpg",
+      "image": "images/units/germany/405102104-Waffen-SS-SG-6-Trippelwagen1.jpg",
       "sections": [
         "Transports"
       ],
@@ -13668,7 +13668,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Raupenschlepper Ost",
       "page": "Armies of Germany (v3) - page 90",
       "period": "M/L",
-      "image": "images/units/WGB-WM-198-RSO-01-tractor-01.jpg",
+      "image": "images/units/germany/WGB-WM-198-RSO-01-tractor-01.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13720,7 +13720,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Kettenkrad",
       "page": "Armies of Germany (v3) - page 90",
       "period": "E/M/L",
-      "image": "images/units/German-Kettenkrad.png",
+      "image": "images/units/germany/German-Kettenkrad.png",
       "sections": [
         "Transports",
         "Tows"
@@ -13835,7 +13835,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Field cars and Light trucks",
       "page": "Armies of Germany (v3) - page 91",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-169-horch-a_1.jpg",
+      "image": "images/units/germany/wgb-wm-169-horch-a_1.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13887,7 +13887,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Horse Wagon",
       "page": "Armies of Germany (v3) - page 92",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-41-covered-field-wagon-a_2.jpg",
+      "image": "images/units/germany/wgb-wm-41-covered-field-wagon-a_2.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -13943,7 +13943,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Artillerie Schlepper VA 601 (B)",
       "page": "Armies of Germany (v3) - page 103",
       "period": "E/M/L",
-      "image": "images/units/WGB-WM-55_VA601_b__ArtillerieSchlepper01.jpg",
+      "image": "images/units/germany/WGB-WM-55_VA601_b__ArtillerieSchlepper01.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -14002,7 +14002,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "U304 (F) half-track",
       "page": "Armies of Germany (v3) - page 103",
       "period": "M/L",
-      "image": "images/units/wgb-wm-134-p107-unic-b.jpg",
+      "image": "images/units/germany/wgb-wm-134-p107-unic-b.jpg",
       "sections": [
         "Transports",
         "Tows"
@@ -14117,7 +14117,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Civilian Car",
       "page": "Version 3 Rulebook - page 280",
       "period": "E/M/L",
-      "image": "images/units/Civilian-car.png",
+      "image": "images/units/germany/Civilian-car.png",
       "sections": [
         "Transports"
       ],
@@ -14517,7 +14517,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Pioneer Squad (Early War)",
       "page": "Armies of Germany (v3) - page 46",
       "period": "E/M",
-      "image": "images/units/402012002-German-Pioniers-03.jpg",
+      "image": "images/units/germany/402012002-German-Pioniers-03.jpg",
       "sections": [
         "Engineers"
       ],
@@ -14786,7 +14786,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Pioneer Squad (Late War)",
       "page": "Armies of Germany (v3) - page 46",
       "period": "M/L",
-      "image": "images/units/WGB-SS-29-Waffen-SS-Pionieers-01.jpg",
+      "image": "images/units/germany/WGB-SS-29-Waffen-SS-Pionieers-01.jpg",
       "sections": [
         "Engineers"
       ],
@@ -15079,7 +15079,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Pantherturm",
       "page": "Armies of Germany (v3) - page 64",
       "period": "M/L",
-      "image": "images/units/WGB-WM-235-Pantherturm-a.jpg",
+      "image": "images/units/germany/WGB-WM-235-Pantherturm-a.jpg",
       "sections": [
         "Engineers",
         "Command Vehicle",
@@ -15230,7 +15230,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Goliath Demolition Team",
       "page": "Armies of Germany (v3) - page 48",
       "period": "M/L",
-      "image": "images/units/WGB-SS-29-Waffen-SS-Pionieers-01.jpg",
+      "image": "images/units/germany/WGB-SS-29-Waffen-SS-Pionieers-01.jpg",
       "sections": [
         "Engineers"
       ],
@@ -15346,7 +15346,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Flamethrower Team",
       "page": "Armies of Germany (v3) - page 47",
       "period": "E/M/L",
-      "image": "images/units/German-flamethrower.png",
+      "image": "images/units/germany/German-flamethrower.png",
       "sections": [
         "Flamethrower"
       ],
@@ -15498,7 +15498,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/7C Half-track (Engineers)",
       "page": "Armies of Germany (v3) - page 86",
       "period": "E/M/L",
-      "image": "images/units/WGB-WM-503-Pionierwagen-a.jpg",
+      "image": "images/units/germany/WGB-WM-503-Pionierwagen-a.jpg",
       "sections": [
         "Transports"
       ],
@@ -15674,7 +15674,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Medium Machine Gun Team",
       "page": "Armies of Germany (v3) - page 46",
       "period": "E/M/L",
-      "image": "images/units/German-MMG.png",
+      "image": "images/units/germany/German-MMG.png",
       "sections": [
         "Heavy Weapons",
         "Machine Gun"
@@ -15812,7 +15812,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Medium Mortar Team",
       "page": "Armies of Germany (v3) - page 48",
       "period": "E/M/L",
-      "image": "images/units/German-medium-mortar.png",
+      "image": "images/units/germany/German-medium-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -15955,7 +15955,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Heavy Mortar Team",
       "page": "Armies of Germany (v3) - page 49",
       "period": "M/L",
-      "image": "images/units/WGB-LHR-06-Heer-120mm-Mortar-a.jpg",
+      "image": "images/units/germany/WGB-LHR-06-Heer-120mm-Mortar-a.jpg",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -16098,7 +16098,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Light Artillery",
       "page": "Armies of Germany (v3) - page 50",
       "period": "E/M/L",
-      "image": "images/units/German-howitzer.png",
+      "image": "images/units/germany/German-howitzer.png",
       "sections": [
         "Artillery"
       ],
@@ -16230,7 +16230,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Medium Artillery",
       "page": "Armies of Germany (v3) - page 50",
       "period": "E/M/L",
-      "image": "images/units/403012017-Blitzkrieg-German-leFH18-10.5cm-medium-artillery-01.jpg",
+      "image": "images/units/germany/403012017-Blitzkrieg-German-leFH18-10.5cm-medium-artillery-01.jpg",
       "sections": [
         "Artillery"
       ],
@@ -16628,7 +16628,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "105mm LG40/1 Recoilles Artillery",
       "page": "Armies of Germany (v3) - page 51",
       "period": "E/M/L",
-      "image": "images/units/wgb-lfj-07-10.5mm-lg40-gun-d.jpg",
+      "image": "images/units/germany/wgb-lfj-07-10.5mm-lg40-gun-d.jpg",
       "sections": [
         "Artillery"
       ],
@@ -16732,7 +16732,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "150mm Nebelwerfer 41",
       "page": "Armies of Germany (v3) - page 51",
       "period": "E/M/L",
-      "image": "images/units/German-nebelwerfer.jpg",
+      "image": "images/units/germany/German-nebelwerfer.jpg",
       "sections": [
         "Artillery"
       ],
@@ -16829,7 +16829,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Howling Cow Rocket Launcher",
       "page": "Armies of Germany (v3) - page 51",
       "period": "E/M/L",
-      "image": "images/units/WGB-LHR-15-German-Heer-Howling-Cow-rocket-launcher-_1943-45_1.jpg",
+      "image": "images/units/germany/WGB-LHR-15-German-Heer-Howling-Cow-rocket-launcher-_1943-45_1.jpg",
       "sections": [
         "Artillery"
       ],
@@ -16926,7 +16926,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "20mm Flak 38",
       "page": "Armies of Germany (v3) - page 52",
       "period": "E/M/L",
-      "image": "images/units/WGB-LHR-17-Heer-2cm-FlaK-b.jpg",
+      "image": "images/units/germany/WGB-LHR-17-Heer-2cm-FlaK-b.jpg",
       "sections": [
         "Artillery"
       ],
@@ -17058,7 +17058,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "20mm Flakvierling 38",
       "page": "Armies of Germany (v3) - page 52",
       "period": "E/M/L",
-      "image": "images/units/German-AA.png",
+      "image": "images/units/germany/German-AA.png",
       "sections": [
         "Artillery"
       ],
@@ -17200,7 +17200,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "37mm Flak 36",
       "page": "Armies of Germany (v3) - page 52",
       "period": "E/M/L",
-      "image": "images/units/403012011-German-Heer-3.7cm-Flak-43-AA-gun-_1943-45_1.jpg",
+      "image": "images/units/germany/403012011-German-Heer-3.7cm-Flak-43-AA-gun-_1943-45_1.jpg",
       "sections": [
         "Artillery"
       ],
@@ -17409,7 +17409,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "88mm Flak 36 Dual-purpose AA/AT Gun",
       "page": "Armies of Germany (v3) - page 53",
       "period": "E/M/L",
-      "image": "images/units/German-AA-AT.png",
+      "image": "images/units/germany/German-AA-AT.png",
       "sections": [
         "Artillery"
       ],
@@ -17552,7 +17552,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzerbüchse 41",
       "page": "Armies of Germany (v3) - page 53",
       "period": "E/M/L",
-      "image": "images/units/wgb-lfj-09-fj-panzerbusche41-b.jpg",
+      "image": "images/units/germany/wgb-lfj-09-fj-panzerbusche41-b.jpg",
       "sections": [
         "Artillery"
       ],
@@ -17659,7 +17659,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "37mm Pak 36",
       "page": "Armies of Germany (v3) - page 54",
       "period": "E/M/L",
-      "image": "images/units/German-AT.png",
+      "image": "images/units/germany/German-AT.png",
       "sections": [
         "Artillery"
       ],
@@ -17781,7 +17781,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "50mm Pak 38",
       "page": "Armies of Germany (v3) - page 54",
       "period": "E/M/L",
-      "image": "images/units/WGB-AK-21-Afrika-Korps-5cm-PaK-38-anti-tank-gun-1.jpg",
+      "image": "images/units/germany/WGB-AK-21-Afrika-Korps-5cm-PaK-38-anti-tank-gun-1.jpg",
       "sections": [
         "Artillery"
       ],
@@ -17908,7 +17908,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "75mm Pak 40",
       "page": "Armies of Germany (v3) - page 54",
       "period": "M/L",
-      "image": "images/units/WGB-LFJ-10-Fallschirmjager-75mm-PaK-40-anti-tank-gun-_1943-45_1.jpg",
+      "image": "images/units/germany/WGB-LFJ-10-Fallschirmjager-75mm-PaK-40-anti-tank-gun-_1943-45_1.jpg",
       "sections": [
         "Artillery"
       ],
@@ -18035,7 +18035,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "88mm Pak 43",
       "page": "Armies of Germany (v3) - page 55",
       "period": "E/M/L",
-      "image": "images/units/402212008_GermanHeerPak4301_1880x.jpg",
+      "image": "images/units/germany/402212008_GermanHeerPak4301_1880x.jpg",
       "sections": [
         "Artillery"
       ],
@@ -18247,7 +18247,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Trippel SG6 Trippelwagen (extended)",
       "page": "Armies of Germany (v3) - page 90",
       "period": "E/M",
-      "image": "images/units/405102104-Waffen-SS-SG-6-Trippelwagen1.jpg",
+      "image": "images/units/germany/405102104-Waffen-SS-SG-6-Trippelwagen1.jpg",
       "sections": [
         "Tows"
       ],
@@ -18362,7 +18362,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Mule Team",
       "page": "Armies of Germany (v3) - page 92",
       "period": "E/M/L",
-      "image": "images/units/wgb-bi-30-chindit-mule-team.jpg",
+      "image": "images/units/germany/wgb-bi-30-chindit-mule-team.jpg",
       "sections": [
         "Tows"
       ],
@@ -18550,7 +18550,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer I Ausf. A, B",
       "page": "Armies of Germany (v3) - page 56",
       "period": "E",
-      "image": "images/units/WGB-WM-211-Panzer-I-Ausf-B-0.jpg",
+      "image": "images/units/germany/WGB-WM-211-Panzer-I-Ausf-B-0.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18685,7 +18685,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzerbefehlswagen (Sd.Kfz 265)",
       "page": "Armies of Germany (v3) - page 56",
       "period": "E/M",
-      "image": "images/units/WGB-WM-212-Panzer-Befehlswagen-f.jpg",
+      "image": "images/units/germany/WGB-WM-212-Panzer-Befehlswagen-f.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18906,7 +18906,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer II Ausf. A, B, C, F",
       "page": "Armies of Germany (v3) - page 57",
       "period": "E/M",
-      "image": "images/units/German-panzer-ii.png",
+      "image": "images/units/germany/German-panzer-ii.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18985,7 +18985,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer II Ausf. L (Luchs)",
       "page": "Armies of Germany (v3) - page 57",
       "period": "M/L",
-      "image": "images/units/WGB-WM-203-Panzer-II-Luchs-a.jpg",
+      "image": "images/units/germany/WGB-WM-203-Panzer-II-Luchs-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19456,7 +19456,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer III Ausf. H, J",
       "page": "Armies of Germany (v3) - page 58",
       "period": "E/M",
-      "image": "images/units/WGB-WM-510-Panzer-III-L-b_28d0d2c0-8bef-45fc-8803-7e08e86c64c4.jpg",
+      "image": "images/units/germany/WGB-WM-510-Panzer-III-L-b_28d0d2c0-8bef-45fc-8803-7e08e86c64c4.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19550,7 +19550,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer III Ausf. L, M",
       "page": "Armies of Germany (v3) - page 59",
       "period": "M/L",
-      "image": "images/units/WGB-WM-510-Panzer-III-L-g_0614860c-cefb-4e9f-a5ab-bdc20be01e99.jpg",
+      "image": "images/units/germany/WGB-WM-510-Panzer-III-L-g_0614860c-cefb-4e9f-a5ab-bdc20be01e99.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19659,7 +19659,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer III Ausf. N",
       "page": "Armies of Germany (v3) - page 59",
       "period": "M/L",
-      "image": "images/units/WGB-WM-510-Panzer-III-L-j.jpg",
+      "image": "images/units/germany/WGB-WM-510-Panzer-III-L-j.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19929,7 +19929,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer IV Ausf. B, C, D, E, F",
       "page": "Armies of Germany (v3) - page 60",
       "period": "E/M",
-      "image": "images/units/402012056_PanzerIVAusf_B_C_D02.jpg",
+      "image": "images/units/germany/402012056_PanzerIVAusf_B_C_D02.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20022,7 +20022,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer IV Ausf. G, H, J",
       "page": "Armies of Germany (v3) - page 60",
       "period": "M/L",
-      "image": "images/units/WGB-WM-505-Panzer-IV-H-d_6fe2b390-8425-4c4c-8793-53586eedde4e.jpg",
+      "image": "images/units/germany/WGB-WM-505-Panzer-IV-H-d_6fe2b390-8425-4c4c-8793-53586eedde4e.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20140,7 +20140,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer 38(t) and 35(t)",
       "page": "Armies of Germany (v3) - page 61",
       "period": "E/M",
-      "image": "images/units/German-panzer-38t.png",
+      "image": "images/units/germany/German-panzer-38t.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20436,7 +20436,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer V Panther",
       "page": "Armies of Germany (v3) - page 61",
       "period": "M/L",
-      "image": "images/units/German-panther.png",
+      "image": "images/units/germany/German-panther.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20559,7 +20559,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer VI Tiger I",
       "page": "Armies of Germany (v3) - page 62",
       "period": "M/L",
-      "image": "images/units/German-tiger-i.png",
+      "image": "images/units/germany/German-tiger-i.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20674,7 +20674,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer VI Tiger II",
       "page": "Armies of Germany (v3) - page 62",
       "period": "L",
-      "image": "images/units/German-tiger-ii.png",
+      "image": "images/units/germany/German-tiger-ii.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20789,7 +20789,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer VIII Maus",
       "page": "Armies of Germany (v3) - page 63",
       "period": "L",
-      "image": "images/units/405102002-Panzer-VIII-Maus-super-heavy-tank-01.jpg",
+      "image": "images/units/germany/405102002-Panzer-VIII-Maus-super-heavy-tank-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20910,7 +20910,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "StuG III Ausf. A, B, C, D, E",
       "page": "Armies of Germany (v3) - page 65",
       "period": "E/M",
-      "image": "images/units/402412003_StuG-III-Ausf-D2.jpg",
+      "image": "images/units/germany/402412003_StuG-III-Ausf-D2.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20980,7 +20980,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "StuG III Ausf. F, G, H or StuG IV",
       "page": "Armies of Germany (v3) - page 65",
       "period": "M/L",
-      "image": "images/units/German-stug-iii.png",
+      "image": "images/units/germany/German-stug-iii.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21125,7 +21125,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "StuH 42",
       "page": "Armies of Germany (v3) - page 65",
       "period": "M/L",
-      "image": "images/units/WGB-WM-507-StuG-III-h.jpg",
+      "image": "images/units/germany/WGB-WM-507-StuG-III-h.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21314,7 +21314,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Jagdpanzer IV",
       "page": "Armies of Germany (v3) - page 65",
       "period": "L",
-      "image": "images/units/WGB-WM-189-Jagdpanzer-IV-L48-a.jpg",
+      "image": "images/units/germany/WGB-WM-189-Jagdpanzer-IV-L48-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21464,7 +21464,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Jagdpanther",
       "page": "Armies of Germany (v3) - page 66",
       "period": "L",
-      "image": "images/units/German-jagdpanther.png",
+      "image": "images/units/germany/German-jagdpanther.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21546,7 +21546,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Jagdtiger",
       "page": "Armies of Germany (v3) - page 66",
       "period": "L",
-      "image": "images/units/German-jagdtiger.png",
+      "image": "images/units/germany/German-jagdtiger.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21628,7 +21628,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Hetzer",
       "page": "Armies of Germany (v3) - page 66",
       "period": "L",
-      "image": "images/units/German-hetzer.png",
+      "image": "images/units/germany/German-hetzer.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21765,7 +21765,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Nashorn",
       "page": "Armies of Germany (v3) - page 67",
       "period": "M/L",
-      "image": "images/units/WGB-WM-210_Nashorn01.jpg",
+      "image": "images/units/germany/WGB-WM-210_Nashorn01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21855,7 +21855,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Ferdinand or Elefant",
       "page": "Armies of Germany (v3) - page 67",
       "period": "M/L",
-      "image": "images/units/German-ferdinand.png",
+      "image": "images/units/germany/German-ferdinand.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21978,7 +21978,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Brummbär",
       "page": "Armies of Germany (v3) - page 67",
       "period": "M/L",
-      "image": "images/units/German-brummbar.png",
+      "image": "images/units/germany/German-brummbar.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22086,7 +22086,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sturmtiger",
       "page": "Armies of Germany (v3) - page 68",
       "period": "L",
-      "image": "images/units/German-sturmtiger.png",
+      "image": "images/units/germany/German-sturmtiger.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22178,7 +22178,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzerjäger I",
       "page": "Armies of Germany (v3) - page 68",
       "period": "E/M",
-      "image": "images/units/wgb-wm-172-panzerjager-i-a_1.jpg",
+      "image": "images/units/germany/wgb-wm-172-panzerjager-i-a_1.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22249,7 +22249,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Marder I",
       "page": "Armies of Germany (v3) - page 68",
       "period": "M/L",
-      "image": "images/units/WGB-WM-217-Sd-Kfz-135-Marder-I-02_570x.jpg",
+      "image": "images/units/germany/WGB-WM-217-Sd-Kfz-135-Marder-I-02_570x.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22443,7 +22443,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Marder III",
       "page": "Armies of Germany (v3) - page 68",
       "period": "M/L",
-      "image": "images/units/German-marder-iii.png",
+      "image": "images/units/germany/German-marder-iii.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22570,7 +22570,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "RSO with Pak 40",
       "page": "Armies of Germany (v3) - page 69",
       "period": "M/L",
-      "image": "images/units/403212101-Waffen-SS-PaK-40-auf-RSO-01.jpg",
+      "image": "images/units/germany/403212101-Waffen-SS-PaK-40-auf-RSO-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22646,7 +22646,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/22 Pakwagen",
       "page": "Armies of Germany (v3) - page 69",
       "period": "L",
-      "image": "images/units/WGB-WM-163-SdKfz-251-22-Pakwagen-a.jpg",
+      "image": "images/units/germany/WGB-WM-163-SdKfz-251-22-Pakwagen-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22746,7 +22746,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/16 Flammpanzerwagen",
       "page": "Armies of Germany (v3) - page 69",
       "period": "M/L",
-      "image": "images/units/402012006-Sd-Kfz-251-16-Flammpanzerwagen-01.jpg",
+      "image": "images/units/germany/402012006-Sd-Kfz-251-16-Flammpanzerwagen-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -23021,7 +23021,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Borgward Wanze Ausf. C",
       "page": "Armies of Germany (v3) - page 72",
       "period": "L",
-      "image": "images/units/WGB-WM-161-Borgward-Wanze-01.jpg",
+      "image": "images/units/germany/WGB-WM-161-Borgward-Wanze-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -23150,7 +23150,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Krupp-Protze with Pak 36",
       "page": "Armies of Germany (v3) - page 73",
       "period": "E/M",
-      "image": "images/units/405102115_KruppProtzewithPak3601.jpg",
+      "image": "images/units/germany/405102115_KruppProtzewithPak3601.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -23416,7 +23416,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Lorraine Schlepper",
       "page": "Armies of Germany (v3) - page 74",
       "period": "M/L",
-      "image": "images/units/WGB-WM-219-15cm-Lorraine-Schlepper-a.jpg",
+      "image": "images/units/germany/WGB-WM-219-15cm-Lorraine-Schlepper-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -23620,7 +23620,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 250/8 Stummel",
       "page": "Armies of Germany (v3) - page 74",
       "period": "M/L",
-      "image": "images/units/German-SdKfz250-8.png",
+      "image": "images/units/germany/German-SdKfz250-8.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -23743,7 +23743,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/9 Stummel",
       "page": "Armies of Germany (v3) - page 74",
       "period": "M/L",
-      "image": "images/units/402012005-Sd-Kdz-251-9-Ausf-D-_Stummel_-01.jpg",
+      "image": "images/units/germany/402012005-Sd-Kdz-251-9-Ausf-D-_Stummel_-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -23868,7 +23868,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 124 Wespe",
       "page": "Armies of Germany (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/German-Wespe.png",
+      "image": "images/units/germany/German-Wespe.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -23963,7 +23963,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 165 Hummel",
       "page": "Armies of Germany (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/WGB-WM-222-Sd-Kfz-165-Hummel-a.jpg",
+      "image": "images/units/germany/WGB-WM-222-Sd-Kfz-165-Hummel-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -24058,7 +24058,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 250/7 or Sd.Kfz 251/2 Mortar Carrier",
       "page": "Armies of Germany (v3) - page 75",
       "period": "E/M/L",
-      "image": "images/units/WGB-WM-104-German-SD-Kfz-250-7-Neu-Mortar-Carrier-01.jpg",
+      "image": "images/units/germany/WGB-WM-104-German-SD-Kfz-250-7-Neu-Mortar-Carrier-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -24186,7 +24186,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251 Stuka Zu Fuss",
       "page": "Armies of Germany (v3) - page 76",
       "period": "M/L",
-      "image": "images/units/wgb-wm-152-sdkfz251-stukazufuss-a_1.jpg",
+      "image": "images/units/germany/wgb-wm-152-sdkfz251-stukazufuss-a_1.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -24305,7 +24305,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzerwerfer 42",
       "page": "Armies of Germany (v3) - page 76",
       "period": "M/L",
-      "image": "images/units/WGB-WM-205-Panzerwerfer-42-a_374ea3b7-9623-463e-ac7b-63a97e43f0b4.jpg",
+      "image": "images/units/germany/WGB-WM-205-Panzerwerfer-42-a_374ea3b7-9623-463e-ac7b-63a97e43f0b4.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -24502,7 +24502,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Opel Blitz with light autocannon",
       "page": "Armies of Germany (v3) - page 76",
       "period": "E/M/L",
-      "image": "images/units/WGB-WM-190-Opel-Blitz-with-FlaK-01.jpg",
+      "image": "images/units/germany/WGB-WM-190-Opel-Blitz-with-FlaK-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -24620,7 +24620,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Ostwind",
       "page": "Armies of Germany (v3) - page 77",
       "period": "L",
-      "image": "images/units/405112010_FlakpanzerIVOstwindturret01.jpg",
+      "image": "images/units/germany/405112010_FlakpanzerIVOstwindturret01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -24710,7 +24710,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Wirbelwind",
       "page": "Armies of Germany (v3) - page 77",
       "period": "L",
-      "image": "images/units/German-Flakpanzer-IV.png",
+      "image": "images/units/germany/German-Flakpanzer-IV.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25032,7 +25032,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 7/1 or 7/2 with armoured cab",
       "page": "Armies of Germany (v3) - page 78",
       "period": "M/L",
-      "image": "images/units/405112007_SdKfz7237cmSPAAGarmouredcab01.jpg",
+      "image": "images/units/germany/405112007_SdKfz7237cmSPAAGarmouredcab01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25284,7 +25284,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 10/4 and Sd.Kfz 10/5 with 2cm Flak",
       "page": "Armies of Germany (v3) - page 79",
       "period": "E/M/L",
-      "image": "images/units/405102116_SdKfz105SPAA01.jpg",
+      "image": "images/units/germany/405102116_SdKfz105SPAA01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25360,7 +25360,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 7/1 or Sd.Kfz 7/2",
       "page": "Armies of Germany (v3) - page 79",
       "period": "M/L",
-      "image": "images/units/WGB-WM-174_Waffen-SS_SdKfz7_1quadFlak01.jpg",
+      "image": "images/units/germany/WGB-WM-174_Waffen-SS_SdKfz7_1quadFlak01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25464,7 +25464,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Horch 1a Field Car with 2cm Flak 38",
       "page": "Armies of Germany (v3) - page 79",
       "period": "E/M/L",
-      "image": "images/units/German-Horch-AA.png",
+      "image": "images/units/germany/German-Horch-AA.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25540,7 +25540,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Kfz 13 Adler Light Armoured Car",
       "page": "Armies of Germany (v3) - page 80",
       "period": "E",
-      "image": "images/units/WGB-WM-191-Kfz13-Adler-a_a60a68d7-2f86-410b-ab3e-696f85f6f4ab.jpg",
+      "image": "images/units/germany/WGB-WM-191-Kfz13-Adler-a_a60a68d7-2f86-410b-ab3e-696f85f6f4ab.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25621,7 +25621,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Motorcycle with Machine-gun Sidecar",
       "page": "Armies of Germany (v3) - page 80",
       "period": "E/M/L",
-      "image": "images/units/German-motorcycle-sidecar.png",
+      "image": "images/units/germany/German-motorcycle-sidecar.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25702,7 +25702,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 222",
       "page": "Armies of Germany (v3) - page 80",
       "period": "E/M/L",
-      "image": "images/units/German-SdKfz222.png",
+      "image": "images/units/germany/German-SdKfz222.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25797,7 +25797,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 221",
       "page": "Armies of Germany (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/WGB-WM-151-Sd-Kfz-221-armoured-car-01.jpg",
+      "image": "images/units/germany/WGB-WM-151-Sd-Kfz-221-armoured-car-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -25925,7 +25925,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 223",
       "page": "Armies of Germany (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/402012029-Sd.Kfz-222-223-armoured-car4.jpg",
+      "image": "images/units/germany/402012029-Sd.Kfz-222-223-armoured-car4.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26087,7 +26087,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 231 or 232 Heavy Armoured Car (6-Rad)",
       "page": "Armies of Germany (v3) - page 82",
       "period": "E",
-      "image": "images/units/wgb-wm-148-sdkfz231-a.jpg",
+      "image": "images/units/germany/wgb-wm-148-sdkfz231-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26214,7 +26214,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 231 or 233 Heavy Armoured Car (8-Rad)",
       "page": "Armies of Germany (v3) - page 82",
       "period": "E/M",
-      "image": "images/units/wgb-wm-145-sdkfz-231-8rad-a.jpg",
+      "image": "images/units/germany/wgb-wm-145-sdkfz-231-8rad-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26365,7 +26365,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 234/1 Heavy Armoured Car",
       "page": "Armies of Germany (v3) - page 82",
       "period": "L",
-      "image": "images/units/WGB-WM-176-SdKfz-234-1-Armoured-car-a.jpg",
+      "image": "images/units/germany/WGB-WM-176-SdKfz-234-1-Armoured-car-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26455,7 +26455,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 234/2 Puma Heavy Armoured Car",
       "page": "Armies of Germany (v3) - page 83",
       "period": "L",
-      "image": "images/units/German-SdKfz234-2-Puma.png",
+      "image": "images/units/germany/German-SdKfz234-2-Puma.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26540,7 +26540,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 234/3 Heavy Armoured Car",
       "page": "Armies of Germany (v3) - page 83",
       "period": "L",
-      "image": "images/units/WGB-WM-177-Sd-Kfz-234-3-a.jpg",
+      "image": "images/units/germany/WGB-WM-177-Sd-Kfz-234-3-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26659,7 +26659,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 234/4 Heavy Armoured Car",
       "page": "Armies of Germany (v3) - page 83",
       "period": "L",
-      "image": "images/units/WGB-WM-223-Sd-Kfz-223-4-PaK40-a.jpg",
+      "image": "images/units/germany/WGB-WM-223-Sd-Kfz-223-4-PaK40-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26754,7 +26754,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 250/9",
       "page": "Armies of Germany (v3) - page 83",
       "period": "M/L",
-      "image": "images/units/wgb-wm-107-sdkfz-250-9-b_2.jpg",
+      "image": "images/units/germany/wgb-wm-107-sdkfz-250-9-b_2.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -26849,7 +26849,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 251/23",
       "page": "Armies of Germany (v3) - page 84",
       "period": "L",
-      "image": "images/units/WGB-WM-133-sd-kfz-251-23-recce-a.jpg",
+      "image": "images/units/germany/WGB-WM-133-sd-kfz-251-23-recce-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -27116,7 +27116,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 250/3, 250/5, or 251/3 Armoured Command",
       "page": "Armies of Germany (v3) - page 85",
       "period": "M/L",
-      "image": "images/units/402012054_SdKfz250Alte_250_3_250_10options01.jpg",
+      "image": "images/units/germany/402012054_SdKfz250Alte_250_3_250_10options01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -27248,7 +27248,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 250/10 or Sd.Kfz 250/11",
       "page": "Armies of Germany (v3) - page 85",
       "period": "M/L",
-      "image": "images/units/402012054_SdKfz250Alte_250_3_250_10options06.jpg",
+      "image": "images/units/germany/402012054_SdKfz250Alte_250_3_250_10options06.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -27646,7 +27646,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Kübelwagen (no transport)",
       "page": "Armies of Germany (v3) - page 89",
       "period": "E/M/L",
-      "image": "images/units/wgb-wm-158-k_belwagen-a.jpg",
+      "image": "images/units/germany/wgb-wm-158-k_belwagen-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -27742,7 +27742,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Schwimmwagen (no transport)",
       "page": "Armies of Germany (v3) - page 89",
       "period": "M/L",
-      "image": "images/units/WGB-WM-238-Schwimmwagen-01.jpg",
+      "image": "images/units/germany/WGB-WM-238-Schwimmwagen-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -27946,7 +27946,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer 17R 730(f)",
       "page": "Armies of Germany (v3) - page 96",
       "period": "M/L",
-      "image": "images/units/WGB-FI-111-Renault-FT-17-Chinese-a.jpg",
+      "image": "images/units/germany/WGB-FI-111-Renault-FT-17-Chinese-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -28043,7 +28043,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Flammpanzer B2(f)",
       "page": "Armies of Germany (v3) - page 96",
       "period": "M/L",
-      "image": "images/units/402015501-Char-B1-platoon5.jpg",
+      "image": "images/units/germany/402015501-Char-B1-platoon5.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -28474,7 +28474,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer 35R 731(f) Mit T-26 Turm",
       "page": "Armies of Germany (v3) - page 98",
       "period": "M/L",
-      "image": "images/units/403212003-Panzerkampfwagen-35R-731_f_-mit-T26Turm-01.jpg",
+      "image": "images/units/germany/403212003-Panzerkampfwagen-35R-731_f_-mit-T26Turm-01.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -28559,7 +28559,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzer 35S 739(f)",
       "page": "Armies of Germany (v3) - page 99",
       "period": "M/L",
-      "image": "images/units/WGB-FI-108-Somua-S35-a.jpg",
+      "image": "images/units/germany/WGB-FI-108-Somua-S35-a.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -28794,7 +28794,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzerjäger 35R",
       "page": "Armies of Germany (v3) - page 100",
       "period": "M/L",
-      "image": "images/units/405102004-4.7cm-Panzerjager-R35-_f.jpg",
+      "image": "images/units/germany/405102004-4.7cm-Panzerjager-R35-_f.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -29473,7 +29473,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Panzerspähwagen P204(f)",
       "page": "Armies of Germany (v3) - page 102",
       "period": "M/L",
-      "image": "images/units/402415501_AMDPanhard178armouredcar02.jpg",
+      "image": "images/units/germany/402415501_AMDPanhard178armouredcar02.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -29647,7 +29647,7 @@ window.EASYARMY_FACTIONS['germany'] = {
       "cardTitle": "Sd.Kfz 250/4 prototype",
       "page": "Armies of Germany (v3) - page 87",
       "period": "E/M/L",
-      "image": "images/units/402412009-Sd-Kfz-250-1-Neu-half-track-02.jpg",
+      "image": "images/units/germany/402412009-Sd-Kfz-250-1-Neu-half-track-02.jpg",
       "sections": [
         "Command Vehicle",
         "Vehicle"

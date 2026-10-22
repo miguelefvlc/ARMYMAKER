@@ -3751,7 +3751,7 @@
       "name": "Platoon Commander",
       "source": "Armies of the United States (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/US-Platoon-commanders.png",
+      "image": "images/units/usa/US-Platoon-commanders.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Platoon-commanders.png",
       "sections": [
         "Platoon Commander"
@@ -4069,7 +4069,7 @@
       "name": "US Army Rifle Squad",
       "source": "Armies of the United States (v3) - page 32",
       "period": "E/M/L",
-      "image": "images/units/US-Rifle.png",
+      "image": "images/units/usa/US-Rifle.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Rifle.png",
       "sections": [
         "Infantry"
@@ -4207,7 +4207,7 @@
       "name": "Armoured Infantry Rifle Squad",
       "source": "Armies of the United States (v3) - page 33",
       "period": "M/L",
-      "image": "images/units/US-Armoured-Rifle.png",
+      "image": "images/units/usa/US-Armoured-Rifle.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Armoured-Rifle.png",
       "sections": [
         "Infantry"
@@ -4348,7 +4348,7 @@
       "name": "Armoured Infantry Mortar Squad",
       "source": "Armies of the United States (v3) - page 33",
       "period": "M/L",
-      "image": "images/units/US-Armoured-infantry-mortar-MG.png",
+      "image": "images/units/usa/US-Armoured-infantry-mortar-MG.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Armoured-infantry-mortar-MG.png",
       "sections": [
         "Infantry"
@@ -4481,7 +4481,7 @@
       "name": "Armoured Infantry Machine Gun Squad",
       "source": "Armies of the United States (v3) - page 34",
       "period": "M/L",
-      "image": "images/units/US-Armoured-infantry-mortar-MG.png",
+      "image": "images/units/usa/US-Armoured-infantry-mortar-MG.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Armoured-infantry-mortar-MG.png",
       "sections": [
         "Infantry"
@@ -4622,7 +4622,7 @@
       "name": "US Paratrooper Squad",
       "source": "Armies of the United States (v3) - page 36",
       "period": "M/L",
-      "image": "images/units/US-Paratroop.png",
+      "image": "images/units/usa/US-Paratroop.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Paratroop.png",
       "sections": [
         "Infantry"
@@ -4786,7 +4786,7 @@
       "name": "Pathfinders Squad",
       "source": "Armies of the United States (v3) - page 36",
       "period": "M/L",
-      "image": "images/units/US-Pathfinders.png",
+      "image": "images/units/usa/US-Pathfinders.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Pathfinders.png",
       "sections": [
         "Infantry"
@@ -4888,7 +4888,7 @@
       "name": "Glider Squad",
       "source": "Armies of the United States (v3) - page 36",
       "period": "M/L",
-      "image": "images/units/US-Glider.png",
+      "image": "images/units/usa/US-Glider.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Glider.png",
       "sections": [
         "Infantry"
@@ -5169,7 +5169,7 @@
       "name": "Ranger Squad (Mid War)",
       "source": "Armies of the United States (v3) - page 37",
       "period": "M",
-      "image": "images/units/US-Ranger-Mid.png",
+      "image": "images/units/usa/US-Ranger-Mid.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Ranger-Mid.png",
       "sections": [
         "Infantry"
@@ -5300,7 +5300,7 @@
       "name": "Ranger Squad (Late War)",
       "source": "Armies of the United States (v3) - page 37",
       "period": "L",
-      "image": "images/units/US-Rangers.png",
+      "image": "images/units/usa/US-Rangers.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Rangers.png",
       "sections": [
         "Infantry"
@@ -5599,7 +5599,7 @@
       "name": "US Marine Squad (Early War)",
       "source": "Armies of the United States (v3) - page 39",
       "period": "E",
-      "image": "images/units/US-Marines-early.png",
+      "image": "images/units/usa/US-Marines-early.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Marines-early.png",
       "sections": [
         "Infantry"
@@ -5787,7 +5787,7 @@
       "name": "US Marine Squad (Mid/Late War)",
       "source": "Armies of the United States (v3) - page 39",
       "period": "M/L",
-      "image": "images/units/US-Marines-late.png",
+      "image": "images/units/usa/US-Marines-late.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Marines-late.png",
       "sections": [
         "Infantry"
@@ -5975,7 +5975,7 @@
       "name": "USMC Raiders Squad",
       "source": "Armies of the United States (v3) - page 40",
       "period": "M/L",
-      "image": "images/units/US-MC-Raiders.png",
+      "image": "images/units/usa/US-MC-Raiders.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-MC-Raiders.png",
       "sections": [
         "Infantry"
@@ -6127,7 +6127,7 @@
       "name": "Merrill's Marauders Squad",
       "source": "Armies of the United States (v3) - page 41",
       "period": "L",
-      "image": "images/units/US-Merrills-Marauders.png",
+      "image": "images/units/usa/US-Merrills-Marauders.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Merrills-Marauders.png",
       "sections": [
         "Infantry"
@@ -6371,7 +6371,7 @@
       "name": "US Army Military Police Corps Squad",
       "source": "Armies of the United States (v3) - page 42",
       "period": "E/M/L",
-      "image": "images/units/US-Military-Police.png",
+      "image": "images/units/usa/US-Military-Police.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Military-Police.png",
       "sections": [
         "Infantry"
@@ -6555,7 +6555,7 @@
       "name": "USMC War Dog Team",
       "source": "Armies of the United States (v3) - page 48",
       "period": "M/L",
-      "image": "images/units/US-War-Dogs.png",
+      "image": "images/units/usa/US-War-Dogs.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-War-Dogs.png",
       "sections": [
         "War Dog"
@@ -6630,7 +6630,7 @@
       "name": "Company Commander",
       "source": "Armies of the United States (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/US-Command.png",
+      "image": "images/units/usa/US-Command.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Command.png",
       "sections": [
         "Company Commander"
@@ -6948,7 +6948,7 @@
       "name": "Medic",
       "source": "Armies of the United States (v3) - page 28",
       "period": "E/M/L",
-      "image": "images/units/US-Medic.png",
+      "image": "images/units/usa/US-Medic.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Medic.png",
       "sections": [
         "Medic"
@@ -7285,7 +7285,7 @@
       "name": "Artillery Forward Observer",
       "source": "Armies of the United States (v3) - page 29",
       "period": "E/M/L",
-      "image": "images/units/US-Observer.png",
+      "image": "images/units/usa/US-Observer.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Observer.png",
       "sections": [
         "Forward Observer"
@@ -7493,7 +7493,7 @@
       "name": "Air Force Forward Observer",
       "source": "Armies of the United States (v3) - page 29",
       "period": "E/M/L",
-      "image": "images/units/US-Observer.png",
+      "image": "images/units/usa/US-Observer.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Observer.png",
       "sections": [
         "Forward Observer"
@@ -7701,7 +7701,7 @@
       "name": "Sniper Team",
       "source": "Armies of the United States (v3) - page 45",
       "period": "E/M/L",
-      "image": "images/units/US-Sniper.png",
+      "image": "images/units/usa/US-Sniper.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Sniper.png",
       "sections": [
         "Sniper"
@@ -7825,7 +7825,7 @@
       "name": "Bazooka Anti-tank Team",
       "source": "Armies of the United States (v3) - page 44",
       "period": "M/L",
-      "image": "images/units/US-Anti-tank.jpg",
+      "image": "images/units/usa/US-Anti-tank.jpg",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Anti-tank.jpg",
       "sections": [
         "Anti-tank"
@@ -7931,7 +7931,7 @@
       "name": "Light Mortar Team (3 men)",
       "source": "Armies of the United States (v3) - page 48",
       "period": "E/M/L",
-      "image": "images/units/US-Light-mortar.jpg",
+      "image": "images/units/usa/US-Light-mortar.jpg",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Light-mortar.jpg",
       "sections": [
         "Light mortar",
@@ -8007,7 +8007,7 @@
       "name": "Light Mortar Team (2 men)",
       "source": "Armies of the United States (v3) - page 48",
       "period": "E/M/L",
-      "image": "images/units/US-Anti-tank.jpg",
+      "image": "images/units/usa/US-Anti-tank.jpg",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Anti-tank.jpg",
       "sections": [
         "Light mortar",
@@ -8090,7 +8090,7 @@
       "name": "Bazooka Anti-tank Team-with Armoured Infantry only",
       "source": "Armies of the United States (v3) - page 44",
       "period": "M/L",
-      "image": "images/units/US-Anti-tank.jpg",
+      "image": "images/units/usa/US-Anti-tank.jpg",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Anti-tank.jpg",
       "sections": [
         "Anti-tank"
@@ -8141,7 +8141,7 @@
       "name": "M3 White Scout Car",
       "source": "Armies of the United States (v3) - page 80",
       "period": "E/M/L",
-      "image": "images/units/US-M3-White-Scout-car.png",
+      "image": "images/units/usa/US-M3-White-Scout-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-White-Scout-car.png",
       "sections": [
         "Transports",
@@ -8438,7 +8438,7 @@
       "name": "M3 Half-track",
       "source": "Armies of the United States (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/US-M3A1-Half-track.png",
+      "image": "images/units/usa/US-M3A1-Half-track.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3A1-Half-track.png",
       "sections": [
         "Transports",
@@ -8628,7 +8628,7 @@
       "name": "Jeep",
       "source": "Armies of the United States (v3) - page 83",
       "period": "E/M/L",
-      "image": "images/units/US-Jeep.png",
+      "image": "images/units/usa/US-Jeep.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Jeep.png",
       "sections": [
         "Transports",
@@ -8697,7 +8697,7 @@
       "name": "Dodge ¾ Ton Truck",
       "source": "Armies of the United States (v3) - page 83",
       "period": "E/M/L",
-      "image": "images/units/US-Dodge.png",
+      "image": "images/units/usa/US-Dodge.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Dodge.png",
       "sections": [
         "Transports",
@@ -8873,7 +8873,7 @@
       "name": "2½ Ton Truck",
       "source": "Armies of the United States (v3) - page 84",
       "period": "E/M/L",
-      "image": "images/units/US-Deuce-and-a-half-truck.png",
+      "image": "images/units/usa/US-Deuce-and-a-half-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Deuce-and-a-half-truck.png",
       "sections": [
         "Transports",
@@ -9049,7 +9049,7 @@
       "name": "DUKW Amphibious Truck",
       "source": "Armies of the United States (v3) - page 85",
       "period": "M/L",
-      "image": "images/units/US-DUKW.png",
+      "image": "images/units/usa/US-DUKW.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-DUKW.png",
       "sections": [
         "Transports",
@@ -9272,7 +9272,7 @@
       "name": "LVT4 'Water Buffalo' Landing Vehicle",
       "source": "Armies of the United States (v3) - page 85",
       "period": "L",
-      "image": "images/units/US-LVT4-Buffalo.png",
+      "image": "images/units/usa/US-LVT4-Buffalo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-LVT4-Buffalo.png",
       "sections": [
         "Transports"
@@ -9465,7 +9465,7 @@
       "name": "Landing Craft, Personnel",
       "source": "Armies of the United States (v3) - page 88",
       "period": "M/L",
-      "image": "images/units/US-Landing-craft-personnel.png",
+      "image": "images/units/usa/US-Landing-craft-personnel.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Landing-craft-personnel.png",
       "sections": [
         "Transports"
@@ -9534,7 +9534,7 @@
       "name": "Landing Craft, Mechanised",
       "source": "Armies of the United States (v3) - page 88",
       "period": "M/L",
-      "image": "images/units/US-Landing-craft-mechanised.png",
+      "image": "images/units/usa/US-Landing-craft-mechanised.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Landing-craft-mechanised.png",
       "sections": [
         "Transports"
@@ -10162,7 +10162,7 @@
       "name": "Flamethrower Team",
       "source": "Armies of the United States (v3) - page 45",
       "period": "M/L",
-      "image": "images/units/US-Flamethrower.png",
+      "image": "images/units/usa/US-Flamethrower.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Flamethrower.png",
       "sections": [
         "Flamethrower"
@@ -10281,7 +10281,7 @@
       "name": "Medium Machine Gun Team",
       "source": "Armies of the United States (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/US-MMG.png",
+      "image": "images/units/usa/US-MMG.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-MMG.png",
       "sections": [
         "Heavy Weapons",
@@ -10388,7 +10388,7 @@
       "name": "Heavy Machine Gun Team",
       "source": "Armies of the United States (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/US-HMG.png",
+      "image": "images/units/usa/US-HMG.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-HMG.png",
       "sections": [
         "Heavy Weapons",
@@ -10628,7 +10628,7 @@
       "name": "Medium Mortar Team",
       "source": "Armies of the United States (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/US-Medium-mortar.png",
+      "image": "images/units/usa/US-Medium-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Medium-mortar.png",
       "sections": [
         "Heavy Weapons",
@@ -10749,7 +10749,7 @@
       "name": "Heavy Mortar Team",
       "source": "Armies of the United States (v3) - page 49",
       "period": "M/L",
-      "image": "images/units/US-Heavy-mortar.png",
+      "image": "images/units/usa/US-Heavy-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Heavy-mortar.png",
       "sections": [
         "Heavy Weapons",
@@ -10814,7 +10814,7 @@
       "name": "Light Artillery (M1A1)",
       "source": "Armies of the United States (v3) - page 50",
       "period": "E/M/L",
-      "image": "images/units/US-Light-artillery.png",
+      "image": "images/units/usa/US-Light-artillery.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Light-artillery.png",
       "sections": [
         "Artillery"
@@ -10922,7 +10922,7 @@
       "name": "Medium Artillery (M2A1)",
       "source": "Armies of the United States (v3) - page 50",
       "period": "E/M/L",
-      "image": "images/units/US-Medium-artillery.png",
+      "image": "images/units/usa/US-Medium-artillery.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Medium-artillery.png",
       "sections": [
         "Artillery"
@@ -11502,7 +11502,7 @@
       "name": "M51 Multiple Machine Gun Carriage",
       "source": "Armies of the United States (v3) - page 52",
       "period": "M/L",
-      "image": "images/units/US-M51-AA.png",
+      "image": "images/units/usa/US-M51-AA.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M51-AA.png",
       "sections": [
         "Artillery"
@@ -11552,7 +11552,7 @@
       "name": "37mm Anti-tank Gun M3",
       "source": "Armies of the United States (v3) - page 53",
       "period": "E/M/L",
-      "image": "images/units/US-37mm-AT.png",
+      "image": "images/units/usa/US-37mm-AT.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-37mm-AT.png",
       "sections": [
         "Artillery"
@@ -11648,7 +11648,7 @@
       "name": "57mm Anti-tank Gun M1",
       "source": "Armies of the United States (v3) - page 53",
       "period": "M/L",
-      "image": "images/units/US-57mm-AT.png",
+      "image": "images/units/usa/US-57mm-AT.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-57mm-AT.png",
       "sections": [
         "Artillery"
@@ -11746,7 +11746,7 @@
       "name": "3-inch Anti-tank Gun M5",
       "source": "Armies of the United States (v3) - page 53",
       "period": "M/L",
-      "image": "images/units/US-3-inch-AT.png",
+      "image": "images/units/usa/US-3-inch-AT.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-3-inch-AT.png",
       "sections": [
         "Artillery"
@@ -11978,7 +11978,7 @@
       "name": "M3 Stuart Light Tank",
       "source": "Armies of the United States (v3) - page 54",
       "period": "E/M",
-      "image": "images/units/US-M3-Stuart.png",
+      "image": "images/units/usa/US-M3-Stuart.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-Stuart.png",
       "sections": [
         "Command Vehicle",
@@ -12111,7 +12111,7 @@
       "name": "M3A1 Stuart Light Tank",
       "source": "Armies of the United States (v3) - page 55",
       "period": "M/L",
-      "image": "images/units/US-M3A1-Stuart.png",
+      "image": "images/units/usa/US-M3A1-Stuart.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3A1-Stuart.png",
       "sections": [
         "Command Vehicle",
@@ -12421,7 +12421,7 @@
       "name": "M5/M5A1 Stuart",
       "source": "Armies of the United States (v3) - page 56",
       "period": "M/L",
-      "image": "images/units/US-M5-Stuart.png",
+      "image": "images/units/usa/US-M5-Stuart.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M5-Stuart.png",
       "sections": [
         "Command Vehicle",
@@ -12617,7 +12617,7 @@
       "name": "M7-7 Mechanised Flamethrower",
       "source": "Armies of the United States (v3) - page 56",
       "period": "L",
-      "image": "images/units/US-M5-Stuart-flamethrower.png",
+      "image": "images/units/usa/US-M5-Stuart-flamethrower.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M5-Stuart-flamethrower.png",
       "sections": [
         "Command Vehicle",
@@ -12685,7 +12685,7 @@
       "name": "M24 Chaffee Light Tank",
       "source": "Armies of the United States (v3) - page 57",
       "period": "L",
-      "image": "images/units/US-M24-Chaffee.png",
+      "image": "images/units/usa/US-M24-Chaffee.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M24-Chaffee.png",
       "sections": [
         "Command Vehicle",
@@ -12803,7 +12803,7 @@
       "name": "M3 Lee/Grant Medium Tank",
       "source": "Armies of the United States (v3) - page 57",
       "period": "E/M",
-      "image": "images/units/US-M3-Lee.png",
+      "image": "images/units/usa/US-M3-Lee.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-Lee.png",
       "sections": [
         "Command Vehicle",
@@ -13136,7 +13136,7 @@
       "name": "M4 Sherman 75mm",
       "source": "Armies of the United States (v3) - page 59",
       "period": "M",
-      "image": "images/units/US-M4-Sherman.png",
+      "image": "images/units/usa/US-M4-Sherman.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M4-Sherman.png",
       "sections": [
         "Command Vehicle",
@@ -13253,7 +13253,7 @@
       "name": "M4A1/A2/A3/A4 Sherman 75mm",
       "source": "Armies of the United States (v3) - page 60",
       "period": "M/L",
-      "image": "images/units/US-M4A3-75mm-Sherman.png",
+      "image": "images/units/usa/US-M4A3-75mm-Sherman.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M4A3-75mm-Sherman.png",
       "sections": [
         "Command Vehicle",
@@ -13416,7 +13416,7 @@
       "name": "M4A1/A2/A3 Sherman 76mm",
       "source": "Armies of the United States (v3) - page 60",
       "period": "L",
-      "image": "images/units/US-M4A3-76mm-Sherman.png",
+      "image": "images/units/usa/US-M4A3-76mm-Sherman.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M4A3-76mm-Sherman.png",
       "sections": [
         "Command Vehicle",
@@ -13552,7 +13552,7 @@
       "name": "M4A3E2 Sherman 'Jumbo' Heavy Assault Tank",
       "source": "Armies of the United States (v3) - page 61",
       "period": "L",
-      "image": "images/units/US-M4A3E2-Jumbo.png",
+      "image": "images/units/usa/US-M4A3E2-Jumbo.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M4A3E2-Jumbo.png",
       "sections": [
         "Command Vehicle",
@@ -13975,7 +13975,7 @@
       "name": "M4 Sherman T34 Calliope",
       "source": "Armies of the United States (v3) - page 63",
       "period": "L",
-      "image": "images/units/US-Sherman-Calliope.png",
+      "image": "images/units/usa/US-Sherman-Calliope.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Sherman-Calliope.png",
       "sections": [
         "Command Vehicle",
@@ -14237,7 +14237,7 @@
       "name": "Sherman Crocodile",
       "source": "Armies of the United States (v3) - page 64",
       "period": "L",
-      "image": "images/units/US-Sherman-crocodile.png",
+      "image": "images/units/usa/US-Sherman-crocodile.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Sherman-crocodile.png",
       "sections": [
         "Command Vehicle",
@@ -14346,7 +14346,7 @@
       "name": "DD Sherman",
       "source": "Armies of the United States (v3) - page 64",
       "period": "L",
-      "image": "images/units/US-Sherman-DD.png",
+      "image": "images/units/usa/US-Sherman-DD.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Sherman-DD.png",
       "sections": [
         "Command Vehicle",
@@ -14569,7 +14569,7 @@
       "name": "M26 Pershing Heavy Tank",
       "source": "Armies of the United States (v3) - page 65",
       "period": "L",
-      "image": "images/units/US-M26-Pershing.png",
+      "image": "images/units/usa/US-M26-Pershing.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M26-Pershing.png",
       "sections": [
         "Command Vehicle",
@@ -14971,7 +14971,7 @@
       "name": "M6 Gun Motor Carriage",
       "source": "Armies of the United States (v3) - page 68",
       "period": "E/M",
-      "image": "images/units/US-M6-GMC.png",
+      "image": "images/units/usa/US-M6-GMC.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M6-GMC.png",
       "sections": [
         "Command Vehicle",
@@ -15125,7 +15125,7 @@
       "name": "M10 Tank Destroyer",
       "source": "Armies of the United States (v3) - page 69",
       "period": "M/L",
-      "image": "images/units/US-M10.png",
+      "image": "images/units/usa/US-M10.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M10.png",
       "sections": [
         "Command Vehicle",
@@ -15204,7 +15204,7 @@
       "name": "M18 Hellcat",
       "source": "Armies of the United States (v3) - page 70",
       "period": "L",
-      "image": "images/units/US-M18.png",
+      "image": "images/units/usa/US-M18.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M18.png",
       "sections": [
         "Command Vehicle",
@@ -15304,7 +15304,7 @@
       "name": "M36 Jackson",
       "source": "Armies of the United States (v3) - page 70",
       "period": "L",
-      "image": "images/units/US-M36.png",
+      "image": "images/units/usa/US-M36.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M36.png",
       "sections": [
         "Command Vehicle",
@@ -15383,7 +15383,7 @@
       "name": "M36B1 Jackson",
       "source": "Armies of the United States (v3) - page 70",
       "period": "L",
-      "image": "images/units/US-M36B1.png",
+      "image": "images/units/usa/US-M36B1.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M36B1.png",
       "sections": [
         "Command Vehicle",
@@ -15471,7 +15471,7 @@
       "name": "M8 Scott",
       "source": "Armies of the United States (v3) - page 71",
       "period": "M/L",
-      "image": "images/units/US-M8-Scott.png",
+      "image": "images/units/usa/US-M8-Scott.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M8-Scott.png",
       "sections": [
         "Command Vehicle",
@@ -15536,7 +15536,7 @@
       "name": "M7 Priest",
       "source": "Armies of the United States (v3) - page 72",
       "period": "M/L",
-      "image": "images/units/US-M7-Priest.png",
+      "image": "images/units/usa/US-M7-Priest.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M7-Priest.png",
       "sections": [
         "Command Vehicle",
@@ -15983,7 +15983,7 @@
       "name": "M21 Mortar Carrier",
       "source": "Armies of the United States (v3) - page 74",
       "period": "M/L",
-      "image": "images/units/US-M21-mortar.png",
+      "image": "images/units/usa/US-M21-mortar.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M21-mortar.png",
       "sections": [
         "Command Vehicle",
@@ -16109,7 +16109,7 @@
       "name": "LVT(A)4 Landing Vehicle",
       "source": "Armies of the United States (v3) - page 74",
       "period": "L",
-      "image": "images/units/US-LVT(A)4.png",
+      "image": "images/units/usa/US-LVT(A)4.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-LVT(A)4.png",
       "sections": [
         "Command Vehicle",
@@ -16297,7 +16297,7 @@
       "name": "M15 Multiple Gun Motor Carriage",
       "source": "Armies of the United States (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/US-M15-MGMC.png",
+      "image": "images/units/usa/US-M15-MGMC.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M15-MGMC.png",
       "sections": [
         "Command Vehicle",
@@ -16365,7 +16365,7 @@
       "name": "M16 Multiple Gun Motor Carriage",
       "source": "Armies of the United States (v3) - page 76",
       "period": "M/L",
-      "image": "images/units/US-M16-MGMC.png",
+      "image": "images/units/usa/US-M16-MGMC.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M16-MGMC.png",
       "sections": [
         "Command Vehicle",
@@ -16423,7 +16423,7 @@
       "name": "Quad 50 Gun Truck",
       "source": "Armies of the United States (v3) - page 76",
       "period": "M/L",
-      "image": "images/units/US-Quad-50-gun-truck.png",
+      "image": "images/units/usa/US-Quad-50-gun-truck.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Quad-50-gun-truck.png",
       "sections": [
         "Command Vehicle",
@@ -16480,7 +16480,7 @@
       "name": "M8 Greyhound",
       "source": "Armies of the United States (v3) - page 77",
       "period": "M/L",
-      "image": "images/units/US-M8-Greyhound.png",
+      "image": "images/units/usa/US-M8-Greyhound.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M8-Greyhound.png",
       "sections": [
         "Command Vehicle",
@@ -16569,7 +16569,7 @@
       "name": "M20 Scout Car",
       "source": "Armies of the United States (v3) - page 78",
       "period": "M/L",
-      "image": "images/units/US-M20-Scout-car.png",
+      "image": "images/units/usa/US-M20-Scout-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M20-Scout-car.png",
       "sections": [
         "Command Vehicle",
@@ -16649,7 +16649,7 @@
       "name": "Reconnaissance Jeep",
       "source": "Armies of the United States (v3) - page 78",
       "period": "L",
-      "image": "images/units/US-Recon-jeep.png",
+      "image": "images/units/usa/US-Recon-jeep.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-Recon-jeep.png",
       "sections": [
         "Command Vehicle",
@@ -16837,7 +16837,7 @@
       "name": "M3 White Scout Car (Recce)",
       "source": "Armies of the United States (v3) - page 80",
       "period": "E/M/L",
-      "image": "images/units/US-M3-White-Scout-car.png",
+      "image": "images/units/usa/US-M3-White-Scout-car.png",
       "remoteImage": "https://wg.easyarmy.com/Content/BoltAction/images/US-M3-White-Scout-car.png",
       "sections": [
         "Command Vehicle",

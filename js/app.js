@@ -42,6 +42,23 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
         });
         const [draggedSlot, setDraggedSlot] = useState(null);
         const [isExportModalOpen, setIsExportModalOpen] = useState(false);
+        const [exportOptions, setExportOptions] = useState(() => {
+          try {
+            const saved = localStorage.getItem('boltaction.export_options');
+            if (saved) return JSON.parse(saved);
+          } catch (_) {}
+          return {
+            includeUnitRules: true,
+            includeArmyRules: true,
+          };
+        });
+
+        useEffect(() => {
+          try {
+            localStorage.setItem('boltaction.export_options', JSON.stringify(exportOptions));
+          } catch (_) {}
+        }, [exportOptions]);
+
         const [armyListName, setArmyListName] = useState("");
         const [armyNotes, setArmyNotes] = useState("");
         const [toast, setToast] = useState(null);
@@ -917,6 +934,8 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
               platoons={platoons}
               onDirectPDFDownload={handleDirectPDFDownload}
               isGeneratingPdf={isGeneratingPdf}
+              exportOptions={exportOptions}
+              setExportOptions={setExportOptions}
             />
 
             {/* PRINT-ONLY ROSTER */}
@@ -929,6 +948,7 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
                 totalOrderDice={totalOrderDice}
                 platoons={platoons}
                 isPreview={false}
+                exportOptions={exportOptions}
               />
             </div>
           </div>

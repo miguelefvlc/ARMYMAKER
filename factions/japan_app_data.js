@@ -3230,7 +3230,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Platoon Commander",
       "page": "Armies of Imperial Japan (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/Japan-platoon-commander.png",
+      "image": "images/units/japan/Japan-platoon-commander.png",
       "sections": [
         "Platoon Commander"
       ],
@@ -3565,7 +3565,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "IJA Infantry Squad (Early/Mid-war)",
       "page": "Armies of Imperial Japan (v3) - page 29",
       "period": "E/M",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -3769,7 +3769,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "IJA Infantry Squad (Late-war)",
       "page": "Armies of Imperial Japan (v3) - page 29",
       "period": "L",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4005,7 +4005,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "IJA Grenadier Squad",
       "page": "Armies of Imperial Japan (v3) - page 30",
       "period": "E/M",
-      "image": "images/units/Japan-grenadiers.png",
+      "image": "images/units/japan/Japan-grenadiers.png",
       "sections": [
         "Infantry"
       ],
@@ -4226,7 +4226,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "SNLF Squad (Early/Mid-war)",
       "page": "Armies of Imperial Japan (v3) - page 31",
       "period": "E/M",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4395,7 +4395,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "SNLF Squad (Late-war)",
       "page": "Armies of Imperial Japan (v3) - page 31",
       "period": "L",
-      "image": "images/units/Japan-infantry.png",
+      "image": "images/units/japan/Japan-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4596,7 +4596,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "SNLF Grenadier Squad",
       "page": "Armies of Imperial Japan (v3) - page 31",
       "period": "E/M",
-      "image": "images/units/Japan-grenadiers.png",
+      "image": "images/units/japan/Japan-grenadiers.png",
       "sections": [
         "Infantry"
       ],
@@ -4782,7 +4782,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "IJA Paratrooper Squad",
       "page": "Armies of Imperial Japan (v3) - page 32",
       "period": "M/L",
-      "image": "images/units/Japan-paratrooper-IJA.png",
+      "image": "images/units/japan/Japan-paratrooper-IJA.png",
       "sections": [
         "Infantry"
       ],
@@ -5315,7 +5315,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Japanese/Manchukuoan Cavalry Squad",
       "page": "Armies of Imperial Japan (v3) - page 33",
       "period": "E/M/L",
-      "image": "images/units/Japan-cavalry.png",
+      "image": "images/units/japan/Japan-cavalry.png",
       "sections": [
         "Infantry"
       ],
@@ -5545,7 +5545,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Bamboo Spear Fighters - Boeitai Squad",
       "page": "Armies of Imperial Japan (v3) - page 35",
       "period": "L",
-      "image": "images/units/Japan-spear-fighters.png",
+      "image": "images/units/japan/Japan-spear-fighters.png",
       "sections": [
         "Infantry"
       ],
@@ -6028,7 +6028,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Company Commander",
       "page": "Armies of Imperial Japan (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/Japan-company-commander.png",
+      "image": "images/units/japan/Japan-company-commander.png",
       "sections": [
         "Company Commander"
       ],
@@ -6363,7 +6363,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Kempeitai Officer",
       "page": "Armies of Imperial Japan (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/Japan-platoon-commander.png",
+      "image": "images/units/japan/Japan-platoon-commander.png",
       "sections": [
         "Political Officer"
       ],
@@ -6756,7 +6756,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Artillery Forward Observer",
       "page": "Armies of Imperial Japan (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/Japan-observer.png",
+      "image": "images/units/japan/Japan-observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -6997,7 +6997,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Air Force Forward Observer",
       "page": "Armies of Imperial Japan (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/Japan-observer.png",
+      "image": "images/units/japan/Japan-observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -7244,7 +7244,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Sniper Team",
       "page": "Armies of Imperial Japan (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/Japan-Sniper-team.png",
+      "image": "images/units/japan/Japan-Sniper-team.png",
       "sections": [
         "Sniper"
       ],
@@ -7395,7 +7395,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Lone Sniper",
       "page": "Armies of Imperial Japan (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/Japan-lone-sniper.png",
+      "image": "images/units/japan/Japan-lone-sniper.png",
       "sections": [
         "Sniper"
       ],
@@ -7589,7 +7589,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Anti-tank Rifle Team",
       "page": "Armies of Imperial Japan (v3) - page 40",
       "period": "E/M/L",
-      "image": "images/units/Japan-AT-rifle.png",
+      "image": "images/units/japan/Japan-AT-rifle.png",
       "sections": [
         "Anti-tank"
       ],
@@ -7775,7 +7775,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Suicide Anti-tank Team - Nikuhaku",
       "page": "Armies of Imperial Japan (v3) - page 40",
       "period": "M/L",
-      "image": "images/units/Japan-suicide-AT.png",
+      "image": "images/units/japan/Japan-suicide-AT.png",
       "sections": [
         "Anti-tank"
       ],
@@ -7845,7 +7845,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Suicide Anti-infantry Team - Kirikomi Tai",
       "page": "Armies of Imperial Japan (v3) - page 41",
       "period": "M/L",
-      "image": "images/units/Japan-suicide-infantry.png",
+      "image": "images/units/japan/Japan-suicide-infantry.png",
       "sections": [
         "Anti-tank"
       ],
@@ -8098,7 +8098,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Light Mortar Team",
       "page": "Armies of Imperial Japan (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/Japan-light-mortar.png",
+      "image": "images/units/japan/Japan-light-mortar.png",
       "sections": [
         "Light mortar",
         "Heavy Weapons",
@@ -8289,7 +8289,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "General-purpose Truck",
       "page": "Armies of Imperial Japan (v3) - page 67",
       "period": "E/M/L",
-      "image": "images/units/Japan-truck.png",
+      "image": "images/units/japan/Japan-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8360,7 +8360,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Light Truck",
       "page": "Armies of Imperial Japan (v3) - page 70",
       "period": "E/M/L",
-      "image": "images/units/Japan-truck.png",
+      "image": "images/units/japan/Japan-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8716,7 +8716,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 95 Kurogane",
       "page": "Armies of Imperial Japan (v3) - page 71",
       "period": "E/M/L",
-      "image": "images/units/Japan-Kurogane.png",
+      "image": "images/units/japan/Japan-Kurogane.png",
       "sections": [
         "Transports"
       ],
@@ -9626,7 +9626,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Soko Sagyo SS-KI Armoured Work Vehicle",
       "page": "Armies of Imperial Japan (v3) - page 61",
       "period": "E/M/L",
-      "image": "images/units/Japan-SS-Ki.png",
+      "image": "images/units/japan/Japan-SS-Ki.png",
       "sections": [
         "Engineers",
         "Command Vehicle",
@@ -9764,7 +9764,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Flamethrower Team",
       "page": "Armies of Imperial Japan (v3) - page 42",
       "period": "E/M/L",
-      "image": "images/units/Japan-flamethrower.png",
+      "image": "images/units/japan/Japan-flamethrower.png",
       "sections": [
         "Flamethrower"
       ],
@@ -10007,7 +10007,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Medium Machine Gun Team",
       "page": "Armies of Imperial Japan (v3) - page 39",
       "period": "E/M/L",
-      "image": "images/units/Japan-MMG.png",
+      "image": "images/units/japan/Japan-MMG.png",
       "sections": [
         "Heavy Weapons",
         "Machine Gun"
@@ -10174,7 +10174,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Medium Mortar Team",
       "page": "Armies of Imperial Japan (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/Japan-medium-mortar.png",
+      "image": "images/units/japan/Japan-medium-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -10366,7 +10366,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Heavy Mortar Team",
       "page": "Armies of Imperial Japan (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/Japan-Heavy-mortar.png",
+      "image": "images/units/japan/Japan-Heavy-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -10473,7 +10473,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 92 70mm Battalion Gun (Early-war)",
       "page": "Armies of Imperial Japan (v3) - page 45",
       "period": "E",
-      "image": "images/units/Japan-Type-92-70mm.png",
+      "image": "images/units/japan/Japan-Type-92-70mm.png",
       "sections": [
         "Artillery"
       ],
@@ -10639,7 +10639,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 92 70mm Battalion Gun (Mid/Late-war)",
       "page": "Armies of Imperial Japan (v3) - page 45",
       "period": "M/L",
-      "image": "images/units/Japan-Type-92-70mm.png",
+      "image": "images/units/japan/Japan-Type-92-70mm.png",
       "sections": [
         "Artillery"
       ],
@@ -11454,7 +11454,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Medium Artillery",
       "page": "Armies of Imperial Japan (v3) - page 46",
       "period": "E/M/L",
-      "image": "images/units/Japan-105mm-howitzer.png",
+      "image": "images/units/japan/Japan-105mm-howitzer.png",
       "sections": [
         "Artillery"
       ],
@@ -11887,7 +11887,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 98 20mm AA Gun",
       "page": "Armies of Imperial Japan (v3) - page 47",
       "period": "E/M/L",
-      "image": "images/units/Japan-Type-98-20mm.png",
+      "image": "images/units/japan/Japan-Type-98-20mm.png",
       "sections": [
         "Artillery"
       ],
@@ -12683,7 +12683,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 1 47mm Anti-tank Gun",
       "page": "Armies of Imperial Japan (v3) - page 49",
       "period": "M/L",
-      "image": "images/units/Japan-47mm-AT.png",
+      "image": "images/units/japan/Japan-47mm-AT.png",
       "sections": [
         "Artillery"
       ],
@@ -12901,7 +12901,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Mule Team",
       "page": "Armies of Imperial Japan (v3) - page 73",
       "period": "E/M/L",
-      "image": "images/units/British-mule-team.png",
+      "image": "images/units/japan/British-mule-team.png",
       "sections": [
         "Tows"
       ],
@@ -13136,7 +13136,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 95 Ha-Go Light Tank",
       "page": "Armies of Imperial Japan (v3) - page 51",
       "period": "E/M/L",
-      "image": "images/units/Japan-Ha-Go.png",
+      "image": "images/units/japan/Japan-Ha-Go.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13387,7 +13387,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 4 Ke-Nu Light Tank",
       "page": "Armies of Imperial Japan (v3) - page 52",
       "period": "L",
-      "image": "images/units/Japan-Ke-Nu.png",
+      "image": "images/units/japan/Japan-Ke-Nu.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13571,7 +13571,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 97 Chi-Ha Medium Tank",
       "page": "Armies of Imperial Japan (v3) - page 53",
       "period": "E/M/L",
-      "image": "images/units/Japan-Chi-Ha.png",
+      "image": "images/units/japan/Japan-Chi-Ha.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13659,7 +13659,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 97 Chi-Ha - Dug In",
       "page": "Armies of Imperial Japan (v3) - page 54",
       "period": "M/L",
-      "image": "images/units/Japan-dug-in-Chi-Ha.png",
+      "image": "images/units/japan/Japan-dug-in-Chi-Ha.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14083,7 +14083,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 3 Chi-Nu Medium Tank",
       "page": "Armies of Imperial Japan (v3) - page 58",
       "period": "L",
-      "image": "images/units/Japan-Chi-Nu.png",
+      "image": "images/units/japan/Japan-Chi-Nu.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14154,7 +14154,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 2 Ka-Mi Light Amphibious Tank",
       "page": "Armies of Imperial Japan (v3) - page 58",
       "period": "M/L",
-      "image": "images/units/Japan-Ka-mi.png",
+      "image": "images/units/japan/Japan-Ka-mi.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14373,7 +14373,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 1 Ho-Ni Tank Destroyer",
       "page": "Armies of Imperial Japan (v3) - page 59",
       "period": "L",
-      "image": "images/units/Japan-Ho-Ni.png",
+      "image": "images/units/japan/Japan-Ho-Ni.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14498,7 +14498,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 3 Ho-Ni III Tank Destroyer",
       "page": "Armies of Imperial Japan (v3) - page 59",
       "period": "L",
-      "image": "images/units/Japan-Ho-Ni-III.png",
+      "image": "images/units/japan/Japan-Ho-Ni-III.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14560,7 +14560,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 4 Ho-Ro Assault Gun",
       "page": "Armies of Imperial Japan (v3) - page 60",
       "period": "L",
-      "image": "images/units/Japan-Ho-Ro.png",
+      "image": "images/units/japan/Japan-Ho-Ro.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14774,7 +14774,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 91 So-Mo",
       "page": "Armies of Imperial Japan (v3) - page 62",
       "period": "E/M/L",
-      "image": "images/units/Japan-So-Mo.png",
+      "image": "images/units/japan/Japan-So-Mo.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14841,7 +14841,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 94 Tankette",
       "page": "Armies of Imperial Japan (v3) - page 63",
       "period": "E/M/L",
-      "image": "images/units/Japan-Type-94-tankette.png",
+      "image": "images/units/japan/Japan-Type-94-tankette.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15279,7 +15279,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 98 AA Truck",
       "page": "Armies of Imperial Japan (v3) - page 67",
       "period": "E/M/L",
-      "image": "images/units/Japan-AA-truck.png",
+      "image": "images/units/japan/Japan-AA-truck.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15355,7 +15355,7 @@ window.EASYARMY_FACTIONS['japan'] = {
       "cardTitle": "Type 95 Kurogane (no transport)",
       "page": "Armies of Imperial Japan (v3) - page 71",
       "period": "E/M/L",
-      "image": "images/units/Japan-Kurogane.png",
+      "image": "images/units/japan/Japan-Kurogane.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"

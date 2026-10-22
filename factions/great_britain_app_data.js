@@ -4127,7 +4127,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Platoon Commander",
       "page": "Armies of Great Britain (v3) - page 25",
       "period": "E/M/L",
-      "image": "images/units/British-platoon-commander.png",
+      "image": "images/units/great_britain/British-platoon-commander.png",
       "sections": [
         "Platoon Commander"
       ],
@@ -4479,7 +4479,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Rifle Section",
       "page": "Armies of Great Britain (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/British-infantry.png",
+      "image": "images/units/great_britain/British-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4619,7 +4619,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Home Guard Section",
       "page": "Armies of Great Britain (v3) - page 29",
       "period": "E/M",
-      "image": "images/units/British-Local-Defence-Force.png",
+      "image": "images/units/great_britain/British-Local-Defence-Force.png",
       "sections": [
         "Infantry"
       ],
@@ -4821,7 +4821,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Airborne Section",
       "page": "Armies of Great Britain (v3) - page 30",
       "period": "M/L",
-      "image": "images/units/British-airborne.png",
+      "image": "images/units/great_britain/British-airborne.png",
       "sections": [
         "Infantry"
       ],
@@ -5173,7 +5173,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Chindit Section",
       "page": "Armies of Great Britain (v3) - page 31",
       "period": "M/L",
-      "image": "images/units/British-Chindits.png",
+      "image": "images/units/great_britain/British-Chindits.png",
       "sections": [
         "Infantry"
       ],
@@ -5308,7 +5308,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Commando Subsection",
       "page": "Armies of Great Britain (v3) - page 32",
       "period": "E/M/L",
-      "image": "images/units/British-commandos.png",
+      "image": "images/units/great_britain/British-commandos.png",
       "sections": [
         "Infantry"
       ],
@@ -5833,7 +5833,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "SAS Infantry Section",
       "page": "Armies of Great Britain (v3) - page 35",
       "period": "M/L",
-      "image": "images/units/British-SAS.png",
+      "image": "images/units/great_britain/British-SAS.png",
       "sections": [
         "Infantry"
       ],
@@ -6196,7 +6196,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Company Commander",
       "page": "Armies of Great Britain (v3) - page 25",
       "period": "E/M/L",
-      "image": "images/units/British-company-commander.png",
+      "image": "images/units/great_britain/British-company-commander.png",
       "sections": [
         "Company Commander"
       ],
@@ -6548,7 +6548,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Medic",
       "page": "Armies of Great Britain (v3) - page 26",
       "period": "E/M/L",
-      "image": "images/units/British-medic.png",
+      "image": "images/units/great_britain/British-medic.png",
       "sections": [
         "Medic"
       ],
@@ -6758,7 +6758,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Field Ambulance",
       "page": "Armies of Great Britain (v3) - page 96",
       "period": "E/M/L",
-      "image": "images/units/British-ambulance.png",
+      "image": "images/units/great_britain/British-ambulance.png",
       "sections": [
         "Medic"
       ],
@@ -7048,7 +7048,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Artillery Forward Observer",
       "page": "Armies of Great Britain (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/British-observer.png",
+      "image": "images/units/great_britain/British-observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -7339,7 +7339,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Air Force Forward Observer",
       "page": "Armies of Great Britain (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/British-observer.png",
+      "image": "images/units/great_britain/British-observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -7630,7 +7630,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Sniper Team",
       "page": "Armies of Great Britain (v3) - page 39",
       "period": "E/M/L",
-      "image": "images/units/British-sniper.png",
+      "image": "images/units/great_britain/British-sniper.png",
       "sections": [
         "Sniper"
       ],
@@ -7829,7 +7829,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Boys Anti-tank Rifle Team",
       "page": "Armies of Great Britain (v3) - page 38",
       "period": "E/M",
-      "image": "images/units/British-Anti-tank-rifle.png",
+      "image": "images/units/great_britain/British-Anti-tank-rifle.png",
       "sections": [
         "Anti-tank"
       ],
@@ -8020,7 +8020,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Blacker Bombard Anti-tank Team",
       "page": "Armies of Great Britain (v3) - page 38",
       "period": "M",
-      "image": "images/units/British-Blackard-Bomber.png",
+      "image": "images/units/great_britain/British-Blackard-Bomber.png",
       "sections": [
         "Anti-tank"
       ],
@@ -8085,7 +8085,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "PIAT Anti-tank Team",
       "page": "Armies of Great Britain (v3) - page 39",
       "period": "M/L",
-      "image": "images/units/British-PIAT.png",
+      "image": "images/units/great_britain/British-PIAT.png",
       "sections": [
         "Anti-tank"
       ],
@@ -8281,7 +8281,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Light Mortar Team",
       "page": "Armies of Great Britain (v3) - page 41",
       "period": "E/M/L",
-      "image": "images/units/British-light-mortar.png",
+      "image": "images/units/great_britain/British-light-mortar.png",
       "sections": [
         "Light mortar",
         "Heavy Weapons",
@@ -8524,7 +8524,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Jeep",
       "page": "Armies of Great Britain (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/British-jeep.png",
+      "image": "images/units/great_britain/British-jeep.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8576,7 +8576,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Bren Carrier",
       "page": "Armies of Great Britain (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/British-universal-carrier.png",
+      "image": "images/units/great_britain/British-universal-carrier.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8691,7 +8691,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "3-ton Trucks",
       "page": "Armies of Great Britain (v3) - page 89",
       "period": "E/M/L",
-      "image": "images/units/British-3-ton-truck.png",
+      "image": "images/units/great_britain/British-3-ton-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8786,7 +8786,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "30cwt Trucks",
       "page": "Armies of Great Britain (v3) - page 90",
       "period": "E/M/L",
-      "image": "images/units/British-30cwt-truck.png",
+      "image": "images/units/great_britain/British-30cwt-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8881,7 +8881,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "15cwt Trucks",
       "page": "Armies of Great Britain (v3) - page 90",
       "period": "E/M/L",
-      "image": "images/units/British-15cwt-truck.png",
+      "image": "images/units/great_britain/British-15cwt-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8933,7 +8933,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Utility Cars",
       "page": "Armies of Great Britain (v3) - page 90",
       "period": "E/M/L",
-      "image": "images/units/British-car.png",
+      "image": "images/units/great_britain/British-car.png",
       "sections": [
         "Transports"
       ],
@@ -8983,7 +8983,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M5 Half-track",
       "page": "Armies of Great Britain (v3) - page 91",
       "period": "M/L",
-      "image": "images/units/British-M5-Half-track.png",
+      "image": "images/units/great_britain/British-M5-Half-track.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9093,7 +9093,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M3 White Scout Car",
       "page": "Armies of Great Britain (v3) - page 91",
       "period": "E/M/L",
-      "image": "images/units/British-White-scout-car.png",
+      "image": "images/units/great_britain/British-White-scout-car.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9322,7 +9322,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Priest Kangaroo",
       "page": "Armies of Great Britain (v3) - page 92",
       "period": "L",
-      "image": "images/units/British-Priest-Kangaroo.png",
+      "image": "images/units/great_britain/British-Priest-Kangaroo.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9423,7 +9423,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Sherman and Ram Kangaroo",
       "page": "Armies of Great Britain (v3) - page 93",
       "period": "L",
-      "image": "images/units/British-Ram-Kangaroo.png",
+      "image": "images/units/great_britain/British-Ram-Kangaroo.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9524,7 +9524,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "LVT 4 Buffalo",
       "page": "Armies of Great Britain (v3) - page 93",
       "period": "L",
-      "image": "images/units/British-LVT4-Buffalo.png",
+      "image": "images/units/great_britain/British-LVT4-Buffalo.png",
       "sections": [
         "Transports"
       ],
@@ -9714,7 +9714,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Dorchester Command Truck (Guy Lizard)",
       "page": "Armies of Great Britain (v3) - page 95",
       "period": "E/M",
-      "image": "images/units/British-Guy-Lizard.png",
+      "image": "images/units/great_britain/British-Guy-Lizard.png",
       "sections": [
         "Transports",
         "Tows",
@@ -9774,7 +9774,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Landing Craft, Assault",
       "page": "Armies of Great Britain (v3) - page 95",
       "period": "E/M/L",
-      "image": "images/units/British-LCA.png",
+      "image": "images/units/great_britain/British-LCA.png",
       "sections": [
         "Transports"
       ],
@@ -9938,7 +9938,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Landing Craft, Mechanized",
       "page": "Armies of Great Britain (v3) - page 95",
       "period": "E/M/L",
-      "image": "images/units/British-LCM.png",
+      "image": "images/units/great_britain/British-LCM.png",
       "sections": [
         "Transports"
       ],
@@ -10509,7 +10509,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Flamethrower Team",
       "page": "Armies of Great Britain (v3) - page 40",
       "period": "E/M/L",
-      "image": "images/units/British-flamethrower.png",
+      "image": "images/units/great_britain/British-flamethrower.png",
       "sections": [
         "Flamethrower"
       ],
@@ -10772,7 +10772,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Medium Machine Gun Team",
       "page": "Armies of Great Britain (v3) - page 37",
       "period": "E/M/L",
-      "image": "images/units/British-MMG.png",
+      "image": "images/units/great_britain/British-MMG.png",
       "sections": [
         "Heavy Weapons",
         "Machine Gun"
@@ -10969,7 +10969,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Medium Mortar Team",
       "page": "Armies of Great Britain (v3) - page 41",
       "period": "E/M/L",
-      "image": "images/units/British-Medium-Mortar.png",
+      "image": "images/units/great_britain/British-Medium-Mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -11191,7 +11191,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Heavy Mortar Team",
       "page": "Armies of Great Britain (v3) - page 42",
       "period": "M/L",
-      "image": "images/units/British-heavy-mortar.png",
+      "image": "images/units/great_britain/British-heavy-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -11319,7 +11319,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Light Artillery",
       "page": "Armies of Great Britain (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/British-25-pdr.png",
+      "image": "images/units/great_britain/British-25-pdr.png",
       "sections": [
         "Artillery"
       ],
@@ -11488,7 +11488,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Medium Artillery",
       "page": "Armies of Great Britain (v3) - page 44",
       "period": "E/M/L",
-      "image": "images/units/British-medium-artillery.png",
+      "image": "images/units/great_britain/British-medium-artillery.png",
       "sections": [
         "Artillery"
       ],
@@ -11747,7 +11747,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "QF 2-pdr",
       "page": "Armies of Great Britain (v3) - page 46",
       "period": "E/M/L",
-      "image": "images/units/British-2pdr.png",
+      "image": "images/units/great_britain/British-2pdr.png",
       "sections": [
         "Artillery"
       ],
@@ -11859,7 +11859,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "QF 6-pdr",
       "page": "Armies of Great Britain (v3) - page 47",
       "period": "M/L",
-      "image": "images/units/British-6-pdr.png",
+      "image": "images/units/great_britain/British-6-pdr.png",
       "sections": [
         "Artillery"
       ],
@@ -12003,7 +12003,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "QF 17-pdr",
       "page": "Armies of Great Britain (v3) - page 48",
       "period": "M/L",
-      "image": "images/units/British-17pdr.png",
+      "image": "images/units/great_britain/British-17pdr.png",
       "sections": [
         "Artillery"
       ],
@@ -12105,7 +12105,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "20mm Oerlikon/Polsten Cannon",
       "page": "Armies of Great Britain (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/British-polsten-gun.png",
+      "image": "images/units/great_britain/British-polsten-gun.png",
       "sections": [
         "Artillery"
       ],
@@ -12283,7 +12283,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "40mm Bofors Gun",
       "page": "Armies of Great Britain (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/British-Bofors.png",
+      "image": "images/units/great_britain/British-Bofors.png",
       "sections": [
         "Artillery"
       ],
@@ -12485,7 +12485,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Quad Tractor",
       "page": "Armies of Great Britain (v3) - page 91",
       "period": "E/M/L",
-      "image": "images/units/British-quad-tractor-and-25pdr.png",
+      "image": "images/units/great_britain/British-quad-tractor-and-25pdr.png",
       "sections": [
         "Tows"
       ],
@@ -12626,7 +12626,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Mule Team",
       "page": "Armies of Great Britain (v3) - page 94",
       "period": "E/M/L",
-      "image": "images/units/British-mule-team.png",
+      "image": "images/units/great_britain/British-mule-team.png",
       "sections": [
         "Tows"
       ],
@@ -12928,7 +12928,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Light Tank Mk II-VI B & India Pattern",
       "page": "Armies of Great Britain (v3) - page 52",
       "period": "E/M",
-      "image": "images/units/British-Vicker-VIB.png",
+      "image": "images/units/great_britain/British-Vicker-VIB.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -12996,7 +12996,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Light Tank Mk VI C & India Pattern",
       "page": "Armies of Great Britain (v3) - page 52",
       "period": "E/M",
-      "image": "images/units/British-Vicker-VIc.png",
+      "image": "images/units/great_britain/British-Vicker-VIc.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13166,7 +13166,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Light Tank Mk VII Tetrarch",
       "page": "Armies of Great Britain (v3) - page 53",
       "period": "M/L",
-      "image": "images/units/British-Tetrarch.png",
+      "image": "images/units/great_britain/British-Tetrarch.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13304,7 +13304,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "A9 Cruiser Tank Mk I",
       "page": "Armies of Great Britain (v3) - page 53",
       "period": "E",
-      "image": "images/units/British-A9-Mk-1.png",
+      "image": "images/units/great_britain/British-A9-Mk-1.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13487,7 +13487,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "A10 Cruiser Tank Mk II, IIA & IICS",
       "page": "Armies of Great Britain (v3) - page 54",
       "period": "E",
-      "image": "images/units/British-A10-Cruiser-Mk-II.png",
+      "image": "images/units/great_britain/British-A10-Cruiser-Mk-II.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13659,7 +13659,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "A13 Cruiser Tank Mk III",
       "page": "Armies of Great Britain (v3) - page 54",
       "period": "E",
-      "image": "images/units/British-A13-Cruiser-Mk-III.png",
+      "image": "images/units/great_britain/British-A13-Cruiser-Mk-III.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13777,7 +13777,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "A13 Mk II, Cruiser Tank Mk IV & IVA",
       "page": "Armies of Great Britain (v3) - page 55",
       "period": "E",
-      "image": "images/units/British-A13-Cruiser-Mk-IVA.png",
+      "image": "images/units/great_britain/British-A13-Cruiser-Mk-IVA.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14010,7 +14010,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Cruiser Tank Mk VI Crusader I & ICS",
       "page": "Armies of Great Britain (v3) - page 55",
       "period": "E/M",
-      "image": "images/units/British-Crusader.png",
+      "image": "images/units/great_britain/British-Crusader.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14149,7 +14149,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Cruiser Tank Mk VI Crusader II & IICS",
       "page": "Armies of Great Britain (v3) - page 56",
       "period": "E/M",
-      "image": "images/units/British-Crusader.png",
+      "image": "images/units/great_britain/British-Crusader.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14344,7 +14344,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Cruiser Tank Mk VIII Cromwell",
       "page": "Armies of Great Britain (v3) - page 57",
       "period": "L",
-      "image": "images/units/British-Cromwell.png",
+      "image": "images/units/great_britain/British-Cromwell.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14539,7 +14539,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Cruiser Tank Mk VIII Centaur CS",
       "page": "Armies of Great Britain (v3) - page 57",
       "period": "L",
-      "image": "images/units/British-Centaur.png",
+      "image": "images/units/great_britain/British-Centaur.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14707,7 +14707,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Cruiser Tank Comet",
       "page": "Armies of Great Britain (v3) - page 58",
       "period": "L",
-      "image": "images/units/British-comet.png",
+      "image": "images/units/great_britain/British-comet.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14798,7 +14798,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Infantry Tank Mk I Matilda",
       "page": "Armies of Great Britain (v3) - page 59",
       "period": "E",
-      "image": "images/units/British-Matilda-I.png",
+      "image": "images/units/great_britain/British-Matilda-I.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14861,7 +14861,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Infantry Tank Mk II Matilda II & IIC",
       "page": "Armies of Great Britain (v3) - page 60",
       "period": "E/M/L",
-      "image": "images/units/British-matilda-II.png",
+      "image": "images/units/great_britain/British-matilda-II.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14988,7 +14988,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Infantry Tank Mk III Valentine I-VIIA",
       "page": "Armies of Great Britain (v3) - page 60",
       "period": "E/M",
-      "image": "images/units/British-Valentine-V.png",
+      "image": "images/units/great_britain/British-Valentine-V.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15068,7 +15068,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Infantry Tank Mk III Valentine VIII-X",
       "page": "Armies of Great Britain (v3) - page 61",
       "period": "M/L",
-      "image": "images/units/British-Valentine-IX.png",
+      "image": "images/units/great_britain/British-Valentine-IX.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15256,7 +15256,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Infantry Tank Mk IV Churchill I-VI & IICS",
       "page": "Armies of Great Britain (v3) - page 61",
       "period": "E/M/L",
-      "image": "images/units/British-Churchill-III.png",
+      "image": "images/units/great_britain/British-Churchill-III.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15591,7 +15591,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Infantry Tank Mk IV Churchill VII-VIII",
       "page": "Armies of Great Britain (v3) - page 62",
       "period": "L",
-      "image": "images/units/British-Churchill-VII.png",
+      "image": "images/units/great_britain/British-Churchill-VII.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15832,7 +15832,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Infantry Tank Mk IV Churchill Crocodile",
       "page": "Armies of Great Britain (v3) - page 63",
       "period": "L",
-      "image": "images/units/British-crocodile.png",
+      "image": "images/units/great_britain/British-crocodile.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15928,7 +15928,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M3 Stuart I & Stuart II",
       "page": "Armies of Great Britain (v3) - page 64",
       "period": "E/M",
-      "image": "images/units/British-M3-Stuart.png",
+      "image": "images/units/great_britain/British-M3-Stuart.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16087,7 +16087,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M3A1 Stuart III & Stuart IV",
       "page": "Armies of Great Britain (v3) - page 65",
       "period": "M/L",
-      "image": "images/units/British-M3-Stuart.png",
+      "image": "images/units/great_britain/British-M3-Stuart.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16364,7 +16364,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M5A1 Stuart VI",
       "page": "Armies of Great Britain (v3) - page 65",
       "period": "M/L",
-      "image": "images/units/British-M5A1-Stuart.png",
+      "image": "images/units/great_britain/British-M5A1-Stuart.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16505,7 +16505,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M3 Grant I & Lee I",
       "page": "Armies of Great Britain (v3) - page 66",
       "period": "E/M",
-      "image": "images/units/British-M3-Grant.png",
+      "image": "images/units/great_britain/British-M3-Grant.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17048,7 +17048,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Sherman II, III & V (75mm)",
       "page": "Armies of Great Britain (v3) - page 69",
       "period": "M/L",
-      "image": "images/units/British-Sherman-III.png",
+      "image": "images/units/great_britain/British-Sherman-III.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17453,7 +17453,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Sherman IC, IC Hybrid & VC Firefly",
       "page": "Armies of Great Britain (v3) - page 70",
       "period": "L",
-      "image": "images/units/British-Sherman-Vc.png",
+      "image": "images/units/great_britain/British-Sherman-Vc.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17575,7 +17575,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "DD Sherman",
       "page": "Armies of Great Britain (v3) - page 71",
       "period": "L",
-      "image": "images/units/British-Sherman-DD.png",
+      "image": "images/units/great_britain/British-Sherman-DD.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17786,7 +17786,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M24 Chaffee Light Tank",
       "page": "Armies of Great Britain (v3) - page 72",
       "period": "L",
-      "image": "images/units/British-M24-Chaffee.png",
+      "image": "images/units/great_britain/British-M24-Chaffee.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17931,7 +17931,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "2-pdr Portee",
       "page": "Armies of Great Britain (v3) - page 72",
       "period": "E/M",
-      "image": "images/units/British-2pdr-portee.png",
+      "image": "images/units/great_britain/British-2pdr-portee.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18170,7 +18170,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Archer SP 17-pdr",
       "page": "Armies of Great Britain (v3) - page 74",
       "period": "L",
-      "image": "images/units/British-Archer-SP-17pdr.png",
+      "image": "images/units/great_britain/British-Archer-SP-17pdr.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18440,7 +18440,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M10 Wolverine",
       "page": "Armies of Great Britain (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/British-M10-Wolverine.png",
+      "image": "images/units/great_britain/British-M10-Wolverine.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18535,7 +18535,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M10 17-pdr Achilles",
       "page": "Armies of Great Britain (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/British-Achillies-17pdr.png",
+      "image": "images/units/great_britain/British-Achillies-17pdr.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18635,7 +18635,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Machine Gun Carrier",
       "page": "Armies of Great Britain (v3) - page 76",
       "period": "E/M/L",
-      "image": "images/units/British-MMG-carrier.png",
+      "image": "images/units/great_britain/British-MMG-carrier.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18706,7 +18706,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "3-inch Mortar Carrier",
       "page": "Armies of Great Britain (v3) - page 76",
       "period": "E/M/L",
-      "image": "images/units/British-mortar-carrier.png",
+      "image": "images/units/great_britain/British-mortar-carrier.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18787,7 +18787,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Bishop SP 25-pdr",
       "page": "Armies of Great Britain (v3) - page 76",
       "period": "M",
-      "image": "images/units/British-Bishop.png",
+      "image": "images/units/great_britain/British-Bishop.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18855,7 +18855,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M7 Priest",
       "page": "Armies of Great Britain (v3) - page 77",
       "period": "M/L",
-      "image": "images/units/British-M7-Priest.png",
+      "image": "images/units/great_britain/British-M7-Priest.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19040,7 +19040,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Bofors AA Truck",
       "page": "Armies of Great Britain (v3) - page 78",
       "period": "M/L",
-      "image": "images/units/British-Bofors-AA-truck.png",
+      "image": "images/units/great_britain/British-Bofors-AA-truck.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19274,7 +19274,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Crusader III AA Mk I & Mk II",
       "page": "Armies of Great Britain (v3) - page 78",
       "period": "L",
-      "image": "images/units/British-Crusader-AA.png",
+      "image": "images/units/great_britain/British-Crusader-AA.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19463,7 +19463,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Armadillo",
       "page": "Armies of Great Britain (v3) - page 79",
       "period": "E/M",
-      "image": "images/units/British-Armadillo.png",
+      "image": "images/units/great_britain/British-Armadillo.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -19811,7 +19811,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Lanchester 6x4 Armoured Car",
       "page": "Armies of Great Britain (v3) - page 80",
       "period": "E",
-      "image": "images/units/British-Lanchester-6x4.png",
+      "image": "images/units/great_britain/British-Lanchester-6x4.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20018,7 +20018,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Humber Armoured Car Mk II & IV and Fox",
       "page": "Armies of Great Britain (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/British-Humber-armoured-car.png",
+      "image": "images/units/great_britain/British-Humber-armoured-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20171,7 +20171,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Daimler Armoured Car",
       "page": "Armies of Great Britain (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/British-Daimler.png",
+      "image": "images/units/great_britain/British-Daimler.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20383,7 +20383,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Morris Light Reconnaissance Car",
       "page": "Armies of Great Britain (v3) - page 82",
       "period": "E/M/L",
-      "image": "images/units/British-Morris-Light-Recce.png",
+      "image": "images/units/great_britain/British-Morris-Light-Recce.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20463,7 +20463,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Morris CS9 Armoured Car",
       "page": "Armies of Great Britain (v3) - page 82",
       "period": "E/M",
-      "image": "images/units/British-Morris-C9-armoured-car.png",
+      "image": "images/units/great_britain/British-Morris-C9-armoured-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20562,7 +20562,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Daimler Dingo",
       "page": "Armies of Great Britain (v3) - page 83",
       "period": "E/M/L",
-      "image": "images/units/British-Daimler-Dingo.png",
+      "image": "images/units/great_britain/British-Daimler-Dingo.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20633,7 +20633,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Humber Scout Car",
       "page": "Armies of Great Britain (v3) - page 83",
       "period": "M/L",
-      "image": "images/units/British-Humber-scout-car.png",
+      "image": "images/units/great_britain/British-Humber-scout-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -20704,7 +20704,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "AEC Heavy Armoured Car Mk I-III",
       "page": "Armies of Great Britain (v3) - page 83",
       "period": "M/L",
-      "image": "images/units/British-AEC-Mk-III.png",
+      "image": "images/units/great_britain/British-AEC-Mk-III.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21014,7 +21014,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "M8 Greyhound",
       "page": "Armies of Great Britain (v3) - page 84",
       "period": "M/L",
-      "image": "images/units/British-M8-armoured-car.png",
+      "image": "images/units/great_britain/British-M8-armoured-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21123,7 +21123,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "LRDG Armed Truck",
       "page": "Armies of Great Britain (v3) - page 85",
       "period": "E/M",
-      "image": "images/units/British-LRDG-truck.png",
+      "image": "images/units/great_britain/British-LRDG-truck.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21373,7 +21373,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "SAS Jeep - North Africa",
       "page": "Armies of Great Britain (v3) - page 85",
       "period": "M",
-      "image": "images/units/British-SAS-Jeep-Africa.png",
+      "image": "images/units/great_britain/British-SAS-Jeep-Africa.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21557,7 +21557,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "SAS Jeep - Europe",
       "page": "Armies of Great Britain (v3) - page 86",
       "period": "M/L",
-      "image": "images/units/British-SAS-Jeep-Europe.png",
+      "image": "images/units/great_britain/British-SAS-Jeep-Europe.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21710,7 +21710,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "British Airborne Recce Jeep",
       "page": "Armies of Great Britain (v3) - page 86",
       "period": "L",
-      "image": "images/units/British-Airborne-jeep.png",
+      "image": "images/units/great_britain/British-Airborne-jeep.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21799,7 +21799,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Recce Carrier",
       "page": "Armies of Great Britain (v3) - page 87",
       "period": "E/M/L",
-      "image": "images/units/British-universal-carrier.png",
+      "image": "images/units/great_britain/British-universal-carrier.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -21917,7 +21917,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Wasp Flamethrower Carrier",
       "page": "Armies of Great Britain (v3) - page 87",
       "period": "L",
-      "image": "images/units/British-Wasp.png",
+      "image": "images/units/great_britain/British-Wasp.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -22040,7 +22040,7 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "cardTitle": "Jeep (no transport)",
       "page": "Armies of Great Britain (v3) - page 88",
       "period": "E/M/L",
-      "image": "images/units/British-jeep-no-tranpsport.png",
+      "image": "images/units/great_britain/British-jeep-no-tranpsport.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"

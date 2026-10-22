@@ -2,7 +2,8 @@
 // ARMY ROSTER PRINT & PDF VIEW (Official Tournament A4 Roster)
 // =========================================================================
 
-function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints, totalOrderDice, platoons, isPreview = false }) {
+function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints, totalOrderDice, platoons, isPreview = false, exportOptions }) {
+        const { includeUnitRules = true, includeArmyRules = true } = exportOptions || {};
         const platoonTypes = factionData?.platoons || [];
         const totalUnits = useMemo(() => platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0), [platoons]);
 
@@ -234,7 +235,7 @@ function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints
             </div>
 
             {/* UNIT SPECIAL RULES (COMPACT SINGLE-COLUMN LIST) */}
-            {armyActiveRules.length > 0 && (
+            {includeUnitRules && armyActiveRules.length > 0 && (
               <div className="rules-print-block mt-4 pt-2.5 border-t-2 border-zinc-800 break-inside-avoid">
                 <h2 className="text-[11px] font-black font-tactical uppercase tracking-wider text-zinc-900 mb-1.5">
                   Unit Special Rules
@@ -250,7 +251,7 @@ function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints
             )}
 
             {/* FACTION ARMY SPECIAL RULES (COMPACT SINGLE-COLUMN LIST) */}
-            {factionData?.armyRules && factionData.armyRules.length > 0 && (
+            {includeArmyRules && factionData?.armyRules && factionData.armyRules.length > 0 && (
               <div className="rules-print-block mt-3.5 pt-2.5 border-t border-zinc-300 break-inside-avoid">
                 <h2 className="text-[11px] font-black font-tactical uppercase tracking-wider text-zinc-900 mb-1.5">
                   {factionData.faction} Army Special Rules

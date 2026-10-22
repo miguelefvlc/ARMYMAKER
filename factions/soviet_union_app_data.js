@@ -3689,7 +3689,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Platoon Commander",
       "page": "Armies of the Soviet Union (v3) - page 31",
       "period": "E/M/L",
-      "image": "images/units/Soviet-platoon-commander.png",
+      "image": "images/units/soviet_union/Soviet-platoon-commander.png",
       "sections": [
         "Platoon Commander"
       ],
@@ -3962,7 +3962,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Rifle Squad",
       "page": "Armies of the Soviet Union (v3) - page 33",
       "period": "E/M/L",
-      "image": "images/units/Soviet-infantry.png",
+      "image": "images/units/soviet_union/Soviet-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4046,7 +4046,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Light Machine Gun Squad",
       "page": "Armies of the Soviet Union (v3) - page 34",
       "period": "E/M/L",
-      "image": "images/units/Soviet-infantry.png",
+      "image": "images/units/soviet_union/Soviet-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4169,7 +4169,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Submachine Gun Squad",
       "page": "Armies of the Soviet Union (v3) - page 34",
       "period": "E/M/L",
-      "image": "images/units/Soviet-infantry.png",
+      "image": "images/units/soviet_union/Soviet-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4273,7 +4273,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Tank Riders Squad",
       "page": "Armies of the Soviet Union (v3) - page 35",
       "period": "E/M/L",
-      "image": "images/units/Soviet-tank-riders.png",
+      "image": "images/units/soviet_union/Soviet-tank-riders.png",
       "sections": [
         "Infantry"
       ],
@@ -4398,7 +4398,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Guards Squad (Early)",
       "page": "Armies of the Soviet Union (v3) - page 36",
       "period": "E",
-      "image": "images/units/Soviet-infantry.png",
+      "image": "images/units/soviet_union/Soviet-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4536,7 +4536,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Guards Squad (Mid/Late)",
       "page": "Armies of the Soviet Union (v3) - page 36",
       "period": "M/L",
-      "image": "images/units/Soviet-infantry.png",
+      "image": "images/units/soviet_union/Soviet-infantry.png",
       "sections": [
         "Infantry"
       ],
@@ -4701,7 +4701,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Veteran Squad",
       "page": "Armies of the Soviet Union (v3) - page 37",
       "period": "M/L",
-      "image": "images/units/Soviet-Veterans.png",
+      "image": "images/units/soviet_union/Soviet-Veterans.png",
       "sections": [
         "Infantry"
       ],
@@ -4883,7 +4883,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "NKVD Squad",
       "page": "Armies of the Soviet Union (v3) - page 37",
       "period": "E/M/L",
-      "image": "images/units/Soviet-NKVD.png",
+      "image": "images/units/soviet_union/Soviet-NKVD.png",
       "sections": [
         "Infantry"
       ],
@@ -5627,7 +5627,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "People's Militia Squad",
       "page": "Armies of the Soviet Union (v3) - page 40",
       "period": "E/M/L",
-      "image": "images/units/Soviet-Peoples-Militia.png",
+      "image": "images/units/soviet_union/Soviet-Peoples-Militia.png",
       "sections": [
         "Infantry"
       ],
@@ -6109,7 +6109,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Airborne Squad",
       "page": "Armies of the Soviet Union (v3) - page 42",
       "period": "E/M/L",
-      "image": "images/units/Soviet-airborne.png",
+      "image": "images/units/soviet_union/Soviet-airborne.png",
       "sections": [
         "Infantry"
       ],
@@ -6266,7 +6266,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Naval Squad",
       "page": "Armies of the Soviet Union (v3) - page 42",
       "period": "E/M/L",
-      "image": "images/units/Soviet-naval.png",
+      "image": "images/units/soviet_union/Soviet-naval.png",
       "sections": [
         "Infantry"
       ],
@@ -6412,7 +6412,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Partisan Squad",
       "page": "Armies of the Soviet Union (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/Soviet-partisans.png",
+      "image": "images/units/soviet_union/Soviet-partisans.png",
       "sections": [
         "Infantry"
       ],
@@ -6541,7 +6541,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Scout Squad",
       "page": "Armies of the Soviet Union (v3) - page 43",
       "period": "M/L",
-      "image": "images/units/Soviet-scout-squad.png",
+      "image": "images/units/soviet_union/Soviet-scout-squad.png",
       "sections": [
         "Infantry"
       ],
@@ -6823,7 +6823,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Light Mortar Team",
       "page": "Armies of the Soviet Union (v3) - page 51",
       "period": "E/M/L",
-      "image": "images/units/Soviet-light-mortar.png",
+      "image": "images/units/soviet_union/Soviet-light-mortar.png",
       "sections": [
         "Mortar",
         "Heavy Weapons"
@@ -6936,7 +6936,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Company Commander",
       "page": "Armies of the Soviet Union (v3) - page 31",
       "period": "E/M/L",
-      "image": "images/units/Soviet-company-commander.png",
+      "image": "images/units/soviet_union/Soviet-company-commander.png",
       "sections": [
         "Company Commander"
       ],
@@ -7209,7 +7209,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Medic",
       "page": "Armies of the Soviet Union (v3) - page 32",
       "period": "E/M/L",
-      "image": "images/units/Soviet-medic.png",
+      "image": "images/units/soviet_union/Soviet-medic.png",
       "sections": [
         "Medic"
       ],
@@ -7415,7 +7415,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Commissar",
       "page": "Armies of the Soviet Union (v3) - page 32",
       "period": "E/M",
-      "image": "images/units/Soviet-commissar.png",
+      "image": "images/units/soviet_union/Soviet-commissar.png",
       "sections": [
         "Commissar"
       ],
@@ -7643,7 +7643,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Artillery Forward Observer",
       "page": "Armies of the Soviet Union (v3) - page 32",
       "period": "E/M/L",
-      "image": "images/units/Soviet-observer.png",
+      "image": "images/units/soviet_union/Soviet-observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -7894,7 +7894,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Air Force Forward Observer",
       "page": "Armies of the Soviet Union (v3) - page 32",
       "period": "E/M/L",
-      "image": "images/units/Soviet-observer.png",
+      "image": "images/units/soviet_union/Soviet-observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -8145,7 +8145,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Sniper Team",
       "page": "Armies of the Soviet Union (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/Soviet-sniper.png",
+      "image": "images/units/soviet_union/Soviet-sniper.png",
       "sections": [
         "Sniper"
       ],
@@ -8255,7 +8255,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Anti-tank Rifle Team",
       "page": "Armies of the Soviet Union (v3) - page 47",
       "period": "E/M/L",
-      "image": "images/units/Soviet-AT-rifle.png",
+      "image": "images/units/soviet_union/Soviet-AT-rifle.png",
       "sections": [
         "Anti-tank"
       ],
@@ -8385,7 +8385,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Ampulomet Anti-tank Team",
       "page": "Armies of the Soviet Union (v3) - page 48",
       "period": "E/M",
-      "image": "images/units/Soviet-Ampulomet.png",
+      "image": "images/units/soviet_union/Soviet-Ampulomet.png",
       "sections": [
         "Anti-tank"
       ],
@@ -8742,7 +8742,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Dog Mines Anti-tank Team",
       "page": "Armies of the Soviet Union (v3) - page 49",
       "period": "E/M",
-      "image": "images/units/Soviet-dog-mines.png",
+      "image": "images/units/soviet_union/Soviet-dog-mines.png",
       "sections": [
         "Anti-tank"
       ],
@@ -8842,7 +8842,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Truck (Early)",
       "page": "Armies of the Soviet Union (v3) - page 84",
       "period": "E",
-      "image": "images/units/Soviet-truck.png",
+      "image": "images/units/soviet_union/Soviet-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8920,7 +8920,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Truck (Mid/Late)",
       "page": "Armies of the Soviet Union (v3) - page 84",
       "period": "M/L",
-      "image": "images/units/Soviet-truck.png",
+      "image": "images/units/soviet_union/Soviet-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9098,7 +9098,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Gaz Jeep",
       "page": "Armies of the Soviet Union (v3) - page 85",
       "period": "M/L",
-      "image": "images/units/Soviet-Ford-GPA.png",
+      "image": "images/units/soviet_union/Soviet-Ford-GPA.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9176,7 +9176,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "T-20 Komsomolets",
       "page": "Armies of the Soviet Union (v3) - page 85",
       "period": "E/M",
-      "image": "images/units/Soviet-Komsomolets.png",
+      "image": "images/units/soviet_union/Soviet-Komsomolets.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9244,7 +9244,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Aerosan",
       "page": "Armies of the Soviet Union (v3) - page 86",
       "period": "E/M/L",
-      "image": "images/units/Soviet-Aerosan.png",
+      "image": "images/units/soviet_union/Soviet-Aerosan.png",
       "sections": [
         "Transports"
       ],
@@ -9320,7 +9320,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M3 White Scout Car",
       "page": "Armies of the Soviet Union (v3) - page 91",
       "period": "M/L",
-      "image": "images/units/Soviet-white-scout-car.png",
+      "image": "images/units/soviet_union/Soviet-white-scout-car.png",
       "sections": [
         "Transports"
       ],
@@ -9518,7 +9518,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Universal Carrier",
       "page": "Armies of the Soviet Union (v3) - page 92",
       "period": "M/L",
-      "image": "images/units/Soviet-universal-carrier.png",
+      "image": "images/units/soviet_union/Soviet-universal-carrier.png",
       "sections": [
         "Transports"
       ],
@@ -9791,7 +9791,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Civilian Car",
       "page": "Version 3 Rulebook - page 280",
       "period": "E/M/L",
-      "image": "images/units/Civilian-car.png",
+      "image": "images/units/soviet_union/Civilian-car.png",
       "sections": [
         "Transports"
       ],
@@ -9841,7 +9841,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Assault Engineer Squad (Early)",
       "page": "Armies of the Soviet Union (v3) - page 45",
       "period": "E",
-      "image": "images/units/Soviet-engineers.png",
+      "image": "images/units/soviet_union/Soviet-engineers.png",
       "sections": [
         "Engineers"
       ],
@@ -10057,7 +10057,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Assault Engineer Squad (Mid/Late)",
       "page": "Armies of the Soviet Union (v3) - page 45",
       "period": "M/L",
-      "image": "images/units/Soviet-engineers.png",
+      "image": "images/units/soviet_union/Soviet-engineers.png",
       "sections": [
         "Engineers"
       ],
@@ -10297,7 +10297,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Flamethrower Team",
       "page": "Armies of the Soviet Union (v3) - page 51",
       "period": "E/M/L",
-      "image": "images/units/Soviet-flamethrower-team.png",
+      "image": "images/units/soviet_union/Soviet-flamethrower-team.png",
       "sections": [
         "Flamethrower"
       ],
@@ -10486,7 +10486,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Medium Machine Gun Team",
       "page": "Armies of the Soviet Union (v3) - page 46",
       "period": "E/M/L",
-      "image": "images/units/Soviet-MMG.png",
+      "image": "images/units/soviet_union/Soviet-MMG.png",
       "sections": [
         "Heavy Weapons",
         "Machine Gun"
@@ -10624,7 +10624,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "DShK Heavy Machine Gun Team",
       "page": "Armies of the Soviet Union (v3) - page 47",
       "period": "E/M/L",
-      "image": "images/units/Soviet-HMG.png",
+      "image": "images/units/soviet_union/Soviet-HMG.png",
       "sections": [
         "Heavy Weapons",
         "Machine Gun"
@@ -10732,7 +10732,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Medium Mortar Team",
       "page": "Armies of the Soviet Union (v3) - page 52",
       "period": "E/M/L",
-      "image": "images/units/Soviet-medium-mortar.png",
+      "image": "images/units/soviet_union/Soviet-medium-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -10850,7 +10850,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Heavy Mortar Team",
       "page": "Armies of the Soviet Union (v3) - page 52",
       "period": "E/M/L",
-      "image": "images/units/Soviet-Heavy-mortar.png",
+      "image": "images/units/soviet_union/Soviet-Heavy-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -11650,7 +11650,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "45mm Model 1937 Anti-tank Gun",
       "page": "Armies of the Soviet Union (v3) - page 57",
       "period": "E/M/L",
-      "image": "images/units/Soviet-45mm-AT-gun.png",
+      "image": "images/units/soviet_union/Soviet-45mm-AT-gun.png",
       "sections": [
         "Artillery"
       ],
@@ -11812,7 +11812,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "ZiS-2 Anti-tank Gun",
       "page": "Armies of the Soviet Union (v3) - page 58",
       "period": "M/L",
-      "image": "images/units/Soviet-ZiS2.png",
+      "image": "images/units/soviet_union/Soviet-ZiS2.png",
       "sections": [
         "Artillery"
       ],
@@ -11887,7 +11887,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "ZiS-3 Divisional Gun",
       "page": "Armies of the Soviet Union (v3) - page 59",
       "period": "M/L",
-      "image": "images/units/Soviet-ZiS3.png",
+      "image": "images/units/soviet_union/Soviet-ZiS3.png",
       "sections": [
         "Artillery"
       ],
@@ -12369,7 +12369,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "T-26A Light Tank",
       "page": "Armies of the Soviet Union (v3) - page 60",
       "period": "E/M",
-      "image": "images/units/Soviet-T26a.png",
+      "image": "images/units/soviet_union/Soviet-T26a.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -12437,7 +12437,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "T-26B Light Tank",
       "page": "Armies of the Soviet Union (v3) - page 61",
       "period": "E/M",
-      "image": "images/units/Soviet-T26b.png",
+      "image": "images/units/soviet_union/Soviet-T26b.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -12530,7 +12530,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "OT-26/OT-133 Light Flamethrower Tank",
       "page": "Armies of the Soviet Union (v3) - page 61",
       "period": "E/M",
-      "image": "images/units/Soviet-OT26.png",
+      "image": "images/units/soviet_union/Soviet-OT26.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -12609,7 +12609,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "BT-5 and BT-7 Light Tank",
       "page": "Armies of the Soviet Union (v3) - page 61",
       "period": "E/M",
-      "image": "images/units/Soviet-BT7a.png",
+      "image": "images/units/soviet_union/Soviet-BT7a.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13062,7 +13062,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "T-70 Light Tank",
       "page": "Armies of the Soviet Union (v3) - page 64",
       "period": "M/L",
-      "image": "images/units/Soviet-T70.png",
+      "image": "images/units/soviet_union/Soviet-T70.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13354,7 +13354,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "T-34/76 Medium Tank",
       "page": "Armies of the Soviet Union (v3) - page 66",
       "period": "E/M/L",
-      "image": "images/units/Soviet-T34.png",
+      "image": "images/units/soviet_union/Soviet-T34.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13493,7 +13493,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "T-34/85 Medium Tank",
       "page": "Armies of the Soviet Union (v3) - page 66",
       "period": "M/L",
-      "image": "images/units/Soviet-T34-85.png",
+      "image": "images/units/soviet_union/Soviet-T34-85.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13632,7 +13632,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Tractor Factory T-34",
       "page": "Armies of the Soviet Union (v3) - page 68",
       "period": "M/L",
-      "image": "images/units/Soviet-T34-factory.png",
+      "image": "images/units/soviet_union/Soviet-T34-factory.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13969,7 +13969,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "KV-1 Heavy Tank",
       "page": "Armies of the Soviet Union (v3) - page 69",
       "period": "E/M/L",
-      "image": "images/units/Soviet-KV1e.png",
+      "image": "images/units/soviet_union/Soviet-KV1e.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14191,7 +14191,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "KV-85 and IS-1 Heavy Tank",
       "page": "Armies of the Soviet Union (v3) - page 69",
       "period": "M/L",
-      "image": "images/units/Soviet-KV85.png",
+      "image": "images/units/soviet_union/Soviet-KV85.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14293,7 +14293,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "IS-2 Heavy Tank",
       "page": "Armies of the Soviet Union (v3) - page 70",
       "period": "L",
-      "image": "images/units/Soviet-IS2.png",
+      "image": "images/units/soviet_union/Soviet-IS2.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14411,7 +14411,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "IS-3 Heavy Tank",
       "page": "Armies of the Soviet Union (v3) - page 71",
       "period": "L",
-      "image": "images/units/Soviet-IS3.png",
+      "image": "images/units/soviet_union/Soviet-IS3.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14510,7 +14510,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "ZiS-30",
       "page": "Armies of the Soviet Union (v3) - page 72",
       "period": "E",
-      "image": "images/units/Soviet-ZiS30.png",
+      "image": "images/units/soviet_union/Soviet-ZiS30.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14611,7 +14611,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "SU-85",
       "page": "Armies of the Soviet Union (v3) - page 72",
       "period": "M/L",
-      "image": "images/units/Soviet-SU85.png",
+      "image": "images/units/soviet_union/Soviet-SU85.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14700,7 +14700,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "SU-100",
       "page": "Armies of the Soviet Union (v3) - page 72",
       "period": "L",
-      "image": "images/units/Soviet-SU100.png",
+      "image": "images/units/soviet_union/Soviet-SU100.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14789,7 +14789,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "ISU-122",
       "page": "Armies of the Soviet Union (v3) - page 73",
       "period": "L",
-      "image": "images/units/Soviet-ISU122.png",
+      "image": "images/units/soviet_union/Soviet-ISU122.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14884,7 +14884,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "SU-76",
       "page": "Armies of the Soviet Union (v3) - page 74",
       "period": "M/L",
-      "image": "images/units/Soviet-SU76.png",
+      "image": "images/units/soviet_union/Soviet-SU76.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15125,7 +15125,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "SU-122",
       "page": "Armies of the Soviet Union (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/Soviet-SU122m.png",
+      "image": "images/units/soviet_union/Soviet-SU122m.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15195,7 +15195,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "KV-2",
       "page": "Armies of the Soviet Union (v3) - page 75",
       "period": "E/M",
-      "image": "images/units/Soviet-KV2.png",
+      "image": "images/units/soviet_union/Soviet-KV2.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15363,7 +15363,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "SU-152 and ISU-152",
       "page": "Armies of the Soviet Union (v3) - page 76",
       "period": "M/L",
-      "image": "images/units/Soviet-ISU-152.png",
+      "image": "images/units/soviet_union/Soviet-ISU-152.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15468,7 +15468,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Katyusha",
       "page": "Armies of the Soviet Union (v3) - page 77",
       "period": "E/M/L",
-      "image": "images/units/Soviet-Katyusha.png",
+      "image": "images/units/soviet_union/Soviet-Katyusha.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15549,7 +15549,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Tachanka",
       "page": "Armies of the Soviet Union (v3) - page 77",
       "period": "E/M/L",
-      "image": "images/units/Soviet-Tachanka.png",
+      "image": "images/units/soviet_union/Soviet-Tachanka.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15620,7 +15620,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Bronekater",
       "page": "Armies of the Soviet Union (v3) - page 78",
       "period": "E/M/L",
-      "image": "images/units/Soviet-Bronekator.png",
+      "image": "images/units/soviet_union/Soviet-Bronekator.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15871,7 +15871,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Tokarev 4M Quad Maxim on GAZ-AA Truck",
       "page": "Armies of the Soviet Union (v3) - page 79",
       "period": "E/M/L",
-      "image": "images/units/Soviet-Gaz-with-Quad-Maxim.png",
+      "image": "images/units/soviet_union/Soviet-Gaz-with-Quad-Maxim.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15942,7 +15942,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "BA-64",
       "page": "Armies of the Soviet Union (v3) - page 79",
       "period": "M/L",
-      "image": "images/units/Soviet-BA64.png",
+      "image": "images/units/soviet_union/Soviet-BA64.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16228,7 +16228,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "BA-3/6 Heavy Armoured Car",
       "page": "Armies of the Soviet Union (v3) - page 82",
       "period": "E",
-      "image": "images/units/Soviet-BA6.png",
+      "image": "images/units/soviet_union/Soviet-BA6.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16434,7 +16434,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "FAI Light Armoured Car",
       "page": "Armies of the Soviet Union (v3) - page 83",
       "period": "E/M",
-      "image": "images/units/Soviet-FAI-armoured-car.png",
+      "image": "images/units/soviet_union/Soviet-FAI-armoured-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16608,7 +16608,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M3 White Scout Car (no transport)",
       "page": "Armies of the Soviet Union (v3) - page 91",
       "period": "M/L",
-      "image": "images/units/Soviet-white-scout-car.png",
+      "image": "images/units/soviet_union/Soviet-white-scout-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16721,7 +16721,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Universal Carrier (no transport)",
       "page": "Armies of the Soviet Union (v3) - page 92",
       "period": "M/L",
-      "image": "images/units/Soviet-universal-carrier.png",
+      "image": "images/units/soviet_union/Soviet-universal-carrier.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16852,7 +16852,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Infantry Tank Mk III Valentine I-VIIA",
       "page": "Armies of the Soviet Union (v3) - page 88",
       "period": "M",
-      "image": "images/units/Soviet-Valentine.png",
+      "image": "images/units/soviet_union/Soviet-Valentine.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16932,7 +16932,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M3 Stuart",
       "page": "Armies of the Soviet Union (v3) - page 88",
       "period": "M/L",
-      "image": "images/units/Soviet-M3-stuart.png",
+      "image": "images/units/soviet_union/Soviet-M3-stuart.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17040,7 +17040,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M5A1 Stuart",
       "page": "Armies of the Soviet Union (v3) - page 89",
       "period": "M/L",
-      "image": "images/units/Soviet-M5A1.png",
+      "image": "images/units/soviet_union/Soviet-M5A1.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17171,7 +17171,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Light Tank Mk VII Tetrarch",
       "page": "Armies of the Soviet Union (v3) - page 89",
       "period": "M",
-      "image": "images/units/British-Tetrarch.png",
+      "image": "images/units/soviet_union/British-Tetrarch.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17239,7 +17239,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M10 Wolverine",
       "page": "Armies of the Soviet Union (v3) - page 89",
       "period": "M/L",
-      "image": "images/units/Soviet-M10.png",
+      "image": "images/units/soviet_union/Soviet-M10.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17334,7 +17334,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M3 Lee",
       "page": "Armies of the Soviet Union (v3) - page 89",
       "period": "M",
-      "image": "images/units/Soviet-M3-Lee.png",
+      "image": "images/units/soviet_union/Soviet-M3-Lee.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17430,7 +17430,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M4 Sherman",
       "page": "Armies of the Soviet Union (v3) - page 90",
       "period": "M/L",
-      "image": "images/units/Soviet-Sherman75.png",
+      "image": "images/units/soviet_union/Soviet-Sherman75.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17588,7 +17588,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M4 Sherman 76mm",
       "page": "Armies of the Soviet Union (v3) - page 90",
       "period": "M/L",
-      "image": "images/units/Soviet-Sherman76.png",
+      "image": "images/units/soviet_union/Soviet-Sherman76.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17695,7 +17695,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Matilda Mk II",
       "page": "Armies of the Soviet Union (v3) - page 90",
       "period": "M",
-      "image": "images/units/Soviet-Matilda-II.png",
+      "image": "images/units/soviet_union/Soviet-Matilda-II.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17775,7 +17775,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "Churchill III or IV",
       "page": "Armies of the Soviet Union (v3) - page 90",
       "period": "M/L",
-      "image": "images/units/Soviet-Churchill.png",
+      "image": "images/units/soviet_union/Soviet-Churchill.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18005,7 +18005,7 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "cardTitle": "M16/M17 Multiple Gun Motor Carriage",
       "page": "Armies of the Soviet Union (v3) - page 91",
       "period": "M/L",
-      "image": "images/units/Soviet-M17-AA.png",
+      "image": "images/units/soviet_union/Soviet-M17-AA.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"

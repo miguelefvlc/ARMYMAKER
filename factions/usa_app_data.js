@@ -3845,7 +3845,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Platoon Commander",
       "page": "Armies of the United States (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/US-Platoon-commanders.png",
+      "image": "images/units/usa/US-Platoon-commanders.png",
       "sections": [
         "Platoon Commander"
       ],
@@ -4161,7 +4161,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "US Army Rifle Squad",
       "page": "Armies of the United States (v3) - page 32",
       "period": "E/M/L",
-      "image": "images/units/US-Rifle.png",
+      "image": "images/units/usa/US-Rifle.png",
       "sections": [
         "Infantry"
       ],
@@ -4286,7 +4286,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Armoured Infantry Rifle Squad",
       "page": "Armies of the United States (v3) - page 33",
       "period": "M/L",
-      "image": "images/units/US-Armoured-Rifle.png",
+      "image": "images/units/usa/US-Armoured-Rifle.png",
       "sections": [
         "Infantry"
       ],
@@ -4422,7 +4422,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Armoured Infantry Mortar Squad",
       "page": "Armies of the United States (v3) - page 33",
       "period": "M/L",
-      "image": "images/units/US-Armoured-infantry-mortar-MG.png",
+      "image": "images/units/usa/US-Armoured-infantry-mortar-MG.png",
       "sections": [
         "Infantry"
       ],
@@ -4559,7 +4559,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Armoured Infantry Machine Gun Squad",
       "page": "Armies of the United States (v3) - page 34",
       "period": "M/L",
-      "image": "images/units/US-Armoured-infantry-mortar-MG.png",
+      "image": "images/units/usa/US-Armoured-infantry-mortar-MG.png",
       "sections": [
         "Infantry"
       ],
@@ -4697,7 +4697,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "US Paratrooper Squad",
       "page": "Armies of the United States (v3) - page 36",
       "period": "M/L",
-      "image": "images/units/US-Paratroop.png",
+      "image": "images/units/usa/US-Paratroop.png",
       "sections": [
         "Infantry"
       ],
@@ -4860,7 +4860,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Pathfinders Squad",
       "page": "Armies of the United States (v3) - page 36",
       "period": "M/L",
-      "image": "images/units/US-Pathfinders.png",
+      "image": "images/units/usa/US-Pathfinders.png",
       "sections": [
         "Infantry"
       ],
@@ -4976,7 +4976,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Glider Squad",
       "page": "Armies of the United States (v3) - page 36",
       "period": "M/L",
-      "image": "images/units/US-Glider.png",
+      "image": "images/units/usa/US-Glider.png",
       "sections": [
         "Infantry"
       ],
@@ -5258,7 +5258,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Ranger Squad (Mid War)",
       "page": "Armies of the United States (v3) - page 37",
       "period": "M",
-      "image": "images/units/US-Ranger-Mid.png",
+      "image": "images/units/usa/US-Ranger-Mid.png",
       "sections": [
         "Infantry"
       ],
@@ -5400,7 +5400,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Ranger Squad (Late War)",
       "page": "Armies of the United States (v3) - page 37",
       "period": "L",
-      "image": "images/units/US-Rangers.png",
+      "image": "images/units/usa/US-Rangers.png",
       "sections": [
         "Infantry"
       ],
@@ -5700,7 +5700,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "US Marine Squad (Early War)",
       "page": "Armies of the United States (v3) - page 39",
       "period": "E",
-      "image": "images/units/US-Marines-early.png",
+      "image": "images/units/usa/US-Marines-early.png",
       "sections": [
         "Infantry"
       ],
@@ -5878,7 +5878,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "US Marine Squad (Mid/Late War)",
       "page": "Armies of the United States (v3) - page 39",
       "period": "M/L",
-      "image": "images/units/US-Marines-late.png",
+      "image": "images/units/usa/US-Marines-late.png",
       "sections": [
         "Infantry"
       ],
@@ -6058,7 +6058,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "USMC Raiders Squad",
       "page": "Armies of the United States (v3) - page 40",
       "period": "M/L",
-      "image": "images/units/US-MC-Raiders.png",
+      "image": "images/units/usa/US-MC-Raiders.png",
       "sections": [
         "Infantry"
       ],
@@ -6227,7 +6227,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Merrill's Marauders Squad",
       "page": "Armies of the United States (v3) - page 41",
       "period": "L",
-      "image": "images/units/US-Merrills-Marauders.png",
+      "image": "images/units/usa/US-Merrills-Marauders.png",
       "sections": [
         "Infantry"
       ],
@@ -6503,7 +6503,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "US Army Military Police Corps Squad",
       "page": "Armies of the United States (v3) - page 42",
       "period": "E/M/L",
-      "image": "images/units/US-Military-Police.png",
+      "image": "images/units/usa/US-Military-Police.png",
       "sections": [
         "Infantry"
       ],
@@ -6713,7 +6713,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "USMC War Dog Team",
       "page": "Armies of the United States (v3) - page 48",
       "period": "M/L",
-      "image": "images/units/US-War-Dogs.png",
+      "image": "images/units/usa/US-War-Dogs.png",
       "sections": [
         "War Dog"
       ],
@@ -6813,7 +6813,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Company Commander",
       "page": "Armies of the United States (v3) - page 27",
       "period": "E/M/L",
-      "image": "images/units/US-Command.png",
+      "image": "images/units/usa/US-Command.png",
       "sections": [
         "Company Commander"
       ],
@@ -7129,7 +7129,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Medic",
       "page": "Armies of the United States (v3) - page 28",
       "period": "E/M/L",
-      "image": "images/units/US-Medic.png",
+      "image": "images/units/usa/US-Medic.png",
       "sections": [
         "Medic"
       ],
@@ -7527,7 +7527,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Artillery Forward Observer",
       "page": "Armies of the United States (v3) - page 29",
       "period": "E/M/L",
-      "image": "images/units/US-Observer.png",
+      "image": "images/units/usa/US-Observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -7736,7 +7736,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Air Force Forward Observer",
       "page": "Armies of the United States (v3) - page 29",
       "period": "E/M/L",
-      "image": "images/units/US-Observer.png",
+      "image": "images/units/usa/US-Observer.png",
       "sections": [
         "Forward Observer"
       ],
@@ -7945,7 +7945,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Sniper Team",
       "page": "Armies of the United States (v3) - page 45",
       "period": "E/M/L",
-      "image": "images/units/US-Sniper.png",
+      "image": "images/units/usa/US-Sniper.png",
       "sections": [
         "Sniper"
       ],
@@ -8093,7 +8093,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Bazooka Anti-tank Team",
       "page": "Armies of the United States (v3) - page 44",
       "period": "M/L",
-      "image": "images/units/US-Anti-tank.jpg",
+      "image": "images/units/usa/US-Anti-tank.jpg",
       "sections": [
         "Anti-tank"
       ],
@@ -8214,7 +8214,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Light Mortar Team (3 men)",
       "page": "Armies of the United States (v3) - page 48",
       "period": "E/M/L",
-      "image": "images/units/US-Light-mortar.jpg",
+      "image": "images/units/usa/US-Light-mortar.jpg",
       "sections": [
         "Light mortar",
         "Heavy Weapons",
@@ -8308,7 +8308,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Light Mortar Team (2 men)",
       "page": "Armies of the United States (v3) - page 48",
       "period": "E/M/L",
-      "image": "images/units/US-Anti-tank.jpg",
+      "image": "images/units/usa/US-Anti-tank.jpg",
       "sections": [
         "Light mortar",
         "Heavy Weapons",
@@ -8413,7 +8413,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Bazooka Anti-tank Team-with Armoured Infantry only",
       "page": "Armies of the United States (v3) - page 44",
       "period": "M/L",
-      "image": "images/units/US-Anti-tank.jpg",
+      "image": "images/units/usa/US-Anti-tank.jpg",
       "sections": [
         "Anti-tank"
       ],
@@ -8480,7 +8480,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M3 White Scout Car",
       "page": "Armies of the United States (v3) - page 80",
       "period": "E/M/L",
-      "image": "images/units/US-M3-White-Scout-car.png",
+      "image": "images/units/usa/US-M3-White-Scout-car.png",
       "sections": [
         "Transports",
         "Tows"
@@ -8810,7 +8810,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M3 Half-track",
       "page": "Armies of the United States (v3) - page 81",
       "period": "E/M/L",
-      "image": "images/units/US-M3A1-Half-track.png",
+      "image": "images/units/usa/US-M3A1-Half-track.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9026,7 +9026,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Jeep",
       "page": "Armies of the United States (v3) - page 83",
       "period": "E/M/L",
-      "image": "images/units/US-Jeep.png",
+      "image": "images/units/usa/US-Jeep.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9103,7 +9103,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Dodge ¾ Ton Truck",
       "page": "Armies of the United States (v3) - page 83",
       "period": "E/M/L",
-      "image": "images/units/US-Dodge.png",
+      "image": "images/units/usa/US-Dodge.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9293,7 +9293,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "2½ Ton Truck",
       "page": "Armies of the United States (v3) - page 84",
       "period": "E/M/L",
-      "image": "images/units/US-Deuce-and-a-half-truck.png",
+      "image": "images/units/usa/US-Deuce-and-a-half-truck.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9483,7 +9483,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "DUKW Amphibious Truck",
       "page": "Armies of the United States (v3) - page 85",
       "period": "M/L",
-      "image": "images/units/US-DUKW.png",
+      "image": "images/units/usa/US-DUKW.png",
       "sections": [
         "Transports",
         "Tows"
@@ -9728,7 +9728,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "LVT4 'Water Buffalo' Landing Vehicle",
       "page": "Armies of the United States (v3) - page 85",
       "period": "L",
-      "image": "images/units/US-LVT4-Buffalo.png",
+      "image": "images/units/usa/US-LVT4-Buffalo.png",
       "sections": [
         "Transports"
       ],
@@ -9926,7 +9926,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Landing Craft, Personnel",
       "page": "Armies of the United States (v3) - page 88",
       "period": "M/L",
-      "image": "images/units/US-Landing-craft-personnel.png",
+      "image": "images/units/usa/US-Landing-craft-personnel.png",
       "sections": [
         "Transports"
       ],
@@ -10016,7 +10016,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Landing Craft, Mechanised",
       "page": "Armies of the United States (v3) - page 88",
       "period": "M/L",
-      "image": "images/units/US-Landing-craft-mechanised.png",
+      "image": "images/units/usa/US-Landing-craft-mechanised.png",
       "sections": [
         "Transports"
       ],
@@ -10722,7 +10722,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Flamethrower Team",
       "page": "Armies of the United States (v3) - page 45",
       "period": "M/L",
-      "image": "images/units/US-Flamethrower.png",
+      "image": "images/units/usa/US-Flamethrower.png",
       "sections": [
         "Flamethrower"
       ],
@@ -10876,7 +10876,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Medium Machine Gun Team",
       "page": "Armies of the United States (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/US-MMG.png",
+      "image": "images/units/usa/US-MMG.png",
       "sections": [
         "Heavy Weapons",
         "Machine Gun"
@@ -10998,7 +10998,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Heavy Machine Gun Team",
       "page": "Armies of the United States (v3) - page 43",
       "period": "E/M/L",
-      "image": "images/units/US-HMG.png",
+      "image": "images/units/usa/US-HMG.png",
       "sections": [
         "Heavy Weapons",
         "Machine Gun"
@@ -11245,7 +11245,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Medium Mortar Team",
       "page": "Armies of the United States (v3) - page 49",
       "period": "E/M/L",
-      "image": "images/units/US-Medium-mortar.png",
+      "image": "images/units/usa/US-Medium-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -11392,7 +11392,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Heavy Mortar Team",
       "page": "Armies of the United States (v3) - page 49",
       "period": "M/L",
-      "image": "images/units/US-Heavy-mortar.png",
+      "image": "images/units/usa/US-Heavy-mortar.png",
       "sections": [
         "Heavy Weapons",
         "Mortar"
@@ -11480,7 +11480,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Light Artillery (M1A1)",
       "page": "Armies of the United States (v3) - page 50",
       "period": "E/M/L",
-      "image": "images/units/US-Light-artillery.png",
+      "image": "images/units/usa/US-Light-artillery.png",
       "sections": [
         "Artillery"
       ],
@@ -11611,7 +11611,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Medium Artillery (M2A1)",
       "page": "Armies of the United States (v3) - page 50",
       "period": "E/M/L",
-      "image": "images/units/US-Medium-artillery.png",
+      "image": "images/units/usa/US-Medium-artillery.png",
       "sections": [
         "Artillery"
       ],
@@ -12361,7 +12361,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M51 Multiple Machine Gun Carriage",
       "page": "Armies of the United States (v3) - page 52",
       "period": "M/L",
-      "image": "images/units/US-M51-AA.png",
+      "image": "images/units/usa/US-M51-AA.png",
       "sections": [
         "Artillery"
       ],
@@ -12431,7 +12431,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "37mm Anti-tank Gun M3",
       "page": "Armies of the United States (v3) - page 53",
       "period": "E/M/L",
-      "image": "images/units/US-37mm-AT.png",
+      "image": "images/units/usa/US-37mm-AT.png",
       "sections": [
         "Artillery"
       ],
@@ -12547,7 +12547,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "57mm Anti-tank Gun M1",
       "page": "Armies of the United States (v3) - page 53",
       "period": "M/L",
-      "image": "images/units/US-57mm-AT.png",
+      "image": "images/units/usa/US-57mm-AT.png",
       "sections": [
         "Artillery"
       ],
@@ -12669,7 +12669,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "3-inch Anti-tank Gun M5",
       "page": "Armies of the United States (v3) - page 53",
       "period": "M/L",
-      "image": "images/units/US-3-inch-AT.png",
+      "image": "images/units/usa/US-3-inch-AT.png",
       "sections": [
         "Artillery"
       ],
@@ -12946,7 +12946,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M3 Stuart Light Tank",
       "page": "Armies of the United States (v3) - page 54",
       "period": "E/M",
-      "image": "images/units/US-M3-Stuart.png",
+      "image": "images/units/usa/US-M3-Stuart.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13102,7 +13102,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M3A1 Stuart Light Tank",
       "page": "Armies of the United States (v3) - page 55",
       "period": "M/L",
-      "image": "images/units/US-M3A1-Stuart.png",
+      "image": "images/units/usa/US-M3A1-Stuart.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13470,7 +13470,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M5/M5A1 Stuart",
       "page": "Armies of the United States (v3) - page 56",
       "period": "M/L",
-      "image": "images/units/US-M5-Stuart.png",
+      "image": "images/units/usa/US-M5-Stuart.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13698,7 +13698,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M7-7 Mechanised Flamethrower",
       "page": "Armies of the United States (v3) - page 56",
       "period": "L",
-      "image": "images/units/US-M5-Stuart-flamethrower.png",
+      "image": "images/units/usa/US-M5-Stuart-flamethrower.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13783,7 +13783,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M24 Chaffee Light Tank",
       "page": "Armies of the United States (v3) - page 57",
       "period": "L",
-      "image": "images/units/US-M24-Chaffee.png",
+      "image": "images/units/usa/US-M24-Chaffee.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -13924,7 +13924,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M3 Lee/Grant Medium Tank",
       "page": "Armies of the United States (v3) - page 57",
       "period": "E/M",
-      "image": "images/units/US-M3-Lee.png",
+      "image": "images/units/usa/US-M3-Lee.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14332,7 +14332,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M4 Sherman 75mm",
       "page": "Armies of the United States (v3) - page 59",
       "period": "M",
-      "image": "images/units/US-M4-Sherman.png",
+      "image": "images/units/usa/US-M4-Sherman.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14468,7 +14468,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M4A1/A2/A3/A4 Sherman 75mm",
       "page": "Armies of the United States (v3) - page 60",
       "period": "M/L",
-      "image": "images/units/US-M4A3-75mm-Sherman.png",
+      "image": "images/units/usa/US-M4A3-75mm-Sherman.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14622,7 +14622,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M4A1/A2/A3 Sherman 76mm",
       "page": "Armies of the United States (v3) - page 60",
       "period": "L",
-      "image": "images/units/US-M4A3-76mm-Sherman.png",
+      "image": "images/units/usa/US-M4A3-76mm-Sherman.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -14776,7 +14776,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M4A3E2 Sherman 'Jumbo' Heavy Assault Tank",
       "page": "Armies of the United States (v3) - page 61",
       "period": "L",
-      "image": "images/units/US-M4A3E2-Jumbo.png",
+      "image": "images/units/usa/US-M4A3E2-Jumbo.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15228,7 +15228,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M4 Sherman T34 Calliope",
       "page": "Armies of the United States (v3) - page 63",
       "period": "L",
-      "image": "images/units/US-Sherman-Calliope.png",
+      "image": "images/units/usa/US-Sherman-Calliope.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15552,7 +15552,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Sherman Crocodile",
       "page": "Armies of the United States (v3) - page 64",
       "period": "L",
-      "image": "images/units/US-Sherman-crocodile.png",
+      "image": "images/units/usa/US-Sherman-crocodile.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15689,7 +15689,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "DD Sherman",
       "page": "Armies of the United States (v3) - page 64",
       "period": "L",
-      "image": "images/units/US-Sherman-DD.png",
+      "image": "images/units/usa/US-Sherman-DD.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -15959,7 +15959,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M26 Pershing Heavy Tank",
       "page": "Armies of the United States (v3) - page 65",
       "period": "L",
-      "image": "images/units/US-M26-Pershing.png",
+      "image": "images/units/usa/US-M26-Pershing.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16398,7 +16398,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M6 Gun Motor Carriage",
       "page": "Armies of the United States (v3) - page 68",
       "period": "E/M",
-      "image": "images/units/US-M6-GMC.png",
+      "image": "images/units/usa/US-M6-GMC.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16572,7 +16572,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M10 Tank Destroyer",
       "page": "Armies of the United States (v3) - page 69",
       "period": "M/L",
-      "image": "images/units/US-M10.png",
+      "image": "images/units/usa/US-M10.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16667,7 +16667,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M18 Hellcat",
       "page": "Armies of the United States (v3) - page 70",
       "period": "L",
-      "image": "images/units/US-M18.png",
+      "image": "images/units/usa/US-M18.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16790,7 +16790,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M36 Jackson",
       "page": "Armies of the United States (v3) - page 70",
       "period": "L",
-      "image": "images/units/US-M36.png",
+      "image": "images/units/usa/US-M36.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16885,7 +16885,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M36B1 Jackson",
       "page": "Armies of the United States (v3) - page 70",
       "period": "L",
-      "image": "images/units/US-M36B1.png",
+      "image": "images/units/usa/US-M36B1.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -16989,7 +16989,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M8 Scott",
       "page": "Armies of the United States (v3) - page 71",
       "period": "M/L",
-      "image": "images/units/US-M8-Scott.png",
+      "image": "images/units/usa/US-M8-Scott.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17076,7 +17076,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M7 Priest",
       "page": "Armies of the United States (v3) - page 72",
       "period": "M/L",
-      "image": "images/units/US-M7-Priest.png",
+      "image": "images/units/usa/US-M7-Priest.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17646,7 +17646,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M21 Mortar Carrier",
       "page": "Armies of the United States (v3) - page 74",
       "period": "M/L",
-      "image": "images/units/US-M21-mortar.png",
+      "image": "images/units/usa/US-M21-mortar.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -17806,7 +17806,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "LVT(A)4 Landing Vehicle",
       "page": "Armies of the United States (v3) - page 74",
       "period": "L",
-      "image": "images/units/US-LVT(A)4.png",
+      "image": "images/units/usa/US-LVT(A)4.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18053,7 +18053,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M15 Multiple Gun Motor Carriage",
       "page": "Armies of the United States (v3) - page 75",
       "period": "M/L",
-      "image": "images/units/US-M15-MGMC.png",
+      "image": "images/units/usa/US-M15-MGMC.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18138,7 +18138,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M16 Multiple Gun Motor Carriage",
       "page": "Armies of the United States (v3) - page 76",
       "period": "M/L",
-      "image": "images/units/US-M16-MGMC.png",
+      "image": "images/units/usa/US-M16-MGMC.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18209,7 +18209,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Quad 50 Gun Truck",
       "page": "Armies of the United States (v3) - page 76",
       "period": "M/L",
-      "image": "images/units/US-Quad-50-gun-truck.png",
+      "image": "images/units/usa/US-Quad-50-gun-truck.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18275,7 +18275,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M8 Greyhound",
       "page": "Armies of the United States (v3) - page 77",
       "period": "M/L",
-      "image": "images/units/US-M8-Greyhound.png",
+      "image": "images/units/usa/US-M8-Greyhound.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18384,7 +18384,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M20 Scout Car",
       "page": "Armies of the United States (v3) - page 78",
       "period": "M/L",
-      "image": "images/units/US-M20-Scout-car.png",
+      "image": "images/units/usa/US-M20-Scout-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18484,7 +18484,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "Reconnaissance Jeep",
       "page": "Armies of the United States (v3) - page 78",
       "period": "L",
-      "image": "images/units/US-Recon-jeep.png",
+      "image": "images/units/usa/US-Recon-jeep.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
@@ -18718,7 +18718,7 @@ window.EASYARMY_FACTIONS['usa'] = {
       "cardTitle": "M3 White Scout Car (Recce)",
       "page": "Armies of the United States (v3) - page 80",
       "period": "E/M/L",
-      "image": "images/units/US-M3-White-Scout-car.png",
+      "image": "images/units/usa/US-M3-White-Scout-car.png",
       "sections": [
         "Command Vehicle",
         "Vehicle"
