@@ -247,6 +247,7 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
       }
 
       function SavedListRow({ list, isCurrent, onOpen, onDelete, deleteTitle }) {
+        const factionsMap = window.FACTIONS_REGISTRY || window.EASYARMY_FACTIONS || {};
         return (
           <div
             className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
@@ -256,7 +257,7 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
             <button type="button" onClick={onOpen} className="flex-1 min-w-0 text-left cursor-pointer">
               <div className="font-bold text-sm text-white truncate">{list.name}</div>
               <div className="text-[11px] font-mono text-zinc-400 flex flex-wrap items-center gap-x-2">
-                <span>{FACTIONS_REGISTRY[list.faction_id]?.faction || list.faction_id}</span>
+                <span>{factionsMap[list.faction_id]?.faction || list.faction_id}</span>
                 <span className="text-zinc-600">•</span>
                 <span className="text-amber-400 font-bold">{list.total_points} pts</span>
                 <span className="text-zinc-600">•</span>
@@ -425,12 +426,7 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
           </ModalShell>
         );
       }
-      // =========================================================================
-      // ENGINE HELPERS & BACKWARD COMPATIBILITY
-      // =========================================================================
-      // Backward-compatibility alias map for any legacy saved JSON lists
-
-function ExportModal({
+      function ExportModal({
         isOpen,
         onClose,
         factionData,
@@ -596,11 +592,6 @@ function ExportModal({
           </div>
         );
       }
-      // =========================================================================
-      // MAIN APPLICATION
-      // =========================================================================
-      // Clear any legacy draft so the app always opens completely clean and empty by default
-      try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

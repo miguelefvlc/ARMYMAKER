@@ -4,15 +4,11 @@
 
 const { useState, useEffect, useRef, useMemo } = React;
 
-const FACTIONS_REGISTRY = window.EASYARMY_FACTIONS || {
+const FACTIONS_REGISTRY = window.FACTIONS_REGISTRY || window.EASYARMY_FACTIONS || {
   soviet_union: window.EASYARMY_SOVIET_DATA,
 };
 
-const EXP_LABELS = {
-  inexperienced: 'Inexperienced',
-  regular: 'Regular',
-  veteran: 'Veteran',
-};
+// Global EXP_LABELS provided by js/engine.js
 
 try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
 
@@ -201,18 +197,32 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
           [platoonTypes, currentPlatoon.typeId]
         );
 
-        const totalOrderDice = useMemo(
-          () => platoons.reduce((acc, p) => acc + Object.keys(p.slots).length, 0),
-          [platoons]
-        );
-        const totalPoints = useMemo(
-          () => platoons.reduce((acc, p) => acc + Object.values(p.slots).reduce((sum, u) => sum + (u?.points || 0), 0), 0),
-          [platoons]
-        );
+        const { totalOrderDice, totalPoints } = useMemo(() => {
+          let dice = 0;
+          let pts = 0;
+          for (const p of platoons) {
+            for (const u of Object.values(p.slots || {})) {
+              if (u) {
+                dice += 1;
+                pts += u.points || 0;
+              }
+            }
+          }
+          return { totalOrderDice: dice, totalPoints: pts };
+        }, [platoons]);
+
         const currentPlatoonPoints = useMemo(
-          () => Object.values(currentPlatoon.slots).reduce((sum, u) => sum + (u?.points || 0), 0),
+          () => Object.values(currentPlatoon.slots || {}).reduce((sum, u) => sum + (u?.points || 0), 0),
           [currentPlatoon.slots]
         );
+
+        const platoonCountByType = useMemo(() => {
+          const counts = {};
+          for (const p of platoons) {
+            counts[p.typeId] = (counts[p.typeId] || 0) + 1;
+          }
+          return counts;
+        }, [platoons]);
 
 
         const handleSelectPlatoonByTypeId = (typeId) => {
@@ -733,7 +743,7 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
                       // Filter out empty duplicate platoons that are not active ("desaparece de la barra")
                       const typePlatoons = platoons.filter(p => {
                         if (p.typeId !== typeId) return false;
-                        const matchingCount = platoons.filter(other => other.typeId === typeId).length;
+                        const matchingCount = platoonCountByType[typeId] || 0;
                         const unitsCount = Object.keys(p.slots || {}).length;
                         if (matchingCount > 1 && unitsCount === 0 && p.id !== activePlatoonId) {
                           return false;

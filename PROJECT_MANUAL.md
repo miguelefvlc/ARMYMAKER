@@ -336,8 +336,8 @@ npm test
 1. **Eliminación de Dependencias Fantasma**:
    - Se removieron de `package.json` dependencias no utilizadas en producción (`react`, `react-dom`, `@tailwindcss/vite`, `lucide-react`, `clsx`).
    - Se limpió `vite.config.js` dejándolo como un servidor estático ligero.
-2. **Deduplicación de Componentes UI**:
-   - `GoogleIcon`: Se unificaron 3 bloques idénticos de marcado SVG en un único componente reutilizable.
+2. **Deduplicación y Depuración de Componentes UI**:
+   - `GoogleIcon`: Eliminado como código muerto tras la remoción del proveedor Google OAuth.
    - `SavedListRow`: Se consolidó la visualización de tarjetas de listas en la nube y en local en `MyListsModal`, eliminando más de 70 líneas duplicadas.
    - `QuantityStepper`: Se creó un componente común para los controles de incremento/decremento en `UnitEditModal`.
 3. **Optimización de Rendimiento en Renderizado**:
@@ -348,3 +348,8 @@ npm test
 5. **Servidor Local Nativo Multi-Puerto sin Dependencias (`server.js`)**:
    - Resuelve el error de ejecución en unidades virtuales de Google Drive donde `node_modules/.bin` no puede crear enlaces simbólicos a `vite`.
    - Escucha en el puerto principal `5173` y mantiene un puerto de respaldo en `3000` para capturar cualquier redirección de autenticación (Supabase).
+6. **Auditoría Senior y Limpieza de Código Muerto**:
+   - Exportación global unificada de `EXP_LABELS`, `FACTIONS_REGISTRY` y `PLATOON_TACTICAL_INFO` para evitar problemas de hoisting entre módulos Babel.
+   - Reducción de pasadas de cálculo de puntos y dados de orden a una única pasada lineal \(O(N)\).
+   - Pre-cálculo memorizado de recuento de pelotones por tipo en la barra de navegación para evitar filtros cuadráticos \(O(N^2)\).
+   - Eliminación de comentarios huérfanos y actualización del service worker a caché `army-maker-v15`.

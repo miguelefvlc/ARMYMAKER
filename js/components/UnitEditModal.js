@@ -668,13 +668,10 @@ function QuantityStepper({ value, max, onChange, min = 0, isInvalid = false }) {
                   </button>
                 </div>
               </div>
-
             </div>
           </div>
         );
       }
-      // =========================================================================
-
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

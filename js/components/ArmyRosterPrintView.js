@@ -272,9 +272,6 @@ function ArmyRosterPrintView({ factionData, armyListName, armyNotes, totalPoints
           </div>
         );
       }
-      // =========================================================================
-
-      // =========================================================================
 
 // Attach to window for global access
 if (typeof window !== 'undefined') {

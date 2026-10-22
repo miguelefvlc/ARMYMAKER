@@ -1180,9 +1180,17 @@ function cleanSpecialText(s) {
         };
       }
 
+const EXP_LABELS = {
+  inexperienced: 'Inexperienced',
+  regular: 'Regular',
+  veteran: 'Veteran',
+};
+
 // Export / Attach to global scope (works in browser window and Node globalThis)
 const _root = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 _root.LEGACY_UNIT_ALIASES = LEGACY_UNIT_ALIASES;
+_root.EXP_LABELS = EXP_LABELS;
+_root.FACTIONS_REGISTRY = _root.EASYARMY_FACTIONS || _root.FACTIONS_REGISTRY || {};
 _root.getUnitDefinition = getUnitDefinition;
 _root.getUnitBaseMen = getUnitBaseMen;
 _root.calculateUnitPoints = calculateUnitPoints;
