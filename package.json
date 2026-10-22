@@ -12,6 +12,7 @@
     "dev": "node server.js",
     "start": "node server.js",
     "preview": "node server.js",
+    "sync": "node scripts/auto_sync.js",
     "test": "node scripts/verify_easyarmy.js"
   },
   "keywords": [

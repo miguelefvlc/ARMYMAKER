@@ -9,6 +9,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { exec } from 'child_process';
+import { startAutoSync } from './scripts/auto_sync.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -158,6 +159,13 @@ function startServer(port, isPrimary = false) {
 
 // Iniciar servidor principal en 5173
 startServer(PRIMARY_PORT, true);
+
+// Iniciar auto-sync con GitHub (sube cambios automáticamente tras 8s de espera)
+try {
+  startAutoSync();
+} catch (err) {
+  console.warn('[Auto-Sync] No se pudo inicializar auto-sync:', err.message);
+}
 
 // Iniciar servidor secundario en 3000 si es diferente (para redirecciones por defecto de Supabase)
 if (PRIMARY_PORT !== FALLBACK_PORT) {
