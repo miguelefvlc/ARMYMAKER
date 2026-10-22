@@ -1012,9 +1012,22 @@ function cleanSpecialText(s) {
             !isCombinedLeaderAndMen &&
             (isWeaponOption || /any model|any man|anybody|up to \d+ men/i.test(lower));
 
+          // Extract normative rule limit if specified in the rule text (e.g. "Up to 2 men", "Up to 1 man")
+          let normativeLimit = null;
+          const upToMatch = lower.match(/\bup to\s*(\d+)\s*(other\s*)?(men|model|soldier|man)/i);
+          if (upToMatch) {
+            normativeLimit = parseInt(upToMatch[1], 10);
+            if (isCombinedLeaderAndMen && hasLeader) {
+              normativeLimit += 1;
+            }
+          } else if (opt.max && !/any model|any man|anybody|any number/i.test(lower)) {
+            normativeLimit = opt.max;
+          }
+
           categorized.push({
             opt,
             lower,
+            normativeLimit,
             isAddition,
             isPerManOrSquadUpgrade,
             isLeaderOnly,
@@ -1069,25 +1082,28 @@ function cleanSpecialText(s) {
           }
         }
 
-        // 4. Calculate dynamic maxes for all counter options
+        // 4. Calculate dynamic maxes for all counter options (normative rules take precedence)
         for (const item of categorized) {
-          const { opt, isAddition, isCombinedLeaderAndMen, isRankAndFileReplacement } = item;
+          const { opt, normativeLimit, isAddition, isCombinedLeaderAndMen, isRankAndFileReplacement } = item;
           if (opt.type !== 'counter') continue;
 
           if (isAddition) {
-            const maxSquad = Math.min(opt.max ?? totalSquadModels, totalSquadModels);
-            dynamicMaxes[opt.id] = Math.max(0, maxSquad);
+            const squadCap = Math.min(opt.max ?? totalSquadModels, totalSquadModels);
+            const finalCap = normativeLimit !== null ? Math.min(normativeLimit, squadCap) : squadCap;
+            dynamicMaxes[opt.id] = Math.max(0, finalCap);
           } else if (isCombinedLeaderAndMen) {
             const maxCapacity = (hasLeader ? 1 : 0) + availableRankAndFile;
-            dynamicMaxes[opt.id] = Math.max(0, Math.min(opt.max ?? maxCapacity, maxCapacity));
+            const finalCap = normativeLimit !== null ? Math.min(normativeLimit, maxCapacity) : maxCapacity;
+            dynamicMaxes[opt.id] = Math.max(0, finalCap);
           } else if (isRankAndFileReplacement) {
             const currentOptCount = Number(options[opt.id] || 0);
             const otherReplacements = totalRankAndFileReplacements - currentOptCount;
             const remainingCapacity = Math.max(0, availableRankAndFile - otherReplacements);
-            const dynamicMax = Math.min(opt.max ?? availableRankAndFile, remainingCapacity);
-            dynamicMaxes[opt.id] = Math.max(0, dynamicMax);
+            const baseCap = opt.max ? Math.min(opt.max, remainingCapacity) : remainingCapacity;
+            const finalCap = normativeLimit !== null ? Math.min(normativeLimit, baseCap) : baseCap;
+            dynamicMaxes[opt.id] = Math.max(0, finalCap);
           } else {
-            dynamicMaxes[opt.id] = opt.max || 1;
+            dynamicMaxes[opt.id] = normativeLimit !== null ? normativeLimit : (opt.max || 1);
           }
         }
 
@@ -1116,6 +1132,18 @@ function cleanSpecialText(s) {
                 `"${opt.rawText || opt.label}": seleccionado ${val}, pero excede el tamaño de la escuadra (${totalSquadModels} modelos).`
               );
             }
+          }
+        }
+
+        // Error C: Normative rule limit strictly exceeded
+        for (const item of categorized) {
+          const { opt, normativeLimit } = item;
+          if (normativeLimit === null) continue;
+          const val = opt.type === 'counter' ? Number(options[opt.id] || 0) : (options[opt.id] ? 1 : 0);
+          if (val > normativeLimit) {
+            errors.push(
+              `Límite reglamentario superado: "${opt.rawText || opt.label}": la norma sólo permite un máximo de ${normativeLimit} arma${normativeLimit > 1 ? 's' : ''} (seleccionado ${val}).`
+            );
           }
         }
 

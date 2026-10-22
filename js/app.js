@@ -291,45 +291,68 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
           }));
         };
 
-        const handleClearSlot = (slotId) => {
-          setPlatoons(platoons.map(p => {
-            if (p.id === activePlatoonId) {
-              const nextSlots = { ...p.slots };
-              delete nextSlots[slotId];
-              return { ...p, slots: nextSlots };
+        const handleClearSlot = (slotId, platoonId = activePlatoonId) => {
+          setPlatoons(prevPlatoons => {
+            let nextPlatoons = prevPlatoons.map(p => {
+              if (p.id === platoonId) {
+                const nextSlots = { ...p.slots };
+                delete nextSlots[slotId];
+                return { ...p, slots: nextSlots };
+              }
+              return p;
+            });
+
+            // "Cuando un pelotón añadido (segundo de rifle por ejemplo) se queda vacío, desaparece de la barra."
+            const targetPlatoon = nextPlatoons.find(p => p.id === platoonId);
+            if (targetPlatoon && Object.keys(targetPlatoon.slots || {}).length === 0 && nextPlatoons.length > 1) {
+              const isDuplicateType = nextPlatoons.filter(p => p.typeId === targetPlatoon.typeId).length > 1;
+              const isAddedPlatoon = isDuplicateType || targetPlatoon.id !== nextPlatoons[0].id;
+              if (isAddedPlatoon) {
+                nextPlatoons = nextPlatoons.filter(p => p.id !== targetPlatoon.id);
+                if (activePlatoonId === targetPlatoon.id) {
+                  const fallback = nextPlatoons.find(p => p.typeId === targetPlatoon.typeId) || nextPlatoons[0];
+                  setActivePlatoonId(fallback.id);
+                }
+                showToast("Pelotón vacío eliminado de la barra", "info");
+              }
             }
-            return p;
-          }));
+
+            return nextPlatoons;
+          });
         };
 
         const handleCopySlot = (sourceSlotId, targetSlotId, sourcePlatoonId = activePlatoonId, targetPlatoonId = activePlatoonId) => {
-          // 1. Platoon validation ("Entre pelotones no lo permite")
-          if (sourcePlatoonId !== targetPlatoonId || sourcePlatoonId !== activePlatoonId) {
+          const srcPlatoonId = sourcePlatoonId || activePlatoonId;
+          const tgtPlatoonId = targetPlatoonId || activePlatoonId;
+
+          // 1. Cannot copy onto the exact same slot in the same platoon
+          if (srcPlatoonId === tgtPlatoonId && sourceSlotId === targetSlotId) {
             return;
           }
 
-          // 2. Cannot copy onto itself
-          if (sourceSlotId === targetSlotId) {
-            return;
-          }
+          // 2. Platoons lookup
+          const srcPlatoon = platoons.find(p => p.id === srcPlatoonId);
+          const tgtPlatoon = platoons.find(p => p.id === tgtPlatoonId);
+          if (!srcPlatoon || !tgtPlatoon) return;
 
-          // 3. Current active platoon
-          const platoon = platoons.find(p => p.id === activePlatoonId);
-          if (!platoon) return;
-
-          const sourceUnit = platoon.slots[sourceSlotId];
+          const sourceUnit = srcPlatoon.slots[sourceSlotId];
           if (!sourceUnit) return;
 
-          // 4. Verify slot titles match ("obligatoriamente el título de la celda tiene que ser el mismo, sino, no deja")
-          const pType = platoonTypes.find(t => t.id === platoon.typeId);
+          // 3. Verify slot titles match ("siempre y cuando haya coincidencia de tipo de unidad (infantry, sniper, mortar, etc.)")
+          const srcType = platoonTypes.find(t => t.id === srcPlatoon.typeId);
+          const tgtType = platoonTypes.find(t => t.id === tgtPlatoon.typeId);
+
           let sourceSlotDef = null;
+          for (const col of srcType?.columns || []) {
+            for (const s of col.slots || []) {
+              if (s.id === sourceSlotId) sourceSlotDef = s;
+            }
+          }
+
           let targetSlotDef = null;
-          if (pType && pType.columns) {
-            for (const col of pType.columns) {
-              for (const s of col.slots || []) {
-                if (s.id === sourceSlotId) sourceSlotDef = s;
-                if (s.id === targetSlotId) targetSlotDef = s;
-              }
+          for (const col of tgtType?.columns || []) {
+            for (const s of col.slots || []) {
+              if (s.id === targetSlotId) targetSlotDef = s;
             }
           }
 
@@ -337,21 +360,22 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
           const targetTitle = (targetSlotDef?.label || '').trim().toLowerCase();
 
           if (!sourceTitle || !targetTitle || sourceTitle !== targetTitle) {
+            showToast(`No se puede copiar: tipos incompatibles ("${sourceSlotDef?.label || 'origen'}" no coincide con "${targetSlotDef?.label || 'destino'}")`, "error");
             return;
           }
 
-          // 5. Deep clone source unit config
+          // 4. Deep clone source unit config
           const clonedUnit = JSON.parse(JSON.stringify(sourceUnit));
 
-          // Ensure recalculated points integrity
+          // Recalculate points integrity
           const def = getUnitDefinition(factionData, clonedUnit.name);
           if (def && clonedUnit.config) {
             clonedUnit.points = calculateUnitPoints(def, clonedUnit.config);
           }
 
-          // 6. Update platoon slots with the cloned configuration
+          // 5. Update target platoon slots with the cloned configuration
           setPlatoons(prevPlatoons => prevPlatoons.map(p => {
-            if (p.id === activePlatoonId) {
+            if (p.id === tgtPlatoonId) {
               return {
                 ...p,
                 slots: {
@@ -363,9 +387,79 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
             return p;
           }));
 
+          // Make sure target platoon is active
+          if (activePlatoonId !== tgtPlatoonId) {
+            setActivePlatoonId(tgtPlatoonId);
+          }
+
           setDraggedSlot(null);
-          showToast(`Copiado: "${clonedUnit.name}" a ${targetSlotDef?.label || 'celda'}`, "success");
+          const tgtInfo = PLATOON_TACTICAL_INFO[tgtPlatoon.typeId]?.es || tgtType?.name || 'Pelotón';
+          showToast(`Copiado: "${clonedUnit.name}" a ${tgtInfo} (${targetSlotDef?.label || 'celda'})`, "success");
         };
+
+        const handleDropOnPlatoon = (targetPlatoonId) => {
+          if (!draggedSlot) return;
+
+          const targetPlatoon = platoons.find(p => p.id === targetPlatoonId);
+          if (!targetPlatoon) return;
+
+          // Open target platoon
+          if (activePlatoonId !== targetPlatoonId) {
+            setActivePlatoonId(targetPlatoonId);
+          }
+
+          if (targetPlatoonId === draggedSlot.platoonId) {
+            return;
+          }
+
+          const pType = platoonTypes.find(t => t.id === targetPlatoon.typeId);
+          const allSlots = [];
+          for (const col of pType?.columns || []) {
+            for (const s of col.slots || []) {
+              allSlots.push(s);
+            }
+          }
+
+          const sourceTitle = (draggedSlot.slotLabel || '').trim().toLowerCase();
+          const matchingSlots = allSlots.filter(s => (s.label || '').trim().toLowerCase() === sourceTitle);
+
+          if (matchingSlots.length === 0) {
+            showToast(`Este pelotón no admite unidades de tipo "${draggedSlot.slotLabel}"`, "error");
+            return;
+          }
+
+          const emptySlot = matchingSlots.find(s => !targetPlatoon.slots[s.id]);
+          if (!emptySlot) {
+            showToast(`Todas las casillas de "${draggedSlot.slotLabel}" en este pelotón están ocupadas`, "error");
+            return;
+          }
+
+          handleCopySlot(draggedSlot.slotId, emptySlot.id, draggedSlot.platoonId, targetPlatoonId);
+        };
+
+        // Auto-cleanup: remove inactive empty duplicate / added platoons
+        useEffect(() => {
+          setPlatoons(prevPlatoons => {
+            if (prevPlatoons.length <= 1) return prevPlatoons;
+            const pruned = prevPlatoons.filter(p => {
+              const unitsCount = Object.keys(p.slots || {}).length;
+              if (unitsCount > 0) return true;
+              if (p.id === activePlatoonId) return true; // Keep currently open platoon
+              const matchingTypeCount = prevPlatoons.filter(other => other.typeId === p.typeId).length;
+              if (matchingTypeCount > 1) {
+                return false; // Remove empty duplicate platoon
+              }
+              if (p.id !== prevPlatoons[0].id) {
+                return false; // Remove empty added platoon
+              }
+              return true;
+            });
+            if (pruned.length !== prevPlatoons.length) {
+              return pruned;
+            }
+            return prevPlatoons;
+          });
+        }, [activePlatoonId]);
 
         useEffect(() => {
           setDraggedSlot(null);
@@ -636,7 +730,21 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
                     {platoonTypes.map((t) => {
                       const typeId = t.id;
                       const info = PLATOON_TACTICAL_INFO[typeId] || { es: t.name || t.title, en: t.title };
-                      const typePlatoons = platoons.filter(p => p.typeId === typeId);
+                      // Filter out empty duplicate platoons that are not active ("desaparece de la barra")
+                      const typePlatoons = platoons.filter(p => {
+                        if (p.typeId !== typeId) return false;
+                        const matchingCount = platoons.filter(other => other.typeId === typeId).length;
+                        const unitsCount = Object.keys(p.slots || {}).length;
+                        if (matchingCount > 1 && unitsCount === 0 && p.id !== activePlatoonId) {
+                          return false;
+                        }
+                        return true;
+                      });
+
+                      const draggedTitle = (draggedSlot?.slotLabel || '').trim().toLowerCase();
+                      const typeAcceptsDragged = !!draggedSlot && (t.columns || []).some(col =>
+                        (col.slots || []).some(s => (s.label || '').trim().toLowerCase() === draggedTitle)
+                      );
 
                       if (typePlatoons.length === 0) {
                         const tooltipText = `${info.es} (${info.en}) • Sin unidades`;
@@ -674,6 +782,14 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
                               btnStyle = "bg-zinc-900/60 text-zinc-500 hover:text-zinc-300 hover:bg-zinc-850 border-zinc-800 opacity-45 hover:opacity-85";
                             }
 
+                            if (draggedSlot) {
+                              if (typeAcceptsDragged) {
+                                btnStyle += " ring-2 ring-emerald-400/90 shadow-md shadow-emerald-950/50";
+                              } else {
+                                btnStyle += " opacity-25";
+                              }
+                            }
+
                             const tooltipText = `${info.es}${isExtra ? ` #${platoonNumber}` : ''} (${info.en}${isExtra ? ` #${platoonNumber}` : ''})${
                               isEquipped ? ` • ${unitsCount} unidad${unitsCount > 1 ? 'es' : ''}` : ' • Sin unidades'
                             }${isCurrent ? ' [Activo]' : ''}`;
@@ -683,6 +799,23 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
                                 key={p.id}
                                 type="button"
                                 onClick={() => setActivePlatoonId(p.id)}
+                                onDragOver={(e) => {
+                                  if (draggedSlot && typeAcceptsDragged) {
+                                    e.preventDefault();
+                                    e.dataTransfer.dropEffect = 'copy';
+                                  }
+                                }}
+                                onDragEnter={(e) => {
+                                  if (draggedSlot && p.id !== activePlatoonId) {
+                                    setActivePlatoonId(p.id);
+                                  }
+                                }}
+                                onDrop={(e) => {
+                                  e.preventDefault();
+                                  if (draggedSlot) {
+                                    handleDropOnPlatoon(p.id);
+                                  }
+                                }}
                                 className={`w-9 h-7 sm:w-10 sm:h-7.5 rounded-lg border flex items-center justify-center relative transition-all cursor-pointer ${btnStyle}`}
                                 title={tooltipText}
                               >

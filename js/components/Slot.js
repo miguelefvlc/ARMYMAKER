@@ -76,13 +76,11 @@ function Slot({
   const isAnyDragging = !!draggedSlot;
 
   // Drop Validation:
-  // 1. Must be in the exact same platoon ("Entre pelotones no lo permite")
-  // 2. Must not drop onto itself
-  // 3. Must have identical slot title ("obligatoriamente el título de la celda tiene que ser el mismo")
+  // 1. Must not drop onto the exact same slot in the same platoon
+  // 2. Must have identical slot title ("obligatoriamente el título de la celda tiene que ser el mismo", e.g. Infantry to Infantry, Mortar to Mortar)
   const isValidTarget = useMemo(() => {
     if (!draggedSlot) return false;
-    if (draggedSlot.platoonId !== platoonId) return false;
-    if (draggedSlot.slotId === slot.id) return false;
+    if (draggedSlot.platoonId === platoonId && draggedSlot.slotId === slot.id) return false;
     const sourceTitle = (draggedSlot.slotLabel || '').trim().toLowerCase();
     const targetTitle = (slot.label || '').trim().toLowerCase();
     return sourceTitle.length > 0 && sourceTitle === targetTitle;
