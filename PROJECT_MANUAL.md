@@ -349,7 +349,7 @@ npm test
    - Resuelve el error de ejecución en unidades virtuales de Google Drive donde `node_modules/.bin` no puede crear enlaces simbólicos a `vite`.
    - Escucha en el puerto principal `5173` y mantiene un puerto de respaldo en `3000` para capturar cualquier redirección de autenticación (Supabase).
 6. **Auditoría Senior y Limpieza de Código Muerto**:
-   - Exportación global unificada de `EXP_LABELS`, `FACTIONS_REGISTRY` y `PLATOON_TACTICAL_INFO` para evitar problemas de hoisting entre módulos Babel.
+   - Exportación global unificada de `EXP_LABELS` (en `_root.EXP_LABELS`), `FACTIONS_REGISTRY` y `PLATOON_TACTICAL_INFO` para evitar colisiones léxicas en Babel y hoisting.
    - Reducción de pasadas de cálculo de puntos y dados de orden a una única pasada lineal \(O(N)\).
    - Pre-cálculo memorizado de recuento de pelotones por tipo en la barra de navegación para evitar filtros cuadráticos \(O(N^2)\).
-   - Eliminación de comentarios huérfanos y actualización del service worker a caché `army-maker-v15`.
+   - Service worker actualizado a caché `army-maker-v16` con política Network-First en scripts y estilos para garantizar despliegue instantáneo sin bloqueos de caché.

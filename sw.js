@@ -2,7 +2,7 @@
 // - App shell (index.html, config.js): network-first, falls back to cache when offline.
 // - Static assets (faction data, unit images, icons, CDN libraries): stale-while-revalidate.
 // - Supabase API / auth requests and non-GET requests are never cached.
-const CACHE = 'army-maker-v15';
+const CACHE = 'army-maker-v16';
 const PRECACHE = [
   './',
   './index.html',
@@ -55,16 +55,24 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url);
   if (url.hostname.endsWith('supabase.co') || url.hostname.endsWith('supabase.in') || url.hostname.endsWith('google.com')) return;
 
-  // App shell & config: network-first so updates are always live immediately
-  if (req.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname.endsWith('config.js')) {
+  // App shell, scripts & styles: network-first so updates are always live immediately
+  if (
+    req.mode === 'navigate' ||
+    url.pathname.endsWith('index.html') ||
+    url.pathname.endsWith('config.js') ||
+    url.pathname.includes('/js/') ||
+    url.pathname.includes('/css/')
+  ) {
     event.respondWith(
       fetch(req)
         .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put(req, copy));
+          if (res && res.ok) {
+            const copy = res.clone();
+            caches.open(CACHE).then((c) => c.put(req, copy));
+          }
           return res;
         })
-        .catch(() => caches.match(req).then((r) => r || caches.match('./index.html')))
+        .catch(() => caches.match(req).then((r) => r || (req.mode === 'navigate' ? caches.match('./index.html') : null)))
     );
     return;
   }
