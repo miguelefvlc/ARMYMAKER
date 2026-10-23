@@ -552,6 +552,23 @@ function ModalShell({ title, subtitle, icon, onClose, children, maxWidth = "max-
                       />
                       <span>Army Special Rules</span>
                     </label>
+
+                    <label className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg border text-xs font-mono cursor-pointer transition-all select-none ${
+                      exportOptions?.includeUnitCards !== false
+                        ? 'bg-amber-400/10 border-amber-400/50 text-amber-300 font-semibold shadow-xs'
+                        : 'bg-zinc-900/60 border-zinc-750 text-zinc-500 hover:text-zinc-300 hover:border-zinc-650'
+                    }`}>
+                      <input
+                        type="checkbox"
+                        checked={exportOptions?.includeUnitCards !== false}
+                        onChange={(e) =>
+                          setExportOptions &&
+                          setExportOptions((prev) => ({ ...prev, includeUnitCards: e.target.checked }))
+                        }
+                        className="w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-amber-400 accent-amber-400 focus:ring-0 cursor-pointer shrink-0"
+                      />
+                      <span>Tarjetas de Unidad (Battle Cards)</span>
+                    </label>
                   </div>
                 </div>
 

@@ -41,11 +41,16 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
         const [exportOptions, setExportOptions] = useState(() => {
           try {
             const saved = localStorage.getItem('boltaction.export_options');
-            if (saved) return JSON.parse(saved);
+            if (saved) {
+              const parsed = JSON.parse(saved);
+              if (parsed.includeUnitCards === undefined) parsed.includeUnitCards = true;
+              return parsed;
+            }
           } catch (_) {}
           return {
             includeUnitRules: true,
             includeArmyRules: true,
+            includeUnitCards: true,
           };
         });
 
@@ -502,6 +507,11 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
             margin: [8, 8, 8, 8],
             filename: `${cleanName}_${totalPoints}pts.pdf`,
             image: { type: "jpeg", quality: 0.98 },
+            pagebreak: {
+              mode: ['css', 'legacy'],
+              before: '.page-break-before',
+              avoid: ['.unit-card-cromo', '.unit-card', '.platoon-print-block', '.rules-print-block']
+            },
             html2canvas: {
               scale: 2,
               useCORS: true,
