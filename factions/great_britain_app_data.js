@@ -2634,6 +2634,10 @@ window.EASYARMY_FACTIONS['great_britain'] = {
       "Recce Carrier",
       "Wasp Flamethrower Carrier",
       "Jeep (no transport)"
+    ],
+    "Anti-tank (Secondary)": [
+      "Boys Anti-tank Rifle Team",
+      "PIAT Anti-tank Team"
     ]
   },
   "platoonPeriods": {

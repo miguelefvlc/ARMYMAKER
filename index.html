@@ -82,6 +82,13 @@
     <!-- React 18 & Babel Standalone -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script>
+      window.useState = React.useState;
+      window.useEffect = React.useEffect;
+      window.useRef = React.useRef;
+      window.useMemo = React.useMemo;
+      window.useCallback = React.useCallback;
+    </script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- html2pdf.js for direct PDF export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>

@@ -1,4 +1,4 @@
-// Auto-generated from EasyArmy United States v3 scrape
+// Auto-generated from EasyArmy United States (USA) v3 scrape
 window.EASYARMY_FACTIONS = window.EASYARMY_FACTIONS || {};
 window.EASYARMY_FACTIONS['usa'] = {
   "id": "usa",
@@ -2269,7 +2269,8 @@ window.EASYARMY_FACTIONS['usa'] = {
       "Sniper Team"
     ],
     "Anti-tank (Secondary)": [
-      "Bazooka Anti-tank Team"
+      "Bazooka Anti-tank Team",
+      "Bazooka Anti-tank Team-with Armoured Infantry only"
     ],
     "Light mortar": [
       "Light Mortar Team (3 men)",
@@ -2523,7 +2524,8 @@ window.EASYARMY_FACTIONS['usa'] = {
             "Sniper Team"
           ],
           "Anti-tank (Secondary)": [
-            "Bazooka Anti-tank Team"
+            "Bazooka Anti-tank Team",
+            "Bazooka Anti-tank Team-with Armoured Infantry only"
           ],
           "Light mortar": [
             "Light Mortar Team (3 men)",
@@ -2648,7 +2650,8 @@ window.EASYARMY_FACTIONS['usa'] = {
             "Sniper Team"
           ],
           "Anti-tank (Secondary)": [
-            "Bazooka Anti-tank Team"
+            "Bazooka Anti-tank Team",
+            "Bazooka Anti-tank Team-with Armoured Infantry only"
           ],
           "Light mortar": [
             "Light Mortar Team (3 men)",
@@ -2721,7 +2724,8 @@ window.EASYARMY_FACTIONS['usa'] = {
             "Sniper Team"
           ],
           "Anti-tank (Secondary)": [
-            "Bazooka Anti-tank Team"
+            "Bazooka Anti-tank Team",
+            "Bazooka Anti-tank Team-with Armoured Infantry only"
           ],
           "Light mortar": [
             "Light Mortar Team (3 men)",
@@ -2915,7 +2919,8 @@ window.EASYARMY_FACTIONS['usa'] = {
             "Air Force Forward Observer"
           ],
           "Anti-tank (Secondary)": [
-            "Bazooka Anti-tank Team"
+            "Bazooka Anti-tank Team",
+            "Bazooka Anti-tank Team-with Armoured Infantry only"
           ],
           "Recce Vehicles rule": [
             "Recce Vehicles rule"
@@ -3007,7 +3012,8 @@ window.EASYARMY_FACTIONS['usa'] = {
             "Air Force Forward Observer"
           ],
           "Anti-tank (Secondary)": [
-            "Bazooka Anti-tank Team"
+            "Bazooka Anti-tank Team",
+            "Bazooka Anti-tank Team-with Armoured Infantry only"
           ],
           "Recce Vehicles rule": [
             "Recce Vehicles rule"
@@ -3064,7 +3070,8 @@ window.EASYARMY_FACTIONS['usa'] = {
             "Air Force Forward Observer"
           ],
           "Anti-tank (Secondary)": [
-            "Bazooka Anti-tank Team"
+            "Bazooka Anti-tank Team",
+            "Bazooka Anti-tank Team-with Armoured Infantry only"
           ],
           "Recce Vehicles rule": [
             "Recce Vehicles rule"

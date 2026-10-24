@@ -2154,7 +2154,9 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "Motorcycle Squad"
     ],
     "Mortar": [
-      "Light Mortar Team"
+      "Light Mortar Team",
+      "Medium Mortar Team",
+      "Heavy Mortar Team"
     ],
     "Company Commander": [
       "Company Commander"
@@ -2356,6 +2358,9 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
       "Churchill III or IV",
       "SU-57 (T48 Gun Motor Carriage)",
       "M16/M17 Multiple Gun Motor Carriage"
+    ],
+    "Light mortar": [
+      "Light Mortar Team"
     ]
   },
   "platoonPeriods": {
@@ -18252,4 +18257,3 @@ window.EASYARMY_FACTIONS['soviet_union'] = {
     }
   ]
 };
-window.EASYARMY_SOVIET_DATA = window.EASYARMY_FACTIONS['soviet_union'];

@@ -2,7 +2,7 @@
 // SLOT COMPONENT (Platoon Box, Unit Selection, Search, Edit, Clear & Drag-to-Copy)
 // =========================================================================
 
-const { useState, useEffect, useRef, useMemo } = React;
+var { useState, useEffect, useRef, useMemo } = React;
 
 function Slot({
   slot,
@@ -36,11 +36,32 @@ function Slot({
   const availableUnits = useMemo(() => {
     if (!isOpen) return [];
     const sKey = slot.slotKey || slot.label;
+    let list = [];
     const periodSlots = factionData?.platoonPeriods?.[platoonTypeId]?.[periodKey || 'All']?.slots;
     if (periodSlots && periodSlots[sKey]) {
-      return periodSlots[sKey];
+      list = periodSlots[sKey];
+    } else {
+      list = factionData?.slotCatalog?.[sKey] || factionData?.slotCatalog?.[slot.label] || [];
     }
-    return factionData?.slotCatalog?.[sKey] || factionData?.slotCatalog?.[slot.label] || [];
+
+    // Filter out units prohibited from mandatory (compulsory) slots
+    if (slot.mandatory) {
+      list = list.filter((uName) => {
+        const uDef = factionData?.units?.[uName];
+        if (!uDef) return true;
+        const text = `${uDef.specialRulesText || ''} ${(uDef.unitRules || []).map((r) => r.text).join(' ')}`;
+        if (
+          /cannot be taken as a compulsory|may never be taken as a mandatory|instead of one of the non-mandatory|instead of one or both of the non-mandatory|instead of one or both of the nonmandatory/i.test(
+            text
+          )
+        ) {
+          return false;
+        }
+        return true;
+      });
+    }
+
+    return list;
   }, [isOpen, factionData, platoonTypeId, periodKey, slot]);
 
   const filteredUnits = useMemo(() => {

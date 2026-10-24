@@ -1560,7 +1560,8 @@ window.EASYARMY_FACTIONS['italy'] = {
       "Solothurn Anti-tank Rifle"
     ],
     "Mortar": [
-      "Light Mortar Team"
+      "Light Mortar Team",
+      "Medium Mortar Team"
     ],
     "Transports": [
       "FIAT 508CM",
@@ -1665,6 +1666,9 @@ window.EASYARMY_FACTIONS['italy'] = {
       "Autocarro Sahariano AS.37 Modificato Gun Truck",
       "Lancia Ansaldo IZ and IZM",
       "Moto Guzzi Alce"
+    ],
+    "Light mortar": [
+      "Light Mortar Team"
     ]
   },
   "platoonPeriods": {

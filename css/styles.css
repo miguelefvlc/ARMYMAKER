@@ -69,11 +69,11 @@ body {
   }
   .unit-card-cromo {
     width: 90mm !important;
-    height: 40mm !important;
+    height: 50mm !important;
     min-width: 90mm !important;
     max-width: 90mm !important;
-    min-height: 40mm !important;
-    max-height: 40mm !important;
+    min-height: 50mm !important;
+    max-height: 50mm !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
     page-break-inside: avoid !important;
@@ -94,11 +94,11 @@ body {
 }
 .unit-card-cromo {
   width: 90mm;
-  height: 40mm;
+  height: 50mm;
   min-width: 90mm;
   max-width: 90mm;
-  min-height: 40mm;
-  max-height: 40mm;
+  min-height: 50mm;
+  max-height: 50mm;
   box-sizing: border-box;
   overflow: hidden;
 }

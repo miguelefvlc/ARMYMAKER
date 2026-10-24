@@ -2745,7 +2745,8 @@ window.EASYARMY_FACTIONS['germany'] = {
       "Alarm Unit",
       "Kriegsmarine Squad",
       "ROA (Russian Liberation Army) Squad",
-      "French Milice Squad"
+      "French Milice Squad",
+      "5th Columnist Unit"
     ],
     "Company Commander": [
       "Company Commander"
@@ -2792,12 +2793,16 @@ window.EASYARMY_FACTIONS['germany'] = {
       "Artillerie Schlepper VA 601 (B)",
       "U304 (F) half-track",
       "Civilian Car",
-      "Light Truck"
+      "Light Truck",
+      "Sd.Kfz 251/7C Half-track (Engineers)"
     ],
     "Engineers": [
       "Sturmpioniere (Assault Engineer) Squad",
       "Pioneer Squad (Early War)",
-      "Pioneer Squad (Late War)"
+      "Pioneer Squad (Late War)",
+      "Pantherturm",
+      "Turmstellung",
+      "Goliath Demolition Team"
     ],
     "Flamethrower": [
       "Flamethrower Team"
@@ -3103,6 +3108,10 @@ window.EASYARMY_FACTIONS['germany'] = {
       "Panzerspähwagen P204(f)",
       "Gep.M.Trsp.Wg.Bedford(e) Armoured Carrier",
       "Sd.Kfz 250/4 prototype"
+    ],
+    "Anti-tank (Secondary)": [
+      "Anti-tank Rifle Team",
+      "Panzerschreck Anti-tank Team"
     ]
   },
   "platoonPeriods": {
@@ -3146,7 +3155,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Alarm Unit",
             "Kriegsmarine Squad",
             "ROA (Russian Liberation Army) Squad",
-            "French Milice Squad"
+            "French Milice Squad",
+            "5th Columnist Unit"
           ],
           "Company Commander": [
             "Company Commander"
@@ -3213,7 +3223,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Strafbattalion Penal Squad",
             "Waffen-SS Squad (Early War)",
             "Fallschirmjäger Squad (Early War)",
-            "Alarm Unit"
+            "Alarm Unit",
+            "5th Columnist Unit"
           ],
           "Company Commander": [
             "Company Commander"
@@ -3288,7 +3299,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Osttruppen Squad",
             "Alarm Unit",
             "ROA (Russian Liberation Army) Squad",
-            "French Milice Squad"
+            "French Milice Squad",
+            "5th Columnist Unit"
           ],
           "Company Commander": [
             "Company Commander"
@@ -3374,7 +3386,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Alarm Unit",
             "Kriegsmarine Squad",
             "ROA (Russian Liberation Army) Squad",
-            "French Milice Squad"
+            "French Milice Squad",
+            "5th Columnist Unit"
           ],
           "Company Commander": [
             "Company Commander"
@@ -3432,7 +3445,10 @@ window.EASYARMY_FACTIONS['germany'] = {
           "Engineers": [
             "Sturmpioniere (Assault Engineer) Squad",
             "Pioneer Squad (Early War)",
-            "Pioneer Squad (Late War)"
+            "Pioneer Squad (Late War)",
+            "Pantherturm",
+            "Turmstellung",
+            "Goliath Demolition Team"
           ],
           "Flamethrower": [
             "Flamethrower Team"
@@ -3505,7 +3521,9 @@ window.EASYARMY_FACTIONS['germany'] = {
           "Engineers": [
             "Sturmpioniere (Assault Engineer) Squad",
             "Pioneer Squad (Early War)",
-            "Pioneer Squad (Late War)"
+            "Pioneer Squad (Late War)",
+            "Pantherturm",
+            "Goliath Demolition Team"
           ],
           "Flamethrower": [
             "Flamethrower Team"
@@ -3544,7 +3562,10 @@ window.EASYARMY_FACTIONS['germany'] = {
           ],
           "Engineers": [
             "Sturmpioniere (Assault Engineer) Squad",
-            "Pioneer Squad (Late War)"
+            "Pioneer Squad (Late War)",
+            "Pantherturm",
+            "Turmstellung",
+            "Goliath Demolition Team"
           ],
           "Flamethrower": [
             "Flamethrower Team"
@@ -3614,7 +3635,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Alarm Unit",
             "Kriegsmarine Squad",
             "ROA (Russian Liberation Army) Squad",
-            "French Milice Squad"
+            "French Milice Squad",
+            "5th Columnist Unit"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",
@@ -3667,7 +3689,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Strafbattalion Penal Squad",
             "Waffen-SS Squad (Early War)",
             "Fallschirmjäger Squad (Early War)",
-            "Alarm Unit"
+            "Alarm Unit",
+            "5th Columnist Unit"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",
@@ -3728,7 +3751,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Osttruppen Squad",
             "Alarm Unit",
             "ROA (Russian Liberation Army) Squad",
-            "French Milice Squad"
+            "French Milice Squad",
+            "5th Columnist Unit"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",
@@ -3800,7 +3824,8 @@ window.EASYARMY_FACTIONS['germany'] = {
             "Alarm Unit",
             "Kriegsmarine Squad",
             "ROA (Russian Liberation Army) Squad",
-            "French Milice Squad"
+            "French Milice Squad",
+            "5th Columnist Unit"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",

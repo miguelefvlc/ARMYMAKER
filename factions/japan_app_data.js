@@ -1943,7 +1943,8 @@ window.EASYARMY_FACTIONS['japan'] = {
       "Volunteer Fighting Corps - Militia Squad",
       "Bamboo Spear Fighters - Boeitai Squad",
       "Sennyuu Infiltration Team",
-      "Indian National Army Squad"
+      "Indian National Army Squad",
+      "War Dogs Handlers"
     ],
     "Company Commander": [
       "Company Commander"
@@ -1987,7 +1988,8 @@ window.EASYARMY_FACTIONS['japan'] = {
     ],
     "Engineers": [
       "IJA Engineer Squad",
-      "Pioneers"
+      "Pioneers",
+      "Soko Sagyo SS-KI Armoured Work Vehicle"
     ],
     "Flamethrower": [
       "Flamethrower Team"
@@ -2104,6 +2106,9 @@ window.EASYARMY_FACTIONS['japan'] = {
       "Type 97 Rikuo - Motorcycle and Sidecar",
       "Type 98 AA Truck",
       "Type 95 Kurogane (no transport)"
+    ],
+    "Anti-tank (Secondary)": [
+      "Anti-tank Rifle Team"
     ]
   },
   "platoonPeriods": {
@@ -2128,7 +2133,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "Volunteer Fighting Corps - Militia Squad",
             "Bamboo Spear Fighters - Boeitai Squad",
             "Sennyuu Infiltration Team",
-            "Indian National Army Squad"
+            "Indian National Army Squad",
+            "War Dogs Handlers"
           ],
           "Company Commander": [
             "Company Commander"
@@ -2184,7 +2190,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "IJA Grenadier Squad",
             "SNLF Squad (Early/Mid-war)",
             "SNLF Grenadier Squad",
-            "Japanese/Manchukuoan Cavalry Squad"
+            "Japanese/Manchukuoan Cavalry Squad",
+            "War Dogs Handlers"
           ],
           "Company Commander": [
             "Company Commander"
@@ -2238,7 +2245,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "SNLF Paratrooper Squad",
             "Japanese/Manchukuoan Cavalry Squad",
             "Sennyuu Infiltration Team",
-            "Indian National Army Squad"
+            "Indian National Army Squad",
+            "War Dogs Handlers"
           ],
           "Company Commander": [
             "Company Commander"
@@ -2296,7 +2304,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "Volunteer Fighting Corps - Militia Squad",
             "Bamboo Spear Fighters - Boeitai Squad",
             "Sennyuu Infiltration Team",
-            "Indian National Army Squad"
+            "Indian National Army Squad",
+            "War Dogs Handlers"
           ],
           "Company Commander": [
             "Company Commander"
@@ -2351,7 +2360,8 @@ window.EASYARMY_FACTIONS['japan'] = {
           ],
           "Engineers": [
             "IJA Engineer Squad",
-            "Pioneers"
+            "Pioneers",
+            "Soko Sagyo SS-KI Armoured Work Vehicle"
           ],
           "Flamethrower": [
             "Flamethrower Team"
@@ -2380,7 +2390,8 @@ window.EASYARMY_FACTIONS['japan'] = {
           ],
           "Engineers": [
             "IJA Engineer Squad",
-            "Pioneers"
+            "Pioneers",
+            "Soko Sagyo SS-KI Armoured Work Vehicle"
           ],
           "Flamethrower": [
             "Flamethrower Team"
@@ -2406,7 +2417,8 @@ window.EASYARMY_FACTIONS['japan'] = {
           ],
           "Engineers": [
             "IJA Engineer Squad",
-            "Pioneers"
+            "Pioneers",
+            "Soko Sagyo SS-KI Armoured Work Vehicle"
           ],
           "Flamethrower": [
             "Flamethrower Team"
@@ -2433,7 +2445,8 @@ window.EASYARMY_FACTIONS['japan'] = {
           ],
           "Engineers": [
             "IJA Engineer Squad",
-            "Pioneers"
+            "Pioneers",
+            "Soko Sagyo SS-KI Armoured Work Vehicle"
           ],
           "Flamethrower": [
             "Flamethrower Team"
@@ -2475,7 +2488,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "Volunteer Fighting Corps - Militia Squad",
             "Bamboo Spear Fighters - Boeitai Squad",
             "Sennyuu Infiltration Team",
-            "Indian National Army Squad"
+            "Indian National Army Squad",
+            "War Dogs Handlers"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",
@@ -2517,7 +2531,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "IJA Grenadier Squad",
             "SNLF Squad (Early/Mid-war)",
             "SNLF Grenadier Squad",
-            "Japanese/Manchukuoan Cavalry Squad"
+            "Japanese/Manchukuoan Cavalry Squad",
+            "War Dogs Handlers"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",
@@ -2557,7 +2572,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "SNLF Paratrooper Squad",
             "Japanese/Manchukuoan Cavalry Squad",
             "Sennyuu Infiltration Team",
-            "Indian National Army Squad"
+            "Indian National Army Squad",
+            "War Dogs Handlers"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",
@@ -2601,7 +2617,8 @@ window.EASYARMY_FACTIONS['japan'] = {
             "Volunteer Fighting Corps - Militia Squad",
             "Bamboo Spear Fighters - Boeitai Squad",
             "Sennyuu Infiltration Team",
-            "Indian National Army Squad"
+            "Indian National Army Squad",
+            "War Dogs Handlers"
           ],
           "Forward Observer": [
             "Artillery Forward Observer",

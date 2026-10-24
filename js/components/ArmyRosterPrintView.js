@@ -2,7 +2,7 @@
 // ARMY ROSTER PRINT & PDF VIEW (Official Tournament A4 Roster)
 // =========================================================================
 
-const { useMemo } = React;
+var { useMemo } = React;
 
 function formatCardWeaponName(name) {
   if (!name) return '';
@@ -247,7 +247,49 @@ function getUnitCardStats(def, config, rosterTable, summary) {
     });
   }
 
+  // For vehicles, separate primary (heavy) weapon and secondary (machine guns / support)
+  let vehicleShotsPrimary = '';
+  let vehicleShotsSecondary = '';
+  if (isVehicle) {
+    const primaryParts = [];
+    let secondaryShots = 0;
+    let secondaryCount = 0;
+
+    cardRows.forEach(r => {
+      if (!r.shots || r.shots === '-' || r.shots === '' || r.shots === '0') return;
+      const wName = (r.weapons || '').toLowerCase();
+      const isMG = /machine gun|\bmmg\b|\blmg\b|\bhmg\b|rifle/i.test(wName);
+      const qty = parseInt(r.qty, 10) || 1;
+      const num = parseInt(r.shots, 10);
+
+      if (isMG) {
+        if (!isNaN(num)) secondaryShots += qty * num;
+        secondaryCount += qty;
+      } else {
+        const s = r.shots.trim();
+        primaryParts.push(qty > 1 ? `${qty}x${s}` : s);
+      }
+    });
+
+    if (primaryParts.length > 0) {
+      vehicleShotsPrimary = `${primaryParts.join('+')} Ppal`;
+    }
+    if (secondaryShots > 0) {
+      vehicleShotsSecondary = `${secondaryShots} MG${secondaryCount > 1 ? 's' : ''}`;
+    }
+
+    if (!vehicleShotsPrimary && vehicleShotsSecondary) {
+      vehicleShotsPrimary = vehicleShotsSecondary;
+      vehicleShotsSecondary = '';
+    } else if (!vehicleShotsPrimary && !vehicleShotsSecondary) {
+      vehicleShotsPrimary = '0';
+    }
+  }
+
   return {
+    isVehicle,
+    vehicleShotsPrimary,
+    vehicleShotsSecondary,
     morale: officerBonus ? morale + ' (' + officerBonus + ')' : String(morale),
     toHit,
     totalShots,
@@ -276,7 +318,7 @@ function UnitTacticalCard({ unitItem, platoon, platoonType, matchedSlot, faction
   const platoonBadgeName = platoonType?.title ? `P#${platoon.id} ${platoonType.title}` : `Pelotón #${platoon.id}`;
 
   return (
-    <div className="unit-card-cromo w-[90mm] h-[40mm] min-w-[90mm] max-w-[90mm] min-h-[40mm] max-h-[40mm] bg-white text-zinc-900 border-2 border-zinc-900 rounded-md p-1.5 flex flex-col justify-between shadow-2xs select-none break-inside-avoid relative overflow-hidden font-sans box-border">
+    <div className="unit-card-cromo w-[90mm] h-[50mm] min-w-[90mm] max-w-[90mm] min-h-[50mm] max-h-[50mm] bg-white text-zinc-900 border-2 border-zinc-900 rounded-md p-1.5 flex flex-col justify-between shadow-2xs select-none break-inside-avoid relative overflow-hidden font-sans box-border">
       {/* CARD HEADER */}
       <div className="flex items-center justify-between gap-1.5 border-b border-zinc-900 pb-0.5">
         <div className="flex items-center gap-1.5 min-w-0 flex-1">
@@ -315,7 +357,16 @@ function UnitTacticalCard({ unitItem, platoon, platoonType, matchedSlot, faction
         </div>
         <div className="flex flex-col items-center justify-center leading-none border-l border-zinc-300">
           <span className="text-[6.5px] font-bold text-zinc-500 uppercase tracking-tighter">DISPAROS</span>
-          <span className="text-[9.5px] font-black text-zinc-950 mt-0.5">{stats.totalShots}</span>
+          {stats.isVehicle ? (
+            <div className="flex flex-col items-center justify-center mt-0.5 leading-none">
+              <span className="text-[8.5px] font-black text-zinc-950">{stats.vehicleShotsPrimary}</span>
+              {stats.vehicleShotsSecondary ? (
+                <span className="text-[7.5px] font-bold text-zinc-700 mt-0.5">{stats.vehicleShotsSecondary}</span>
+              ) : null}
+            </div>
+          ) : (
+            <span className="text-[9.5px] font-black text-zinc-950 mt-0.5">{stats.totalShots}</span>
+          )}
         </div>
         <div className="flex flex-col items-center justify-center leading-none border-l border-zinc-300">
           <span className="text-[6.5px] font-bold text-zinc-500 uppercase tracking-tighter">ALCANCE</span>
@@ -370,8 +421,8 @@ function UnitTacticalCard({ unitItem, platoon, platoonType, matchedSlot, faction
           )}
         </div>
 
-        {/* FIXED IMAGE BOX: 25mm x 22mm, PURE WHITE BACKGROUND */}
-        <div className="w-[25mm] h-[22mm] min-w-[25mm] max-w-[25mm] min-h-[22mm] max-h-[22mm] shrink-0 bg-white border border-zinc-200 rounded flex items-center justify-center p-0.5 overflow-hidden relative">
+        {/* FIXED IMAGE BOX: 26mm x 26mm, PURE WHITE BACKGROUND */}
+        <div className="w-[26mm] h-[26mm] min-w-[26mm] max-w-[26mm] min-h-[26mm] max-h-[26mm] shrink-0 bg-white border border-zinc-200 rounded flex items-center justify-center p-0.5 overflow-hidden relative">
           {imageSrc && (
             <img
               src={imageSrc}

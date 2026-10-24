@@ -2,7 +2,7 @@
 // ARMY MAKER — MAIN REACT APPLICATION (State, Layout & View Tree)
 // =========================================================================
 
-const { useState, useEffect, useRef, useMemo } = React;
+var { useState, useEffect, useRef, useMemo } = React;
 
 const FACTIONS_REGISTRY = window.FACTIONS_REGISTRY || window.EASYARMY_FACTIONS || {
   soviet_union: window.EASYARMY_SOVIET_DATA,
@@ -443,9 +443,23 @@ try { localStorage.removeItem('boltaction.draft.v1'); } catch {}
             return;
           }
 
-          const emptySlot = matchingSlots.find(s => !targetPlatoon.slots[s.id]);
+          let availableMatching = matchingSlots;
+          const uDef = factionData?.units?.[draggedSlot.unitName];
+          if (uDef) {
+            const text = `${uDef.specialRulesText || ''} ${(uDef.unitRules || []).map((r) => r.text).join(' ')}`;
+            const isRestrictedFromMandatory = /cannot be taken as a compulsory|may never be taken as a mandatory|instead of one of the non-mandatory|instead of one or both of the non-mandatory|instead of one or both of the nonmandatory/i.test(text);
+            if (isRestrictedFromMandatory) {
+              availableMatching = availableMatching.filter(s => !s.mandatory);
+              if (availableMatching.length === 0) {
+                showToast(`"${draggedSlot.unitName}" no puede asignarse a casillas obligatorias`, "warning");
+                return;
+              }
+            }
+          }
+
+          const emptySlot = availableMatching.find(s => !targetPlatoon.slots[s.id]);
           if (!emptySlot) {
-            showToast(`Todas las casillas de "${draggedSlot.slotLabel}" en este pelotón están ocupadas`, "error");
+            showToast(`Todas las casillas válidas de "${draggedSlot.slotLabel}" en este pelotón están ocupadas`, "error");
             return;
           }
 
